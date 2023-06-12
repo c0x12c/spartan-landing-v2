@@ -1,6 +1,21 @@
-import '@/styles/globals.css'
-import type { AppProps } from 'next/app'
+import * as React from 'react';
+import { responsiveFontSizes, ThemeProvider } from '@mui/material/styles';
+import CssBaseline from '@mui/material/CssBaseline';
+import createThemeByMode from '@/styles/muiTheme';
+import { AppProps } from 'next/app';
 
-export default function App({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />
-}
+export type MyAppProps = AppProps;
+
+const MyApp: React.FC<MyAppProps> = (props) => {
+  const { Component, pageProps } = props;
+  const theme = responsiveFontSizes(createThemeByMode());
+
+  return (
+    <ThemeProvider theme={theme}>
+      <CssBaseline />
+      <Component {...pageProps} />
+    </ThemeProvider>
+  );
+};
+
+export default MyApp;
