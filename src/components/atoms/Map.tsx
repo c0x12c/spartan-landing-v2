@@ -8875,25 +8875,9 @@ const LocationMap: React.FunctionComponent<ILocationMapProps> = (props) => {
         <circle cx="546.074" cy="198.545" r="8.72699" fill="#B5C0F0" />
       </g>
       <g filter="url(#filter2_d_481_13018)">
-        <circle cx="547.174" cy="196.814" r="7.02998" fill="#EFF4FF">
-          <animate
-            attributeName="r"
-            values="0;7.02998;0"
-            dur="5s"
-            repeatCount="indefinite"
-            style={{ willChange: 'scroll-position' }}
-          ></animate>
-        </circle>
+        <circle cx="547.174" cy="196.814" r="7.02998" fill="#EFF4FF" className="bubble"></circle>
       </g>
-      <circle cx="547.175" cy="196.814" r="3.01285" fill="#335CFF">
-        <animate
-          attributeName="r"
-          values="0;3.01285;0"
-          dur="5s"
-          repeatCount="indefinite"
-          style={{ willChange: 'scroll-position' }}
-        ></animate>
-      </circle>
+      <circle cx="547.175" cy="196.814" r="3.01285" fill="#335CFF" className="bubble"></circle>
       <g filter="url(#filter3_dddddddd_481_13018)">
         <path
           d="M513.029 146.642C513.029 144.4 514.846 142.582 517.088 142.582H626.47C628.712 142.582 630.53 144.4 630.53 146.642V175.787C630.53 178.029 628.712 179.847 626.47 179.847H565.958C564.93 179.847 563.94 180.237 563.188 180.938L557.629 186.125C557.239 186.488 556.634 186.488 556.245 186.125L550.685 180.938C549.934 180.237 548.944 179.847 547.916 179.847H517.088C514.846 179.847 513.029 178.029 513.029 175.787V146.642Z"
@@ -8954,25 +8938,9 @@ const LocationMap: React.FunctionComponent<ILocationMapProps> = (props) => {
         <circle cx="161.116" cy="158.824" r="8.72699" fill="#B5C0F0" />
       </g>
       <g filter="url(#filter6_d_481_13018)">
-        <circle cx="162.217" cy="157.092" r="7.02998" fill="#EFF4FF">
-          <animate
-            attributeName="r"
-            values="0;7.02998;0"
-            dur="5s"
-            repeatCount="indefinite"
-            style={{ willChange: 'scroll-position' }}
-          ></animate>
-        </circle>
+        <circle cx="162.217" cy="157.092" r="7.02998" fill="#EFF4FF" className="bubble"></circle>
       </g>
-      <circle cx="162.217" cy="157.092" r="3.01285" fill="#335CFF">
-        <animate
-          attributeName="r"
-          values="0;3.01285;0"
-          dur="5s"
-          repeatCount="indefinite"
-          style={{ willChange: 'scroll-position' }}
-        ></animate>
-      </circle>
+      <circle cx="162.217" cy="157.092" r="3.01285" fill="#335CFF" className="bubble"></circle>
       <g filter="url(#filter7_dddddddd_481_13018)">
         <path
           d="M348.328 68.0594C348.328 65.8175 350.145 64 352.387 64H452.731C454.973 64 456.791 65.8175 456.791 68.0594V97.2049C456.791 99.4469 454.973 101.264 452.731 101.264H397.403C396.319 101.264 395.28 101.698 394.517 102.469L389.58 107.459C389.183 107.861 388.535 107.861 388.137 107.459L383.2 102.469C382.438 101.698 381.398 101.264 380.314 101.264H352.387C350.145 101.264 348.328 99.4469 348.328 97.2049V68.0594Z"
@@ -8997,48 +8965,16 @@ const LocationMap: React.FunctionComponent<ILocationMapProps> = (props) => {
         <circle cx="388.019" cy="122.946" r="8.72699" fill="#B5C0F0" />
       </g>
       <g filter="url(#filter9_d_481_13018)">
-        <circle cx="389.119" cy="121.214" r="7.02998" fill="#EFF4FF">
-          <animate
-            attributeName="r"
-            values="0;7.02998;0"
-            dur="5s"
-            repeatCount="indefinite"
-            style={{ willChange: 'scroll-position' }}
-          ></animate>
-        </circle>
+        <circle cx="389.119" cy="121.214" r="7.02998" fill="#EFF4FF" className="bubble"></circle>
       </g>
-      <circle cx="389.12" cy="121.214" r="3.01285" fill="#335CFF">
-        <animate
-          attributeName="r"
-          values="0;3.01285;0"
-          dur="5s"
-          repeatCount="indefinite"
-          style={{ willChange: 'scroll-position' }}
-        ></animate>
-      </circle>
+      <circle cx="389.12" cy="121.214" r="3.01285" fill="#335CFF" className="bubble"></circle>
       <g filter="url(#filter10_f_481_13018)">
         <circle cx="195.056" cy="239.306" r="8.72699" fill="#B5C0F0" />
       </g>
       <g filter="url(#filter11_d_481_13018)">
-        <circle cx="196.156" cy="237.574" r="7.02998" fill="#EFF4FF">
-          <animate
-            attributeName="r"
-            values="0;7.02998;0"
-            dur="5s"
-            repeatCount="indefinite"
-            style={{ willChange: 'scroll-position' }}
-          ></animate>
-        </circle>
+        <circle cx="196.156" cy="237.574" r="7.02998" fill="#EFF4FF" className="bubble"></circle>
       </g>
-      <circle cx="196.157" cy="237.574" r="3.01285" fill="#335CFF">
-        <animate
-          attributeName="r"
-          values="0;3.01285;0"
-          dur="5s"
-          repeatCount="indefinite"
-          style={{ willChange: 'scroll-position' }}
-        ></animate>
-      </circle>
+      <circle cx="196.157" cy="237.574" r="3.01285" fill="#335CFF" className="bubble"></circle>
       <g filter="url(#filter12_dddddddd_481_13018)">
         <path
           d="M216.389 223.937C216.389 221.695 218.206 219.878 220.448 219.878H329.831C332.073 219.878 333.89 221.695 333.89 223.937V253.083C333.89 255.325 332.073 257.142 329.831 257.142H267.718H260.297H252.876H220.448C218.206 257.142 216.389 255.325 216.389 253.083V223.937Z"
