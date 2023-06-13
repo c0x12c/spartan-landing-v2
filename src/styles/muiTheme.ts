@@ -5,7 +5,7 @@ import { Manrope, IBM_Plex_Mono } from 'next/font/google';
 import * as colors from './colors';
 
 export const ManropeFont = Manrope({
-  weight: ['400', '700', '800'],
+  weight: ['400', '500', '700', '800'],
   subsets: ['latin'],
   display: 'swap',
   fallback: ['Helvetica', 'Arial', 'sans-serif'],
@@ -22,7 +22,10 @@ declare module '@mui/material/styles' {
   interface TypographyVariants {
     fs16: React.CSSProperties;
     fs18: React.CSSProperties;
+    fs20: React.CSSProperties;
+    fs26: React.CSSProperties;
     fs30: React.CSSProperties;
+    fs32: React.CSSProperties;
     fs40: React.CSSProperties;
     fs54: React.CSSProperties;
   }
@@ -31,7 +34,10 @@ declare module '@mui/material/styles' {
   interface TypographyVariantsOptions {
     fs16: React.CSSProperties;
     fs18: React.CSSProperties;
+    fs20: React.CSSProperties;
+    fs26: React.CSSProperties;
     fs30: React.CSSProperties;
+    fs32: React.CSSProperties;
     fs40: React.CSSProperties;
     fs54: React.CSSProperties;
   }
@@ -50,7 +56,10 @@ declare module '@mui/material/Typography' {
   interface TypographyPropsVariantOverrides {
     fs16: true;
     fs18: true;
+    fs20: true;
+    fs26: true;
     fs30: true;
+    fs32: true;
     fs40: true;
     fs54: true;
   }
@@ -127,9 +136,24 @@ const createThemeByMode = (): Theme => {
         lineHeight: 1.56,
         fontWeight: 400,
       },
+      fs20: {
+        fontSize: '20px',
+        lineHeight: 1.5,
+        fontWeight: 500,
+      },
+      fs26: {
+        fontSize: '26px',
+        lineHeight: 1.5,
+        fontWeight: 700,
+      },
       fs30: {
         fontSize: '30px',
         lineHeight: 1.19,
+        fontWeight: 700,
+      },
+      fs32: {
+        fontSize: '32px',
+        lineHeight: 1.25,
         fontWeight: 700,
       },
       fs40: {

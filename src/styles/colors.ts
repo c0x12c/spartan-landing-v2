@@ -1,6 +1,7 @@
 export const base = {
   black: '#000000',
   white: '#FFFFFF',
+  grey: '#636363',
 };
 
 export const gray = {
