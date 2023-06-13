@@ -8,7 +8,8 @@ import Container from '../atoms/Container';
 import CompanyLogo from '../../assets/images/Company-logo.svg';
 import createThemeByMode from '../../styles/muiTheme';
 
-import ContactUsButton from '../atoms/buttons/ContactUs';
+import {ContactUsButton} from '../atoms/buttons';
+import { gray } from '@/styles/colors';
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const theme = useTheme();
@@ -58,13 +59,13 @@ const Header = () => {
               <Box sx={{ display: 'flex', gap: '44px' }}>
                 <nav>
                   <Link href="/">
-                    <Typography variant="fs18">Home</Typography>
+                    <Typography variant="fs18" sx={{color: gray[200]}}>Home</Typography>
                   </Link>
                   <Link href="/about">
-                    <Typography variant="fs18">About</Typography>
+                    <Typography variant="fs18" sx={{color: gray[200]}}>About</Typography>
                   </Link>
                   <Link href="/contact">
-                    <Typography variant="fs18">Contact</Typography>
+                    <Typography variant="fs18" sx={{color: gray[200]}}>Contact</Typography>
                   </Link>
                   <style jsx>{`
                     nav {

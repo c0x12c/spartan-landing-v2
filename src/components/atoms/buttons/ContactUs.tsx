@@ -2,8 +2,9 @@ import { Button, Typography } from "@mui/material";
 import Image from 'next/image'
 import ArrowContact from '../../../assets/images/Arrow-contact.svg';
 import { base } from '@/styles/colors';
+import { IBM_Plex_MonoFont } from "@/styles/muiTheme";
 
-export default function ContactUsButton() {
+export function ContactUsButton() {
     return (
     <>
     <Button
@@ -17,7 +18,7 @@ export default function ContactUsButton() {
           color: base.white
         }}
       >
-      <Typography variant='allVarints'>Contact Us</Typography>
+      <Typography sx={{fontSize: '12px', fontFamily: IBM_Plex_MonoFont.style}}>Contact Us</Typography>
       <Image src={ArrowContact} alt="Company Logo" />
     </Button></>
     )
