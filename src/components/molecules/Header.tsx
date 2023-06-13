@@ -1,16 +1,14 @@
 import { useState } from 'react';
 import Link from 'next/link';
-import { AppBar, Toolbar, IconButton, Button, Menu, MenuItem, useMediaQuery, Box, useTheme, ThemeProvider } from '@mui/material';
+import { AppBar, Toolbar, IconButton, Menu, MenuItem, useMediaQuery, Box, useTheme, ThemeProvider } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import { Typography } from '@mui/material';
 import Image from 'next/image';
 import Container from '../atoms/Container';
 import CompanyLogo from '../../assets/images/Company-logo.svg';
-import ArrowContact from '../../assets/images/Arrow-contact.svg';
-
 import createThemeByMode from '../../styles/muiTheme';
-import { base } from '@/styles/colors';
 
+import ContactUsButton from '../atoms/buttons/ContactUs';
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const theme = useTheme();
@@ -92,20 +90,7 @@ const Header = () => {
                     }
                   `}</style>
                 </nav>
-                <Button
-                  variant="outlined"
-                  sx={{
-                    padding: '14px 24px',
-                    display: 'flex',
-                    alignItems: 'center',
-                    gap: '24px',
-                    borderRadius: '60.5811px',
-                    color: base.white
-                  }}
-                >
-                <Typography variant='allVarints'>Contact Us</Typography>
-                <Image src={ArrowContact} alt="Company Logo" />
-              </Button>
+                <ContactUsButton/>
               </Box>
             )}
         </Toolbar>
