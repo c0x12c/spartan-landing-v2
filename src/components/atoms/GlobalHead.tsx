@@ -11,7 +11,7 @@ export default function GlobalHead() {
       <meta name="description" content={SEOPages[EPages.HOME].description} />
       <meta name="keywords" content={SEOPages[EPages.HOME].keywords} />
       <meta property="og:description" content={SEOPages[EPages.HOME].description} />
-      <link rel="icon" href="/images/PEPER-icon.png" color="red" />
+      <link rel="icon" href="" color="red" />
       <meta name="theme-color" content={'#FFFFFF'} />
       <meta name="emotion-insertion-point" content="" />
     </>

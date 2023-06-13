@@ -22,12 +22,23 @@ declare module '@mui/material/styles' {
   interface TypographyVariants {
     fs16: React.CSSProperties;
     fs18: React.CSSProperties;
+    fs54: React.CSSProperties;
   }
 
   // allow configuration using `createTheme`
   interface TypographyVariantsOptions {
     fs16: React.CSSProperties;
     fs18: React.CSSProperties;
+    fs54: React.CSSProperties;
+  }
+
+  interface BreakpointOverrides {
+    xs: true; // removes the `xs` breakpoint
+    sm: true;
+    md: true;
+    lg: true;
+    xl: true;
+    xxl: true;
   }
 }
 
@@ -35,6 +46,7 @@ declare module '@mui/material/Typography' {
   interface TypographyPropsVariantOverrides {
     fs16: true;
     fs18: true;
+    fs54: true;
   }
 }
 
@@ -108,6 +120,21 @@ const createThemeByMode = (): Theme => {
         fontSize: '18px',
         lineHeight: 1.56,
         fontWeight: 400,
+      },
+      fs54: {
+        fontSize: '54px',
+        lineHeight: 1.19,
+        fontWeight: 700,
+      },
+    },
+    breakpoints: {
+      values: {
+        xs: 0,
+        sm: 768,
+        md: 960,
+        lg: 1200,
+        xl: 1440,
+        xxl: 1920,
       },
     },
   });

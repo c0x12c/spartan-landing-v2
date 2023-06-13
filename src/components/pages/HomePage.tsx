@@ -1,6 +1,7 @@
 import React from 'react';
 import { Box, SxProps, Theme } from '@mui/material';
 import MainTemplate from '../templates/MainTemplate';
+import GlobalImpact from '../molecules/GlobalImpact';
 
 type Props = {
   children?: React.ReactNode;
@@ -13,7 +14,9 @@ const HomePage: React.FC<Props> = () => {
 
   return (
     <MainTemplate>
-      <Box sx={sxMain}></Box>
+      <Box sx={sxMain}>
+        <GlobalImpact />
+      </Box>
     </MainTemplate>
   );
 };
