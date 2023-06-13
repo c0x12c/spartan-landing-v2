@@ -20,7 +20,6 @@ export const IBM_Plex_MonoFont = IBM_Plex_Mono({
 
 declare module '@mui/material/styles' {
   interface TypographyVariants {
-    fs16: React.CSSProperties;
     fs18: React.CSSProperties;
     fs30: React.CSSProperties;
     fs54: React.CSSProperties;
@@ -35,7 +34,7 @@ declare module '@mui/material/styles' {
   }
 
   interface BreakpointOverrides {
-    xs: true; // removes the `xs` breakpoint
+    xs: false; // removes the `xs` breakpoint
     sm: true;
     md: true;
     lg: true;

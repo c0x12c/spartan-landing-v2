@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Box, SxProps, Theme } from '@mui/material';
 import MainTemplate from '../templates/MainTemplate';
 import GlobalImpact from '../molecules/GlobalImpact';
@@ -10,6 +10,7 @@ type Props = {
 const HomePage: React.FC<Props> = () => {
   const sxMain: SxProps<Theme> = {
     position: 'relative',
+
   };
 
   return (
