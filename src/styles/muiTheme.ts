@@ -22,6 +22,7 @@ declare module '@mui/material/styles' {
   interface TypographyVariants {
     fs16: React.CSSProperties;
     fs18: React.CSSProperties;
+    fs30: React.CSSProperties;
     fs54: React.CSSProperties;
   }
 
@@ -29,6 +30,7 @@ declare module '@mui/material/styles' {
   interface TypographyVariantsOptions {
     fs16: React.CSSProperties;
     fs18: React.CSSProperties;
+    fs30: React.CSSProperties;
     fs54: React.CSSProperties;
   }
 
@@ -46,6 +48,7 @@ declare module '@mui/material/Typography' {
   interface TypographyPropsVariantOverrides {
     fs16: true;
     fs18: true;
+    fs30: true;
     fs54: true;
   }
 }
@@ -120,6 +123,11 @@ const createThemeByMode = (): Theme => {
         fontSize: '18px',
         lineHeight: 1.56,
         fontWeight: 400,
+      },
+      fs30: {
+        fontSize: '30px',
+        lineHeight: 1.19,
+        fontWeight: 700,
       },
       fs54: {
         fontSize: '54px',

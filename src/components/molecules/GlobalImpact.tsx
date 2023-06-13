@@ -1,12 +1,14 @@
 import * as React from 'react';
 import * as colors from '@/styles/colors';
-import { Box, Button, Grid, Typography } from '@mui/material';
+import { Box, Button, Grid, Typography, useMediaQuery, useTheme } from '@mui/material';
 import Container from '../atoms/Container';
 import LocationMap from '../atoms/Map';
 
 interface IGlobalImpactProps {}
 
 const GlobalImpact: React.FunctionComponent<IGlobalImpactProps> = (props) => {
+  const theme = useTheme();
+  const matches = useMediaQuery(theme.breakpoints.down('sm'));
   return (
     <Box
       bgcolor={colors.primary[50]}
@@ -16,7 +18,7 @@ const GlobalImpact: React.FunctionComponent<IGlobalImpactProps> = (props) => {
       }}
     >
       <Container>
-        <Grid container alignItems="center" rowSpacing={'44px'}>
+        <Grid container rowSpacing={'44px'}>
           <Grid
             item
             xs={12}
@@ -28,7 +30,7 @@ const GlobalImpact: React.FunctionComponent<IGlobalImpactProps> = (props) => {
             m="0 auto"
           >
             <Typography
-              variant="fs54"
+              variant={matches ? 'fs30' : 'fs54'}
               mb="32px"
               color={colors.gray[800]}
               component="h2"
@@ -61,7 +63,7 @@ const GlobalImpact: React.FunctionComponent<IGlobalImpactProps> = (props) => {
               client relationships, built on trust, reliability, and a shared commitment to success
             </Typography>
             <Box
-              gap="32px"
+              gap={matches ? '16px' : '32px'}
               display="flex"
               alignItems="center"
               justifyContent={{
@@ -73,8 +75,8 @@ const GlobalImpact: React.FunctionComponent<IGlobalImpactProps> = (props) => {
                 sx={{
                   bgcolor: colors.primary[500],
                   borderRadius: '57px',
-                  padding: '16px 34px',
-                  fontSize: '16px',
+                  padding: matches ? '8px 17px' : '16px 34px',
+                  fontSize: matches ? '12px' : '16px',
                   lineHeight: 1.125,
                   letterSpacing: '-0.13px',
                   color: colors.base.black,
@@ -91,8 +93,8 @@ const GlobalImpact: React.FunctionComponent<IGlobalImpactProps> = (props) => {
                 sx={{
                   bgcolor: colors.base.white,
                   borderRadius: '57px',
-                  padding: '16px 34px',
-                  fontSize: '16px',
+                  padding: matches ? '8px 17px' : '16px 34px',
+                  fontSize: matches ? '12px' : '16px',
                   lineHeight: 1.125,
                   letterSpacing: '-0.13px',
                   color: colors.primary[500],

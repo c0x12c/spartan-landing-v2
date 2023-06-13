@@ -20,7 +20,8 @@ const Container: React.FunctionComponent<IContainerProps> = ({ children, ...prop
           xl: 0,
           lg: '0 112px',
           md: '0 63px',
-          xs: '0 48px',
+          sm: '0 48px',
+          xs: '0 16px',
         },
       }}
     >
