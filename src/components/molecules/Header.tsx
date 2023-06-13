@@ -8,7 +8,7 @@ import Container from '../atoms/Container';
 import CompanyLogo from '../../assets/images/Company-logo.svg';
 import createThemeByMode from '../../styles/muiTheme';
 
-import {ContactUsButton} from '../atoms/buttons';
+import { ContactUsButton } from '../atoms/buttons';
 import { gray } from '@/styles/colors';
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -25,11 +25,18 @@ const Header = () => {
 
   return (
     <ThemeProvider theme={createThemeByMode()}>
-      <AppBar position="static" sx={{ background: 'black', boxShadow: 'none' }}>
+      <AppBar sx={{background: 'transparent', boxShadow: 'none', position: 'absolute',       
+      top: {
+          sm: '41px', 
+          md: '41px', 
+          lg: '50px', 
+          xl: '31px', 
+          xxl: '24px', 
+        }, }}>
         <Container>
           <Toolbar sx={{ padding: 0, margin: '0 auto', display: 'flex', justifyContent: 'space-between' }}>
-            <IconButton edge="start" color="inherit" aria-label="home" href="/">
-              <Image src={CompanyLogo} alt="Company Logo" />
+            <IconButton edge="start" color="inherit" aria-label="home" href="/" sx={{padding: 0}}>
+              <Image src={CompanyLogo} alt="Company Logo"/>
             </IconButton>
 
             {isMobile ? (
@@ -59,13 +66,13 @@ const Header = () => {
               <Box sx={{ display: 'flex', gap: '44px' }}>
                 <nav>
                   <Link href="/">
-                    <Typography variant="fs18" sx={{color: gray[200]}}>Home</Typography>
+                    <Typography variant="fs18" sx={{ color: gray[200] }}>Home</Typography>
                   </Link>
                   <Link href="/about">
-                    <Typography variant="fs18" sx={{color: gray[200]}}>About</Typography>
+                    <Typography variant="fs18" sx={{ color: gray[200] }}>About</Typography>
                   </Link>
                   <Link href="/contact">
-                    <Typography variant="fs18" sx={{color: gray[200]}}>Contact</Typography>
+                    <Typography variant="fs18" sx={{ color: gray[200] }}>Contact</Typography>
                   </Link>
                   <style jsx>{`
                     nav {
@@ -91,12 +98,12 @@ const Header = () => {
                     }
                   `}</style>
                 </nav>
-                <ContactUsButton/>
+                <ContactUsButton />
               </Box>
             )}
-        </Toolbar>
-      </Container>
-    </AppBar>
+          </Toolbar>
+        </Container>
+      </AppBar>
     </ThemeProvider >
   );
 };
