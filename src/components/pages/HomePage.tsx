@@ -3,6 +3,7 @@ import { Box, SxProps, Theme } from '@mui/material';
 import MainTemplate from '../templates/MainTemplate';
 import GlobalImpact from '../molecules/GlobalImpact';
 import ClientWithSpartans from '../molecules/ClientWithSpartans';
+import ToBeSpartan from '../molecules/ToBeSpartan';
 
 type Props = {
   children?: React.ReactNode;
@@ -18,6 +19,7 @@ const HomePage: React.FC<Props> = () => {
       <Box sx={sxMain}>
         <GlobalImpact />
         <ClientWithSpartans />
+        <ToBeSpartan />
       </Box>
     </MainTemplate>
   );
