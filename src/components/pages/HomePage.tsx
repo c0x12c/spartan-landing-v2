@@ -6,6 +6,7 @@ import ClientWithSpartans from '../molecules/ClientWithSpartans';
 import ToBeSpartan from '../molecules/ToBeSpartan';
 import WhoWeWorkWith from '../molecules/WhoWeWorkWith';
 import WhyBusinessChooseUs from '../molecules/WhyBusinessChooseUs';
+import ElevateStartup from '../molecules/ElevateStartup';
 
 type Props = {
   children?: React.ReactNode;
@@ -19,9 +20,10 @@ const HomePage: React.FC<Props> = () => {
   return (
     <MainTemplate>
       <Box sx={sxMain}>
-        <GlobalImpact />
+        <ElevateStartup />
         <WhoWeWorkWith />
         <WhyBusinessChooseUs />
+        <GlobalImpact />
         <ClientWithSpartans />
         <ToBeSpartan />
       </Box>

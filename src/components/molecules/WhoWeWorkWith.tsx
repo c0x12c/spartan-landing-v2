@@ -17,7 +17,7 @@ import logoSabio from '@/assets/images/logo-sabio.svg';
 interface IWhoWeWorkWithProps {}
 
 const WhoWeWorkWith: React.FunctionComponent<IWhoWeWorkWithProps> = (props) => {
-  const scrollRef = React.useRef(null);
+  const scrollRef = React.useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: scrollRef,
     offset: ['start end', 'end start'],
@@ -32,7 +32,11 @@ const WhoWeWorkWith: React.FunctionComponent<IWhoWeWorkWithProps> = (props) => {
       <Box my="44px" ref={scrollRef} overflow="hidden">
         <Container>
           <Box mb="85px">
-            <ScrollTitle scrollYProgress={scrollYProgress} scrollRef={scrollRef} />
+            <ScrollTitle
+              scrollYProgress={scrollYProgress}
+              scrollRef={scrollRef}
+              title={'Who we work with'}
+            />
           </Box>
           <Grid container spacing={{ xl: '24px', xs: '44px' }}>
             <Grid
