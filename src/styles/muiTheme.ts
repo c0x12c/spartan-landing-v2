@@ -30,6 +30,7 @@ declare module '@mui/material/styles' {
     fs40: React.CSSProperties;
     fs54: React.CSSProperties;
     fs80: React.CSSProperties;
+    fs240: React.CSSProperties;
   }
 
   // allow configuration using `createTheme`
@@ -44,6 +45,7 @@ declare module '@mui/material/styles' {
     fs40: React.CSSProperties;
     fs54: React.CSSProperties;
     fs80: React.CSSProperties;
+    fs240: React.CSSProperties;
   }
 
   interface BreakpointOverrides {
@@ -68,6 +70,7 @@ declare module '@mui/material/Typography' {
     fs40: true;
     fs54: true;
     fs80: true;
+    fs240: true;
   }
 }
 
@@ -181,6 +184,11 @@ const createThemeByMode = (): Theme => {
         fontSize: '80px',
         lineHeight: 1.15,
         fontWeight: 700,
+      },
+      fs240: {
+        fontSize: '240px',
+        lineHeight: 1,
+        fontWeight: 800,
       },
     },
     breakpoints: {

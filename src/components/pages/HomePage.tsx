@@ -4,6 +4,7 @@ import MainTemplate from '../templates/MainTemplate';
 import GlobalImpact from '../molecules/GlobalImpact';
 import ClientWithSpartans from '../molecules/ClientWithSpartans';
 import ToBeSpartan from '../molecules/ToBeSpartan';
+import WhoWeWorkWith from '../molecules/WhoWeWorkWith';
 
 type Props = {
   children?: React.ReactNode;
@@ -18,6 +19,7 @@ const HomePage: React.FC<Props> = () => {
     <MainTemplate>
       <Box sx={sxMain}>
         <GlobalImpact />
+        <WhoWeWorkWith />
         <ClientWithSpartans />
         <ToBeSpartan />
       </Box>
