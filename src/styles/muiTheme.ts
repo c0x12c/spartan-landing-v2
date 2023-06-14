@@ -5,7 +5,7 @@ import { Manrope, IBM_Plex_Mono } from 'next/font/google';
 import * as colors from './colors';
 
 export const ManropeFont = Manrope({
-  weight: ['400', '700', '800'],
+  weight: ['400', '600' ,'700', '800'],
   subsets: ['latin'],
   display: 'swap',
   fallback: ['Helvetica', 'Arial', 'sans-serif'],
@@ -21,7 +21,9 @@ export const IBM_Plex_MonoFont = IBM_Plex_Mono({
 declare module '@mui/material/styles' {
   interface TypographyVariants {
     fs18: React.CSSProperties;
+    fs24: React.CSSProperties;
     fs30: React.CSSProperties;
+    fs32:React.CSSProperties;
     fs54: React.CSSProperties;
   }
 
@@ -29,7 +31,9 @@ declare module '@mui/material/styles' {
   interface TypographyVariantsOptions {
     fs16: React.CSSProperties;
     fs18: React.CSSProperties;
+    fs24: React.CSSProperties;
     fs30: React.CSSProperties;
+    fs32: React.CSSProperties;
     fs54: React.CSSProperties;
   }
 
@@ -48,6 +52,7 @@ declare module '@mui/material/Typography' {
     fs16: true;
     fs18: true;
     fs30: true;
+    fs32: true,
     fs54: true;
   }
 }
@@ -123,9 +128,19 @@ const createThemeByMode = (): Theme => {
         lineHeight: 1.56,
         fontWeight: 400,
       },
+      fs24: {
+        fontSize: '24px',
+        lineHeight: 1.24,
+        fontWeight: 600,
+      },
       fs30: {
         fontSize: '30px',
         lineHeight: 1.19,
+        fontWeight: 700,
+      },
+      fs32: {
+        fontSize: '32px',
+        lineHeight: 1.25,
         fontWeight: 700,
       },
       fs54: {
