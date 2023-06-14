@@ -5,6 +5,7 @@ import GlobalImpact from '../molecules/GlobalImpact';
 import ClientWithSpartans from '../molecules/ClientWithSpartans';
 import ToBeSpartan from '../molecules/ToBeSpartan';
 import WhoWeWorkWith from '../molecules/WhoWeWorkWith';
+import WhyBusinessChooseUs from '../molecules/WhyBusinessChooseUs';
 
 type Props = {
   children?: React.ReactNode;
@@ -20,6 +21,7 @@ const HomePage: React.FC<Props> = () => {
       <Box sx={sxMain}>
         <GlobalImpact />
         <WhoWeWorkWith />
+        <WhyBusinessChooseUs />
         <ClientWithSpartans />
         <ToBeSpartan />
       </Box>
