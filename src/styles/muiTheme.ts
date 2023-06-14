@@ -5,7 +5,8 @@ import { Manrope, IBM_Plex_Mono } from 'next/font/google';
 import * as colors from './colors';
 
 export const ManropeFont = Manrope({
-  weight: ['400', '600' ,'700', '800'],
+
+  weight: ['400', '500', '600', '700', '800'],
   subsets: ['latin'],
   display: 'swap',
   fallback: ['Helvetica', 'Arial', 'sans-serif'],
@@ -24,17 +25,42 @@ declare module '@mui/material/styles' {
     fs24: React.CSSProperties;
     fs30: React.CSSProperties;
     fs32:React.CSSProperties;
+
+    fs20: React.CSSProperties;
+    fs22: React.CSSProperties;
+    fs26: React.CSSProperties;
+    fs30: React.CSSProperties;
+    fs32: React.CSSProperties;
+    fs40: React.CSSProperties;
+    fs44: React.CSSProperties;
+
     fs54: React.CSSProperties;
+    fs80: React.CSSProperties;
+    fs180: React.CSSProperties;
+    fs240: React.CSSProperties;
   }
 
   // allow configuration using `createTheme`
   interface TypographyVariantsOptions {
     fs16: React.CSSProperties;
     fs18: React.CSSProperties;
+
     fs24: React.CSSProperties;
     fs30: React.CSSProperties;
     fs32: React.CSSProperties;
+
+    fs20: React.CSSProperties;
+    fs22: React.CSSProperties;
+    fs26: React.CSSProperties;
+    fs30: React.CSSProperties;
+    fs32: React.CSSProperties;
+    fs40: React.CSSProperties;
+    fs44: React.CSSProperties;
+
     fs54: React.CSSProperties;
+    fs80: React.CSSProperties;
+    fs180: React.CSSProperties;
+    fs240: React.CSSProperties;
   }
 
   interface BreakpointOverrides {
@@ -51,9 +77,21 @@ declare module '@mui/material/Typography' {
   interface TypographyPropsVariantOverrides {
     fs16: true;
     fs18: true;
+    fs20: true;
+    fs22: true;
+    fs26: true;
     fs30: true;
+
     fs32: true,
+
+    fs32: true;
+    fs40: true;
+    fs44: true;
+
     fs54: true;
+    fs80: true;
+    fs180: true;
+    fs240: true;
   }
 }
 
@@ -128,11 +166,29 @@ const createThemeByMode = (): Theme => {
         lineHeight: 1.56,
         fontWeight: 400,
       },
+
       fs24: {
         fontSize: '24px',
         lineHeight: 1.24,
         fontWeight: 600,
       },
+
+      fs20: {
+        fontSize: '20px',
+        lineHeight: 1.5,
+        fontWeight: 500,
+      },
+      fs22: {
+        fontSize: '22px',
+        lineHeight: 1.41,
+        fontWeight: 600,
+      },
+      fs26: {
+        fontSize: '26px',
+        lineHeight: 1.5,
+        fontWeight: 700,
+      },
+
       fs30: {
         fontSize: '30px',
         lineHeight: 1.19,
@@ -143,10 +199,37 @@ const createThemeByMode = (): Theme => {
         lineHeight: 1.25,
         fontWeight: 700,
       },
+
+
+      fs40: {
+        fontSize: '40px',
+        lineHeight: 1.2,
+        fontWeight: 700,
+      },
+      fs44: {
+        fontSize: '44px',
+        lineHeight: 1.45,
+        fontWeight: 700,
+      },
       fs54: {
         fontSize: '54px',
         lineHeight: 1.19,
         fontWeight: 700,
+      },
+      fs80: {
+        fontSize: '80px',
+        lineHeight: 1.15,
+        fontWeight: 700,
+      },
+      fs180: {
+        fontSize: '180px',
+        lineHeight: 1.08,
+        fontWeight: 800,
+      },
+      fs240: {
+        fontSize: '240px',
+        lineHeight: 1,
+        fontWeight: 800,
       },
     },
     breakpoints: {
