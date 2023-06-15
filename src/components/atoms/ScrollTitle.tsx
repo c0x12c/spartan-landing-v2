@@ -19,7 +19,7 @@ const ScrollTitle: React.FunctionComponent<IScrollTitleProps> = ({
   const matches = useMediaQuery(theme.breakpoints.down('lg'));
   return (
     <React.Fragment>
-      <motion.div style={{ width: '2500px', x }} viewport={{ root: scrollRef }}>
+      <motion.div style={{ width: '3000px', x }} viewport={{ root: scrollRef }}>
         <Typography variant={matches ? 'fs180' : 'fs240'} color={colors.gray[200]}>
           {title}
         </Typography>
