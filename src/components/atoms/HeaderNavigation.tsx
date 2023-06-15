@@ -32,25 +32,32 @@ const menuItems: MenuItem[] = [
       { label: 'Data Platform', href: '/' },
       { label: 'IoT Development', href: '/' },
       { label: 'Case Study Intelligence', href: '/' },
-    ], 
-    
+    ],
+
     isOpen: false,
   },
-  { label: 'Careers', href: '/careers', subItems: [
+  {
+    label: 'Careers',
+    href: '/careers',
+    subItems: [
       { label: 'About us', href: '/' },
       { label: 'Life at Spartan', href: '/' },
       { label: 'Apply for Jobs', href: '/' },
       { label: 'Internship Program', href: '/' },
       { label: 'Ready To Join?', href: '/' },
-    ], isOpen: false },
+    ],
+    isOpen: false,
+  },
 ];
 
 export const HeaderNavigation = ({
   activePage,
   handlePageChange,
+  mode,
 }: {
   activePage: string;
   handlePageChange: (page: SetStateAction<string>) => void;
+  mode: 'light' | 'dark';
 }) => {
   const [menuItemsState, setMenuItemsState] = useState<MenuItem[]>(menuItems);
 
@@ -87,6 +94,7 @@ export const HeaderNavigation = ({
                   content: "'/'",
                   marginRight: '16px',
                   marginLeft: '16px',
+                  color: gray[300],
                 },
                 ':first-child:before': {
                   display: 'none',
@@ -96,24 +104,31 @@ export const HeaderNavigation = ({
               <Typography
                 variant="fs18"
                 sx={{
-                  color: activePage === item.label ? primary[500] : gray[200],
+                  color:
+                    activePage === item.label
+                      ? primary[500]
+                      : mode === 'light'
+                      ? gray[200]
+                      : base.black,
                 }}
               >
                 {item.label}
               </Typography>
             </Link>
             {item.subItems && (
-              <div style={{ position: 'relative', display: "flex", justifyContent: 'center' }}>
-                <ExpandMore onClick={() => toggleSubMenu(index)} />
+              <div style={{ position: 'relative', display: 'flex', justifyContent: 'center' }}>
+                <ExpandMore
+                  onClick={() => toggleSubMenu(index)}
+                  sx={{ color: mode === 'light' ? base.white : base.black }}
+                />
                 {item.isOpen && (
                   <ul
                     style={{
                       position: 'absolute',
                       top: '100%',
-                      left: 0,
                       background: base.white,
                       padding: '20px 32px 32px',
-                      width: 'max-content'
+                      width: 'max-content',
                     }}
                   >
                     {item.subItems.map((subItem, subIndex) => (
@@ -128,8 +143,8 @@ export const HeaderNavigation = ({
                           }}
                         >
                           <Typography
-                            variant='fs18' sx={{color: base.black, fontWeight: 700, paddingRight: '30px'
-                          }}
+                            variant="fs18"
+                            sx={{ color: base.black, fontWeight: 700, paddingRight: '30px' }}
                           >
                             {subItem.label}
                           </Typography>
@@ -144,7 +159,7 @@ export const HeaderNavigation = ({
           </React.Fragment>
         ))}
       </nav>
-      <ContactUsButton />
+      <ContactUsButton mode={mode} />
     </Box>
   );
 };

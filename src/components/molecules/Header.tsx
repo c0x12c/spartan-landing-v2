@@ -6,12 +6,18 @@ import Container from '../atoms/Container';
 import CompanyLogo from '../../assets/images/Company-logo.svg';
 import { MobileMenu } from '../atoms/MobileMenu';
 import { HeaderNavigation } from '../atoms/HeaderNavigation';
+import CompanyDarkLogo from '@/assets/images/Company-logo-dark.svg';
+import { base } from '@/styles/colors';
+import { useRouter } from 'next/router';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activePage, setActivePage] = useState('Spartan');
   const theme = useTheme();
-  const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
+  const router = useRouter();
+  const currentPath = router.pathname;
+  const mode = currentPath === '/aboutus' ? 'dark' : 'light';
+  const isMobile = useMediaQuery(theme.breakpoints.down('md'));
 
   const handleMenuOpen = () => {
     setIsMenuOpen(true);
@@ -28,7 +34,7 @@ const Header = () => {
   return (
     <AppBar
       sx={{
-        background: 'black',
+        background: 'white',
         boxShadow: 'none',
         position: 'absolute',
         top: { xs: '34px', sm: '41px', md: '41px', lg: '50px', xl: '31px', xxl: '24px' },
@@ -45,13 +51,13 @@ const Header = () => {
             href="/"
             sx={{ padding: 0, margin: 0 }}
           >
-            <Image src={CompanyLogo} alt="Company Logo" />
+            <Image src={mode === 'light' ? CompanyLogo : CompanyDarkLogo} alt="Company Logo" />
           </IconButton>
 
           {isMobile ? (
             <>
               <IconButton edge="start" color="inherit" aria-label="menu" onClick={handleMenuOpen}>
-                <MenuIcon />
+                <MenuIcon sx={{ color: mode === 'light' ? base.white : base.black }} />
               </IconButton>
               <MobileMenu
                 isMenuOpen={isMenuOpen}
@@ -61,7 +67,11 @@ const Header = () => {
               />
             </>
           ) : (
-            <HeaderNavigation handlePageChange={handlePageChange} activePage={activePage} />
+            <HeaderNavigation
+              handlePageChange={handlePageChange}
+              activePage={activePage}
+              mode={mode}
+            />
           )}
         </Toolbar>
       </Container>
