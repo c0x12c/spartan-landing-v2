@@ -22,15 +22,16 @@ declare module '@mui/material/styles' {
   interface TypographyVariants {
     fs16: React.CSSProperties;
     fs18: React.CSSProperties;
-    fs24: React.CSSProperties;
-    fs30: React.CSSProperties;
-    fs32: React.CSSProperties;
     fs20: React.CSSProperties;
     fs22: React.CSSProperties;
+    fs24: React.CSSProperties;
     fs26: React.CSSProperties;
+    fs27: React.CSSProperties;
+    fs28: React.CSSProperties;
+    fs30: React.CSSProperties;
+    fs32: React.CSSProperties;
     fs40: React.CSSProperties;
     fs44: React.CSSProperties;
-
     fs54: React.CSSProperties;
     fs80: React.CSSProperties;
     fs180: React.CSSProperties;
@@ -41,12 +42,14 @@ declare module '@mui/material/styles' {
   interface TypographyVariantsOptions {
     fs16: React.CSSProperties;
     fs18: React.CSSProperties;
-    fs24: React.CSSProperties;
-    fs30: React.CSSProperties;
-    fs32: React.CSSProperties;
     fs20: React.CSSProperties;
     fs22: React.CSSProperties;
+    fs24: React.CSSProperties;
     fs26: React.CSSProperties;
+    fs27: React.CSSProperties;
+    fs28: React.CSSProperties;
+    fs30: React.CSSProperties;
+    fs32: React.CSSProperties;
     fs40: React.CSSProperties;
     fs44: React.CSSProperties;
     fs54: React.CSSProperties;
@@ -67,10 +70,14 @@ declare module '@mui/material/styles' {
 
 declare module '@mui/material/Typography' {
   interface TypographyPropsVariantOverrides {
+    fs16: true;
     fs18: true;
     fs20: true;
     fs22: true;
+    fs24: true;
     fs26: true;
+    fs27: true;
+    fs28: true;
     fs30: true;
     fs32: true;
     fs40: true;
@@ -153,13 +160,6 @@ const createThemeByMode = (): Theme => {
         lineHeight: 1.56,
         fontWeight: 400,
       },
-
-      fs24: {
-        fontSize: '24px',
-        lineHeight: 1.24,
-        fontWeight: 600,
-      },
-
       fs20: {
         fontSize: '20px',
         lineHeight: 1.5,
@@ -170,12 +170,26 @@ const createThemeByMode = (): Theme => {
         lineHeight: 1.41,
         fontWeight: 600,
       },
+      fs24: {
+        fontSize: '24px',
+        lineHeight: 1.35,
+        fontWeight: 700,
+      },
       fs26: {
         fontSize: '26px',
         lineHeight: 1.5,
         fontWeight: 700,
       },
-
+      fs27: {
+        fontSize: '27px',
+        lineHeight: 1.2,
+        fontWeight: 700,
+      },
+      fs28: {
+        fontSize: '28px',
+        lineHeight: 1.43,
+        fontWeight: 700,
+      },
       fs30: {
         fontSize: '30px',
         lineHeight: 1.19,
@@ -186,7 +200,6 @@ const createThemeByMode = (): Theme => {
         lineHeight: 1.25,
         fontWeight: 700,
       },
-
       fs40: {
         fontSize: '40px',
         lineHeight: 1.2,

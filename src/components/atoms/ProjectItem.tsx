@@ -13,7 +13,7 @@ const ProjectItem: React.FunctionComponent<IProjectItemProps> = (props) => {
     <React.Fragment>
       <Box width="502px">
         <Image src={nukey} alt="nukey" width="502" />
-        <Box display="flex" alignItems="center" flexWrap="nowrap">
+        <Box display="flex" alignItems="center" flexWrap="wrap">
           <Button
             sx={{
               mt: '24px',
