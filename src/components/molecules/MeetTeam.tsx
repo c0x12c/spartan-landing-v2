@@ -6,6 +6,8 @@ import Container from '../atoms/Container';
 import ScrollTitle from '../atoms/ScrollTitle';
 import Image from 'next/image';
 import star from '@/assets/images/star.svg';
+import memberImage from '@/assets/images/team-image.svg';
+import TeamMember from '../atoms/TeamMember';
 
 interface IMeetTeamProps {}
 
@@ -20,8 +22,22 @@ const MeetTeam: React.FunctionComponent<IMeetTeamProps> = (props) => {
   const matchesDesktop = useMediaQuery(theme.breakpoints.up('lg'));
   const matchesMobile = useMediaQuery(theme.breakpoints.down('sm'));
 
+  const dataMembers = [
+    { id: 'member-1', name: 'Chan Nguyen', imgSrc: memberImage, position: 'CEO' },
+    { id: 'member-2', name: 'Bao Nguyen', imgSrc: memberImage, position: 'COO' },
+    { id: 'member-3', name: 'Duc Duong', imgSrc: memberImage, position: 'CTO' },
+  ];
+
+  const renderMembers = dataMembers.map((member) => {
+    return (
+      <Box key={member.id} display="flex">
+        <TeamMember {...member} />
+      </Box>
+    );
+  });
+
   return (
-    <Box my="44px" ref={scrollRef}>
+    <Box my="44px" ref={scrollRef} bgcolor={colors.gray[100]}>
       <Container>
         <Box>
           <ScrollTitle
@@ -30,25 +46,17 @@ const MeetTeam: React.FunctionComponent<IMeetTeamProps> = (props) => {
             title={'Meet our team'}
           />
         </Box>
-        <Box
-          py={{
-            lg: '100px',
-            xs: '44px',
-          }}
-        >
-          <Grid container>
-            {matchesDesktop && (
-              <Grid item lg={6.5} xs={12}>
-                <Typography
-                  variant={matchesMobile ? 'fs30' : 'fs54'}
-                  color={colors.gray[800]}
-                  mb="32px"
-                  component="h2"
-                >
-                  Our Elite Founding Team of Engineers
-                </Typography>
-              </Grid>
-            )}
+        <Box>
+          <Grid container mb="24px">
+            <Grid item lg={6.5} xs={12}>
+              <Typography
+                variant={matchesMobile ? 'fs30' : 'fs54'}
+                color={colors.gray[800]}
+                component="h2"
+              >
+                Our Elite Founding Team of Engineers
+              </Typography>
+            </Grid>
 
             <Grid
               item
@@ -71,6 +79,18 @@ const MeetTeam: React.FunctionComponent<IMeetTeamProps> = (props) => {
             seamlessly to bring your ideas to life. Join us on this journey of success and let our
             team be your catalyst for growth.
           </Typography>
+        </Box>
+        <Box
+          whiteSpace="nowrap"
+          display="flex"
+          gap="34px"
+          py="100px"
+          sx={{
+            overflowY: 'hidden',
+            overflowX: 'auto',
+          }}
+        >
+          {renderMembers}
         </Box>
       </Container>
     </Box>

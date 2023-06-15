@@ -56,14 +56,14 @@ const WhyChooseSpartans: React.FunctionComponent<IWhyChooseSpartansProps> = (pro
   return (
     <Box my="44px" ref={scrollRef}>
       <Container>
-        <Box display={matchesDesktop ? 'block' : 'none'} mb="113px">
+        <Box display={matchesDesktop ? 'block' : 'none'} mt="64px" mb="113px">
           <ScrollTitle
             scrollYProgress={scrollYProgress}
             scrollRef={scrollRef}
             title={'Why Choose Spartans?'}
           />
         </Box>
-        <Box>{renderDataService}</Box>
+        <Box mb="100px">{renderDataService}</Box>
       </Container>
     </Box>
   );
