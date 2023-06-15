@@ -4,6 +4,7 @@ import { Box } from '@mui/material';
 import AboutUs from '../molecules/AboutUs';
 import StandOut from '../molecules/StandOut';
 import WhyChooseSpartans from '../molecules/WhyChooseSpartans';
+import MeetTeam from '../molecules/MeetTeam';
 
 interface IAboutUsPageProps {}
 
@@ -21,6 +22,7 @@ const AboutUsPage: React.FunctionComponent<IAboutUsPageProps> = (props) => {
         <StandOut />
       </Box>
       <WhyChooseSpartans />
+      <MeetTeam />
     </MainTemplate>
   );
 };
