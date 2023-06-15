@@ -5,7 +5,6 @@ import { Manrope, IBM_Plex_Mono } from 'next/font/google';
 import * as colors from './colors';
 
 export const ManropeFont = Manrope({
-
   weight: ['400', '500', '600', '700', '800'],
   subsets: ['latin'],
   display: 'swap',
@@ -24,13 +23,10 @@ declare module '@mui/material/styles' {
     fs18: React.CSSProperties;
     fs24: React.CSSProperties;
     fs30: React.CSSProperties;
-    fs32:React.CSSProperties;
-
+    fs32: React.CSSProperties;
     fs20: React.CSSProperties;
     fs22: React.CSSProperties;
     fs26: React.CSSProperties;
-    fs30: React.CSSProperties;
-    fs32: React.CSSProperties;
     fs40: React.CSSProperties;
     fs44: React.CSSProperties;
 
@@ -52,8 +48,6 @@ declare module '@mui/material/styles' {
     fs20: React.CSSProperties;
     fs22: React.CSSProperties;
     fs26: React.CSSProperties;
-    fs30: React.CSSProperties;
-    fs32: React.CSSProperties;
     fs40: React.CSSProperties;
     fs44: React.CSSProperties;
 
@@ -64,7 +58,7 @@ declare module '@mui/material/styles' {
   }
 
   interface BreakpointOverrides {
-    xs: false; // removes the `xs` breakpoint
+    xs: true;
     sm: true;
     md: true;
     lg: true;
@@ -81,8 +75,6 @@ declare module '@mui/material/Typography' {
     fs22: true;
     fs26: true;
     fs30: true;
-
-    fs32: true,
 
     fs32: true;
     fs40: true;
@@ -199,7 +191,6 @@ const createThemeByMode = (): Theme => {
         lineHeight: 1.25,
         fontWeight: 700,
       },
-
 
       fs40: {
         fontSize: '40px',

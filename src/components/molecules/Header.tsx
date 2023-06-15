@@ -27,28 +27,46 @@ const Header = () => {
   };
 
   return (
-    <ThemeProvider theme={createThemeByMode()}>
-      <AppBar sx={{ background: 'transparent', boxShadow: 'none', position: 'absolute', top: { xs: '34px', sm: '41px', md: '41px', lg: '50px', xl: '31px', xxl: '24px' } }}>
-        <Container>
-          <Toolbar sx={{ padding: 0, margin: '0 auto', display: 'flex', justifyContent: 'space-between' }}>
-            <IconButton edge="start" color="inherit" aria-label="home" href="/" sx={{ padding: 0, margin: 0 }}>
-              <Image src={CompanyLogo} alt="Company Logo" />
-            </IconButton>
+    <AppBar
+      sx={{
+        background: 'transparent',
+        boxShadow: 'none',
+        position: 'absolute',
+        top: { xs: '34px', sm: '41px', md: '41px', lg: '50px', xl: '31px', xxl: '24px' },
+      }}
+    >
+      <Container>
+        <Toolbar
+          sx={{ padding: 0, margin: '0 auto', display: 'flex', justifyContent: 'space-between' }}
+        >
+          <IconButton
+            edge="start"
+            color="inherit"
+            aria-label="home"
+            href="/"
+            sx={{ padding: 0, margin: 0 }}
+          >
+            <Image src={CompanyLogo} alt="Company Logo" />
+          </IconButton>
 
-            {isMobile ? (
-              <>
-                <IconButton edge="start" color="inherit" aria-label="menu" onClick={handleMenuOpen}>
-                  <MenuIcon />
-                </IconButton>
-                <MobileMenu isMenuOpen={isMenuOpen} handleMenuClose={handleMenuClose} handlePageChange={handlePageChange} activePage={activePage} />
-              </>
-            ) : (
-              <HeaderNavigation handlePageChange={handlePageChange} activePage={activePage} />
-            )}
-          </Toolbar>
-        </Container>
-      </AppBar>
-    </ThemeProvider>
+          {isMobile ? (
+            <>
+              <IconButton edge="start" color="inherit" aria-label="menu" onClick={handleMenuOpen}>
+                <MenuIcon />
+              </IconButton>
+              <MobileMenu
+                isMenuOpen={isMenuOpen}
+                handleMenuClose={handleMenuClose}
+                handlePageChange={handlePageChange}
+                activePage={activePage}
+              />
+            </>
+          ) : (
+            <HeaderNavigation handlePageChange={handlePageChange} activePage={activePage} />
+          )}
+        </Toolbar>
+      </Container>
+    </AppBar>
   );
 };
 

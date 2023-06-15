@@ -8,6 +8,31 @@ import { base } from '@/styles/colors';
 import DropdownList from './DropdownList';
 import { SetStateAction } from 'react';
 
+const dropdownItems = [
+  { title: 'Spartan' },
+  {
+    title: 'Services',
+    subItems: [
+      { label: 'About us', href: '/' },
+      { label: 'Product Development', href: '/' },
+      { label: 'Artificial Intelligence', href: '/' },
+      { label: 'Data Platform', href: '/' },
+      { label: 'IoT Development', href: '/' },
+      { label: 'Case Study Intelligence', href: '/' },
+    ],
+  },
+  {
+    title: 'Careers',
+    subItems: [
+      { label: 'About us', href: '/' },
+      { label: 'Life at Spartan', href: '/' },
+      { label: 'Apply for Jobs', href: '/' },
+      { label: 'Intership Program', href: '/' },
+      { label: 'Ready To Join?', href: '/' },
+    ],
+  },
+];
+
 export const MobileMenu = ({
   isMenuOpen,
   handleMenuClose,
@@ -59,30 +84,7 @@ export const MobileMenu = ({
         <DropdownList
           activePage={activePage}
           handlePageChange={handlePageChange}
-          dropdownItems={[
-            { title: 'Spartan' },
-            {
-              title: 'Services',
-              subItems: [
-                { label: 'About us', href: '/' },
-                { label: 'Product Development', href: '/' },
-                { label: 'Artificial Intelligence', href: '/' },
-                { label: 'Data Platform', href: '/' },
-                { label: 'IoT Development', href: '/' },
-                { label: 'Case Study Intelligence', href: '/' },
-              ],
-            },
-            {
-              title: 'Careers',
-              subItems: [
-                { label: 'About us', href: '/' },
-                { label: 'Life at Spartan', href: '/' },
-                { label: 'Apply for Jobs', href: '/' },
-                { label: 'Intership Program', href: '/' },
-                { label: 'Ready To Join?', href: '/' },
-              ],
-            },
-          ]}
+          dropdownItems={dropdownItems}
         />
       </Drawer>
     </>

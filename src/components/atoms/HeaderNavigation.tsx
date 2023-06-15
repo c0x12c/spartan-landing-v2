@@ -1,3 +1,4 @@
+import React from 'react';
 import { Link, Typography, Box } from '@mui/material';
 import { gray, primary } from '@/styles/colors';
 import { ContactUsButton } from './buttons';
@@ -20,7 +21,24 @@ export const HeaderNavigation = ({
     <Box sx={{ display: 'flex', gap: '44px' }}>
       <nav>
         {menuItems.map((item, index) => (
-          <Link key={index} href={item.href} onClick={() => handlePageChange(item.label)}>
+          <Link
+            key={index}
+            href={item.href}
+            onClick={() => handlePageChange(item.label)}
+            sx={{
+              textDecoration: 'none',
+              color: 'inherit',
+              marginRight: '8px',
+              ':after': {
+                content: "'/'",
+                marginRight: '16px',
+                marginLeft: '16px',
+              },
+              ':last-child:after': {
+                display: 'none',
+              },
+            }}
+          >
             <Typography
               variant="fs18"
               sx={{ color: activePage === item.label ? primary[500] : gray[200] }}
@@ -29,31 +47,6 @@ export const HeaderNavigation = ({
             </Typography>
           </Link>
         ))}
-
-        <style jsx>{`
-          nav {
-            display: flex;
-            align-items: center;
-            position: relative;
-          }
-
-          nav :global(a) {
-            position: relative;
-            margin-right: 8px;
-            text-decoration: none;
-            color: inherit;
-          }
-
-          nav :global(a):after {
-            content: '/';
-            margin-right: 16px;
-            margin-left: 16px;
-          }
-
-          nav :global(a):last-child:after {
-            display: none;
-          }
-        `}</style>
       </nav>
       <ContactUsButton />
     </Box>

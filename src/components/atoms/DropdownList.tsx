@@ -12,7 +12,17 @@ type DropdownItemProps = {
   handlePageChange: (page: SetStateAction<string>) => void;
 };
 
-const DropdownItem: React.FC<DropdownItemProps> = ({ title, subItems, activePage, handlePageChange }) => {
+type ItemProps = {
+  title: string;
+  subItems?: { label: string; href: string }[];
+};
+
+const DropdownItem: React.FC<DropdownItemProps> = ({
+  title,
+  subItems,
+  activePage,
+  handlePageChange,
+}) => {
   const [open, setOpen] = useState(false);
 
   const handleClick = () => {
@@ -54,7 +64,9 @@ const DropdownItem: React.FC<DropdownItemProps> = ({ title, subItems, activePage
                 justifyContent: 'space-between',
               }}
             >
-              <Typography variant="fs24" sx={{ color: base.black }}>
+              <Typography
+                sx={{ color: base.black, fontSize: '24px', lineHeight: 1.24, fontWeight: 600 }}
+              >
                 {subItem.label}
               </Typography>
               <LinkButton href={subItem.href} />
@@ -67,12 +79,16 @@ const DropdownItem: React.FC<DropdownItemProps> = ({ title, subItems, activePage
 };
 
 type DropdownListProps = {
-  dropdownItems: DropdownItemProps[];
+  dropdownItems: ItemProps[];
   activePage: string;
   handlePageChange: (page: SetStateAction<string>) => void;
 };
 
-const DropdownList: React.FC<DropdownListProps> = ({ dropdownItems, activePage, handlePageChange}) => {
+const DropdownList: React.FC<DropdownListProps> = ({
+  dropdownItems,
+  activePage,
+  handlePageChange,
+}) => {
   return (
     <>
       {dropdownItems.map((item, index) => (
