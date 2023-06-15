@@ -30,7 +30,7 @@ const DropdownItem: React.FC<DropdownItemProps> = ({
   };
 
   return (
-    <List component="nav" sx={{ width: '90%', margin: '0 auto' }}>
+    <List component="nav" sx={{ width: '90%', margin: '0 auto'}}>
       <ListItem
         onClick={() => {
           handleClick();
@@ -56,7 +56,7 @@ const DropdownItem: React.FC<DropdownItemProps> = ({
             <ListItem
               key={index}
               sx={{
-                marginLeft: '2rem',
+                marginLeft: '24px',
                 padding: '10px',
                 borderBottom: `1px solid ${gray[400]}`,
                 maxWidth: '90%',

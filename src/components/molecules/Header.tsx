@@ -1,10 +1,9 @@
 import { SetStateAction, useState } from 'react';
-import { AppBar, Toolbar, IconButton, useMediaQuery, useTheme, ThemeProvider } from '@mui/material';
+import { AppBar, Toolbar, IconButton, useMediaQuery, useTheme } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import Image from 'next/image';
 import Container from '../atoms/Container';
 import CompanyLogo from '../../assets/images/Company-logo.svg';
-import createThemeByMode from '../../styles/muiTheme';
 import { MobileMenu } from '../atoms/MobileMenu';
 import { HeaderNavigation } from '../atoms/HeaderNavigation';
 
@@ -29,7 +28,7 @@ const Header = () => {
   return (
     <AppBar
       sx={{
-        background: 'transparent',
+        background: 'black',
         boxShadow: 'none',
         position: 'absolute',
         top: { xs: '34px', sm: '41px', md: '41px', lg: '50px', xl: '31px', xxl: '24px' },

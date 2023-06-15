@@ -20,6 +20,7 @@ export const IBM_Plex_MonoFont = IBM_Plex_Mono({
 
 declare module '@mui/material/styles' {
   interface TypographyVariants {
+    fs16: React.CSSProperties;
     fs18: React.CSSProperties;
     fs24: React.CSSProperties;
     fs30: React.CSSProperties;
@@ -40,17 +41,14 @@ declare module '@mui/material/styles' {
   interface TypographyVariantsOptions {
     fs16: React.CSSProperties;
     fs18: React.CSSProperties;
-
     fs24: React.CSSProperties;
     fs30: React.CSSProperties;
     fs32: React.CSSProperties;
-
     fs20: React.CSSProperties;
     fs22: React.CSSProperties;
     fs26: React.CSSProperties;
     fs40: React.CSSProperties;
     fs44: React.CSSProperties;
-
     fs54: React.CSSProperties;
     fs80: React.CSSProperties;
     fs180: React.CSSProperties;
@@ -69,17 +67,14 @@ declare module '@mui/material/styles' {
 
 declare module '@mui/material/Typography' {
   interface TypographyPropsVariantOverrides {
-    fs16: true;
     fs18: true;
     fs20: true;
     fs22: true;
     fs26: true;
     fs30: true;
-
     fs32: true;
     fs40: true;
     fs44: true;
-
     fs54: true;
     fs80: true;
     fs180: true;

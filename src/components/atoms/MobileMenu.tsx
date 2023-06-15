@@ -1,4 +1,4 @@
-import { Drawer, Toolbar, IconButton, MenuItem, Typography } from '@mui/material';
+import { Drawer, Toolbar, IconButton } from '@mui/material';
 import Image from 'next/image';
 import DarkCompanyLogo from '../../assets/images/Company-logo-dark.svg';
 import Link from 'next/link';
@@ -13,7 +13,7 @@ const dropdownItems = [
   {
     title: 'Services',
     subItems: [
-      { label: 'About us', href: '/' },
+      { label: 'IT Consulting', href: '/' },
       { label: 'Product Development', href: '/' },
       { label: 'Artificial Intelligence', href: '/' },
       { label: 'Data Platform', href: '/' },

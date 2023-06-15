@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { Box, SxProps, Theme } from '@mui/material';
 import MainTemplate from '../templates/MainTemplate';
 import GlobalImpact from '../molecules/GlobalImpact';
