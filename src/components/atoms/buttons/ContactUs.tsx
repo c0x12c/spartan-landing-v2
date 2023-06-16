@@ -5,7 +5,7 @@ import ArrowDarkContact from '@/assets/images/Arrow-contact-dark.svg';
 import { base } from '@/styles/colors';
 import { IBM_Plex_MonoFont } from '@/styles/muiTheme';
 
-export function ContactUsButton({ mode }: { mode: 'light' | 'dark' }) {
+export function ContactUsButton({ mode, text }: { mode: 'light' | 'dark'; text: string }) {
   return (
     <>
       <Button
@@ -20,7 +20,7 @@ export function ContactUsButton({ mode }: { mode: 'light' | 'dark' }) {
         }}
       >
         <Typography sx={{ fontSize: '12px', fontFamily: IBM_Plex_MonoFont.style }}>
-          Contact Us
+          {text}
         </Typography>
         <Image src={mode === 'light' ? ArrowContact : ArrowDarkContact} alt="Company Logo" />
       </Button>

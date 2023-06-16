@@ -34,7 +34,7 @@ const Header = () => {
   return (
     <AppBar
       sx={{
-        background: 'white',
+        background: 'transparent',
         boxShadow: 'none',
         position: 'absolute',
         top: { xs: '34px', sm: '41px', md: '41px', lg: '50px', xl: '31px', xxl: '24px' },

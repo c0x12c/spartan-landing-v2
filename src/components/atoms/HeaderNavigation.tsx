@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Link, Typography, Box, ListItem } from '@mui/material';
 import { base, gray, primary } from '@/styles/colors';
 import { ContactUsButton } from './buttons';
 import { SetStateAction } from 'react';
-import { ExpandMore } from '@mui/icons-material';
+import { ExpandMore, ExpandLess } from '@mui/icons-material';
 import LinkButton from './buttons/ArrowButtonMobileMenu';
 
 type MenuItem = {
@@ -33,7 +33,6 @@ const menuItems: MenuItem[] = [
       { label: 'IoT Development', href: '/' },
       { label: 'Case Study Intelligence', href: '/' },
     ],
-
     isOpen: false,
   },
   {
@@ -60,6 +59,26 @@ export const HeaderNavigation = ({
   mode: 'light' | 'dark';
 }) => {
   const [menuItemsState, setMenuItemsState] = useState<MenuItem[]>(menuItems);
+  const menuRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
+        // Clicked outside the menu, so close all submenus
+        const updatedMenuItems = menuItemsState.map((item) => ({
+          ...item,
+          isOpen: false,
+        }));
+        setMenuItemsState(updatedMenuItems);
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [menuItemsState]);
 
   const toggleSubMenu = (index: number) => {
     const updatedMenuItems = menuItemsState.map((item, i) => {
@@ -80,7 +99,7 @@ export const HeaderNavigation = ({
 
   return (
     <Box sx={{ display: 'flex', gap: '44px' }}>
-      <nav style={{ display: 'flex', alignItems: 'center' }}>
+      <nav style={{ display: 'flex', alignItems: 'center' }} ref={menuRef}>
         {menuItemsState.map((item, index) => (
           <React.Fragment key={index}>
             <Link
@@ -117,10 +136,17 @@ export const HeaderNavigation = ({
             </Link>
             {item.subItems && (
               <div style={{ position: 'relative', display: 'flex', justifyContent: 'center' }}>
-                <ExpandMore
-                  onClick={() => toggleSubMenu(index)}
-                  sx={{ color: mode === 'light' ? base.white : base.black }}
-                />
+                {item.isOpen ? (
+                  <ExpandLess
+                    onClick={() => toggleSubMenu(index)}
+                    sx={{ color: mode === 'light' ? base.white : base.black }}
+                  />
+                ) : (
+                  <ExpandMore
+                    onClick={() => toggleSubMenu(index)}
+                    sx={{ color: mode === 'light' ? base.white : base.black }}
+                  />
+                )}
                 {item.isOpen && (
                   <ul
                     style={{
@@ -159,7 +185,7 @@ export const HeaderNavigation = ({
           </React.Fragment>
         ))}
       </nav>
-      <ContactUsButton mode={mode} />
+      <ContactUsButton mode={mode} text="Contact Us" />
     </Box>
   );
 };
