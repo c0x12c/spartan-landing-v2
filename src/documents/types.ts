@@ -8,6 +8,7 @@ enum EDocumentKey {
 
 export enum EPages {
   HOME = 'home',
+  ABOUT_US = 'about-us',
 }
 
 export type ISEOPages = {

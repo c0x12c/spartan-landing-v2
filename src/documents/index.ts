@@ -10,6 +10,13 @@ const SEOPages: ISEOPages = {
     metaImage: '',
     slug: '/',
   },
+  [EPages.ABOUT_US]: {
+    title: 'c0x12c - About Us',
+    description: 'c0x12c - About Us',
+    keywords: 'c0x12c, about us',
+    metaImage: '',
+    slug: '/',
+  },
 };
 
 export default SEOPages;
