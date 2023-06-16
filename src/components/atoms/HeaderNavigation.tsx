@@ -1,8 +1,11 @@
 import React, { useState, useEffect, useRef } from 'react';
 import * as colors from '@/styles/colors';
-import { Typography, Box } from '@mui/material';
+import { Typography, Box, Button } from '@mui/material';
 import { MenuItemDataType } from '../molecules/Header';
 import MenuItem from './MenuItem';
+import Image from 'next/image';
+import ArrowContact from '@/assets/images/Arrow-contact.svg';
+import ArrowDarkContact from '@/assets/images/Arrow-contact-dark.svg';
 
 type HeaderNavigationType = {
   menu: MenuItemDataType[];
@@ -64,7 +67,25 @@ export const HeaderNavigation = ({
       <Box component="nav" display="flex" alignItems="center" gap="16px">
         {renderMenu}
       </Box>
-      {/* <ContactUsButton mode={mode} text="Contact Us" /> */}
+      <Button
+        variant={isTransparent ? 'outlined' : 'contained'}
+        endIcon={<Image src={isTransparent ? ArrowContact : ArrowDarkContact} alt="Outer Link" />}
+        sx={{
+          bgcolor: isTransparent ? 'transparent' : 'inherit',
+          padding: '14px 24px',
+          borderRadius: '60.5811px',
+          borderWidth: '2.12565px',
+          fontWeight: 600,
+          gap: '24px',
+          color: isTransparent ? colors.base.white : 'inherit',
+          '&:hover': {
+            borderWidth: '2.12565px',
+            bgcolor: isTransparent ? 'transparent' : 'inherit',
+          },
+        }}
+      >
+        Contact us
+      </Button>
     </Box>
   );
 };

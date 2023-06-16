@@ -76,32 +76,16 @@ const Header = () => {
               <Image src={isTransparent ? CompanyLogo : CompanyDarkLogo} alt="Spartan Logo" />
             </IconButton>
 
-            <HeaderNavigation
-              menu={dataMenu}
-              updateMenuItem={updateMenuItem}
-              selectedMenuItem={selectedMenuItem}
-              isTransparent={isTransparent}
-            />
-
-            {/* {isMobile ? (
-              <>
-                <IconButton edge="start" color="inherit" aria-label="menu" onClick={handleMenuOpen}>
-                  <MenuIcon sx={{ color: mode === 'light' ? base.white : base.black }} />
-                </IconButton>
-                <MobileMenu
-                  isMenuOpen={isMenuOpen}
-                  handleMenuClose={handleMenuClose}
-                  handlePageChange={handlePageChange}
-                  activePage={activePage}
-                />
-              </>
+            {isMobile ? (
+              'Hello'
             ) : (
               <HeaderNavigation
-                handlePageChange={handlePageChange}
-                activePage={activePage}
-                mode={mode}
+                menu={dataMenu}
+                updateMenuItem={updateMenuItem}
+                selectedMenuItem={selectedMenuItem}
+                isTransparent={isTransparent}
               />
-            )} */}
+            )}
           </Box>
         </Toolbar>
       </Container>
