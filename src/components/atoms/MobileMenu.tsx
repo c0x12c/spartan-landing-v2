@@ -1,55 +1,62 @@
-import { Drawer, Toolbar, IconButton } from '@mui/material';
+import { Drawer, Toolbar, IconButton, Box, useTheme, useMediaQuery } from '@mui/material';
 import Image from 'next/image';
 import DarkCompanyLogo from '../../assets/images/Company-logo-dark.svg';
 import Link from 'next/link';
 import MenuIcon from '@mui/icons-material/Menu';
 
 import { base } from '@/styles/colors';
-import DropdownList from './DropdownList';
-import { SetStateAction } from 'react';
+import { useState } from 'react';
+import { MenuItemDataType } from '../molecules/Header';
+import MobileMenuItem from './MobileMenuItem';
 
-const dropdownItems = [
-  { title: 'Spartan' },
-  {
-    title: 'Services',
-    subItems: [
-      { label: 'IT Consulting', href: '/' },
-      { label: 'Product Development', href: '/' },
-      { label: 'Artificial Intelligence', href: '/' },
-      { label: 'Data Platform', href: '/' },
-      { label: 'IoT Development', href: '/' },
-      { label: 'Case Study Intelligence', href: '/' },
-    ],
-  },
-  {
-    title: 'Careers',
-    subItems: [
-      { label: 'About us', href: '/' },
-      { label: 'Life at Spartan', href: '/' },
-      { label: 'Apply for Jobs', href: '/' },
-      { label: 'Intership Program', href: '/' },
-      { label: 'Ready To Join?', href: '/' },
-    ],
-  },
-];
+type MobileMenuType = {
+  menu: MenuItemDataType[];
+  updateMenuItem: (id: string) => void;
+  selectedMenuItem: string;
+  isTransparent: boolean;
+};
 
 export const MobileMenu = ({
-  isMenuOpen,
-  handleMenuClose,
-  activePage,
-  handlePageChange,
-}: {
-  isMenuOpen: boolean;
-  handleMenuClose: () => void;
-  activePage: string;
-  handlePageChange: (page: SetStateAction<string>) => void;
-}) => {
+  menu,
+  updateMenuItem,
+  selectedMenuItem,
+  isTransparent,
+}: MobileMenuType) => {
+  const [openMenu, setOpenMenu] = useState(false);
+  const toggleMenu = (value: boolean) => {
+    setOpenMenu(value);
+  };
+
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
+
+  const renderMenu = menu.map((item) => {
+    return (
+      <Box key={item.id} display="flex" flexDirection="column" gap="24px">
+        <MobileMenuItem
+          item={item}
+          updateMenuItem={updateMenuItem}
+          isActive={selectedMenuItem === item.id}
+        />
+      </Box>
+    );
+  });
+
   return (
     <>
+      <IconButton
+        edge="start"
+        color="inherit"
+        aria-label="menu"
+        size="large"
+        onClick={() => toggleMenu(true)}
+      >
+        <MenuIcon sx={{ color: isTransparent ? base.white : base.black }} />
+      </IconButton>
       <Drawer
         anchor="right"
-        open={isMenuOpen}
-        onClose={handleMenuClose}
+        open={openMenu}
+        onClose={() => toggleMenu(false)}
         PaperProps={{
           style: {
             width: '100vw',
@@ -59,33 +66,31 @@ export const MobileMenu = ({
       >
         <Toolbar
           sx={{
-            padding: 0,
+            width: '100%',
             margin: '0 auto',
             display: 'flex',
             justifyContent: 'space-between',
-            width: '90%',
-            marginTop: '27px',
-            marginBottom: '44px',
+            height: '142px',
+            p: isMobile ? '10px 15px !important' : '40.8px 59.5px !important',
           }}
         >
-          <Link href="/" onClick={handleMenuClose}>
+          <Link href="/" onClick={() => toggleMenu(false)}>
             <Image src={DarkCompanyLogo} alt="Company Logo" />
           </Link>
           <IconButton
             edge="start"
             color="inherit"
             aria-label="menu"
-            onClick={handleMenuClose}
+            size="large"
+            onClick={() => toggleMenu(false)}
             sx={{ color: base.black }}
           >
             <MenuIcon />
           </IconButton>
         </Toolbar>
-        <DropdownList
-          activePage={activePage}
-          handlePageChange={handlePageChange}
-          dropdownItems={dropdownItems}
-        />
+        <Box my="44px" mx={isMobile ? '16px' : '64px'}>
+          {renderMenu}
+        </Box>
       </Drawer>
     </>
   );

@@ -1,13 +1,11 @@
-import { SetStateAction, useState } from 'react';
+import { useState } from 'react';
 import { AppBar, Toolbar, IconButton, useMediaQuery, useTheme, Box } from '@mui/material';
-import MenuIcon from '@mui/icons-material/Menu';
 import Image from 'next/image';
 import Container from '../atoms/Container';
 import CompanyLogo from '../../assets/images/Company-logo.svg';
 import { MobileMenu } from '../atoms/MobileMenu';
 import { HeaderNavigation } from '../atoms/HeaderNavigation';
 import CompanyDarkLogo from '@/assets/images/Company-logo-dark.svg';
-import { base } from '@/styles/colors';
 import { useRouter } from 'next/router';
 
 export type MenuItemDataType = {
@@ -70,14 +68,23 @@ const Header = () => {
       }}
     >
       <Container>
-        <Toolbar>
+        <Toolbar
+          sx={{
+            height: isMobile ? '142px' : 'auto',
+          }}
+        >
           <Box display="flex" alignItems="center" justifyContent="space-between" width="100%">
             <IconButton edge="start" color="inherit" aria-label="home" href="/">
               <Image src={isTransparent ? CompanyLogo : CompanyDarkLogo} alt="Spartan Logo" />
             </IconButton>
 
             {isMobile ? (
-              'Hello'
+              <MobileMenu
+                menu={dataMenu}
+                updateMenuItem={updateMenuItem}
+                selectedMenuItem={selectedMenuItem}
+                isTransparent={isTransparent}
+              />
             ) : (
               <HeaderNavigation
                 menu={dataMenu}
