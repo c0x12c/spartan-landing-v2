@@ -64,7 +64,13 @@ const OurServices: React.FunctionComponent<IOurServicesProps> = (props) => {
   });
 
   return (
-    <Box my="44px">
+    <Box
+      // my="44px"
+      sx={{
+        background:
+          'linear-gradient(91.73deg, #00030E 16.83%, rgba(2, 1, 30, 0.89) 54.44%, rgba(0, 10, 52, 0.803463) 80.47%, rgba(0, 9, 40, 0.44) 111.55%)',
+      }}
+    >
       <Container>
         <Box mb="40px" ref={scrollRef}>
           <ScrollTitle
