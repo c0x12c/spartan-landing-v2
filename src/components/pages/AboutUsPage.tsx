@@ -5,6 +5,7 @@ import AboutUs from '../molecules/AboutUs';
 import StandOut from '../molecules/StandOut';
 import WhyChooseSpartans from '../molecules/WhyChooseSpartans';
 import MeetTeam from '../molecules/MeetTeam';
+import EngineerPower from '../molecules/EngineerPower';
 
 interface IAboutUsPageProps {}
 
@@ -23,6 +24,7 @@ const AboutUsPage: React.FunctionComponent<IAboutUsPageProps> = (props) => {
       </Box>
       <WhyChooseSpartans />
       <MeetTeam />
+      <EngineerPower />
     </MainTemplate>
   );
 };
