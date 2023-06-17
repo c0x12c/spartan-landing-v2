@@ -1,10 +1,10 @@
 import * as React from 'react';
 import { Box, useMediaQuery, useTheme } from '@mui/material';
-import Container from '../atoms/Container';
+import Container from '../../atoms/Container';
 import { useScroll } from 'framer-motion';
-import ScrollTitle from '../atoms/ScrollTitle';
+import ScrollTitle from '../../atoms/ScrollTitle';
 import chooseSpartansImage from '@/assets/images/choose-spartans-image.svg';
-import AccordionImageItem from '../atoms/AccordionImageItem';
+import AccordionImageItem from '../../atoms/AccordionImageItem';
 
 interface IWhyChooseSpartansProps {}
 

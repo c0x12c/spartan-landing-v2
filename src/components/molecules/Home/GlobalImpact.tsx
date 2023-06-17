@@ -1,8 +1,8 @@
 import * as React from 'react';
 import * as colors from '@/styles/colors';
 import { Box, Button, Grid, Typography, useMediaQuery, useTheme } from '@mui/material';
-import Container from '../atoms/Container';
-import LocationMap from '../atoms/Map';
+import Container from '../../atoms/Container';
+import LocationMap from '../../atoms/Map';
 
 interface IGlobalImpactProps {}
 

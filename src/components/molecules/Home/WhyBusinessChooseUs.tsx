@@ -2,8 +2,8 @@ import * as React from 'react';
 import * as colors from '@/styles/colors';
 
 import { Box, Grid, Typography, useMediaQuery, useTheme } from '@mui/material';
-import Container from '../atoms/Container';
-import BusinessItem from '../atoms/BusinessItem';
+import Container from '../../atoms/Container';
+import BusinessItem from '../../atoms/BusinessItem';
 import money from '@/assets/images/money-recive.svg';
 import timer from '@/assets/images/timer.svg';
 import like from '@/assets/images/like.svg';

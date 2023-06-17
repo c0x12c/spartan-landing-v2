@@ -1,8 +1,8 @@
 import * as React from 'react';
 import * as colors from '@/styles/colors';
 import { Box, Grid, Typography, useMediaQuery, useTheme } from '@mui/material';
-import Container from '../atoms/Container';
-import StandOutItem from '../atoms/StandOutItem';
+import Container from '../../atoms/Container';
+import StandOutItem from '../../atoms/StandOutItem';
 
 interface IStandOutProps {}
 

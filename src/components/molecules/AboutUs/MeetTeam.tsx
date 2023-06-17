@@ -2,12 +2,12 @@ import * as React from 'react';
 import * as colors from '@/styles/colors';
 import { Box, Divider, Grid, Typography, useMediaQuery, useTheme } from '@mui/material';
 import { useScroll } from 'framer-motion';
-import Container from '../atoms/Container';
-import ScrollTitle from '../atoms/ScrollTitle';
+import Container from '../../atoms/Container';
+import ScrollTitle from '../../atoms/ScrollTitle';
 import Image from 'next/image';
 import star from '@/assets/images/star.svg';
 import memberImage from '@/assets/images/team-image.svg';
-import TeamMember from '../atoms/TeamMember';
+import TeamMember from '../../atoms/TeamMember';
 
 interface IMeetTeamProps {}
 
