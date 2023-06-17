@@ -1,13 +1,14 @@
 import * as React from 'react';
 import * as colors from '@/styles/colors';
 import { Box, Divider, Grid, Typography, useMediaQuery, useTheme } from '@mui/material';
-import Container from '../atoms/Container';
+import Container from '../../atoms/Container';
 import Image from 'next/image';
 import star from '@/assets/images/star.svg';
 import { useScroll } from 'framer-motion';
-import ScrollTitle from '../atoms/ScrollTitle';
-import ProjectItem from '../atoms/ProjectItem';
+import ScrollTitle from '../../atoms/ScrollTitle';
+import ProjectItem from '../../atoms/ProjectItem';
 import nukey from '@/assets/images/nukey.svg';
+import { CaseStudies } from '@/constants/case-study';
 
 interface IElevateStartupProps {}
 
@@ -22,18 +23,11 @@ const ElevateStartup: React.FunctionComponent<IElevateStartupProps> = (props) =>
     offset: ['start end', 'end start'],
   });
 
-  const dataProjects = [
-    { id: 'project-1', title: 'Nukey project', imgSrc: nukey, tags: ['NFT market'] },
-    { id: 'project-2', title: 'Nukey project', imgSrc: nukey, tags: ['NFT market'] },
-    { id: 'project-3', title: 'Nukey project', imgSrc: nukey, tags: ['NFT market'] },
-    { id: 'project-4', title: 'Nukey project', imgSrc: nukey, tags: ['NFT market'] },
-  ];
-
-  const renderProjects = dataProjects.map((project, index) => {
+  const renderProjects = CaseStudies.map((project, index) => {
     return (
       <Box key={project.id} display="flex">
         <ProjectItem {...project} />
-        {index !== dataProjects.length - 1 && (
+        {index !== CaseStudies.length - 1 && (
           <Box mx="44px" width="1px" height="100%" bgcolor={colors.gray[400]} />
         )}
       </Box>

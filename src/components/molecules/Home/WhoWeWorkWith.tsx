@@ -1,8 +1,8 @@
 import * as React from 'react';
 import * as colors from '@/styles/colors';
 import { Box, Divider, Grid, Typography, useMediaQuery, useTheme } from '@mui/material';
-import Container from '../atoms/Container';
-import ScrollTitle from '../atoms/ScrollTitle';
+import Container from '../../atoms/Container';
+import ScrollTitle from '../../atoms/ScrollTitle';
 import { useScroll } from 'framer-motion';
 import Image from 'next/image';
 import star from '@/assets/images/star.svg';

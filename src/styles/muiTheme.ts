@@ -34,6 +34,7 @@ declare module '@mui/material/styles' {
     fs44: React.CSSProperties;
     fs54: React.CSSProperties;
     fs80: React.CSSProperties;
+    fs100: React.CSSProperties;
     fs180: React.CSSProperties;
     fs240: React.CSSProperties;
   }
@@ -54,6 +55,7 @@ declare module '@mui/material/styles' {
     fs44: React.CSSProperties;
     fs54: React.CSSProperties;
     fs80: React.CSSProperties;
+    fs100: React.CSSProperties;
     fs180: React.CSSProperties;
     fs240: React.CSSProperties;
   }
@@ -84,6 +86,7 @@ declare module '@mui/material/Typography' {
     fs44: true;
     fs54: true;
     fs80: true;
+    fs100: true;
     fs180: true;
     fs240: true;
   }
@@ -246,6 +249,11 @@ const createThemeByMode = (): Theme => {
       fs80: {
         fontSize: '80px',
         lineHeight: 1.15,
+        fontWeight: 700,
+      },
+      fs100: {
+        fontSize: '100px',
+        lineHeight: 1.2,
         fontWeight: 700,
       },
       fs180: {

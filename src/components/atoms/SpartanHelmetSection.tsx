@@ -4,14 +4,23 @@ import { Box, Button, Typography, useMediaQuery, useTheme } from '@mui/material'
 import Image from 'next/image';
 import logo from '@/assets/images/logo-to-be-spartan.svg';
 import outerLink from '@/assets/images/outer-link.svg';
-import Container from '../atoms/Container';
+import Container from './Container';
 
-interface IToBeSpartanProps {}
+interface ISpartanHelmetSectionProps {
+  firstText: string;
+  secondText: string;
+  contentText?: string;
+  textButton: string;
+}
 
-const ToBeSpartan: React.FunctionComponent<IToBeSpartanProps> = (props) => {
+const SpartanHelmetSection: React.FunctionComponent<ISpartanHelmetSectionProps> = ({
+  firstText,
+  secondText,
+  textButton,
+  contentText,
+}) => {
   const theme = useTheme();
   const matches = useMediaQuery(theme.breakpoints.down('sm'));
-
   return (
     <Box mb="44px">
       <Container>
@@ -43,7 +52,7 @@ const ToBeSpartan: React.FunctionComponent<IToBeSpartanProps> = (props) => {
             </Box>
             <Box display="flex" justifyContent="space-between" alignItems="center" maxWidth="627px">
               <Typography variant={matches ? 'fs40' : 'fs80'} color={colors.gray[800]}>
-                Interested in
+                {firstText}
               </Typography>
               <Image src={outerLink} alt="outerLink" />
             </Box>
@@ -59,16 +68,19 @@ const ToBeSpartan: React.FunctionComponent<IToBeSpartanProps> = (props) => {
               }}
             >
               <Typography variant={matches ? 'fs40' : 'fs80'} color={colors.gray[800]}>
-                knowing more about Spartan?
+                {secondText}
               </Typography>
             </Box>
           </Box>
-          <Box display="flex" justifyContent="center" my="24px">
-            <Typography variant={matches ? 'fs16' : 'fs22'} color={colors.gray[700]}>
-              Become Next Spartan?
-            </Typography>
-          </Box>
-          <Box display="flex" justifyContent="center">
+          {contentText && (
+            <Box display="flex" justifyContent="center" my="24px">
+              <Typography variant={matches ? 'fs16' : 'fs22'} color={colors.gray[700]}>
+                {contentText}
+              </Typography>
+            </Box>
+          )}
+
+          <Box display="flex" justifyContent="center" mt={contentText ? 0 : '26px'}>
             <Button
               sx={{
                 bgcolor: colors.primary[500],
@@ -85,7 +97,7 @@ const ToBeSpartan: React.FunctionComponent<IToBeSpartanProps> = (props) => {
                 },
               }}
             >
-              Meet Our Expert
+              {textButton}
             </Button>
           </Box>
         </Box>
@@ -94,4 +106,4 @@ const ToBeSpartan: React.FunctionComponent<IToBeSpartanProps> = (props) => {
   );
 };
 
-export default ToBeSpartan;
+export default SpartanHelmetSection;
