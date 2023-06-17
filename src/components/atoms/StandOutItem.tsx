@@ -1,6 +1,7 @@
 import * as React from 'react';
 import * as colors from '@/styles/colors';
 import { Box, Button, Typography, useMediaQuery, useTheme } from '@mui/material';
+import Tag from './Tag';
 
 interface IStandOutItemProps {
   index: number;
@@ -40,18 +41,7 @@ const StandOutItem: React.FunctionComponent<IStandOutItemProps> = ({
           pb={matchesTablet ? '40px' : 0}
         >
           <Box display="flex" gap="12px" pb="14px">
-            <Button
-              sx={{
-                p: '10px 43.5px',
-                border: '1px solid',
-                borderColor: colors.primary[700],
-                color: colors.primary[700],
-                borderRadius: '40px',
-                letterSpacing: '-0.13px',
-              }}
-            >
-              {textTag}
-            </Button>
+            <Tag textTag={textTag} />
           </Box>
           <Box>
             <Typography

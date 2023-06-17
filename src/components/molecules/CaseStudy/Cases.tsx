@@ -1,50 +1,57 @@
 import * as React from 'react';
 import * as colors from '@/styles/colors';
 import { Box, Divider, Grid, Typography, useMediaQuery, useTheme } from '@mui/material';
-import Container from '../../atoms/Container';
+import { useScroll } from 'framer-motion';
+import Container from '@/components/atoms/Container';
+import ScrollTitle from '@/components/atoms/ScrollTitle';
 import Image from 'next/image';
 import star from '@/assets/images/star.svg';
-import { useScroll } from 'framer-motion';
-import ScrollTitle from '../../atoms/ScrollTitle';
-import ProjectItem from '../../atoms/ProjectItem';
-import nukey from '@/assets/images/nukey.svg';
-import { CaseStudies } from '@/constants/case-study';
+import Tag from '@/components/atoms/Tag';
+import Projects from './Projects';
 
-interface IElevateStartupProps {}
+interface ICasesProps {}
 
-const ElevateStartup: React.FunctionComponent<IElevateStartupProps> = (props) => {
-  const theme = useTheme();
-  const matchesDesktop = useMediaQuery(theme.breakpoints.up('lg'));
-  const matchesMobile = useMediaQuery(theme.breakpoints.down('sm'));
-
+const Cases: React.FunctionComponent<ICasesProps> = (props) => {
   const scrollRef = React.useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: scrollRef,
     offset: ['start end', 'end start'],
   });
 
-  const renderProjects = CaseStudies.map((project, index) => {
+  const theme = useTheme();
+  const matchesDesktop = useMediaQuery(theme.breakpoints.up('lg'));
+  const matchesMobile = useMediaQuery(theme.breakpoints.down('sm'));
+
+  const dataTags = [
+    { id: 'tag-1', name: 'NFT market' },
+    { id: 'tag-2', name: 'NFT market' },
+    { id: 'tag-3', name: 'NFT market' },
+    { id: 'tag-4', name: 'NFT market' },
+  ];
+
+  const renderTags = dataTags.map((tag) => {
     return (
-      <Box key={project.id} display="flex">
-        <ProjectItem {...project} />
-        {index !== CaseStudies.length - 1 && (
-          <Box mx="44px" width="1px" height="100%" bgcolor={colors.gray[400]} />
-        )}
-      </Box>
+      <Tag
+        key={tag.id}
+        textTag={tag.name}
+        sx={{ color: colors.primary[500], borderColor: colors.primary[500], padding: '10px 23px' }}
+      />
     );
   });
 
   return (
-    <React.Fragment>
-      <Box py="44px" ref={scrollRef} bgcolor={colors.gray[100]}>
+    <Box my="44px">
+      <Box ref={scrollRef}>
         <Container>
-          <Box
-            py={{
-              lg: '100px',
-              xs: '44px',
-            }}
-          >
-            <Grid container>
+          <Box mb="32px">
+            <ScrollTitle
+              scrollYProgress={scrollYProgress}
+              scrollRef={scrollRef}
+              title={'Case study'}
+            />
+          </Box>
+          <Box mb={'32px'}>
+            <Grid container mb="32px">
               {matchesDesktop && (
                 <Grid item lg={6.5} xs={12}>
                   <Typography
@@ -97,39 +104,27 @@ const ElevateStartup: React.FunctionComponent<IElevateStartupProps> = (props) =>
                 </Box>
               </Grid>
             </Grid>
-            <Typography variant="fs16" color={colors.gray[500]} component="p" maxWidth="640px">
-              Join us at Spartan Project and experience the strength of our capabilities,
-              complemented by the humility that drives our success. Together, we will achieve
-              remarkable outcomes and forge a path towards excellence.
+            <Typography
+              variant="fs16"
+              letterSpacing="0.01em"
+              color={colors.gray[500]}
+              component="p"
+              maxWidth="640px"
+            >
+              Share your concerns with us, and we are here to provide you with the best solutions
+              from top-notch engineers around the world.
             </Typography>
-            <Box
-              pb="44px"
-              mb="44px"
-              boxSizing={'border-box'}
-              borderBottom="1px solid"
-              borderColor={matchesDesktop ? colors.gray[400] : 'transparent'}
-            >
-              <ScrollTitle
-                scrollYProgress={scrollYProgress}
-                scrollRef={scrollRef}
-                title={'Our project'}
-              />
-            </Box>
-            <Box
-              whiteSpace="nowrap"
-              display="flex"
-              sx={{
-                overflowY: 'hidden',
-                overflowX: 'auto',
-              }}
-            >
-              {renderProjects}
-            </Box>
+          </Box>
+          <Box mb="36px" display="flex" flexWrap="wrap" gap="10px">
+            {renderTags}
           </Box>
         </Container>
       </Box>
-    </React.Fragment>
+      <Container>
+        <Projects />
+      </Container>
+    </Box>
   );
 };
 
-export default ElevateStartup;
+export default Cases;
