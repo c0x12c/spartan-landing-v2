@@ -7,12 +7,14 @@ import { MobileMenu } from '../atoms/MobileMenu';
 import { HeaderNavigation } from '../atoms/HeaderNavigation';
 import CompanyDarkLogo from '@/assets/images/Company-logo-dark.svg';
 import { useRouter } from 'next/router';
+import { ServiceType, services } from '@/constants/services';
+import { AboutType, about } from '@/constants/about';
 
 export type MenuItemDataType = {
   id: string;
   label: string;
   href?: string;
-  subItems?: MenuItemDataType[];
+  subItems?: ServiceType[] | AboutType[];
 };
 
 const Header = () => {
@@ -31,25 +33,12 @@ const Header = () => {
     {
       id: 'menu-item-2',
       label: 'Services',
-      subItems: [
-        { id: 'sub-menu-item-1', label: 'IT Consulting', href: '/' },
-        { id: 'sub-menu-item-2', label: 'Product Development', href: '/' },
-        { id: 'sub-menu-item-3', label: 'Artificial Intelligence', href: '/' },
-        { id: 'sub-menu-item-4', label: 'Data Platform', href: '/' },
-        { id: 'sub-menu-item-5', label: 'IoT Development', href: '/' },
-        { id: 'sub-menu-item-6', label: 'Case Study Intelligence', href: '/' },
-      ],
+      subItems: services,
     },
     {
       id: 'menu-item-3',
       label: 'Careers',
-      subItems: [
-        { id: 'sub-menu-item-7', label: 'About us', href: '/' },
-        { id: 'sub-menu-item-8', label: 'Life at Spartan', href: '/' },
-        { id: 'sub-menu-item-9', label: 'Apply for Jobs', href: '/' },
-        { id: 'sub-menu-item-10', label: 'Internship Program', href: '/' },
-        { id: 'sub-menu-item-11', label: 'Ready To Join?', href: '/' },
-      ],
+      subItems: about,
     },
   ];
 
