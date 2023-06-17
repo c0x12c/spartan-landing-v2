@@ -6,7 +6,7 @@ export type ServiceType = {
   content: string;
 };
 
-export const services = [
+export const Services = [
   {
     id: 'service-1',
     label: 'IT Consulting',

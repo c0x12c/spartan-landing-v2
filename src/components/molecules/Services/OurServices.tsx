@@ -14,11 +14,6 @@ const OurServices: React.FunctionComponent<IOurServicesProps> = (props) => {
     target: scrollRef,
     offset: ['start end', 'end start'],
   });
-
-  const renderDataService = Services.map((service, index) => {
-    return <AccordionItem key={service.id} index={index + 1} {...service} />;
-  });
-
   return (
     <Box my="44px" ref={scrollRef}>
       <Container>
@@ -29,7 +24,6 @@ const OurServices: React.FunctionComponent<IOurServicesProps> = (props) => {
             title={'Our services'}
           />
         </Box>
-        <Box>{renderDataService}</Box>
       </Container>
     </Box>
   );
