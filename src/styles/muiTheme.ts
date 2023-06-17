@@ -34,6 +34,7 @@ declare module '@mui/material/styles' {
     fs44: React.CSSProperties;
     fs54: React.CSSProperties;
     fs80: React.CSSProperties;
+    fs100: React.CSSProperties;
     fs180: React.CSSProperties;
     fs240: React.CSSProperties;
   }
@@ -54,12 +55,13 @@ declare module '@mui/material/styles' {
     fs44: React.CSSProperties;
     fs54: React.CSSProperties;
     fs80: React.CSSProperties;
+    fs100: React.CSSProperties;
     fs180: React.CSSProperties;
     fs240: React.CSSProperties;
   }
 
   interface BreakpointOverrides {
-    xs: true; // removes the `xs` breakpoint
+    xs: true;
     sm: true;
     md: true;
     lg: true;
@@ -84,6 +86,7 @@ declare module '@mui/material/Typography' {
     fs44: true;
     fs54: true;
     fs80: true;
+    fs100: true;
     fs180: true;
     fs240: true;
   }
@@ -141,6 +144,34 @@ const createThemeByMode = (): Theme => {
             justifyContent: 'center',
             alignItems: 'center',
             borderRadius: '60.6px',
+          },
+          contained: {
+            padding: '16px 34px',
+            fontSize: '16px',
+            lineHeight: 1.14,
+            letterSpacing: '-0.13px',
+            border: '1px solid',
+            borderColor: 'transparent',
+            backgroundColor: colors.primary[500],
+            color: colors.base.black,
+            borderRadius: '57px',
+            '&:hover': {
+              backgroundColor: colors.primary[500],
+            },
+          },
+          outlinedPrimary: {
+            padding: '16px 34px',
+            fontSize: '16px',
+            lineHeight: 1.14,
+            letterSpacing: '-0.13px',
+            color: colors.primary[500],
+            backgroundColor: colors.base.white,
+            border: '1px solid',
+            borderColor: colors.primary[500],
+            borderRadius: '57px',
+            '&:hover': {
+              backgroundColor: colors.base.white,
+            },
           },
         },
       },
@@ -218,6 +249,11 @@ const createThemeByMode = (): Theme => {
       fs80: {
         fontSize: '80px',
         lineHeight: 1.15,
+        fontWeight: 700,
+      },
+      fs100: {
+        fontSize: '100px',
+        lineHeight: 1.2,
         fontWeight: 700,
       },
       fs180: {

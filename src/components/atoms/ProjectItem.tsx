@@ -1,38 +1,58 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import * as React from 'react';
 import * as colors from '@/styles/colors';
 import Image from 'next/image';
-import nukey from '@/assets/images/nukey.svg';
 import outerLink from '@/assets/images/outer-link-black.svg';
 
-import { Box, Button, Typography } from '@mui/material';
+import { Box, Button, Link, Typography } from '@mui/material';
+import Tag from './Tag';
 
-interface IProjectItemProps {}
+interface IProjectItemProps {
+  name: string;
+  imgSrc: any;
+  href: string;
+  tags: string[];
+  fullWidth?: boolean;
+}
 
-const ProjectItem: React.FunctionComponent<IProjectItemProps> = (props) => {
+const ProjectItem: React.FunctionComponent<IProjectItemProps> = ({
+  name,
+  imgSrc,
+  href,
+  tags,
+  fullWidth = false,
+}) => {
+  const renderTags = tags.map((tag, index) => {
+    return (
+      <Tag
+        key={`tag-${index + 1}`}
+        textTag={tag}
+        sx={{ color: colors.primary[500], borderColor: colors.primary[500], padding: '10px 23px' }}
+      />
+    );
+  });
+
   return (
     <React.Fragment>
-      <Box width="502px">
-        <Image src={nukey} alt="nukey" width="502" />
-        <Box display="flex" alignItems="center" flexWrap="wrap">
-          <Button
-            sx={{
-              mt: '24px',
-              mb: '18px',
-              p: '10px 23px',
-              border: '1px solid',
-              borderColor: colors.primary[700],
-              color: colors.primary[700],
-              borderRadius: '40px',
-            }}
-          >
-            NFT market
-          </Button>
+      <Box maxWidth="502px">
+        <Image
+          src={imgSrc}
+          alt="logo"
+          style={{
+            width: fullWidth ? '100%' : '502px',
+            height: 'auto',
+          }}
+        />
+        <Box display="flex" alignItems="center" flexWrap="wrap" gap="10px" mt="24px" mb="18px">
+          {renderTags}
         </Box>
         <Box display="flex" justifyContent="space-between">
           <Typography variant="fs32" color={colors.base.black} letterSpacing="0.01em">
-            Nukey project
+            {name}
           </Typography>
-          <Image src={outerLink} alt="outerLink" />
+          <Link href={href}>
+            <Image src={outerLink} alt="outerLink" />
+          </Link>
         </Box>
       </Box>
     </React.Fragment>

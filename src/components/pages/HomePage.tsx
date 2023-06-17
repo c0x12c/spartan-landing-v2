@@ -1,13 +1,13 @@
 import React from 'react';
 import { Box, SxProps, Theme } from '@mui/material';
 import MainTemplate from '../templates/MainTemplate';
-import GlobalImpact from '../molecules/GlobalImpact';
-import ClientWithSpartans from '../molecules/ClientWithSpartans';
-import ToBeSpartan from '../molecules/ToBeSpartan';
-import WhoWeWorkWith from '../molecules/WhoWeWorkWith';
-import WhyBusinessChooseUs from '../molecules/WhyBusinessChooseUs';
-import ElevateStartup from '../molecules/ElevateStartup';
-import OurServices from '../molecules/OurServices';
+import GlobalImpact from '../molecules/Home/GlobalImpact';
+import ClientWithSpartans from '../molecules/Home/ClientWithSpartans';
+import ToBeSpartan from '../molecules/Home/ToBeSpartan';
+import WhoWeWorkWith from '../molecules/Home/WhoWeWorkWith';
+import WhyBusinessChooseUs from '../molecules/Home/WhyBusinessChooseUs';
+import ElevateStartup from '../molecules/Home/ElevateStartup';
+import OurServices from '../molecules/Home/OurServices';
 
 type Props = {
   children?: React.ReactNode;
