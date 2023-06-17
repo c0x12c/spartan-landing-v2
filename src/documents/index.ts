@@ -15,7 +15,14 @@ const SEOPages: ISEOPages = {
     description: 'c0x12c - About Us',
     keywords: 'c0x12c, about us',
     metaImage: '',
-    slug: '/',
+    slug: '/about-us',
+  },
+  [EPages.CASE_STUDY]: {
+    title: 'c0x12c - Case Study',
+    description: 'c0x12c - Case Study',
+    keywords: 'c0x12c, Case Study',
+    metaImage: '',
+    slug: '/case-study',
   },
 };
 
