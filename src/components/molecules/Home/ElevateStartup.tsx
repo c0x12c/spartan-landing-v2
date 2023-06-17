@@ -1,12 +1,12 @@
 import * as React from 'react';
 import * as colors from '@/styles/colors';
 import { Box, Divider, Grid, Typography, useMediaQuery, useTheme } from '@mui/material';
-import Container from '../atoms/Container';
+import Container from '../../atoms/Container';
 import Image from 'next/image';
 import star from '@/assets/images/star.svg';
 import { useScroll } from 'framer-motion';
-import ScrollTitle from '../atoms/ScrollTitle';
-import ProjectItem from '../atoms/ProjectItem';
+import ScrollTitle from '../../atoms/ScrollTitle';
+import ProjectItem from '../../atoms/ProjectItem';
 import nukey from '@/assets/images/nukey.svg';
 
 interface IElevateStartupProps {}

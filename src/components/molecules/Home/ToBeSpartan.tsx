@@ -4,7 +4,7 @@ import { Box, Button, Typography, useMediaQuery, useTheme } from '@mui/material'
 import Image from 'next/image';
 import logo from '@/assets/images/logo-to-be-spartan.svg';
 import outerLink from '@/assets/images/outer-link.svg';
-import Container from '../atoms/Container';
+import Container from '../../atoms/Container';
 
 interface IToBeSpartanProps {}
 

@@ -1,9 +1,9 @@
 import * as React from 'react';
 import { Box } from '@mui/material';
 import { useScroll } from 'framer-motion';
-import Container from '../atoms/Container';
-import ScrollTitle from '../atoms/ScrollTitle';
-import AccordionItem from '../atoms/AccordionItem';
+import Container from '../../atoms/Container';
+import ScrollTitle from '../../atoms/ScrollTitle';
+import AccordionItem from '../../atoms/AccordionItem';
 
 interface IOurServicesProps {}
 

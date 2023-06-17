@@ -1,11 +1,11 @@
 import * as React from 'react';
 import MainTemplate from '../templates/MainTemplate';
 import { Box } from '@mui/material';
-import AboutUs from '../molecules/AboutUs';
-import StandOut from '../molecules/StandOut';
-import WhyChooseSpartans from '../molecules/WhyChooseSpartans';
-import MeetTeam from '../molecules/MeetTeam';
-import EngineerPower from '../molecules/EngineerPower';
+import AboutUs from '../molecules/AboutUs/AboutUs';
+import StandOut from '../molecules/AboutUs/StandOut';
+import WhyChooseSpartans from '../molecules/AboutUs/WhyChooseSpartans';
+import MeetTeam from '../molecules/AboutUs/MeetTeam';
+import EngineerPower from '../molecules/AboutUs/EngineerPower';
 
 interface IAboutUsPageProps {}
 
