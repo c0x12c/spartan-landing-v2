@@ -13,7 +13,7 @@ import expand from '@/assets/images/expand.svg';
 
 interface IAccordionItemProps {
   index: number;
-  title: string;
+  label: string;
   skills: string[];
   content: string;
 }
@@ -49,7 +49,7 @@ const AccordionDetails = styled(MuiAccordionDetails)(({ theme }) => ({
 
 const AccordionItem: React.FunctionComponent<IAccordionItemProps> = ({
   index,
-  title,
+  label,
   content,
   skills,
 }) => {
@@ -87,7 +87,7 @@ const AccordionItem: React.FunctionComponent<IAccordionItemProps> = ({
               color={expanded ? colors.primary[500] : colors.gray[800]}
               sx={{ transition: 'color .2s' }}
             >
-              {title}
+              {label}
             </Typography>
           </Grid>
           {!expanded && (
