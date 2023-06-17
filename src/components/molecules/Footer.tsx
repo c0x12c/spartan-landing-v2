@@ -1,12 +1,20 @@
 import React from 'react';
 import { Box, Button, Typography, TextField, List, ListItem } from '@mui/material';
 import Link from 'next/link';
-import { Facebook, Twitter, LinkedIn, ArrowForwardIos } from '@mui/icons-material';
+import { ArrowForwardIos } from '@mui/icons-material';
 import Image from 'next/image';
 import CompanyLogo from '@/assets/images/Company-logo.svg';
 import Container from '../atoms/Container';
 import { base, gray } from '@/styles/colors';
 import ArrowDarkContact from '@/assets/images/Arrow-contact-dark.svg';
+import { help } from '@/constants/help';
+import { about } from '@/constants/about';
+import { services } from '@/constants/services';
+import FacebookLogo from '@/assets/images/facebook.svg';
+import InstagramLogo from '@/assets/images/instagram.svg';
+import LinkedinLogo from '@/assets/images/linkedin.svg';
+import TwitterLogo from '@/assets/images/twitter.svg';
+import { SocialLink } from '../atoms/SocialLink';
 
 interface IFooterProps {}
 
@@ -20,32 +28,17 @@ const menuItems: MenuItem[] = [
   {
     label: 'Services',
     href: '/services',
-    subItems: [
-      { label: 'IT Consulting', href: '/' },
-      { label: 'Product Development', href: '/' },
-      { label: 'Data Platform', href: '/' },
-      { label: 'Quality Assurance (QA) & Testing', href: '/' },
-      { label: 'IOT Development', href: '/' },
-    ],
+    subItems: services,
   },
   {
     label: 'About',
     href: '/about',
-    subItems: [
-      { label: 'About us', href: '/' },
-      { label: 'Case study', href: '/' },
-      { label: 'Life at Spartan', href: '/' },
-      { label: 'Ready To Join?', href: '/' },
-      { label: 'Internship Program', href: '/' },
-    ],
+    subItems: about,
   },
   {
     label: 'Help',
     href: '/help',
-    subItems: [
-      { label: 'FAQs', href: '/' },
-      { label: 'Contact Us', href: '/' },
-    ],
+    subItems: help,
   },
 ];
 
@@ -62,7 +55,13 @@ const Footer: React.FunctionComponent<IFooterProps> = () => {
               borderBottom: `1px solid ${gray[600]}`,
             }}
           >
-            <Box>
+            <Box
+              sx={{
+                display: 'flex',
+                justifyContent: 'center',
+                alignItems: 'center',
+              }}
+            >
               <Image src={CompanyLogo} alt="Company Logo" />
             </Box>
             <Box sx={{ display: 'flex', alignItems: 'center' }}>
@@ -103,7 +102,6 @@ const Footer: React.FunctionComponent<IFooterProps> = () => {
                   variant="standard"
                   sx={{
                     width: { lg: '327px', xs: '100%' },
-                    height: '50px',
                     '& .MuiInputLabel-root': {
                       color: gray[60],
                     },
@@ -181,48 +179,10 @@ const Footer: React.FunctionComponent<IFooterProps> = () => {
               </Typography>
             </Box>
             <Box sx={{ display: 'flex', gap: '5px' }}>
-              <Link
-                href="https://facebook.com"
-                style={{
-                  width: '45px',
-                  height: '45px',
-                  display: 'flex',
-                  justifyContent: 'center',
-                  alignItems: 'center',
-                  border: `1px solid ${base.white}`,
-                  borderRadius: '22.5px',
-                }}
-              >
-                <Facebook sx={{ width: '16px', color: base.white }} />
-              </Link>
-              <Link
-                href="https://twitter.com"
-                style={{
-                  width: '45px',
-                  height: '45px',
-                  display: 'flex',
-                  justifyContent: 'center',
-                  alignItems: 'center',
-                  border: `1px solid ${base.white}`,
-                  borderRadius: '22.5px',
-                }}
-              >
-                <Twitter sx={{ width: '16px', color: base.white }} />
-              </Link>
-              <Link
-                href="https://instagram.com"
-                style={{
-                  width: '45px',
-                  height: '45px',
-                  display: 'flex',
-                  justifyContent: 'center',
-                  alignItems: 'center',
-                  border: `1px solid ${base.white}`,
-                  borderRadius: '22.5px',
-                }}
-              >
-                <LinkedIn sx={{ width: '16px', color: base.white }} />
-              </Link>
+              <SocialLink href="https://facebook.com" alt="facebook-icon" src={FacebookLogo} />
+              <SocialLink href="https://instagram.com" alt="instagram-icon" src={InstagramLogo} />
+              <SocialLink href="https://twitter.com" alt="twitter-icon" src={TwitterLogo} />
+              <SocialLink href="https://linkedin.com" alt="linkedin-icon" src={LinkedinLogo} />
             </Box>
           </Box>
         </Box>
