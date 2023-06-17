@@ -12,15 +12,16 @@ interface ICaseStudyBannerProps {}
 const CaseStudyBanner: React.FunctionComponent<ICaseStudyBannerProps> = (props) => {
   const theme = useTheme();
   const matchesDesktop = useMediaQuery(theme.breakpoints.up('lg'));
+  const matchesMobile = useMediaQuery(theme.breakpoints.down('sm'));
   return (
     <Banner src={bg.src}>
-      <Box mt={{ xxl: '390px', xs: '284px' }}>
+      <Box mt={{ xxl: '390px', md: '284px', xs: '142px' }}>
         <Container>
           <Box display="flex" justifyContent="space-between" alignItems="center" mb="32px">
             <Typography
-              variant={matchesDesktop ? 'fs100' : 'fs80'}
+              variant={matchesDesktop ? 'fs100' : matchesMobile ? 'fs40' : 'fs80'}
               color={colors.base.white}
-              maxWidth={matchesDesktop ? '582px' : '452px'}
+              maxWidth={matchesDesktop ? '582px' : matchesMobile ? '241px' : '452px'}
               component="h1"
             >
               Discover Our Project
@@ -28,8 +29,8 @@ const CaseStudyBanner: React.FunctionComponent<ICaseStudyBannerProps> = (props) 
             {!matchesDesktop && (
               <Box
                 component={Button}
-                width="120px"
-                height="120px"
+                width={matchesMobile ? '64px' : '120px'}
+                height={matchesMobile ? '64px' : '120px'}
                 borderRadius="50%"
                 border="1px solid"
                 borderColor={colors.base.white}
@@ -47,7 +48,7 @@ const CaseStudyBanner: React.FunctionComponent<ICaseStudyBannerProps> = (props) 
             component="p"
           >
             <Typography
-              variant={'fs18'}
+              variant={matchesMobile ? 'fs16' : 'fs18'}
               color={colors.base.white}
               letterSpacing="0.01em"
               maxWidth="797px"
