@@ -14,6 +14,7 @@ env:
   AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY_DEV }}
   AWS_CLOUDFRONT_ID: ${{ secrets.AWS_CLOUDFRONT_ID_DEV }}
   GITHUB_TOKEN: ${{ secrets.PAT }}
+  PROJECT_URL: ${{ secrets.PROJECT_URL_DEV }}
 
 jobs:
   build:
@@ -27,10 +28,10 @@ jobs:
           fetch-depth: 3
           token: ${{ env.GITHUB_TOKEN }}
 
-      - name: Set Node.js 16.x
+      - name: Set Node.js 18.x
         uses: actions/setup-node@v3
         with:
-          node-version: 16.x
+          node-version: 18.x
           cache: 'yarn'
 
       - name: Run install
@@ -61,9 +62,21 @@ jobs:
           AWS_ACCESS_KEY_ID: ${{ env.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ env.AWS_SECRET_ACCESS_KEY }}
 
+      - name: 'Extract Git info'
+        run: |
+          echo "GITHUB_AUTHOR=$(git log -1 --pretty=format:'%an <%ae>' | xargs)" >> $GITHUB_ENV
+          echo "GITHUB_REVISION=$(git rev-parse HEAD)" >> $GITHUB_ENV
+          echo "GITHUB_REPO=$(git config --get remote.origin.url)" >> $GITHUB_ENV
+
+          EOF=$(dd if=/dev/urandom bs=15 count=1 status=none | base64)
+          GITHUB_COMMITS=$(git --no-pager log --pretty=format:'%h (%an) %s' -n3 --no-color |  while read line || [ -n "$line" ]; do echo -n "- $line \\n"; done)
+          echo "GITHUB_COMMITS<<$EOF" >> "$GITHUB_ENV"
+          echo $GITHUB_COMMITS | sed "s/\"/'/g" >> "$GITHUB_ENV"
+          echo "$EOF" >> "$GITHUB_ENV"
+
       - name: Slack Notification
         id: slack
-        uses: slackapi/slack-github-action@v1.23.0
+        uses: slackapi/slack-github-action@v1
         with:
           payload: |
             {
@@ -73,20 +86,20 @@ jobs:
                   "type": "section",
                   "text": {
                     "type": "mrkdwn",
-                    "text": ":rocket: *${{ secrets.PROJECT }} - Deployed dev environment*"
+                    "text": ":rocket: *${{ github.event.repository.name }} - Deployed ${{ env.ENVIRONMENT }}*"
                   }
                 },{
                   "type": "section",
                   "text": {
                     "type": "mrkdwn",
-                    "text": "*Created by:* ${{ github.event.pusher.name }}"
+                    "text": "*Created by:* ${{ env.GITHUB_AUTHOR }}"
                   }
                 },
                 {
                   "type": "section",
                   "text": {
                     "type": "mrkdwn",
-                    "text": "```${{ github.event.head_commit.message }}```"
+                    "text": "```${{ env.GITHUB_COMMITS }}```"
                   }
                 },
                 {
@@ -99,7 +112,7 @@ jobs:
                         "text": "View changes"
                       },
                       "style": "primary",
-                      "url": "${{ github.event.head_commit.url }}"
+                      "url": "${{ env.GITHUB_REPO }}/commit/${{ env.GITHUB_REVISION}}"
                     },
                     {
                       "type": "button",
@@ -108,7 +121,7 @@ jobs:
                         "text": "View Site"
                       },
                       "style": "primary",
-                      "url": "${{ env.WEB_HOST }}"
+                      "url": "${{ env.PROJECT_URL }}"
                     }
                   ]
                 }
