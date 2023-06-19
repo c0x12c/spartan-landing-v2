@@ -3,6 +3,7 @@ import MainTemplate from '../templates/MainTemplate';
 import ServicesBanner from '../molecules/Services/Banner';
 import BizGrow from '../molecules/Services/BizGrow';
 import OurServices from '../molecules/Services/OurServices';
+import WorkProcess from '../molecules/Services/WorkProcess';
 
 type Props = {
   children?: React.ReactNode;
@@ -18,6 +19,7 @@ const ServicesPage: React.FC<Props> = () => {
       <ServicesBanner />
       <BizGrow />
       <OurServices />
+      <WorkProcess />
     </MainTemplate>
   );
 };

@@ -17,7 +17,7 @@ const ServicesBanner: React.FunctionComponent<IServicesBannerProps> = (props) =>
   const matchesMobile = useMediaQuery(theme.breakpoints.down('sm'));
   return (
     <Banner src={bg.src}>
-      <Box mt={{ xxl: '333px', lg: '103px', sm: '163px', xs: '103px' }}>
+      <Box pt={{ xxl: '333px', lg: '103px', sm: '163px', xs: '103px' }}>
         <Container>
           <Box display="flex" gap={{ xl: '80px', lg: '35px' }}>
             <Box>
