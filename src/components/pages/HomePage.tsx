@@ -8,6 +8,7 @@ import WhoWeWorkWith from '../molecules/Home/WhoWeWorkWith';
 import WhyBusinessChooseUs from '../molecules/Home/WhyBusinessChooseUs';
 import ElevateStartup from '../molecules/Home/ElevateStartup';
 import OurServices from '../molecules/Home/OurServices';
+import HeroBanner from '../molecules/Home/Banner';
 
 type Props = {
   children?: React.ReactNode;
@@ -21,6 +22,7 @@ const HomePage: React.FC<Props> = () => {
   return (
     <MainTemplate>
       <Box sx={sxMain}>
+        <HeroBanner />
         <OurServices />
         <ElevateStartup />
         <WhoWeWorkWith />
