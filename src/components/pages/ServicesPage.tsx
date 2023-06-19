@@ -4,22 +4,20 @@ import ServicesBanner from '../molecules/Services/Banner';
 import BizGrow from '../molecules/Services/BizGrow';
 import OurServices from '../molecules/Services/OurServices';
 import WorkProcess from '../molecules/Services/WorkProcess';
+import OurStack from '../molecules/Services/OurStack';
 
 type Props = {
   children?: React.ReactNode;
 };
 
 const ServicesPage: React.FC<Props> = () => {
-  React.useEffect(() => {
-    const section = document.getElementById('services-offering');
-  }, []);
-
   return (
     <MainTemplate>
       <ServicesBanner />
       <BizGrow />
       <OurServices />
       <WorkProcess />
+      <OurStack />
     </MainTemplate>
   );
 };

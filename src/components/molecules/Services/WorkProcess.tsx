@@ -53,19 +53,19 @@ const WorkProcess: React.FunctionComponent<IWorkProcessProps> = (props) => {
               {!matchesTablet && <Image src={star} alt="star" />}
             </Box>
           </Box>
-          <Grid container rowGap="64px" alignItems="center" columnSpacing="64px">
-            <Grid item xs={12} lg={4}>
-              <Image
-                src={workProcessImage}
-                alt="workProcessImage"
-                style={{ maxWidth: '100%', height: 'auto' }}
-              />
-            </Grid>
-            <Grid item xs={12} lg={8} mb={matchesTablet ? '64px' : 0}>
-              {renderDataService}
-            </Grid>
-          </Grid>
         </Box>
+        <Grid container rowGap="64px" alignItems="center" columnSpacing="64px">
+          <Grid item xs={12} lg={4}>
+            <Image
+              src={workProcessImage}
+              alt="workProcessImage"
+              style={{ maxWidth: '100%', height: 'auto' }}
+            />
+          </Grid>
+          <Grid item xs={12} lg={8} mb={matchesTablet ? '64px' : 0}>
+            {renderDataService}
+          </Grid>
+        </Grid>
       </Container>
     </Box>
   );
