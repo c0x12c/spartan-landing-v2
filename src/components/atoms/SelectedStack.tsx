@@ -11,7 +11,6 @@ interface ISelectedStackProps {
 
 const SelectedStack: React.FunctionComponent<ISelectedStackProps> = ({ id }) => {
   const selectedStackContent = Stacks.find((stack) => stack.id === id) as StackType;
-
   const renderContent = selectedStackContent.content.map((stackContent) => {
     return (
       <Box mb="32px" key={stackContent.id}>
