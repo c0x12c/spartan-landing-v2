@@ -9,6 +9,10 @@ type Props = {
 };
 
 const ServicesPage: React.FC<Props> = () => {
+  React.useEffect(() => {
+    const section = document.getElementById('services-offering');
+  }, []);
+
   return (
     <MainTemplate>
       <ServicesBanner />

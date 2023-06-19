@@ -14,6 +14,7 @@ export type MenuItemDataType = {
   id: string;
   label: string;
   href?: string;
+  hash?: string;
   subItems?: ServiceType[] | AboutType[];
 };
 

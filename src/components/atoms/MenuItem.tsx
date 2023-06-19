@@ -6,6 +6,8 @@ import { MenuItemDataType } from '../molecules/Header';
 import * as colors from '@/styles/colors';
 import Image from 'next/image';
 import ArrowButton from '@/assets/images/Arrow-contact-dark.svg';
+import { ServiceType } from '@/constants/services';
+import { AboutType } from '@/constants/about';
 
 type MenuItemType = {
   item: MenuItemDataType;
@@ -70,41 +72,45 @@ const MenuItem = forwardRef(function MenuItemWithoutRef(
           width={'417px'}
           ref={ref}
         >
-          {item.subItems.map((subItem, subIndex) => (
-            <Box
-              key={subItem.id}
-              component="li"
-              borderBottom="1px solid"
-              borderColor={gray[400]}
-              p="4px 0 8px"
-              mb={subIndex === (item.subItems || []).length - 1 ? 0 : '17px'}
-            >
-              <Link
-                href={subItem.href}
-                display="flex"
-                justifyContent="space-between"
-                alignItems="center"
-                sx={{
-                  textDecoration: 'none',
-                }}
+          {item.subItems.map((subItem, subIndex) => {
+            const { href, hash } = subItem as ServiceType & AboutType;
+            const link = href ? href : `/services#${hash}`;
+            return (
+              <Box
+                key={subItem.id}
+                component="li"
+                borderBottom="1px solid"
+                borderColor={gray[400]}
+                p="4px 0 8px"
+                mb={subIndex === (item.subItems || []).length - 1 ? 0 : '17px'}
               >
-                <Typography
-                  variant="fs18"
-                  sx={{ color: base.black, fontWeight: 700, paddingRight: '30px' }}
-                >
-                  {subItem.label}
-                </Typography>
-                <IconButton
-                  aria-label="outer-link"
+                <Link
+                  href={link}
+                  display="flex"
+                  justifyContent="space-between"
+                  alignItems="center"
                   sx={{
-                    border: `1.125px solid ${primary[500]}`,
+                    textDecoration: 'none',
                   }}
                 >
-                  <Image src={ArrowButton} alt="ArrowButton" />
-                </IconButton>
-              </Link>
-            </Box>
-          ))}
+                  <Typography
+                    variant="fs18"
+                    sx={{ color: base.black, fontWeight: 700, paddingRight: '30px' }}
+                  >
+                    {subItem.label}
+                  </Typography>
+                  <IconButton
+                    aria-label="outer-link"
+                    sx={{
+                      border: `1.125px solid ${primary[500]}`,
+                    }}
+                  >
+                    <Image src={ArrowButton} alt="ArrowButton" />
+                  </IconButton>
+                </Link>
+              </Box>
+            );
+          })}
         </Box>
       )}
     </Box>
