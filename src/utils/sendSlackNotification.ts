@@ -17,6 +17,7 @@ async function sendSlackNotification() {
   const author = await simpleGit.log({
     maxCount: 1,
   });
+  const authorName = author.latest?.author_name || 'Unknown';
 
   const commitMessages = await simpleGit.log({
     maxCount: 5,
@@ -42,7 +43,7 @@ async function sendSlackNotification() {
       type: 'section',
       text: {
         type: 'mrkdwn',
-        text: `*Created by:* ${author}`,
+        text: `*Created by:* ${authorName}`,
       },
     },
     {
@@ -76,8 +77,6 @@ async function sendSlackNotification() {
       ],
     },
   ];
-
-  console.log('messageBlocks:', messageBlocks);
 
   webhook
     .send({
