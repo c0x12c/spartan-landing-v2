@@ -6,6 +6,7 @@ import OurServices from '../molecules/Services/OurServices';
 import WorkProcess from '../molecules/Services/WorkProcess';
 import OurStack from '../molecules/Services/OurStack';
 import ServiceCaseStudy from '../molecules/Services/CaseStudy';
+import ServiceTransform from '../atoms/ServiceTransform';
 
 type Props = {
   children?: React.ReactNode;
@@ -20,6 +21,7 @@ const ServicesPage: React.FC<Props> = () => {
       <WorkProcess />
       <OurStack />
       <ServiceCaseStudy />
+      <ServiceTransform />
     </MainTemplate>
   );
 };
