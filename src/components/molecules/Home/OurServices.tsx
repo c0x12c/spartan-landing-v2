@@ -4,7 +4,7 @@ import { useScroll } from 'framer-motion';
 import Container from '../../atoms/Container';
 import ScrollTitle from '../../atoms/ScrollTitle';
 import AccordionItem from '../../atoms/AccordionItem';
-import { services } from '@/constants/services';
+import { Services } from '@/constants/services';
 
 interface IOurServicesProps {}
 
@@ -15,14 +15,14 @@ const OurServices: React.FunctionComponent<IOurServicesProps> = (props) => {
     offset: ['start end', 'end start'],
   });
 
-  const renderDataService = services.map((service, index) => {
+  const renderDataService = Services.map((service, index) => {
     return <AccordionItem key={service.id} index={index + 1} {...service} />;
   });
 
   return (
-    <Box my="44px">
+    <Box my="44px" ref={scrollRef}>
       <Container>
-        <Box mb="40px" ref={scrollRef}>
+        <Box mb="40px">
           <ScrollTitle
             scrollYProgress={scrollYProgress}
             scrollRef={scrollRef}
