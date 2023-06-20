@@ -15,7 +15,7 @@ const CaseStudyBanner: React.FunctionComponent<ICaseStudyBannerProps> = (props) 
   const matchesMobile = useMediaQuery(theme.breakpoints.down('sm'));
   return (
     <Banner src={bg.src}>
-      <Box mt={{ xxl: '390px', md: '284px', xs: '142px' }}>
+      <Box pt={{ xxl: '390px', md: '284px', xs: '142px' }}>
         <Container>
           <Box display="flex" justifyContent="space-between" alignItems="center" mb="32px">
             <Typography

@@ -10,12 +10,14 @@ import TagSkill from './TagSkill';
 import Image from 'next/image';
 import outerLinkSmall from '@/assets/images/outer-link-small.svg';
 import expand from '@/assets/images/expand.svg';
+import Link from 'next/link';
 
 interface IAccordionItemProps {
   index: number;
   label: string;
   skills: string[];
   content: string;
+  link: string;
 }
 
 const Accordion = styled((props: AccordionProps) => (
@@ -52,6 +54,7 @@ const AccordionItem: React.FunctionComponent<IAccordionItemProps> = ({
   label,
   content,
   skills,
+  link,
 }) => {
   const [expanded, setExpanded] = React.useState<boolean>(false);
 
@@ -117,28 +120,33 @@ const AccordionItem: React.FunctionComponent<IAccordionItemProps> = ({
               {content}
             </Typography>
             <Box display="flex" gap="18px" alignItems="center">
-              <Button
-                sx={{
-                  fontWeight: 600,
-                  lineHeight: 1.14,
-                  fontSize: '16px',
-                  letterSpacing: '-0.13px',
-                  color: colors.base.black,
-                  padding: 0,
-                }}
-              >
-                Learn more
-              </Button>
-              <IconButton
-                aria-label="learn-more"
-                size="large"
-                sx={{
-                  border: '1px solid',
-                  borderColor: colors.primary[500],
-                }}
-              >
-                <Image src={outerLinkSmall} alt="outerLinkSmall" />
-              </IconButton>
+              <Link href={link}>
+                <Button
+                  sx={{
+                    fontWeight: 600,
+                    lineHeight: 1.14,
+                    fontSize: '16px',
+                    letterSpacing: '-0.13px',
+                    color: colors.base.black,
+                    padding: '10.5px',
+                    textDecoration: 'none',
+                  }}
+                >
+                  Learn more
+                </Button>
+              </Link>
+              <Link href={link}>
+                <IconButton
+                  aria-label="learn-more"
+                  size="large"
+                  sx={{
+                    border: '1px solid',
+                    borderColor: colors.primary[500],
+                  }}
+                >
+                  <Image src={outerLinkSmall} alt="outerLinkSmall" />
+                </IconButton>
+              </Link>
             </Box>
           </Grid>
         </Grid>
