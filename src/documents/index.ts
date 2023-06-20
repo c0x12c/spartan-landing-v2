@@ -24,6 +24,13 @@ const SEOPages: ISEOPages = {
     metaImage: '',
     slug: '/case-study',
   },
+  [EPages.CONTACT_US]: {
+    title: 'c0x12c - Contact Us',
+    description: 'c0x12c - Contact Us',
+    keywords: 'c0x12c, Contact Us',
+    metaImage: '',
+    slug: '/contact',
+  },
 };
 
 export default SEOPages;
