@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "postBuild": "npx ts-node -O '{\"module\":\"commonjs\"}' src/utils/sendSlackNotification.ts",
     "start": "next start",
     "prettify": "prettier --write src",
     "pre-commit": "lint-staged",
@@ -36,6 +37,7 @@
     "@commitlint/cli": "^17.4.4",
     "@commitlint/config-conventional": "^17.4.4",
     "@next/eslint-plugin-next": "^13.2.4",
+    "@slack/webhook": "^6.1.0",
     "@types/react-slick": "^0.23.10",
     "@typescript-eslint/eslint-plugin": "^5.56.0",
     "eslint": "^8.39.0",
@@ -44,7 +46,9 @@
     "eslint-plugin-prettier": "^4.2.1",
     "husky": "^8.0.3",
     "lint-staged": "^13.2.0",
-    "prettier": "^2.8.6"
+    "prettier": "^2.8.6",
+    "simple-git": "^3.19.0",
+    "ts-node": "^10.9.1"
   },
   "packageManager": "yarn@3.6.0"
 }
