@@ -1,6 +1,6 @@
 import * as React from 'react';
 import * as colors from '@/styles/colors';
-import { Box, Button, Grid, Typography, useMediaQuery, useTheme } from '@mui/material';
+import { Box, Grid, Typography, useMediaQuery, useTheme } from '@mui/material';
 import Container from '@/components/atoms/Container';
 import Image from 'next/image';
 import bg from '@/assets/images/case-study/volta-banner.svg';
