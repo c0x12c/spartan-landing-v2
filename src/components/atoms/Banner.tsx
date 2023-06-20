@@ -3,7 +3,7 @@ import * as React from 'react';
 
 interface IBannerProps {
   children: React.ReactNode;
-  src: { xxl: string; xl: string; lg: string; md: string; sm: string };
+  src: string;
 }
 
 const Banner: React.FunctionComponent<IBannerProps> = ({ src, children }) => {
