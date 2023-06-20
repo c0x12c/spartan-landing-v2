@@ -16,7 +16,14 @@ const OurServices: React.FunctionComponent<IOurServicesProps> = (props) => {
   });
 
   const renderDataService = Services.map((service, index) => {
-    return <AccordionItem key={service.id} index={index + 1} {...service} />;
+    return (
+      <AccordionItem
+        key={service.id}
+        index={index + 1}
+        {...service}
+        link={`/services#${service.hash}`}
+      />
+    );
   });
 
   return (

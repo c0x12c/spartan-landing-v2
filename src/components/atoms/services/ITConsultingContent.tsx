@@ -7,7 +7,7 @@ const ITConsultingContent = () => {
   const theme = useTheme();
   const matchesMobile = useMediaQuery(theme.breakpoints.down('sm'));
   return (
-    <Box>
+    <Box id="it-consulting">
       <Typography
         variant={matchesMobile ? 'fs26' : 'fs40'}
         color={colors.primary[500]}
