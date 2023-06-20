@@ -26,10 +26,11 @@ async function sendSlackNotification() {
     .map((commit) => `${commit.hash.substring(0, 8)} (${commit.author_name}) ${commit.message}`)
     .join('\n');
 
-  const repo = (await simpleGit.listRemote(['--get-url']))
+  const repo = ((await simpleGit.remote(['get-url', 'origin'])) as string)
     .replace('.git', '')
     .replace(':', '/')
     .replace('git@', 'https://');
+  console.log('repo:', repo);
 
   const messageBlocks = [
     {
@@ -60,7 +61,7 @@ async function sendSlackNotification() {
           type: 'button',
           text: {
             type: 'plain_text',
-            text: 'View on Gitlab',
+            text: 'View Commit',
           },
           style: 'primary',
           url: `${repo}/commit/${revision}`,
