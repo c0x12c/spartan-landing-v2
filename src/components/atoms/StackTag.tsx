@@ -12,7 +12,13 @@ interface IStackTagProps {
 const StackTag: React.FunctionComponent<IStackTagProps> = ({ isActive, label, id, onClick }) => {
   return (
     <React.Fragment>
-      <Box py="4px" onClick={() => onClick(id)} display="flex" alignItems="center">
+      <Box
+        py="4px"
+        onClick={() => onClick(id)}
+        display="flex"
+        alignItems="center"
+        sx={{ cursor: 'pointer' }}
+      >
         <Box
           width="4px"
           height="32px"

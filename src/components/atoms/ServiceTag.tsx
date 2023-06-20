@@ -19,7 +19,7 @@ const ServiceTag: React.FunctionComponent<IServiceTagProps> = ({
 }) => {
   return (
     <React.Fragment>
-      <Grid container onClick={() => onClick(hash)}>
+      <Grid container onClick={() => onClick(hash)} sx={{ cursor: 'pointer' }}>
         <Grid item xs={1.5}>
           <Typography
             variant={'fs18'}
