@@ -92,11 +92,11 @@ const TableOffices = () => {
               </Box>
               <Typography
                 variant="fs32"
-                sx={{ color: base.black, marginLeft: '125px', fontWeight: 400 }}
+                sx={{ color: base.black, marginLeft: '125px', fontWeight: 700 }}
                 component={'p'}
               >
                 {office.country},{' '}
-                <Typography sx={{ fontWeight: 700 }} variant="fs32" component={'span'}>
+                <Typography sx={{ fontWeight: 400 }} variant="fs32" component={'span'}>
                   {office.location}
                 </Typography>
               </Typography>
