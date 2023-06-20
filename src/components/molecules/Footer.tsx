@@ -8,8 +8,9 @@ import Container from '../atoms/Container';
 import { base, gray } from '@/styles/colors';
 import ArrowDarkContact from '@/assets/images/Arrow-contact-dark.svg';
 import { help } from '@/constants/help';
-import { about } from '@/constants/about';
-import { services } from '@/constants/services';
+
+import { About, AboutType } from '@/constants/about';
+import { ServiceType, Services } from '@/constants/services';
 import FacebookLogo from '@/assets/images/facebook.svg';
 import InstagramLogo from '@/assets/images/instagram.svg';
 import LinkedinLogo from '@/assets/images/linkedin.svg';
@@ -21,19 +22,19 @@ interface IFooterProps {}
 interface MenuItem {
   label: string;
   href: string;
-  subItems?: MenuItem[];
+  subItems?: ServiceType[] | AboutType[];
 }
 
 const menuItems: MenuItem[] = [
   {
     label: 'Services',
     href: '/services',
-    subItems: services,
+    subItems: Services,
   },
   {
     label: 'About',
     href: '/about',
-    subItems: about,
+    subItems: About,
   },
   {
     label: 'Help',
@@ -136,30 +137,34 @@ const Footer: React.FunctionComponent<IFooterProps> = () => {
                 flexDirection: { lg: 'row', xs: 'column' },
               }}
             >
-              {menuItems.map((menuItem) => (
-                <Box key={menuItem.label}>
-                  <Typography variant="fs32" sx={{ color: base.white }}>
-                    {menuItem.label}
-                  </Typography>
-                  {menuItem.subItems && (
-                    <List
-                      sx={{
-                        display: 'flex',
-                        flexDirection: 'column',
-                        gap: '16px',
-                        padding: 0,
-                        paddingTop: '20px',
-                      }}
-                    >
-                      {menuItem.subItems.map((subItem) => (
-                        <ListItem key={subItem.label} sx={{ padding: 0, color: gray[200] }}>
-                          <Link href={subItem.href}>{subItem.label}</Link>
-                        </ListItem>
-                      ))}
-                    </List>
-                  )}
-                </Box>
-              ))}
+              {menuItems.map((menuItem) => {
+                const { href, hash } = menuItem as ServiceType & AboutType;
+                const link = href ? href : `/services#${hash}`;
+                return (
+                  <Box key={menuItem.label}>
+                    <Typography variant="fs32" sx={{ color: base.white }}>
+                      {menuItem.label}
+                    </Typography>
+                    {menuItem.subItems && (
+                      <List
+                        sx={{
+                          display: 'flex',
+                          flexDirection: 'column',
+                          gap: '16px',
+                          padding: 0,
+                          paddingTop: '20px',
+                        }}
+                      >
+                        {menuItem.subItems.map((subItem) => (
+                          <ListItem key={subItem.label} sx={{ padding: 0, color: gray[200] }}>
+                            <Link href={link}>{subItem.label}</Link>
+                          </ListItem>
+                        ))}
+                      </List>
+                    )}
+                  </Box>
+                );
+              })}
             </Box>
           </Box>
           <Box

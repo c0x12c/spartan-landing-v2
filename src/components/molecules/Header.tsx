@@ -7,13 +7,14 @@ import { MobileMenu } from '../atoms/MobileMenu';
 import { HeaderNavigation } from '../atoms/HeaderNavigation';
 import CompanyDarkLogo from '@/assets/images/Company-logo-dark.svg';
 import { useRouter } from 'next/router';
-import { ServiceType, services } from '@/constants/services';
-import { AboutType, about } from '@/constants/about';
+import { ServiceType, Services } from '@/constants/services';
+import { AboutType, About } from '@/constants/about';
 
 export type MenuItemDataType = {
   id: string;
   label: string;
   href?: string;
+  hash?: string;
   subItems?: ServiceType[] | AboutType[];
 };
 
@@ -33,12 +34,12 @@ const Header = () => {
     {
       id: 'menu-item-2',
       label: 'Services',
-      subItems: services,
+      subItems: Services,
     },
     {
       id: 'menu-item-3',
       label: 'Careers',
-      subItems: about,
+      subItems: About,
     },
   ];
 
