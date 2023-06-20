@@ -8,7 +8,6 @@ import Container from '../atoms/Container';
 import { base, gray } from '@/styles/colors';
 import ArrowDarkContact from '@/assets/images/Arrow-contact-dark.svg';
 import { help } from '@/constants/help';
-
 import { About, AboutType } from '@/constants/about';
 import { ServiceType, Services } from '@/constants/services';
 import FacebookLogo from '@/assets/images/facebook.svg';

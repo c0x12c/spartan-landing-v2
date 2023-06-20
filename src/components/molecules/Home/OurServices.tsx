@@ -8,7 +8,7 @@ import { Services } from '@/constants/services';
 
 interface IOurServicesProps {}
 
-const OurServices: React.FunctionComponent<IOurServicesProps> = () => {
+const OurServices: React.FunctionComponent<IOurServicesProps> = (props) => {
   const scrollRef = React.useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: scrollRef,
