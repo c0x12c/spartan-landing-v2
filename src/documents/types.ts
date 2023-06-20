@@ -11,6 +11,7 @@ export enum EPages {
   ABOUT_US = 'about-us',
   CASE_STUDY = 'case-study',
   SERVICE = 'service',
+  CASE_STUDY_VOLTA = 'case-study-volta',
 }
 
 export type ISEOPages = {
