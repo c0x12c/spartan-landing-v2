@@ -1,0 +1,24 @@
+customHeaders:
+  # cache static assets! (can I just use a glob for this, e.g., '**/*.{js,css,gif,ico,jpg,png,svg,mp4,webm}' ?)
+  # js
+  - pattern: '**/*.js'
+    headers: [ { key: 'Cache-Control', value: 'public,max-age=31536000,immutable' } ]
+  # css
+  - pattern: '**/*.css'
+    headers: [ { key: 'Cache-Control', value: 'public,max-age=31536000,immutable' } ]
+  # images
+  - pattern: '**/*.gif'
+    headers: [ { key: 'Cache-Control', value: 'public,max-age=31536000,immutable' } ]
+  - pattern: '**/*.ico'
+    headers: [ { key: 'Cache-Control', value: 'public,max-age=31536000,immutable' } ]
+  - pattern: '**/*.jpg'
+    headers: [ { key: 'Cache-Control', value: 'public,max-age=31536000,immutable' } ]
+  - pattern: '**/*.png'
+    headers: [ { key: 'Cache-Control', value: 'public,max-age=31536000,immutable' } ]
+  - pattern: '**/*.svg'
+    headers: [ { key: 'Cache-Control', value: 'public,max-age=31536000,immutable' } ]
+  # videos
+  - pattern: '**/*.mp4'
+    headers: [ { key: 'Cache-Control', value: 'public,max-age=31536000,immutable' } ]
+  - pattern: '**/*.webm'
+    headers: [ { key: 'Cache-Control', value: 'public,max-age=31536000,immutable' } ]

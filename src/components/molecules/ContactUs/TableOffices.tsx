@@ -101,7 +101,7 @@ const TableOffices = () => {
                 </Typography>
               </Typography>
               <Box sx={{ display: 'flex', gap: '44px' }}>
-                <Box>
+                {/* <Box>
                   <Typography variant="fs16" component={'p'} sx={{ color: base.black }}>
                     {office.address}
                   </Typography>
@@ -112,7 +112,7 @@ const TableOffices = () => {
                   >
                     {office.phoneNumber}
                   </Typography>
-                </Box>
+                </Box> */}
 
                 <IconButton
                   aria-label="learn-more"

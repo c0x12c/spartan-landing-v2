@@ -4,8 +4,9 @@ import * as colors from '@/styles/colors';
 import Image from 'next/image';
 import outerLink from '@/assets/images/outer-link-black.svg';
 
-import { Box, Button, Link, Typography } from '@mui/material';
+import { Box, Typography } from '@mui/material';
 import Tag from './Tag';
+import Link from 'next/link';
 
 interface IProjectItemProps {
   name: string;
