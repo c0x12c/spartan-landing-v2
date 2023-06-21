@@ -13,8 +13,6 @@ const HeroBanner = () => {
   const theme = useTheme();
 
   const matchesMobile = useMediaQuery(theme.breakpoints.down('lg'));
-
-  const isMobile = useMediaQuery(theme.breakpoints.up('xs'));
   const isMD = useMediaQuery(theme.breakpoints.up('md'));
   const isLG = useMediaQuery(theme.breakpoints.up('lg'));
   const isXL = useMediaQuery(theme.breakpoints.up('xl'));
@@ -27,7 +25,6 @@ const HeroBanner = () => {
         position="relative"
       >
         <Container>
-          {/* <Box position="relative"> */}
           <Box display="flex" gap="32px" flexDirection="column">
             <Box display="flex" justifyContent="space-between" alignItems="center">
               <Typography variant="fs80" color={base.white} maxWidth={{ lg: '760px', xs: '640px' }}>
@@ -87,7 +84,6 @@ const HeroBanner = () => {
               }}
             />
           </Box>
-          {/* </Box> */}
         </Container>
       </Box>
     </Banner>
