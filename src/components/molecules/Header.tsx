@@ -9,6 +9,7 @@ import CompanyDarkLogo from '@/assets/images/Company-logo-dark.svg';
 import { useRouter } from 'next/router';
 import { ServiceType, Services } from '@/constants/services';
 import { AboutType, About } from '@/constants/about';
+import Link from 'next/link';
 
 export type MenuItemDataType = {
   id: string;
@@ -64,9 +65,9 @@ const Header = () => {
           }}
         >
           <Box display="flex" alignItems="center" justifyContent="space-between" width="100%">
-            <IconButton edge="start" color="inherit" aria-label="home" href="/">
+            <Link href="/">
               <Image src={isTransparent ? CompanyLogo : CompanyDarkLogo} alt="Spartan Logo" />
-            </IconButton>
+            </Link>
 
             {isMobile ? (
               <MobileMenu
