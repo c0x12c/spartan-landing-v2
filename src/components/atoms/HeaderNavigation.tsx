@@ -71,16 +71,16 @@ export const HeaderNavigation = ({
         variant={isTransparent ? 'outlined' : 'contained'}
         endIcon={<Image src={isTransparent ? ArrowContact : ArrowDarkContact} alt="Outer Link" />}
         sx={{
-          bgcolor: isTransparent ? 'transparent' : 'inherit',
+          bgcolor: isTransparent ? 'transparent' : colors.primary[500],
           padding: '14px 24px',
           borderRadius: '60.5811px',
           borderWidth: '2.12565px',
           fontWeight: 600,
           gap: '24px',
-          color: isTransparent ? colors.base.white : 'inherit',
+          color: isTransparent ? colors.base.white : colors.base.black,
           '&:hover': {
             borderWidth: '2.12565px',
-            bgcolor: isTransparent ? 'transparent' : 'inherit',
+            bgcolor: isTransparent ? 'transparent' : colors.primary[500],
           },
         }}
       >

@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { AppBar, Toolbar, IconButton, useMediaQuery, useTheme, Box } from '@mui/material';
+import { AppBar, Toolbar, useMediaQuery, useTheme, Box } from '@mui/material';
 import Image from 'next/image';
 import Container from '../atoms/Container';
 import CompanyLogo from '../../assets/images/Company-logo.svg';
