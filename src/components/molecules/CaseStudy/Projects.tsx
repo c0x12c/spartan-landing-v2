@@ -37,7 +37,14 @@ const Projects: React.FunctionComponent<IProjectsProps> = (props) => {
           </Box>
         ) : (
           <Box display="flex" flexDirection="column">
-            <Box display="flex" justifyContent="center" maxWidth="502px" width="100%" mx="auto">
+            <Box
+              display="flex"
+              justifyContent="center"
+              maxWidth="502px"
+              width="100%"
+              mx="auto"
+              mt="32px"
+            >
               <BoxProjects />
             </Box>
             {renderProjects(CaseStudies)}
@@ -48,7 +55,7 @@ const Projects: React.FunctionComponent<IProjectsProps> = (props) => {
   );
 };
 
-const BoxProjects = ({ matchesDesktop = true }: { matchesDesktop?: boolean }) => {
+export const BoxProjects = ({ matchesDesktop = true }: { matchesDesktop?: boolean }) => {
   return (
     <Box
       maxWidth="502px"
@@ -59,7 +66,6 @@ const BoxProjects = ({ matchesDesktop = true }: { matchesDesktop?: boolean }) =>
       justifyItems="center"
       justifyContent="center"
       gap="13px"
-      mt="32px"
       mx={!matchesDesktop ? 'auto' : 0}
     >
       <Typography

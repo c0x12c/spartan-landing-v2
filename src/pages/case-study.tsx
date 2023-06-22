@@ -5,7 +5,7 @@ import CaseStudyPage from '@/components/pages/CaseStudyPage';
 export default function CaseStudy() {
   return (
     <>
-      <SEO page={EPages.HOME} />
+      <SEO page={EPages.CASE_STUDY} />
       <CaseStudyPage />
     </>
   );

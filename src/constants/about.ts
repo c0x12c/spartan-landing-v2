@@ -4,7 +4,7 @@ export type AboutType = {
   href: string;
 };
 
-export const about = [
+export const About = [
   { id: 'about-1', label: 'About us', href: '/' },
   { id: 'about-2', label: 'Life at Spartan', href: '/' },
   { id: 'about-3', label: 'Apply for Jobs', href: '/' },

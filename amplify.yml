@@ -1,0 +1,22 @@
+version: 1.0.0
+
+frontend:
+  phases:
+    preBuild:
+      commands:
+        - nvm use $VERSION_NODE_18
+        - yarn install
+    build:
+      commands:
+        - yarn run build
+    postBuild:
+        commands:
+        - yarn postBuild
+  cache:
+    paths:
+      - node_modules
+
+  artifacts:
+    baseDirectory: out
+    files:
+      - '**/*'

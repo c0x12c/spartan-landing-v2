@@ -6,13 +6,7 @@ import ScrollTitle from '../../atoms/ScrollTitle';
 import { useScroll } from 'framer-motion';
 import Image from 'next/image';
 import star from '@/assets/images/star.svg';
-import logoUNSA from '@/assets/images/logo-UNSA.svg';
-import logoMobolize from '@/assets/images/logo-mobolize.svg';
-import logoChargeFuze from '@/assets/images/logo-chargefuze.svg';
-import logoHeru from '@/assets/images/logo-heru.svg';
-import logoAgora from '@/assets/images/logo-agora.svg';
-import logoWb from '@/assets/images/logo-wb.svg';
-import logoSabio from '@/assets/images/logo-sabio.svg';
+import { BusinessType, Businesses } from '@/constants/businesses';
 
 interface IWhoWeWorkWithProps {}
 
@@ -26,6 +20,12 @@ const WhoWeWorkWith: React.FunctionComponent<IWhoWeWorkWithProps> = (props) => {
   const theme = useTheme();
   const matchesDesktop = useMediaQuery(theme.breakpoints.up('xl'));
   const matchesMobile = useMediaQuery(theme.breakpoints.down('sm'));
+
+  const renderBiz = (data: BusinessType[]) => {
+    return data.map((item) => {
+      return <Image key={item.id} src={item.imgSrc} alt={item.name} />;
+    });
+  };
 
   return (
     <React.Fragment>
@@ -78,15 +78,10 @@ const WhoWeWorkWith: React.FunctionComponent<IWhoWeWorkWithProps> = (props) => {
               </Box>
               <Box sx={{ transform: { sm: 'scale(1, 1)', xs: 'scale(0.6)' } }}>
                 <Box display="flex" alignItems="center" justifyContent="center" mb="32px">
-                  <Image src={logoUNSA} alt="logoUNSA" />
-                  <Image src={logoMobolize} alt="logoMobolize" />
-                  <Image src={logoChargeFuze} alt="logoChargeFuze" />
+                  {renderBiz(Businesses.slice(0, 3))}
                 </Box>
                 <Box display="flex" alignItems="center" justifyContent="center">
-                  <Image src={logoHeru} alt="logoHeru" />
-                  <Image src={logoAgora} alt="logoAgora" />
-                  <Image src={logoWb} alt="logoWb" />
-                  <Image src={logoSabio} alt="logoSabio" />
+                  {renderBiz(Businesses.slice(3))}
                 </Box>
               </Box>
             </Grid>

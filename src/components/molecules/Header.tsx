@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { AppBar, Toolbar, IconButton, useMediaQuery, useTheme, Box } from '@mui/material';
+import { AppBar, Toolbar, useMediaQuery, useTheme, Box } from '@mui/material';
 import Image from 'next/image';
 import Container from '../atoms/Container';
 import CompanyLogo from '../../assets/images/Company-logo.svg';
@@ -7,13 +7,15 @@ import { MobileMenu } from '../atoms/MobileMenu';
 import { HeaderNavigation } from '../atoms/HeaderNavigation';
 import CompanyDarkLogo from '@/assets/images/Company-logo-dark.svg';
 import { useRouter } from 'next/router';
-import { ServiceType, services } from '@/constants/services';
-import { AboutType, about } from '@/constants/about';
+import { ServiceType, Services } from '@/constants/services';
+import { AboutType, About } from '@/constants/about';
+import Link from 'next/link';
 
 export type MenuItemDataType = {
   id: string;
   label: string;
   href?: string;
+  hash?: string;
   subItems?: ServiceType[] | AboutType[];
 };
 
@@ -33,12 +35,12 @@ const Header = () => {
     {
       id: 'menu-item-2',
       label: 'Services',
-      subItems: services,
+      subItems: Services,
     },
     {
       id: 'menu-item-3',
       label: 'Careers',
-      subItems: about,
+      subItems: About,
     },
   ];
 
@@ -63,9 +65,9 @@ const Header = () => {
           }}
         >
           <Box display="flex" alignItems="center" justifyContent="space-between" width="100%">
-            <IconButton edge="start" color="inherit" aria-label="home" href="/">
+            <Link href="/">
               <Image src={isTransparent ? CompanyLogo : CompanyDarkLogo} alt="Spartan Logo" />
-            </IconButton>
+            </Link>
 
             {isMobile ? (
               <MobileMenu

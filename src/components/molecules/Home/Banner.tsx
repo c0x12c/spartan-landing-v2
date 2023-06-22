@@ -4,7 +4,7 @@ import Container from '../../atoms/Container';
 import { base, gray, primary } from '@/styles/colors';
 import Banner from '../../atoms/Banner';
 import heroBanner from '@/assets/images/hero-banner.svg';
-import ButtonDiscuss from '@/components/atoms/ButtonDiscussion';
+import ButtonDiscuss from '@/components/atoms/ButtonDiscuss';
 
 const HeroBanner = () => {
   const theme = useTheme();
