@@ -16,7 +16,7 @@ const HeroBanner = () => {
       <Box pt={{ xxl: '333px', md: '184px', sm: '163px', xs: '133px' }}>
         <Container>
           <Box
-            maxWidth={{ xxl: '900px', xl: '862px', lg: '857px', md: '678px', xs: '339px' }}
+            maxWidth={{ xxl: '940px', xl: '862px', lg: '857px', md: '678px', xs: '529px' }}
             mb={matchesLargeDesktop ? '127px' : '61px'}
           >
             <Box display="flex" alignItems="center" mb="32px">
@@ -29,7 +29,7 @@ const HeroBanner = () => {
                   fontWeight: 700,
                 }}
               >
-                Spartans at&nbsp; {matchesMobile && <br />}
+                Spartans at {matchesMobile && <br />}
                 <Typography
                   component={'span'}
                   sx={{
