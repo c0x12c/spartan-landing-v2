@@ -1,79 +1,97 @@
-import React, { forwardRef } from 'react';
+import React from 'react';
+import * as colors from '@/styles/colors';
 import { Typography, Box, IconButton } from '@mui/material';
 import { base, gray, primary } from '@/styles/colors';
-import { ExpandMore, ExpandLess } from '@mui/icons-material';
+import { ExpandMore } from '@mui/icons-material';
 import { MenuItemDataType } from '../molecules/Header';
-import * as colors from '@/styles/colors';
 import Image from 'next/image';
 import ArrowButton from '@/assets/images/Arrow-contact-dark.svg';
 import { ServiceType } from '@/constants/services';
 import { AboutType } from '@/constants/about';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 
 type MenuItemType = {
   item: MenuItemDataType;
-  updateMenuItem: (id: string) => void;
-  isActive: boolean;
   isTransparent: boolean;
-  openSubMenu: string;
-  toggleSubMenu: (value: string) => void;
 };
 
-const MenuItem = forwardRef(function MenuItemWithoutRef(
-  { item, updateMenuItem, isActive, isTransparent, openSubMenu, toggleSubMenu }: MenuItemType,
-  ref
-) {
-  const color = isActive
-    ? colors.primary[500]
-    : isTransparent
-    ? colors.gray[200]
-    : colors.base.black;
+const MenuItem = ({ item, isTransparent }: MenuItemType) => {
+  const color = isTransparent ? colors.gray[200] : colors.base.black;
+  const router = useRouter();
+  const goToPath = (path?: string) => {
+    if (!path) return;
+    router.push(path);
+  };
   return (
     <Box
       display="flex"
+      alignItems="center"
       gap="10.63px"
-      sx={{ cursor: 'pointer' }}
-      onClick={() => {
-        updateMenuItem(item.id);
-        if (item.subItems) {
-          toggleSubMenu(item.id);
-        }
+      height="100%"
+      onClick={() => goToPath(item.href)}
+      sx={{
+        cursor: 'pointer',
+        '&:hover': {
+          '& .menu-title': {
+            color: colors.primary[500],
+            transition: 'color .5s',
+          },
+          '& .icon-expand': {
+            color: colors.primary[500],
+            transition: 'color .5s',
+          },
+          '&::before': {
+            width: '100%',
+          },
+          '& .submenu': {
+            opacity: 1,
+            top: '100%',
+            visibility: 'visible',
+          },
+        },
+        '&::before': {
+          content: '""',
+          position: 'absolute',
+          bottom: 0,
+          left: 0,
+          width: 0,
+          height: '2px',
+          backgroundColor: colors.primary[500],
+          transition: 'width .5s',
+        },
       }}
       px="10.63px"
       position="relative"
     >
-      <Typography variant="fs18" color={color} fontWeight={isActive ? 700 : 400} lineHeight={1.33}>
+      <Typography className="menu-title" variant="fs18" color={color} lineHeight={1.33}>
         {item.label}
       </Typography>
       {item.subItems && (
-        <>
-          {openSubMenu === item.id ? (
-            <ExpandLess
-              sx={{
-                color: color,
-              }}
-            />
-          ) : (
-            <ExpandMore
-              sx={{
-                color: color,
-              }}
-            />
-          )}
-        </>
+        <ExpandMore
+          className="icon-expand"
+          sx={{
+            color: color,
+          }}
+        />
       )}
-      {openSubMenu === item.id && item.subItems && (
+      {item.subItems && (
         <Box
+          className="submenu"
           component="ul"
           position="absolute"
-          top="100%"
+          top="120%"
           left="-100%"
           bgcolor={base.white}
           p={'20px 32px 32px'}
           width={'417px'}
-          ref={ref}
+          sx={{
+            visibility: 'hidden',
+            opacity: 0,
+            transition: 'all .5s',
+          }}
         >
-          {item.subItems.map((subItem, subIndex) => {
+          {(item.subItems ?? []).map((subItem, subIndex) => {
             const { href, hash } = subItem as ServiceType & AboutType;
             const link = href ? href : `/services#${hash}`;
             return (
@@ -84,6 +102,14 @@ const MenuItem = forwardRef(function MenuItemWithoutRef(
                 borderColor={gray[400]}
                 p="4px 0 8px"
                 mb={subIndex === (item.subItems || []).length - 1 ? 0 : '17px'}
+                sx={{
+                  '&:hover': {
+                    '& .submenu-title': {
+                      color: colors.primary[500],
+                      transition: 'color .5s',
+                    },
+                  },
+                }}
               >
                 <Link href={link}>
                   <Box
@@ -95,6 +121,7 @@ const MenuItem = forwardRef(function MenuItemWithoutRef(
                     }}
                   >
                     <Typography
+                      className="submenu-title"
                       variant="fs18"
                       sx={{ color: base.black, fontWeight: 700, paddingRight: '30px' }}
                     >
@@ -117,6 +144,6 @@ const MenuItem = forwardRef(function MenuItemWithoutRef(
       )}
     </Box>
   );
-});
+};
 
 export default MenuItem;

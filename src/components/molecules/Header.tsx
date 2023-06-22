@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import { AppBar, Toolbar, useMediaQuery, useTheme, Box } from '@mui/material';
 import Image from 'next/image';
 import Container from '../atoms/Container';
@@ -44,11 +43,6 @@ const Header = () => {
     },
   ];
 
-  const [selectedMenuItem, setSelectMenuItem] = useState(dataMenu[0].id);
-  const updateMenuItem = (id: string) => {
-    setSelectMenuItem(id);
-  };
-
   return (
     <AppBar
       sx={{
@@ -70,19 +64,9 @@ const Header = () => {
             </Link>
 
             {isMobile ? (
-              <MobileMenu
-                menu={dataMenu}
-                updateMenuItem={updateMenuItem}
-                selectedMenuItem={selectedMenuItem}
-                isTransparent={isTransparent}
-              />
+              <MobileMenu menu={dataMenu} isTransparent={isTransparent} />
             ) : (
-              <HeaderNavigation
-                menu={dataMenu}
-                updateMenuItem={updateMenuItem}
-                selectedMenuItem={selectedMenuItem}
-                isTransparent={isTransparent}
-              />
+              <HeaderNavigation menu={dataMenu} isTransparent={isTransparent} />
             )}
           </Box>
         </Toolbar>
