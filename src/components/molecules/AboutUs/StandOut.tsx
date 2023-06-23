@@ -59,9 +59,8 @@ const StandOut: React.FunctionComponent<IStandOutProps> = () => {
             How do we stand out amidst a sea of technology teams?
           </Typography>
           <Typography variant={'fs16'} color={colors.base.grey} component="h2" textAlign="center">
-            The company is based in the US but works with engineers from around the world,
-            leveraging remote work to take advantage of cost savings and improve startup&apos;s
-            financial runway.
+            We believe that our dedication to the human element, strong engineering processes, and
+            exceptional talent make us truly stand out in the full-remote engineering landscape.
           </Typography>
         </Box>
         <Grid

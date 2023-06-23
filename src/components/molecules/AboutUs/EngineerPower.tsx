@@ -43,7 +43,7 @@ const EngineerPowerContent = ({
         The company is based in the US but works with engineers from around the world, leveraging
         remote work to take advantage of cost savings and improve startup&apos;s financial runway.
       </Typography>
-      <Box my="10px" display="flex" justifyContent="flex-end">
+      {/* <Box my="10px" display="flex" justifyContent="flex-end">
         <Button
           endIcon={<Image src={outerLinkSmall} alt="outerLinkSmall" />}
           sx={{
@@ -63,7 +63,7 @@ const EngineerPowerContent = ({
         >
           Being next spartan
         </Button>
-      </Box>
+      </Box> */}
     </Box>
   );
 };
