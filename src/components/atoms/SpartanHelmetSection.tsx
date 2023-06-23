@@ -13,6 +13,7 @@ interface ISpartanHelmetSectionProps {
   contentText?: string;
   textButton: string;
   link?: string;
+  hash?: string;
 }
 
 const SpartanHelmetSection: React.FunctionComponent<ISpartanHelmetSectionProps> = ({
@@ -21,6 +22,7 @@ const SpartanHelmetSection: React.FunctionComponent<ISpartanHelmetSectionProps> 
   textButton,
   contentText,
   link,
+  hash,
 }) => {
   const theme = useTheme();
   const matches = useMediaQuery(theme.breakpoints.down('sm'));
@@ -28,7 +30,14 @@ const SpartanHelmetSection: React.FunctionComponent<ISpartanHelmetSectionProps> 
   const router = useRouter();
   const goToPath = () => {
     if (!link) return;
-    router.push(link);
+    router.push(
+      {
+        pathname: link,
+        hash,
+      },
+      undefined,
+      { scroll: false }
+    );
   };
 
   return (

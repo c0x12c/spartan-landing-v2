@@ -46,7 +46,14 @@ const menuItems: MenuItem[] = [
 const Footer: React.FunctionComponent<IFooterProps> = () => {
   const router = useRouter();
   const goToContactPage = () => {
-    router.push('/contact');
+    router.push(
+      {
+        pathname: '/contact',
+        hash: 'submit-form',
+      },
+      undefined,
+      { scroll: false }
+    );
   };
 
   return (

@@ -13,7 +13,14 @@ const GlobalImpact: React.FunctionComponent<IGlobalImpactProps> = () => {
 
   const router = useRouter();
   const goToContactPage = () => {
-    router.push('/contact');
+    router.push(
+      {
+        pathname: '/contact',
+        hash: 'submit-form',
+      },
+      undefined,
+      { scroll: false }
+    );
   };
 
   return (

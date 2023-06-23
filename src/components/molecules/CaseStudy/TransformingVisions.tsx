@@ -9,6 +9,7 @@ const TransformingVisions: React.FunctionComponent<ITransformingVisionsProps> = 
       secondText="transforming Visions into Reality."
       textButton="Meet our expert"
       link="/contact"
+      hash="submit-form"
     />
   );
 };

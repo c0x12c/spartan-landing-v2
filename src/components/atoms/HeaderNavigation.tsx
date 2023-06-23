@@ -16,7 +16,14 @@ type HeaderNavigationType = {
 export const HeaderNavigation = ({ menu, isTransparent }: HeaderNavigationType) => {
   const router = useRouter();
   const goToContactPage = () => {
-    router.push('/contact');
+    router.push(
+      {
+        pathname: '/contact',
+        hash: 'submit-form',
+      },
+      undefined,
+      { scroll: false }
+    );
   };
 
   const renderMenu = menu.map((item, index) => {
