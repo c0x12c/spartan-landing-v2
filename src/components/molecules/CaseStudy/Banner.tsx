@@ -53,9 +53,8 @@ const CaseStudyBanner: React.FunctionComponent<ICaseStudyBannerProps> = () => {
               letterSpacing="0.01em"
               maxWidth="797px"
             >
-              Lorem Ipsum has been the industry&apos;s standard dummy text ever since the 1500s,
-              when an unknown printer took a galley of type and scrambled it to make a type specimen
-              book. It has survived not only five centuries
+              We empower small and medium startups, enabling them to accelerate their journey
+              towards profitability.
             </Typography>
             {matchesDesktop && (
               <Box

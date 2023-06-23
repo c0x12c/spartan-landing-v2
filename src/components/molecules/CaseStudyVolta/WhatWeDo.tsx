@@ -41,7 +41,7 @@ const WhatWeDo: React.FunctionComponent<IWhatWeDoProps> = () => {
     },
   ];
 
-  const renderDataService = dataWeDo.map((item, index) => {
+  const renderDataService = dataWeDo.map((item) => {
     return <AccordionItemWeDo key={item.id} {...item} />;
   });
 

@@ -12,7 +12,7 @@ import Link from 'next/link';
 
 interface INextProjectProps {}
 
-const NextProject: React.FunctionComponent<INextProjectProps> = (props) => {
+const NextProject: React.FunctionComponent<INextProjectProps> = () => {
   const theme = useTheme();
   const matchesDesktop = useMediaQuery(theme.breakpoints.up('lg'));
   const matchesMobile = useMediaQuery(theme.breakpoints.down('sm'));

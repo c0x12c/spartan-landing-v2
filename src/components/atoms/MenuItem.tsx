@@ -111,7 +111,7 @@ const MenuItem = ({ item, isTransparent }: MenuItemType) => {
                   },
                 }}
               >
-                <Link href={link}>
+                <Link href={link} scroll={false}>
                   <Box
                     display="flex"
                     justifyContent="space-between"

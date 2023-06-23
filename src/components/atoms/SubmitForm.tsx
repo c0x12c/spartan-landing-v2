@@ -6,7 +6,11 @@ import ArrowDark from '@/assets/images/Arrow-contact-dark.svg';
 
 const SubmitForm = () => {
   return (
-    <Box sx={{ display: 'flex', flexDirection: { lg: 'row', xs: 'column' }, gap: '53px' }}>
+    <Box
+      sx={{ display: 'flex', flexDirection: { lg: 'row', xs: 'column' }, gap: '53px' }}
+      pt="50px"
+      id="submit-form"
+    >
       <Box sx={{ width: { lg: '36%', xs: '100%' } }}>
         <Typography variant="fs18" component={'p'}>
           Have a question about our services or want to get started on your design project?

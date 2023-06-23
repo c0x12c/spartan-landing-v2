@@ -6,6 +6,7 @@ import MenuItem from './MenuItem';
 import Image from 'next/image';
 import ArrowContact from '@/assets/images/Arrow-contact.svg';
 import ArrowDarkContact from '@/assets/images/Arrow-contact-dark.svg';
+import { useRouter } from 'next/router';
 
 type HeaderNavigationType = {
   menu: MenuItemDataType[];
@@ -13,6 +14,18 @@ type HeaderNavigationType = {
 };
 
 export const HeaderNavigation = ({ menu, isTransparent }: HeaderNavigationType) => {
+  const router = useRouter();
+  const goToContactPage = () => {
+    router.push(
+      {
+        pathname: '/contact',
+        hash: 'submit-form',
+      },
+      undefined,
+      { scroll: false }
+    );
+  };
+
   const renderMenu = menu.map((item, index) => {
     return (
       <Box key={item.id} display="flex" alignItems="center" gap="16px" height="100%">
@@ -34,6 +47,7 @@ export const HeaderNavigation = ({ menu, isTransparent }: HeaderNavigationType) 
       <Button
         variant={isTransparent ? 'outlined' : 'contained'}
         endIcon={<Image src={isTransparent ? ArrowContact : ArrowDarkContact} alt="Outer Link" />}
+        onClick={goToContactPage}
         sx={{
           bgcolor: isTransparent ? 'transparent' : colors.primary[500],
           padding: '14px 24px',

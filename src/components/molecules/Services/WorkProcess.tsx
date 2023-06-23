@@ -9,7 +9,7 @@ import { WorkProcessData } from '@/constants/work-process';
 import StyledAccordionItem from '@/components/atoms/StyledAccordionItem';
 interface IWorkProcessProps {}
 
-const WorkProcess: React.FunctionComponent<IWorkProcessProps> = (props) => {
+const WorkProcess: React.FunctionComponent<IWorkProcessProps> = () => {
   const theme = useTheme();
   const matchesDesktop = useMediaQuery(theme.breakpoints.up('lg'));
   const matchesTablet = useMediaQuery(theme.breakpoints.down('md'));
