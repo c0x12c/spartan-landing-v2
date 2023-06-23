@@ -6,6 +6,7 @@ import Top100Coins from '../molecules/CaseStudyVolta/Top100Coins';
 import WhatWeDo from '../molecules/CaseStudyVolta/WhatWeDo';
 import TechStack from '../molecules/CaseStudyVolta/TechStack';
 import Result from '../molecules/CaseStudyVolta/Result';
+import Download from '../molecules/CaseStudyVolta/Download';
 
 type Props = {
   children?: React.ReactNode;
@@ -20,6 +21,7 @@ const CaseStudyPage: React.FC<Props> = () => {
       <WhatWeDo />
       <TechStack />
       <Result />
+      <Download />
     </MainTemplate>
   );
 };
