@@ -7,6 +7,7 @@ import WhatWeDo from '../molecules/CaseStudyVolta/WhatWeDo';
 import TechStack from '../molecules/CaseStudyVolta/TechStack';
 import Result from '../molecules/CaseStudyVolta/Result';
 import Download from '../molecules/CaseStudyVolta/Download';
+import NextProject from '../atoms/NextProject';
 
 type Props = {
   children?: React.ReactNode;
@@ -22,6 +23,7 @@ const CaseStudyPage: React.FC<Props> = () => {
       <TechStack />
       <Result />
       <Download />
+      <NextProject />
     </MainTemplate>
   );
 };
