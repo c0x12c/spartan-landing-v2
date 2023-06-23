@@ -4,7 +4,7 @@ import { Box, Typography, useMediaQuery, useTheme } from '@mui/material';
 import Container from '@/components/atoms/Container';
 interface IVoltaStoryProps {}
 
-const VoltaStory: React.FunctionComponent<IVoltaStoryProps> = (props) => {
+const VoltaStory: React.FunctionComponent<IVoltaStoryProps> = () => {
   const theme = useTheme();
   const matchesDesktop = useMediaQuery(theme.breakpoints.up('lg'));
   const matchesMobile = useMediaQuery(theme.breakpoints.down('sm'));

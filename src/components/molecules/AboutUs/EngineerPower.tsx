@@ -68,7 +68,7 @@ const EngineerPowerContent = ({
   );
 };
 
-const EngineerPower: React.FunctionComponent<IEngineerPowerProps> = (props) => {
+const EngineerPower: React.FunctionComponent<IEngineerPowerProps> = () => {
   const theme = useTheme();
   const matchesLargeDesktop = useMediaQuery(theme.breakpoints.up('xl'));
   const matchesDesktop = useMediaQuery(theme.breakpoints.up('lg'));

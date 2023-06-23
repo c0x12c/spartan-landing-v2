@@ -10,7 +10,7 @@ import appIcon from '@/assets/images/case-volta/app-icon.png';
 
 interface ICaseStudyVoltaBannerProps {}
 
-const CaseStudyVoltaBanner: React.FunctionComponent<ICaseStudyVoltaBannerProps> = (props) => {
+const CaseStudyVoltaBanner: React.FunctionComponent<ICaseStudyVoltaBannerProps> = () => {
   const theme = useTheme();
   const matchesDesktop = useMediaQuery(theme.breakpoints.up('lg'));
   const matchesMobile = useMediaQuery(theme.breakpoints.down('sm'));

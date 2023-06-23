@@ -10,7 +10,7 @@ import star from '@/assets/images/star.svg';
 import StacksContent from '@/components/atoms/StacksContent';
 interface IOurStackProps {}
 
-const OurStack: React.FunctionComponent<IOurStackProps> = (props) => {
+const OurStack: React.FunctionComponent<IOurStackProps> = () => {
   const scrollRef = React.useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: scrollRef,

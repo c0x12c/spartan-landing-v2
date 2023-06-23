@@ -4,7 +4,7 @@ import CaseStudyVoltaPage from '@/components/pages/CaseStudyVoltaPage';
 
 interface ICaseStudyVoltaProps {}
 
-const CaseStudyVolta: React.FunctionComponent<ICaseStudyVoltaProps> = (props) => {
+const CaseStudyVolta: React.FunctionComponent<ICaseStudyVoltaProps> = () => {
   return (
     <>
       <SEO page={EPages.CASE_STUDY_VOLTA} />

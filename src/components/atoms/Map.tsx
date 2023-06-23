@@ -2,7 +2,7 @@ import * as React from 'react';
 
 interface ILocationMapProps {}
 
-const LocationMap: React.FunctionComponent<ILocationMapProps> = (props) => {
+const LocationMap: React.FunctionComponent<ILocationMapProps> = () => {
   return (
     <svg width="100%" viewBox="0 0 721 468" fill="none" xmlns="http://www.w3.org/2000/svg">
       <g filter="url(#filter0_dddd_481_13018)">

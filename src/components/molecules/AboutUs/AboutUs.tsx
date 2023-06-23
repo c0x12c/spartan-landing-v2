@@ -9,7 +9,7 @@ import aboutUs from '@/assets/images/about-us-image.svg';
 
 interface IAboutUsProps {}
 
-const AboutUs: React.FunctionComponent<IAboutUsProps> = (props) => {
+const AboutUs: React.FunctionComponent<IAboutUsProps> = () => {
   const scrollRef = React.useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: scrollRef,

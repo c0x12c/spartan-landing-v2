@@ -10,7 +10,7 @@ import ProjectItem from '@/components/atoms/ProjectItem';
 
 interface IServiceCaseStudyProps {}
 
-const ServiceCaseStudy: React.FunctionComponent<IServiceCaseStudyProps> = (props) => {
+const ServiceCaseStudy: React.FunctionComponent<IServiceCaseStudyProps> = () => {
   const theme = useTheme();
   const matchesDesktop = useMediaQuery(theme.breakpoints.up('lg'));
   const matchesMobile = useMediaQuery(theme.breakpoints.down('sm'));
