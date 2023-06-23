@@ -7,6 +7,7 @@ import Container from '@/components/atoms/Container';
 import { BoxProjects } from '../CaseStudy/Projects';
 import { CaseStudies, CaseStudyType } from '@/constants/case-study';
 import ProjectItem from '@/components/atoms/ProjectItem';
+import { useRouter } from 'next/router';
 
 interface IServiceCaseStudyProps {}
 
@@ -28,6 +29,11 @@ const ServiceCaseStudy: React.FunctionComponent<IServiceCaseStudyProps> = () => 
     });
   };
 
+  const router = useRouter();
+  const goToCaseStudy = () => {
+    router.push('/case-study');
+  };
+
   return (
     <Box my="44px">
       <Container>
@@ -38,7 +44,7 @@ const ServiceCaseStudy: React.FunctionComponent<IServiceCaseStudyProps> = () => 
               flexDirection={{ lg: 'column', xs: 'row' }}
               mb={{ lg: 0, xs: '32px' }}
               mr="32px"
-              alignItems="center"
+              alignItems="flex-start"
               justifyContent="space-between"
               width="100%"
             >
@@ -57,6 +63,7 @@ const ServiceCaseStudy: React.FunctionComponent<IServiceCaseStudyProps> = () => 
               </Box>
               <Button
                 endIcon={<Image src={ArrowDarkContact} alt="Outer Link" />}
+                onClick={goToCaseStudy}
                 sx={{
                   height: 'fit-content',
                   bgcolor: colors.primary[500],

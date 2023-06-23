@@ -1,26 +1,26 @@
 import * as colors from '@/styles/colors';
 import { Box, Typography, useMediaQuery, useTheme } from '@mui/material';
 
-const ITConsultingContent = () => {
+const DataPlatformContent = () => {
   const theme = useTheme();
   const matchesMobile = useMediaQuery(theme.breakpoints.down('sm'));
 
   const data = [
     {
       id: 'text-1',
-      text: 'Our expert IT consulting services provide strategic guidance and customized solutions to address your specific business needs.',
+      text: 'Our comprehensive data platform solutions cover the entire data lifecycle, from design to advanced analytics.',
     },
     {
       id: 'text-2',
-      text: 'Leverage the latest technologies, software, and applications to gain a competitive edge in the market.',
+      text: 'Design and implement robust data architectures that ensure data quality, reliability, and accessibility.',
     },
     {
       id: 'text-3',
-      text: 'Benefit from our deep industry knowledge and experience in optimizing IT infrastructure and improving operational efficiency.',
+      text: 'Leverage advanced analytics capabilities such as predictive modeling and data mining to gain actionable insights.',
     },
     {
       id: 'text-4',
-      text: 'Collaborate closely with our team to develop a comprehensive IT strategy that aligns with your business goals.',
+      text: 'Make informed decisions and drive business growth with our end-to-end data platform solutions.',
     },
   ];
 
@@ -59,7 +59,7 @@ const ITConsultingContent = () => {
   });
 
   return (
-    <Box id="iot-development">
+    <Box id="data-platform">
       <Typography
         variant={matchesMobile ? 'fs26' : 'fs40'}
         color={colors.primary[500]}
@@ -67,7 +67,7 @@ const ITConsultingContent = () => {
         mb="32px"
         component="h2"
       >
-        IoT Development
+        Data Platform Solutions
       </Typography>
       <Box
         display="flex"
@@ -82,4 +82,4 @@ const ITConsultingContent = () => {
   );
 };
 
-export default ITConsultingContent;
+export default DataPlatformContent;

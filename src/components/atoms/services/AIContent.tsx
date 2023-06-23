@@ -1,26 +1,26 @@
 import * as colors from '@/styles/colors';
 import { Box, Typography, useMediaQuery, useTheme } from '@mui/material';
 
-const ITConsultingContent = () => {
+const AIContent = () => {
   const theme = useTheme();
   const matchesMobile = useMediaQuery(theme.breakpoints.down('sm'));
 
   const data = [
     {
       id: 'text-1',
-      text: 'Our expert IT consulting services provide strategic guidance and customized solutions to address your specific business needs.',
+      text: 'Harness the power of artificial intelligence with our leading AI development services.',
     },
     {
       id: 'text-2',
-      text: 'Leverage the latest technologies, software, and applications to gain a competitive edge in the market.',
+      text: 'Leverage our proven expertise and track record in delivering reliable and innovative AI solutions.',
     },
     {
       id: 'text-3',
-      text: 'Benefit from our deep industry knowledge and experience in optimizing IT infrastructure and improving operational efficiency.',
+      text: 'Unlock valuable insights from your data using machine learning algorithms, natural language processing, and more.',
     },
     {
       id: 'text-4',
-      text: 'Collaborate closely with our team to develop a comprehensive IT strategy that aligns with your business goals.',
+      text: 'Drive innovation within your organization and gain a competitive advantage in the market with AI-powered solutions.',
     },
   ];
 
@@ -59,7 +59,7 @@ const ITConsultingContent = () => {
   });
 
   return (
-    <Box id="iot-development">
+    <Box id="artificial-intelligence">
       <Typography
         variant={matchesMobile ? 'fs26' : 'fs40'}
         color={colors.primary[500]}
@@ -67,7 +67,7 @@ const ITConsultingContent = () => {
         mb="32px"
         component="h2"
       >
-        IoT Development
+        AI Development
       </Typography>
       <Box
         display="flex"
@@ -82,4 +82,4 @@ const ITConsultingContent = () => {
   );
 };
 
-export default ITConsultingContent;
+export default AIContent;

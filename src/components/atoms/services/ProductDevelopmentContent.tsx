@@ -1,26 +1,26 @@
 import * as colors from '@/styles/colors';
 import { Box, Typography, useMediaQuery, useTheme } from '@mui/material';
 
-const ITConsultingContent = () => {
+const ProductDevelopmentContent = () => {
   const theme = useTheme();
   const matchesMobile = useMediaQuery(theme.breakpoints.down('sm'));
 
   const data = [
     {
       id: 'text-1',
-      text: 'Our expert IT consulting services provide strategic guidance and customized solutions to address your specific business needs.',
+      text: 'Our cutting-edge product development services help you bring your product vision to life and deliver highly productive outcomes.',
     },
     {
       id: 'text-2',
-      text: 'Leverage the latest technologies, software, and applications to gain a competitive edge in the market.',
+      text: 'Collaborate closely with our team of experts to ensure your product exceeds customer expectations.',
     },
     {
       id: 'text-3',
-      text: 'Benefit from our deep industry knowledge and experience in optimizing IT infrastructure and improving operational efficiency.',
+      text: 'Leverage our agile development approach for quick time-to-market and the flexibility to adapt to changing requirements.',
     },
     {
       id: 'text-4',
-      text: 'Collaborate closely with our team to develop a comprehensive IT strategy that aligns with your business goals.',
+      text: 'Benefit from our expertise in software development and user-centered design to create innovative and user-friendly products.',
     },
   ];
 
@@ -59,7 +59,7 @@ const ITConsultingContent = () => {
   });
 
   return (
-    <Box id="iot-development">
+    <Box id="product-development">
       <Typography
         variant={matchesMobile ? 'fs26' : 'fs40'}
         color={colors.primary[500]}
@@ -67,7 +67,7 @@ const ITConsultingContent = () => {
         mb="32px"
         component="h2"
       >
-        IoT Development
+        Product Development
       </Typography>
       <Box
         display="flex"
@@ -82,4 +82,4 @@ const ITConsultingContent = () => {
   );
 };
 
-export default ITConsultingContent;
+export default ProductDevelopmentContent;

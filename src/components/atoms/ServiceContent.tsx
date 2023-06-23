@@ -1,12 +1,16 @@
 import * as React from 'react';
 import { Services } from '@/constants/services';
-import { Box, Grid } from '@mui/material';
+import { Box, Grid, useMediaQuery, useTheme } from '@mui/material';
 import ServiceTag from './ServiceTag';
 import { useRouter } from 'next/router';
+import { ALL_SERVICES } from '@/constants/selectors';
 
 interface IServiceContentProps {}
 
 const ServiceContent: React.FunctionComponent<IServiceContentProps> = () => {
+  const theme = useTheme();
+  const matchesDesktop = useMediaQuery(theme.breakpoints.up('lg'));
+
   const router = useRouter();
   const { pathname, asPath } = router;
 
@@ -29,10 +33,14 @@ const ServiceContent: React.FunctionComponent<IServiceContentProps> = () => {
 
   const changeServiceTag = (hash: string) => {
     setServiceTag(hash);
-    router.push({
-      pathname,
-      hash,
-    });
+    router.push(
+      {
+        pathname,
+        hash,
+      },
+      undefined,
+      { scroll: false }
+    );
   };
 
   const renderServiceTags = Services.map((service, index) => {
@@ -48,18 +56,16 @@ const ServiceContent: React.FunctionComponent<IServiceContentProps> = () => {
   });
 
   return (
-    <React.Fragment>
-      <Grid container rowGap="42px">
-        <Grid item lg={4.5} xs={12}>
-          <Box display="flex" flexDirection="column" rowGap="4px">
-            {renderServiceTags}
-          </Box>
-        </Grid>
-        <Grid item lg={7.5} xs={12}>
-          {selectComponent}
-        </Grid>
+    <Grid container rowGap="42px" pt={matchesDesktop ? '50px' : '12px'} id={ALL_SERVICES}>
+      <Grid item lg={4.5} xs={12}>
+        <Box display="flex" flexDirection="column" rowGap="4px">
+          {renderServiceTags}
+        </Box>
       </Grid>
-    </React.Fragment>
+      <Grid item lg={7.5} xs={12}>
+        {selectComponent}
+      </Grid>
+    </Grid>
   );
 };
 

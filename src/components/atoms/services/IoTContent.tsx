@@ -1,26 +1,26 @@
 import * as colors from '@/styles/colors';
 import { Box, Typography, useMediaQuery, useTheme } from '@mui/material';
 
-const ITConsultingContent = () => {
+const IoTContent = () => {
   const theme = useTheme();
   const matchesMobile = useMediaQuery(theme.breakpoints.down('sm'));
 
   const data = [
     {
       id: 'text-1',
-      text: 'Our expert IT consulting services provide strategic guidance and customized solutions to address your specific business needs.',
+      text: 'Unlock the potential of the Internet of Things with our reliable and cost-effective IoT development solutions.',
     },
     {
       id: 'text-2',
-      text: 'Leverage the latest technologies, software, and applications to gain a competitive edge in the market.',
+      text: 'Design, develop, and deploy IoT solutions tailored to your specific requirements.',
     },
     {
       id: 'text-3',
-      text: 'Benefit from our deep industry knowledge and experience in optimizing IT infrastructure and improving operational efficiency.',
+      text: 'Benefit from our extensive experience in IoT technologies and industry best practices.',
     },
     {
       id: 'text-4',
-      text: 'Collaborate closely with our team to develop a comprehensive IT strategy that aligns with your business goals.',
+      text: 'Improve operational efficiency and discover new business opportunities with our reliable IoT solutions.',
     },
   ];
 
@@ -59,7 +59,7 @@ const ITConsultingContent = () => {
   });
 
   return (
-    <Box id="iot-development">
+    <Box id="it-consulting">
       <Typography
         variant={matchesMobile ? 'fs26' : 'fs40'}
         color={colors.primary[500]}
@@ -82,4 +82,4 @@ const ITConsultingContent = () => {
   );
 };
 
-export default ITConsultingContent;
+export default IoTContent;
