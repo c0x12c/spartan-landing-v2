@@ -1,11 +1,13 @@
 import * as React from 'react';
 import * as colors from '@/styles/colors';
-import { Box, Grid, Typography, useMediaQuery, useTheme } from '@mui/material';
-import Container from '@/components/atoms/Container';
 import Image from 'next/image';
-import bg from '@/assets/images/case-study/volta-banner.svg';
-import volta from '@/assets/images/case-study/volta.svg';
+import { Box, Grid, Typography, useMediaQuery, useTheme } from '@mui/material';
 import Banner from '@/components/atoms/Banner';
+import Container from '@/components/atoms/Container';
+import bg from '@/assets/images/case-volta/banner.png';
+import bgSp from '@/assets/images/case-volta/banner-sp.png';
+import appIcon from '@/assets/images/case-volta/app-icon.png';
+
 interface ICaseStudyVoltaBannerProps {}
 
 const CaseStudyVoltaBanner: React.FunctionComponent<ICaseStudyVoltaBannerProps> = (props) => {
@@ -14,16 +16,17 @@ const CaseStudyVoltaBanner: React.FunctionComponent<ICaseStudyVoltaBannerProps> 
   const matchesMobile = useMediaQuery(theme.breakpoints.down('sm'));
   return (
     <React.Fragment>
-      <Banner src={bg.src}>
-        <Box pt={{ lg: '224px', xs: '142px' }}>
+      <Banner src={!matchesMobile ? bg.src : bgSp.src} haveBackground={false}>
+        <Box pt={{ xl: '207px', lg: '107px', xs: '142px' }}>
           <Container>
             <Grid container>
               <Grid item xs={12} md={6}>
+                <Image src={appIcon} alt="appIcon" />
                 <Typography
                   variant={matchesDesktop ? 'fs100' : matchesMobile ? 'fs40' : 'fs80'}
                   color={colors.base.white}
                   component="h1"
-                  mb="32px"
+                  my="32px"
                 >
                   Volta Wallet
                 </Typography>
@@ -40,13 +43,6 @@ const CaseStudyVoltaBanner: React.FunctionComponent<ICaseStudyVoltaBannerProps> 
                   seamless access to the benefits of the decentralized web, driving meaningful
                   change and creating a connected world.
                 </Typography>
-              </Grid>
-              <Grid item xs={12} md={6}>
-                <Image
-                  src={volta}
-                  alt="volta"
-                  style={{ maxWidth: '100%', marginTop: matchesMobile ? '-40%' : 0 }}
-                />
               </Grid>
             </Grid>
           </Container>
