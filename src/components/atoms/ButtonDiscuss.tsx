@@ -19,7 +19,6 @@ const ButtonDiscuss: React.FunctionComponent<IButtonDiscussProps> = (props) => {
       display="flex"
       flexDirection="column"
       rowGap="11.42px"
-      startIcon={<Image src={ArrowDarkContact} alt="Outer Link" />}
       sx={{
         fontSize: '10.5833px',
         lineHeight: 1.4,
@@ -29,6 +28,7 @@ const ButtonDiscuss: React.FunctionComponent<IButtonDiscussProps> = (props) => {
         },
       }}
     >
+      <Image src={ArrowDarkContact} alt="Outer Link" />
       Let&apos;s discuss Your project
     </Box>
   );

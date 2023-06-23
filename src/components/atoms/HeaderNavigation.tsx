@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React from 'react';
 import * as colors from '@/styles/colors';
 import { Typography, Box, Button } from '@mui/material';
 import { MenuItemDataType } from '../molecules/Header';
@@ -9,50 +9,14 @@ import ArrowDarkContact from '@/assets/images/Arrow-contact-dark.svg';
 
 type HeaderNavigationType = {
   menu: MenuItemDataType[];
-  updateMenuItem: (id: string) => void;
-  selectedMenuItem: string;
   isTransparent: boolean;
 };
 
-export const HeaderNavigation = ({
-  menu,
-  updateMenuItem,
-  selectedMenuItem,
-  isTransparent,
-}: HeaderNavigationType) => {
-  const [openSubMenu, setOpenSubMenu] = useState('');
-  const toggleSubMenu = (value: string) => {
-    setOpenSubMenu(value);
-  };
-
-  const menuRef = useRef<HTMLUListElement>(null);
-
-  useEffect(() => {
-    const handleClickOutside = (event: MouseEvent) => {
-      if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
-        setOpenSubMenu('');
-      }
-    };
-
-    document.addEventListener('mousedown', handleClickOutside);
-
-    return () => {
-      document.removeEventListener('mousedown', handleClickOutside);
-    };
-  }, []);
-
+export const HeaderNavigation = ({ menu, isTransparent }: HeaderNavigationType) => {
   const renderMenu = menu.map((item, index) => {
     return (
-      <Box key={item.id} display="flex" gap="16px">
-        <MenuItem
-          item={item}
-          updateMenuItem={updateMenuItem}
-          isActive={selectedMenuItem === item.id}
-          isTransparent={isTransparent}
-          openSubMenu={openSubMenu}
-          toggleSubMenu={toggleSubMenu}
-          ref={menuRef}
-        />
+      <Box key={item.id} display="flex" alignItems="center" gap="16px" height="100%">
+        <MenuItem item={item} isTransparent={isTransparent} />
         {index !== menu.length - 1 && (
           <Typography variant="fs18" color={isTransparent ? colors.gray[200] : colors.base.black}>
             /
@@ -71,16 +35,16 @@ export const HeaderNavigation = ({
         variant={isTransparent ? 'outlined' : 'contained'}
         endIcon={<Image src={isTransparent ? ArrowContact : ArrowDarkContact} alt="Outer Link" />}
         sx={{
-          bgcolor: isTransparent ? 'transparent' : 'inherit',
+          bgcolor: isTransparent ? 'transparent' : colors.primary[500],
           padding: '14px 24px',
           borderRadius: '60.5811px',
           borderWidth: '2.12565px',
           fontWeight: 600,
           gap: '24px',
-          color: isTransparent ? colors.base.white : 'inherit',
+          color: isTransparent ? colors.base.white : colors.base.black,
           '&:hover': {
             borderWidth: '2.12565px',
-            bgcolor: isTransparent ? 'transparent' : 'inherit',
+            bgcolor: isTransparent ? 'transparent' : colors.primary[500],
           },
         }}
       >

@@ -10,6 +10,7 @@ export enum EPages {
   HOME = 'home',
   ABOUT_US = 'about-us',
   CASE_STUDY = 'case-study',
+  CONTACT_US = 'contact-us',
   SERVICE = 'service',
   CASE_STUDY_VOLTA = 'case-study-volta',
 }
