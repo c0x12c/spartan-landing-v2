@@ -3,16 +3,28 @@ import { Typography, Box, useTheme, useMediaQuery, Divider } from '@mui/material
 import Container from '../../atoms/Container';
 import { base, gray, primary } from '@/styles/colors';
 import Banner from '../../atoms/Banner';
-import heroBanner from '@/assets/images/hero-banner.svg';
 import ButtonDiscuss from '@/components/atoms/ButtonDiscuss';
+import heroBanner from '@/assets/images/home-banner/hero-banner.svg';
+import heroBanner2 from '@/assets/images/home-banner/hero-banner-2.svg';
+import heroBanner3 from '@/assets/images/home-banner/hero-banner-3.svg';
 
 const HeroBanner = () => {
   const theme = useTheme();
   const matchesLargeDesktop = useMediaQuery(theme.breakpoints.up('xxl'));
   const matchesMobile = useMediaQuery(theme.breakpoints.down('md'));
 
+  const listHeroBanner = [
+    { id: 'banner-1', src: heroBanner.src },
+    { id: 'banner-2', src: heroBanner2.src },
+    { id: 'banner-3', src: heroBanner3.src },
+  ];
+
+  const renderHeroBanners = listHeroBanner.map((banner, index) => {
+    return <HeroBannerElement key={banner.id} src={banner.src} index={index + 1} />;
+  });
+
   return (
-    <Banner src={heroBanner.src}>
+    <Banner bannerElement={<>{renderHeroBanners}</>}>
       <Box pt={{ xxl: '333px', md: '184px', sm: '163px', xs: '133px' }}>
         <Container>
           <Box
@@ -63,6 +75,25 @@ const HeroBanner = () => {
         </Container>
       </Box>
     </Banner>
+  );
+};
+
+const HeroBannerElement = ({ src, index }: { src: string; index: number }) => {
+  const theme = useTheme();
+  const matches = useMediaQuery(theme.breakpoints.up('xxl'));
+  return (
+    <Box position="absolute" zIndex={-1} top={0} left={0} width="100%" overflow="hidden">
+      <Box
+        className={`banner-bg banner-bg-${index}`}
+        sx={{
+          backgroundImage: `url(${src})`,
+          backgroundPosition: 'top',
+          backgroundRepeat: 'no-repeat',
+          backgroundSize: matches ? 'cover' : 'auto',
+          height: { xxl: '1151px', xl: '893px', lg: '840px', md: '855px', xs: '792px' },
+        }}
+      />
+    </Box>
   );
 };
 
