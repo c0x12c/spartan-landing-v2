@@ -4,7 +4,7 @@ import { Box, Button, Grid, Typography, useMediaQuery, useTheme } from '@mui/mat
 import Image from 'next/image';
 import ArrowDarkContact from '@/assets/images/Arrow-contact-dark.svg';
 import Container from '@/components/atoms/Container';
-import Projects, { BoxProjects } from '../CaseStudy/Projects';
+import { BoxProjects } from '../CaseStudy/Projects';
 import { CaseStudies, CaseStudyType } from '@/constants/case-study';
 import ProjectItem from '@/components/atoms/ProjectItem';
 
