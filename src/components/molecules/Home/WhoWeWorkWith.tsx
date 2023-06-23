@@ -10,7 +10,7 @@ import { BusinessType, Businesses } from '@/constants/businesses';
 
 interface IWhoWeWorkWithProps {}
 
-const WhoWeWorkWith: React.FunctionComponent<IWhoWeWorkWithProps> = (props) => {
+const WhoWeWorkWith: React.FunctionComponent<IWhoWeWorkWithProps> = () => {
   const scrollRef = React.useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: scrollRef,

@@ -2,7 +2,7 @@ import SpartanHelmetSection from '@/components/atoms/SpartanHelmetSection';
 import * as React from 'react';
 interface ITransformingVisionsProps {}
 
-const TransformingVisions: React.FunctionComponent<ITransformingVisionsProps> = (props) => {
+const TransformingVisions: React.FunctionComponent<ITransformingVisionsProps> = () => {
   return (
     <SpartanHelmetSection
       firstText="Let Spartan"

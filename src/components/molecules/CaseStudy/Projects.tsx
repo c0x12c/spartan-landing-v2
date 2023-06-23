@@ -6,7 +6,7 @@ import { CaseStudies, CaseStudyType } from '@/constants/case-study';
 
 interface IProjectsProps {}
 
-const Projects: React.FunctionComponent<IProjectsProps> = (props) => {
+const Projects: React.FunctionComponent<IProjectsProps> = () => {
   const theme = useTheme();
   const matchesDesktop = useMediaQuery(theme.breakpoints.up('lg'));
 

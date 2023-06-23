@@ -6,7 +6,7 @@ import { useRouter } from 'next/router';
 
 interface IServiceContentProps {}
 
-const ServiceContent: React.FunctionComponent<IServiceContentProps> = (props) => {
+const ServiceContent: React.FunctionComponent<IServiceContentProps> = () => {
   const router = useRouter();
   const { pathname, asPath } = router;
 

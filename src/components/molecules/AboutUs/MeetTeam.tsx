@@ -11,7 +11,7 @@ import TeamMember from '../../atoms/TeamMember';
 
 interface IMeetTeamProps {}
 
-const MeetTeam: React.FunctionComponent<IMeetTeamProps> = (props) => {
+const MeetTeam: React.FunctionComponent<IMeetTeamProps> = () => {
   const scrollRef = React.useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: scrollRef,

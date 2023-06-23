@@ -68,7 +68,7 @@ const sliderClientData = [
   },
 ];
 
-const ClientWithSpartans: React.FunctionComponent<IClientWithSpartansProps> = (props) => {
+const ClientWithSpartans: React.FunctionComponent<IClientWithSpartansProps> = () => {
   const theme = useTheme();
   const matchesDesktop = useMediaQuery(theme.breakpoints.up('lg'));
   const matchesMobile = useMediaQuery(theme.breakpoints.down('sm'));

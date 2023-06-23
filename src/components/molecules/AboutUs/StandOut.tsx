@@ -6,7 +6,7 @@ import StandOutItem from '../../atoms/StandOutItem';
 
 interface IStandOutProps {}
 
-const StandOut: React.FunctionComponent<IStandOutProps> = (props) => {
+const StandOut: React.FunctionComponent<IStandOutProps> = () => {
   const theme = useTheme();
   const matchesDesktop = useMediaQuery(theme.breakpoints.up('lg'));
   const matchesMobile = useMediaQuery(theme.breakpoints.down('sm'));
