@@ -1,5 +1,4 @@
-import { useState } from 'react';
-import { AppBar, Toolbar, IconButton, useMediaQuery, useTheme, Box } from '@mui/material';
+import { AppBar, Toolbar, useMediaQuery, useTheme, Box } from '@mui/material';
 import Image from 'next/image';
 import Container from '../atoms/Container';
 import CompanyLogo from '../../assets/images/Company-logo.svg';
@@ -9,12 +8,14 @@ import CompanyDarkLogo from '@/assets/images/Company-logo-dark.svg';
 import { useRouter } from 'next/router';
 import { ServiceType, Services } from '@/constants/services';
 import { AboutType, About } from '@/constants/about';
+import Link from 'next/link';
 
 export type MenuItemDataType = {
   id: string;
   label: string;
   href?: string;
-  subItems?: MenuItemDataType[];
+  hash?: string;
+  subItems?: ServiceType[] | AboutType[];
 };
 
 const Header = () => {
@@ -42,11 +43,6 @@ const Header = () => {
     },
   ];
 
-  const [selectedMenuItem, setSelectMenuItem] = useState(dataMenu[0].id);
-  const updateMenuItem = (id: string) => {
-    setSelectMenuItem(id);
-  };
-
   return (
     <AppBar
       sx={{
@@ -63,24 +59,14 @@ const Header = () => {
           }}
         >
           <Box display="flex" alignItems="center" justifyContent="space-between" width="100%">
-            <IconButton edge="start" color="inherit" aria-label="home" href="/">
+            <Link href="/">
               <Image src={isTransparent ? CompanyLogo : CompanyDarkLogo} alt="Spartan Logo" />
-            </IconButton>
+            </Link>
 
             {isMobile ? (
-              <MobileMenu
-                menu={dataMenu}
-                updateMenuItem={updateMenuItem}
-                selectedMenuItem={selectedMenuItem}
-                isTransparent={isTransparent}
-              />
+              <MobileMenu menu={dataMenu} isTransparent={isTransparent} />
             ) : (
-              <HeaderNavigation
-                menu={dataMenu}
-                updateMenuItem={updateMenuItem}
-                selectedMenuItem={selectedMenuItem}
-                isTransparent={isTransparent}
-              />
+              <HeaderNavigation menu={dataMenu} isTransparent={isTransparent} />
             )}
           </Box>
         </Toolbar>

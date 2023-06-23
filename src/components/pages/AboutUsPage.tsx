@@ -6,12 +6,14 @@ import StandOut from '../molecules/AboutUs/StandOut';
 import WhyChooseSpartans from '../molecules/AboutUs/WhyChooseSpartans';
 import MeetTeam from '../molecules/AboutUs/MeetTeam';
 import EngineerPower from '../molecules/AboutUs/EngineerPower';
+import HeroBanner from '../molecules/AboutUs/Banner';
 
 interface IAboutUsPageProps {}
 
 const AboutUsPage: React.FunctionComponent<IAboutUsPageProps> = (props) => {
   return (
     <MainTemplate>
+      <HeroBanner />
       <Box
         sx={{
           background:
