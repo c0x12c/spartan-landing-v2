@@ -3,12 +3,19 @@ import * as colors from '@/styles/colors';
 import { Box, Button, Grid, Typography, useMediaQuery, useTheme } from '@mui/material';
 import Container from '../../atoms/Container';
 import LocationMap from '../../atoms/Map';
+import { useRouter } from 'next/router';
 
 interface IGlobalImpactProps {}
 
 const GlobalImpact: React.FunctionComponent<IGlobalImpactProps> = () => {
   const theme = useTheme();
   const matches = useMediaQuery(theme.breakpoints.down('sm'));
+
+  const router = useRouter();
+  const goToContactPage = () => {
+    router.push('/contact');
+  };
+
   return (
     <Box
       bgcolor={colors.primary[50]}
@@ -72,6 +79,7 @@ const GlobalImpact: React.FunctionComponent<IGlobalImpactProps> = () => {
               }}
             >
               <Button
+                onClick={goToContactPage}
                 sx={{
                   bgcolor: colors.primary[500],
                   borderRadius: '57px',
@@ -89,7 +97,7 @@ const GlobalImpact: React.FunctionComponent<IGlobalImpactProps> = () => {
               >
                 Meet Our Expert
               </Button>
-              <Button
+              {/* <Button
                 sx={{
                   bgcolor: colors.base.white,
                   borderRadius: '57px',
@@ -106,7 +114,7 @@ const GlobalImpact: React.FunctionComponent<IGlobalImpactProps> = () => {
                 }}
               >
                 Apply Our Job
-              </Button>
+              </Button> */}
             </Box>
           </Grid>
           <Grid item xs={12} xl={6.5}>

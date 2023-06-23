@@ -15,6 +15,7 @@ import InstagramLogo from '@/assets/images/instagram.svg';
 import LinkedinLogo from '@/assets/images/linkedin.svg';
 import TwitterLogo from '@/assets/images/twitter.svg';
 import { SocialLink } from '../atoms/SocialLink';
+import { useRouter } from 'next/router';
 
 interface IFooterProps {}
 
@@ -43,6 +44,11 @@ const menuItems: MenuItem[] = [
 ];
 
 const Footer: React.FunctionComponent<IFooterProps> = () => {
+  const router = useRouter();
+  const goToContactPage = () => {
+    router.push('/contact');
+  };
+
   return (
     <Box sx={{ bgcolor: base.black }}>
       <Container>
@@ -68,6 +74,7 @@ const Footer: React.FunctionComponent<IFooterProps> = () => {
               <Button
                 variant={'contained'}
                 endIcon={<Image src={ArrowDarkContact} alt="Outer Link" />}
+                onClick={goToContactPage}
                 sx={{
                   padding: '14px 24px',
                   borderRadius: '60.5811px',

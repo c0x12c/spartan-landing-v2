@@ -10,7 +10,7 @@ interface IHeroProps {}
 
 const Hero: React.FunctionComponent<IHeroProps> = () => {
   return (
-    <Banner src={heroBanner.src}>
+    <Banner src={heroBanner.src} haveBackground={false}>
       <Box sx={{ paddingTop: { xs: '214px', xl: '202px', paddingBottom: '48px' } }}>
         <Container>
           <Typography component="h1" variant="fs80" sx={{ marginBottom: '51px', color: gray[850] }}>
