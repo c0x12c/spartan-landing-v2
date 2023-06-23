@@ -1,32 +1,17 @@
 import * as React from 'react';
 import * as colors from '@/styles/colors';
-import { Box, Divider, Grid, Typography, useMediaQuery, useTheme } from '@mui/material';
-import { useScroll } from 'framer-motion';
+import { Box, Typography, useMediaQuery, useTheme } from '@mui/material';
 import Container from '@/components/atoms/Container';
-import ScrollTitle from '@/components/atoms/ScrollTitle';
 interface IVoltaStoryProps {}
 
 const VoltaStory: React.FunctionComponent<IVoltaStoryProps> = (props) => {
-  const scrollRef = React.useRef<HTMLDivElement>(null);
-  const { scrollYProgress } = useScroll({
-    target: scrollRef,
-    offset: ['start end', 'end start'],
-  });
-
   const theme = useTheme();
   const matchesDesktop = useMediaQuery(theme.breakpoints.up('lg'));
   const matchesMobile = useMediaQuery(theme.breakpoints.down('sm'));
 
   return (
-    <Box mb="44px" ref={scrollRef}>
+    <Box mb="44px" py="80px">
       <Container>
-        <Box my="32px" py="14px">
-          <ScrollTitle
-            scrollYProgress={scrollYProgress}
-            scrollRef={scrollRef}
-            title={'Volta Wallet'}
-          />
-        </Box>
         <Box
           maxWidth="766px"
           mx="auto"
