@@ -6,7 +6,7 @@ import LocationMap from '../../atoms/Map';
 
 interface IGlobalImpactProps {}
 
-const GlobalImpact: React.FunctionComponent<IGlobalImpactProps> = (props) => {
+const GlobalImpact: React.FunctionComponent<IGlobalImpactProps> = () => {
   const theme = useTheme();
   const matches = useMediaQuery(theme.breakpoints.down('sm'));
   return (

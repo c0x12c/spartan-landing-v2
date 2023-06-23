@@ -6,7 +6,7 @@ import SelectedStack from './SelectedStack';
 
 interface IStacksContentProps {}
 
-const StacksContent: React.FunctionComponent<IStacksContentProps> = (props) => {
+const StacksContent: React.FunctionComponent<IStacksContentProps> = () => {
   const [selectedStackId, setSelectedStackId] = React.useState(Stacks[0].id);
   const changeStack = (id: string) => {
     setSelectedStackId(id);

@@ -2,7 +2,7 @@ import SpartanHelmetSection from '@/components/atoms/SpartanHelmetSection';
 import * as React from 'react';
 interface IToBeSpartanProps {}
 
-const ToBeSpartan: React.FunctionComponent<IToBeSpartanProps> = (props) => {
+const ToBeSpartan: React.FunctionComponent<IToBeSpartanProps> = () => {
   return (
     <SpartanHelmetSection
       firstText="Interested in"

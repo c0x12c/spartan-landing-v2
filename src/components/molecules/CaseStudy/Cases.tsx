@@ -11,7 +11,7 @@ import Projects from './Projects';
 
 interface ICasesProps {}
 
-const Cases: React.FunctionComponent<ICasesProps> = (props) => {
+const Cases: React.FunctionComponent<ICasesProps> = () => {
   const scrollRef = React.useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: scrollRef,

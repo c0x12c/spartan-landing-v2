@@ -5,7 +5,7 @@ import Image from 'next/image';
 import ArrowDarkContact from '@/assets/images/Arrow-contact-dark.svg';
 interface IButtonDiscussProps {}
 
-const ButtonDiscuss: React.FunctionComponent<IButtonDiscussProps> = (props) => {
+const ButtonDiscuss: React.FunctionComponent<IButtonDiscussProps> = () => {
   const theme = useTheme();
   const matchesMobile = useMediaQuery(theme.breakpoints.down('sm'));
 

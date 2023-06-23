@@ -9,7 +9,7 @@ import Banner from '@/components/atoms/Banner';
 
 interface ICaseStudyBannerProps {}
 
-const CaseStudyBanner: React.FunctionComponent<ICaseStudyBannerProps> = (props) => {
+const CaseStudyBanner: React.FunctionComponent<ICaseStudyBannerProps> = () => {
   const theme = useTheme();
   const matchesDesktop = useMediaQuery(theme.breakpoints.up('lg'));
   const matchesMobile = useMediaQuery(theme.breakpoints.down('sm'));
