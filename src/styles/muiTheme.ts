@@ -133,6 +133,8 @@ const createThemeByMode = (): Theme => {
             textDecoration: 'none',
           },
           '*': {
+            padding: 0,
+            margin: 0,
             boxSizing: 'border-box',
           },
         },

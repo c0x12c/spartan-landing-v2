@@ -10,7 +10,7 @@ import like from '@/assets/images/like.svg';
 
 interface IWhyBusinessChooseUsProps {}
 
-const WhyBusinessChooseUs: React.FunctionComponent<IWhyBusinessChooseUsProps> = (props) => {
+const WhyBusinessChooseUs: React.FunctionComponent<IWhyBusinessChooseUsProps> = () => {
   const theme = useTheme();
   const matchesMobile = useMediaQuery(theme.breakpoints.down('sm'));
 

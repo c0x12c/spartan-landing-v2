@@ -8,7 +8,7 @@ import AccordionImageItem from '../../atoms/AccordionImageItem';
 
 interface IWhyChooseSpartansProps {}
 
-const WhyChooseSpartans: React.FunctionComponent<IWhyChooseSpartansProps> = (props) => {
+const WhyChooseSpartans: React.FunctionComponent<IWhyChooseSpartansProps> = () => {
   const scrollRef = React.useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: scrollRef,

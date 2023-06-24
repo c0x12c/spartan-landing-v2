@@ -11,7 +11,7 @@ import ButtonDiscuss from '@/components/atoms/ButtonDiscuss';
 
 interface IServicesBannerProps {}
 
-const ServicesBanner: React.FunctionComponent<IServicesBannerProps> = (props) => {
+const ServicesBanner: React.FunctionComponent<IServicesBannerProps> = () => {
   const theme = useTheme();
   const matchesDesktop = useMediaQuery(theme.breakpoints.up('lg'));
   const matchesMobile = useMediaQuery(theme.breakpoints.down('sm'));

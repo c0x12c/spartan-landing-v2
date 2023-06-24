@@ -1,11 +1,10 @@
 import * as React from 'react';
 import * as colors from '@/styles/colors';
-import { Box, Button, Grid, Typography, useMediaQuery, useTheme } from '@mui/material';
+import { Box, Grid, Typography, useMediaQuery, useTheme } from '@mui/material';
 import Container from '../../atoms/Container';
 import Image from 'next/image';
 import engineerPower from '@/assets/images/engineer-power.svg';
 import logo from '@/assets/images/logo-to-be-spartan.svg';
-import outerLinkSmall from '@/assets/images/outer-link-small.svg';
 
 interface IEngineerPowerProps {}
 
@@ -43,7 +42,7 @@ const EngineerPowerContent = ({
         The company is based in the US but works with engineers from around the world, leveraging
         remote work to take advantage of cost savings and improve startup&apos;s financial runway.
       </Typography>
-      <Box my="10px" display="flex" justifyContent="flex-end">
+      {/* <Box my="10px" display="flex" justifyContent="flex-end">
         <Button
           endIcon={<Image src={outerLinkSmall} alt="outerLinkSmall" />}
           sx={{
@@ -63,12 +62,12 @@ const EngineerPowerContent = ({
         >
           Being next spartan
         </Button>
-      </Box>
+      </Box> */}
     </Box>
   );
 };
 
-const EngineerPower: React.FunctionComponent<IEngineerPowerProps> = (props) => {
+const EngineerPower: React.FunctionComponent<IEngineerPowerProps> = () => {
   const theme = useTheme();
   const matchesLargeDesktop = useMediaQuery(theme.breakpoints.up('xl'));
   const matchesDesktop = useMediaQuery(theme.breakpoints.up('lg'));

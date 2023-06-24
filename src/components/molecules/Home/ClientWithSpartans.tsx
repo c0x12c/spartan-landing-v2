@@ -1,77 +1,144 @@
 import * as React from 'react';
 import * as colors from '@/styles/colors';
 import Image from 'next/image';
-import { Box, Divider, Grid, Typography, useMediaQuery, useTheme } from '@mui/material';
-import SliderClient from '../../atoms/SliderClient';
+import { Box, Divider, Grid, IconButton, Typography, useMediaQuery, useTheme } from '@mui/material';
 import Container from '../../atoms/Container';
 import star from '@/assets/images/star.svg';
-import nukey from '@/assets/images/nukey.svg';
-import clientImage from '@/assets/images/client-image.svg';
+import Slider from 'react-slick';
+import { CaseStudies } from '@/constants/case-study';
+import ArrowBackIcon from '@mui/icons-material/ArrowBack';
+import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 
 interface IClientWithSpartansProps {}
 
-const sliderClientData = [
-  {
-    id: 'slide-1',
-    title: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry',
-    content:
-      "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuriesLorem Ipsum has been the industry's standard dummy text ever since the 1500s,",
-    client: {
-      imgSrc: clientImage,
-      name: 'Dereck Lawson',
-      position: 'CTO of SKN',
-    },
-  },
-  {
-    id: 'slide-2',
-    title: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry',
-    content:
-      "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuriesLorem Ipsum has been the industry's standard dummy text ever since the 1500s,",
-    client: {
-      imgSrc: clientImage,
-      name: 'Dereck Lawson',
-      position: 'CTO of SKN',
-    },
-  },
-  {
-    id: 'slide-3',
-    title: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry',
-    content:
-      "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuriesLorem Ipsum has been the industry's standard dummy text ever since the 1500s,",
-    client: {
-      imgSrc: clientImage,
-      name: 'Dereck Lawson',
-      position: 'CTO of SKN',
-    },
-  },
-  {
-    id: 'slide-4',
-    title: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry',
-    content:
-      "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuriesLorem Ipsum has been the industry's standard dummy text ever since the 1500s,",
-    client: {
-      imgSrc: clientImage,
-      name: 'Dereck Lawson',
-      position: 'CTO of SKN',
-    },
-  },
-  {
-    id: 'slide-5',
-    title: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry',
-    content:
-      "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuriesLorem Ipsum has been the industry's standard dummy text ever since the 1500s,",
-    client: {
-      imgSrc: clientImage,
-      name: 'Dereck Lawson',
-      position: 'CTO of SKN',
-    },
-  },
-];
-
-const ClientWithSpartans: React.FunctionComponent<IClientWithSpartansProps> = (props) => {
+const ClientWithSpartans: React.FunctionComponent<IClientWithSpartansProps> = () => {
   const theme = useTheme();
   const matchesDesktop = useMediaQuery(theme.breakpoints.up('lg'));
   const matchesMobile = useMediaQuery(theme.breakpoints.down('sm'));
+
+  const [currentSlide, setCurrentSlide] = React.useState(0);
+
+  const slider = React.useRef<Slider | null>(null);
+  const settings = {
+    dots: false,
+    infinite: false,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: false,
+    afterChange: (current: number) => setCurrentSlide(current),
+  };
+
+  const renderData = CaseStudies.map((item, index) => {
+    return (
+      <Box key={item.id}>
+        <Image
+          src={item.quoteImgSrc}
+          alt={item.name}
+          style={{ width: '100%', maxWidth: '100%', height: 'auto' }}
+        />
+        <Grid container mt="44px" columnSpacing="85px">
+          {matchesDesktop && (
+            <Grid item lg={3.5} display="flex" flexDirection="column" gap="32px" width="285px">
+              <Typography variant="fs54" color={colors.gray[900]} letterSpacing="-2px">
+                {item.name}
+              </Typography>
+              <Box
+                display="flex"
+                gap="18px"
+                alignItems="center"
+                borderBottom="1px solid"
+                borderColor={colors.gray[400]}
+                pb="16px"
+              >
+                <Typography variant="fs54" color={colors.gray[900]} letterSpacing="-2px">
+                  {item.dev}+
+                </Typography>
+                <Typography variant="fs18" fontWeight="700" color={colors.gray[700]}>
+                  Dev in team
+                </Typography>
+              </Box>
+              <Box display="flex" gap="18px" alignItems="center">
+                <Typography variant="fs54" color={colors.gray[900]} letterSpacing="-2px">
+                  {item.designer}
+                </Typography>
+                <Typography
+                  variant="fs18"
+                  fontWeight="700"
+                  color={colors.gray[700]}
+                  letterSpacing="0.015em"
+                >
+                  Designer in team
+                </Typography>
+              </Box>
+            </Grid>
+          )}
+          <Grid item xs={12} lg={8.5}>
+            <Typography
+              variant="fs32"
+              color={colors.gray[800]}
+              letterSpacing={'0.01em'}
+              mb="32px"
+              component="h3"
+            >
+              {item.quoteTitle}
+            </Typography>
+            <Typography variant="fs16" color={colors.gray[500]} mb="18px" component="p">
+              {item.quoteContent}
+            </Typography>
+            <Box display="flex" alignItems="center" justifyContent="space-between">
+              <Box display="flex" alignItems="center" gap="24px">
+                <Box width="69px" height="69px" borderRadius="50%" overflow="hidden">
+                  <Image src={item.quoteUserImage} alt={item.quoteUserName} />
+                </Box>
+                <Box display="flex" flexDirection="column">
+                  <Typography variant="fs18" color={colors.gray[900]} component="p">
+                    {item.quoteUserName}
+                  </Typography>
+                  <Typography variant="fs20" color={colors.primary[500]} component="p">
+                    {item.quoteUserPosition}
+                  </Typography>
+                </Box>
+              </Box>
+              <Box display="flex" gap="16px">
+                <IconButton
+                  aria-label="back"
+                  size="large"
+                  onClick={() => slider?.current?.slickPrev()}
+                  disabled={index === 0}
+                  sx={{
+                    border: '1.62px solid',
+                    opacity: index === 0 ? 0.5 : 1,
+                    borderColor: index === 0 ? colors.base.grey : colors.primary[500],
+                    color: index === 0 ? colors.base.grey : colors.primary[500],
+                  }}
+                >
+                  <ArrowBackIcon fontSize="inherit" color="inherit" />
+                </IconButton>
+                <IconButton
+                  aria-label="back"
+                  size="large"
+                  onClick={() => slider?.current?.slickNext()}
+                  disabled={index == CaseStudies.length - 1}
+                  sx={{
+                    opacity: index == CaseStudies.length - 1 ? 0.5 : 1,
+                    border: '1.62px solid',
+                    borderColor:
+                      index == CaseStudies.length - 1 ? colors.base.grey : colors.primary[500],
+                    color: `${
+                      index == CaseStudies.length - 1 ? colors.base.grey : colors.primary[500]
+                    } !important`,
+                  }}
+                >
+                  <ArrowForwardIcon fontSize="inherit" />
+                </IconButton>
+              </Box>
+            </Box>
+          </Grid>
+        </Grid>
+      </Box>
+    );
+  });
 
   return (
     <React.Fragment>
@@ -103,7 +170,7 @@ const ClientWithSpartans: React.FunctionComponent<IClientWithSpartansProps> = (p
                     color={colors.gray[900]}
                     letterSpacing="-0.03em"
                   >
-                    Nurkey
+                    {CaseStudies[currentSlide].name}
                   </Typography>
                   <Box display="flex" flexDirection="column">
                     <Typography
@@ -111,7 +178,7 @@ const ClientWithSpartans: React.FunctionComponent<IClientWithSpartansProps> = (p
                       color={colors.gray[900]}
                       letterSpacing="-2px"
                     >
-                      50+
+                      {CaseStudies[currentSlide].dev}+
                     </Typography>
                     <Typography
                       variant="fs16"
@@ -120,7 +187,7 @@ const ClientWithSpartans: React.FunctionComponent<IClientWithSpartansProps> = (p
                       letterSpacing="0.015em"
                       mb="16px"
                     >
-                      person design team
+                      Dev in team
                     </Typography>
                     <Divider sx={{ bgcolor: colors.gray[400], width: '100%' }} />
                   </Box>
@@ -130,7 +197,7 @@ const ClientWithSpartans: React.FunctionComponent<IClientWithSpartansProps> = (p
                       color={colors.gray[900]}
                       letterSpacing="-0.03em"
                     >
-                      8
+                      {CaseStudies[currentSlide].designer}
                     </Typography>
                     <Typography
                       variant="fs16"
@@ -138,7 +205,7 @@ const ClientWithSpartans: React.FunctionComponent<IClientWithSpartansProps> = (p
                       color={colors.gray[700]}
                       letterSpacing="0.015em"
                     >
-                      person design team
+                      Designer in team
                     </Typography>
                   </Box>
                 </Box>
@@ -151,51 +218,9 @@ const ClientWithSpartans: React.FunctionComponent<IClientWithSpartansProps> = (p
                 Clients Love <br /> Spartans and our <br /> work!
               </Typography>
             </Box>
-            <Image
-              src={nukey}
-              alt="nukey"
-              style={{ width: '100%', maxWidth: '100%', height: 'auto' }}
-            />
-            <Grid container mt="44px" columnSpacing="85px">
-              {matchesDesktop && (
-                <Grid item lg={3.5} display="flex" flexDirection="column" gap="32px" width="285px">
-                  <Typography variant="fs54" color={colors.gray[900]} letterSpacing="-2px">
-                    Nurkey
-                  </Typography>
-                  <Box
-                    display="flex"
-                    gap="18px"
-                    alignItems="center"
-                    borderBottom="1px solid"
-                    borderColor={colors.gray[400]}
-                    pb="16px"
-                  >
-                    <Typography variant="fs54" color={colors.gray[900]} letterSpacing="-2px">
-                      50+
-                    </Typography>
-                    <Typography variant="fs18" fontWeight="700" color={colors.gray[700]}>
-                      person design team
-                    </Typography>
-                  </Box>
-                  <Box display="flex" gap="18px" alignItems="center">
-                    <Typography variant="fs54" color={colors.gray[900]} letterSpacing="-2px">
-                      8
-                    </Typography>
-                    <Typography
-                      variant="fs18"
-                      fontWeight="700"
-                      color={colors.gray[700]}
-                      letterSpacing="0.015em"
-                    >
-                      person design team
-                    </Typography>
-                  </Box>
-                </Grid>
-              )}
-              <Grid item xs={12} lg={8.5}>
-                <SliderClient data={sliderClientData} />
-              </Grid>
-            </Grid>
+            <Slider ref={slider} {...settings}>
+              {renderData}
+            </Slider>
           </Container>
         </Box>
       </Box>

@@ -1,6 +1,6 @@
 import { Drawer, Toolbar, IconButton, Box, useTheme, useMediaQuery } from '@mui/material';
 import Image from 'next/image';
-import DarkCompanyLogo from '../../assets/images/Company-logo-dark.svg';
+import CompanyDarkLogo from '@/assets/images/Company-logo-dark.svg';
 import Link from 'next/link';
 import MenuIcon from '@mui/icons-material/Menu';
 
@@ -11,17 +11,10 @@ import MobileMenuItem from './MobileMenuItem';
 
 type MobileMenuType = {
   menu: MenuItemDataType[];
-  updateMenuItem: (id: string) => void;
-  selectedMenuItem: string;
   isTransparent: boolean;
 };
 
-export const MobileMenu = ({
-  menu,
-  updateMenuItem,
-  selectedMenuItem,
-  isTransparent,
-}: MobileMenuType) => {
+export const MobileMenu = ({ menu, isTransparent }: MobileMenuType) => {
   const [openMenu, setOpenMenu] = useState(false);
   const toggleMenu = (value: boolean) => {
     setOpenMenu(value);
@@ -33,11 +26,7 @@ export const MobileMenu = ({
   const renderMenu = menu.map((item) => {
     return (
       <Box key={item.id} display="flex" flexDirection="column" gap="24px">
-        <MobileMenuItem
-          item={item}
-          updateMenuItem={updateMenuItem}
-          isActive={selectedMenuItem === item.id}
-        />
+        <MobileMenuItem item={item} toggleMenu={toggleMenu} />
       </Box>
     );
   });
@@ -51,7 +40,7 @@ export const MobileMenu = ({
         size="large"
         onClick={() => toggleMenu(true)}
       >
-        <MenuIcon sx={{ color: isTransparent ? base.white : base.black }} />
+        <MenuIcon fontSize="inherit" sx={{ color: isTransparent ? base.white : base.black }} />
       </IconButton>
       <Drawer
         anchor="right"
@@ -75,7 +64,7 @@ export const MobileMenu = ({
           }}
         >
           <Link href="/" onClick={() => toggleMenu(false)}>
-            <Image src={DarkCompanyLogo} alt="Company Logo" />
+            <Image src={CompanyDarkLogo} alt="Company Logo" />
           </Link>
           <IconButton
             edge="start"

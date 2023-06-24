@@ -1,6 +1,5 @@
 import Banner from '@/components/atoms/Banner';
 import { Box, IconButton, Typography, useMediaQuery, useTheme } from '@mui/material';
-import mobileBanner from '@/assets/images/hero-banner.svg';
 import desktopBanner from '@/assets/images/about-us-bg.svg';
 import Container from '@/components/atoms/Container';
 import { base, gray } from '@/styles/colors';
@@ -19,7 +18,8 @@ const HeroBanner = () => {
   const isXXL = useMediaQuery(theme.breakpoints.up('xxl'));
 
   return (
-    <Banner src={matchesMobile ? mobileBanner.src : desktopBanner.src}>
+    <Banner src={desktopBanner.src}>
+
       <Box
         pt={{ xxl: '199px', lg: '207px', md: '184px', sm: '184px', xs: '163px' }}
         position="relative"

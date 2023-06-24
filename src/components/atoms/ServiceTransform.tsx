@@ -4,12 +4,25 @@ import { Box, Button, Typography, useMediaQuery, useTheme } from '@mui/material'
 import Image from 'next/image';
 import logo from '@/assets/images/logo-to-be-spartan.svg';
 import Container from './Container';
+import { useRouter } from 'next/router';
 
 interface IServiceTransformProps {}
 
 const ServiceTransform: React.FunctionComponent<IServiceTransformProps> = ({}) => {
   const theme = useTheme();
   const matches = useMediaQuery(theme.breakpoints.down('sm'));
+
+  const router = useRouter();
+  const goToContactPage = () => {
+    router.push(
+      {
+        pathname: '/contact',
+        hash: 'submit-form',
+      },
+      undefined,
+      { scroll: false }
+    );
+  };
   return (
     <Box mb="44px">
       <Container>
@@ -32,6 +45,7 @@ const ServiceTransform: React.FunctionComponent<IServiceTransformProps> = ({}) =
             }}
           >
             <Box
+              zIndex={0}
               position="absolute"
               top="50%"
               left="50%"
@@ -41,6 +55,8 @@ const ServiceTransform: React.FunctionComponent<IServiceTransformProps> = ({}) =
             </Box>
 
             <Box
+              position="relative"
+              zIndex={2}
               display="flex"
               justifyContent="center"
               alignItems="center"
@@ -57,8 +73,9 @@ const ServiceTransform: React.FunctionComponent<IServiceTransformProps> = ({}) =
             </Box>
           </Box>
 
-          <Box display="flex" justifyContent="center" mt={'26px'}>
+          <Box display="flex" justifyContent="center" mt={'26px'} position="relative" zIndex={2}>
             <Button
+              onClick={goToContactPage}
               sx={{
                 bgcolor: colors.primary[500],
                 borderRadius: '57px',
