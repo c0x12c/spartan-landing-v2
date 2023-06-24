@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import Kotlin from '@/assets/images/stacks/Kotlin.svg';
-import Swift from '@/assets/images/stacks/swift.svg';
+import Swift from '@/assets/images/stacks/Swift.svg';
 import Go from '@/assets/images/stacks/Go.svg';
 import HCL from '@/assets/images/stacks/HCL.svg';
 import TypeScript from '@/assets/images/stacks/Typescript.svg';
