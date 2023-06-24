@@ -1,6 +1,6 @@
 import * as React from 'react';
 import * as colors from '@/styles/colors';
-import { Box, Button, Typography, useMediaQuery, useTheme } from '@mui/material';
+import { Box, Typography, useMediaQuery, useTheme } from '@mui/material';
 import Tag from './Tag';
 
 interface IStandOutItemProps {

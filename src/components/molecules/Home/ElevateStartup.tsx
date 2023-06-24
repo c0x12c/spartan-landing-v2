@@ -7,12 +7,11 @@ import star from '@/assets/images/star.svg';
 import { useScroll } from 'framer-motion';
 import ScrollTitle from '../../atoms/ScrollTitle';
 import ProjectItem from '../../atoms/ProjectItem';
-import nukey from '@/assets/images/nukey.svg';
 import { CaseStudies } from '@/constants/case-study';
 
 interface IElevateStartupProps {}
 
-const ElevateStartup: React.FunctionComponent<IElevateStartupProps> = (props) => {
+const ElevateStartup: React.FunctionComponent<IElevateStartupProps> = () => {
   const theme = useTheme();
   const matchesDesktop = useMediaQuery(theme.breakpoints.up('lg'));
   const matchesMobile = useMediaQuery(theme.breakpoints.down('sm'));

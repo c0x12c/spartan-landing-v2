@@ -6,12 +6,14 @@ import Container from '../../atoms/Container';
 import ScrollTitle from '../../atoms/ScrollTitle';
 import Image from 'next/image';
 import star from '@/assets/images/star.svg';
-import memberImage from '@/assets/images/team-image.svg';
+import ChanNguyen from '@/assets/images/team/chan-nguyen.png';
+import BaoNguyen from '@/assets/images/team/bao-nguyen.png';
+import DucDuong from '@/assets/images/team/duc-duong.png';
 import TeamMember from '../../atoms/TeamMember';
 
 interface IMeetTeamProps {}
 
-const MeetTeam: React.FunctionComponent<IMeetTeamProps> = (props) => {
+const MeetTeam: React.FunctionComponent<IMeetTeamProps> = () => {
   const scrollRef = React.useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: scrollRef,
@@ -23,9 +25,9 @@ const MeetTeam: React.FunctionComponent<IMeetTeamProps> = (props) => {
   const matchesMobile = useMediaQuery(theme.breakpoints.down('sm'));
 
   const dataMembers = [
-    { id: 'member-1', name: 'Chan Nguyen', imgSrc: memberImage, position: 'CEO' },
-    { id: 'member-2', name: 'Bao Nguyen', imgSrc: memberImage, position: 'COO' },
-    { id: 'member-3', name: 'Duc Duong', imgSrc: memberImage, position: 'CTO' },
+    { id: 'member-1', name: 'Chan Nguyen', imgSrc: ChanNguyen, position: 'CEO' },
+    { id: 'member-2', name: 'Bao Nguyen', imgSrc: BaoNguyen, position: 'COO' },
+    { id: 'member-3', name: 'Duc Duong', imgSrc: DucDuong, position: 'CTO' },
   ];
 
   const renderMembers = dataMembers.map((member) => {

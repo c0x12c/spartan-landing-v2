@@ -9,7 +9,7 @@ import ServiceContent from '@/components/atoms/ServiceContent';
 
 interface IOurServicesProps {}
 
-const OurServices: React.FunctionComponent<IOurServicesProps> = (props) => {
+const OurServices: React.FunctionComponent<IOurServicesProps> = () => {
   const scrollRef = React.useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: scrollRef,
@@ -30,7 +30,7 @@ const OurServices: React.FunctionComponent<IOurServicesProps> = (props) => {
             title={'Our services'}
           />
         </Box>
-        <Box my={matchesDesktop ? '100px' : '24px'} id="services-offering">
+        <Box my={matchesDesktop ? '50px' : '12px'} id="services-offering">
           <Typography
             variant={matchesMobile ? 'fs30' : 'fs54'}
             color={colors.base.black}

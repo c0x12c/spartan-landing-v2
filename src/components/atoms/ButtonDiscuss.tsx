@@ -3,11 +3,24 @@ import * as colors from '@/styles/colors';
 import { Box, Button, useMediaQuery, useTheme } from '@mui/material';
 import Image from 'next/image';
 import ArrowDarkContact from '@/assets/images/Arrow-contact-dark.svg';
+import { useRouter } from 'next/router';
 interface IButtonDiscussProps {}
 
-const ButtonDiscuss: React.FunctionComponent<IButtonDiscussProps> = (props) => {
+const ButtonDiscuss: React.FunctionComponent<IButtonDiscussProps> = () => {
   const theme = useTheme();
   const matchesMobile = useMediaQuery(theme.breakpoints.down('sm'));
+
+  const router = useRouter();
+  const goToContactPage = () => {
+    router.push(
+      {
+        pathname: '/contact',
+        hash: 'submit-form',
+      },
+      undefined,
+      { scroll: false }
+    );
+  };
 
   return (
     <Box
@@ -19,7 +32,7 @@ const ButtonDiscuss: React.FunctionComponent<IButtonDiscussProps> = (props) => {
       display="flex"
       flexDirection="column"
       rowGap="11.42px"
-      startIcon={<Image src={ArrowDarkContact} alt="Outer Link" />}
+      onClick={goToContactPage}
       sx={{
         fontSize: '10.5833px',
         lineHeight: 1.4,
@@ -29,6 +42,7 @@ const ButtonDiscuss: React.FunctionComponent<IButtonDiscussProps> = (props) => {
         },
       }}
     >
+      <Image src={ArrowDarkContact} alt="Outer Link" />
       Let&apos;s discuss Your project
     </Box>
   );

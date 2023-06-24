@@ -5,7 +5,7 @@ import Image from 'next/image';
 import { BusinessType, Businesses } from '@/constants/businesses';
 interface IBizGrowProps {}
 
-const BizGrow: React.FunctionComponent<IBizGrowProps> = (props) => {
+const BizGrow: React.FunctionComponent<IBizGrowProps> = () => {
   const theme = useTheme();
   const matchesDesktop = useMediaQuery(theme.breakpoints.up('lg'));
   const matchesMobile = useMediaQuery(theme.breakpoints.down('sm'));

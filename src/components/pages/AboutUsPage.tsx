@@ -10,7 +10,7 @@ import HeroBanner from '../molecules/AboutUs/Banner';
 
 interface IAboutUsPageProps {}
 
-const AboutUsPage: React.FunctionComponent<IAboutUsPageProps> = (props) => {
+const AboutUsPage: React.FunctionComponent<IAboutUsPageProps> = () => {
   return (
     <MainTemplate>
       <HeroBanner />

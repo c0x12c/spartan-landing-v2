@@ -45,6 +45,13 @@ const SEOPages: ISEOPages = {
     metaImage: '',
     slug: '/services',
   },
+  [EPages.CASE_STUDY_VOLTA]: {
+    title: 'c0x12c - Case Study - Volta',
+    description: 'c0x12c - Case Study - Volta',
+    keywords: 'c0x12c, Case Study - Volta',
+    metaImage: '',
+    slug: '/case-study/volta',
+  },
 };
 
 export default SEOPages;

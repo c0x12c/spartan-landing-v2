@@ -5,29 +5,37 @@ import { base, gray, primary } from '@/styles/colors';
 import { MenuItemDataType } from '../molecules/Header';
 import Image from 'next/image';
 import ArrowButton from '@/assets/images/Arrow-contact-dark.svg';
+import { useRouter } from 'next/router';
 
 type MobileMenuItemProps = {
   item: MenuItemDataType;
-  updateMenuItem: (id: string) => void;
-  isActive: boolean;
+  toggleMenu: (value: boolean) => void;
 };
 
-const MobileMenuItem: React.FC<MobileMenuItemProps> = ({ item, updateMenuItem, isActive }) => {
+const MobileMenuItem: React.FC<MobileMenuItemProps> = ({ item, toggleMenu }) => {
   const [open, setOpen] = useState(false);
   const handleClick = () => {
     setOpen((prevOpen) => !prevOpen);
   };
 
-  const color = isActive ? primary[500] : base.black;
+  const router = useRouter();
+  const goToPath = (path?: string) => {
+    if (!path) return;
+    router.push(path);
+    toggleMenu(false);
+  };
+
+  const color = base.black;
 
   return (
     <List component="nav">
       <ListItem
         onClick={() => {
           handleClick();
-          updateMenuItem(item.id);
+          goToPath(item.href);
         }}
         sx={{
+          cursor: 'pointer',
           padding: '10px 10px 12px',
           borderBottom: `1px solid ${gray[400]}`,
           maxWidth: '100%',
