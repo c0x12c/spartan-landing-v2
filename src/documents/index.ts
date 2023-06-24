@@ -38,6 +38,13 @@ const SEOPages: ISEOPages = {
     metaImage: '',
     slug: '/services',
   },
+  [EPages.LIQUIDITY]: {
+    title: 'c0x12c - Services',
+    description: 'c0x12c - Services',
+    keywords: 'c0x12c, Services',
+    metaImage: '',
+    slug: '/services',
+  },
 };
 
 export default SEOPages;
