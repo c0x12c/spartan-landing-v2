@@ -1,11 +1,10 @@
 import * as React from 'react';
 import * as colors from '@/styles/colors';
-import { Box, Button, Grid, Typography, useMediaQuery, useTheme } from '@mui/material';
+import { Box, Grid, Typography, useMediaQuery, useTheme } from '@mui/material';
 import Container from '../../atoms/Container';
 import Image from 'next/image';
 import engineerPower from '@/assets/images/engineer-power.svg';
 import logo from '@/assets/images/logo-to-be-spartan.svg';
-import outerLinkSmall from '@/assets/images/outer-link-small.svg';
 
 interface IEngineerPowerProps {}
 
