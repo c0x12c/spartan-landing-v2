@@ -1,14 +1,14 @@
 import { AppBar, Toolbar, Box } from '@mui/material';
 import Image from 'next/image';
-import CompanyLogo from '@/assets/images/Company-logo.svg';
-import CompanyDarkLogo from '@/assets/images/Company-logo-dark.svg';
+import LogoWhite from '@/assets/images/logo/logo-white.svg';
+import LogoDark from '@/assets/images/logo/logo-dark.svg';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
 import { About, AboutType, ServiceType, Services } from '@/constants';
 import { useBreakpoint, BreakPoints } from '@/hooks';
-import { Container } from '@/components/atoms';
+import { Container, MenuDesktop } from '@/components/atoms';
 
-export type MenuItemDataType = {
+export type MenuItemType = {
   id: string;
   label: string;
   href?: string;
@@ -21,7 +21,7 @@ export const Header = () => {
   const isTransparent = pathname !== '/contact';
   const isTablet = useBreakpoint(BreakPoints.LG);
 
-  const dataMenu: MenuItemDataType[] = [
+  const dataMenu: MenuItemType[] = [
     {
       id: 'menu-item-1',
       label: 'Spartan',
@@ -30,6 +30,7 @@ export const Header = () => {
     {
       id: 'menu-item-2',
       label: 'Services',
+      href: '/services',
       subItems: Services,
     },
     {
@@ -57,13 +58,13 @@ export const Header = () => {
         >
           <Box display="flex" alignItems="center" justifyContent="space-between" width="100%">
             <Link href="/">
-              <Image src={isTransparent ? CompanyLogo : CompanyDarkLogo} alt="Spartan Logo" />
+              <Image src={isTransparent ? LogoWhite : LogoDark} alt="Spartan Logo" />
             </Link>
 
+            <MenuDesktop menu={dataMenu} isTransparent={isTransparent} />
             {/* {isMobile ? (
               <MobileMenu menu={dataMenu} isTransparent={isTransparent} />
             ) : (
-              <HeaderNavigation menu={dataMenu} isTransparent={isTransparent} />
             )} */}
           </Box>
         </Toolbar>
