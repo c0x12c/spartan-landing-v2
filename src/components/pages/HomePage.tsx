@@ -1,6 +1,7 @@
 import React from 'react';
-import { Box, SxProps, Theme } from '@mui/material';
-import MainTemplate from '../templates/MainTemplate';
+import { MainTemplate } from '../templates';
+import { Box } from '@mui/material';
+import { gray } from '@/styles/colors';
 // import GlobalImpact from '../molecules/Home/GlobalImpact';
 // import ClientWithSpartans from '../molecules/Home/ClientWithSpartans';
 // import ToBeSpartan from '../molecules/Home/ToBeSpartan';
@@ -15,14 +16,10 @@ type Props = {
 };
 
 export const HomePage: React.FC<Props> = () => {
-  const sxMain: SxProps<Theme> = {
-    position: 'relative',
-  };
-
   return (
     <MainTemplate>
-      <Box sx={sxMain}>
-        {/* <HeroBanner />
+      <Box bgcolor={gray[800]} height="500px"></Box>
+      {/* <HeroBanner />
         <OurServices />
         <ElevateStartup />
         <WhoWeWorkWith />
@@ -30,7 +27,6 @@ export const HomePage: React.FC<Props> = () => {
         <GlobalImpact />
         <ClientWithSpartans />
         <ToBeSpartan /> */}
-      </Box>
     </MainTemplate>
   );
 };

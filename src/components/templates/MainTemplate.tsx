@@ -1,13 +1,17 @@
 import * as React from 'react';
+import { Header } from '../molecules';
 
 interface IMainTemplateProps {
   children: React.ReactNode;
 }
 
-const MainTemplate: React.FunctionComponent<IMainTemplateProps> = (props) => {
+export const MainTemplate: React.FunctionComponent<IMainTemplateProps> = (props) => {
   const { children } = props;
 
-  return <React.Fragment>{children}</React.Fragment>;
+  return (
+    <React.Fragment>
+      <Header />
+      {children}
+    </React.Fragment>
+  );
 };
-
-export default MainTemplate;

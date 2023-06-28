@@ -1,1 +1,1 @@
-export { useBreakpoint } from './useBreakPoints';
+export { useBreakpoint, BreakPoints } from './useBreakPoints';
