@@ -1,18 +1,11 @@
 import { createTheme, Theme } from '@mui/material/styles';
 import React from 'react';
 import { PaletteMode } from '@mui/material';
-import { Manrope, IBM_Plex_Mono } from 'next/font/google';
+import { Poppins } from 'next/font/google';
 import * as colors from './colors';
 
-export const ManropeFont = Manrope({
-  weight: ['400', '500', '600', '700', '800'],
-  subsets: ['latin'],
-  display: 'swap',
-  fallback: ['Helvetica', 'Arial', 'sans-serif'],
-});
-
-export const IBM_Plex_MonoFont = IBM_Plex_Mono({
-  weight: ['600'],
+export const PoppinsFont = Poppins({
+  weight: ['400', '600'],
   subsets: ['latin'],
   display: 'swap',
   fallback: ['Helvetica', 'Arial', 'sans-serif'],
@@ -20,46 +13,22 @@ export const IBM_Plex_MonoFont = IBM_Plex_Mono({
 
 declare module '@mui/material/styles' {
   interface TypographyVariants {
+    fs14: React.CSSProperties;
     fs16: React.CSSProperties;
     fs18: React.CSSProperties;
-    fs20: React.CSSProperties;
-    fs22: React.CSSProperties;
-    fs24: React.CSSProperties;
-    fs26: React.CSSProperties;
-    fs27: React.CSSProperties;
-    fs28: React.CSSProperties;
-    fs30: React.CSSProperties;
     fs32: React.CSSProperties;
-    fs40: React.CSSProperties;
-    fs44: React.CSSProperties;
-    fs48: React.CSSProperties;
-    fs54: React.CSSProperties;
-    fs80: React.CSSProperties;
-    fs100: React.CSSProperties;
-    fs180: React.CSSProperties;
-    fs240: React.CSSProperties;
+    fs60: React.CSSProperties;
+    fs72: React.CSSProperties;
   }
 
   // allow configuration using `createTheme`
   interface TypographyVariantsOptions {
+    fs14: React.CSSProperties;
     fs16: React.CSSProperties;
     fs18: React.CSSProperties;
-    fs20: React.CSSProperties;
-    fs22: React.CSSProperties;
-    fs24: React.CSSProperties;
-    fs26: React.CSSProperties;
-    fs27: React.CSSProperties;
-    fs28: React.CSSProperties;
-    fs30: React.CSSProperties;
     fs32: React.CSSProperties;
-    fs40: React.CSSProperties;
-    fs44: React.CSSProperties;
-    fs48: React.CSSProperties;
-    fs54: React.CSSProperties;
-    fs80: React.CSSProperties;
-    fs100: React.CSSProperties;
-    fs180: React.CSSProperties;
-    fs240: React.CSSProperties;
+    fs60: React.CSSProperties;
+    fs72: React.CSSProperties;
   }
 
   interface BreakpointOverrides {
@@ -74,30 +43,27 @@ declare module '@mui/material/styles' {
 
 declare module '@mui/material/Typography' {
   interface TypographyPropsVariantOverrides {
+    fs14: true;
     fs16: true;
     fs18: true;
-    fs20: true;
-    fs22: true;
-    fs24: true;
-    fs26: true;
-    fs27: true;
-    fs28: true;
-    fs30: true;
     fs32: true;
-    fs40: true;
-    fs44: true;
-    fs48: true;
-    fs54: true;
-    fs80: true;
-    fs100: true;
-    fs180: true;
-    fs240: true;
+    fs60: true;
+    fs72: true;
+  }
+}
+
+declare module '@mui/material/Button' {
+  interface ButtonPropsVariantOverrides {
+    text: true;
+    contained: true;
+    outlined: true;
+    transparent: true;
   }
 }
 
 const defaultFonts =
   '-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;';
-const fonts = [ManropeFont.style.fontFamily, defaultFonts].join(', ');
+const fonts = [PoppinsFont.style.fontFamily, defaultFonts].join(', ');
 
 // Create a theme instance.
 const createThemeByMode = (): Theme => {
@@ -142,139 +108,97 @@ const createThemeByMode = (): Theme => {
       MuiButton: {
         styleOverrides: {
           root: {
-            fontFamily: IBM_Plex_MonoFont.style.fontFamily,
-            fontWeight: IBM_Plex_MonoFont.style.fontWeight,
-            fontStyle: 'normal',
+            fontFamily: PoppinsFont.style.fontFamily,
+            fontWeight: 600,
             display: 'flex',
             justifyContent: 'center',
             alignItems: 'center',
-            borderRadius: '60.6px',
           },
           contained: {
-            padding: '16px 34px',
+            padding: '18px 24px',
             fontSize: '16px',
-            lineHeight: 1.14,
-            letterSpacing: '-0.13px',
-            border: '1px solid',
+            border: '2px solid',
             borderColor: 'transparent',
             backgroundColor: colors.primary[500],
-            color: colors.base.black,
-            borderRadius: '57px',
+            color: colors.base.white,
+            borderRadius: '8px',
+            gap: '12px',
             '&:hover': {
               backgroundColor: colors.primary[500],
             },
           },
           outlinedPrimary: {
-            padding: '16px 34px',
+            padding: '18px 24px',
             fontSize: '16px',
-            lineHeight: 1.14,
-            letterSpacing: '-0.13px',
             color: colors.primary[500],
             backgroundColor: colors.base.white,
             border: '1px solid',
             borderColor: colors.primary[500],
-            borderRadius: '57px',
+            borderRadius: '8px',
+            gap: '12px',
             '&:hover': {
               backgroundColor: colors.base.white,
             },
           },
+          text: {
+            padding: '8px 0',
+            gap: '6px',
+            fontSize: '16px',
+            color: colors.base.black,
+            fontWeight: 600,
+          },
         },
+        variants: [
+          {
+            props: { variant: 'transparent' },
+            style: {
+              backgroundColor: 'transparent',
+              color: colors.base.white,
+              padding: '14px 24px',
+              fontSize: '16px',
+              fontWeight: 600,
+              lineHeight: 1.1375,
+              textTransform: 'uppercase',
+              gap: '23px',
+            },
+          },
+        ],
       },
     },
     typography: {
       allVariants: {
-        fontFamily: ManropeFont.style.fontFamily,
+        fontFamily: PoppinsFont.style.fontFamily,
         fontStyle: 'normal',
+      },
+      fs14: {
+        fontSize: '16px',
+        lineHeight: 1.42,
+        fontWeight: 400,
       },
       fs16: {
         fontSize: '16px',
-        lineHeight: 1.31,
+        lineHeight: 1.5,
         fontWeight: 400,
       },
       fs18: {
         fontSize: '18px',
-        lineHeight: 1.56,
+        lineHeight: 1,
         fontWeight: 400,
-      },
-      fs20: {
-        fontSize: '20px',
-        lineHeight: 1.5,
-        fontWeight: 500,
-      },
-      fs22: {
-        fontSize: '22px',
-        lineHeight: 1.41,
-        fontWeight: 600,
-      },
-      fs24: {
-        fontSize: '24px',
-        lineHeight: 1.35,
-        fontWeight: 700,
-      },
-      fs26: {
-        fontSize: '26px',
-        lineHeight: 1.5,
-        fontWeight: 700,
-      },
-      fs27: {
-        fontSize: '27px',
-        lineHeight: 1.2,
-        fontWeight: 700,
-      },
-      fs28: {
-        fontSize: '28px',
-        lineHeight: 1.43,
-        fontWeight: 700,
-      },
-      fs30: {
-        fontSize: '30px',
-        lineHeight: 1.19,
-        fontWeight: 700,
       },
       fs32: {
         fontSize: '32px',
-        lineHeight: 1.25,
-        fontWeight: 700,
+        lineHeight: 1.375,
+        fontWeight: 600,
       },
-      fs40: {
-        fontSize: '40px',
-        lineHeight: 1.2,
-        fontWeight: 700,
-      },
-      fs44: {
-        fontSize: '44px',
-        lineHeight: 1.45,
-        fontWeight: 700,
-      },
-      fs48: {
-        fontSize: '48px',
-        lineHeight: 1.2,
-        fontWeight: 700,
-      },
-      fs54: {
-        fontSize: '54px',
-        lineHeight: 1.19,
-        fontWeight: 700,
-      },
-      fs80: {
+      fs60: {
         fontSize: '80px',
-        lineHeight: 1.15,
-        fontWeight: 700,
+        lineHeight: 1.1067,
+        fontWeight: 600,
       },
-      fs100: {
-        fontSize: '100px',
-        lineHeight: 1.2,
-        fontWeight: 700,
-      },
-      fs180: {
-        fontSize: '180px',
-        lineHeight: 1.08,
-        fontWeight: 800,
-      },
-      fs240: {
-        fontSize: '240px',
-        lineHeight: 1,
-        fontWeight: 800,
+      fs72: {
+        fontSize: '72px',
+        lineHeight: 1.194,
+        fontWeight: 600,
       },
     },
     breakpoints: {

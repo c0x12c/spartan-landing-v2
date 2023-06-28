@@ -1,6 +1,4 @@
 import * as React from 'react';
-import Header from '../molecules/Header';
-import Footer from '../molecules/Footer';
 
 interface IMainTemplateProps {
   children: React.ReactNode;
@@ -9,13 +7,7 @@ interface IMainTemplateProps {
 const MainTemplate: React.FunctionComponent<IMainTemplateProps> = (props) => {
   const { children } = props;
 
-  return (
-    <React.Fragment>
-      <Header />
-      {children}
-      <Footer />
-    </React.Fragment>
-  );
+  return <React.Fragment>{children}</React.Fragment>;
 };
 
 export default MainTemplate;
