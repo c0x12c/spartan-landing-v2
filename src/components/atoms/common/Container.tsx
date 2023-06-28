@@ -5,7 +5,7 @@ interface IContainerProps {
   children: React.ReactNode;
 }
 
-const Container: React.FunctionComponent<IContainerProps> = ({ children, ...props }) => {
+export const Container: React.FunctionComponent<IContainerProps> = ({ children, ...props }) => {
   return (
     <Box
       width="100%"
@@ -13,14 +13,11 @@ const Container: React.FunctionComponent<IContainerProps> = ({ children, ...prop
       {...props}
       sx={{
         maxWidth: {
-          xl: '1216px',
+          xl: '1208px',
           xs: '100%',
         },
         padding: {
-          xl: 0,
-          lg: '0 112px',
-          md: '0 63px',
-          sm: '0 48px',
+          sm: '0 32px',
           xs: '0 16px',
         },
       }}
@@ -29,5 +26,3 @@ const Container: React.FunctionComponent<IContainerProps> = ({ children, ...prop
     </Box>
   );
 };
-
-export default Container;

@@ -1,6 +1,6 @@
-import SEO from '@/components/atoms/SEO';
+import { SEO } from '@/components/atoms';
+import { HomePage } from '@/components/pages';
 import { EPages } from '@/documents/types';
-import HomePage from '@/components/pages/HomePage';
 
 export default function Home() {
   return (

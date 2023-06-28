@@ -6,7 +6,7 @@ interface ISEOProps {
   page: EPages;
 }
 
-const SEO: React.FunctionComponent<ISEOProps> = (props) => {
+export const SEO: React.FunctionComponent<ISEOProps> = (props) => {
   const { page } = props;
   return (
     <NextSeo
@@ -44,5 +44,3 @@ const SEO: React.FunctionComponent<ISEOProps> = (props) => {
     />
   );
 };
-
-export default SEO;

@@ -14,7 +14,7 @@ type Props = {
   children?: React.ReactNode;
 };
 
-const HomePage: React.FC<Props> = () => {
+export const HomePage: React.FC<Props> = () => {
   const sxMain: SxProps<Theme> = {
     position: 'relative',
   };
@@ -34,5 +34,3 @@ const HomePage: React.FC<Props> = () => {
     </MainTemplate>
   );
 };
-
-export default HomePage;

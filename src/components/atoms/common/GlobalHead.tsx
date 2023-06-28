@@ -1,8 +1,7 @@
 import SEOPages from '@/documents';
 import { EPages } from '@/documents/types';
 
-/* eslint-disable @next/next/no-sync-scripts */
-export default function GlobalHead() {
+export const GlobalHead = () => {
   return (
     <>
       <meta charSet="utf-8" />
@@ -11,9 +10,9 @@ export default function GlobalHead() {
       <meta name="description" content={SEOPages[EPages.HOME].description} />
       <meta name="keywords" content={SEOPages[EPages.HOME].keywords} />
       <meta property="og:description" content={SEOPages[EPages.HOME].description} />
-      <link rel="icon" href="" color="red" />
+      <link rel="icon" href="" color="" />
       <meta name="theme-color" content={'#FFFFFF'} />
       <meta name="emotion-insertion-point" content="" />
     </>
   );
-}
+};

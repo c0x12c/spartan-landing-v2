@@ -31,7 +31,7 @@ declare module '@mui/material/styles' {
     fs72: React.CSSProperties;
   }
 
-  interface BreakpointOverrides {
+  export interface BreakpointOverrides {
     xs: true;
     sm: true;
     md: true;

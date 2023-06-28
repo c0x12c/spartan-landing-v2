@@ -1,5 +1,5 @@
-import GlobalHead from '@/components/atoms/GlobalHead';
 import { Html, Head, Main, NextScript } from 'next/document';
+import { GlobalHead } from '@/components/atoms';
 
 export default function Document() {
   return (
