@@ -1,9 +1,7 @@
 import React from 'react';
-import { Typography, Box, IconButton } from '@mui/material';
+import { Typography, Box } from '@mui/material';
 import { base, gray, primary } from '@/styles/colors';
 import { ExpandMore } from '@mui/icons-material';
-import Image from 'next/image';
-import ArrowButton from '@/assets/images/Arrow-contact-dark.svg';
 import { ServiceType } from '@/constants/services';
 import { AboutType } from '@/constants/about';
 import Link from 'next/link';
