@@ -1,11 +1,25 @@
+import * as React from 'react';
 import { Container, SubTitle, Title } from '@/components/atoms';
+import { PartnerType } from '@/constants';
 import { gray } from '@/styles/colors';
 import { Box, Typography } from '@mui/material';
-import * as React from 'react';
+import Image from 'next/image';
+import Link from 'next/link';
+import { Partners as PartnersData } from '@/constants';
 
 interface IPartnersProps {}
 
 export const Partners: React.FunctionComponent<IPartnersProps> = () => {
+  const renderBiz = (data: PartnerType[]) => {
+    return data.map((item) => {
+      return (
+        <Link key={item.id} href={item.href}>
+          <Image src={item.imgSrc} alt={item.name} style={{ maxWidth: '100%', height: 'auto' }} />
+        </Link>
+      );
+    });
+  };
+
   return (
     <Box py="120px">
       <Container>
@@ -25,6 +39,35 @@ export const Partners: React.FunctionComponent<IPartnersProps> = () => {
             deliver top-notch engineering solutions for their products and projects. Join these
             successful companies who have trusted Spartan to enable their success
           </Typography>
+        </Box>
+        <Box
+          display="flex"
+          flexDirection="column"
+          justifyContent="center"
+          alignItems="center"
+          rowGap="44px"
+          mt="64px"
+        >
+          <Box
+            display="flex"
+            justifyContent="center"
+            flexWrap="wrap"
+            alignItems="center"
+            columnGap="61px"
+            rowGap="32px"
+          >
+            {renderBiz(PartnersData.slice(0, 3))}
+          </Box>
+          <Box
+            display="flex"
+            justifyContent="center"
+            flexWrap="wrap"
+            alignItems="center"
+            columnGap="61px"
+            rowGap="32px"
+          >
+            {renderBiz(PartnersData.slice(3))}
+          </Box>
         </Box>
       </Container>
     </Box>

@@ -11,7 +11,7 @@ export const SubTitle: React.FunctionComponent<ISubTitleProps & TypographyProps>
   ...props
 }) => {
   return (
-    <Typography variant="fs18" color={primary[500]} fontWeight={600} {...props}>
+    <Typography variant="fs18" color={primary[500]} fontWeight={600} {...props} display="block">
       {text}
     </Typography>
   );

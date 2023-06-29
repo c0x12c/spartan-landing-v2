@@ -128,6 +128,7 @@ const createThemeByMode = (): Theme => {
             color: colors.base.white,
             borderRadius: '8px',
             gap: '12px',
+            textTransform: 'none',
             '&:hover': {
               backgroundColor: colors.primary[500],
             },
@@ -141,6 +142,7 @@ const createThemeByMode = (): Theme => {
             borderColor: colors.primary[500],
             borderRadius: '8px',
             gap: '12px',
+            textTransform: 'none',
             '&:hover': {
               backgroundColor: colors.base.white,
             },
