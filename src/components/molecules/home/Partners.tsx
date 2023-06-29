@@ -13,7 +13,7 @@ export const Partners: React.FunctionComponent<IPartnersProps> = () => {
           display="flex"
           flexDirection="column"
           rowGap="24px"
-          maxWidth="986px"
+          maxWidth="806px"
           mx="auto"
           alignItems="center"
           textAlign="center"

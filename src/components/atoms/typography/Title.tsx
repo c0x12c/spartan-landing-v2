@@ -11,7 +11,7 @@ export const Title: React.FunctionComponent<ITitleProps & TypographyProps> = ({
   ...props
 }) => {
   return (
-    <Typography variant="fs60" color={gray[800]} {...props}>
+    <Typography variant="fs48" color={gray[800]} {...props}>
       {text}
     </Typography>
   );
