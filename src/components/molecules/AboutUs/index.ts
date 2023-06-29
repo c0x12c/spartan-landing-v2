@@ -1,0 +1,1 @@
+export { AboutUsBanner } from './Banner';
