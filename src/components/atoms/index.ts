@@ -16,3 +16,4 @@ export { Title } from './typography/Title';
 export { SubTitle } from './typography/SubTitle';
 
 export { Banner } from './Banner';
+export { CardHorizontal } from './CardHorizontal';
