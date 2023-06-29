@@ -6,8 +6,8 @@ import { ServiceType } from '@/constants/services';
 import { AboutType } from '@/constants/about';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import { MenuItemType } from '@/components/molecules/common/Header';
-import { ArrowIcon } from '../icons/Arrow';
+import { MenuItemType } from '@/components/molecules';
+import { ArrowIcon } from '@/components/atoms';
 
 type MenuItemDesktopType = {
   item: MenuItemType;

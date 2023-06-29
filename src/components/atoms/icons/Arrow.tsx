@@ -12,9 +12,9 @@ export const ArrowIcon: React.FunctionComponent<IArrowIconProps> = ({ color }) =
       <path
         d="M3 9L15 9M15 9L10.5 13.5M15 9L10.5 4.5"
         stroke={color ?? base.white}
-        stroke-width="1.5"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
     </svg>
   );

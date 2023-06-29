@@ -3,8 +3,8 @@ import { List, ListItem, Collapse, Typography, Box } from '@mui/material';
 import { ExpandMore, ExpandLess } from '@mui/icons-material';
 import { base, gray, primary } from '@/styles/colors';
 import { useRouter } from 'next/router';
-import { MenuItemType } from '@/components/molecules/common/Header';
-import { ArrowIcon } from '../icons/Arrow';
+import { MenuItemType } from '@/components/molecules';
+import { ArrowIcon } from '@/components/atoms';
 
 type MenuItemMobileProps = {
   item: MenuItemType;

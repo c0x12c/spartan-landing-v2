@@ -2,9 +2,9 @@ import React from 'react';
 import * as colors from '@/styles/colors';
 import { Typography, Box, Button } from '@mui/material';
 import { useRouter } from 'next/router';
-import { MenuItemType } from '@/components/molecules/common/Header';
-import { MenuItemDesktop } from './MenuItemDesktop';
+import { MenuItemType } from '@/components/molecules';
 import { ArrowIcon } from '../icons/Arrow';
+import { MenuItemDesktop } from '@/components/atoms';
 
 type MenuDesktopType = {
   menu: MenuItemType[];

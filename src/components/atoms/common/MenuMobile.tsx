@@ -6,7 +6,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 
 import { base } from '@/styles/colors';
 import { useState } from 'react';
-import { MenuItemType } from '@/components/molecules/common/Header';
+import { MenuItemType } from '@/components/molecules';
 import { MenuItemMobile } from './MenuItemMobile';
 import { BreakPoints, useBreakpoint } from '@/hooks';
 

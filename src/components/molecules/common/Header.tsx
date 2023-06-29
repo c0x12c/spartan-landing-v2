@@ -7,7 +7,7 @@ import Link from 'next/link';
 import { About, AboutType, ServiceType, Services } from '@/constants';
 import { useBreakpoint, BreakPoints } from '@/hooks';
 import { Container, MenuDesktop } from '@/components/atoms';
-import { MenuMobile } from '@/components/atoms/common/MenuMobile';
+import { MenuMobile } from '@/components/atoms';
 
 export type MenuItemType = {
   id: string;
@@ -53,7 +53,7 @@ export const Header = () => {
       <Container>
         <Toolbar
           sx={{
-            padding: 0,
+            padding: '0 !important',
             height: isTablet ? '142px' : 'auto',
           }}
         >

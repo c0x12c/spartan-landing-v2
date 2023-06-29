@@ -1,7 +1,6 @@
 import React from 'react';
 import { MainTemplate } from '../templates';
-import { Box } from '@mui/material';
-import { gray } from '@/styles/colors';
+import { HomeBanner } from '../molecules';
 // import GlobalImpact from '../molecules/Home/GlobalImpact';
 // import ClientWithSpartans from '../molecules/Home/ClientWithSpartans';
 // import ToBeSpartan from '../molecules/Home/ToBeSpartan';
@@ -18,15 +17,7 @@ type Props = {
 export const HomePage: React.FC<Props> = () => {
   return (
     <MainTemplate>
-      <Box bgcolor={gray[800]} height="500px"></Box>
-      {/* <HeroBanner />
-        <OurServices />
-        <ElevateStartup />
-        <WhoWeWorkWith />
-        <WhyBusinessChooseUs />
-        <GlobalImpact />
-        <ClientWithSpartans />
-        <ToBeSpartan /> */}
+      <HomeBanner />
     </MainTemplate>
   );
 };
