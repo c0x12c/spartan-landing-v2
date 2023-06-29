@@ -1,6 +1,6 @@
 import React from 'react';
 import { MainTemplate } from '../templates';
-import { HomeBanner } from '../molecules';
+import { HomeBanner, Partners } from '../molecules';
 // import GlobalImpact from '../molecules/Home/GlobalImpact';
 // import ClientWithSpartans from '../molecules/Home/ClientWithSpartans';
 // import ToBeSpartan from '../molecules/Home/ToBeSpartan';
@@ -18,6 +18,7 @@ export const HomePage: React.FC<Props> = () => {
   return (
     <MainTemplate>
       <HomeBanner />
+      <Partners />
     </MainTemplate>
   );
 };
