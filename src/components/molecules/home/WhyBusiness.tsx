@@ -7,6 +7,7 @@ import bizImage from '@/assets/images/home/biz-image.png';
 import money from '@/assets/images/icons/money-send.svg';
 import timer from '@/assets/images/icons/timer.svg';
 import like from '@/assets/images/icons/like.svg';
+import { BreakPoints, useBreakpoint } from '@/hooks';
 
 interface IWhyBusinessProps {}
 
@@ -32,7 +33,7 @@ export const WhyBusiness: React.FunctionComponent<IWhyBusinessProps> = () => {
     {
       id: 'biz-2',
       title: 'Continuity',
-      icon: money,
+      icon: timer,
       subTitle: '4 continents',
       content: (
         <>
@@ -49,7 +50,7 @@ export const WhyBusiness: React.FunctionComponent<IWhyBusinessProps> = () => {
     {
       id: 'biz-3',
       title: 'Retention',
-      icon: money,
+      icon: like,
       subTitle: '99 %',
       content: (
         <>
@@ -69,8 +70,10 @@ export const WhyBusiness: React.FunctionComponent<IWhyBusinessProps> = () => {
     return <CardHorizontal key={item.id} {...item} />;
   });
 
+  const isTablet = useBreakpoint(BreakPoints.LG);
+
   return (
-    <Box my="44px" py="100px">
+    <Box my="44px" py={isTablet ? '40px' : '100px'}>
       <Container>
         <Box display="flex" flexDirection="column" rowGap="24px" maxWidth="668px" mb="65px">
           <SubTitle text="Highlight point" />
@@ -80,8 +83,8 @@ export const WhyBusiness: React.FunctionComponent<IWhyBusinessProps> = () => {
             expand their businesses and overcome financial constraints
           </Typography>
         </Box>
-        <Grid container columnSpacing="65px">
-          <Grid item xs={12} lg={6}>
+        <Grid container spacing={isTablet ? '32px' : '65px'}>
+          <Grid item xs={12} lg={6} textAlign={isTablet ? 'center' : 'left'}>
             <Image src={bizImage} alt="bizImage" style={{ maxWidth: '100%', height: 'auto' }} />
           </Grid>
           <Grid item xs={12} lg={6}>

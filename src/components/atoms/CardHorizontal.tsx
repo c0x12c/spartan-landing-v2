@@ -23,6 +23,9 @@ export const CardHorizontal: React.FunctionComponent<ICardHorizontalProps> = ({
       padding="20px"
       flexDirection="column"
       gap="12px"
+      border="1px solid"
+      borderColor={gray[200]}
+      borderRadius="8px"
       sx={{
         transition: 'all 0.5s',
         '&:hover': {

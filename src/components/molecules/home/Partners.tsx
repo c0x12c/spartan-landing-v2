@@ -6,10 +6,13 @@ import { Box, Typography } from '@mui/material';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Partners as PartnersData } from '@/constants';
+import { BreakPoints, useBreakpoint } from '@/hooks';
 
 interface IPartnersProps {}
 
 export const Partners: React.FunctionComponent<IPartnersProps> = () => {
+  const isTablet = useBreakpoint(BreakPoints.LG);
+
   const renderBiz = (data: PartnerType[]) => {
     return data.map((item) => {
       return (
@@ -21,7 +24,7 @@ export const Partners: React.FunctionComponent<IPartnersProps> = () => {
   };
 
   return (
-    <Box py="120px">
+    <Box py={isTablet ? '60px' : '120px'}>
       <Container>
         <Box
           display="flex"
