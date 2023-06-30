@@ -1,6 +1,6 @@
 import React from 'react';
 import { MainTemplate } from '../templates';
-import { AboutUsBanner } from '../molecules/AboutUs';
+import { AboutUsBanner } from '../molecules';
 
 type Props = {
   children?: React.ReactNode;
