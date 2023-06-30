@@ -125,7 +125,7 @@ const createThemeByMode = (): Theme => {
           contained: {
             padding: '18px 24px',
             fontSize: '16px',
-            border: '2px solid',
+            border: '1px solid',
             borderColor: 'transparent',
             backgroundColor: colors.primary[500],
             color: colors.base.white,

@@ -17,3 +17,4 @@ export { SubTitle } from './typography/SubTitle';
 
 export { Banner } from './Banner';
 export { CardHorizontal } from './CardHorizontal';
+export { LocationMap } from './Map';

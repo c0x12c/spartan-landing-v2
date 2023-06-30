@@ -1,6 +1,6 @@
 import React from 'react';
 import { MainTemplate } from '../templates';
-import { HomeBanner, Partners, WhyBusiness } from '../molecules';
+import { GlobalImpact, HomeBanner, Partners, WhyBusiness } from '../molecules';
 
 type Props = {
   children?: React.ReactNode;
@@ -12,6 +12,7 @@ export const HomePage: React.FC<Props> = () => {
       <HomeBanner />
       <Partners />
       <WhyBusiness />
+      <GlobalImpact />
     </MainTemplate>
   );
 };

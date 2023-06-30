@@ -4,6 +4,7 @@ export { Header, type MenuItemType } from './common/Header';
 export { HomeBanner } from './home/Banner';
 export { Partners } from './home/Partners';
 export { WhyBusiness } from './home/WhyBusiness';
+export { GlobalImpact } from './home/GlobalImpact';
 
 //ABOUT-US
 export { AboutUsBanner } from './about-us/Banner';
