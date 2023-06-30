@@ -5,7 +5,7 @@ import { Poppins } from 'next/font/google';
 import * as colors from './colors';
 
 export const PoppinsFont = Poppins({
-  weight: ['400', '600'],
+  weight: ['400', '500', '600'],
   subsets: ['latin'],
   display: 'swap',
   fallback: ['Helvetica', 'Arial', 'sans-serif'],
@@ -16,8 +16,10 @@ declare module '@mui/material/styles' {
     fs14: React.CSSProperties;
     fs16: React.CSSProperties;
     fs18: React.CSSProperties;
+    fs20: React.CSSProperties;
     fs24: React.CSSProperties;
     fs32: React.CSSProperties;
+    fs40: React.CSSProperties;
     fs48: React.CSSProperties;
     fs60: React.CSSProperties;
     fs64: React.CSSProperties;
@@ -29,8 +31,10 @@ declare module '@mui/material/styles' {
     fs14: React.CSSProperties;
     fs16: React.CSSProperties;
     fs18: React.CSSProperties;
+    fs20: React.CSSProperties;
     fs24: React.CSSProperties;
     fs32: React.CSSProperties;
+    fs40: React.CSSProperties;
     fs48: React.CSSProperties;
     fs60: React.CSSProperties;
     fs64: React.CSSProperties;
@@ -52,8 +56,10 @@ declare module '@mui/material/Typography' {
     fs14: true;
     fs16: true;
     fs18: true;
+    fs20: true;
     fs24: true;
     fs32: true;
+    fs40: true;
     fs48: true;
     fs60: true;
     fs64: true;
@@ -201,6 +207,11 @@ const createThemeByMode = (): Theme => {
         lineHeight: 1,
         fontWeight: 400,
       },
+      fs20: {
+        fontSize: '20px',
+        lineHeight: 1.5,
+        fontWeight: 500,
+      },
       fs24: {
         fontSize: '24px',
         lineHeight: 1,
@@ -209,6 +220,11 @@ const createThemeByMode = (): Theme => {
       fs32: {
         fontSize: '32px',
         lineHeight: 1.375,
+        fontWeight: 600,
+      },
+      fs40: {
+        fontSize: '40px',
+        lineHeight: 1.4,
         fontWeight: 600,
       },
       fs48: {
