@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Header } from '../molecules';
+import { Footer, Header } from '../molecules';
 
 interface IMainTemplateProps {
   children: React.ReactNode;
@@ -12,6 +12,7 @@ export const MainTemplate: React.FunctionComponent<IMainTemplateProps> = (props)
     <React.Fragment>
       <Header />
       {children}
+      <Footer />
     </React.Fragment>
   );
 };

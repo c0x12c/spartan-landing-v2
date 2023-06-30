@@ -1,4 +1,5 @@
 export { Header, type MenuItemType } from './common/Header';
+export { Footer } from './common/Footer';
 
 //HOME
 export { HomeBanner } from './home/Banner';
