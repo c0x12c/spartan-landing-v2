@@ -73,7 +73,7 @@ export const WhyBusiness: React.FunctionComponent<IWhyBusinessProps> = () => {
   const isTablet = useBreakpoint(BreakPoints.LG);
 
   return (
-    <Box my="44px" py={isTablet ? '40px' : '100px'}>
+    <Box py={isTablet ? '40px' : '100px'}>
       <Container>
         <Box display="flex" flexDirection="column" rowGap="24px" maxWidth="668px" mb="65px">
           <SubTitle text="Highlight point" />

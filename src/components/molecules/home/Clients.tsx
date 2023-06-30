@@ -12,8 +12,6 @@ import QuoteTag from '@/components/atoms/QuoteTag';
 interface IClientsProps {}
 
 export const Clients: React.FunctionComponent<IClientsProps> = () => {
-  const [currentSlide, setCurrentSlide] = React.useState(0);
-
   const slider = React.useRef<Slider | null>(null);
   const settings = {
     dots: false,
@@ -22,7 +20,6 @@ export const Clients: React.FunctionComponent<IClientsProps> = () => {
     slidesToShow: 1,
     slidesToScroll: 1,
     arrows: false,
-    afterChange: (current: number) => setCurrentSlide(current),
   };
 
   const renderTags = (data: string[]) => {
