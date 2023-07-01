@@ -12,12 +12,6 @@ import LinkedinIcon from '@/assets/images/socials/linkedin.svg';
 import FacebookIcon from '@/assets/images/socials/facebook.svg';
 import Link from 'next/link';
 
-// type Founder = {
-//   image: StaticImageData;
-//   name: string;
-//   position: string;
-// };
-
 interface FounderCardProps {
   founder: Founder;
 }
