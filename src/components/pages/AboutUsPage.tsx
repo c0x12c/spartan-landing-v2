@@ -4,6 +4,7 @@ import { AboutUsBanner } from '../molecules';
 import { Box } from '@mui/material';
 import { Description } from '../molecules/about-us';
 import { SuccessFactors } from '../molecules/about-us';
+import { Uniqueness } from '../molecules/about-us';
 
 type Props = {
   children?: React.ReactNode;
@@ -16,6 +17,7 @@ export const AboutUsPage: React.FC<Props> = () => {
         <AboutUsBanner />
         <Description />
         <SuccessFactors />
+        <Uniqueness />
       </Box>
     </MainTemplate>
   );
