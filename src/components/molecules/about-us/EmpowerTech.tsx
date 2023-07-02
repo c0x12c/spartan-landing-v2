@@ -5,6 +5,7 @@ import ImageEmpowerTech from '@/assets/images/about-us/EmpowerTech-image.jpg';
 import Arrow from '@/assets/images/icons/arrow.svg';
 import { base } from '@/styles/colors';
 import { useTheme } from '@mui/system';
+import Link from 'next/link';
 
 export const EmpowerTech = () => {
   const theme = useTheme();
@@ -51,15 +52,17 @@ export const EmpowerTech = () => {
             growth and empowerment, enabling our engineers to excel and contribute to the success of
             our client&apos;s projects.
           </Typography>
-          <Button
-            variant="contained"
-            endIcon={<Image src={Arrow} alt="arrow" />}
-            sx={{
-              width: 'fit-content',
-            }}
-          >
-            Being next spartan
-          </Button>
+          <Link href="/apply-job">
+            <Button
+              variant="contained"
+              endIcon={<Image src={Arrow} alt="arrow" />}
+              sx={{
+                width: 'fit-content',
+              }}
+            >
+              Being next spartan
+            </Button>
+          </Link>
         </Box>
       </Box>
     </Container>

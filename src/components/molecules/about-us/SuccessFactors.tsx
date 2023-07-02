@@ -19,8 +19,7 @@ export const SuccessFactors = () => {
         <Box display={'flex'} flexDirection={'column'} gap={'24px'} mb={'64px'}>
           <SubTitle text="About us" textAlign={'center'} />
           <Title
-            text="How do we stand out amidst a sea 
-of technology teams?"
+            text="How do we stand out amidst a sea of technology teams?"
             textAlign={'center'}
           />
           <Typography

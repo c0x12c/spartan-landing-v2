@@ -27,7 +27,7 @@ export const Description = () => {
           <Image
             src={DescriptionImage}
             alt="Image with group of people"
-            style={{ width: isTablet ? '100%' : '723px', objectFit: 'cover' }}
+            style={{ width: isTablet ? '100%' : '723px', objectFit: 'cover', borderRadius: '8px' }}
           />
           <Typography>
             The company is based in the US but works with engineers from around the world,
