@@ -1,8 +1,8 @@
 import React from 'react';
-import { MainTemplate } from '../templates';
+import { MainTemplate } from '../templates/MainTemplate';
 import { AboutUsBanner } from '../molecules';
 import { Box } from '@mui/material';
-import { Description } from '../molecules/about-us';
+import { Description, EmpowerTech } from '../molecules/about-us';
 import { SuccessFactors } from '../molecules/about-us';
 import { Uniqueness } from '../molecules/about-us';
 import { Founders } from '../molecules/about-us/Founders';
@@ -20,6 +20,7 @@ export const AboutUsPage: React.FC<Props> = () => {
         <SuccessFactors />
         <Uniqueness />
         <Founders />
+        <EmpowerTech />
       </Box>
     </MainTemplate>
   );
