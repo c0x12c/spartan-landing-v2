@@ -13,14 +13,14 @@ export const AboutUsBanner = () => (
           gap="24px"
           maxWidth={{ md: '655px', xs: '100%' }}
         >
-          <Typography variant="fs64" color={base.white}>
+          <Typography variant="fs64" color={base.white} data-aos="fade-up" data-aos-delay="200">
             Top tier tech savvy{' '}
             <Typography component={'span'} variant="fs64" color={primary[400]}>
               Engineers
             </Typography>{' '}
             in world
           </Typography>
-          <Typography variant="fs16" color={gray[300]}>
+          <Typography variant="fs16" color={gray[300]} data-aos="fade-up" data-aos-delay="300">
             We are Spartan, a team of elite tech-savvy people who specialize in providing top-notch
             technical expertise to meet your goals. Our engineers are selected from the top 1%,
             signifying that they are not merely proficient coders but also exceptional engineers

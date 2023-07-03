@@ -14,8 +14,13 @@ export const Description = () => {
     <Container>
       <Box pt={'100px'} pb={'200px'}>
         <Box display={'flex'} flexDirection={'column'} gap={'24px'} mb={'41px'}>
-          <SubTitle text="About us" />
-          <Title text="We are Spartan, a team of elite tech-savvy people!" maxWidth={'690px'} />
+          <SubTitle text="About us" data-aos="fade-up" data-aos-delay="200" />
+          <Title
+            text="We are Spartan, a team of elite tech-savvy people!"
+            maxWidth={'690px'}
+            data-aos="fade-up"
+            data-aos-delay="300"
+          />
         </Box>
         <Box
           display={'flex'}
@@ -24,13 +29,16 @@ export const Description = () => {
           gap={{ lg: '70px', xs: '41px' }}
           alignItems={'center'}
           position={'relative'}
+          data-aos-delay="500"
         >
           <Image
             src={DescriptionImage}
             alt="Image with group of people"
+            data-aos="fade-right"
+            data-aos-delay="500"
             style={{ width: isTablet ? '100%' : '723px', objectFit: 'cover', borderRadius: '8px' }}
           />
-          <Typography>
+          <Typography data-aos="fade-left" data-aos-delay="600">
             The company is based in the US but works with engineers from around the world,
             leveraging remote work to take advantage of cost savings and improve startups financial
             runway. <br />
@@ -38,6 +46,8 @@ export const Description = () => {
             of a strong team and nurturing the growth of our engineers.
           </Typography>
           <Box
+            data-aos="fade-up-left"
+            data-aos-delay="500"
             display={'flex'}
             gap={{ sm: '44px', xs: '12px' }}
             p={{ sm: '44px 0 0 44px', xs: '12px' }}

@@ -34,15 +34,21 @@ export const Founders = () => {
                 text="Board of leading"
                 mb={'24px'}
                 textAlign={{ xs: 'center', md: 'start' }}
+                data-aos-delay="200"
+                data-aos="fade-up"
               />
               <Title
                 text="Our elite founding team of Engineers"
                 textAlign={{ xs: 'center', md: 'start' }}
+                data-aos="fade-up"
+                data-aos-delay="300"
               />
             </Box>
             <Typography
               width={{ md: '435px', xs: '100%' }}
               textAlign={{ xs: 'center', md: 'start' }}
+              data-aos="fade-up"
+              data-aos-delay="500"
             >
               With a diverse range of expertise and a shared passion for innovation, we work
               together seamlessly to bring your ideas to life. Join us on this journey of success
@@ -91,7 +97,7 @@ const FounderCard: React.FC<FounderCardProps> = ({ founder }) => {
         transition: 'transform 0.3s ease',
       }}
     >
-      <Box position="relative">
+      <Box position="relative" data-aos="flip-right" data-aos-delay="800">
         <Image src={founder.image} alt={founder.name} style={{ width: '100%', height: 'auto' }} />
         {isHovered && (
           <Box

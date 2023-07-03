@@ -19,14 +19,27 @@ export const Uniqueness = () => {
           gap={'24px'}
           justifyContent={{ lg: 'start', xs: 'center' }}
         >
-          <SubTitle text="Why bussiness choose us" textAlign={{ lg: 'start', xs: 'center' }} />
+          <SubTitle
+            text="Why bussiness choose us"
+            textAlign={{ lg: 'start', xs: 'center' }}
+            data-aos-delay="200"
+            data-aos="fade-up"
+          />
           <Title
             text="What makes us 
 stand out from the competition"
             mb={'8px'}
             textAlign={{ lg: 'start', xs: 'center' }}
+            data-aos="fade-up"
+            data-aos-delay="300"
           />
-          <Typography variant="fs16" component={'p'} textAlign={{ lg: 'start', xs: 'center' }}>
+          <Typography
+            variant="fs16"
+            component={'p'}
+            textAlign={{ lg: 'start', xs: 'center' }}
+            data-aos="fade-up"
+            data-aos-delay="500"
+          >
             Our objective is to develop a profitable and effective solution that helps clients to
             expand
           </Typography>
@@ -34,9 +47,18 @@ stand out from the competition"
             src={StatisticImage}
             alt="Image with statistics"
             style={{ margin: '0 auto', maxWidth: '100%' }}
+            data-aos="zoom-in"
+            data-aos-delay="800"
           />
         </Box>
-        <Box width={'100%'} display={'flex'} flexDirection={'column'} gap={'42px'}>
+        <Box
+          width={'100%'}
+          display={'flex'}
+          flexDirection={'column'}
+          gap={'42px'}
+          data-aos="flip-right"
+          data-aos-delay="700"
+        >
           <CardHorizontal
             title="Cross-Continental expertise"
             icon={SubTitleImage}

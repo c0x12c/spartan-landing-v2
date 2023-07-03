@@ -17,16 +17,20 @@ export const SuccessFactors = () => {
     <Box width={'100%'} p={'140px 0'} sx={{ backgroundColor: gray[100] }}>
       <Container>
         <Box display={'flex'} flexDirection={'column'} gap={'24px'} mb={'64px'}>
-          <SubTitle text="About us" textAlign={'center'} />
+          <SubTitle text="About us" textAlign={'center'} data-aos-delay="200" data-aos="fade-up" />
           <Title
             text="How do we stand out amidst a sea of technology teams?"
             textAlign={'center'}
+            data-aos="fade-up"
+            data-aos-delay="300"
           />
           <Typography
             component={'p'}
             textAlign={'center'}
             maxWidth={{ lg: '818px', xs: '100%' }}
             m={'0 auto'}
+            data-aos="fade-up"
+            data-aos-delay="500"
           >
             We believe that our dedication to the human element, strong engineering processes, and
             exceptional talent make us truly stand out in the full-remote engineering landscape.
@@ -62,6 +66,8 @@ export const SuccessFactors = () => {
 const ListItem: React.FC<ListItemProps> = ({ icon, title, description }) => {
   return (
     <Box
+      data-aos="flip-up"
+      data-aos-delay="700"
       display="flex"
       alignItems="start"
       gap={'20px'}
