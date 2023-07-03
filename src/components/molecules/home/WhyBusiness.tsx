@@ -67,7 +67,7 @@ export const WhyBusiness: React.FunctionComponent<IWhyBusinessProps> = () => {
   ];
 
   const renderData = data.map((item) => {
-    return <CardHorizontal key={item.id} {...item} />;
+    return <CardHorizontal key={item.id} {...item} data-aos="fade-up" data-aos-delay={`${200}`} />;
   });
 
   const isTablet = useBreakpoint(BreakPoints.LG);
@@ -76,9 +76,9 @@ export const WhyBusiness: React.FunctionComponent<IWhyBusinessProps> = () => {
     <Box py={isTablet ? '40px' : '100px'}>
       <Container>
         <Box display="flex" flexDirection="column" rowGap="24px" maxWidth="668px" mb="65px">
-          <SubTitle text="Highlight point" />
-          <Title text="Why business choose Spartan" />
-          <Typography variant="fs16" color={gray[500]}>
+          <SubTitle text="Highlight point" data-aos="fade-up" data-aos-delay="200" />
+          <Title text="Why business choose Spartan" data-aos="fade-up" data-aos-delay="300" />
+          <Typography variant="fs16" color={gray[500]} data-aos="fade-up" data-aos-delay="500">
             Our objective is to develop a profitable and effective solution that helps clients to
             expand their businesses and overcome financial constraints
           </Typography>

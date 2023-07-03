@@ -16,6 +16,7 @@ export const CardHorizontal: React.FunctionComponent<ICardHorizontalProps> = ({
   title,
   subTitle,
   content,
+  ...props
 }) => {
   return (
     <Box
@@ -26,6 +27,7 @@ export const CardHorizontal: React.FunctionComponent<ICardHorizontalProps> = ({
       border="1px solid"
       borderColor={gray[200]}
       borderRadius="8px"
+      {...props}
       sx={{
         transition: 'all 0.5s',
         '&:hover': {

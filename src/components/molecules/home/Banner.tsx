@@ -26,13 +26,19 @@ export const HomeBanner = () => {
         <Container>
           <Box maxWidth={{ md: '700px', xs: '529px' }}>
             <Box display="flex" flexDirection="column" rowGap="28px" mb="32px">
-              <Typography variant="fs64" color={base.white}>
+              <Typography variant="fs64" color={base.white} data-aos="fade-up" data-aos-delay="200">
                 Spartans at{' '}
                 <Typography variant="fs64" color={primary[500]}>
                   Work
                 </Typography>
               </Typography>
-              <Typography variant="fs16" color={gray[300]} maxWidth="700px">
+              <Typography
+                variant="fs16"
+                color={gray[300]}
+                maxWidth="700px"
+                data-aos="fade-up"
+                data-aos-delay="300"
+              >
                 A powerhouse company driven by professionalism, strength, and a relentless positive
                 mindset. With an unwavering commitment to excellence, Spartan empowers your startups
                 by providing a solid team of tech-savvy people who are passionate about their work
@@ -40,7 +46,12 @@ export const HomeBanner = () => {
                 for your business and are willing to share this knowledge.
               </Typography>
             </Box>
-            <Button variant="contained" size={isMobile ? 'small' : 'medium'}>
+            <Button
+              variant="contained"
+              size={isMobile ? 'small' : 'medium'}
+              data-aos="fade-up"
+              data-aos-delay="500"
+            >
               Let’s discuss your project
               <ArrowIcon />
             </Button>

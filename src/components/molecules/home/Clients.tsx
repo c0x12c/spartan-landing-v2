@@ -35,6 +35,8 @@ export const Clients: React.FunctionComponent<IClientsProps> = () => {
             alt={item.name}
             style={{ maxWidth: '100%', height: 'auto' }}
             priority={true}
+            data-aos="zoom-in"
+            data-aos-delay="200"
           />
           <Box position="absolute" bottom="28px" left="28px" display="flex" gap="17px">
             {renderTags(item.tags)}
@@ -42,7 +44,13 @@ export const Clients: React.FunctionComponent<IClientsProps> = () => {
         </Box>
         <Grid container mt="44px" columnSpacing="120px" rowSpacing="40px">
           <Grid item xs={12} sm={4} display="flex" flexDirection="column" gap="24px">
-            <Typography variant="fs40" color={gray[900]} letterSpacing="-0.8px">
+            <Typography
+              variant="fs40"
+              color={gray[900]}
+              letterSpacing="-0.8px"
+              data-aos="fade-up"
+              data-aos-delay="200"
+            >
               {item.name}
             </Typography>
             <Box
@@ -52,6 +60,8 @@ export const Clients: React.FunctionComponent<IClientsProps> = () => {
               borderBottom="1px solid"
               borderColor={gray[400]}
               pb="16px"
+              data-aos="fade-up"
+              data-aos-delay="300"
             >
               <Typography variant="fs40" color={gray[900]} letterSpacing="-2px">
                 {item.dev}+
@@ -60,7 +70,13 @@ export const Clients: React.FunctionComponent<IClientsProps> = () => {
                 Dev in team
               </Typography>
             </Box>
-            <Box display="flex" gap="18px" alignItems="center">
+            <Box
+              display="flex"
+              gap="18px"
+              alignItems="center"
+              data-aos="fade-up"
+              data-aos-delay="500"
+            >
               <Typography variant="fs40" color={gray[900]} letterSpacing="-2px">
                 {item.designer}
               </Typography>
@@ -70,13 +86,33 @@ export const Clients: React.FunctionComponent<IClientsProps> = () => {
             </Box>
           </Grid>
           <Grid item xs={12} sm={8}>
-            <Typography variant="fs24" color={gray[800]} mb="24px" component="h3">
+            <Typography
+              variant="fs24"
+              color={gray[800]}
+              mb="24px"
+              component="h3"
+              data-aos="fade-up"
+              data-aos-delay="200"
+            >
               {item.quote.title}
             </Typography>
-            <Typography variant="fs16" color={gray[500]} mb="26px" component="p">
+            <Typography
+              variant="fs16"
+              color={gray[500]}
+              mb="26px"
+              component="p"
+              data-aos="fade-up"
+              data-aos-delay="300"
+            >
               {item.quote.content}
             </Typography>
-            <Box display="flex" alignItems="center" justifyContent="space-between">
+            <Box
+              display="flex"
+              alignItems="center"
+              justifyContent="space-between"
+              data-aos="fade-up"
+              data-aos-delay="400"
+            >
               <Box display="flex" alignItems="center" gap="24px">
                 <Box width="58px" height="58px" borderRadius="50%" overflow="hidden">
                   <Image src={item.quote.userImgSrc} alt={item.quote.userName} />
