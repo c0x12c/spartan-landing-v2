@@ -13,6 +13,7 @@ export enum EPages {
   CONTACT_US = 'contact-us',
   SERVICE = 'service',
   CASE_STUDY_VOLTA = 'case-study-volta',
+  LIFE_SPARTAN = 'life-spartan',
 }
 
 export type ISEOPages = {

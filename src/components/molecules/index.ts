@@ -10,3 +10,6 @@ export { Clients } from './home/Clients';
 
 //ABOUT-US
 export { AboutUsBanner } from './about-us/Banner';
+
+//LIFE OF SPARTAN
+export { LifeSpartanBanner } from './life-spartan/Banner';
