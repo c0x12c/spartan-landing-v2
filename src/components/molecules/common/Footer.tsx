@@ -56,7 +56,7 @@ export const Footer: React.FunctionComponent<IFooterProps> = () => {
   ));
 
   const renderSubMenu = (data: ServiceType[] | AboutType[] | HelpType[]) => {
-    return data.map((item) => {
+    return data.map((item, index) => {
       const { href, hash } = item as ServiceType & AboutType;
       const link = href ? href : `/services#${hash}`;
       return (
@@ -72,11 +72,16 @@ export const Footer: React.FunctionComponent<IFooterProps> = () => {
   const renderMenu = footerMenu.map((item) => {
     return (
       <Box key={item.label}>
-        <Typography variant="fs40" sx={{ color: base.white }}>
+        <Typography
+          variant="fs40"
+          sx={{ color: base.white }}
+          data-aos="fade-up"
+          data-aos-delay="200"
+        >
           {item.label}
         </Typography>
         {item.subItems && (
-          <Box display="flex" flexDirection="column" gap="16px" pt="20px">
+          <Box display="flex" flexDirection="column" gap="16px" pt="20px" data-aos="fade-up">
             {renderSubMenu(item.subItems)}
           </Box>
         )}

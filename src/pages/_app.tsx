@@ -3,7 +3,9 @@ import { responsiveFontSizes, ThemeProvider } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
 import createThemeByMode from '@/styles/muiTheme';
 import { AppProps } from 'next/app';
+import AOS from 'aos';
 
+import 'aos/dist/aos.css';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import '@/styles/animations.css';
@@ -13,6 +15,15 @@ export type MyAppProps = AppProps;
 const MyApp: React.FC<MyAppProps> = (props) => {
   const { Component, pageProps } = props;
   const theme = responsiveFontSizes(createThemeByMode());
+
+  React.useEffect(() => {
+    AOS.init({
+      easing: 'ease-out-cubic',
+      once: true,
+      offset: -50,
+      duration: 800,
+    });
+  }, []);
 
   return (
     <ThemeProvider theme={theme}>

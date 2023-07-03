@@ -19,6 +19,8 @@ export const HomePage: React.FC<Props> = () => {
         title="Interested in knowing more about Spartan?"
         textButton="Being next spartan"
         linkButton="/apply-job"
+        data-aos="zoom-in"
+        data-aos-delay="200"
       />
     </MainTemplate>
   );

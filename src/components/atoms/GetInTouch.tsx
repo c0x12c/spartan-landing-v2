@@ -17,6 +17,7 @@ export const GetInTouch: React.FunctionComponent<IGetInTouchProps> = ({
   title,
   textButton,
   linkButton,
+  ...props
 }) => {
   const isMobile = useBreakpoint(BreakPoints.MD);
 
@@ -33,6 +34,7 @@ export const GetInTouch: React.FunctionComponent<IGetInTouchProps> = ({
             backgroundSize: 'cover',
             backgroundRepeat: 'no-repeat',
           }}
+          {...props}
         >
           <Box display="flex" flexDirection="column" gap="64px" maxWidth="735px">
             <Title text={title} />
