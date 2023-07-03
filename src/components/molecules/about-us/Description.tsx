@@ -12,7 +12,7 @@ export const Description = () => {
   const isMobile = useMediaQuery(theme.breakpoints.between('xs', 'sm'));
   return (
     <Container>
-      <Box pt={'100px'} pb={'200px'}>
+      <Box pt={'100px'} pb={'160px'}>
         <Box display={'flex'} flexDirection={'column'} gap={'24px'} mb={'41px'}>
           <SubTitle text="About us" data-aos="fade-up" data-aos-delay="200" />
           <Title
