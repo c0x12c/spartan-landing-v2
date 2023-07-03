@@ -9,6 +9,7 @@ import { gray } from '@/styles/colors';
 export const Description = () => {
   const theme = useTheme();
   const isTablet = useMediaQuery(theme.breakpoints.down('lg'));
+  const isMobile = useMediaQuery(theme.breakpoints.between('xs', 'sm'));
   return (
     <Container>
       <Box pt={'100px'} pb={'200px'}>
@@ -38,53 +39,62 @@ export const Description = () => {
           </Typography>
           <Box
             display={'flex'}
-            gap={'44px'}
-            p={'44px 0 0 44px'}
+            gap={{ sm: '44px', xs: '12px' }}
+            p={{ sm: '44px 0 0 44px', xs: '12px' }}
             position={'absolute'}
             right={0}
             bottom={'-186px'}
             bgcolor={base.white}
             borderRadius={'8px 0 0 0'}
           >
-            <Box
-              p={'20px'}
-              display={'flex'}
-              flexDirection={'column'}
-              gap={'14px'}
-              border={`1px solid ${gray[200]}`}
-              borderRadius={'8px'}
-            >
-              <Typography variant="fs16" color={base.black}>
-                People
-              </Typography>
-              <Typography variant="fs60" color={primary[400]}>
-                150+
-              </Typography>
-              <Typography variant="fs16" color={base.black}>
-                Talent engineer work everyday
-              </Typography>
-            </Box>
-            <Box
-              p={'20px'}
-              display={'flex'}
-              flexDirection={'column'}
-              gap={'14px'}
-              border={`1px solid ${gray[200]}`}
-              borderRadius={'8px'}
-            >
-              <Typography variant="fs16" color={base.black}>
-                World offices
-              </Typography>
-              <Typography variant="fs60" color={primary[400]}>
-                04
-              </Typography>
-              <Typography variant="fs16" color={base.black}>
-                Talent engineer work everyday
-              </Typography>
-            </Box>
+            <StatisticBox
+              isMobile={isMobile}
+              title="People"
+              number="150+"
+              subtitle="Talent engineer work everyday"
+            />
+            <StatisticBox
+              isMobile={isMobile}
+              title="World offices"
+              number=" 04"
+              subtitle="Talent engineer work everyday"
+            />
           </Box>
         </Box>
       </Box>
     </Container>
+  );
+};
+
+const StatisticBox = ({
+  title,
+  number,
+  subtitle,
+  isMobile,
+}: {
+  title: string;
+  number: string;
+  subtitle: string;
+  isMobile: boolean;
+}) => {
+  return (
+    <Box
+      p={{ sm: '20px', xs: '12px' }}
+      display={'flex'}
+      flexDirection={'column'}
+      gap={'14px'}
+      border={`1px solid ${gray[200]}`}
+      borderRadius={'8px'}
+    >
+      <Typography variant={isMobile ? 'fs14' : 'fs16'} color={gray[900]} fontWeight={600}>
+        {title}
+      </Typography>
+      <Typography variant={isMobile ? 'fs40' : 'fs60'} color={primary[400]}>
+        {number}
+      </Typography>
+      <Typography variant={isMobile ? 'fs14' : 'fs16'} color={gray[900]} fontWeight={600}>
+        {subtitle}
+      </Typography>
+    </Box>
   );
 };
