@@ -4,6 +4,9 @@ import { Box, Grid, Typography } from '@mui/material';
 import * as React from 'react';
 import Image from 'next/image';
 import bizImage from '@/assets/images/home/biz-image.png';
+import bizFinance from '@/assets/images/home/biz-finance.png';
+import bizChart from '@/assets/images/home/biz-chart.png';
+
 import money from '@/assets/images/icons/money-send.svg';
 import timer from '@/assets/images/icons/timer.svg';
 import like from '@/assets/images/icons/like.svg';
@@ -84,8 +87,45 @@ export const WhyBusiness: React.FunctionComponent<IWhyBusinessProps> = () => {
           </Typography>
         </Box>
         <Grid container spacing={isTablet ? '32px' : '65px'}>
-          <Grid item xs={12} lg={6} textAlign={isTablet ? 'center' : 'left'}>
-            <Image src={bizImage} alt="bizImage" style={{ maxWidth: '100%', height: 'auto' }} />
+          <Grid item xs={12} lg={6}>
+            <Box position="relative" maxWidth="581px" mx="auto">
+              <Image
+                src={bizImage}
+                alt="bizImage"
+                style={{ maxWidth: '100%', height: 'auto' }}
+                data-aos="fade-up"
+                data-aos-delay="200"
+              />
+              <Box
+                position="absolute"
+                top="0"
+                left="0"
+                width="100%"
+                height="100%"
+                padding="21px"
+                display="flex"
+                flexDirection="column"
+                justifyContent="space-between"
+              >
+                <Box></Box>
+                <Box display="flex" flexDirection="column" alignItems="flex-end" rowGap="15px">
+                  <Image
+                    src={bizChart}
+                    alt="bizChart"
+                    style={{ maxWidth: '100%', height: 'auto' }}
+                    data-aos="fade-up"
+                    data-aos-delay="300"
+                  />
+                  <Image
+                    src={bizFinance}
+                    alt="bizFinance"
+                    style={{ maxWidth: '100%', height: 'auto' }}
+                    data-aos="fade-up"
+                    data-aos-delay="300"
+                  />
+                </Box>
+              </Box>
+            </Box>
           </Grid>
           <Grid item xs={12} lg={6}>
             <Box display="flex" flexDirection="column" rowGap="40px">
