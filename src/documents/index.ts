@@ -59,6 +59,13 @@ const SEOPages: ISEOPages = {
     metaImage: '',
     slug: '/internship-program',
   },
+  [EPages.READY_TO_JOIN]: {
+    title: 'c0x12c - Ready to join',
+    description: 'c0x12c - Ready to join',
+    keywords: 'c0x12c, Ready to join',
+    metaImage: '',
+    slug: '/ready-to-join',
+  },
 };
 
 export default SEOPages;

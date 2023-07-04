@@ -21,3 +21,6 @@ export { TeamEngineers } from './life-spartan/TeamEngineers';
 export { InternshipBanner } from './internship/Banner';
 export { Benefits } from './internship/Benefits';
 export { InternshipForm } from './internship/Form';
+
+//READY-TO-JOIN
+export { ReadyToJoinBanner } from './ready-to-join/Banner';
