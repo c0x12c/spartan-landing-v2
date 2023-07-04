@@ -1,6 +1,11 @@
 import * as React from 'react';
 import { MainTemplate } from '../templates';
-import { LifeSpartanBanner, LifeSpartanFeatures, LifeSpartanSentence } from '../molecules';
+import {
+  LifeSpartanBanner,
+  LifeSpartanFeatures,
+  LifeSpartanSentence,
+  TeamEngineers,
+} from '../molecules';
 import { Box } from '@mui/material';
 
 interface ILifeSpartanPageProps {}
@@ -12,6 +17,7 @@ export const LifeSpartanPage: React.FunctionComponent<ILifeSpartanPageProps> = (
         <LifeSpartanBanner />
         <LifeSpartanSentence />
         <LifeSpartanFeatures />
+        <TeamEngineers />
       </Box>
     </MainTemplate>
   );

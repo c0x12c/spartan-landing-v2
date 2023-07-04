@@ -15,3 +15,4 @@ export { AboutUsBanner } from './about-us/Banner';
 export { LifeSpartanBanner } from './life-spartan/Banner';
 export { LifeSpartanSentence } from './life-spartan/Sentence';
 export { LifeSpartanFeatures } from './life-spartan/Features';
+export { TeamEngineers } from './life-spartan/TeamEngineers';
