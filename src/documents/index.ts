@@ -52,6 +52,13 @@ const SEOPages: ISEOPages = {
     metaImage: '',
     slug: '/case-study/volta',
   },
+  [EPages.APPLY_JOB]: {
+    title: 'c0x12c - Apply for job',
+    description: 'c0x12c - Apply for job',
+    keywords: 'c0x12c, Apply for job',
+    metaImage: '',
+    slug: '/apply-job',
+  },
 };
 
 export default SEOPages;

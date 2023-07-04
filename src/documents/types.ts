@@ -14,6 +14,7 @@ export enum EPages {
   SERVICE = 'service',
   CASE_STUDY_VOLTA = 'case-study-volta',
   LIFE_SPARTAN = 'life-spartan',
+  APPLY_JOB = 'apply-job',
 }
 
 export type ISEOPages = {
