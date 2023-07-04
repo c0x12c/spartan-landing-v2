@@ -50,7 +50,14 @@ const SEOPages: ISEOPages = {
     description: 'c0x12c - Life of Spartan',
     keywords: 'c0x12c, Life of Spartan',
     metaImage: '',
-    slug: '/case-study/volta',
+    slug: '/life-spartan',
+  },
+  [EPages.INTERNSHIP]: {
+    title: 'c0x12c - Internship program',
+    description: 'c0x12c - Internship program',
+    keywords: 'c0x12c, Internship program',
+    metaImage: '',
+    slug: '/internship-program',
   },
 };
 

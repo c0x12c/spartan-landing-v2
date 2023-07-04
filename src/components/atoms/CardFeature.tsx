@@ -1,12 +1,17 @@
 import * as React from 'react';
-import { Box } from '@mui/material';
+import { Box, Typography } from '@mui/material';
 import { FeatureType } from '@/constants/features';
 import { base } from '@/styles/colors';
 import Image from 'next/image';
 
+interface ICardFeature {
+  title?: string;
+}
+
 type SubContentType = FeatureType['subContent'][number];
 
-export const CardFeature: React.FunctionComponent<SubContentType> = ({
+export const CardFeature: React.FunctionComponent<ICardFeature & SubContentType> = ({
+  title,
   content,
   tick,
   ...props
@@ -14,9 +19,11 @@ export const CardFeature: React.FunctionComponent<SubContentType> = ({
   return (
     <Box
       display="flex"
+      alignItems="center"
       borderRadius="4px"
       bgcolor={base.white}
-      p="8px"
+      p={title ? '11px 25px' : '8px'}
+      gap={title ? '24px' : 0}
       width="fit-content"
       {...props}
     >
@@ -32,7 +39,27 @@ export const CardFeature: React.FunctionComponent<SubContentType> = ({
       >
         <Image src={tick} alt="tick" />
       </Box>
-      {content}
+      <Box>
+        {title && (
+          <Typography
+            variant="fs16"
+            color={base.black}
+            fontWeight="600"
+            lineHeight="1.8"
+            component="h3"
+            mb="8px"
+          >
+            {title}
+          </Typography>
+        )}
+        {typeof content === 'string' ? (
+          <Typography variant="fs14" color={base.grey} letterSpacing="0.21px">
+            {content}
+          </Typography>
+        ) : (
+          content
+        )}
+      </Box>
     </Box>
   );
 };
