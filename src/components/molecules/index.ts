@@ -24,3 +24,4 @@ export { InternshipForm } from './internship/Form';
 
 //READY-TO-JOIN
 export { ReadyToJoinBanner } from './ready-to-join/Banner';
+export { ReadyToJoinForm } from './ready-to-join/Form';
