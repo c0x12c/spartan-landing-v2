@@ -28,7 +28,7 @@ export const GlobalImpact: React.FunctionComponent<IGlobalImpactProps> = () => {
                 data-aos="fade-up"
                 data-aos-delay="300"
               />
-              <Typography variant="fs16" color={gray[500]} data-aos="fade-up" data-aos-delay="500">
+              <Typography variant="fs18" color={gray[600]} data-aos="fade-up" data-aos-delay="500">
                 With Spartan, our clients experience the benefits of a highly skilled and dedicated
                 team of remote engineers from over four continents, ensuring seamless collaboration,
                 timely project delivery, and superior product quality. We take pride in our strong

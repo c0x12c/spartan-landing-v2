@@ -7,6 +7,7 @@ import SubTitleImage from '@/assets/images/icons/subtitle.svg';
 import StatsUpImage from '@/assets/images/icons/status-up.svg';
 import MoneyImage from '@/assets/images/icons/money-recive.svg';
 import SquareTaskImage from '@/assets/images/icons/task-square.svg';
+import { gray } from '@/styles/colors';
 
 export const Uniqueness = () => {
   return (
@@ -20,7 +21,7 @@ export const Uniqueness = () => {
           justifyContent={{ lg: 'start', xs: 'center' }}
         >
           <SubTitle
-            text="Why bussiness choose us"
+            text="Why business choose us"
             textAlign={{ lg: 'start', xs: 'center' }}
             data-aos-delay="200"
             data-aos="fade-up"
@@ -34,7 +35,8 @@ stand out from the competition"
             data-aos-delay="300"
           />
           <Typography
-            variant="fs16"
+            variant="fs18"
+            color={gray[600]}
             component={'p'}
             textAlign={{ lg: 'start', xs: 'center' }}
             data-aos="fade-up"

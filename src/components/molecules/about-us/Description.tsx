@@ -38,7 +38,7 @@ export const Description = () => {
             data-aos-delay="500"
             style={{ width: isTablet ? '100%' : '723px', objectFit: 'cover', borderRadius: '8px' }}
           />
-          <Typography data-aos="fade-left" data-aos-delay="600">
+          <Typography variant="fs18" color={gray[600]} data-aos="fade-left" data-aos-delay="600">
             The company is based in the US but works with engineers from around the world,
             leveraging remote work to take advantage of cost savings and improve startups financial
             runway. <br />

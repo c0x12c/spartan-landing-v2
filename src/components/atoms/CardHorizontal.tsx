@@ -56,7 +56,7 @@ export const CardHorizontal: React.FunctionComponent<ICardHorizontalProps> = ({
         </Typography>
       )}
       {typeof content === 'string' ? (
-        <Typography variant="fs16" color={gray[500]}>
+        <Typography variant="fs16" color={gray[600]}>
           {content}
         </Typography>
       ) : (

@@ -41,7 +41,7 @@ export const Partners: React.FunctionComponent<IPartnersProps> = () => {
             data-aos="fade-up"
             data-aos-delay="300"
           />
-          <Typography variant="fs16" color={gray[500]} data-aos="fade-up" data-aos-delay="500">
+          <Typography variant="fs18" color={gray[600]} data-aos="fade-up" data-aos-delay="500">
             Our clients include startups, established businesses, and enterprises who trust us to
             deliver top-notch engineering solutions for their products and projects. Join these
             successful companies who have trusted Spartan to enable their success

@@ -2,12 +2,12 @@ import * as React from 'react';
 import { Box, Grid, IconButton, Typography } from '@mui/material';
 import Slider from 'react-slick';
 import { Container, Title } from '@/components/atoms';
-import { Projects } from '@/constants';
+import { ProjectsHome } from '@/constants';
 import Image from 'next/image';
 import { base, gray, primary } from '@/styles/colors';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
-import QuoteTag from '@/components/atoms/QuoteTag';
+// import QuoteTag from '@/components/atoms/QuoteTag';
 
 interface IClientsProps {}
 
@@ -22,25 +22,25 @@ export const Clients: React.FunctionComponent<IClientsProps> = () => {
     arrows: false,
   };
 
-  const renderTags = (data: string[]) => {
-    return data.map((tag, index: number) => <QuoteTag key={`tag-${index + 1}`} text={tag} />);
-  };
+  // const renderTags = (data: string[]) => {
+  //   return data.map((tag, index: number) => <QuoteTag key={`tag-${index + 1}`} text={tag} />);
+  // };
 
-  const renderQuotes = Projects.map((item, index) => {
+  const renderQuotes = ProjectsHome.map((item, index) => {
     return (
       <Box key={item.id}>
         <Box position="relative">
           <Image
             src={item.quote.imgSrc}
             alt={item.name}
-            style={{ maxWidth: '100%', height: 'auto' }}
+            style={{ maxWidth: '100%', height: 'auto', margin: '0 auto' }}
             priority={true}
             data-aos="zoom-in"
             data-aos-delay="200"
           />
-          <Box position="absolute" bottom="28px" left="28px" display="flex" gap="17px">
+          {/* <Box position="absolute" bottom="28px" left="28px" display="flex" gap="17px">
             {renderTags(item.tags)}
-          </Box>
+          </Box> */}
         </Box>
         <Grid container mt="44px" columnSpacing="120px" rowSpacing="40px">
           <Grid item xs={12} sm={4} display="flex" flexDirection="column" gap="24px">
@@ -66,7 +66,7 @@ export const Clients: React.FunctionComponent<IClientsProps> = () => {
               <Typography variant="fs40" color={gray[900]} letterSpacing="-2px">
                 {item.dev}+
               </Typography>
-              <Typography variant="fs16" fontWeight={600} color={gray[700]}>
+              <Typography variant="fs18" fontWeight={600} color={gray[700]}>
                 Dev in team
               </Typography>
             </Box>
@@ -80,7 +80,7 @@ export const Clients: React.FunctionComponent<IClientsProps> = () => {
               <Typography variant="fs40" color={gray[900]} letterSpacing="-2px">
                 {item.designer}
               </Typography>
-              <Typography variant="fs16" fontWeight={600} color={gray[700]}>
+              <Typography variant="fs18" fontWeight={600} color={gray[700]}>
                 Designer in team
               </Typography>
             </Box>
@@ -97,8 +97,8 @@ export const Clients: React.FunctionComponent<IClientsProps> = () => {
               {item.quote.title}
             </Typography>
             <Typography
-              variant="fs16"
-              color={gray[500]}
+              variant="fs18"
+              color={gray[600]}
               mb="26px"
               component="p"
               data-aos="fade-up"
@@ -145,12 +145,14 @@ export const Clients: React.FunctionComponent<IClientsProps> = () => {
                   aria-label="back"
                   size="large"
                   onClick={() => slider?.current?.slickNext()}
-                  disabled={index == Projects.length - 1}
+                  disabled={index == ProjectsHome.length - 1}
                   sx={{
-                    opacity: index == Projects.length - 1 ? 0.5 : 1,
+                    opacity: index == ProjectsHome.length - 1 ? 0.5 : 1,
                     border: '1.62px solid',
-                    borderColor: index == Projects.length - 1 ? base.grey : primary[500],
-                    color: `${index == Projects.length - 1 ? base.grey : primary[500]} !important`,
+                    borderColor: index == ProjectsHome.length - 1 ? base.grey : primary[500],
+                    color: `${
+                      index == ProjectsHome.length - 1 ? base.grey : primary[500]
+                    } !important`,
                   }}
                 >
                   <ArrowForwardIcon fontSize="inherit" />

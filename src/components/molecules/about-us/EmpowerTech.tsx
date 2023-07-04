@@ -3,7 +3,7 @@ import { Box, Button, Typography, useMediaQuery } from '@mui/material';
 import Image from 'next/image';
 import ImageEmpowerTech from '@/assets/images/about-us/EmpowerTech-image.jpg';
 import Arrow from '@/assets/images/icons/arrow.svg';
-import { base } from '@/styles/colors';
+import { base, gray } from '@/styles/colors';
 import { useTheme } from '@mui/system';
 
 export const EmpowerTech = () => {
@@ -47,7 +47,12 @@ export const EmpowerTech = () => {
             text="Focus on nurturing engineer's power"
             textAlign={{ xs: 'center', lg: 'end' }}
           />
-          <Typography width={{ xs: '100%', lg: '493px' }} textAlign={{ xs: 'center', lg: 'end' }}>
+          <Typography
+            variant="fs18"
+            color={gray[600]}
+            width={{ xs: '100%', lg: '493px' }}
+            textAlign={{ xs: 'center', lg: 'end' }}
+          >
             At Spartan, we differentiate ourselves by placing a strong emphasis on the development
             and advancement of our engineering team. We are committed to cultivating a culture of
             growth and empowerment, enabling our engineers to excel and contribute to the success of

@@ -4,6 +4,9 @@ import { Box, Grid, Typography } from '@mui/material';
 import * as React from 'react';
 import Image from 'next/image';
 import bizImage from '@/assets/images/home/biz-image.png';
+import bizFinance from '@/assets/images/home/biz-finance.png';
+import bizChart from '@/assets/images/home/biz-chart.png';
+
 import money from '@/assets/images/icons/money-send.svg';
 import timer from '@/assets/images/icons/timer.svg';
 import like from '@/assets/images/icons/like.svg';
@@ -20,9 +23,9 @@ export const WhyBusiness: React.FunctionComponent<IWhyBusinessProps> = () => {
       subTitle: '50+ hours',
       content: (
         <>
-          <Typography variant="fs14" color={gray[500]} letterSpacing="0.28px">
+          <Typography variant="fs16" color={gray[500]} letterSpacing="0.28px">
             By the engineering team <br />{' '}
-            <Typography variant="fs14" color={primary[400]} fontWeight={600}>
+            <Typography variant="fs16" color={primary[400]} fontWeight={600}>
               time saved{' '}
             </Typography>
             per developer on interview.
@@ -37,9 +40,9 @@ export const WhyBusiness: React.FunctionComponent<IWhyBusinessProps> = () => {
       subTitle: '4 continents',
       content: (
         <>
-          <Typography variant="fs14" color={gray[500]} letterSpacing="0.28px">
+          <Typography variant="fs16" color={gray[500]} letterSpacing="0.28px">
             Same time zone <br /> at least
-            <Typography variant="fs14" color={primary[400]} fontWeight={600}>
+            <Typography variant="fs16" color={primary[400]} fontWeight={600}>
               4+ hours{' '}
             </Typography>
             overlap time.
@@ -54,9 +57,9 @@ export const WhyBusiness: React.FunctionComponent<IWhyBusinessProps> = () => {
       subTitle: '99 %',
       content: (
         <>
-          <Typography variant="fs14" color={gray[500]} letterSpacing="0.28px">
+          <Typography variant="fs16" color={gray[500]} letterSpacing="0.28px">
             Engagement{' '}
-            <Typography variant="fs14" color={primary[400]} fontWeight={600}>
+            <Typography variant="fs16" color={primary[400]} fontWeight={600}>
               success rate
             </Typography>
             .
@@ -78,14 +81,51 @@ export const WhyBusiness: React.FunctionComponent<IWhyBusinessProps> = () => {
         <Box display="flex" flexDirection="column" rowGap="24px" maxWidth="668px" mb="65px">
           <SubTitle text="Highlight point" data-aos="fade-up" data-aos-delay="200" />
           <Title text="Why business choose Spartan" data-aos="fade-up" data-aos-delay="300" />
-          <Typography variant="fs16" color={gray[500]} data-aos="fade-up" data-aos-delay="500">
+          <Typography variant="fs18" color={gray[600]} data-aos="fade-up" data-aos-delay="500">
             Our objective is to develop a profitable and effective solution that helps clients to
             expand their businesses and overcome financial constraints
           </Typography>
         </Box>
         <Grid container spacing={isTablet ? '32px' : '65px'}>
-          <Grid item xs={12} lg={6} textAlign={isTablet ? 'center' : 'left'}>
-            <Image src={bizImage} alt="bizImage" style={{ maxWidth: '100%', height: 'auto' }} />
+          <Grid item xs={12} lg={6}>
+            <Box position="relative" maxWidth="581px" mx="auto">
+              <Image
+                src={bizImage}
+                alt="bizImage"
+                style={{ maxWidth: '100%', height: 'auto' }}
+                data-aos="fade-up"
+                data-aos-delay="200"
+              />
+              <Box
+                position="absolute"
+                top="0"
+                left="0"
+                width="100%"
+                height="100%"
+                padding="21px"
+                display="flex"
+                flexDirection="column"
+                justifyContent="space-between"
+              >
+                <Box></Box>
+                <Box display="flex" flexDirection="column" alignItems="flex-end" rowGap="15px">
+                  <Image
+                    src={bizChart}
+                    alt="bizChart"
+                    style={{ maxWidth: '100%', height: 'auto' }}
+                    data-aos="fade-up"
+                    data-aos-delay="300"
+                  />
+                  <Image
+                    src={bizFinance}
+                    alt="bizFinance"
+                    style={{ maxWidth: '100%', height: 'auto' }}
+                    data-aos="fade-up"
+                    data-aos-delay="300"
+                  />
+                </Box>
+              </Box>
+            </Box>
           </Grid>
           <Grid item xs={12} lg={6}>
             <Box display="flex" flexDirection="column" rowGap="40px">

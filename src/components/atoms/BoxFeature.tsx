@@ -60,7 +60,7 @@ export const BoxFeature: React.FunctionComponent<IBoxFeatureProps & FeatureType>
           {title}
         </Typography>
         <Typography
-          variant="fs16"
+          variant="fs18"
           color={gray[600]}
           letterSpacing="0.32px"
           data-aos="fade-up"

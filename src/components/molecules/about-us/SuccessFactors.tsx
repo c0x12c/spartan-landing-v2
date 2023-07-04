@@ -25,6 +25,8 @@ export const SuccessFactors = () => {
             data-aos-delay="300"
           />
           <Typography
+            variant="fs18"
+            color={gray[600]}
             component={'p'}
             textAlign={'center'}
             maxWidth={{ lg: '818px', xs: '100%' }}
@@ -101,7 +103,9 @@ const ListItem: React.FC<ListItemProps> = ({ icon, title, description }) => {
       <Typography variant="fs18" color={gray[900]} fontWeight={600} className="title">
         {title}
       </Typography>
-      <Typography variant="fs16">{description}</Typography>
+      <Typography variant="fs16" color={gray[600]}>
+        {description}
+      </Typography>
     </Box>
   );
 };

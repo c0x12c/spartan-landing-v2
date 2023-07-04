@@ -56,12 +56,12 @@ export const Footer: React.FunctionComponent<IFooterProps> = () => {
   ));
 
   const renderSubMenu = (data: ServiceType[] | AboutType[] | HelpType[]) => {
-    return data.map((item, index) => {
+    return data.map((item) => {
       const { href, hash } = item as ServiceType & AboutType;
       const link = href ? href : `/services#${hash}`;
       return (
         <Link key={item.id} href={link} scroll={false}>
-          <Typography variant="fs16" color={gray[300]}>
+          <Typography variant="fs18" color={gray[300]}>
             {item.label}
           </Typography>
         </Link>
@@ -73,7 +73,7 @@ export const Footer: React.FunctionComponent<IFooterProps> = () => {
     return (
       <Box key={item.label}>
         <Typography
-          variant="fs40"
+          variant="fs24"
           sx={{ color: base.white }}
           data-aos="fade-up"
           data-aos-delay="200"
@@ -114,7 +114,7 @@ export const Footer: React.FunctionComponent<IFooterProps> = () => {
           <Box
             display="flex"
             flexDirection={{ lg: 'row', xs: 'column' }}
-            alignItems={{ lg: 'center', xs: 'flex-start' }}
+            // alignItems={{ lg: 'center', xs: 'flex-start' }}
             justifyContent="space-between"
             pb="44px"
             borderBottom="1px solid"
@@ -124,7 +124,7 @@ export const Footer: React.FunctionComponent<IFooterProps> = () => {
           >
             <Box maxWidth={{ lg: '397px', xs: '100%' }}>
               <Typography
-                variant="fs40"
+                variant="fs24"
                 color={base.white}
                 letterSpacing="-0.8px"
                 component="h3"

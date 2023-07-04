@@ -33,8 +33,8 @@ export const LifeSpartanBanner: React.FunctionComponent<ILifeSpartanBannerProps>
                   </Typography>
                 </Typography>
                 <Typography
-                  variant="fs16"
-                  color={gray[500]}
+                  variant="fs18"
+                  color={gray[600]}
                   maxWidth="700px"
                   data-aos="fade-up"
                   data-aos-delay="300"
