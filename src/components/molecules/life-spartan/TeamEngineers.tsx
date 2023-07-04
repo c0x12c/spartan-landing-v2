@@ -43,8 +43,8 @@ export const TeamEngineers: React.FunctionComponent<ITeamEngineersProps> = () =>
         </Box>
       </Container>
       <Box display="flex" flexDirection={'column'} gap="24px">
-        <Image src={team1} alt="team1" style={{ maxWidth: '100%', height: 'auto' }} />
-        <Image src={team2} alt="team2" style={{ maxWidth: '100%', height: 'auto' }} />
+        <Image src={team1} alt="team1" style={{ width: '100%', height: 'auto' }} />
+        <Image src={team2} alt="team2" style={{ width: '100%', height: 'auto' }} />
       </Box>
     </Box>
   );
