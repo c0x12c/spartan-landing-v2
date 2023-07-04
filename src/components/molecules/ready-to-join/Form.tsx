@@ -10,7 +10,7 @@ export const ReadyToJoinForm: React.FunctionComponent<IReadyToJoinFormProps> = (
   const isMobile = useBreakpoint(BreakPoints.MD);
 
   return (
-    <Box mb="44px">
+    <Box mb="44px" id="join-form">
       <Container>
         <Box
           display="flex"
@@ -22,12 +22,10 @@ export const ReadyToJoinForm: React.FunctionComponent<IReadyToJoinFormProps> = (
             <Box display="flex" flexDirection="column" gap="24px">
               <Typography variant="fs18" color={gray[600]}>
                 Have a question about our services or want to get started on your design project?
-                We&apos;re here to help!
-              </Typography>
-              <Typography variant="fs18" color={gray[600]}>
-                Fill out the contact form below and one of our team members will get back to you
-                within 24 hours. <br /> Alternatively, you can reach out to us via phone or email
-                using the contact information provided below. We can&apos;t wait to hear from you!
+                We&apos;re here to help! <br /> Fill out the contact form below and one of our team
+                members will get back to you within 24 hours. <br /> Alternatively, you can reach
+                out to us via phone or email using the contact information provided below. We
+                can&apos;t wait to hear from you!
               </Typography>
             </Box>
           </Box>

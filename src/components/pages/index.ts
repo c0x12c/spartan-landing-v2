@@ -3,3 +3,4 @@ export { AboutUsPage } from './AboutUsPage';
 export { LifeSpartanPage } from './LifeSpartanPage';
 export { InternshipPage } from './InternshipPage';
 export { ReadyToJoinPage } from './ReadyToJoinPage';
+export { ContactUsPage } from './ContactUsPage';

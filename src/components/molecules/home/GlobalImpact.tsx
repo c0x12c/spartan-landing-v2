@@ -38,7 +38,7 @@ export const GlobalImpact: React.FunctionComponent<IGlobalImpactProps> = () => {
             </Box>
             <Box display="flex" gap="32px">
               <Link
-                href="/contact#submit-form"
+                href="/contact-us#submit-form"
                 scroll={false}
                 data-aos="fade-right"
                 data-aos-delay="200"
