@@ -193,7 +193,7 @@ const createThemeByMode = (): Theme => {
         fontStyle: 'normal',
       },
       fs14: {
-        fontSize: '16px',
+        fontSize: '14px',
         lineHeight: 1.42,
         fontWeight: 400,
       },
