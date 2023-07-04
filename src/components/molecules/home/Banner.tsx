@@ -33,7 +33,7 @@ export const HomeBanner = () => {
                 </Typography>
               </Typography>
               <Typography
-                variant="fs16"
+                variant="fs18"
                 color={gray[300]}
                 maxWidth="700px"
                 data-aos="fade-up"

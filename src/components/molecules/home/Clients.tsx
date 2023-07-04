@@ -66,7 +66,7 @@ export const Clients: React.FunctionComponent<IClientsProps> = () => {
               <Typography variant="fs40" color={gray[900]} letterSpacing="-2px">
                 {item.dev}+
               </Typography>
-              <Typography variant="fs16" fontWeight={600} color={gray[700]}>
+              <Typography variant="fs18" fontWeight={600} color={gray[700]}>
                 Dev in team
               </Typography>
             </Box>
@@ -80,7 +80,7 @@ export const Clients: React.FunctionComponent<IClientsProps> = () => {
               <Typography variant="fs40" color={gray[900]} letterSpacing="-2px">
                 {item.designer}
               </Typography>
-              <Typography variant="fs16" fontWeight={600} color={gray[700]}>
+              <Typography variant="fs18" fontWeight={600} color={gray[700]}>
                 Designer in team
               </Typography>
             </Box>
@@ -97,8 +97,8 @@ export const Clients: React.FunctionComponent<IClientsProps> = () => {
               {item.quote.title}
             </Typography>
             <Typography
-              variant="fs16"
-              color={gray[500]}
+              variant="fs18"
+              color={gray[600]}
               mb="26px"
               component="p"
               data-aos="fade-up"

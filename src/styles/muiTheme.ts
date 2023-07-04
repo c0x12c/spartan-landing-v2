@@ -204,7 +204,7 @@ const createThemeByMode = (): Theme => {
       },
       fs18: {
         fontSize: '18px',
-        lineHeight: 1,
+        lineHeight: 1.5,
         fontWeight: 400,
       },
       fs20: {

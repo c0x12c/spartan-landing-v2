@@ -45,6 +45,8 @@ export const Founders = () => {
               />
             </Box>
             <Typography
+              variant="fs18"
+              color={gray[600]}
               width={{ md: '435px', xs: '100%' }}
               textAlign={{ xs: 'center', md: 'start' }}
               data-aos="fade-up"
