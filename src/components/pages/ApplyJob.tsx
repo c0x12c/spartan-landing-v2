@@ -1,3 +1,5 @@
+import { MainTemplate } from '../templates';
+
 export const ApplyJobPage = () => {
-  return <h1>jrkdfdk</h1>;
+  return <MainTemplate></MainTemplate>;
 };
