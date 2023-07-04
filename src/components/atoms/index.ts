@@ -20,3 +20,5 @@ export { CardHorizontal } from './CardHorizontal';
 export { LocationMap } from './Map';
 export { GetInTouch } from './GetInTouch';
 export { InputWButton } from './InputWButton';
+export { BoxFeature } from './BoxFeature';
+export { CardFeature } from './CardFeature';

@@ -45,6 +45,13 @@ const SEOPages: ISEOPages = {
     metaImage: '',
     slug: '/case-study/volta',
   },
+  [EPages.LIFE_SPARTAN]: {
+    title: 'c0x12c - Life of Spartan',
+    description: 'c0x12c - Life of Spartan',
+    keywords: 'c0x12c, Life of Spartan',
+    metaImage: '',
+    slug: '/case-study/volta',
+  },
 };
 
 export default SEOPages;
