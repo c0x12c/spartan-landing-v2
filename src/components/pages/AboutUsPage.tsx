@@ -1,6 +1,14 @@
 import React from 'react';
-import { MainTemplate } from '../templates';
-import { AboutUsBanner } from '../molecules';
+import { MainTemplate } from '../templates/MainTemplate';
+import { Box } from '@mui/material';
+import {
+  AboutUsBanner,
+  Description,
+  EmpowerTech,
+  SuccessFactors,
+  Uniqueness,
+  Founders,
+} from '../molecules/about-us';
 
 type Props = {
   children?: React.ReactNode;
@@ -9,7 +17,14 @@ type Props = {
 export const AboutUsPage: React.FC<Props> = () => {
   return (
     <MainTemplate>
-      <AboutUsBanner />
+      <Box display={'flex'} flexDirection={'column'} gap={'64px'}>
+        <AboutUsBanner />
+        <Description />
+        <SuccessFactors />
+        <Uniqueness />
+        <Founders />
+        <EmpowerTech />
+      </Box>
     </MainTemplate>
   );
 };

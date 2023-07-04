@@ -5,10 +5,12 @@ export const base = {
 };
 
 export const gray = {
+  15: '#0000000d',
   25: '#FCFCFC',
   50: '#FAFAFA',
   60: '#757B8A',
   70: '#7D8387',
+  75: '#EFEFEF',
   100: '#F4F4F5',
   200: '#E4E4E7',
   300: '#D1D1D6',
