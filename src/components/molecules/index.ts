@@ -32,6 +32,10 @@ export { ContactUsForm } from './contact-us/Form';
 export { ContactInfo } from './contact-us/Info';
 export { AroundTheWorld } from './contact-us/AroundTheWorld';
 
+//CASE-STUDY
+export { CaseStudyBanner } from './case-study/home/Banner';
+export { CaseStudies } from './case-study/home/CaseStudies';
+
 //CASE-STUDY-VOLTA
 export { CaseStudyVoltaBanner } from './case-study/volta/Banner';
 export { VoltaStory } from './case-study/volta/Story';
