@@ -1,7 +1,13 @@
 import * as React from 'react';
 import { MainTemplate } from '../templates';
 import { Box } from '@mui/material';
-import { CaseStudyVoltaBanner, Top100Coins, VoltaStory, VoltaWeDo } from '../molecules';
+import {
+  CaseStudyVoltaBanner,
+  Top100Coins,
+  VoltaStory,
+  VoltaTechStacks,
+  VoltaWeDo,
+} from '../molecules';
 
 interface ICaseStudyVoltaPageProps {}
 
@@ -13,6 +19,7 @@ export const CaseStudyVoltaPage: React.FunctionComponent<ICaseStudyVoltaPageProp
         <VoltaStory />
         <Top100Coins />
         <VoltaWeDo />
+        <VoltaTechStacks />
       </Box>
     </MainTemplate>
   );
