@@ -13,7 +13,7 @@ export const InternshipForm: React.FunctionComponent<IInternshipFormProps> = () 
   const isMobile = useBreakpoint(BreakPoints.MD);
 
   return (
-    <Box mb="44px">
+    <Box mb="44px" id="internship-form">
       <Container>
         <Box
           display="flex"
@@ -61,7 +61,13 @@ export const InternshipForm: React.FunctionComponent<IInternshipFormProps> = () 
             flexDirection="column"
             gap="44px"
           >
-            <Typography component="h2" variant="fs48" color={gray[850]}>
+            <Typography
+              component="h2"
+              variant="fs48"
+              color={gray[850]}
+              data-aos="fade-up"
+              data-aos-delay="200"
+            >
               Submit form
             </Typography>
             <Box component={'form'} display="flex" flexDirection="column" gap="32px">
