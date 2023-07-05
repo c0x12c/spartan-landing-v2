@@ -4,13 +4,13 @@ import { ArrowIcon, Container, TextFieldWithLabel } from '@/components/atoms';
 import { BreakPoints, useBreakpoint } from '@/hooks';
 import { gray } from '@/styles/colors';
 
-interface IReadyToJoinFormProps {}
+interface IContactUsFormProps {}
 
-export const ReadyToJoinForm: React.FunctionComponent<IReadyToJoinFormProps> = () => {
+export const ContactUsForm: React.FunctionComponent<IContactUsFormProps> = () => {
   const isMobile = useBreakpoint(BreakPoints.MD);
 
   return (
-    <Box mb="44px" id="join-form">
+    <Box mb="44px" id="contact-form">
       <Container>
         <Box
           display="flex"

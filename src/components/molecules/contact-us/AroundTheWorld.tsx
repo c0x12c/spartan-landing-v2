@@ -1,17 +1,18 @@
 import * as React from 'react';
 import { Box, Button, Grid, Typography } from '@mui/material';
-import { ArrowIcon, Container, LocationMap, SubTitle, Title } from '@/components/atoms';
+import { ArrowIcon, Container, LocationMap, Title } from '@/components/atoms';
 import { gray, primary } from '@/styles/colors';
 import { BreakPoints, useBreakpoint } from '@/hooks';
 import Link from 'next/link';
 
-interface IGlobalImpactProps {}
+interface IAroundTheWorldProps {}
 
-export const GlobalImpact: React.FunctionComponent<IGlobalImpactProps> = () => {
+export const AroundTheWorld: React.FunctionComponent<IAroundTheWorldProps> = () => {
   const isMobile = useBreakpoint(BreakPoints.MD);
 
   return (
     <Box
+      mb="44px"
       bgcolor={primary[50]}
       py={{
         lg: '123px',
@@ -22,12 +23,7 @@ export const GlobalImpact: React.FunctionComponent<IGlobalImpactProps> = () => {
         <Grid container spacing={'44px'}>
           <Grid item xs={12} lg={5}>
             <Box display="flex" flexDirection="column" rowGap="24px" mb="48px">
-              <SubTitle text="Our offices" data-aos="fade-up" data-aos-delay="200" />
-              <Title
-                text="Seamless connectivity Global Impact"
-                data-aos="fade-up"
-                data-aos-delay="300"
-              />
+              <Title text="Our office around the world" data-aos="fade-up" data-aos-delay="300" />
               <Typography variant="fs18" color={gray[600]} data-aos="fade-up" data-aos-delay="500">
                 With Spartan, our clients experience the benefits of a highly skilled and dedicated
                 team of remote engineers from over four continents, ensuring seamless collaboration,

@@ -20,7 +20,7 @@ export type MenuItemType = {
 export const Header = () => {
   const { pathname } = useRouter();
   const isTransparent =
-    pathname !== '/contact' &&
+    pathname !== '/contact-us' &&
     pathname !== '/life-spartan' &&
     pathname !== '/internship-program' &&
     pathname !== '/ready-to-join';

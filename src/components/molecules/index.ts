@@ -25,3 +25,9 @@ export { InternshipForm } from './internship/Form';
 //READY-TO-JOIN
 export { ReadyToJoinBanner } from './ready-to-join/Banner';
 export { ReadyToJoinForm } from './ready-to-join/Form';
+
+//CONTACT-US
+export { ContactUsBanner } from './contact-us/Banner';
+export { ContactUsForm } from './contact-us/Form';
+export { ContactInfo } from './contact-us/Info';
+export { AroundTheWorld } from './contact-us/AroundTheWorld';

@@ -16,8 +16,8 @@ export const MenuDesktop = ({ menu, isTransparent }: MenuDesktopType) => {
   const goToContactPage = () => {
     router.push(
       {
-        pathname: '/contact',
-        hash: 'submit-form',
+        pathname: '/contact-us',
+        hash: 'contact-form',
       },
       undefined,
       { scroll: false }
