@@ -37,24 +37,33 @@ export const NextProject: React.FunctionComponent<INextProjectProps> = () => {
             mb="34px"
             maxWidth="802px"
             mx="auto"
+            data-aos="fade-up"
+            data-aos-delay="200"
           >
             If you intend to act, we are ready to help!
           </Typography>
-          <Button variant="contained" size={isMobile ? 'small' : 'medium'}>
-            Get in touch
-            <ArrowIcon />
-          </Button>
+          <Link
+            href="/contact-us#contact-form"
+            scroll={false}
+            data-aos="fade-up"
+            data-aos-delay="300"
+          >
+            <Button variant="contained" size={isMobile ? 'small' : 'medium'}>
+              Get in touch
+              <ArrowIcon />
+            </Button>
+          </Link>
         </Box>
-        <Box mt={isMobile ? '80px' : '60px'}>
+        <Box mt={isMobile ? '80px' : '60px'} data-aos="zoom-in" data-aos-delay="200">
           <Grid container borderRadius="20px" overflow="hidden" minHeight="430px">
-            <Grid item xs={7} alignSelf="stretch">
+            <Grid item xs={12} lg={7} alignSelf="stretch">
               <Image
                 src={NextProjectImage}
                 alt="NextProjectImage"
                 style={{ maxWidth: '100%', height: '100%' }}
               />
             </Grid>
-            <Grid item xs={5} alignSelf="stretch">
+            <Grid item xs={12} lg={5} alignSelf="stretch">
               <Box
                 height="100%"
                 bgcolor={base.black}

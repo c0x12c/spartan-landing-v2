@@ -35,7 +35,14 @@ export const VoltaTechStacks: React.FunctionComponent<IVoltaTechStacksProps> = (
     <Box py={!isTablet ? '140px' : '60px'} bgcolor={gray[100]}>
       <Container>
         <Box display="flex" flexDirection="column" gap="44px" maxWidth="736px" mx="auto">
-          <Typography variant="fs48" color={gray[900]} component="h2" textAlign="center">
+          <Typography
+            variant="fs48"
+            color={gray[900]}
+            component="h2"
+            textAlign="center"
+            data-aos={'zoom-in'}
+            data-aos-delay="200"
+          >
             Technology Stack
           </Typography>
           <Grid container spacing="14px">

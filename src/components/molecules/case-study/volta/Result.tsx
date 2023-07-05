@@ -17,6 +17,8 @@ export const VoltaResult: React.FunctionComponent<IVoltaResultProps> = () => {
         component="li"
         key={item.id}
         position="relative"
+        data-aos="fade-up"
+        data-aos-delay="200"
         sx={{
           '&:before': {
             position: 'absolute',
@@ -57,10 +59,25 @@ export const VoltaResult: React.FunctionComponent<IVoltaResultProps> = () => {
           alignItems="center"
         >
           <Grid item xs={12} lg={6}>
-            <Typography variant="fs48" color={base.black} mb="32px" component="h2">
+            <Typography
+              variant="fs48"
+              color={base.black}
+              mb="32px"
+              component="h2"
+              data-aos="fade-up"
+              data-aos-delay="200"
+            >
               The Result
             </Typography>
-            <Typography variant="fs18" color={base.grey} display="block" mb="44px" component="p">
+            <Typography
+              variant="fs18"
+              color={base.grey}
+              display="block"
+              mb="44px"
+              component="p"
+              data-aos="fade-up"
+              data-aos-delay="300"
+            >
               Volta Wallet is still in its early startup phase, but we have already achieved several
               milestones
             </Typography>

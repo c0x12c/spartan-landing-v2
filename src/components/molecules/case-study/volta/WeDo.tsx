@@ -15,7 +15,14 @@ export const VoltaWeDo: React.FunctionComponent<IVoltaWeDoProps> = () => {
 
   const renderDataService = DataWeDo.map((item) => {
     return (
-      <Box key={item.id} display="flex" flexDirection="column" gap="4px">
+      <Box
+        key={item.id}
+        display="flex"
+        flexDirection="column"
+        gap="4px"
+        data-aos={isTablet ? 'fade-up' : 'fade-left'}
+        data-aos-delay="200"
+      >
         <Box display="flex" alignItems="center" gap="24px">
           <Image src={checked} alt="checked" style={{ maxWidth: '100%', height: 'auto' }} />
           <Typography variant="fs18" fontWeight={600} color={gray[700]} maxWidth="675px">
@@ -41,7 +48,13 @@ export const VoltaWeDo: React.FunctionComponent<IVoltaWeDoProps> = () => {
         mb="76px"
         justifyContent={isTablet ? 'center' : 'flex-start'}
       >
-        <Typography variant={'fs48'} color={gray[800]} component="h2">
+        <Typography
+          variant={'fs48'}
+          color={gray[800]}
+          component="h2"
+          data-aos={isTablet ? 'fade-up' : 'fade-right'}
+          data-aos-delay="200"
+        >
           What we do
         </Typography>
         {!isTablet && (

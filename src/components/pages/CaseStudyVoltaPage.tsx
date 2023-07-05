@@ -23,7 +23,10 @@ export const CaseStudyVoltaPage: React.FunctionComponent<ICaseStudyVoltaPageProp
         <VoltaWeDo />
         <VoltaTechStacks />
         <VoltaResult />
-        <Download linkIos="/" linkAppStore="/" />
+        <Download
+          linkIos="https://apps.apple.com/us/app/nukey/id6443665676"
+          linkAppStore="https://play.google.com/store/apps/details?id=fi.nukey.android"
+        />
         <NextProject />
       </Box>
     </MainTemplate>
