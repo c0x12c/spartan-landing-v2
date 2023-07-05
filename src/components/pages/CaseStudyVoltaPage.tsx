@@ -9,6 +9,7 @@ import {
   VoltaTechStacks,
   VoltaWeDo,
 } from '../molecules';
+import { Download, NextProject } from '../atoms';
 
 interface ICaseStudyVoltaPageProps {}
 
@@ -22,6 +23,8 @@ export const CaseStudyVoltaPage: React.FunctionComponent<ICaseStudyVoltaPageProp
         <VoltaWeDo />
         <VoltaTechStacks />
         <VoltaResult />
+        <Download linkIos="/" linkAppStore="/" />
+        <NextProject />
       </Box>
     </MainTemplate>
   );
