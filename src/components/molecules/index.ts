@@ -36,3 +36,4 @@ export { AroundTheWorld } from './contact-us/AroundTheWorld';
 export { CaseStudyVoltaBanner } from './case-study/volta/Banner';
 export { VoltaStory } from './case-study/volta/Story';
 export { Top100Coins } from './case-study/volta/Top100Coins';
+export { VoltaWeDo } from './case-study/volta/WeDo';
