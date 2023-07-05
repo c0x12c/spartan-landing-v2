@@ -31,3 +31,6 @@ export { ContactUsBanner } from './contact-us/Banner';
 export { ContactUsForm } from './contact-us/Form';
 export { ContactInfo } from './contact-us/Info';
 export { AroundTheWorld } from './contact-us/AroundTheWorld';
+
+//CASE-STUDY-VOLTA
+export { CaseStudyVoltaBanner } from './case-study/volta/Banner';
