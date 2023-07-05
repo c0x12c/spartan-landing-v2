@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { MainTemplate } from '../templates';
 import { Box } from '@mui/material';
-import { ContactInfo, ContactUsBanner, ContactUsForm } from '../molecules';
+import { AroundTheWorld, ContactInfo, ContactUsBanner, ContactUsForm } from '../molecules';
 
 interface IContactUsPageProps {}
 
@@ -12,6 +12,7 @@ export const ContactUsPage: React.FunctionComponent<IContactUsPageProps> = () =>
         <ContactUsBanner />
         <ContactUsForm />
         <ContactInfo />
+        <AroundTheWorld />
       </Box>
     </MainTemplate>
   );
