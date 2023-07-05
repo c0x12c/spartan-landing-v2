@@ -4,6 +4,7 @@ import { Box } from '@mui/material';
 import {
   CaseStudyVoltaBanner,
   Top100Coins,
+  VoltaResult,
   VoltaStory,
   VoltaTechStacks,
   VoltaWeDo,
@@ -20,6 +21,7 @@ export const CaseStudyVoltaPage: React.FunctionComponent<ICaseStudyVoltaPageProp
         <Top100Coins />
         <VoltaWeDo />
         <VoltaTechStacks />
+        <VoltaResult />
       </Box>
     </MainTemplate>
   );

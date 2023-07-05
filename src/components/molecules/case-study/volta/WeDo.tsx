@@ -37,7 +37,6 @@ export const VoltaWeDo: React.FunctionComponent<IVoltaWeDoProps> = () => {
       <Box
         display="flex"
         gap="48px"
-        width="100%"
         py="24.5px"
         mb="76px"
         justifyContent={isTablet ? 'center' : 'flex-start'}
@@ -47,16 +46,16 @@ export const VoltaWeDo: React.FunctionComponent<IVoltaWeDoProps> = () => {
         </Typography>
         {!isTablet && (
           <Box display="flex" flex="1" alignItems="center" justifyContent="flex-start">
-            <Divider sx={{ bgcolor: gray[300], width: '100%', height: '1px' }} />
+            <Divider sx={{ bgcolor: gray[300], flex: '1', height: '1px' }} />
             <Image src={star} alt="star" />
           </Box>
         )}
       </Box>
       <Grid container alignItems="center" rowGap="32px">
-        <Grid item xs={12} lg={6} display="flex" justifyContent="center" alignItems="center">
-          <Image src={weDo} alt="we-do" style={{ maxWidth: '100%', height: 'auto' }} />
+        <Grid item xs={12} lg={5} display="flex" justifyContent="center" alignItems="center">
+          <Image src={weDo} alt="we-do" />
         </Grid>
-        <Grid item xs={12} lg={6}>
+        <Grid item xs={12} lg={7}>
           <Box display="flex" flexDirection="column" gap="24px">
             {renderDataService}
           </Box>

@@ -6,4 +6,4 @@ export { Socials, type SocialType } from './socials';
 export { Help, type HelpType } from './help';
 export { Features, type FeatureType } from './features';
 export { ProjectsHome } from './projects-home';
-export { DataWeDo, VoltaStacks } from './case-volta';
+export { DataWeDo, VoltaStacks, DataVoltaResult } from './case-volta';

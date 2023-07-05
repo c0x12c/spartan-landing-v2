@@ -59,3 +59,18 @@ export const VoltaStacks: StackType[] = [
   { id: 'tech-12', name: '[Kubernetes]', imgSrc: Kubernetes },
   { id: 'tech-13', name: '[Terraform]', imgSrc: TerraForm },
 ];
+
+export const DataVoltaResult = [
+  {
+    id: 'result-1',
+    text: 'Established a robust backend and infrastructure that is easily monitored and maintained',
+  },
+  {
+    id: 'result-2',
+    text: 'Created attractive and user-friendly mobile applications with responsive performance.',
+  },
+  {
+    id: 'result-3',
+    text: 'Developed a tool for conducting promotional campaigns and collaborating with sponsors or partners',
+  },
+];
