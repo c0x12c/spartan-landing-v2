@@ -31,3 +31,11 @@ export { ContactUsBanner } from './contact-us/Banner';
 export { ContactUsForm } from './contact-us/Form';
 export { ContactInfo } from './contact-us/Info';
 export { AroundTheWorld } from './contact-us/AroundTheWorld';
+
+//CASE-STUDY-VOLTA
+export { CaseStudyVoltaBanner } from './case-study/volta/Banner';
+export { VoltaStory } from './case-study/volta/Story';
+export { Top100Coins } from './case-study/volta/Top100Coins';
+export { VoltaWeDo } from './case-study/volta/WeDo';
+export { VoltaTechStacks } from './case-study/volta/Stacks';
+export { VoltaResult } from './case-study/volta/Result';
