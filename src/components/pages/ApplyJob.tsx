@@ -1,5 +1,5 @@
 import { Box } from '@mui/material';
-import { Banner, HiringProcess, Vacancies } from '../molecules/apply-job';
+import { Banner, HiringProcess, Quotes, Vacancies } from '../molecules/apply-job';
 import { MainTemplate } from '../templates';
 
 export const ApplyJobPage = () => {
@@ -9,6 +9,7 @@ export const ApplyJobPage = () => {
         <Banner />
         <Vacancies />
         <HiringProcess />
+        <Quotes />
       </Box>
     </MainTemplate>
   );

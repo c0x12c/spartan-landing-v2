@@ -8,21 +8,37 @@ const HiringProcess = () => {
   return (
     <Box p={'120px 0'} bgcolor={gray[50]}>
       <Container>
-        <Box display={'flex'} flexDirection={'column'} gap={'24px'} maxWidth={'50%'} mb={'64px'}>
+        <Box
+          display={'flex'}
+          flexDirection={'column'}
+          gap={'24px'}
+          maxWidth={{ lg: '50%', xs: '100%' }}
+          mb={'64px'}
+        >
           <SubTitle text="Process of work" />
           <Title text="Rigorous screening for 1% elite engineers" />
-          <Typography width={'576px'} variant="fs18">
+          <Typography width={'576px'} variant="fs18" maxWidth={'100%'}>
             Drawing from our extensive experience interviewing candidates at renowned tech giants
             such as Google, Facebook, Uber, and Amazon
           </Typography>
         </Box>
-        <Box display={'flex'} gap={'60px'} alignItems={'center'} flexDirection={'column'}>
+        <Box
+          display={'flex'}
+          gap={'60px'}
+          alignItems={'center'}
+          flexDirection={{ lg: 'row', xs: 'column' }}
+        >
           <Image
             src={HiringProcessImage}
             alt="Hiring process image"
-            style={{ maxWidth: 'calc((100% - 60px)/ 2)' }}
+            style={{ width: '100%', height: 'auto' }}
           />
-          <Box display={'flex'} flexDirection={'column'} gap={'28px'}>
+          <Box
+            display={'flex'}
+            flexDirection={'column'}
+            gap={'28px'}
+            sx={{ maxWidth: { lg: 'calc((100% - 60px)/ 2)', xs: '100%' } }}
+          >
             <ListItem
               number={'01'}
               title={'Resume Review'}
