@@ -1,13 +1,14 @@
 import React from 'react';
-import { Typography, Box } from '@mui/material';
+import { Typography, Box, Button, Grid } from '@mui/material';
 import { base, gray, primary } from '@/styles/colors';
 import { ExpandMore } from '@mui/icons-material';
-import { ServiceType } from '@/constants/services';
-import { AboutType } from '@/constants/about';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { MenuItemType } from '@/components/molecules';
 import { ArrowIcon } from '@/components/atoms';
+import ai from '@/assets/images/icons/ai.png';
+import Image from 'next/image';
+import { Services } from '@/constants';
 
 type MenuItemDesktopType = {
   item: MenuItemType;
@@ -92,6 +93,124 @@ const SubMenu = ({ item }: Pick<MenuItemDesktopType, 'item'>) => {
   }
 
   const isServices = item.label === 'Services';
+
+  const submenuCareers = (item.subItems ?? []).map((subItem, subIndex) => {
+    const { href } = subItem;
+    return (
+      <Box
+        key={subItem.id}
+        component="li"
+        borderBottom="1px solid"
+        borderColor={gray[400]}
+        p="4px 10px 8px"
+        mb={subIndex === (item.subItems || []).length - 1 ? 0 : '17px'}
+        sx={{
+          '&:hover': {
+            '& .submenu-title': {
+              color: primary[500],
+              transition: 'color .5s',
+            },
+            '& .submenu-icon': {
+              transform: 'translateX(5px)',
+              transition: 'transform .5s',
+            },
+          },
+        }}
+      >
+        <Link href={href} scroll={false}>
+          <Box
+            display="flex"
+            justifyContent="space-between"
+            alignItems="center"
+            sx={{
+              textDecoration: 'none',
+            }}
+          >
+            <Typography
+              className="submenu-title"
+              variant="fs16"
+              sx={{ color: base.black, fontWeight: 700, paddingRight: '30px' }}
+            >
+              {subItem.label}
+            </Typography>
+            <Box className="submenu-icon">
+              <ArrowIcon color={base.black} />
+            </Box>
+          </Box>
+        </Link>
+      </Box>
+    );
+  });
+
+  const renderServices = Services.map((item) => {
+    return (
+      <Grid item key={item.id} xs={6} lg={4}>
+        <Link href={item.href}>
+          <Box display="flex" gap="12px">
+            <Image src={item.icon} alt={item.label} />
+            <Box display="flex" flexDirection="column" gap="12px">
+              <Typography variant="fs14" color={gray[900]} fontWeight="600" component="h4">
+                {item.label}
+              </Typography>
+              <Typography variant="fs14" fontSize="12px" color={gray[500]} component="p">
+                {item.content}
+              </Typography>
+            </Box>
+          </Box>
+        </Link>
+      </Grid>
+    );
+  });
+
+  const submenuServices = (
+    <Box display="flex">
+      <Box flex="1" p="24px 24px 64px 24px" display="flex" flexDirection="column" gap="40px">
+        <Typography variant="fs24" color={gray[900]} fontWeight="600" component="h3">
+          Service
+        </Typography>
+        <Grid container columnSpacing="32px" rowSpacing="56px">
+          {renderServices}
+        </Grid>
+      </Box>
+      <Box
+        width="302px"
+        p="24px"
+        sx={{
+          background: '#12144F',
+        }}
+      >
+        <Box display="flex" justifyContent="center" mb="50px">
+          <Image src={ai} alt="ai" />
+        </Box>
+        <Box mb="16px">
+          <Typography
+            variant="fs16"
+            color={base.white}
+            fontWeight="600"
+            lineHeight="1.8"
+            component="h3"
+            mb="8px"
+          >
+            Artificial Intelligence
+          </Typography>
+          <Typography variant="fs16" color={gray[100]} fontSize="12px" component="p">
+            We help enterprises navigating the best of the digital
+          </Typography>
+        </Box>
+        <Link href="/contact-us#contact-form" scroll={false}>
+          <Button
+            variant="contained"
+            sx={{
+              py: '12px',
+            }}
+          >
+            Contact now
+          </Button>
+        </Link>
+      </Box>
+    </Box>
+  );
+
   return (
     <Box
       className={`submenu ${item.label.toLowerCase()}`}
@@ -101,62 +220,19 @@ const SubMenu = ({ item }: Pick<MenuItemDesktopType, 'item'>) => {
       left={isServices ? 0 : '-100%'}
       right={isServices ? 0 : 'unset'}
       bgcolor={base.white}
-      p={'20px 32px 32px'}
+      p={isServices ? 0 : '20px 32px 32px'}
       width={isServices ? '90vw' : '417px'}
-      maxWidth={isServices ? '1208px' : '100%'}
+      maxWidth={isServices ? '1208px' : 'unset'}
+      borderRadius="8px"
+      boxShadow={'0px 8px 32px 0px rgba(0, 0, 0, 0.12)'}
+      overflow="hidden"
       sx={{
         visibility: 'hidden',
         opacity: 0,
         transition: 'all .5s',
       }}
     >
-      {(item.subItems ?? []).map((subItem, subIndex) => {
-        const { href } = subItem;
-        return (
-          <Box
-            key={subItem.id}
-            component="li"
-            borderBottom="1px solid"
-            borderColor={gray[400]}
-            p="4px 10px 8px"
-            mb={subIndex === (item.subItems || []).length - 1 ? 0 : '17px'}
-            sx={{
-              '&:hover': {
-                '& .submenu-title': {
-                  color: primary[500],
-                  transition: 'color .5s',
-                },
-                '& .submenu-icon': {
-                  transform: 'translateX(5px)',
-                  transition: 'transform .5s',
-                },
-              },
-            }}
-          >
-            <Link href={href} scroll={false}>
-              <Box
-                display="flex"
-                justifyContent="space-between"
-                alignItems="center"
-                sx={{
-                  textDecoration: 'none',
-                }}
-              >
-                <Typography
-                  className="submenu-title"
-                  variant="fs16"
-                  sx={{ color: base.black, fontWeight: 700, paddingRight: '30px' }}
-                >
-                  {subItem.label}
-                </Typography>
-                <Box className="submenu-icon">
-                  <ArrowIcon color={base.black} />
-                </Box>
-              </Box>
-            </Link>
-          </Box>
-        );
-      })}
+      {isServices ? submenuServices : submenuCareers}
     </Box>
   );
 };
