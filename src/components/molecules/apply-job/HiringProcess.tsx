@@ -1,5 +1,5 @@
 import { Container, SubTitle, Title } from '@/components/atoms';
-import { Box, Typography } from '@mui/material';
+import { Box, List, Typography } from '@mui/material';
 import HiringProcessImage from '../../../assets/images/apply-job/hiring-process-image.svg';
 import Image from 'next/image';
 import { base, gray, primary } from '@/styles/colors';
@@ -33,12 +33,7 @@ const HiringProcess = () => {
             alt="Hiring process image"
             style={{ width: '100%', height: 'auto' }}
           />
-          <Box
-            display={'flex'}
-            flexDirection={'column'}
-            gap={'28px'}
-            sx={{ maxWidth: { lg: 'calc((100% - 60px)/ 2)', xs: '100%' } }}
-          >
+          <List sx={{ maxWidth: { lg: 'calc((100% - 60px)/ 2)', xs: '100%' } }}>
             <ListItem
               number={'01'}
               title={'Resume Review'}
@@ -58,8 +53,9 @@ const HiringProcess = () => {
               number={'04'}
               title={'Decision Making'}
               description="Following the interviews, we provide constructive feedback to the candidate, highlighting their strengths and areas for improvement. If the outcome is positive, we extend an offer letter."
+              isLast
             />
-          </Box>
+          </List>
         </Box>
       </Container>
     </Box>
@@ -70,23 +66,32 @@ const ListItem = ({
   number,
   title,
   description,
+  isLast,
 }: {
   number: string;
   title: string;
   description: string;
+  isLast?: boolean;
 }) => {
   return (
-    <Box position="relative" p={'16px'}>
+    <Box position="relative" p={{ xs: 0, lg: '0 16px' }} pb={{ xs: '44px' }}>
       <Box
-        position="absolute"
-        left="20px"
-        top="0"
-        bottom="0"
-        width="2px"
-        bgcolor={primary[500]}
-        zIndex={-1}
-      ></Box>
-      <Box display="flex" p={'0 16px'}>
+        display="flex"
+        p={{ xs: 0, lg: '0 16px' }}
+        sx={{
+          ':before': {
+            content: "''",
+            position: 'absolute',
+            left: { xs: '20px', lg: '51px' },
+            top: 0,
+            bottom: 0,
+            width: '2px',
+            borderStyle: 'dashed',
+            borderColor: primary[500],
+            borderWidth: isLast ? 0 : '0 0 0 2px',
+          },
+        }}
+      >
         <Typography
           variant="fs18"
           fontWeight={600}
