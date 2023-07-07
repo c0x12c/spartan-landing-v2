@@ -16,6 +16,7 @@ export enum EPages {
   LIFE_SPARTAN = 'life-spartan',
   INTERNSHIP = 'internship-program',
   READY_TO_JOIN = 'ready-to-join',
+  SPARTAN_OPERATES = 'how-spartan-operates',
 }
 
 export type ISEOPages = {

@@ -66,6 +66,13 @@ const SEOPages: ISEOPages = {
     metaImage: '',
     slug: '/ready-to-join',
   },
+  [EPages.SPARTAN_OPERATES]: {
+    title: 'c0x12c - How Spartan Operates',
+    description: 'c0x12c - How Spartan Operates',
+    keywords: 'c0x12c, How Spartan Operates',
+    metaImage: '',
+    slug: '/how-spartan-operates',
+  },
 };
 
 export default SEOPages;
