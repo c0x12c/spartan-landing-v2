@@ -7,3 +7,4 @@ export { ReadyToJoinPage } from './ReadyToJoinPage';
 export { ContactUsPage } from './ContactUsPage';
 export { CaseStudyVoltaPage } from './CaseStudyVoltaPage';
 export { CaseStudy } from './CaseStudy';
+export { CaseStudyLiquidityPage } from './CaseStudyLiquidityPage';
