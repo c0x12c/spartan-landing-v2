@@ -42,7 +42,7 @@ const HiringProcess = () => {
             <ListItem
               number={'01'}
               title={'Resume Review'}
-              description="We meticulously review each candidate`s resume, paying attention to their skills, experiences, and achievements. We go beyond the surface level and dive deep into understanding their potential to contribute to our team"
+              description="We meticulously review each candidate's resume, paying attention to their skills, experiences, and achievements. We go beyond the surface level and dive deep into understanding their potential to contribute to our team"
             />
             <ListItem
               number={'02'}
@@ -76,30 +76,48 @@ const ListItem = ({
   description: string;
 }) => {
   return (
-    <Box display="flex" p={'16px'}>
-      <Typography
-        variant="fs18"
-        fontWeight={600}
-        minWidth={'40px'}
+    <Box position="relative" p={'16px'}>
+      <Box
+        position="absolute"
+        left="20px"
+        top="0"
+        bottom="0"
+        width="2px"
         bgcolor={primary[500]}
-        component={'p'}
-        height={'40px'}
-        color={base.white}
-        borderRadius={'40px'}
-        display={'flex'}
-        justifyContent={'center'}
-        alignItems={'center'}
-        mr={'20px'}
-      >
-        {number}
-      </Typography>
-      <Box>
-        <Typography variant="fs18" color={base.black} mb={'18px'} component={'p'} fontWeight={600}>
-          {title}
+        zIndex={-1}
+      ></Box>
+      <Box display="flex" p={'0 16px'}>
+        <Typography
+          variant="fs18"
+          fontWeight={600}
+          minWidth={'40px'}
+          bgcolor={primary[500]}
+          component={'p'}
+          height={'40px'}
+          color={base.white}
+          borderRadius={'40px'}
+          display={'flex'}
+          justifyContent={'center'}
+          alignItems={'center'}
+          mr={'20px'}
+          zIndex={1}
+        >
+          {number}
         </Typography>
-        <Typography variant="fs18" component={'p'}>
-          {description}
-        </Typography>
+        <Box>
+          <Typography
+            variant="fs18"
+            color={base.black}
+            mb={'18px'}
+            component={'p'}
+            fontWeight={600}
+          >
+            {title}
+          </Typography>
+          <Typography variant="fs18" component={'p'}>
+            {description}
+          </Typography>
+        </Box>
       </Box>
     </Box>
   );

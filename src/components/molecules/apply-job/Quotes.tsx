@@ -1,189 +1,155 @@
-import { useState } from 'react';
-import { ArrowIcon, Container } from '@/components/atoms';
-import QuoteTag from '@/components/atoms/QuoteTag';
-import KhoaTran from '@/assets/images/apply-job/KhoaTran.jpg';
-import { Box, Button, Typography } from '@mui/material';
+import React from 'react';
+import { Container, Title } from '@/components/atoms';
+import { Box, Divider, IconButton, Typography } from '@mui/material';
 import Image from 'next/image';
-import { QuoteType } from '@/constants/quotes';
 import { base, gray, primary } from '@/styles/colors';
-import Arrow from '@/assets/images/icons/arrow.svg';
 import { quotes } from '@/constants/quotes';
 import Commas from '@/assets/images/apply-job/comas.svg';
+import { ProjectsHome } from '@/constants';
+import ArrowBackIcon from '@mui/icons-material/ArrowBack';
+import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
+import Slider from 'react-slick';
+import Star from '@/assets/images/icons/star.svg';
+import { BreakPoints, useBreakpoint } from '@/hooks';
 
 const Quotes = () => {
-  const [currentQuoteIndex, setCurrentQuoteIndex] = useState(0);
-
-  const handleNextClick = () => {
-    if (currentQuoteIndex === quotes.length - 1) {
-      return;
-    }
-    setCurrentQuoteIndex((prevIndex) => prevIndex + 1);
+  const isMobile = useBreakpoint(BreakPoints.SM);
+  const slider = React.useRef<Slider | null>(null);
+  const settings = {
+    dots: false,
+    infinite: false,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: false,
   };
-
-  const handlePrevClick = () => {
-    if (currentQuoteIndex === 0) {
-      return;
-    }
-    setCurrentQuoteIndex((prevIndex) => prevIndex - 1);
-  };
-
-  const { img, title, text, author, authorPosition } = quotes[currentQuoteIndex];
-
-  return (
-    <Container>
-      <Quote
-        img={img}
-        title={title}
-        text={text}
-        author={author}
-        authorPosition={authorPosition}
-        onNextClick={handleNextClick}
-        onPrevClick={handlePrevClick}
-        isNextDisabled={currentQuoteIndex === quotes.length - 1}
-        isPrevDisabled={currentQuoteIndex === 0}
-      />
-    </Container>
-  );
-};
-
-interface QuoteProps extends QuoteType {
-  onNextClick: () => void;
-  onPrevClick: () => void;
-  isNextDisabled: boolean;
-  isPrevDisabled: boolean;
-}
-
-const Quote = ({
-  img,
-  title,
-  text,
-  author,
-  authorPosition,
-  onNextClick,
-  onPrevClick,
-  isNextDisabled,
-  isPrevDisabled,
-}: QuoteProps) => {
-  return (
-    <Box
-      width="100%"
-      display="flex"
-      gap={{ xs: '40px', md: '92px' }}
-      flexDirection={{ xs: 'column', md: 'row' }}
-      paddingTop={'44px'}
-      paddingBottom={'88px'}
-      alignItems={'center'}
-    >
-      <Image
-        src={img}
-        alt={author}
-        style={{ width: '100%', borderRadius: '8px', height: 'auto' }}
-      />
+  const renderQuotes = quotes.map((item, index) => {
+    return (
       <Box
-        width={{ md: '78%', xs: '100%' }}
-        position="relative"
-        sx={{
-          '&::before': {
-            content: '""',
-            position: 'absolute',
-            top: { md: '50%', xs: '40%' },
-            left: '50%',
-            transform: 'translate(-50%, -50%)',
-            width: '152px',
-            height: '110px',
-            backgroundImage: `url(${Commas.src})`,
-            backgroundRepeat: 'no-repeat',
-            // backgroundSize: 'cover',
-            zIndex: -1,
-          },
-          //   '&::after': {
-          //     content: '""',
-          //     position: 'absolute',
-          //     top: '50%',
-          //     left: '50%',
-          //     transform: 'translate(-50%, -50%)',
-          //     width: '70px',
-          //     height: '70px',
-          //     background: primary[300],
-          //     borderRadius: '50%',
-          //     zIndex: -1,
-          //   },
-        }}
+        width="100%"
+        display="flex !important"
+        gap={{ xs: '40px', md: '92px' }}
+        flexDirection={{ xs: 'column', md: 'row' }}
+        paddingTop={'44px'}
+        paddingBottom={'88px'}
+        alignItems={'center'}
+        key={item.id}
       >
-        <Typography variant="fs18" color={gray[800]} fontWeight={600} mb="24px" component="p">
-          {title}
-        </Typography>
-        <Typography variant="fs18" component="p" marginBottom={'18px'}>
-          {text}
-        </Typography>
+        <Image
+          src={item.img}
+          alt={item.author}
+          style={{ maxWidth: '100%', borderRadius: '8px', height: 'auto', paddingLeft: '2px' }}
+        />
         <Box
-          display="flex"
-          justifyContent={{ md: 'space-between' }}
-          alignItems={'center'}
-          flexDirection={{ xs: 'column', md: 'row' }}
-          gap={{ xs: '20px', md: '0' }}
+          width={{ md: '78%', xs: '100%' }}
+          position="relative"
+          sx={{
+            '&::before': {
+              content: '""',
+              position: 'absolute',
+              top: { md: '50%', xs: '40%' },
+              left: '50%',
+              transform: 'translate(-50%, -50%)',
+              width: '152px',
+              height: '110px',
+              backgroundImage: `url(${Commas.src})`,
+              backgroundRepeat: 'no-repeat',
+              zIndex: -1,
+            },
+          }}
         >
-          <Box>
-            <Typography
-              component="p"
-              textAlign={{ xs: 'center', md: 'start' }}
-              variant="fs18"
-              color={gray[900]}
-              fontWeight={700}
-            >
-              {author}
-            </Typography>
-            <Typography
-              variant="fs20"
-              textAlign={{ xs: 'center', md: 'start' }}
-              component="p"
-              color={primary[400]}
-              fontWeight={500}
-            >
-              {authorPosition}
-            </Typography>
-          </Box>
+          <Typography variant="fs18" color={gray[800]} fontWeight={600} mb="24px" component="p">
+            {item.title}
+          </Typography>
+          <Typography variant="fs18" component="p" marginBottom={'18px'}>
+            {item.text}
+          </Typography>
+          <Box
+            display="flex"
+            justifyContent={{ md: 'space-between' }}
+            alignItems={'center'}
+            flexDirection={{ xs: 'column', md: 'row' }}
+            gap={{ xs: '20px', md: '0' }}
+          >
+            <Box>
+              <Typography
+                component="p"
+                textAlign={{ xs: 'center', md: 'start' }}
+                variant="fs18"
+                color={gray[900]}
+                fontWeight={700}
+              >
+                {item.author}
+              </Typography>
+              <Typography
+                variant="fs20"
+                textAlign={{ xs: 'center', md: 'start' }}
+                component="p"
+                color={primary[400]}
+                fontWeight={500}
+              >
+                {item.authorPosition}
+              </Typography>
+            </Box>
 
-          <Box display="flex" gap="20px">
-            <Button
-              onClick={onPrevClick}
-              disabled={isPrevDisabled}
-              sx={{
-                p: 0,
-                minWidth: '60px',
-                minHeight: '60px',
-                display: 'flex',
-                justifyContent: 'center',
-                alignItems: 'center',
-                border: '1px solid',
-                borderColor: isPrevDisabled ? gray[400] : primary[400],
-                borderRadius: '60px',
-                transform: 'scale(-1, 1)',
-              }}
-            >
-              <ArrowIcon color={isPrevDisabled ? gray[400] : primary[400]} width="30" height="30" />
-            </Button>
-            <Button
-              onClick={onNextClick}
-              disabled={isNextDisabled}
-              sx={{
-                p: 0,
-                minWidth: '60px',
-                minHeight: '60px',
-                display: 'flex',
-                justifyContent: 'center',
-                alignItems: 'center',
-                border: '1px solid',
-                borderColor: isNextDisabled ? gray[400] : primary[400],
-                borderRadius: '60px',
-              }}
-            >
-              <ArrowIcon color={isNextDisabled ? gray[400] : primary[400]} width="30" height="30" />
-            </Button>
+            <Box display="flex" gap="20px">
+              <IconButton
+                aria-label="back"
+                size="large"
+                onClick={() => slider?.current?.slickPrev()}
+                disabled={index === 0}
+                sx={{
+                  border: '1.62px solid',
+                  opacity: index === 0 ? 0.5 : 1,
+                  borderColor: index === 0 ? base.grey : primary[500],
+                  color: index === 0 ? base.grey : primary[500],
+                }}
+              >
+                <ArrowBackIcon fontSize="inherit" color="inherit" />
+              </IconButton>
+              <IconButton
+                aria-label="back"
+                size="large"
+                onClick={() => slider?.current?.slickNext()}
+                disabled={index == ProjectsHome.length - 1}
+                sx={{
+                  opacity: index == ProjectsHome.length - 1 ? 0.5 : 1,
+                  border: '1.62px solid',
+                  borderColor: index == ProjectsHome.length - 1 ? base.grey : primary[500],
+                  color: `${
+                    index == ProjectsHome.length - 1 ? base.grey : primary[500]
+                  } !important`,
+                }}
+              >
+                <ArrowForwardIcon fontSize="inherit" />
+              </IconButton>
+            </Box>
           </Box>
         </Box>
       </Box>
-    </Box>
+    );
+  });
+
+  return (
+    <Container>
+      <Box display={'flex'} alignItems={'center'}>
+        {!isMobile && (
+          <Box width={'100%'} display={'flex'} alignItems={'center'}>
+            <Image src={Star} alt="star" />
+            <Box component={Divider} width={'100%'} />
+          </Box>
+        )}
+
+        <Title
+          text="Sharing from a secret interview for Spartans around the world"
+          minWidth={{ sm: '635px', xs: '100%' }}
+          textAlign={{ sm: 'end', xs: 'start' }}
+        />
+      </Box>
+      <Slider ref={slider} {...settings}>
+        {renderQuotes}
+      </Slider>
+    </Container>
   );
 };
 
