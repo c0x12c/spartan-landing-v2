@@ -29,7 +29,7 @@ const SEOPages: ISEOPages = {
     description: 'c0x12c - Contact Us',
     keywords: 'c0x12c, Contact Us',
     metaImage: '',
-    slug: '/contact',
+    slug: '/contact-us',
   },
   [EPages.SERVICE]: {
     title: 'c0x12c - Services',
@@ -50,7 +50,21 @@ const SEOPages: ISEOPages = {
     description: 'c0x12c - Life of Spartan',
     keywords: 'c0x12c, Life of Spartan',
     metaImage: '',
-    slug: '/case-study/volta',
+    slug: '/life-spartan',
+  },
+  [EPages.INTERNSHIP]: {
+    title: 'c0x12c - Internship program',
+    description: 'c0x12c - Internship program',
+    keywords: 'c0x12c, Internship program',
+    metaImage: '',
+    slug: '/internship-program',
+  },
+  [EPages.READY_TO_JOIN]: {
+    title: 'c0x12c - Ready to join',
+    description: 'c0x12c - Ready to join',
+    keywords: 'c0x12c, Ready to join',
+    metaImage: '',
+    slug: '/ready-to-join',
   },
   [EPages.APPLY_JOB]: {
     title: 'c0x12c - Apply for job',

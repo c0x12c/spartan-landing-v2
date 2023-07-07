@@ -6,5 +6,5 @@ export type HelpType = {
 
 export const Help = [
   // { id: 'help-1', label: 'FAQs', href: '/' },
-  { id: 'help-2', label: 'Contact Us', href: '/contact' },
+  { id: 'help-2', label: 'Contact Us', href: '/contact-us' },
 ];

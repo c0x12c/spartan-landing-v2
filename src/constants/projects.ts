@@ -5,6 +5,12 @@ import liveCast from '@/assets/images/projects/live-cast.svg';
 import ursalive from '@/assets/images/projects/ursalive.svg';
 import voltaWallet from '@/assets/images/projects/volta-wallet.svg';
 import voltaWalletQuote from '@/assets/images/projects/quote-volta.png';
+import chargeFuzeQuote from '@/assets/images/projects/quote-chargefuze.png';
+import heruQuote from '@/assets/images/projects/quote-heru.png';
+import liquidityQuote from '@/assets/images/projects/quote-liquidity.png';
+import liveCastQuote from '@/assets/images/projects/quote-livecast.png';
+import ursaLiveQuote from '@/assets/images/projects/quote-ursalive.png';
+
 import voltaWalletUserImage from '@/assets/images/projects/volta-user.png';
 import { StaticImageData } from 'next/image';
 
@@ -52,12 +58,12 @@ export const Projects: ProjectType[] = [
     name: 'ChargeFuze',
     value: 'charge-fuze',
     imgSrc: chargeFuze,
-    href: '/',
+    href: '/case-study/charge-fuze',
     tags: ['Web Development'],
     dev: 14,
     designer: 2,
     quote: {
-      imgSrc: voltaWalletQuote,
+      imgSrc: chargeFuzeQuote,
       title: 'Spartan Is A Remarkable Team with Unmatched Expertise',
       content:
         'Working with the Spartan team to build our product has been an incredible experience. Their expertise, dedication, and technical skills have exceeded our expectations. We appreciate their proactive approach, attention to detail, and ability to deliver exceptional results. We are grateful for their support and look forward to continuing our partnership in future projects.',
@@ -76,7 +82,7 @@ export const Projects: ProjectType[] = [
     dev: 14,
     designer: 2,
     quote: {
-      imgSrc: voltaWalletQuote,
+      imgSrc: liquidityQuote,
       title: 'Spartan Is A Remarkable Team with Unmatched Expertise',
       content:
         'Working with the Spartan team to build our product has been an incredible experience. Their expertise, dedication, and technical skills have exceeded our expectations. We appreciate their proactive approach, attention to detail, and ability to deliver exceptional results. We are grateful for their support and look forward to continuing our partnership in future projects.',
@@ -89,13 +95,13 @@ export const Projects: ProjectType[] = [
     id: 'case-4',
     name: 'LiveCast',
     imgSrc: liveCast,
-    href: '/',
+    href: '/case-study/livecast',
     value: 'live-cast',
     tags: ['Web Development'],
     dev: 14,
     designer: 2,
     quote: {
-      imgSrc: voltaWalletQuote,
+      imgSrc: liveCastQuote,
       title: 'Spartan Is A Remarkable Team with Unmatched Expertise',
       content:
         'Working with the Spartan team to build our product has been an incredible experience. Their expertise, dedication, and technical skills have exceeded our expectations. We appreciate their proactive approach, attention to detail, and ability to deliver exceptional results. We are grateful for their support and look forward to continuing our partnership in future projects.',
@@ -109,12 +115,12 @@ export const Projects: ProjectType[] = [
     name: 'Ursalive',
     value: 'ursalive',
     imgSrc: ursalive,
-    href: '/',
+    href: '/case-study/ursalive',
     tags: ['Web Development'],
     dev: 14,
     designer: 2,
     quote: {
-      imgSrc: voltaWalletQuote,
+      imgSrc: ursaLiveQuote,
       title: 'Spartan Is A Remarkable Team with Unmatched Expertise',
       content:
         'Working with the Spartan team to build our product has been an incredible experience. Their expertise, dedication, and technical skills have exceeded our expectations. We appreciate their proactive approach, attention to detail, and ability to deliver exceptional results. We are grateful for their support and look forward to continuing our partnership in future projects.',
@@ -128,12 +134,12 @@ export const Projects: ProjectType[] = [
     name: 'Heru',
     value: 'heru',
     imgSrc: heru,
-    href: '/',
+    href: '/case-study/heru',
     tags: ['Web Development'],
     dev: 14,
     designer: 2,
     quote: {
-      imgSrc: voltaWalletQuote,
+      imgSrc: heruQuote,
       title: 'Spartan Is A Remarkable Team with Unmatched Expertise',
       content:
         'Working with the Spartan team to build our product has been an incredible experience. Their expertise, dedication, and technical skills have exceeded our expectations. We appreciate their proactive approach, attention to detail, and ability to deliver exceptional results. We are grateful for their support and look forward to continuing our partnership in future projects.',

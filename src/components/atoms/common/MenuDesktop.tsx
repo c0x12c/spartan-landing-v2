@@ -16,8 +16,8 @@ export const MenuDesktop = ({ menu, isTransparent }: MenuDesktopType) => {
   const goToContactPage = () => {
     router.push(
       {
-        pathname: '/contact',
-        hash: 'submit-form',
+        pathname: '/contact-us',
+        hash: 'contact-form',
       },
       undefined,
       { scroll: false }
@@ -42,7 +42,13 @@ export const MenuDesktop = ({ menu, isTransparent }: MenuDesktopType) => {
       <Box component="nav" display="flex" alignItems="center" gap="16px">
         {renderMenu}
       </Box>
-      <Button variant={isTransparent ? 'transparent' : 'contained'} onClick={goToContactPage}>
+      <Button
+        variant={isTransparent ? 'transparent' : 'contained'}
+        onClick={goToContactPage}
+        sx={{
+          padding: '14px 24px',
+        }}
+      >
         Contact us
         <ArrowIcon />
       </Button>

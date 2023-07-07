@@ -22,3 +22,7 @@ export { GetInTouch } from './GetInTouch';
 export { InputWButton } from './InputWButton';
 export { BoxFeature } from './BoxFeature';
 export { CardFeature } from './CardFeature';
+export { CardVertical } from './CardVertical';
+export { CustomTextField, TextFieldWithLabel } from './CustomTextField';
+export { Download } from './Download';
+export { NextProject } from './NextProject';
