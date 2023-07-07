@@ -2,6 +2,7 @@ export const base = {
   black: '#000000',
   white: '#FFFFFF',
   grey: '#636363',
+  red: '#F55D2D',
 };
 
 export const gray = {

@@ -15,6 +15,8 @@ export enum EPages {
   CASE_STUDY_VOLTA = 'case-study-volta',
   LIFE_SPARTAN = 'life-spartan',
   APPLY_JOB = 'apply-job',
+  INTERNSHIP = 'internship-program',
+  READY_TO_JOIN = 'ready-to-join',
 }
 
 export type ISEOPages = {

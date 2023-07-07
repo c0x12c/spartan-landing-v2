@@ -19,7 +19,11 @@ export type MenuItemType = {
 
 export const Header = () => {
   const { pathname } = useRouter();
-  const isTransparent = pathname !== '/contact' && pathname !== '/life-spartan';
+  const isTransparent =
+    pathname !== '/contact-us' &&
+    pathname !== '/life-spartan' &&
+    pathname !== '/internship-program' &&
+    pathname !== '/ready-to-join';
   const isTablet = useBreakpoint(BreakPoints.LG);
 
   const dataMenu: MenuItemType[] = [

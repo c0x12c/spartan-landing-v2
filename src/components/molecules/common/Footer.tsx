@@ -106,10 +106,12 @@ export const Footer: React.FunctionComponent<IFooterProps> = () => {
             <Link href="/">
               <Image src={LogoWhite} alt="Logo" />
             </Link>
-            <Button variant="contained" size={isMobile ? 'small' : 'medium'}>
-              Get in touch
-              <ArrowIcon />
-            </Button>
+            <Link href="/contact-us#contact-form" scroll={false}>
+              <Button variant="contained" size={isMobile ? 'small' : 'medium'}>
+                Get in touch
+                <ArrowIcon />
+              </Button>
+            </Link>
           </Box>
           <Box
             display="flex"
