@@ -3,7 +3,7 @@ import { FeatureType } from '@/constants/features';
 import { Box, Typography } from '@mui/material';
 import { BreakPoints, useBreakpoint } from '@/hooks';
 import Image from 'next/image';
-import { CardFeature } from './CardFeature';
+import { CardFeature } from './cards/CardFeature';
 import { base, gray } from '@/styles/colors';
 
 interface IBoxFeatureProps {

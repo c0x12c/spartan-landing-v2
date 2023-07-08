@@ -23,6 +23,7 @@ export type ProjectType = {
   tags: string[];
   dev: number;
   designer: number;
+  content: string;
   quote: {
     imgSrc: StaticImageData;
     title: string;
@@ -41,6 +42,7 @@ export const Projects: ProjectType[] = [
     imgSrc: voltaWallet,
     href: '/case-study/volta',
     tags: ['NFT Market', 'Mobile App'],
+    content: 'A unique crypto wallet application developed by Spartan',
     dev: 14,
     designer: 2,
     quote: {
@@ -60,6 +62,7 @@ export const Projects: ProjectType[] = [
     imgSrc: chargeFuze,
     href: '/case-study/charge-fuze',
     tags: ['Web Development'],
+    content: 'A convenient solution for charging your devices anytime and anywhere',
     dev: 14,
     designer: 2,
     quote: {
@@ -79,6 +82,7 @@ export const Projects: ProjectType[] = [
     imgSrc: liquidityFinancial,
     href: '/case-study/liquidity',
     tags: ['Web Development'],
+    content: 'Revolutionizing the banking and spending landscape',
     dev: 14,
     designer: 2,
     quote: {
@@ -98,6 +102,7 @@ export const Projects: ProjectType[] = [
     href: '/case-study/livecast',
     value: 'live-cast',
     tags: ['Web Development'],
+    content: "The ultimate showcase for Agora's streaming SDK",
     dev: 14,
     designer: 2,
     quote: {
@@ -117,6 +122,7 @@ export const Projects: ProjectType[] = [
     imgSrc: ursalive,
     href: '/case-study/ursalive',
     tags: ['Web Development'],
+    content: "Simplifies the process of hosting artists' Livestream events",
     dev: 14,
     designer: 2,
     quote: {
@@ -136,6 +142,7 @@ export const Projects: ProjectType[] = [
     imgSrc: heru,
     href: '/case-study/heru',
     tags: ['Web Development'],
+    content: 'Elevate the patient experience while simultaneously boosting practice revenue',
     dev: 14,
     designer: 2,
     quote: {
