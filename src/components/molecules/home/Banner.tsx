@@ -6,6 +6,7 @@ import heroBanner2 from '@/assets/images/home-banner/hero-banner-2.svg';
 import heroBanner3 from '@/assets/images/home-banner/hero-banner-3.svg';
 import { ArrowIcon, Banner, Container } from '@/components/atoms';
 import { BreakPoints, useBreakpoint } from '@/hooks';
+import Link from 'next/link';
 
 export const HomeBanner = () => {
   const isMobile = useBreakpoint(BreakPoints.MD);
@@ -46,15 +47,17 @@ export const HomeBanner = () => {
                 for your business and are willing to share this knowledge.
               </Typography>
             </Box>
-            <Button
-              variant="contained"
-              size={isMobile ? 'small' : 'medium'}
+            <Link
+              href="/contact-us#contact-form"
+              scroll={false}
               data-aos="fade-up"
               data-aos-delay="500"
             >
-              Let’s discuss your project
-              <ArrowIcon />
-            </Button>
+              <Button variant="contained" size={isMobile ? 'small' : 'medium'}>
+                Let’s discuss your project
+                <ArrowIcon />
+              </Button>
+            </Link>
           </Box>
         </Container>
       </Box>

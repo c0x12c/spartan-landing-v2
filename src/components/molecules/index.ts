@@ -32,6 +32,9 @@ export { ContactUsForm } from './contact-us/Form';
 export { ContactInfo } from './contact-us/Info';
 export { AroundTheWorld } from './contact-us/AroundTheWorld';
 
+//SERVICES
+export { ServicesBanner } from './services/Banner';
+
 //CASE-STUDY
 export { CaseStudyBanner } from './case-study/home/Banner';
 export { CaseStudies } from './case-study/home/CaseStudies';
