@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { MainTemplate } from '../templates';
 import { Box } from '@mui/material';
-import { ServicesBanner, ServicesOffer, TechStacks } from '../molecules';
+import { CareYourBusiness, ServicesBanner, ServicesOffer, TechStacks } from '../molecules';
 
 interface IServicesPageProps {}
 
@@ -12,6 +12,7 @@ export const ServicesPage: React.FunctionComponent<IServicesPageProps> = () => {
         <ServicesBanner />
         <ServicesOffer />
         <TechStacks />
+        <CareYourBusiness />
       </Box>
     </MainTemplate>
   );
