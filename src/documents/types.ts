@@ -11,7 +11,7 @@ export enum EPages {
   ABOUT_US = 'about-us',
   CASE_STUDY = 'case-study',
   CONTACT_US = 'contact-us',
-  SERVICE = 'service',
+  SERVICES = 'services',
   CASE_STUDY_VOLTA = 'case-study-volta',
   LIFE_SPARTAN = 'life-spartan',
   INTERNSHIP = 'internship-program',

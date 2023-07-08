@@ -2,7 +2,7 @@ import { createTheme, Theme } from '@mui/material/styles';
 import React from 'react';
 import { PaletteMode } from '@mui/material';
 import { Poppins } from 'next/font/google';
-import * as colors from './colors';
+import { base, gray, primary } from './colors';
 
 export const PoppinsFont = Poppins({
   weight: ['400', '500', '600'],
@@ -86,10 +86,10 @@ const createThemeByMode = (): Theme => {
     palette: {
       mode: 'light' as PaletteMode,
       text: {
-        primary: colors.gray[500],
+        primary: gray[500],
       },
       primary: {
-        main: colors.primary[500],
+        main: primary[500],
       },
     },
     components: {
@@ -129,38 +129,38 @@ const createThemeByMode = (): Theme => {
             alignItems: 'center',
           },
           contained: {
-            padding: '18px 24px',
+            padding: '16px 24px',
             fontSize: '16px',
             border: '1px solid',
             borderColor: 'transparent',
-            backgroundColor: colors.primary[400],
-            color: colors.base.white,
+            backgroundColor: primary[400],
+            color: base.white,
             borderRadius: '8px',
             gap: '12px',
             textTransform: 'none',
             '&:hover': {
-              backgroundColor: colors.primary[400],
+              backgroundColor: primary[400],
             },
           },
           outlinedPrimary: {
-            padding: '18px 24px',
+            padding: '16px 24px',
             fontSize: '16px',
-            color: colors.primary[400],
-            backgroundColor: colors.base.white,
+            color: primary[400],
+            backgroundColor: base.white,
             border: '1px solid',
-            borderColor: colors.primary[400],
+            borderColor: primary[400],
             borderRadius: '8px',
             gap: '12px',
             textTransform: 'none',
             '&:hover': {
-              backgroundColor: colors.base.white,
+              backgroundColor: base.white,
             },
           },
           text: {
             padding: '8px 0',
             gap: '6px',
             fontSize: '16px',
-            color: colors.base.black,
+            color: base.black,
             fontWeight: 600,
           },
           sizeSmall: {
@@ -172,7 +172,7 @@ const createThemeByMode = (): Theme => {
             props: { variant: 'transparent' },
             style: {
               backgroundColor: 'transparent',
-              color: colors.base.white,
+              color: base.white,
               padding: '14px 24px',
               fontSize: '16px',
               fontWeight: 600,
@@ -180,7 +180,7 @@ const createThemeByMode = (): Theme => {
               textTransform: 'uppercase',
               gap: '23px',
               border: '2px solid',
-              borderColor: colors.primary[400],
+              borderColor: base.white,
               borderRadius: '8px',
             },
           },

@@ -31,7 +31,7 @@ const SEOPages: ISEOPages = {
     metaImage: '',
     slug: '/contact-us',
   },
-  [EPages.SERVICE]: {
+  [EPages.SERVICES]: {
     title: 'c0x12c - Services',
     description: 'c0x12c - Services',
     keywords: 'c0x12c, Services',

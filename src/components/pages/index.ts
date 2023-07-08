@@ -5,4 +5,5 @@ export { InternshipPage } from './InternshipPage';
 export { ReadyToJoinPage } from './ReadyToJoinPage';
 export { ContactUsPage } from './ContactUsPage';
 export { CaseStudyVoltaPage } from './CaseStudyVoltaPage';
-export { CaseStudy } from './CaseStudy';
+export { CaseStudyPage } from './CaseStudyPage';
+export { ServicesPage } from './ServicesPage';
