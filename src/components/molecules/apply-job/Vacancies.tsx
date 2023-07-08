@@ -44,7 +44,7 @@ const Vacancies = () => {
         width={'100%'}
       >
         <Box display={'flex'} gap={{ md: '44px', xs: '10px' }} width={{ sm: '60%', xs: '100%' }}>
-          <FormControl fullWidth>
+          <FormControl fullWidth data-aos="zoom-in-left" data-aos-delay="300">
             <InputLabel id="team-filter">Team</InputLabel>
             <Select
               value={teamFilter}
@@ -67,7 +67,7 @@ const Vacancies = () => {
               <MenuItem value="design">Design</MenuItem>
             </Select>
           </FormControl>
-          <FormControl fullWidth>
+          <FormControl fullWidth data-aos="zoom-in-right" data-aos-delay="400">
             <InputLabel id="team-filter">Level</InputLabel>
             <Select
               value={levelFilter}
@@ -92,7 +92,11 @@ const Vacancies = () => {
             </Select>
           </FormControl>
         </Box>
-        <Title text={filteredVacancies.length + ' positions are vacant now'} />
+        <Title
+          text={filteredVacancies.length + ' positions are vacant now'}
+          data-aos="zoom-in"
+          data-aos-delay="500"
+        />
         <List vacancies={filteredVacancies} />
       </Box>
     </Container>
@@ -112,6 +116,8 @@ const List = ({ vacancies }: { vacancies: Job[] }) => {
 const ListItem = ({ id, position, salary, tags, experience_level, employment_type }: Job) => {
   return (
     <Box
+      data-aos="flip-left"
+      data-aos-delay="300"
       id={id}
       p={{ sm: '32px 44px', xs: '32px 0' }}
       display={'flex'}

@@ -15,9 +15,19 @@ const HiringProcess = () => {
           maxWidth={{ lg: '50%', xs: '100%' }}
           mb={'64px'}
         >
-          <SubTitle text="Process of work" />
-          <Title text="Rigorous screening for 1% elite engineers" />
-          <Typography width={'576px'} variant="fs18" maxWidth={'100%'}>
+          <SubTitle text="Process of work" data-aos="fade-up" data-aos-delay="200" />
+          <Title
+            text="Rigorous screening for 1% elite engineers"
+            data-aos="fade-up"
+            data-aos-delay="300"
+          />
+          <Typography
+            width={'576px'}
+            variant="fs18"
+            maxWidth={'100%'}
+            data-aos-delay="500"
+            data-aos="fade-up"
+          >
             Drawing from our extensive experience interviewing candidates at renowned tech giants
             such as Google, Facebook, Uber, and Amazon
           </Typography>
@@ -32,8 +42,14 @@ const HiringProcess = () => {
             src={HiringProcessImage}
             alt="Hiring process image"
             style={{ width: '100%', height: 'auto' }}
+            data-aos-delay="300"
+            data-aos="flip-left"
           />
-          <List sx={{ maxWidth: { lg: 'calc((100% - 60px)/ 2)', xs: '100%' } }}>
+          <List
+            sx={{ maxWidth: { lg: 'calc((100% - 60px)/ 2)', xs: '100%' } }}
+            data-aos-delay="400"
+            data-aos="flip-right"
+          >
             <ListItem
               number={'01'}
               title={'Resume Review'}
