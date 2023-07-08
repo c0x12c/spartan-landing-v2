@@ -35,6 +35,7 @@ export { AroundTheWorld } from './contact-us/AroundTheWorld';
 //SERVICES
 export { ServicesBanner } from './services/Banner';
 export { ServicesOffer } from './services/ServicesOffer';
+export { TechStacks } from './services/TechStacks';
 
 //CASE-STUDY
 export { CaseStudyBanner } from './case-study/home/Banner';

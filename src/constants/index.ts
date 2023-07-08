@@ -7,3 +7,4 @@ export { Help, type HelpType } from './help';
 export { Features, type FeatureType } from './features';
 export { ProjectsHome } from './projects-home';
 export { DataWeDo, VoltaStacks, DataVoltaResult } from './case-volta';
+export { Fields } from './stacks';
