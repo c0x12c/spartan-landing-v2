@@ -34,6 +34,7 @@ export { AroundTheWorld } from './contact-us/AroundTheWorld';
 
 //SERVICES
 export { ServicesBanner } from './services/Banner';
+export { ServicesOffer } from './services/ServicesOffer';
 
 //CASE-STUDY
 export { CaseStudyBanner } from './case-study/home/Banner';
