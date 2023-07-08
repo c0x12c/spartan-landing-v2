@@ -18,6 +18,7 @@ export const CardProject: React.FunctionComponent<ICardProjectProps> = ({ item }
         overflow="hidden"
         p="12px"
         borderRadius="8px"
+        bgcolor={base.white}
         boxShadow="0px 10px 47px 0px #EFEFEF"
       >
         <Image

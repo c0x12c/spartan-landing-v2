@@ -37,6 +37,7 @@ export { ServicesBanner } from './services/Banner';
 export { ServicesOffer } from './services/ServicesOffer';
 export { TechStacks } from './services/TechStacks';
 export { CareYourBusiness } from './services/CareYourBusiness';
+export { ServiceCasesStudy } from './services/CaseStudies';
 
 //CASE-STUDY
 export { CaseStudyBanner } from './case-study/home/Banner';

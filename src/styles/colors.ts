@@ -9,7 +9,7 @@ export const base = {
 export const gray = {
   15: '#0000000d',
   25: '#FCFCFC',
-  50: '#FAFAFA',
+  50: '#F4F4F6',
   60: '#757B8A',
   70: '#7D8387',
   75: '#EFEFEF',
