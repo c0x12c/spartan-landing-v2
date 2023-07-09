@@ -8,3 +8,8 @@ export { ContactUsPage } from './ContactUsPage';
 export { CaseStudyVoltaPage } from './CaseStudyVoltaPage';
 export { CaseStudyPage } from './CaseStudyPage';
 export { ServicesPage } from './ServicesPage';
+export { ServiceMobilePage } from './ServiceMobilePage';
+export { ServiceWebPage } from './ServiceWebPage';
+export { ServiceBackendPage } from './ServiceBackendPage';
+export { ServiceCloudPage } from './ServiceCloudPage';
+export { ServiceEmergingPage } from './ServiceEmergingPage';

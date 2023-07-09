@@ -146,7 +146,18 @@ const SubMenu = ({ item }: Pick<MenuItemDesktopType, 'item'>) => {
     return (
       <Grid item key={item.id} xs={6} lg={4}>
         <Link href={item.href}>
-          <Box display="flex" gap="12px">
+          <Box
+            display="flex"
+            gap="12px"
+            p="8px"
+            borderRadius="8px"
+            sx={{
+              '&:hover': {
+                bgcolor: primary[50],
+                transition: 'all 0.2s',
+              },
+            }}
+          >
             <Image src={item.icon} alt={item.label} />
             <Box display="flex" flexDirection="column" gap="12px">
               <Typography variant="fs14" color={gray[900]} fontWeight="600" component="h4">
@@ -191,10 +202,10 @@ const SubMenu = ({ item }: Pick<MenuItemDesktopType, 'item'>) => {
             component="h3"
             mb="8px"
           >
-            Artificial Intelligence
+            Ready to start your tailored project?
           </Typography>
           <Typography variant="fs16" color={gray[100]} fontSize="12px" component="p">
-            We help enterprises navigating the best of the digital
+            Let’s build incredible products together
           </Typography>
         </Box>
         <Link href="/contact-us#contact-form" scroll={false}>
@@ -204,7 +215,7 @@ const SubMenu = ({ item }: Pick<MenuItemDesktopType, 'item'>) => {
               py: '12px',
             }}
           >
-            Contact now
+            Meet our expert
           </Button>
         </Link>
       </Box>
