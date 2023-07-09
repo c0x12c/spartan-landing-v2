@@ -5,6 +5,7 @@ import { base, gray, primary } from '@/styles/colors';
 import { useRouter } from 'next/router';
 import { MenuItemType } from '@/components/molecules';
 import { ArrowIcon } from '@/components/atoms';
+import Link from 'next/link';
 
 type MenuItemMobileProps = {
   item: MenuItemType;
@@ -68,33 +69,34 @@ export const MenuItemMobile: React.FC<MenuItemMobileProps> = ({ item, toggleMenu
           }}
         >
           {item.subItems?.map((subItem, index) => (
-            <ListItem
-              key={index}
-              sx={{
-                cursor: 'pointer',
-                padding: '4px 8px',
-                borderBottom: `1px solid ${gray[400]}`,
-                display: 'flex',
-                justifyContent: 'space-between',
-                '&:hover': {
-                  '& .submenu-text': {
-                    color: primary[500],
-                    transition: 'color .5s',
+            <Link href={subItem.href} key={index}>
+              <ListItem
+                sx={{
+                  cursor: 'pointer',
+                  padding: '4px 8px',
+                  borderBottom: `1px solid ${gray[400]}`,
+                  display: 'flex',
+                  justifyContent: 'space-between',
+                  '&:hover': {
+                    '& .submenu-text': {
+                      color: primary[500],
+                      transition: 'color .5s',
+                    },
+                    '& .submenu-icon': {
+                      transform: 'translateX(5px)',
+                      transition: 'transform .5s',
+                    },
                   },
-                  '& .submenu-icon': {
-                    transform: 'translateX(5px)',
-                    transition: 'transform .5s',
-                  },
-                },
-              }}
-            >
-              <Typography className="submenu-text" variant="fs16" color={base.black}>
-                {subItem.label}
-              </Typography>
-              <Box className="submenu-icon">
-                <ArrowIcon color={base.black} />
-              </Box>
-            </ListItem>
+                }}
+              >
+                <Typography className="submenu-text" variant="fs16" color={base.black}>
+                  {subItem.label}
+                </Typography>
+                <Box className="submenu-icon">
+                  <ArrowIcon color={base.black} />
+                </Box>
+              </ListItem>
+            </Link>
           ))}
         </List>
       </Collapse>

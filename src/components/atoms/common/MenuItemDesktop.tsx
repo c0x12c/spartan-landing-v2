@@ -28,9 +28,7 @@ export const MenuItemDesktop = ({ item, isTransparent }: MenuItemDesktopType) =>
       alignItems="center"
       gap="10.63px"
       height="100%"
-      onClick={() => goToPath(item.href)}
       sx={{
-        cursor: 'pointer',
         '&:hover': {
           '& .menu-title': {
             color: primary[500],
@@ -58,8 +56,10 @@ export const MenuItemDesktop = ({ item, isTransparent }: MenuItemDesktopType) =>
         variant="fs18"
         color={color}
         lineHeight={1.33}
+        onClick={() => goToPath(item.href)}
         position="relative"
         sx={{
+          cursor: 'pointer',
           '&::before': {
             content: '""',
             position: 'absolute',
