@@ -1,14 +1,15 @@
 import * as React from 'react';
 import { Container, SubTitle, Title } from '@/components/atoms';
-import { PartnerType } from '@/constants';
+import { PartnerType, ServicesEnum } from '@/constants';
 import { Box } from '@mui/material';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Partners as PartnersData } from '@/constants';
 import { BreakPoints, useBreakpoint } from '@/hooks';
+import { gray } from '@/styles/colors';
 
 interface IPartnersSubServiceProps {
-  tag: string;
+  tag: ServicesEnum;
 }
 
 export const PartnersSubService: React.FunctionComponent<IPartnersSubServiceProps> = ({ tag }) => {
@@ -25,7 +26,7 @@ export const PartnersSubService: React.FunctionComponent<IPartnersSubServiceProp
   };
 
   return (
-    <Box py={isTablet ? '60px' : '120px'}>
+    <Box py={isTablet ? '60px' : '120px'} bgcolor={gray[50]}>
       <Container>
         <Box
           display="flex"

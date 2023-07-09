@@ -1,7 +1,8 @@
 import * as React from 'react';
 import { MainTemplate } from '../templates';
 import { Box } from '@mui/material';
-import { PartnersSubService, SubServiceBanner } from '../molecules';
+import { PartnersSubService, SubServiceBanner, WhatWeDo } from '../molecules';
+import { ServicesEnum } from '@/constants';
 
 interface IServiceBackendPageProps {}
 
@@ -10,7 +11,8 @@ export const ServiceBackendPage: React.FunctionComponent<IServiceBackendPageProp
     <MainTemplate>
       <Box display="flex" flexDirection="column" gap="44px">
         <SubServiceBanner title="Build robust backend applications" />
-        <PartnersSubService tag="backend" />
+        <PartnersSubService tag={ServicesEnum.BACKEND} />
+        <WhatWeDo tag={ServicesEnum.BACKEND} />
       </Box>
     </MainTemplate>
   );

@@ -1,4 +1,10 @@
-export { Services, type ServiceType } from './services';
+export {
+  Services,
+  type ServiceType,
+  ServicesEnum,
+  type ServiceContentType,
+  ServiceWeDoContent,
+} from './services';
 export { About, type AboutType } from './about';
 export { Partners, type PartnerType } from './partners';
 export { Projects, type ProjectType } from './projects';
