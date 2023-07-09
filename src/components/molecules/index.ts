@@ -59,3 +59,12 @@ export { Top100Coins } from './case-study/volta/Top100Coins';
 export { VoltaWeDo } from './case-study/volta/WeDo';
 export { VoltaTechStacks } from './case-study/volta/Stacks';
 export { VoltaResult } from './case-study/volta/Result';
+
+//CASE-STUDY-AGORA
+export { CaseStudyAgoraBanner } from './case-study/agora/Banner';
+
+//CASE-STUDY-AGORA
+export { CaseStudyURSABanner } from './case-study/ursa/Banner';
+
+//CASE-STUDY-AGORA
+export { CaseStudyHeruBanner } from './case-study/heru/Banner';
