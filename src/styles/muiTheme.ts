@@ -101,8 +101,6 @@ const createThemeByMode = (): Theme => {
             scrollBehavior: 'smooth',
           },
           html: {
-            overflow: 'auto',
-            overflowX: 'hidden',
             padding: 0,
             margin: 0,
             scrollBehavior: 'smooth',
