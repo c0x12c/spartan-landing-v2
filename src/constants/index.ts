@@ -8,3 +8,9 @@ export { Features, type FeatureType } from './features';
 export { ProjectsHome } from './projects-home';
 export { DataWeDo, VoltaStacks, DataVoltaResult } from './case-volta';
 export { Fields } from './stacks';
+export {
+  HiringProcessData,
+  WorkingProcessData,
+  SubWorkingProcessData,
+  type ProcessType,
+} from './processes';

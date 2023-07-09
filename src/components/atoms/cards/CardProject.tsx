@@ -30,7 +30,13 @@ export const CardProject: React.FunctionComponent<ICardProjectProps> = ({ item }
           <Typography variant="fs18" fontWeight={600} color={base.black}>
             {item.name}
           </Typography>
-          <Typography variant="fs14" letterSpacing="0.21px" color={gray[500]}>
+          <Typography
+            variant="fs14"
+            letterSpacing="0.21px"
+            color={gray[500]}
+            width="360px"
+            whiteSpace="normal"
+          >
             {item.content}
           </Typography>
           <Box display="flex" justifyContent="space-between" alignItems="center">

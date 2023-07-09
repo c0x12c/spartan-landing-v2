@@ -7,6 +7,7 @@ import {
   ServicesBanner,
   ServicesOffer,
   TechStacks,
+  WorkingProcess,
 } from '../molecules';
 
 interface IServicesPageProps {}
@@ -19,6 +20,7 @@ export const ServicesPage: React.FunctionComponent<IServicesPageProps> = () => {
         <ServicesOffer />
         <TechStacks />
         <CareYourBusiness />
+        <WorkingProcess />
         <ServiceCasesStudy />
       </Box>
     </MainTemplate>
