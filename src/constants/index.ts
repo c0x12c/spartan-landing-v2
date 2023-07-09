@@ -19,6 +19,10 @@ export { Fields } from './stacks';
 export {
   HiringProcessData,
   WorkingProcessData,
-  SubWorkingProcessData,
+  MobileWorkingProcessData,
+  WebWorkingProcessData,
+  CloudWorkingProcessData,
+  BackendWorkingProcessData,
+  EmergingWorkingProcessData,
   type ProcessType,
 } from './processes';

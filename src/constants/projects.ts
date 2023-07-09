@@ -13,6 +13,7 @@ import ursaLiveQuote from '@/assets/images/projects/quote-ursalive.png';
 
 import voltaWalletUserImage from '@/assets/images/projects/volta-user.png';
 import { StaticImageData } from 'next/image';
+import { ServicesEnum } from './services';
 
 export type ProjectType = {
   id: string;
@@ -20,7 +21,7 @@ export type ProjectType = {
   value: string;
   imgSrc: StaticImageData;
   href: string;
-  tags: string[];
+  tags: ServicesEnum[];
   dev: number;
   designer: number;
   content: string;
@@ -41,7 +42,7 @@ export const Projects: ProjectType[] = [
     value: 'volta',
     imgSrc: voltaWallet,
     href: '/case-study/volta',
-    tags: ['NFT Market', 'Mobile App'],
+    tags: [ServicesEnum.MOBILE, ServicesEnum.WEB, ServicesEnum.BACKEND],
     content: 'A unique crypto wallet application developed by Spartan',
     dev: 14,
     designer: 2,
@@ -61,7 +62,7 @@ export const Projects: ProjectType[] = [
     value: 'charge-fuze',
     imgSrc: chargeFuze,
     href: '/case-study/charge-fuze',
-    tags: ['Web Development'],
+    tags: [ServicesEnum.CLOUD, ServicesEnum.WEB, ServicesEnum.BACKEND, ServicesEnum.EMERGING],
     content: 'A convenient solution for charging your devices anytime and anywhere',
     dev: 14,
     designer: 2,
@@ -81,7 +82,13 @@ export const Projects: ProjectType[] = [
     value: 'volta',
     imgSrc: liquidityFinancial,
     href: '/case-study/liquidity',
-    tags: ['Web Development'],
+    tags: [
+      ServicesEnum.MOBILE,
+      ServicesEnum.CLOUD,
+      ServicesEnum.WEB,
+      ServicesEnum.BACKEND,
+      ServicesEnum.EMERGING,
+    ],
     content: 'Revolutionizing the banking and spending landscape',
     dev: 14,
     designer: 2,
@@ -101,7 +108,7 @@ export const Projects: ProjectType[] = [
     imgSrc: liveCast,
     href: '/case-study/livecast',
     value: 'live-cast',
-    tags: ['Web Development'],
+    tags: [ServicesEnum.MOBILE, ServicesEnum.CLOUD, ServicesEnum.WEB, ServicesEnum.BACKEND],
     content: "The ultimate showcase for Agora's streaming SDK",
     dev: 14,
     designer: 2,
@@ -121,7 +128,8 @@ export const Projects: ProjectType[] = [
     value: 'ursalive',
     imgSrc: ursalive,
     href: '/case-study/ursalive',
-    tags: ['Web Development'],
+    tags: [ServicesEnum.CLOUD, ServicesEnum.WEB, ServicesEnum.BACKEND],
+
     content: "Simplifies the process of hosting artists' Livestream events",
     dev: 14,
     designer: 2,
@@ -141,7 +149,7 @@ export const Projects: ProjectType[] = [
     value: 'heru',
     imgSrc: heru,
     href: '/case-study/heru',
-    tags: ['Web Development'],
+    tags: [],
     content: 'Elevate the patient experience while simultaneously boosting practice revenue',
     dev: 14,
     designer: 2,

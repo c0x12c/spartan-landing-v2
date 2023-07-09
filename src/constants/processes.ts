@@ -58,30 +58,142 @@ export const WorkingProcessData = [
   },
 ];
 
-export const SubWorkingProcessData = [
+export const MobileWorkingProcessData = [
   {
-    id: 'sub-working-1',
+    id: 'mobile-working-1',
     title: 'Requirements',
     content: "Understand your app's vision and objectives.",
   },
   {
-    id: 'sub-working-2',
+    id: 'mobile-working-2',
     title: 'Design',
     content: 'Create intuitive and visually appealing app interfaces.',
   },
   {
-    id: 'sub-working-3',
+    id: 'mobile-working-3',
     title: 'Development & Test',
     content: 'Build and test robust mobile app features.',
   },
   {
-    id: 'sub-working-4',
+    id: 'mobile-working-4',
     title: 'Deployment',
     content: 'Launch your app to the desired platforms and app stores.',
   },
   {
-    id: 'sub-working-5',
+    id: 'mobile-working-5',
     title: 'Maintain & Support',
     content: 'Provide ongoing support and updates for your app.',
+  },
+];
+
+export const WebWorkingProcessData = [
+  {
+    id: 'web-working-1',
+    title: 'Requirements',
+    content: 'Gather requirements and project scope.',
+  },
+  {
+    id: 'web-working-2',
+    title: 'Design',
+    content: 'Create engaging and user-friendly web designs.',
+  },
+  {
+    id: 'web-working-3',
+    title: 'Development & Test',
+    content: 'Develop and test web applications with modern technologies.',
+  },
+  {
+    id: 'web-working-4',
+    title: 'Deployment',
+    content: 'Deploy web applications to secure hosting environments.',
+  },
+  {
+    id: 'web-working-5',
+    title: 'Maintain & Support',
+    content: 'Provide ongoing maintenance and support for your web applications.',
+  },
+];
+
+export const BackendWorkingProcessData = [
+  {
+    id: 'backend-working-1',
+    title: 'Requirements',
+    content: "GUnderstand your backend app's functionality and features.",
+  },
+  {
+    id: 'backend-working-2',
+    title: 'Design',
+    content: 'Architect scalable and efficient backend systems.',
+  },
+  {
+    id: 'backend-working-3',
+    title: 'Development & Test',
+    content: 'Implement and test clean and maintainable backend code.',
+  },
+  {
+    id: 'backend-working-4',
+    title: 'Deployment',
+    content: 'Deploy backend applications to reliable hosting environments.',
+  },
+  {
+    id: 'backend-working-5',
+    title: 'Maintain & Support',
+    content: 'Provide ongoing maintenance and support for your backend systems.',
+  },
+];
+
+export const CloudWorkingProcessData = [
+  {
+    id: 'cloud-working-1',
+    title: 'Requirements',
+    content: 'Understand your cloud infrastructure needs and goals.',
+  },
+  {
+    id: 'cloud-working-2',
+    title: 'Design',
+    content: 'Architect scalable and secure cloud solutions.',
+  },
+  {
+    id: 'cloud-working-3',
+    title: 'Development & Test',
+    content: 'Implement and optimize cloud services and integrations.',
+  },
+  {
+    id: 'cloud-working-4',
+    title: 'Deployment',
+    content: 'Deploy cloud solutions with automated deployment pipelines.',
+  },
+  {
+    id: 'cloud-working-5',
+    title: 'Maintain & Support',
+    content: 'Provide ongoing monitoring, maintenance, and support for your cloud infrastructure.',
+  },
+];
+
+export const EmergingWorkingProcessData = [
+  {
+    id: 'emerging-working-1',
+    title: 'Requirements',
+    content: 'Understand your goals for adopting emerging technologies.',
+  },
+  {
+    id: 'emerging-working-2',
+    title: 'Design',
+    content: 'Architect innovative solutions integrating emerging technologies.',
+  },
+  {
+    id: 'emerging-working-3',
+    title: 'Development & Test',
+    content: 'Develop and test cutting-edge applications using emerging technologies.',
+  },
+  {
+    id: 'emerging-working-4',
+    title: 'Deployment',
+    content: 'Deploy integrated solutions with compatibility and support.',
+  },
+  {
+    id: 'emerging-working-5',
+    title: 'Maintain & Support',
+    content: 'Provide ongoing maintenance, updates, and support for your emerging tech solutions.',
   },
 ];
