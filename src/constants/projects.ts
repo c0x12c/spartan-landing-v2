@@ -106,7 +106,7 @@ export const Projects: ProjectType[] = [
     id: 'case-4',
     name: 'LiveCast',
     imgSrc: liveCast,
-    href: '/case-study/livecast',
+    href: '/case-study/live-cast',
     value: 'live-cast',
     tags: [ServicesEnum.MOBILE, ServicesEnum.CLOUD, ServicesEnum.WEB, ServicesEnum.BACKEND],
     content: "The ultimate showcase for Agora's streaming SDK",
