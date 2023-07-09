@@ -62,9 +62,12 @@ export { VoltaResult } from './case-study/volta/Result';
 
 //CASE-STUDY-AGORA
 export { CaseStudyAgoraBanner } from './case-study/agora/Banner';
+export { OverviewAgora } from './case-study/agora/Overview';
 
-//CASE-STUDY-AGORA
+//CASE-STUDY-URSA
 export { CaseStudyURSABanner } from './case-study/ursa/Banner';
+export { OverviewURSA } from './case-study/ursa/Overview';
 
-//CASE-STUDY-AGORA
+//CASE-STUDY-HERU
 export { CaseStudyHeruBanner } from './case-study/heru/Banner';
+export { OverviewHeru } from './case-study/heru/Overview';
