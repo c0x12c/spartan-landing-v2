@@ -34,7 +34,7 @@ export const CardProject: React.FunctionComponent<ICardProjectProps> = ({ item }
             variant="fs14"
             letterSpacing="0.21px"
             color={gray[500]}
-            width="360px"
+            maxWidth="360px"
             whiteSpace="normal"
           >
             {item.content}

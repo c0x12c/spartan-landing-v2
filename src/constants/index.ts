@@ -1,4 +1,12 @@
-export { Services, type ServiceType } from './services';
+export {
+  Services,
+  type ServiceType,
+  ServicesEnum,
+  type ServiceContentType,
+  ServiceWeDoContent,
+  type ServiceChooseContentType,
+  ServiceChooseUsContent,
+} from './services';
 export { About, type AboutType } from './about';
 export { Partners, type PartnerType } from './partners';
 export { Projects, type ProjectType } from './projects';
@@ -11,6 +19,10 @@ export { Fields } from './stacks';
 export {
   HiringProcessData,
   WorkingProcessData,
-  SubWorkingProcessData,
+  MobileWorkingProcessData,
+  WebWorkingProcessData,
+  CloudWorkingProcessData,
+  BackendWorkingProcessData,
+  EmergingWorkingProcessData,
   type ProcessType,
 } from './processes';
