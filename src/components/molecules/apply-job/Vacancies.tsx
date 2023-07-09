@@ -106,8 +106,8 @@ const Vacancies = () => {
 const List = ({ vacancies }: { vacancies: Job[] }) => {
   return (
     <Box width={'100%'}>
-      {vacancies.map((vacancie) => (
-        <ListItem {...vacancie} key={vacancie.id} />
+      {vacancies.map((vacancy) => (
+        <ListItem {...vacancy} key={vacancy.id} />
       ))}
     </Box>
   );
