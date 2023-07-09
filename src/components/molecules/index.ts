@@ -42,6 +42,7 @@ export { WorkingProcess } from './services/WorkingProcess';
 
 //SUB SERVICES
 export { SubServiceBanner } from './services/sub-services/Banner';
+export { PartnersSubService } from './services/sub-services/Partners';
 
 //CASE-STUDY
 export { CaseStudyBanner } from './case-study/home/Banner';
