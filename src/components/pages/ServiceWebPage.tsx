@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { MainTemplate } from '../templates';
 import { Box } from '@mui/material';
-import { PartnersSubService, SubServiceBanner, WhatWeDo } from '../molecules';
+import { ChooseUs, PartnersSubService, SubServiceBanner, WhatWeDo } from '../molecules';
 import { ServicesEnum } from '@/constants';
 
 interface IServiceWebPageProps {}
@@ -13,6 +13,7 @@ export const ServiceWebPage: React.FunctionComponent<IServiceWebPageProps> = () 
         <SubServiceBanner title="Create dynamic web applications" />
         <PartnersSubService tag={ServicesEnum.WEB} />
         <WhatWeDo tag={ServicesEnum.WEB} />
+        <ChooseUs tag={ServicesEnum.WEB} />
       </Box>
     </MainTemplate>
   );

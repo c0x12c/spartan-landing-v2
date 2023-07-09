@@ -20,6 +20,12 @@ import chatGPTIcon from '@/assets/images/stacks/ChatGPT.svg';
 import IOTIcon from '@/assets/images/stacks/IOT.svg';
 import RTSIcon from '@/assets/images/stacks/RTS.svg';
 
+import backend from '@/assets/images/services/backend.png';
+import web from '@/assets/images/services/web.png';
+import mobile from '@/assets/images/services/mobile.png';
+import cloud from '@/assets/images/services/cloud.png';
+import emerging from '@/assets/images/services/emerging.png';
+
 import { StaticImageData } from 'next/image';
 
 export type ServiceType = {
@@ -330,6 +336,127 @@ export const ServiceWeDoContent = [
         description:
           'Harness the Power of Flink for Seamless Processing and Analysis of Continuous Data Streams, Empowering Organizations with Instant, Actionable Insights for Real-time Decision-making',
         icon: RTSIcon,
+      },
+    ],
+  },
+];
+
+export type ServiceChooseContentType = {
+  id: string;
+  title: string;
+  type: ServicesEnum;
+  imgSrc: StaticImageData;
+  content: { id: string; description: string; icon: StaticImageData }[];
+};
+
+export const ServiceChooseUsContent = [
+  {
+    id: `${ServicesEnum.MOBILE}-choose-1`,
+    title: 'Trust the experts in mobile app development',
+    type: ServicesEnum.MOBILE,
+    imgSrc: mobile,
+    content: [
+      {
+        id: `${ServicesEnum.MOBILE}-choose-content-1`,
+        description: 'Top-notch engineers skilled in iOS and Android app development.',
+      },
+      {
+        id: `${ServicesEnum.MOBILE}-choose-content-2`,
+        description:
+          'Expertise in leveraging cutting-edge technologies to create standout mobile apps.',
+      },
+      {
+        id: `${ServicesEnum.MOBILE}-choose-content-3`,
+        description:
+          'Commitment to delivering exceptional performance, user-centric design, and innovative features.',
+      },
+    ],
+  },
+  {
+    id: `${ServicesEnum.WEB}-choose-2`,
+    title: 'Unleash the potential of web development',
+    type: ServicesEnum.WEB,
+    imgSrc: web,
+    content: [
+      {
+        id: `${ServicesEnum.WEB}-choose-content-1`,
+        description: 'Skilled web developers are proficient in ReactJS and Angular.',
+      },
+      {
+        id: `${ServicesEnum.WEB}-choose-content-2`,
+        description:
+          'Ability to deliver visually stunning, user-friendly, and scalable web solutions.',
+      },
+      {
+        id: `${ServicesEnum.WEB}-choose-content-3`,
+        description:
+          'Dedication to staying up-to-date with the latest web development trends and best practices.',
+      },
+    ],
+  },
+  {
+    id: `${ServicesEnum.BACKEND}-choose-3`,
+    title: 'Reliable and scalable backend solutions',
+    type: ServicesEnum.BACKEND,
+    imgSrc: backend,
+    content: [
+      {
+        id: `${ServicesEnum.BACKEND}-choose-content-1`,
+        description: 'Experienced backend developers proficient in Kotlin and Java.',
+      },
+      {
+        id: `${ServicesEnum.BACKEND}-choose-content-2`,
+        description: 'Focus on creating highly maintainable and scalable backend systems.',
+      },
+      {
+        id: `${ServicesEnum.BACKEND}-choose-content-3`,
+        description:
+          'Commitment to ensuring robustness, security, and scalability in backend solutions.',
+      },
+    ],
+  },
+  {
+    id: `${ServicesEnum.CLOUD}-choose-4`,
+    title: 'Empowering businesses with cloud excellence',
+    type: ServicesEnum.CLOUD,
+    imgSrc: cloud,
+    content: [
+      {
+        id: `${ServicesEnum.CLOUD}-choose-content-1`,
+        description:
+          'Expertise in utilizing industry-leading cloud platforms for unmatched scalability, reliability, and innovation.',
+      },
+      {
+        id: `${ServicesEnum.CLOUD}-choose-content-2`,
+        description:
+          'Commitment to guiding businesses in harnessing the full potential of cloud technologies.',
+      },
+      {
+        id: `${ServicesEnum.CLOUD}-choose-content-3`,
+        description: 'Dedication to ensuring secure and efficient cloud infrastructure management.',
+      },
+    ],
+  },
+  {
+    id: `${ServicesEnum.EMERGING}-choose-5`,
+    title: 'Leading the way in emerging technologies',
+    type: ServicesEnum.EMERGING,
+    imgSrc: emerging,
+    content: [
+      {
+        id: `${ServicesEnum.EMERGING}-choose-content-1`,
+        description:
+          'Expertise in integrating emerging technologies to enhance user experiences and business efficiency.',
+      },
+      {
+        id: `${ServicesEnum.EMERGING}-choose-content-2`,
+        description:
+          'Ability to leverage AI, IoT, and real-time data streaming for innovative and transformative solutions.',
+      },
+      {
+        id: `${ServicesEnum.EMERGING}-choose-content-3`,
+        description:
+          'Commitment to driving digital innovation and staying at the forefront of emerging technologies.',
       },
     ],
   },

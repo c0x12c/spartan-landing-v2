@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { MainTemplate } from '../templates';
 import { Box } from '@mui/material';
-import { PartnersSubService, SubServiceBanner, WhatWeDo } from '../molecules';
+import { ChooseUs, PartnersSubService, SubServiceBanner, WhatWeDo } from '../molecules';
 import { ServicesEnum } from '@/constants';
 
 interface IServiceCloudPageProps {}
@@ -13,6 +13,7 @@ export const ServiceCloudPage: React.FunctionComponent<IServiceCloudPageProps> =
         <SubServiceBanner title="Leverage the power of cloud solutions" />
         <PartnersSubService tag={ServicesEnum.CLOUD} />
         <WhatWeDo tag={ServicesEnum.CLOUD} />
+        <ChooseUs tag={ServicesEnum.CLOUD} />
       </Box>
     </MainTemplate>
   );

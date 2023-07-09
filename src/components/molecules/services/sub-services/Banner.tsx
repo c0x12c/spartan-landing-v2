@@ -3,12 +3,15 @@ import { Box, Typography } from '@mui/material';
 import bg from '@/assets/images/case-study/banner-image.png';
 import { Container } from '@/components/atoms';
 import { base } from '@/styles/colors';
+import { BreakPoints, useBreakpoint } from '@/hooks';
 
 interface ISubServiceBannerProps {
   title: string;
 }
 
 export const SubServiceBanner: React.FunctionComponent<ISubServiceBannerProps> = ({ title }) => {
+  const isMobile = useBreakpoint(BreakPoints.MD);
+
   return (
     <React.Fragment>
       <Box
@@ -32,7 +35,7 @@ export const SubServiceBanner: React.FunctionComponent<ISubServiceBannerProps> =
             alignItems="center"
           >
             <Typography
-              variant="fs64"
+              variant={isMobile ? 'fs40' : 'fs64'}
               color={base.white}
               data-aos="fade-up"
               data-aos-delay="200"
