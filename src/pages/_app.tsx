@@ -9,6 +9,7 @@ import 'aos/dist/aos.css';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import '@/styles/animations.css';
+import '@/styles/index.css';
 
 export type MyAppProps = AppProps;
 

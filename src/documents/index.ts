@@ -31,12 +31,47 @@ const SEOPages: ISEOPages = {
     metaImage: '',
     slug: '/contact-us',
   },
-  [EPages.SERVICE]: {
+  [EPages.SERVICES]: {
     title: 'c0x12c - Services',
     description: 'c0x12c - Services',
     keywords: 'c0x12c, Services',
     metaImage: '',
     slug: '/services',
+  },
+  [EPages.SERVICES_WEB]: {
+    title: 'c0x12c - Service Web Development',
+    description: 'c0x12c - Service Web Development',
+    keywords: 'c0x12c, Service Web Development',
+    metaImage: '',
+    slug: '/services/web-development',
+  },
+  [EPages.SERVICES_MOBILE]: {
+    title: 'c0x12c - Service Mobile App',
+    description: 'c0x12c - Service Mobile App',
+    keywords: 'c0x12c, Service Mobile App',
+    metaImage: '',
+    slug: '/services/mobile-app',
+  },
+  [EPages.SERVICES_CLOUD]: {
+    title: 'c0x12c - Service Cloud',
+    description: 'c0x12c - Service Cloud',
+    keywords: 'c0x12c, Service Cloud',
+    metaImage: '',
+    slug: '/services/cloud',
+  },
+  [EPages.SERVICES_BACKEND]: {
+    title: 'c0x12c - Service Backend',
+    description: 'c0x12c - Service Backend',
+    keywords: 'c0x12c, Service Backend',
+    metaImage: '',
+    slug: '/services/backend',
+  },
+  [EPages.SERVICES_EMERGING]: {
+    title: 'c0x12c - Service Emerging Technologies',
+    description: 'c0x12c - Service Emerging Technologies',
+    keywords: 'c0x12c, Service Emerging Technologies',
+    metaImage: '',
+    slug: '/services/emerging-technologies',
   },
   [EPages.CASE_STUDY_VOLTA]: {
     title: 'c0x12c - Case Study - Volta',
@@ -65,6 +100,13 @@ const SEOPages: ISEOPages = {
     keywords: 'c0x12c, Ready to join',
     metaImage: '',
     slug: '/ready-to-join',
+  },
+  [EPages.APPLY_JOB]: {
+    title: 'c0x12c - Apply for job',
+    description: 'c0x12c - Apply for job',
+    keywords: 'c0x12c, Apply for job',
+    metaImage: '',
+    slug: '/apply-job',
   },
   [EPages.SPARTAN_OPERATES]: {
     title: 'c0x12c - How Spartan Operates',

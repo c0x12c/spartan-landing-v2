@@ -1,8 +1,7 @@
 import * as React from 'react';
-import * as colors from '@/styles/colors';
 import { Box, Typography } from '@mui/material';
 import bg from '@/assets/images/case-study/banner-image.png';
-import { Banner, Container } from '@/components/atoms';
+import { Container } from '@/components/atoms';
 import { base } from '@/styles/colors';
 
 interface ICaseStudyBannerProps {}
@@ -42,7 +41,7 @@ export const CaseStudyBanner: React.FunctionComponent<ICaseStudyBannerProps> = (
             </Typography>
             <Typography
               variant={'fs18'}
-              color={colors.base.white}
+              color={base.white}
               maxWidth="538px"
               data-aos="fade-up"
               data-aos-delay="300"

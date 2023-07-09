@@ -57,10 +57,8 @@ export const Footer: React.FunctionComponent<IFooterProps> = () => {
 
   const renderSubMenu = (data: ServiceType[] | AboutType[] | HelpType[]) => {
     return data.map((item) => {
-      const { href, hash } = item as ServiceType & AboutType;
-      const link = href ? href : `/services#${hash}`;
       return (
-        <Link key={item.id} href={link} scroll={false}>
+        <Link key={item.id} href={item.href} scroll={false}>
           <Typography variant="fs18" color={gray[300]}>
             {item.label}
           </Typography>

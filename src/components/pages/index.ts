@@ -1,3 +1,4 @@
+export { ApplyJobPage } from './ApplyJob';
 export { HomePage } from './HomePage';
 export { AboutUsPage } from './AboutUsPage';
 export { LifeSpartanPage } from './LifeSpartanPage';
@@ -5,4 +6,11 @@ export { InternshipPage } from './InternshipPage';
 export { ReadyToJoinPage } from './ReadyToJoinPage';
 export { ContactUsPage } from './ContactUsPage';
 export { CaseStudyVoltaPage } from './CaseStudyVoltaPage';
-export { CaseStudy } from './CaseStudy';
+export { CaseStudyPage } from './CaseStudyPage';
+export { ServicesPage } from './ServicesPage';
+export { ServiceMobilePage } from './ServiceMobilePage';
+export { ServiceWebPage } from './ServiceWebPage';
+export { ServiceBackendPage } from './ServiceBackendPage';
+export { ServiceCloudPage } from './ServiceCloudPage';
+export { ServiceEmergingPage } from './ServiceEmergingPage';
+export { SpartanOperates } from './SpartanOperates';
