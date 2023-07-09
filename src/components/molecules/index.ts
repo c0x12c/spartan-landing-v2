@@ -40,6 +40,9 @@ export { CareYourBusiness } from './services/CareYourBusiness';
 export { ServiceCasesStudy } from './services/CaseStudies';
 export { WorkingProcess } from './services/WorkingProcess';
 
+//SUB SERVICES
+export { SubServiceBanner } from './services/sub-services/Banner';
+
 //CASE-STUDY
 export { CaseStudyBanner } from './case-study/home/Banner';
 export { CaseStudies } from './case-study/home/CaseStudies';
