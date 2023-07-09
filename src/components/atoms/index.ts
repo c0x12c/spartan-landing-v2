@@ -28,4 +28,6 @@ export { Download } from './Download';
 export { NextProject } from './NextProject';
 export { CardService } from './cards/CardService';
 export { CardProject } from './cards/CardProject';
+export { CardWeDo } from './cards/CardWeDo';
+
 export { ProcessList } from './ProcessList';
