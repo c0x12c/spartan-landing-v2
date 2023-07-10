@@ -5,7 +5,13 @@ import Image from 'next/image';
 
 const DownloadAppPanel = () => {
   return (
-    <Box display={'flex'} gap={'20px'} alignItems={'center'}>
+    <Box
+      display={'flex'}
+      gap={'20px'}
+      alignItems={'center'}
+      data-aos="fade-up-left"
+      data-aos-delay="300"
+    >
       <Link
         href="https://play.google.com/store/games"
         width={'calc((100% - 20px) / 2)'}

@@ -16,10 +16,23 @@ const LiquidityFinancial = () => {
           width={'100%'}
           p={'80px 0'}
         >
-          <Typography variant="fs48" color={base.black} textAlign="center" maxWidth={'621px'}>
+          <Typography
+            variant="fs48"
+            color={base.black}
+            textAlign="center"
+            maxWidth={{ md: '621px', xs: '100%' }}
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
             The Story
           </Typography>
-          <Typography variant="fs18" maxWidth={'766px'} textAlign="center">
+          <Typography
+            variant="fs18"
+            maxWidth={{ md: '766px', xs: '100%' }}
+            textAlign="center"
+            data-aos="fade-up"
+            data-aos-delay="300"
+          >
             Already had a working solution as well and mobile applications before they started
             working with us. Facing backend stability and mobile application issues, Liquidity
             Financial turned to us for solutions. It was very important to fix the issues because
