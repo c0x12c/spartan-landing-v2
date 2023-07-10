@@ -26,6 +26,8 @@ const Quotes = () => {
   const renderQuotes = quotes.map((item, index) => {
     return (
       <Box
+        data-aos-delay="400"
+        data-aos="flip-left"
         width="100%"
         display="flex !important"
         gap={{ xs: '40px', md: '92px' }}
@@ -132,7 +134,7 @@ const Quotes = () => {
 
   return (
     <Container>
-      <Box display={'flex'} alignItems={'center'}>
+      <Box display={'flex'} alignItems={'center'} data-aos-delay="300" data-aos="fade-up">
         {!isMobile && (
           <Box width={'100%'} display={'flex'} alignItems={'center'}>
             <Image src={Star} alt="star" />

@@ -4,9 +4,9 @@ import { Box } from '@mui/material';
 import { CaseStudies, CaseStudyBanner } from '../molecules';
 import { GetInTouch } from '../atoms';
 
-interface ICaseStudyProps {}
+interface ICaseStudyPageProps {}
 
-export const CaseStudy: React.FunctionComponent<ICaseStudyProps> = () => {
+export const CaseStudyPage: React.FunctionComponent<ICaseStudyPageProps> = () => {
   return (
     <MainTemplate>
       <Box display="flex" flexDirection="column" gap="44px">

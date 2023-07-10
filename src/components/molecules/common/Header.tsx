@@ -23,7 +23,8 @@ export const Header = () => {
     pathname !== '/contact-us' &&
     pathname !== '/life-spartan' &&
     pathname !== '/internship-program' &&
-    pathname !== '/ready-to-join';
+    pathname !== '/ready-to-join' &&
+    pathname !== '/apply-job';
   const isTablet = useBreakpoint(BreakPoints.LG);
 
   const dataMenu: MenuItemType[] = [

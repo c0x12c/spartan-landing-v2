@@ -32,6 +32,22 @@ export { ContactUsForm } from './contact-us/Form';
 export { ContactInfo } from './contact-us/Info';
 export { AroundTheWorld } from './contact-us/AroundTheWorld';
 
+//SERVICES
+export { ServicesBanner } from './services/Banner';
+export { ServicesOffer } from './services/ServicesOffer';
+export { TechStacks } from './services/TechStacks';
+export { CareYourBusiness } from './services/CareYourBusiness';
+export { ServiceCasesStudy } from './services/CaseStudies';
+export { WorkingProcess } from './services/WorkingProcess';
+
+//SUB SERVICES
+export { SubServiceBanner } from './services/sub-services/Banner';
+export { PartnersSubService } from './services/sub-services/Partners';
+export { WhatWeDo } from './services/sub-services/WhatWeDo';
+export { ChooseUs } from './services/sub-services/ChooseUs';
+export { SubServiceWorkingProcess } from './services/sub-services/WorkingProcess';
+export { SubServiceProjects } from './services/sub-services/Projects';
+
 //CASE-STUDY
 export { CaseStudyBanner } from './case-study/home/Banner';
 export { CaseStudies } from './case-study/home/CaseStudies';

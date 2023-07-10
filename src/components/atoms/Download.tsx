@@ -1,11 +1,12 @@
 import * as React from 'react';
 import * as colors from '@/styles/colors';
-import { Box, Container, Typography } from '@mui/material';
+import { Box, Typography } from '@mui/material';
 import Link from 'next/link';
 import Image from 'next/image';
 import btnIos from '@/assets/images/case-volta/btn-ios.svg';
 import btnGGPlay from '@/assets/images/case-volta/btn-gg-play.svg';
 import { BreakPoints, useBreakpoint } from '@/hooks';
+import { Container } from './common/Container';
 
 interface IDownloadProps {
   linkIos?: string;

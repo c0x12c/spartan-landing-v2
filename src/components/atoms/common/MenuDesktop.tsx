@@ -1,6 +1,5 @@
 import React from 'react';
-import * as colors from '@/styles/colors';
-import { Typography, Box, Button } from '@mui/material';
+import { Box, Button } from '@mui/material';
 import { useRouter } from 'next/router';
 import { MenuItemType } from '@/components/molecules';
 import { ArrowIcon } from '../icons/Arrow';
@@ -24,15 +23,10 @@ export const MenuDesktop = ({ menu, isTransparent }: MenuDesktopType) => {
     );
   };
 
-  const renderMenu = menu.map((item, index) => {
+  const renderMenu = menu.map((item) => {
     return (
       <Box key={item.id} display="flex" alignItems="center" gap="16px" height="100%">
         <MenuItemDesktop item={item} isTransparent={isTransparent} />
-        {index !== menu.length - 1 && (
-          <Typography variant="fs18" color={isTransparent ? colors.gray[200] : colors.base.black}>
-            /
-          </Typography>
-        )}
       </Box>
     );
   });
