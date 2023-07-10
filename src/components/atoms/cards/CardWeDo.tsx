@@ -23,20 +23,28 @@ export const CardWeDo: React.FunctionComponent<ICardWeDoProps> = ({
       border="1px solid"
       borderColor={gray[200]}
       p="20px"
-      height="270px"
+      height="336px"
       display="flex"
       flexDirection="column"
       gap="20px"
       sx={{
         '&:hover': {
           bgcolor: base.white,
-          borderWidth: 0,
+          borderColor: 'transparent',
           boxShadow: '0px 10px 47px 0px #EFEFEF',
           transition: 'all 0.2s',
         },
       }}
     >
-      <Box bgcolor={bgIcon} width="72px" height="72px" borderRadius="50px">
+      <Box
+        bgcolor={bgIcon}
+        width="72px"
+        height="72px"
+        borderRadius="50px"
+        display="flex"
+        justifyContent="center"
+        alignItems="center"
+      >
         <Image src={icon} alt={title} style={{ maxWidth: '100%', height: 'auto' }} />
       </Box>
       <Box display="flex" flexDirection="column" gap="12px">

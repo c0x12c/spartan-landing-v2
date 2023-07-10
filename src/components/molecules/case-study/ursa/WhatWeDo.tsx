@@ -2,12 +2,12 @@ import * as React from 'react';
 import { CardWeDo, Container } from '@/components/atoms';
 import { Box, Grid, Typography } from '@mui/material';
 import { base, gray } from '@/styles/colors';
-import { DataWeDoAgora } from '@/constants/case-agora';
+import { DataWeDoUrsa } from '@/constants/case-ursa';
 
-interface IWhatWeDoAgoraProps {}
+interface IWhatWeDoURSAProps {}
 
-export const WhatWeDoAgora: React.FunctionComponent<IWhatWeDoAgoraProps> = () => {
-  const renderWhatWeDo = DataWeDoAgora.map((item) => {
+export const WhatWeDoURSA: React.FunctionComponent<IWhatWeDoURSAProps> = () => {
+  const renderWhatWeDo = DataWeDoUrsa.map((item) => {
     return (
       <Grid item key={item.id} xs={12} md={4}>
         <CardWeDo {...item} />

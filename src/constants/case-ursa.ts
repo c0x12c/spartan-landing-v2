@@ -16,29 +16,29 @@ import feIcon from '@/assets/images/icons/fe.svg';
 
 import { StaticImageData } from 'next/image';
 
-export const DataWeDoAgora = [
+export const DataWeDoUrsa = [
   {
-    id: 'agora-we-do-1',
+    id: 'ursa-we-do-1',
     title: 'Infrastructure',
-    bgIcon: '#3280FA',
+    bgIcon: '#FB8189',
     description:
       'Our team handles the setup and configuration of the necessary infrastructure components, ensuring a strong and scalable foundation.',
     icon: infraIcon,
   },
   {
-    id: 'agora-we-do-2',
+    id: 'ursa-we-do-2',
     title: 'Backend Development',
-    bgIcon: '#099DFD',
+    bgIcon: '#FBB37D',
     description:
       'Our experienced developers use Kotlin to build a robust backend that covers essential functionalities like user management, authentication, video streaming logic, and API integrations.',
     icon: backendIcon,
   },
   {
-    id: 'agora-we-do-3',
+    id: 'ursa-we-do-3',
     title: 'Frontend Development',
-    bgIcon: '#FFC600',
+    bgIcon: '#A744DB',
     description:
-      'We specialize in developing native code solutions to provide optimal performance and a seamless user experience. Our frontend development team leverages React for web development, Swift for iOS, and Kotlin for Android',
+      'With React, we create a visually appealing and user-friendly interface for your streaming website, focusing on delivering an immersive experience across devices.',
     icon: feIcon,
   },
 ];
@@ -49,7 +49,7 @@ export type StackType = {
   imgSrc: StaticImageData;
 };
 
-export const AgoraStacks: StackType[] = [
+export const UrsaStacks: StackType[] = [
   { id: 'tech-1', name: '[Kotlin]', imgSrc: Kotlin },
   { id: 'tech-2', name: '[Golang]', imgSrc: Go },
   { id: 'tech-3', name: '[Swift]', imgSrc: Swift },
@@ -64,5 +64,21 @@ export const AgoraStacks: StackType[] = [
   { id: 'tech-13', name: '[Terraform]', imgSrc: TerraForm },
 ];
 
-export const DataAgoraResult =
-  'In the past year, the streaming website has gone live, undergoing multiple significant updates. It has hosted numerous events with talented artists, attracting hundreds of fans. The website has provided a great streaming experience, and an app version is set to launch later this year.';
+export const DataURSAResult = [
+  {
+    id: 'ursa-result-1',
+    text: 'The streaming website was successfully launched and underwent multiple significant updates.',
+  },
+  {
+    id: 'ursa-result-2',
+    text: 'Numerous livestream events featuring talented artists were hosted, attracting a dedicated fan base.',
+  },
+  {
+    id: 'ursa-result-3',
+    text: 'The website provided a seamless and immersive streaming experience.',
+  },
+  {
+    id: 'ursa-result-4',
+    text: 'An app version of the platform is scheduled to be launched later this year.',
+  },
+];
