@@ -5,6 +5,7 @@ export { Footer } from './common/Footer';
 export { HomeBanner } from './home/Banner';
 export { Partners } from './home/Partners';
 export { WhyBusiness } from './home/WhyBusiness';
+export { OurServices } from './home/OurServices';
 export { GlobalImpact } from './home/GlobalImpact';
 export { Clients } from './home/Clients';
 

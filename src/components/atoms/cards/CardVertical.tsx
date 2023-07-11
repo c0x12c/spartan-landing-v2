@@ -1,13 +1,21 @@
 import { base, gray, primary } from '@/styles/colors';
 import { Box, Typography } from '@mui/material';
+import { useRouter } from 'next/router';
+import { ArrowIcon } from '../icons/Arrow';
 
 interface CardVerticalProps {
   icon: React.ReactNode;
   title: string;
   description: string;
+  link?: string;
 }
 
-export const CardVertical: React.FC<CardVerticalProps> = ({ icon, title, description }) => {
+export const CardVertical: React.FC<CardVerticalProps> = ({ icon, title, description, link }) => {
+  const router = useRouter();
+  const goToPath = () => {
+    if (!link) return;
+    router.push(link);
+  };
   return (
     <Box
       data-aos="flip-up"
@@ -20,13 +28,24 @@ export const CardVertical: React.FC<CardVerticalProps> = ({ icon, title, descrip
       boxShadow={'none'}
       p={'20px'}
       borderRadius={'8px'}
+      onClick={goToPath}
       sx={{
+        cursor: link ? 'pointer' : 'default',
         ':hover': {
           boxShadow: `0px 10px 47px 0px ${gray[75]}`,
           '& .title': {
             color: primary[500],
             transition: 'color 0.3s ease',
           },
+          '& .button-link': {
+            color: primary[500],
+            transition: 'color 0.3s ease',
+          },
+          '& .arrow-icon path': {
+            stroke: primary[500],
+            transition: 'stroke 0.3s ease',
+          },
+
           transition: 'box-shadow 0.3s ease',
         },
       }}
@@ -48,6 +67,14 @@ export const CardVertical: React.FC<CardVerticalProps> = ({ icon, title, descrip
       <Typography variant="fs16" color={gray[600]}>
         {description}
       </Typography>
+      {link && (
+        <Box display="flex" alignItems="center" gap="6px" color={gray[600]} className="button-link">
+          <Typography variant="fs16" fontWeight={600}>
+            Learn More
+          </Typography>
+          <ArrowIcon color={gray[600]} />
+        </Box>
+      )}
     </Box>
   );
 };

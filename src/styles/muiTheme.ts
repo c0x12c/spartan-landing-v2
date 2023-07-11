@@ -99,12 +99,14 @@ const createThemeByMode = (): Theme => {
             padding: 0,
             margin: 0,
             scrollBehavior: 'smooth',
+            overflowX: 'hidden',
           },
           html: {
             padding: 0,
             margin: 0,
             scrollBehavior: 'smooth',
             fontFamily: fonts,
+            overflowX: 'hidden',
           },
           a: {
             color: 'inherit',
