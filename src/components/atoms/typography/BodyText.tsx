@@ -3,20 +3,21 @@ import { SxProps, Theme, Typography } from '@mui/material';
 import { gray } from '@/styles/colors';
 import { BreakPoints, useBreakpoint } from '@/hooks';
 
-interface ITitleProps {
+interface IBodyTextProps {
   text: string;
   sx?: SxProps<Theme>;
 }
 
-export const Title: React.FunctionComponent<ITitleProps> = ({ text, sx, ...props }) => {
+export const BodyText: React.FunctionComponent<IBodyTextProps> = ({ text, sx, ...props }) => {
   const isMobile = useBreakpoint(BreakPoints.MD);
 
   return (
     <Typography
-      component="h2"
-      variant={isMobile ? 'fs28' : 'fs48'}
-      color={gray[800]}
+      component="p"
+      variant={isMobile ? 'fs14' : 'fs18'}
+      color={gray[600]}
       display="block"
+      letterSpacing={isMobile ? '0.21px' : 'normal'}
       sx={sx}
       {...props}
     >

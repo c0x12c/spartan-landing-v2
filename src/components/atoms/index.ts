@@ -14,6 +14,8 @@ export { ArrowIcon } from './icons/Arrow';
 // TYPOGRAPHY
 export { Title } from './typography/Title';
 export { SubTitle } from './typography/SubTitle';
+export { MainTitle } from './typography/MainTitle';
+export { BodyText } from './typography/BodyText';
 
 export { Banner } from './Banner';
 export { CardHorizontal } from './cards/CardHorizontal';

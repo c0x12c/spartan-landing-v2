@@ -4,7 +4,7 @@ import { base, gray, primary } from '@/styles/colors';
 import heroBanner from '@/assets/images/home-banner/hero-banner.svg';
 import heroBanner2 from '@/assets/images/home-banner/hero-banner-2.svg';
 import heroBanner3 from '@/assets/images/home-banner/hero-banner-3.svg';
-import { ArrowIcon, Banner, Container } from '@/components/atoms';
+import { ArrowIcon, Banner, BodyText, Container, MainTitle } from '@/components/atoms';
 import { BreakPoints, useBreakpoint } from '@/hooks';
 import Link from 'next/link';
 
@@ -27,30 +27,21 @@ export const HomeBanner = () => {
         <Container>
           <Box maxWidth={{ md: '700px', xs: '529px' }}>
             <Box display="flex" flexDirection="column" rowGap="28px" mb="32px">
-              <Typography
-                variant={isMobile ? 'fs36' : 'fs64'}
-                color={base.white}
+              <MainTitle
+                text="Spartans at/Work/asdasdasd"
                 data-aos="fade-up"
                 data-aos-delay="200"
-              >
-                Spartans at{' '}
-                <Typography variant={isMobile ? 'fs36' : 'fs64'} color={primary[500]}>
-                  Work
-                </Typography>
-              </Typography>
-              <Typography
-                variant={isMobile ? 'fs14' : 'fs18'}
-                color={gray[300]}
-                maxWidth="700px"
-                data-aos="fade-up"
-                data-aos-delay="300"
-              >
-                A powerhouse company driven by professionalism, strength, and a relentless positive
+              />
+              <BodyText
+                text="A powerhouse company driven by professionalism, strength, and a relentless positive
                 mindset. With an unwavering commitment to excellence, Spartan empowers your startups
                 by providing a solid team of tech-savvy people who are passionate about their work
                 and dedicated to long-term greatness. We know how to take advantage of technology
-                for your business and are willing to share this knowledge.
-              </Typography>
+                for your business and are willing to share this knowledge."
+                data-aos="fade-up"
+                data-aos-delay="300"
+                sx={{ color: gray[300], maxWidth: '700px' }}
+              />
             </Box>
             <Link
               href="/contact-us#contact-form"
