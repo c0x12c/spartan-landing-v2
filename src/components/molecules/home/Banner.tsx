@@ -27,14 +27,19 @@ export const HomeBanner = () => {
         <Container>
           <Box maxWidth={{ md: '700px', xs: '529px' }}>
             <Box display="flex" flexDirection="column" rowGap="28px" mb="32px">
-              <Typography variant="fs64" color={base.white} data-aos="fade-up" data-aos-delay="200">
+              <Typography
+                variant={isMobile ? 'fs36' : 'fs64'}
+                color={base.white}
+                data-aos="fade-up"
+                data-aos-delay="200"
+              >
                 Spartans at{' '}
-                <Typography variant="fs64" color={primary[500]}>
+                <Typography variant={isMobile ? 'fs36' : 'fs64'} color={primary[500]}>
                   Work
                 </Typography>
               </Typography>
               <Typography
-                variant="fs18"
+                variant={isMobile ? 'fs14' : 'fs18'}
                 color={gray[300]}
                 maxWidth="700px"
                 data-aos="fade-up"
