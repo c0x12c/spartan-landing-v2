@@ -18,14 +18,24 @@ const BannerCF = () => {
             flexDirection={'column'}
             gap={'32px'}
             justifyContent={'center'}
-            data-aos="fade-right"
-            data-aos-delay="200"
             maxWidth={'387px'}
           >
-            <Typography variant="fs64" color={base.white} fontSize={{ xs: '54px', sm: '64px' }}>
+            <Typography
+              variant="fs64"
+              color={base.white}
+              fontSize={{ xs: '54px', sm: '64px' }}
+              data-aos="fade-right"
+              data-aos-delay="200"
+            >
               ChargeFUZE
             </Typography>
-            <Typography variant="fs24" color={base.white} maxWidth={'488px'}>
+            <Typography
+              variant="fs24"
+              color={base.white}
+              maxWidth={'488px'}
+              data-aos="fade-right"
+              data-aos-delay="300"
+            >
               Empowering Device Charging on the Go
             </Typography>
           </Box>
