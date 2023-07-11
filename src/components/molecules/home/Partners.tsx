@@ -63,7 +63,7 @@ export const Partners: React.FunctionComponent<IPartnersProps> = () => {
             columnGap="61px"
             rowGap="32px"
           >
-            {renderBiz(PartnersData.slice(0, 3))}
+            {renderBiz(PartnersData.slice(0, 4))}
           </Box>
           <Box
             display="flex"
@@ -73,7 +73,7 @@ export const Partners: React.FunctionComponent<IPartnersProps> = () => {
             columnGap="61px"
             rowGap="32px"
           >
-            {renderBiz(PartnersData.slice(3))}
+            {renderBiz(PartnersData.slice(4))}
           </Box>
         </Box>
       </Container>

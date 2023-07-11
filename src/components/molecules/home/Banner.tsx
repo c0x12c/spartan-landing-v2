@@ -72,7 +72,7 @@ const HeroBannerElement = ({ src, index }: { src: string; index: number }) => {
         className={`banner-bg banner-bg-${index}`}
         sx={{
           backgroundImage: `url(${src})`,
-          backgroundPosition: 'top',
+          backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',
           backgroundSize: 'cover',
           height: { lg: '840px', md: '855px', xs: '792px' },
