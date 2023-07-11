@@ -12,6 +12,7 @@ interface IPartnersProps {}
 
 export const Partners: React.FunctionComponent<IPartnersProps> = () => {
   const isTablet = useBreakpoint(BreakPoints.LG);
+  const isMobile = useBreakpoint(BreakPoints.MD);
 
   const renderBiz = (data: PartnerType[]) => {
     return data.map((item) => {
