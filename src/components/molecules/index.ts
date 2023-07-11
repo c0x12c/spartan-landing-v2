@@ -59,3 +59,19 @@ export { Top100Coins } from './case-study/volta/Top100Coins';
 export { VoltaWeDo } from './case-study/volta/WeDo';
 export { VoltaTechStacks } from './case-study/volta/Stacks';
 export { VoltaResult } from './case-study/volta/Result';
+
+//CASE-STUDY-AGORA
+export { CaseStudyAgoraBanner } from './case-study/agora/Banner';
+export { OverviewAgora } from './case-study/agora/Overview';
+export { WhatWeDoAgora } from './case-study/agora/WhatWeDo';
+export { ResultAgora } from './case-study/agora/Result';
+
+//CASE-STUDY-URSA
+export { CaseStudyURSABanner } from './case-study/ursa/Banner';
+export { OverviewURSA } from './case-study/ursa/Overview';
+export { WhatWeDoURSA } from './case-study/ursa/WhatWeDo';
+export { ResultURSA } from './case-study/ursa/Result';
+
+//CASE-STUDY-HERU
+export { CaseStudyHeruBanner } from './case-study/heru/Banner';
+export { OverviewHeru } from './case-study/heru/Overview';

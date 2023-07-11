@@ -29,4 +29,6 @@ export { NextProject } from './NextProject';
 export { default as DownloadAppPanel } from './DownloadAppPanel';
 export { CardService } from './cards/CardService';
 export { CardProject } from './cards/CardProject';
+export { CardWeDo } from './cards/CardWeDo';
+
 export { ProcessList } from './ProcessList';
