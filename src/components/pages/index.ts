@@ -9,6 +9,7 @@ export { CaseStudyVoltaPage } from './CaseStudyVoltaPage';
 export { CaseStudyAgoraPage } from './CaseStudyAgoraPage';
 export { CaseStudyHeruPage } from './CaseStudyHeruPage';
 export { CaseStudyURSALivePage } from './CaseStudyURSALivePage';
+export { CaseStudyCFPage } from './CaseStudyCFPage';
 export { CaseStudyLiquidityPage } from './CaseStudyLiquidityPage';
 export { CaseStudyPage } from './CaseStudyPage';
 export { ServicesPage } from './ServicesPage';
