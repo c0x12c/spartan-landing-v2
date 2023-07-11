@@ -60,7 +60,7 @@ export const NextProject: React.FunctionComponent<INextProjectProps> = () => {
               <Image
                 src={NextProjectImage}
                 alt="NextProjectImage"
-                style={{ maxWidth: '100%', height: '100%' }}
+                style={{ width: '100%', height: '100%' }}
               />
             </Grid>
             <Grid item xs={12} lg={5} alignSelf="stretch">

@@ -80,6 +80,27 @@ const SEOPages: ISEOPages = {
     metaImage: '',
     slug: '/case-study/volta',
   },
+  [EPages.CASE_STUDY_AGORA]: {
+    title: 'c0x12c - Case Study - Live Cast',
+    description: 'c0x12c - Case Study - Live Cast',
+    keywords: 'c0x12c, Case Study - Live Cast',
+    metaImage: '',
+    slug: '/case-study/live-cast',
+  },
+  [EPages.CASE_STUDY_URSA]: {
+    title: 'c0x12c - Case Study - URSA Live',
+    description: 'c0x12c - Case Study - URSA Live',
+    keywords: 'c0x12c, Case Study - URSA Live',
+    metaImage: '',
+    slug: '/case-study/ursa',
+  },
+  [EPages.CASE_STUDY_HERU]: {
+    title: 'c0x12c - Case Study - Heru',
+    description: 'c0x12c - Case Study - Heru',
+    keywords: 'c0x12c, Case Study - Heru',
+    metaImage: '',
+    slug: '/case-study/heru',
+  },
   [EPages.LIFE_SPARTAN]: {
     title: 'c0x12c - Life of Spartan',
     description: 'c0x12c - Life of Spartan',
@@ -107,6 +128,13 @@ const SEOPages: ISEOPages = {
     keywords: 'c0x12c, Apply for job',
     metaImage: '',
     slug: '/apply-job',
+  },
+  [EPages.CASE_STUDY_LIQUIDITY]: {
+    title: 'c0x12c - Case study - Liquidity',
+    description: 'c0x12c - ACase study - Liquidity',
+    keywords: 'c0x12c,Case study - Liquidity',
+    metaImage: '',
+    slug: '/case-study/liquidity',
   },
   [EPages.SPARTAN_OPERATES]: {
     title: 'c0x12c - How Spartan Operates',
