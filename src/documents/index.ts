@@ -108,6 +108,13 @@ const SEOPages: ISEOPages = {
     metaImage: '',
     slug: '/apply-job',
   },
+  [EPages.CASE_STUDY_LIQUIDITY]: {
+    title: 'c0x12c - Case study - Liquidity',
+    description: 'c0x12c - ACase study - Liquidity',
+    keywords: 'c0x12c,Case study - Liquidity',
+    metaImage: '',
+    slug: '/case-study/liquidity',
+  },
 };
 
 export default SEOPages;
