@@ -10,6 +10,7 @@ interface IArrowIconProps {
 export const ArrowIcon: React.FunctionComponent<IArrowIconProps> = ({ color, width, height }) => {
   return (
     <svg
+      className="arrow-icon"
       width={width ?? '18'}
       height={height ?? '18'}
       viewBox="0 0 18 18"

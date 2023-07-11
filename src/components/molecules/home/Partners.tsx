@@ -62,8 +62,10 @@ export const Partners: React.FunctionComponent<IPartnersProps> = () => {
             alignItems="center"
             columnGap="61px"
             rowGap="32px"
+            data-aos="fade-up"
+            data-aos-delay="200"
           >
-            {renderBiz(PartnersData.slice(0, 3))}
+            {renderBiz(PartnersData.slice(0, 4))}
           </Box>
           <Box
             display="flex"
@@ -72,8 +74,10 @@ export const Partners: React.FunctionComponent<IPartnersProps> = () => {
             alignItems="center"
             columnGap="61px"
             rowGap="32px"
+            data-aos="fade-up"
+            data-aos-delay="300"
           >
-            {renderBiz(PartnersData.slice(3))}
+            {renderBiz(PartnersData.slice(4))}
           </Box>
         </Box>
       </Container>

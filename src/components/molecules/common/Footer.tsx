@@ -150,9 +150,9 @@ export const Footer: React.FunctionComponent<IFooterProps> = () => {
                 Spartan &copy; 2023. All Rights Reserved.
               </Typography>
             </Box>
-            <Box display="flex" gap="5px">
+            {/* <Box display="flex" gap="5px">
               {renderSocial}
-            </Box>
+            </Box> */}
           </Box>
         </Box>
       </Container>

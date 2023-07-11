@@ -7,6 +7,8 @@ import { useRouter } from 'next/router';
 import { MenuItemType } from '@/components/molecules';
 import { ArrowIcon } from '@/components/atoms';
 import ai from '@/assets/images/icons/ai.png';
+import cases from '@/assets/images/icons/cases.svg';
+
 import Image from 'next/image';
 import { Services } from '@/constants';
 
@@ -181,6 +183,32 @@ const SubMenu = ({ item }: Pick<MenuItemDesktopType, 'item'>) => {
         </Typography>
         <Grid container columnSpacing="32px" rowSpacing="56px">
           {renderServices}
+          <Grid item xs={6} lg={4}>
+            <Link href="/case-study">
+              <Box
+                display="flex"
+                gap="12px"
+                p="8px"
+                borderRadius="8px"
+                sx={{
+                  '&:hover': {
+                    bgcolor: primary[50],
+                    transition: 'all 0.2s',
+                  },
+                }}
+              >
+                <Image src={cases} alt={'cases'} />
+                <Box display="flex" flexDirection="column" gap="12px">
+                  <Typography variant="fs14" color={gray[900]} fontWeight="600" component="h4">
+                    Case Study
+                  </Typography>
+                  <Typography variant="fs14" fontSize="12px" color={gray[500]} component="p">
+                    Turning ideas into effective and engaging digital experiences.
+                  </Typography>
+                </Box>
+              </Box>
+            </Link>
+          </Grid>
         </Grid>
       </Box>
       <Box
