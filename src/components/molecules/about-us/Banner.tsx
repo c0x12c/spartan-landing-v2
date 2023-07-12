@@ -1,4 +1,4 @@
-import { Banner, Container } from '@/components/atoms';
+import { Banner, Container, MainTitle } from '@/components/atoms';
 import { HeroBanner } from '@/assets/images/about-us';
 import { Box, Typography } from '@mui/material';
 import { base, gray, primary } from '@/styles/colors';
@@ -16,22 +16,12 @@ export const AboutUsBanner = () => {
             gap="24px"
             maxWidth={{ md: '655px', xs: '100%' }}
           >
-            <Typography
-              variant={isMobile ? 'fs36' : 'fs64'}
-              color={base.white}
+            <MainTitle
+              text="Top tier tech savvy /Engineers/ in world"
               data-aos="fade-up"
               data-aos-delay="200"
-            >
-              Top tier tech savvy{' '}
-              <Typography
-                component={'span'}
-                variant={isMobile ? 'fs36' : 'fs64'}
-                color={primary[400]}
-              >
-                Engineers
-              </Typography>{' '}
-              in world
-            </Typography>
+            />
+
             <Typography variant="fs18" color={gray[300]} data-aos="fade-up" data-aos-delay="300">
               We are Spartan, a team of elite tech-savvy people who specialize in providing
               top-notch technical expertise to meet your goals. Our engineers are selected from the
