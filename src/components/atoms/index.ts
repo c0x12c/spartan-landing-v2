@@ -8,8 +8,18 @@ export { MenuDesktop } from './common/MenuDesktop';
 export { MenuItemDesktop } from './common/MenuItemDesktop';
 export { MenuMobile } from './common/MenuMobile';
 export { MenuItemMobile } from './common/MenuItemMobile';
+
 // ICONS
 export { ArrowIcon } from './icons/Arrow';
+export { BoxIcon } from './icons/Box';
+export { ChartIcon } from './icons/Chart';
+export { HealthIcon } from './icons/Health';
+export { LookPeopleIcon } from './icons/LookPeople';
+export { MoneyTickIcon } from './icons/MoneyTick';
+export { RunIcon } from './icons/Run';
+export { SuitcaseIcon } from './icons/Suitcase';
+export { TasksIcon } from './icons/Tasks';
+export { TimerIcon } from './icons/Timer';
 
 // TYPOGRAPHY
 export { Title } from './typography/Title';

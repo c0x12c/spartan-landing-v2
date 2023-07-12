@@ -17,6 +17,7 @@ export { LifeSpartanBanner } from './life-spartan/Banner';
 export { LifeSpartanSentence } from './life-spartan/Sentence';
 export { LifeSpartanFeatures } from './life-spartan/Features';
 export { TeamEngineers } from './life-spartan/TeamEngineers';
+export { OurBenefits } from './life-spartan/Benefits';
 
 //INTERNSHIP
 export { InternshipBanner } from './internship/Banner';

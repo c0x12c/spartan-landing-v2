@@ -5,32 +5,42 @@ import { BreakPoints, useBreakpoint } from '@/hooks';
 
 interface IMainTitleProps {
   text: string;
+  isLightMode?: boolean;
   sx?: SxProps<Theme>;
 }
 
-export const MainTitle: React.FunctionComponent<IMainTitleProps> = ({ text, sx, ...props }) => {
+export const MainTitle: React.FunctionComponent<IMainTitleProps> = ({
+  text,
+  isLightMode = true,
+  sx,
+  ...props
+}) => {
   const isMobile = useBreakpoint(BreakPoints.MD);
   const stringArr = text.split('/').filter((item) => item !== '');
 
   return (
-    <Box display="flex" alignItems="center" flexWrap="wrap">
+    <Typography
+      component={'h1'}
+      variant={isMobile ? 'fs36' : 'fs64'}
+      display="block"
+      sx={sx}
+      {...props}
+    >
       {stringArr.map((str, index) => {
         const isHightLight = index % 2 !== 0;
         return (
-          <Typography
-            key={str}
-            component="h1"
-            variant={isMobile ? 'fs36' : 'fs64'}
-            color={isHightLight ? primary[500] : base.white}
-            display="block"
-            sx={sx}
-            {...props}
-          >
-            {str}
+          <React.Fragment key={str}>
+            <span
+              style={{
+                color: isHightLight ? primary[500] : isLightMode ? base.white : base.black,
+              }}
+            >
+              {str}
+            </span>
             {index + 1 === 0 ? '' : '\u00A0'}
-          </Typography>
+          </React.Fragment>
         );
       })}
-    </Box>
+    </Typography>
   );
 };
