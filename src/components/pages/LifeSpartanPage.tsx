@@ -4,6 +4,7 @@ import {
   LifeSpartanBanner,
   LifeSpartanFeatures,
   LifeSpartanSentence,
+  OurBenefits,
   TeamEngineers,
 } from '../molecules';
 import { Box } from '@mui/material';
@@ -17,6 +18,7 @@ export const LifeSpartanPage: React.FunctionComponent<ILifeSpartanPageProps> = (
       <Box display="flex" flexDirection="column" gap="44px">
         <LifeSpartanBanner />
         <LifeSpartanSentence />
+        <OurBenefits />
         <LifeSpartanFeatures />
         <TeamEngineers />
         <GetInTouch

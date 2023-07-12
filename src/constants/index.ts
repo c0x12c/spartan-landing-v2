@@ -26,5 +26,3 @@ export {
   EmergingWorkingProcessData,
   type ProcessType,
 } from './processes';
-
-export { Benefits } from './benefits';
