@@ -170,7 +170,9 @@ const createThemeByMode = (): Theme => {
             fontWeight: 600,
           },
           sizeSmall: {
-            padding: '10px 18px !important',
+            padding: '12px 16px !important',
+            fontSize: '14px',
+            lineHeight: 1.43,
           },
         },
         variants: [

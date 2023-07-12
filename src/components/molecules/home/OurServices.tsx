@@ -1,7 +1,6 @@
 import * as React from 'react';
-import { CardVertical, Container, SubTitle, Title } from '@/components/atoms';
-import { gray } from '@/styles/colors';
-import { Box, Grid, Typography } from '@mui/material';
+import { BodyText, CardVertical, Container, SubTitle, Title } from '@/components/atoms';
+import { Box, Grid } from '@mui/material';
 import Image from 'next/image';
 
 import { BreakPoints, useBreakpoint } from '@/hooks';
@@ -39,11 +38,13 @@ export const OurServices: React.FunctionComponent<IOurServicesProps> = () => {
         <Box display="flex" flexDirection="column" rowGap="24px" maxWidth="668px" mb="64px">
           <SubTitle text="Our services" data-aos="fade-up" data-aos-delay="200" />
           <Title text="What services we offer" data-aos="fade-up" data-aos-delay="300" />
-          <Typography variant="fs18" color={gray[600]} data-aos="fade-up" data-aos-delay="500">
-            Spartans is renowned for its affordable, reliable, and expert IT consulting services. We
+          <BodyText
+            text="Spartans is renowned for its affordable, reliable, and expert IT consulting services. We
             provide top-of-the-line technologies, software, and applications that help enterprises
-            gain a competitive edge in the market.
-          </Typography>
+            gain a competitive edge in the market."
+            data-aos="fade-up"
+            data-aos-delay="500"
+          />
         </Box>
         <Grid container justifyContent="center" spacing={'32px'}>
           {renderData}

@@ -26,8 +26,8 @@ export const MainTitle: React.FunctionComponent<IMainTitleProps> = ({ text, sx, 
             sx={sx}
             {...props}
           >
-            {index === 0 ? '' : '\u00A0'}
             {str}
+            {index !== 0 ? '' : '\u00A0'}
           </Typography>
         );
       })}

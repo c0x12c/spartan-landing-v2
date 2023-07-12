@@ -1,6 +1,6 @@
 import React from 'react';
-import { Typography, Box, Button } from '@mui/material';
-import { base, gray, primary } from '@/styles/colors';
+import { Box, Button } from '@mui/material';
+import { gray } from '@/styles/colors';
 import heroBanner from '@/assets/images/home-banner/hero-banner.svg';
 import heroBanner2 from '@/assets/images/home-banner/hero-banner-2.svg';
 import heroBanner3 from '@/assets/images/home-banner/hero-banner-3.svg';
@@ -27,11 +27,7 @@ export const HomeBanner = () => {
         <Container>
           <Box maxWidth={{ md: '700px', xs: '529px' }}>
             <Box display="flex" flexDirection="column" rowGap="28px" mb="32px">
-              <MainTitle
-                text="Spartans at/Work/asdasdasd"
-                data-aos="fade-up"
-                data-aos-delay="200"
-              />
+              <MainTitle text="Spartans at/Work/" data-aos="fade-up" data-aos-delay="200" />
               <BodyText
                 text="A powerhouse company driven by professionalism, strength, and a relentless positive
                 mindset. With an unwavering commitment to excellence, Spartan empowers your startups

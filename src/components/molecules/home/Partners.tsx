@@ -1,8 +1,8 @@
 import * as React from 'react';
-import { Container, SubTitle, Title } from '@/components/atoms';
+import { BodyText, Container, SubTitle, Title } from '@/components/atoms';
 import { PartnerType } from '@/constants';
 import { gray } from '@/styles/colors';
-import { Box, Typography } from '@mui/material';
+import { Box, Grid } from '@mui/material';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Partners as PartnersData } from '@/constants';
@@ -14,18 +14,20 @@ export const Partners: React.FunctionComponent<IPartnersProps> = () => {
   const isTablet = useBreakpoint(BreakPoints.LG);
   const isMobile = useBreakpoint(BreakPoints.MD);
 
-  const renderBiz = (data: PartnerType[]) => {
+  const renderBiz = (data: PartnerType[], position: string) => {
     return data.map((item) => {
       return (
-        <Link key={item.id} href={item.href}>
-          <Image src={item.imgSrc} alt={item.name} style={{ maxWidth: '100%', height: 'auto' }} />
-        </Link>
+        <Grid key={item.id} item xs={4} md={position === 'first' ? 3 : 2} textAlign="center">
+          <Link href={item.href}>
+            <Image src={item.imgSrc} alt={item.name} style={{ maxWidth: '100%', height: 'auto' }} />
+          </Link>
+        </Grid>
       );
     });
   };
 
   return (
-    <Box py={isTablet ? '60px' : '120px'}>
+    <Box py={isTablet ? '60px' : '120px'} bgcolor={gray[50]}>
       <Container>
         <Box
           display="flex"
@@ -35,6 +37,7 @@ export const Partners: React.FunctionComponent<IPartnersProps> = () => {
           mx="auto"
           alignItems="center"
           textAlign="center"
+          mb={isMobile ? '44px' : '64px'}
         >
           <SubTitle text="Who we work with" data-aos="fade-up" data-aos-delay="200" />
           <Title
@@ -42,45 +45,25 @@ export const Partners: React.FunctionComponent<IPartnersProps> = () => {
             data-aos="fade-up"
             data-aos-delay="300"
           />
-          <Typography variant="fs18" color={gray[600]} data-aos="fade-up" data-aos-delay="500">
-            Our clients include startups, established businesses, and enterprises who trust us to
-            deliver top-notch engineering solutions for their products and projects. Join these
-            successful companies who have trusted Spartan to enable their success
-          </Typography>
+          <BodyText
+            text="Our clients include startups, established businesses, and enterprises who trust us to
+                deliver top-notch engineering solutions for their products and projects. Join these
+                successful companies who have trusted Spartan to enable their success"
+            data-aos="fade-up"
+            data-aos-delay="500"
+            sx={{ maxWidth: '700px' }}
+          />
         </Box>
-        <Box
-          display="flex"
-          flexDirection="column"
-          justifyContent="center"
+        <Grid
+          container
+          columnSpacing={isMobile ? '28px' : '62px'}
+          rowSpacing={isMobile ? '20px' : '44px'}
           alignItems="center"
-          rowGap="44px"
-          mt="64px"
+          justifyContent="center"
         >
-          <Box
-            display="flex"
-            justifyContent="center"
-            flexWrap="wrap"
-            alignItems="center"
-            columnGap="61px"
-            rowGap="32px"
-            data-aos="fade-up"
-            data-aos-delay="200"
-          >
-            {renderBiz(PartnersData.slice(0, 4))}
-          </Box>
-          <Box
-            display="flex"
-            justifyContent="center"
-            flexWrap="wrap"
-            alignItems="center"
-            columnGap="61px"
-            rowGap="32px"
-            data-aos="fade-up"
-            data-aos-delay="300"
-          >
-            {renderBiz(PartnersData.slice(4))}
-          </Box>
-        </Box>
+          {renderBiz(PartnersData.slice(0, 4), 'first')}
+          {renderBiz(PartnersData.slice(4), 'second')}
+        </Grid>
       </Container>
     </Box>
   );

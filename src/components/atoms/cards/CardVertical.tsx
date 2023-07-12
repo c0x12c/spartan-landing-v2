@@ -2,6 +2,7 @@ import { base, gray, primary } from '@/styles/colors';
 import { Box, Typography } from '@mui/material';
 import { useRouter } from 'next/router';
 import { ArrowIcon } from '../icons/Arrow';
+import { BreakPoints, useBreakpoint } from '@/hooks';
 
 interface CardVerticalProps {
   icon: React.ReactNode;
@@ -16,6 +17,9 @@ export const CardVertical: React.FC<CardVerticalProps> = ({ icon, title, descrip
     if (!link) return;
     router.push(link);
   };
+
+  const isMobile = useBreakpoint(BreakPoints.MD);
+
   return (
     <Box
       data-aos="flip-up"
@@ -28,6 +32,7 @@ export const CardVertical: React.FC<CardVerticalProps> = ({ icon, title, descrip
       boxShadow={'none'}
       p={'20px'}
       borderRadius={'8px'}
+      minHeight={isMobile ? '230px' : '295px'}
       onClick={goToPath}
       sx={{
         cursor: link ? 'pointer' : 'default',
@@ -61,10 +66,15 @@ export const CardVertical: React.FC<CardVerticalProps> = ({ icon, title, descrip
       >
         {icon}
       </Box>
-      <Typography variant="fs18" color={gray[900]} fontWeight={600} className="title">
+      <Typography
+        variant={isMobile ? 'fs16' : 'fs18'}
+        color={gray[900]}
+        fontWeight={600}
+        className="title"
+      >
         {title}
       </Typography>
-      <Typography variant="fs16" color={gray[600]}>
+      <Typography variant={isMobile ? 'fs14' : 'fs16'} color={gray[600]}>
         {description}
       </Typography>
       {link && (
