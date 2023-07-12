@@ -8,7 +8,6 @@ import { gray } from '@/styles/colors';
 import { BreakPoints, useBreakpoint } from '@/hooks';
 
 export const Description = () => {
-  const isTablet = useBreakpoint(BreakPoints.LG);
   const isMobile = useBreakpoint(BreakPoints.MD);
 
   return (
