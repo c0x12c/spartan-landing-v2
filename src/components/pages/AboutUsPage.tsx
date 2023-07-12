@@ -7,7 +7,7 @@ import {
   EmpowerTech,
   SuccessFactors,
   Uniqueness,
-  Founders,
+  // Founders,
 } from '../molecules/about-us';
 
 type Props = {
@@ -22,7 +22,7 @@ export const AboutUsPage: React.FC<Props> = () => {
         <Description />
         <SuccessFactors />
         <Uniqueness />
-        <Founders />
+        {/* <Founders /> */}
         <EmpowerTech />
       </Box>
     </MainTemplate>

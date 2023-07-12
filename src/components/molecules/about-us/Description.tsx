@@ -1,20 +1,26 @@
-import { Container } from '@/components/atoms';
-import { Box, Typography, useMediaQuery, useTheme } from '@mui/material';
+import { BodyText, Container } from '@/components/atoms';
+import { Box, Typography } from '@mui/material';
 import { SubTitle, Title } from '@/components/atoms';
 import { DescriptionImage } from '@/assets/images/about-us';
 import Image from 'next/image';
 import { base, primary } from '@/styles/colors';
 import { gray } from '@/styles/colors';
+import { BreakPoints, useBreakpoint } from '@/hooks';
 
 export const Description = () => {
-  const theme = useTheme();
-  const isTablet = useMediaQuery(theme.breakpoints.down('lg'));
-  const isMobile = useMediaQuery(theme.breakpoints.between('xs', 'sm'));
+  const isTablet = useBreakpoint(BreakPoints.LG);
+  const isMobile = useBreakpoint(BreakPoints.MD);
+
   return (
     <Container>
-      <Box pt={'100px'} pb={'160px'}>
-        <Box display={'flex'} flexDirection={'column'} gap={'24px'} mb={'41px'}>
-          <SubTitle text="About us" data-aos="fade-up" data-aos-delay="200" />
+      <Box p={isMobile ? '40px 0' : '100px 0 160px'}>
+        <Box
+          display={'flex'}
+          flexDirection={'column'}
+          gap={isMobile ? '12px' : '24px'}
+          mb={isMobile ? '32px' : '41px'}
+        >
+          <SubTitle text="#who" data-aos="fade-up" data-aos-delay="200" />
           <Title
             text="We are Spartan, a team of elite tech-savvy people!"
             data-aos="fade-up"
@@ -38,15 +44,18 @@ export const Description = () => {
             alt="Image with group of people"
             data-aos="fade-right"
             data-aos-delay="500"
-            style={{ width: isTablet ? '100%' : '723px', objectFit: 'cover', borderRadius: '8px' }}
+            style={{
+              width: isMobile ? '100%' : '723px',
+              objectFit: isMobile ? 'contain' : 'cover',
+              height: 'auto',
+              borderRadius: '8px',
+            }}
           />
-          <Typography variant="fs18" color={gray[600]} data-aos="fade-left" data-aos-delay="600">
-            The company is based in the US but works with engineers from around the world,
-            leveraging remote work to take advantage of cost savings and improve startups financial
-            runway. <br />
-            We unite individuals from all stages of software development, prioritizing the creation
-            of a strong team and nurturing the growth of our engineers.
-          </Typography>
+          <BodyText
+            text="The company is based in the US but works with engineers worldwide, leveraging remote work to maximize cost savings and improve startups' financial runway. \n We unite individuals from all stages of software development, prioritizing the creation of a strong team and nurturing the growth of our engineers."
+            data-aos="fade-left"
+            data-aos-delay="500"
+          />
           <Box
             data-aos="fade-up-left"
             data-aos-delay="500"
@@ -55,21 +64,21 @@ export const Description = () => {
             p={{ sm: '44px 0 0 44px', xs: '12px' }}
             position={'absolute'}
             right={0}
-            bottom={'-186px'}
+            bottom={isMobile ? '-210px' : '-186px'}
             bgcolor={base.white}
             borderRadius={'8px 0 0 0'}
           >
             <StatisticBox
               isMobile={isMobile}
               title="People"
-              number="150+"
-              subtitle="Talent engineer work everyday"
+              number="70+"
+              subtitle="Talent engineers work every day"
             />
             <StatisticBox
               isMobile={isMobile}
               title="World offices"
-              number=" 04"
-              subtitle="Talent engineer work everyday"
+              number="04"
+              subtitle="Our offices around the world"
             />
           </Box>
         </Box>

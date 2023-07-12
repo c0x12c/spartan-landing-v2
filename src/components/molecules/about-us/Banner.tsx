@@ -1,11 +1,9 @@
-import { Banner, Container, MainTitle } from '@/components/atoms';
+import { Banner, BodyText, Container, MainTitle } from '@/components/atoms';
 import { HeroBanner } from '@/assets/images/about-us';
-import { Box, Typography } from '@mui/material';
-import { base, gray, primary } from '@/styles/colors';
-import { BreakPoints, useBreakpoint } from '@/hooks';
+import { Box } from '@mui/material';
+import { gray } from '@/styles/colors';
 
 export const AboutUsBanner = () => {
-  const isMobile = useBreakpoint(BreakPoints.MD);
   return (
     <Banner src={HeroBanner.src}>
       <Box position="absolute" top="50%" width="100%" sx={{ transform: 'translateY(-50%)' }}>
@@ -21,13 +19,15 @@ export const AboutUsBanner = () => {
               data-aos="fade-up"
               data-aos-delay="200"
             />
-
-            <Typography variant="fs18" color={gray[300]} data-aos="fade-up" data-aos-delay="300">
-              We are Spartan, a team of elite tech-savvy people who specialize in providing
-              top-notch technical expertise to meet your goals. Our engineers are selected from the
-              top 1%, signifying that they are not merely proficient coders but also exceptional
-              engineers with a deep comprehension of the intricacies of software development.
-            </Typography>
+            <BodyText
+              text="We are Spartan, a team of elite tech-savvy people who specialize in providing
+                top-notch technical expertise to meet your goals. Our engineers are selected from the
+                top 1%, signifying that they are not merely proficient coders but also exceptional
+                engineers with a deep comprehension of the intricacies of software development."
+              data-aos="fade-up"
+              data-aos-delay="300"
+              sx={{ color: gray[300] }}
+            />
           </Box>
         </Container>
       </Box>

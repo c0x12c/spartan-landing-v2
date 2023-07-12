@@ -1,5 +1,5 @@
 import { CardHorizontal, Container } from '@/components/atoms';
-import { Box, Typography } from '@mui/material';
+import { Box } from '@mui/material';
 import { SubTitle, Title } from '@/components/atoms';
 import { StatisticImage } from '@/assets/images/about-us';
 import Image from 'next/image';
@@ -7,12 +7,19 @@ import SubTitleImage from '@/assets/images/icons/subtitle.svg';
 import StatsUpImage from '@/assets/images/icons/status-up.svg';
 import MoneyImage from '@/assets/images/icons/money-recive.svg';
 import SquareTaskImage from '@/assets/images/icons/task-square.svg';
-import { gray } from '@/styles/colors';
+import { BreakPoints, useBreakpoint } from '@/hooks';
 
 export const Uniqueness = () => {
+  const isMobile = useBreakpoint(BreakPoints.MD);
+
   return (
     <Container>
-      <Box display={'flex'} gap={'55px'} flexDirection={{ lg: 'row', xs: 'column' }} p={'100px 0 '}>
+      <Box
+        display={'flex'}
+        gap={isMobile ? '24px' : '55px'}
+        flexDirection={{ lg: 'row', xs: 'column' }}
+        py={isMobile ? '40px' : '100px'}
+      >
         <Box
           maxWidth={{ lg: '44%', xs: '100%' }}
           display={'flex'}
@@ -21,33 +28,21 @@ export const Uniqueness = () => {
           justifyContent={{ lg: 'start', xs: 'center' }}
         >
           <SubTitle
-            text="Why business choose us"
+            text="#why"
             data-aos-delay="200"
             data-aos="fade-up"
             sx={{
-              textAlign: { lg: 'start', xs: 'center' },
+              textAlign: 'left',
             }}
           />
           <Title
-            text="What makes us stand out from the competition"
+            text="Why are startups choose Spartan to solve their problem?"
             data-aos="fade-up"
             data-aos-delay="300"
             sx={{
-              mb: '8px',
-              textAlign: { lg: 'start', xs: 'center' },
+              textAlign: 'left',
             }}
           />
-          <Typography
-            variant="fs18"
-            color={gray[600]}
-            component={'p'}
-            textAlign={{ lg: 'start', xs: 'center' }}
-            data-aos="fade-up"
-            data-aos-delay="500"
-          >
-            Our objective is to develop a profitable and effective solution that helps clients to
-            expand
-          </Typography>
           <Image
             src={StatisticImage}
             alt="Image with statistics"
