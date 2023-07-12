@@ -9,12 +9,18 @@ interface ILifeSpartanFeaturesProps {}
 export const LifeSpartanFeatures: React.FunctionComponent<ILifeSpartanFeaturesProps> = () => {
   const isTablet = useBreakpoint(BreakPoints.LG);
 
-  const renderFeatures = Features.map((item, index) => {
-    return <BoxFeature key={item.id} {...item} isReverse={index % 2 !== 0} />;
+  const renderFeatures = Features.map((item) => {
+    return <BoxFeature key={item.id} {...item} />;
   });
 
   return (
-    <Box py={isTablet ? '40px' : '100px'}>
+    <Box
+      py={isTablet ? '40px' : '100px'}
+      sx={{
+        background:
+          'linear-gradient(180deg, #FFF 0%, rgba(211, 221, 255, 0.74) 39.05%, rgba(221, 221, 255, 0.48) 58.21%, rgba(255, 255, 255, 0.00) 100%)',
+      }}
+    >
       <Container>
         <Box display="flex" flexDirection="column" gap={isTablet ? '40px' : '100px'}>
           {renderFeatures}
