@@ -41,12 +41,21 @@ export const Benefits: React.FunctionComponent<IBenefitsProps> = () => {
     <Box width={'100%'} p={'140px 0'} sx={{ backgroundColor: gray[100] }}>
       <Container>
         <Box display={'flex'} flexDirection={'column'} gap={'24px'} mb={'64px'}>
-          <SubTitle text="Benefit" textAlign={'center'} data-aos-delay="200" data-aos="fade-up" />
+          <SubTitle
+            text="Benefit"
+            data-aos-delay="200"
+            data-aos="fade-up"
+            sx={{
+              textAlign: 'center',
+            }}
+          />
           <Title
             text="Fostering future tech innovators"
-            textAlign={'center'}
             data-aos="fade-up"
             data-aos-delay="300"
+            sx={{
+              textAlign: 'center',
+            }}
           />
         </Box>
         <Box

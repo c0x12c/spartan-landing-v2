@@ -22,17 +22,20 @@ export const Uniqueness = () => {
         >
           <SubTitle
             text="Why business choose us"
-            textAlign={{ lg: 'start', xs: 'center' }}
             data-aos-delay="200"
             data-aos="fade-up"
+            sx={{
+              textAlign: { lg: 'start', xs: 'center' },
+            }}
           />
           <Title
-            text="What makes us 
-stand out from the competition"
-            mb={'8px'}
-            textAlign={{ lg: 'start', xs: 'center' }}
+            text="What makes us stand out from the competition"
             data-aos="fade-up"
             data-aos-delay="300"
+            sx={{
+              mb: '8px',
+              textAlign: { lg: 'start', xs: 'center' },
+            }}
           />
           <Typography
             variant="fs18"

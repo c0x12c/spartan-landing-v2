@@ -17,9 +17,11 @@ export const Description = () => {
           <SubTitle text="About us" data-aos="fade-up" data-aos-delay="200" />
           <Title
             text="We are Spartan, a team of elite tech-savvy people!"
-            maxWidth={'690px'}
             data-aos="fade-up"
             data-aos-delay="300"
+            sx={{
+              maxWidth: '690px',
+            }}
           />
         </Box>
         <Box

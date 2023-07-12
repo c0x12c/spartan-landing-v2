@@ -26,7 +26,14 @@ export const SubServiceProjects: React.FunctionComponent<ISubServiceProjectsProp
         <Box display="flex" justifyContent="space-between" alignItems="center" mb="84px">
           <Box display={'flex'} flexDirection={'column'} gap={'24px'}>
             <SubTitle text="Our Project" data-aos="fade-up" data-aos-delay="200" />
-            <Title text="Case Study" maxWidth={'690px'} data-aos="fade-up" data-aos-delay="300" />
+            <Title
+              text="Case Study"
+              data-aos="fade-up"
+              data-aos-delay="300"
+              sx={{
+                maxWidth: '690px',
+              }}
+            />
             <Typography variant="fs18" color={gray[600]} data-aos="fade-left" data-aos-delay="500">
               Join us at Spartan Project and experience the strength of our capabilities,
               complemented by the humility that drives our success. Together, we will achieve

@@ -144,8 +144,10 @@ const Quotes = () => {
 
         <Title
           text="Sharing from a secret interview for Spartans around the world"
-          minWidth={{ sm: '635px', xs: '100%' }}
-          textAlign={{ sm: 'end', xs: 'start' }}
+          sx={{
+            minWidth: { sm: '635px', xs: '100%' },
+            textAlign: { sm: 'end', xs: 'start' },
+          }}
         />
       </Box>
       <Slider ref={slider} {...settings}>

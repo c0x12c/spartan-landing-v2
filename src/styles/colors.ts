@@ -4,6 +4,8 @@ export const base = {
   grey: '#636363',
   red: '#F55D2D',
   blue: '#EEF1FF',
+  lightBlue: '#F5F8FF',
+  darkBlue: '#2FA6E6',
 };
 
 export const gray = {

@@ -11,12 +11,21 @@ export const SuccessFactors = () => {
     <Box width={'100%'} p={'140px 0'} sx={{ backgroundColor: gray[100] }}>
       <Container>
         <Box display={'flex'} flexDirection={'column'} gap={'24px'} mb={'64px'}>
-          <SubTitle text="About us" textAlign={'center'} data-aos-delay="200" data-aos="fade-up" />
+          <SubTitle
+            text="About us"
+            data-aos-delay="200"
+            data-aos="fade-up"
+            sx={{
+              textAlign: 'center',
+            }}
+          />
           <Title
             text="How do we stand out amidst a sea of technology teams?"
-            textAlign={'center'}
             data-aos="fade-up"
             data-aos-delay="300"
+            sx={{
+              textAlign: 'center',
+            }}
           />
           <Typography
             variant="fs18"

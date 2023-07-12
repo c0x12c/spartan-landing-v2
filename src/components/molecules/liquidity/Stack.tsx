@@ -96,10 +96,12 @@ const LiquidityTechStacks: React.FunctionComponent<ILiquidityTechStacksProps> = 
         <Box maxWidth={'730px'} m={'0 auto'} mb={'40px'}>
           <Title
             text="Technology Stack"
-            mb={'16px'}
-            textAlign={'center'}
             data-aos="fade-up"
             data-aos-delay="200"
+            sx={{
+              mb: '16px',
+              textAlign: 'center',
+            }}
           />
           <Typography
             variant="fs18"

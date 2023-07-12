@@ -220,7 +220,7 @@ const createThemeByMode = (): Theme => {
       },
       fs24: {
         fontSize: '24px',
-        lineHeight: 1,
+        lineHeight: 1.5,
         fontWeight: 600,
       },
       fs28: {

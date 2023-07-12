@@ -20,8 +20,10 @@ const ApplyJobBanner = () => {
             <Box data-aos="fade-right" data-aos-delay="300">
               <Title
                 text="Spartan's remote high-paying tech jobs"
-                fontSize={{ xs: '40px', sm: '64px' }}
-                mb={'24px'}
+                sx={{
+                  fontSize: { xs: '40px', sm: '64px' },
+                  mb: '24px',
+                }}
               />
               <Typography
                 variant="fs18"

@@ -45,7 +45,7 @@ export const EmpowerTech = () => {
         >
           <Title
             text="Focus on nurturing engineer's power"
-            textAlign={{ xs: 'center', lg: 'end' }}
+            sx={{ textAlign: { xs: 'center', lg: 'end' } }}
           />
           <Typography
             variant="fs18"

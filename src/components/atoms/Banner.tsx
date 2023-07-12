@@ -7,6 +7,7 @@ interface IBannerProps {
   src?: string;
   bannerElement?: React.ReactNode;
   haveBackground?: boolean;
+  bannerPosition?: string | object;
 }
 
 export const Banner: React.FunctionComponent<IBannerProps> = ({
@@ -14,6 +15,7 @@ export const Banner: React.FunctionComponent<IBannerProps> = ({
   children,
   bannerElement,
   haveBackground = true,
+  bannerPosition = 'center',
 }) => {
   const isMobile = useBreakpoint(BreakPoints.MD);
 
@@ -43,10 +45,10 @@ export const Banner: React.FunctionComponent<IBannerProps> = ({
           width="100%"
           sx={{
             backgroundImage: `url(${src})`,
-            backgroundPosition: isMobile ? 'right' : 'top center',
             backgroundRepeat: 'no-repeat',
             backgroundSize: 'cover',
             height: { lg: '840px', md: '855px', xs: '792px' },
+            backgroundPosition: isMobile ? 'right' : bannerPosition,
           }}
         />
       )}
