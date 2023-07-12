@@ -6,6 +6,7 @@ interface IBannerProps {
   src?: string;
   bannerElement?: React.ReactNode;
   haveBackground?: boolean;
+  bannerPosition?: string | object;
 }
 
 export const Banner: React.FunctionComponent<IBannerProps> = ({
@@ -13,6 +14,7 @@ export const Banner: React.FunctionComponent<IBannerProps> = ({
   children,
   bannerElement,
   haveBackground = true,
+  bannerPosition = 'center',
 }) => {
   return (
     <Box position="relative" width="100%" minHeight={{ lg: '840px', md: '855px', xs: '792px' }}>
@@ -40,10 +42,10 @@ export const Banner: React.FunctionComponent<IBannerProps> = ({
           width="100%"
           sx={{
             backgroundImage: `url(${src})`,
-            backgroundPosition: 'center',
             backgroundRepeat: 'no-repeat',
             backgroundSize: 'cover',
             height: { lg: '840px', md: '855px', xs: '792px' },
+            backgroundPosition: bannerPosition,
           }}
         />
       )}

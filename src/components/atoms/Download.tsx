@@ -11,9 +11,14 @@ import { Container } from './common/Container';
 interface IDownloadProps {
   linkIos?: string;
   linkAppStore?: string;
+  background?: string;
 }
 
-export const Download: React.FunctionComponent<IDownloadProps> = ({ linkIos, linkAppStore }) => {
+export const Download: React.FunctionComponent<IDownloadProps> = ({
+  linkIos,
+  linkAppStore,
+  background = 'linear-gradient(154deg, #BAFFDE 0%, #C9DEFF 100%)',
+}) => {
   const isMobile = useBreakpoint(BreakPoints.SM);
 
   return (
@@ -23,7 +28,7 @@ export const Download: React.FunctionComponent<IDownloadProps> = ({ linkIos, lin
           py="64px"
           borderRadius="20px"
           sx={{
-            background: 'linear-gradient(154deg, #BAFFDE 0%, #C9DEFF 100%)',
+            background: background,
           }}
         >
           <Typography
