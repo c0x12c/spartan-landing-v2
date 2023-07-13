@@ -12,32 +12,32 @@ export const TechStacks: React.FunctionComponent<ITechStacksProps> = () => {
   const isMobile = useBreakpoint(BreakPoints.MD);
 
   const [selectedField, setSelectedField] = React.useState(Fields[0]);
-  const renderFields = Fields.map((item) => {
-    return (
-      <Box
-        key={item.id}
-        p="2px 24px"
-        borderRadius="16px"
-        color={selectedField.id === item.id ? base.white : gray[600]}
-        bgcolor={selectedField.id === item.id ? primary[500] : base.white}
-        onClick={() => setSelectedField(item)}
-        sx={{
-          cursor: 'pointer',
-          transition: 'all 0.4s',
-        }}
-      >
-        {item.name}
-      </Box>
-    );
-  });
+  // const renderFields = Fields.map((item) => {
+  //   return (
+  //     <Box
+  //       key={item.id}
+  //       p="2px 24px"
+  //       borderRadius="16px"
+  //       color={selectedField.id === item.id ? base.white : gray[600]}
+  //       bgcolor={selectedField.id === item.id ? primary[500] : base.white}
+  //       onClick={() => setSelectedField(item)}
+  //       sx={{
+  //         cursor: 'pointer',
+  //         transition: 'all 0.4s',
+  //       }}
+  //     >
+  //       {item.name}
+  //     </Box>
+  //   );
+  // });
 
-  const renderFieldContent = selectedField.stacks.map((item) => {
-    return (
-      <Box key={item.id}>
-        <Image src={item.imgSrc} alt={item.name} style={{ maxWidth: '100%', height: 'auto' }} />
-      </Box>
-    );
-  });
+  // const renderFieldContent = selectedField.stacks.map((item) => {
+  //   return (
+  //     <Box key={item.id}>
+  //       <Image src={item.imgSrc} alt={item.name} style={{ maxWidth: '100%', height: 'auto' }} />
+  //     </Box>
+  //   );
+  // });
   return (
     <Box py={isMobile ? '60px' : '120px'}>
       <Container>
@@ -71,7 +71,7 @@ export const TechStacks: React.FunctionComponent<ITechStacksProps> = () => {
             flexWrap="wrap"
             borderColor={gray[200]}
           >
-            {renderFields}
+            {/* {renderFields} */}
           </Box>
           <Box
             width="100%"
@@ -83,7 +83,7 @@ export const TechStacks: React.FunctionComponent<ITechStacksProps> = () => {
             justifyContent="center"
             gap="64px"
           >
-            {renderFieldContent}
+            {/* {renderFieldContent} */}
           </Box>
         </Box>
       </Container>
