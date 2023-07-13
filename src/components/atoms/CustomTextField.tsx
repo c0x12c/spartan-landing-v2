@@ -1,6 +1,6 @@
 import { base, gray } from '@/styles/colors';
 import { PoppinsFont } from '@/styles/muiTheme';
-import { Box, TextField, Typography, styled } from '@mui/material';
+import { Box, TextField, TextFieldProps, Typography, styled } from '@mui/material';
 
 export const CustomTextField = styled(TextField)({
   '& .MuiInputBase-input': {
@@ -59,7 +59,7 @@ export const TextFieldWithLabel = ({
   id,
   isRequired = false,
   ...props
-}: ITextFieldWithLabel) => {
+}: ITextFieldWithLabel & TextFieldProps) => {
   return (
     <Box>
       <Box component={'label'} htmlFor={id}>
