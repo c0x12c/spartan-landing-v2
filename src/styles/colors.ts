@@ -6,6 +6,9 @@ export const base = {
   blue: '#EEF1FF',
   lightBlue: '#F5F8FF',
   darkBlue: '#2FA6E6',
+  yellow: '#E7B51D',
+  orange: '#F55D2D',
+  green: '#6FCD78',
 };
 
 export const gray = {

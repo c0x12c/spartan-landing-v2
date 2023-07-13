@@ -33,7 +33,7 @@ const Quotes = () => {
         gap={{ xs: '40px', md: '92px' }}
         flexDirection={{ xs: 'column', md: 'row' }}
         paddingTop={'44px'}
-        paddingBottom={'88px'}
+        paddingBottom={{ xs: '40px', sm: '88px' }}
         alignItems={'center'}
         key={item.id}
       >
@@ -69,27 +69,14 @@ const Quotes = () => {
           <Box
             display="flex"
             justifyContent={{ md: 'space-between' }}
-            alignItems={'center'}
             flexDirection={{ xs: 'column', md: 'row' }}
             gap={{ xs: '20px', md: '0' }}
           >
             <Box>
-              <Typography
-                component="p"
-                textAlign={{ xs: 'center', md: 'start' }}
-                variant="fs18"
-                color={gray[900]}
-                fontWeight={700}
-              >
+              <Typography component="p" variant="fs18" color={gray[900]} fontWeight={700}>
                 {item.author}
               </Typography>
-              <Typography
-                variant="fs20"
-                textAlign={{ xs: 'center', md: 'start' }}
-                component="p"
-                color={primary[400]}
-                fontWeight={500}
-              >
+              <Typography variant="fs20" component="p" color={primary[400]} fontWeight={500}>
                 {item.authorPosition}
               </Typography>
             </Box>
@@ -135,6 +122,7 @@ const Quotes = () => {
   return (
     <Container>
       <Box display={'flex'} alignItems={'center'} data-aos-delay="300" data-aos="fade-up">
+        <Typography variant="fs14"></Typography>
         {!isMobile && (
           <Box width={'100%'} display={'flex'} alignItems={'center'}>
             <Image src={Star} alt="star" />

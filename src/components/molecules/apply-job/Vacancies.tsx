@@ -1,7 +1,7 @@
 import { Container, Title } from '@/components/atoms';
 import { vacancies, Job } from '@/constants/vacancies';
 import { base, gray, primary } from '@/styles/colors';
-import Arrow from '@/assets/images/icons/arrow.svg';
+import Arrow from '@/assets/images/icons/arrow-purple.svg';
 import {
   Box,
   Button,
@@ -39,7 +39,7 @@ const Vacancies = () => {
       <Box
         display={'flex'}
         flexDirection={'column'}
-        gap={'79px'}
+        gap={{ xs: '24px', sm: '79px' }}
         alignItems={'center'}
         width={'100%'}
       >
@@ -68,12 +68,12 @@ const Vacancies = () => {
             </Select>
           </FormControl>
           <FormControl fullWidth data-aos="zoom-in-right" data-aos-delay="400">
-            <InputLabel id="team-filter">Level</InputLabel>
+            <InputLabel id="level-filter">Level</InputLabel>
             <Select
               value={levelFilter}
               labelId="level-filter"
               id="level-select"
-              label="Team"
+              label="Level"
               onChange={handleLevelChange}
               inputProps={{ sx: { padding: 0 } }}
               sx={{
@@ -106,37 +106,44 @@ const Vacancies = () => {
 const List = ({ vacancies }: { vacancies: Job[] }) => {
   return (
     <Box width={'100%'}>
-      {vacancies.map((vacancy) => (
-        <ListItem {...vacancy} key={vacancy.id} />
+      {vacancies.map((vacancy, index) => (
+        <ListItem {...vacancy} key={vacancy.id} isLastItem={index === vacancies.length - 1} />
       ))}
     </Box>
   );
 };
 
-const ListItem = ({ id, position, salary, tags, experience_level, employment_type }: Job) => {
+const ListItem = ({
+  id,
+  position,
+  salary,
+  tags,
+  experience_level,
+  employment_type,
+  isLastItem,
+}: Job & { isLastItem?: boolean }) => {
   return (
     <Box
+      borderBottom={isLastItem ? 'none' : `1px solid ${gray[400]}`}
       data-aos="flip-left"
       data-aos-delay="300"
       id={id}
-      p={{ sm: '32px 44px', xs: '32px 0' }}
+      p={{ sm: '32px 44px', xs: '25px 0' }}
       display={'flex'}
       gap={'32px'}
       width={'100%'}
-      alignItems={'center'}
+      alignItems={{ xs: 'flex-start', sm: 'center' }}
       flexDirection={{ sm: 'row', xs: 'column' }}
     >
-      <Box display={'flex'} width={'100%'}>
-        <Box width={'100%'}>
+      <Box display={'flex'} flexDirection={{ xs: 'column', sm: 'row' }} width={'100%'}>
+        <Box width={'100%'} mb={{ xs: '16px', sm: '0' }}>
           <Typography variant="fs24" component={'p'} mb={'15px'} color={base.black}>
             {position}
           </Typography>
           <Typography
             component={'p'}
             variant="fs18"
-            color={primary[500]}
-            p={'4px 16px'}
-            border={`1px solid ${primary[500]}`}
+            color={primary[400]}
             width={'fit-content'}
             borderRadius={'6px'}
           >
@@ -149,7 +156,7 @@ const ListItem = ({ id, position, salary, tags, experience_level, employment_typ
           </Typography>
           <Typography component={'p'} variant="fs18" color={gray[600]} textTransform={'uppercase'}>
             {experience_level.join(', ')} |{' '}
-            <Typography component={'span'} color={primary[500]}>
+            <Typography component={'span'} color={primary[400]}>
               {employment_type}
             </Typography>
           </Typography>
@@ -157,7 +164,7 @@ const ListItem = ({ id, position, salary, tags, experience_level, employment_typ
       </Box>
 
       <Button
-        variant="contained"
+        variant="outlined"
         endIcon={<Image src={Arrow} alt="arrow" width={24} />}
         sx={{ minWidth: 'fit-content' }}
       >

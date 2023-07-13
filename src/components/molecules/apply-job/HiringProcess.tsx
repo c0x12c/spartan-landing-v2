@@ -7,14 +7,14 @@ import { HiringProcessData } from '@/constants';
 
 const HiringProcess = () => {
   return (
-    <Box p={'120px 0'} bgcolor={gray[50]}>
+    <Box p={{ sm: '120px 0', xs: '40px 0' }} bgcolor={gray[50]}>
       <Container>
         <Box
           display={'flex'}
           flexDirection={'column'}
-          gap={'24px'}
+          gap={'12px'}
           maxWidth={{ lg: '50%', xs: '100%' }}
-          mb={'64px'}
+          mb={{ xs: '24px', sm: '64px' }}
         >
           <SubTitle text="Process of work" data-aos="fade-up" data-aos-delay="200" />
           <Title
@@ -28,6 +28,7 @@ const HiringProcess = () => {
             maxWidth={'100%'}
             data-aos-delay="500"
             data-aos="fade-up"
+            mt={'12px'}
           >
             Drawing from our extensive experience interviewing candidates at renowned tech giants
             such as Google, Facebook, Uber, and Amazon
