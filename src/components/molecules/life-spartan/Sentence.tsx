@@ -3,14 +3,17 @@ import { Container } from '@/components/atoms';
 import { Box, Typography } from '@mui/material';
 import bg from '@/assets/images/life-spartan/world-bg.png';
 import { base, primary } from '@/styles/colors';
+import { BreakPoints, useBreakpoint } from '@/hooks';
 
 interface ILifeSpartanSentenceProps {}
 
-export const LifeSpartanSentence: React.FunctionComponent<ILifeSpartanSentenceProps> = (props) => {
+export const LifeSpartanSentence: React.FunctionComponent<ILifeSpartanSentenceProps> = () => {
+  const isMobile = useBreakpoint(BreakPoints.MD);
+
   return (
     <Container>
       <Box
-        padding="178px 0"
+        p={isMobile ? '80px 0' : '178px 0'}
         sx={{
           backgroundImage: `url(${bg.src})`,
           backgroundSize: 'cover',
@@ -19,16 +22,20 @@ export const LifeSpartanSentence: React.FunctionComponent<ILifeSpartanSentencePr
         }}
       >
         <Box textAlign="center" maxWidth="888px" mx="auto">
-          <Typography variant="fs40" color={base.black} letterSpacing="-0.8px">
-            Spartan brings together some of the{' '}
-            <Typography variant="fs40" color={primary[500]}>
-              smartest
+          <Typography
+            variant={isMobile ? 'fs28' : 'fs40'}
+            color={base.black}
+            letterSpacing="-0.8px"
+          >
+            Spartan brings together the{' '}
+            <Typography variant={isMobile ? 'fs28' : 'fs40'} color={primary[500]}>
+              brightest minds
             </Typography>{' '}
-            personal and professional creative minds{' '}
-            <Typography variant="fs40" color={primary[500]}>
+            of technical{' '}
+            <Typography variant={isMobile ? 'fs28' : 'fs40'} color={primary[500]}>
               in the world
             </Typography>{' '}
-            and makes them available to you.
+            , making them accessible to you
           </Typography>
         </Box>
       </Box>
