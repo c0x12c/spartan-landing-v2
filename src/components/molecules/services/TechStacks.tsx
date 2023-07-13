@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { base, gray, primary } from '@/styles/colors';
 import { Box, Typography } from '@mui/material';
-import { Container, SubTitle, Title } from '@/components/atoms';
+import { BodyText, Container, SubTitle, Title } from '@/components/atoms';
 import { Fields } from '@/constants';
 import Image from 'next/image';
 import { BreakPoints, useBreakpoint } from '@/hooks';
@@ -39,28 +39,35 @@ export const TechStacks: React.FunctionComponent<ITechStacksProps> = () => {
   //   );
   // });
   return (
-    <Box py={isMobile ? '60px' : '120px'}>
+    <Box py={isMobile ? '40px' : '120px'}>
       <Container>
         <Box
           display={'flex'}
           flexDirection={'column'}
           alignItems="center"
           gap={'24px'}
-          mb={'64px'}
+          mb={isMobile ? '24px' : '64px'}
           maxWidth={800}
           mx="auto"
           textAlign="center"
         >
           <SubTitle text="Our services" data-aos="fade-up" data-aos-delay="200" />
           <Title text="Technology Stack" data-aos="fade-up" data-aos-delay="300" />
-          <Typography variant="fs18" color={gray[600]} data-aos="fade-up" data-aos-delay="500">
-            At Spartan, we pride ourselves on our robust and cutting-edge tech stack that enables us
+          <BodyText
+            text="At Spartan, we pride ourselves on our robust and cutting-edge tech stack that enables us
             to deliver innovative solutions and drive operational efficiency. Our tech stack is
             constantly evolving, staying up to date with the latest industry trends and best
-            practices.
-          </Typography>
+            practices."
+            data-aos="fade-up"
+            data-aos-delay="300"
+          />
         </Box>
-        <Box display="flex" flexDirection="column" alignItems="center" gap="44px">
+        <Box
+          display="flex"
+          flexDirection="column"
+          alignItems="center"
+          gap={isMobile ? '24px' : '44px'}
+        >
           <Box
             display="flex"
             alignItems="center"
