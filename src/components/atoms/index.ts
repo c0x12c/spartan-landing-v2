@@ -20,6 +20,7 @@ export { RunIcon } from './icons/Run';
 export { SuitcaseIcon } from './icons/Suitcase';
 export { TasksIcon } from './icons/Tasks';
 export { TimerIcon } from './icons/Timer';
+export { AttachIcon } from './icons/Attach';
 
 // TYPOGRAPHY
 export { Title } from './typography/Title';
@@ -42,5 +43,5 @@ export { default as DownloadAppPanel } from './DownloadAppPanel';
 export { CardService } from './cards/CardService';
 export { CardProject } from './cards/CardProject';
 export { CardWeDo } from './cards/CardWeDo';
-
+export { UploadFile } from './UploadFile';
 export { ProcessList } from './ProcessList';
