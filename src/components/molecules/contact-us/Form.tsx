@@ -10,7 +10,7 @@ export const ContactUsForm: React.FunctionComponent<IContactUsFormProps> = () =>
   const isMobile = useBreakpoint(BreakPoints.MD);
 
   return (
-    <Box mb="44px" id="contact-form">
+    <Box mb={isMobile ? '24px' : '44px'} id="contact-form">
       <Container>
         <Box
           display="flex"

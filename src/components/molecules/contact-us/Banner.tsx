@@ -3,14 +3,17 @@ import { Container, MainTitle } from '@/components/atoms';
 import { Box } from '@mui/material';
 import Image from 'next/image';
 import bannerImage from '@/assets/images/contact-us/bg-image.jpg';
+import { BreakPoints, useBreakpoint } from '@/hooks';
 
 interface IContactUsBannerProps {}
 
 export const ContactUsBanner: React.FunctionComponent<IContactUsBannerProps> = () => {
+  const isMobile = useBreakpoint(BreakPoints.MD);
+
   return (
     <Container>
-      <Box pt={{ md: '115px', sm: '163px', xs: '133px' }} pb="60px">
-        <Box mb="51px">
+      <Box pt={{ md: '115px', sm: '163px', xs: '133px' }} pb={isMobile ? 'fs24' : '60px'}>
+        <Box mb={isMobile ? '24px' : '51px'}>
           <MainTitle
             text="Contact/us/"
             isLightMode={false}

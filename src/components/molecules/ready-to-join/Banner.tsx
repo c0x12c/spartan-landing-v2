@@ -3,13 +3,18 @@ import { Container, MainTitle } from '@/components/atoms';
 import { Box } from '@mui/material';
 import Image from 'next/image';
 import bannerImage from '@/assets/images/ready-to-join/bg-image.jpg';
+import bannerSpImage from '@/assets/images/ready-to-join/bg-sp-image.png';
+
+import { BreakPoints, useBreakpoint } from '@/hooks';
 
 interface IReadyToJoinBannerProps {}
 
 export const ReadyToJoinBanner: React.FunctionComponent<IReadyToJoinBannerProps> = () => {
+  const isMobile = useBreakpoint(BreakPoints.MD);
+
   return (
     <Container>
-      <Box pt={{ md: '115px', sm: '163px', xs: '133px' }} pb="60px">
+      <Box pt={{ md: '115px', sm: '163px', xs: '133px' }}>
         <Box mb="51px">
           <MainTitle
             text="Ready to/join/"
@@ -19,7 +24,7 @@ export const ReadyToJoinBanner: React.FunctionComponent<IReadyToJoinBannerProps>
           />
         </Box>
         <Image
-          src={bannerImage}
+          src={isMobile ? bannerSpImage : bannerImage}
           alt="bannerImage"
           style={{ maxWidth: '100%', height: 'auto', borderRadius: '8px' }}
         />

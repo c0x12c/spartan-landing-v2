@@ -1,8 +1,8 @@
 import * as React from 'react';
-import { Box, Button, Typography } from '@mui/material';
-import { ArrowIcon, BodyText, Container, TextFieldWithLabel } from '@/components/atoms';
+import { Box, Button } from '@mui/material';
+import { ArrowIcon, BodyText, Container, TextFieldWithLabel, Title } from '@/components/atoms';
 import { BreakPoints, useBreakpoint } from '@/hooks';
-import { gray } from '@/styles/colors';
+import { base, gray } from '@/styles/colors';
 
 interface IReadyToJoinFormProps {}
 
@@ -10,7 +10,12 @@ export const ReadyToJoinForm: React.FunctionComponent<IReadyToJoinFormProps> = (
   const isMobile = useBreakpoint(BreakPoints.MD);
 
   return (
-    <Box mb="44px" id="join-form">
+    <Box
+      mb={isMobile ? '24px' : '44px'}
+      py="40px"
+      id="join-form"
+      bgcolor={isMobile ? gray[50] : base.white}
+    >
       <Container>
         <Box
           display="flex"
@@ -58,11 +63,9 @@ export const ReadyToJoinForm: React.FunctionComponent<IReadyToJoinFormProps> = (
             width="100%"
             display="flex"
             flexDirection="column"
-            gap="44px"
+            gap={isMobile ? '24px' : '44px'}
           >
-            <Typography component="h2" variant="fs48" color={gray[850]}>
-              Submit form
-            </Typography>
+            <Title text="Submit form" sx={{ fontSize: isMobile ? '28px' : '48px' }} />
             <Box component={'form'} display="flex" flexDirection="column" gap="32px">
               <TextFieldWithLabel title="First name" id="firstName" isRequired />
               <TextFieldWithLabel title="Last name" id="lastName" isRequired />
