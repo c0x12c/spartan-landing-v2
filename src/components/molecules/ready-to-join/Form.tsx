@@ -1,6 +1,13 @@
 import * as React from 'react';
 import { Box, Button } from '@mui/material';
-import { ArrowIcon, BodyText, Container, TextFieldWithLabel, Title } from '@/components/atoms';
+import {
+  ArrowIcon,
+  BodyText,
+  Container,
+  TextFieldWithLabel,
+  Title,
+  UploadFile,
+} from '@/components/atoms';
 import { BreakPoints, useBreakpoint } from '@/hooks';
 import { base, gray } from '@/styles/colors';
 
@@ -70,9 +77,20 @@ export const ReadyToJoinForm: React.FunctionComponent<IReadyToJoinFormProps> = (
               <TextFieldWithLabel title="First name" id="firstName" isRequired />
               <TextFieldWithLabel title="Last name" id="lastName" isRequired />
               <TextFieldWithLabel title="Email" id="email" isRequired />
-              <TextFieldWithLabel title="Attach your résume here" id="résume" isRequired />
+              <UploadFile
+                title="Attach your résume here"
+                text="Attach file"
+                helpText="(Format: .doc, .docx, .pdf, .xls, .xlsx; <=5MB)"
+                isRequired
+              />
             </Box>
-            <Button variant="contained" size={isMobile ? 'small' : 'medium'}>
+            <Button
+              variant="contained"
+              size={isMobile ? 'small' : 'medium'}
+              sx={{
+                width: 'fit-content',
+              }}
+            >
               Submit now
               <ArrowIcon />
             </Button>
