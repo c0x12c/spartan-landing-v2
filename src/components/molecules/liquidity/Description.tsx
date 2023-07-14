@@ -14,7 +14,7 @@ const LiquidityFinancial = () => {
           flexDirection={'column'}
           gap={'32px'}
           width={'100%'}
-          p={'80px 0'}
+          py={{ xs: '40px', lg: '80px' }}
         >
           <Typography
             variant="fs48"

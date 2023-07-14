@@ -21,15 +21,20 @@ const BannerLiquidity = () => {
             <Box
               display={'flex'}
               flexDirection={'column'}
-              gap={'32px'}
+              gap={{ lg: '32px', xs: '24px' }}
               justifyContent={'center'}
               data-aos="fade-right"
               data-aos-delay="200"
             >
-              <Typography variant="fs64" color={base.white}>
+              <Typography variant="fs64" fontSize={{ xs: '36px', lg: '64px' }} color={base.white}>
                 Liquidity <br /> Financial
               </Typography>
-              <Typography variant="fs24" color={base.white} maxWidth={'488px'}>
+              <Typography
+                variant="fs24"
+                fontSize={{ xs: '18px', lg: '24px' }}
+                color={base.white}
+                maxWidth={'488px'}
+              >
                 Transforming Banking and Spending for the New Generation
               </Typography>
             </Box>

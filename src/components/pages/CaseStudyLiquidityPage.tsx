@@ -10,7 +10,7 @@ export const CaseStudyLiquidityPage = () => {
   return (
     <Box>
       <MainTemplate>
-        <Box display={'flex'} flexDirection={'column'} gap={'44px'}>
+        <Box display={'flex'} flexDirection={'column'} gap={{ xs: 0, lg: '44px' }}>
           <Banner />
           <Description />
           <Image
