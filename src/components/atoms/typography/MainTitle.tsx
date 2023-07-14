@@ -16,7 +16,7 @@ export const MainTitle: React.FunctionComponent<IMainTitleProps> = ({
   ...props
 }) => {
   const isMobile = useBreakpoint(BreakPoints.MD);
-  const stringArr = text.split('/').filter((item) => item !== '');
+  const stringArr = text.split('/');
 
   return (
     <Typography
@@ -37,7 +37,7 @@ export const MainTitle: React.FunctionComponent<IMainTitleProps> = ({
             >
               {str}
             </span>
-            {index + 1 === 0 ? '' : '\u00A0'}
+            {index + 1 !== 0 ? '' : '\u00A0'}
           </React.Fragment>
         );
       })}
