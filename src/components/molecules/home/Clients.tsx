@@ -199,7 +199,7 @@ export const Clients: React.FunctionComponent<IClientsProps> = () => {
   });
 
   return (
-    <Box my="64px">
+    <Box py={isMobile ? '40px' : '64px'}>
       <Container>
         <Box mb={isMobile ? '24px' : '44px'} textAlign={isMobile ? 'left' : 'center'}>
           <Title text="Clients love Spartans and our work!" />

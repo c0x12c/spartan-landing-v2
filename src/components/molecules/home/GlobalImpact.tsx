@@ -14,8 +14,8 @@ export const GlobalImpact: React.FunctionComponent<IGlobalImpactProps> = () => {
     <Box
       bgcolor={primary[50]}
       py={{
-        lg: '123px',
-        xs: '64px',
+        md: '123px',
+        xs: '40px',
       }}
     >
       <Container>
@@ -24,7 +24,7 @@ export const GlobalImpact: React.FunctionComponent<IGlobalImpactProps> = () => {
             <Box
               display="flex"
               flexDirection="column"
-              rowGap="24px"
+              rowGap={isMobile ? '12px' : '24px'}
               mb={isMobile ? '24px' : '48px'}
             >
               <SubTitle text="Our offices" data-aos="fade-up" data-aos-delay="200" />
@@ -41,6 +41,9 @@ export const GlobalImpact: React.FunctionComponent<IGlobalImpactProps> = () => {
             success"
                 data-aos="fade-up"
                 data-aos-delay="500"
+                sx={{
+                  mt: isMobile ? '12px' : 0,
+                }}
               />
             </Box>
             <Box display="flex" gap={isMobile ? '24px' : '32px'}>

@@ -15,7 +15,6 @@ import { BreakPoints, useBreakpoint } from '@/hooks';
 interface IWhyBusinessProps {}
 
 export const WhyBusiness: React.FunctionComponent<IWhyBusinessProps> = () => {
-  const isTablet = useBreakpoint(BreakPoints.LG);
   const isMobile = useBreakpoint(BreakPoints.MD);
 
   const data = [
@@ -77,9 +76,15 @@ export const WhyBusiness: React.FunctionComponent<IWhyBusinessProps> = () => {
   });
 
   return (
-    <Box py={isTablet ? '40px' : '100px'}>
+    <Box py={isMobile ? '40px' : '100px'}>
       <Container>
-        <Box display="flex" flexDirection="column" rowGap="24px" maxWidth="668px" mb="65px">
+        <Box
+          display="flex"
+          flexDirection="column"
+          rowGap={isMobile ? '12px' : '24px'}
+          maxWidth="668px"
+          mb={isMobile ? '24px' : '65px'}
+        >
           <SubTitle text="Highlight point" data-aos="fade-up" data-aos-delay="200" />
           <Title text="Why business choose Spartan" data-aos="fade-up" data-aos-delay="300" />
           <BodyText
@@ -87,9 +92,12 @@ export const WhyBusiness: React.FunctionComponent<IWhyBusinessProps> = () => {
             expand their businesses and overcome financial constraints"
             data-aos="fade-up"
             data-aos-delay="500"
+            sx={{
+              mt: isMobile ? '12px' : 0,
+            }}
           />
         </Box>
-        <Grid container spacing={isTablet ? '32px' : '65px'}>
+        <Grid container spacing={isMobile ? '32px' : '65px'}>
           <Grid item xs={12} lg={6}>
             <Box position="relative" maxWidth="581px" mx="auto">
               <Image
@@ -131,7 +139,7 @@ export const WhyBusiness: React.FunctionComponent<IWhyBusinessProps> = () => {
             </Box>
           </Grid>
           <Grid item xs={12} lg={6}>
-            <Box display="flex" flexDirection="column" rowGap="40px">
+            <Box display="flex" flexDirection="column" rowGap={isMobile ? '16px' : '40px'}>
               {renderData}
             </Box>
           </Grid>

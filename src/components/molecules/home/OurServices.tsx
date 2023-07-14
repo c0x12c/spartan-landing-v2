@@ -24,18 +24,24 @@ export const OurServices: React.FunctionComponent<IOurServicesProps> = () => {
     );
   });
 
-  const isTablet = useBreakpoint(BreakPoints.LG);
+  const isMobile = useBreakpoint(BreakPoints.MD);
 
   return (
     <Box
-      py={isTablet ? '40px' : '100px'}
+      py={isMobile ? '40px' : '100px'}
       sx={{
         background:
           'linear-gradient(180deg, #FFF 0%, rgba(226, 233, 255, 0.74) 51.57%, rgba(236, 236, 251, 0.48) 86.96%, rgba(255, 255, 255, 0.00) 100%)',
       }}
     >
       <Container>
-        <Box display="flex" flexDirection="column" rowGap="24px" maxWidth="668px" mb="64px">
+        <Box
+          display="flex"
+          flexDirection="column"
+          rowGap={isMobile ? '12px' : '24px'}
+          maxWidth="668px"
+          mb={isMobile ? '24px' : '64px'}
+        >
           <SubTitle text="Our services" data-aos="fade-up" data-aos-delay="200" />
           <Title text="What services we offer" data-aos="fade-up" data-aos-delay="300" />
           <BodyText
@@ -44,9 +50,12 @@ export const OurServices: React.FunctionComponent<IOurServicesProps> = () => {
             gain a competitive edge in the market."
             data-aos="fade-up"
             data-aos-delay="500"
+            sx={{
+              mt: isMobile ? '12px' : 0,
+            }}
           />
         </Box>
-        <Grid container justifyContent="center" spacing={'32px'}>
+        <Grid container justifyContent="center" spacing={isMobile ? '16px' : '32px'}>
           {renderData}
         </Grid>
       </Container>

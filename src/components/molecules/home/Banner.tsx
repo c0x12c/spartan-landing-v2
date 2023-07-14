@@ -1,9 +1,9 @@
 import React from 'react';
 import { Box, Button } from '@mui/material';
 import { gray } from '@/styles/colors';
-import heroBanner from '@/assets/images/home-banner/hero-banner.svg';
-import heroBanner2 from '@/assets/images/home-banner/hero-banner-2.svg';
-import heroBanner3 from '@/assets/images/home-banner/hero-banner-3.svg';
+import heroBanner from '@/assets/images/home-banner/banner-1.png';
+import heroBanner2 from '@/assets/images/home-banner/banner-2.png';
+import heroBanner3 from '@/assets/images/home-banner/banner-3.png';
 import { ArrowIcon, Banner, BodyText, Container, MainTitle } from '@/components/atoms';
 import { BreakPoints, useBreakpoint } from '@/hooks';
 import Link from 'next/link';

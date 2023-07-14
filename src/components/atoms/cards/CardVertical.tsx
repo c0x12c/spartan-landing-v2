@@ -23,7 +23,7 @@ export const CardVertical: React.FC<CardVerticalProps> = ({ icon, title, descrip
   return (
     <Box
       data-aos="flip-up"
-      data-aos-delay="700"
+      data-aos-delay="200"
       display="flex"
       alignItems="start"
       gap={isMobile ? '16px' : '20px'}

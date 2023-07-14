@@ -11,7 +11,6 @@ import { BreakPoints, useBreakpoint } from '@/hooks';
 interface IPartnersProps {}
 
 export const Partners: React.FunctionComponent<IPartnersProps> = () => {
-  const isTablet = useBreakpoint(BreakPoints.LG);
   const isMobile = useBreakpoint(BreakPoints.MD);
 
   const renderBiz = (data: PartnerType[], position: string) => {
@@ -27,12 +26,12 @@ export const Partners: React.FunctionComponent<IPartnersProps> = () => {
   };
 
   return (
-    <Box py={isTablet ? '60px' : '120px'} bgcolor={gray[50]}>
+    <Box py={isMobile ? '40px' : '120px'} bgcolor={gray[50]}>
       <Container>
         <Box
           display="flex"
           flexDirection="column"
-          rowGap="24px"
+          rowGap={isMobile ? '12px' : '24px'}
           maxWidth="806px"
           mx="auto"
           alignItems="center"
@@ -51,7 +50,10 @@ export const Partners: React.FunctionComponent<IPartnersProps> = () => {
                 successful companies who have trusted Spartan to enable their success"
             data-aos="fade-up"
             data-aos-delay="500"
-            sx={{ maxWidth: '700px' }}
+            sx={{
+              maxWidth: '700px',
+              mt: isMobile ? '12px' : 0,
+            }}
           />
         </Box>
         <Grid
