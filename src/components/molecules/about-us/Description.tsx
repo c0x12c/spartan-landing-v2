@@ -12,7 +12,7 @@ export const Description = () => {
 
   return (
     <Container>
-      <Box p={isMobile ? '40px 0' : '100px 0 160px'}>
+      <Box p={isMobile ? '40px 0' : '100px 0 160px'} position={'relative'}>
         <Box
           display={'flex'}
           flexDirection={'column'}
@@ -33,9 +33,8 @@ export const Description = () => {
           display={'flex'}
           flexDirection={{ lg: 'row', xs: 'column-reverse' }}
           width={'100%'}
-          gap={{ lg: '70px', xs: '41px' }}
+          gap={{ md: '70px', xs: '32px' }}
           alignItems={'center'}
-          position={'relative'}
           data-aos-delay="500"
         >
           <Image
@@ -55,31 +54,31 @@ export const Description = () => {
             data-aos="fade-left"
             data-aos-delay="500"
           />
-          <Box
-            data-aos="fade-up-left"
-            data-aos-delay="500"
-            display={'flex'}
-            gap={{ sm: '44px', xs: '12px' }}
-            p={{ sm: '44px 0 0 44px', xs: '12px' }}
-            position={'absolute'}
-            right={0}
-            bottom={isMobile ? '-210px' : '-186px'}
-            bgcolor={base.white}
-            borderRadius={'8px 0 0 0'}
-          >
-            <StatisticBox
-              isMobile={isMobile}
-              title="People"
-              number="70+"
-              subtitle="Talent engineers work every day"
-            />
-            <StatisticBox
-              isMobile={isMobile}
-              title="World offices"
-              number="04"
-              subtitle="Our offices around the world"
-            />
-          </Box>
+        </Box>
+        <Box
+          data-aos="fade-up-left"
+          data-aos-delay="500"
+          display={'flex'}
+          gap={{ sm: '44px', xs: '12px' }}
+          p={{ sm: '44px 0 0 44px', xs: '12px 0 0 0' }}
+          position={isMobile ? 'unset' : 'absolute'}
+          right={0}
+          bottom={isMobile ? 'unset' : '0'}
+          bgcolor={base.white}
+          borderRadius={'8px 0 0 0'}
+        >
+          <StatisticBox
+            isMobile={isMobile}
+            title="People"
+            number="70+"
+            subtitle="Talent engineers work every day"
+          />
+          <StatisticBox
+            isMobile={isMobile}
+            title="World offices"
+            number="04"
+            subtitle="Our offices around the world"
+          />
         </Box>
       </Box>
     </Container>

@@ -1,5 +1,5 @@
 import { BodyText, Container, Title } from '@/components/atoms';
-import { Box, Button, Typography } from '@mui/material';
+import { Box, Button } from '@mui/material';
 import Image from 'next/image';
 import ImageEmpowerTech from '@/assets/images/about-us/EmpowerTech-image.jpg';
 import Arrow from '@/assets/images/icons/arrow.svg';
@@ -15,7 +15,6 @@ export const EmpowerTech = () => {
         <Box
           display={'flex'}
           position={'relative'}
-          mb={'64px'}
           flexDirection={{ xs: 'column', lg: 'row' }}
           rowGap="40px"
         >

@@ -55,7 +55,7 @@ export const Uniqueness = () => {
           width={'100%'}
           display={'flex'}
           flexDirection={'column'}
-          gap={'42px'}
+          gap={isMobile ? '16px' : '42px'}
           data-aos="flip-right"
           data-aos-delay="700"
         >

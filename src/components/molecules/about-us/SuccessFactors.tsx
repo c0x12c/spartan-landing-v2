@@ -13,12 +13,17 @@ export const SuccessFactors = () => {
   return (
     <Box
       width={'100%'}
-      pt={'140px'}
+      pt={isMobile ? '40px' : '140px'}
       pb={isMobile ? '40px' : '140px'}
       sx={{ backgroundColor: gray[100] }}
     >
       <Container>
-        <Box display={'flex'} flexDirection={'column'} gap={'24px'} mb={isMobile ? '32px' : '64px'}>
+        <Box
+          display={'flex'}
+          flexDirection={'column'}
+          gap={isMobile ? '12px' : '24px'}
+          mb={isMobile ? '32px' : '64px'}
+        >
           <SubTitle
             text="#how"
             data-aos-delay="200"
@@ -40,7 +45,12 @@ export const SuccessFactors = () => {
                 exceptional talent make us truly stand out in the full-remote engineering landscape."
             data-aos="fade-up"
             data-aos-delay="500"
-            sx={{ textAlign: 'center', maxWidth: { lg: '818px', xs: '100%' }, mx: 'auto' }}
+            sx={{
+              textAlign: 'center',
+              maxWidth: { lg: '818px', xs: '100%' },
+              mx: 'auto',
+              mt: isMobile ? '12px' : 0,
+            }}
           />
         </Box>
         <Box
