@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { ProcessType } from '@/constants';
-import { base, primary } from '@/styles/colors';
+import { base } from '@/styles/colors';
 import { Box, Typography } from '@mui/material';
 import { BreakPoints, useBreakpoint } from '@/hooks';
 
@@ -19,6 +19,7 @@ export const ProcessList: React.FunctionComponent<IProcessListProps> = ({ data }
       />
     );
   });
+
   return (
     <Box data-aos-delay="400" data-aos="flip-up">
       {renderData}

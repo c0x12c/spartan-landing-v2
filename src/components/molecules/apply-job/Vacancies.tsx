@@ -1,7 +1,7 @@
 import { Container, Title } from '@/components/atoms';
-import { vacancies, Job } from '@/constants/vacancies';
+import { vacancies, Job, JobTag, listJobTag, listExperienceLevel } from '@/constants/vacancies';
 import { base, gray, primary } from '@/styles/colors';
-import Arrow from '@/assets/images/icons/arrow.svg';
+import Arrow from '@/assets/images/icons/arrow-purple.svg';
 import {
   Box,
   Button,
@@ -15,31 +15,33 @@ import {
 import Image from 'next/image';
 import { ExperienceLevel } from '@/constants/vacancies';
 import { useState } from 'react';
+import { BreakPoints, useBreakpoint } from '@/hooks';
 
 const Vacancies = () => {
-  const [teamFilter, setTeamFilter] = useState<string>('All Team');
-  const [levelFilter, setLevelFilter] = useState<ExperienceLevel | 'All Level'>('All Level');
+  const [teamFilter, setTeamFilter] = useState<JobTag>(JobTag['ALL_JOB']);
+  const [levelFilter, setLevelFilter] = useState<ExperienceLevel>(ExperienceLevel['ALL_LEVEL']);
 
-  const handleTeamChange = (event: SelectChangeEvent<string>) => {
-    setTeamFilter(event.target.value);
+  const handleTeamChange = (event: SelectChangeEvent<JobTag>) => {
+    setTeamFilter(event.target.value as JobTag);
+  };
+
+  const handleLevelChange = (event: SelectChangeEvent<ExperienceLevel>) => {
+    setLevelFilter(event.target.value as ExperienceLevel);
   };
 
   const filteredVacancies = vacancies.filter((job) => {
-    const isTeamMatch = teamFilter === 'All Team' || teamFilter === job.tags;
-    const isLevelMatch = levelFilter === 'All Level' || job.experience_level.includes(levelFilter);
+    const isTeamMatch = teamFilter === JobTag['ALL_JOB'] || teamFilter === job.tag;
+    const isLevelMatch =
+      levelFilter === ExperienceLevel['ALL_LEVEL'] || job.experienceLevel.includes(levelFilter);
     return isTeamMatch && isLevelMatch;
   });
-
-  const handleLevelChange = (event: SelectChangeEvent<ExperienceLevel | 'All Level'>) => {
-    setLevelFilter(event.target.value as ExperienceLevel | 'All Level');
-  };
 
   return (
     <Container>
       <Box
         display={'flex'}
         flexDirection={'column'}
-        gap={'79px'}
+        gap={{ xs: '24px', md: '79px' }}
         alignItems={'center'}
         width={'100%'}
       >
@@ -61,19 +63,22 @@ const Vacancies = () => {
                 p: '15px 32px',
               }}
             >
-              <MenuItem value="All Team">All Team</MenuItem>
-              <MenuItem value="frontend">Frontend</MenuItem>
-              <MenuItem value="backend">Backend</MenuItem>
-              <MenuItem value="design">Design</MenuItem>
+              {listJobTag.map((item) => {
+                return (
+                  <MenuItem key={item.id} value={item.value}>
+                    {item.name}
+                  </MenuItem>
+                );
+              })}
             </Select>
           </FormControl>
           <FormControl fullWidth data-aos="zoom-in-right" data-aos-delay="400">
-            <InputLabel id="team-filter">Level</InputLabel>
+            <InputLabel id="level-filter">Level</InputLabel>
             <Select
               value={levelFilter}
               labelId="level-filter"
               id="level-select"
-              label="Team"
+              label="Level"
               onChange={handleLevelChange}
               inputProps={{ sx: { padding: 0 } }}
               sx={{
@@ -84,16 +89,18 @@ const Vacancies = () => {
                 p: '15px 32px',
               }}
             >
-              <MenuItem value="All Level">All Level</MenuItem>
-              <MenuItem value="trainee">Trainee</MenuItem>
-              <MenuItem value="junior">Junior</MenuItem>
-              <MenuItem value="middle">Middle</MenuItem>
-              <MenuItem value="senior">Senior</MenuItem>
+              {listExperienceLevel.map((item) => {
+                return (
+                  <MenuItem key={item.id} value={item.value}>
+                    {item.name}
+                  </MenuItem>
+                );
+              })}
             </Select>
           </FormControl>
         </Box>
         <Title
-          text={filteredVacancies.length + ' positions are vacant now'}
+          text={filteredVacancies.length + ' positions are vacant'}
           data-aos="zoom-in"
           data-aos-delay="500"
         />
@@ -105,63 +112,95 @@ const Vacancies = () => {
 
 const List = ({ vacancies }: { vacancies: Job[] }) => {
   return (
-    <Box width={'100%'}>
-      {vacancies.map((vacancy) => (
-        <ListItem {...vacancy} key={vacancy.id} />
+    <Box
+      display="flex"
+      flexDirection="column"
+      gap={{ md: '44px', xs: '24px' }}
+      width="100%"
+      data-aos="fade-up"
+      data-aos-delay="300"
+    >
+      {vacancies.map((vacancy, index) => (
+        <ListItem {...vacancy} key={vacancy.id} isLastItem={index === vacancies.length - 1} />
       ))}
     </Box>
   );
 };
 
-const ListItem = ({ id, position, salary, tags, experience_level, employment_type }: Job) => {
+const ListItem = ({
+  position,
+  salary,
+  tag,
+  experienceLevel,
+  enrollmentStatus,
+  isLastItem,
+}: Job & { isLastItem?: boolean }) => {
+  const isMobile = useBreakpoint(BreakPoints.MD);
+
   return (
     <Box
-      data-aos="flip-left"
-      data-aos-delay="300"
-      id={id}
-      p={{ sm: '32px 44px', xs: '32px 0' }}
+      borderBottom={isLastItem ? 'none' : `1px solid ${gray[400]}`}
+      p={{ md: '32px 44px', xs: '0 0 24px 0' }}
       display={'flex'}
-      gap={'32px'}
+      gap={isMobile ? '0' : '38px'}
       width={'100%'}
-      alignItems={'center'}
-      flexDirection={{ sm: 'row', xs: 'column' }}
+      alignItems={{ xs: 'flex-start', sm: 'center' }}
+      flexDirection={{ md: 'row', xs: 'column' }}
     >
-      <Box display={'flex'} width={'100%'}>
-        <Box width={'100%'}>
-          <Typography variant="fs24" component={'p'} mb={'15px'} color={base.black}>
-            {position}
-          </Typography>
-          <Typography
-            component={'p'}
-            variant="fs18"
-            color={primary[500]}
-            p={'4px 16px'}
-            border={`1px solid ${primary[500]}`}
-            width={'fit-content'}
-            borderRadius={'6px'}
-          >
-            {tags}
-          </Typography>
-        </Box>
-        <Box width={'100%'}>
-          <Typography variant="fs24" component={'p'} mb={'15px'} color={base.black}>
-            Up to {salary}$
-          </Typography>
-          <Typography component={'p'} variant="fs18" color={gray[600]} textTransform={'uppercase'}>
-            {experience_level.join(', ')} |{' '}
-            <Typography component={'span'} color={primary[500]}>
-              {employment_type}
-            </Typography>
-          </Typography>
-        </Box>
+      <Box flex={1} mb={{ xs: '16px', sm: '0' }}>
+        <Typography
+          variant={isMobile ? 'fs18' : 'fs24'}
+          component={'p'}
+          mb={isMobile ? '8px' : '12px'}
+          color={base.black}
+        >
+          {position}
+        </Typography>
+        <Typography
+          component={'p'}
+          variant="fs18"
+          color={primary[400]}
+          width={'fit-content'}
+          borderRadius={'6px'}
+          fontSize={isMobile ? '12px' : '18px'}
+        >
+          {listJobTag.find((item) => item.value === tag)?.name}
+        </Typography>
       </Box>
-
+      <Box flex={1} mb={isMobile ? '8px' : '0'}>
+        <Typography
+          variant={isMobile ? 'fs18' : 'fs24'}
+          component={'p'}
+          mb={isMobile ? '8px' : '12px'}
+          color={base.black}
+        >
+          Up to {salary}$
+        </Typography>
+        <Typography
+          component={'p'}
+          variant="fs18"
+          fontSize={isMobile ? '12px' : '18px'}
+          color={gray[600]}
+          textTransform={'uppercase'}
+        >
+          {experienceLevel.join(', ')} |{' '}
+          <Typography
+            component={'span'}
+            variant="fs18"
+            fontSize={isMobile ? '12px' : '18px'}
+            color={primary[400]}
+          >
+            {enrollmentStatus}
+          </Typography>
+        </Typography>
+      </Box>
       <Button
-        variant="contained"
+        variant="outlined"
+        size={isMobile ? 'small' : 'large'}
         endIcon={<Image src={Arrow} alt="arrow" width={24} />}
         sx={{ minWidth: 'fit-content' }}
       >
-        Apply now
+        Apply job
       </Button>
     </Box>
   );

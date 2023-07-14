@@ -2,10 +2,13 @@ export const base = {
   black: '#000000',
   white: '#FFFFFF',
   grey: '#636363',
-  red: '#F55D2D',
   blue: '#EEF1FF',
   lightBlue: '#F5F8FF',
   darkBlue: '#2FA6E6',
+  yellow: '#E7B51D',
+  orange: '#F55D2D',
+  green: '#6FCD78',
+  purple: '#C67FFE',
 };
 
 export const gray = {
