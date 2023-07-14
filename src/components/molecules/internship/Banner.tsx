@@ -45,7 +45,7 @@ export const InternshipBanner: React.FunctionComponent<IInternshipBannerProps> =
               <Box display="flex" flexDirection="column" rowGap="28px" mb="32px">
                 <MainTitle
                   isLightMode={false}
-                  text="Ignite your career with/Spartan's/ Internship Program"
+                  text="Ignite your career with /Spartan's/ Internship Program"
                 />
                 <BodyText
                   text="Gain real-world experience, learn from industry experts, and make meaningful

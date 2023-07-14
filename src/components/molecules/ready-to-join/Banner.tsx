@@ -17,7 +17,7 @@ export const ReadyToJoinBanner: React.FunctionComponent<IReadyToJoinBannerProps>
       <Box pt={{ md: '115px', sm: '163px', xs: '133px' }}>
         <Box mb="51px">
           <MainTitle
-            text="Ready to/join/"
+            text="Ready to /join/"
             isLightMode={false}
             data-aos="fade-up"
             data-aos-delay="200"
