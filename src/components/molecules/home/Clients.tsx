@@ -37,6 +37,7 @@ export const Clients: React.FunctionComponent<IClientsProps> = () => {
             src={item.quote.imgSrc}
             alt={item.name}
             style={{
+              width: '100%',
               maxWidth: '100%',
               height: 'auto',
               margin: '0 auto',
