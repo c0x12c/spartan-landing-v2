@@ -1,6 +1,6 @@
 import { CardVertical, Container, SubTitle, Title } from '@/components/atoms';
 import { gray } from '@/styles/colors';
-import { Box, Typography } from '@mui/material';
+import { Box } from '@mui/material';
 import CodeCircle from '@/assets/images/icons/code-circle.svg';
 import People from '@/assets/images/icons/people.svg';
 import TaskSquare from '@/assets/images/icons/task-square.svg';
@@ -38,9 +38,9 @@ export const Benefits: React.FunctionComponent<IBenefitsProps> = () => {
   });
 
   return (
-    <Box width={'100%'} p={'140px 0'} sx={{ backgroundColor: gray[100] }}>
+    <Box width={'100%'} p={{ md: '140px 0', xs: '40px 0' }} sx={{ backgroundColor: gray[100] }}>
       <Container>
-        <Box display={'flex'} flexDirection={'column'} gap={'24px'} mb={'64px'}>
+        <Box display={'flex'} flexDirection={'column'} gap={'24px'} mb={{ sm: '64px', xs: '24px' }}>
           <SubTitle
             text="Benefit"
             data-aos-delay="200"
