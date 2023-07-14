@@ -17,7 +17,7 @@ export const UploadFile: React.FunctionComponent<IUploadFileProps> = ({
   isRequired = false,
 }) => {
   return (
-    <>
+    <Box>
       <Typography variant="fs14" color={gray[600]}>
         {title}{' '}
         {isRequired && (
@@ -54,6 +54,6 @@ export const UploadFile: React.FunctionComponent<IUploadFileProps> = ({
         </Box>
         <BodyText text={helpText} sx={{ letterSpacing: '0.32px', color: gray[700] }} />
       </Box>
-    </>
+    </Box>
   );
 };
