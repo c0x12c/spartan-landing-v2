@@ -27,13 +27,9 @@ export const HomeBanner = () => {
         <Container>
           <Box maxWidth={{ md: '700px', xs: '529px' }}>
             <Box display="flex" flexDirection="column" rowGap="28px" mb="32px">
-              <MainTitle text="Spartans at/Work/" data-aos="fade-up" data-aos-delay="200" />
+              <MainTitle text="/Startup/ in the box" data-aos="fade-up" data-aos-delay="200" />
               <BodyText
-                text="A powerhouse company driven by professionalism, strength, and a relentless positive
-                mindset. With an unwavering commitment to excellence, Spartan empowers your startups
-                by providing a solid team of tech-savvy people who are passionate about their work
-                and dedicated to long-term greatness. We know how to take advantage of technology
-                for your business and are willing to share this knowledge."
+                text="We provide a comprehensive package, encompassing a range of services, expertise, and resources to support startups throughout their software development and implementation journey. From software architecture design to development, testing, deployment, and ongoing support, we offer a streamlined and efficient approach to building and managing software systems. At Spartan, we unlock the full potential of your startup, providing you with the tools and guidance needed to thrive in the digital landscape."
                 data-aos="fade-up"
                 data-aos-delay="300"
                 sx={{ color: gray[300], maxWidth: '700px' }}

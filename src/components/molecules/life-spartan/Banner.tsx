@@ -26,7 +26,7 @@ export const LifeSpartanBanner: React.FunctionComponent<ILifeSpartanBannerProps>
             <Box maxWidth={{ md: '700px', xs: '529px' }}>
               <Box display="flex" flexDirection="column" rowGap="28px" mb="32px">
                 <MainTitle
-                  text="Thriving in work & life with/Spartan/"
+                  text="Thriving in work & life with /Spartan/"
                   isLightMode={false}
                   data-aos="fade-up"
                   data-aos-delay="200"

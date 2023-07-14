@@ -1,11 +1,11 @@
-import * as React from 'react';
-import { Box, Button, Typography } from '@mui/material';
-import { ArrowIcon, Container, TextFieldWithLabel } from '@/components/atoms';
+import React from 'react';
+import { Box, Button } from '@mui/material';
+import { ArrowForward as ArrowIcon } from '@mui/icons-material';
 import Image from 'next/image';
+import { Container, TextFieldWithLabel, Title, UploadFile } from '@/components/atoms';
 import { BreakPoints, useBreakpoint } from '@/hooks';
 import formImage from '@/assets/images/internship/form-image.png';
 import internshipFormImage from '@/assets/images/internship/internship-form.png';
-import { gray } from '@/styles/colors';
 
 interface IInternshipFormProps {}
 
@@ -25,7 +25,7 @@ export const InternshipForm: React.FunctionComponent<IInternshipFormProps> = () 
             <Box position="relative" minWidth={isMobile ? '100%' : '526px'} mx="auto">
               <Image
                 src={formImage}
-                alt={'banner'}
+                alt="banner"
                 style={{ maxWidth: '100%', height: 'auto' }}
                 data-aos="fade-up"
                 data-aos-delay="200"
@@ -45,7 +45,7 @@ export const InternshipForm: React.FunctionComponent<IInternshipFormProps> = () 
                 <Box></Box>
                 <Image
                   src={internshipFormImage}
-                  alt={'form'}
+                  alt="form"
                   style={{ maxWidth: '100%', height: 'auto' }}
                   data-aos="fade-left"
                   data-aos-delay="200"
@@ -59,24 +59,27 @@ export const InternshipForm: React.FunctionComponent<IInternshipFormProps> = () 
             width="100%"
             display="flex"
             flexDirection="column"
-            gap="44px"
+            gap={isMobile ? '24px' : '44px'}
           >
-            <Typography
-              component="h2"
-              variant="fs48"
-              color={gray[850]}
-              data-aos="fade-up"
-              data-aos-delay="200"
-            >
-              Submit form
-            </Typography>
-            <Box component={'form'} display="flex" flexDirection="column" gap="32px">
+            <Title text="Submit form" sx={{ fontSize: isMobile ? '28px' : '48px' }} />
+            <Box component="form" display="flex" flexDirection="column" gap="32px">
               <TextFieldWithLabel title="First name" id="firstName" isRequired />
               <TextFieldWithLabel title="Last name" id="lastName" isRequired />
               <TextFieldWithLabel title="Email" id="email" isRequired />
-              <TextFieldWithLabel title="Attach your résume here" id="résume" isRequired />
+              <UploadFile
+                title="Attach your résume here"
+                text="Attach file"
+                helpText="(Format: .doc, .docx, .pdf, .xls, .xlsx; <=5MB)"
+                isRequired
+              />
             </Box>
-            <Button variant="contained" size={isMobile ? 'small' : 'medium'}>
+            <Button
+              variant="contained"
+              size={isMobile ? 'small' : 'medium'}
+              sx={{
+                width: 'fit-content',
+              }}
+            >
               Submit now
               <ArrowIcon />
             </Button>
