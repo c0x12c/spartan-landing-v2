@@ -69,7 +69,7 @@ export const TextFieldWithLabel = ({
         <Typography variant="fs14" color={gray[600]}>
           {title}{' '}
           {isRequired && (
-            <Typography variant="fs14" color={base.red}>
+            <Typography variant="fs14" color={base.orange}>
               *
             </Typography>
           )}

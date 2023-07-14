@@ -1,7 +1,8 @@
 import * as React from 'react';
 import { ProcessType } from '@/constants';
-import { base, primary } from '@/styles/colors';
+import { base } from '@/styles/colors';
 import { Box, Typography } from '@mui/material';
+import { BreakPoints, useBreakpoint } from '@/hooks';
 
 interface IProcessListProps {
   data: ProcessType[];
@@ -9,30 +10,10 @@ interface IProcessListProps {
 
 export const ProcessList: React.FunctionComponent<IProcessListProps> = ({ data }) => {
   const renderData = data.map((item, index) => {
-    let color;
-    switch (index) {
-      case 0:
-        color = primary[400];
-        break;
-      case 1:
-        color = base.orange;
-        break;
-      case 2:
-        color = base.green;
-        break;
-      case 3:
-        color = base.yellow;
-        break;
-      default:
-        color = primary[500];
-        break;
-    }
-
     return (
       <ProcessListItem
         key={item.id}
         number={index + 1}
-        color={color}
         {...item}
         isLast={index === data.length - 1}
       />
@@ -51,14 +32,16 @@ const ProcessListItem = ({
   title,
   content,
   isLast,
-  color,
+  bgIcon,
 }: {
   number: number;
   title: string;
   content: string;
   isLast?: boolean;
-  color: string;
+  bgIcon: string;
 }) => {
+  const isMobile = useBreakpoint(BreakPoints.MD);
+
   return (
     <Box position="relative" p={{ xs: 0, lg: '0 16px' }} pb="40px !important">
       <Box
@@ -73,16 +56,16 @@ const ProcessListItem = ({
             bottom: 0,
             width: '2px',
             borderStyle: 'dashed',
-            borderColor: primary[400],
+            borderColor: bgIcon,
             borderWidth: isLast ? 0 : '0 0 0 2px',
           },
         }}
       >
         <Typography
-          variant="fs18"
+          variant={isMobile ? 'fs16' : 'fs18'}
           fontWeight={600}
           minWidth={'40px'}
-          bgcolor={color} // Використовуйте заданий колір для фону значка
+          bgcolor={bgIcon}
           component={'p'}
           height={'40px'}
           color={base.white}
@@ -97,7 +80,7 @@ const ProcessListItem = ({
         </Typography>
         <Box>
           <Typography
-            variant="fs18"
+            variant={isMobile ? 'fs16' : 'fs18'}
             color={base.black}
             mb={'18px'}
             component={'h4'}
@@ -111,7 +94,7 @@ const ProcessListItem = ({
           >
             {title}
           </Typography>
-          <Typography variant="fs18" component={'p'}>
+          <Typography variant={isMobile ? 'fs14' : 'fs18'} component={'p'}>
             {content}
           </Typography>
         </Box>

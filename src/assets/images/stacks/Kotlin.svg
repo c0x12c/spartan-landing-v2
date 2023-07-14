@@ -1,22 +1,24 @@
 <svg width="61" height="60" viewBox="0 0 61 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M0.0341797 60.0004L30.1342 29.9004L60.0342 60.0004H0.0341797Z" fill="url(#paint0_linear_1925_47120)"/>
-<path d="M0.0341797 0H30.1342L0.0341797 32.5V0Z" fill="url(#paint1_linear_1925_47120)"/>
-<path d="M30.1342 0L0.0341797 31.7V60L30.1342 29.9L60.0342 0H30.1342Z" fill="url(#paint2_linear_1925_47120)"/>
+<g id="Group">
+<path id="XMLID_2_" d="M0.0351562 60.0004L30.1352 29.9004L60.0352 60.0004H0.0351562Z" fill="url(#paint0_linear_2146_14987)"/>
+<path id="Vector" d="M0.0351562 0H30.1352L0.0351562 32.5V0Z" fill="url(#paint1_linear_2146_14987)"/>
+<path id="Vector_2" d="M30.1352 0L0.0351562 31.7V60L30.1352 29.9L60.0352 0H30.1352Z" fill="url(#paint2_linear_2146_14987)"/>
+</g>
 <defs>
-<linearGradient id="paint0_linear_1925_47120" x1="15.9936" y1="74.0147" x2="44.341" y2="45.6672" gradientUnits="userSpaceOnUse">
+<linearGradient id="paint0_linear_2146_14987" x1="15.9946" y1="74.0147" x2="44.342" y2="45.6672" gradientUnits="userSpaceOnUse">
 <stop offset="0.09677" stop-color="#0095D5"/>
 <stop offset="0.3007" stop-color="#238AD9"/>
 <stop offset="0.6211" stop-color="#557BDE"/>
 <stop offset="0.8643" stop-color="#7472E2"/>
 <stop offset="1" stop-color="#806EE3"/>
 </linearGradient>
-<linearGradient id="paint1_linear_1925_47120" x1="4.24338" y1="12.0591" x2="20.7076" y2="-4.405" gradientUnits="userSpaceOnUse">
+<linearGradient id="paint1_linear_2146_14987" x1="4.24436" y1="12.0591" x2="20.7086" y2="-4.405" gradientUnits="userSpaceOnUse">
 <stop offset="0.1183" stop-color="#0095D5"/>
 <stop offset="0.4178" stop-color="#3C83DC"/>
 <stop offset="0.6962" stop-color="#6D74E1"/>
 <stop offset="0.8333" stop-color="#806EE3"/>
 </linearGradient>
-<linearGradient id="paint2_linear_1925_47120" x1="-10.0675" y1="55.1638" x2="45.7657" y2="-0.669401" gradientUnits="userSpaceOnUse">
+<linearGradient id="paint2_linear_2146_14987" x1="-10.0665" y1="55.1638" x2="45.7667" y2="-0.669401" gradientUnits="userSpaceOnUse">
 <stop offset="0.1075" stop-color="#C757BC"/>
 <stop offset="0.2138" stop-color="#D0609A"/>
 <stop offset="0.4254" stop-color="#E1725C"/>

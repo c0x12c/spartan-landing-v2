@@ -2,7 +2,7 @@ import * as React from 'react';
 import { BodyText, Container, SubTitle, Title } from '@/components/atoms';
 import { Box, Grid, Typography } from '@mui/material';
 import { BreakPoints, useBreakpoint } from '@/hooks';
-import { base, gray } from '@/styles/colors';
+import { base, gray, primary } from '@/styles/colors';
 
 import {
   BoxIcon,
@@ -28,49 +28,49 @@ export const OurBenefits: React.FunctionComponent<IOurBenefitsProps> = () => {
     },
     {
       id: 'benefit-2',
-      bgIcon: '#6FCD78',
+      bgIcon: base.green,
       icon: <TasksIcon />,
       content: 'We provide challenging tasks to enhance their skills',
     },
     {
       id: 'benefit-3',
-      bgIcon: '#0C56EF',
+      bgIcon: primary[400],
       icon: <ChartIcon />,
       content: 'We empower them to make significant decisions and grow with the business',
     },
     {
       id: 'benefit-4',
-      bgIcon: '#0C56EF',
+      bgIcon: primary[400],
       icon: <BoxIcon />,
       content: 'Work from anywhere',
     },
     {
       id: 'benefit-5',
-      bgIcon: '#F55D2D',
+      bgIcon: base.orange,
       icon: <TimerIcon />,
       content: 'Unlimited paid time off (PTO)',
     },
     {
       id: 'benefit-6',
-      bgIcon: '#E7B51D',
+      bgIcon: base.yellow,
       icon: <MoneyTickIcon />,
       content: 'Competitive compensation packages',
     },
     {
       id: 'benefit-7',
-      bgIcon: '#E7B51D',
+      bgIcon: base.yellow,
       icon: <RunIcon />,
       content: 'Covering the cost of participating in sports activities',
     },
     {
       id: 'benefit-8',
-      bgIcon: '#0C56EF',
+      bgIcon: primary[400],
       icon: <SuitcaseIcon />,
       content: 'Annual company travel &  An intimate party every month',
     },
     {
       id: 'benefit-9',
-      bgIcon: '#F55D2D',
+      bgIcon: base.orange,
       icon: <HealthIcon />,
       content: 'Comprehensive health insurance for you and your loved one',
     },
