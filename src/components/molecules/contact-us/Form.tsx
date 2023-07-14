@@ -2,6 +2,7 @@ import * as React from 'react';
 import { Box, Button } from '@mui/material';
 import { ArrowIcon, BodyText, Container, TextFieldWithLabel, Title } from '@/components/atoms';
 import { BreakPoints, useBreakpoint } from '@/hooks';
+import { base, gray } from '@/styles/colors';
 
 interface IContactUsFormProps {}
 
@@ -9,7 +10,11 @@ export const ContactUsForm: React.FunctionComponent<IContactUsFormProps> = () =>
   const isMobile = useBreakpoint(BreakPoints.MD);
 
   return (
-    <Box py={isMobile ? '0' : '44px'} id="contact-form">
+    <Box
+      py={isMobile ? '40px' : '44px'}
+      id="contact-form"
+      bgcolor={isMobile ? gray[50] : base.white}
+    >
       <Container>
         <Box
           display="flex"

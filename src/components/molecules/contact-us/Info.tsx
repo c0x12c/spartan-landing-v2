@@ -41,7 +41,7 @@ export const ContactInfo: React.FunctionComponent<IContactInfoProps> = () => {
   });
 
   return (
-    <Box id="internship-form">
+    <Box id="internship-form" py={isMobile ? '40px' : '100px'}>
       <Container>
         <Box
           display="flex"

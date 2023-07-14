@@ -15,8 +15,8 @@ export const AroundTheWorld: React.FunctionComponent<IAroundTheWorldProps> = () 
       mb="44px"
       bgcolor={primary[50]}
       py={{
-        lg: '123px',
-        xs: '64px',
+        md: '123px',
+        xs: '40px',
       }}
     >
       <Container>
