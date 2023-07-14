@@ -23,6 +23,7 @@ export const CaseStudyVoltaBanner: React.FunctionComponent<ICaseStudyVoltaBanner
                 <Image src={appIcon} alt="appIcon" />
                 <Typography
                   variant="fs64"
+                  fontSize={{ xs: '36px', lg: '64px' }}
                   color={base.white}
                   data-aos="fade-up"
                   data-aos-delay="200"
@@ -33,6 +34,7 @@ export const CaseStudyVoltaBanner: React.FunctionComponent<ICaseStudyVoltaBanner
                 </Typography>
                 <Typography
                   variant={'fs18'}
+                  fontSize={{ xs: '14px', lg: '18px' }}
                   color={colors.base.white}
                   maxWidth="538px"
                   data-aos="fade-up"
