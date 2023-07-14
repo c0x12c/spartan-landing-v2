@@ -3,6 +3,7 @@ import { Box, Typography } from '@mui/material';
 import { FeatureType } from '@/constants/features';
 import { base } from '@/styles/colors';
 import Image from 'next/image';
+import { BreakPoints, useBreakpoint } from '@/hooks';
 
 interface ICardFeature {
   title?: string;
@@ -16,6 +17,8 @@ export const CardFeature: React.FunctionComponent<ICardFeature & SubContentType>
   tick,
   ...props
 }) => {
+  const isMobile = useBreakpoint(BreakPoints.MD);
+
   return (
     <Box
       display="flex"
@@ -28,8 +31,8 @@ export const CardFeature: React.FunctionComponent<ICardFeature & SubContentType>
       {...props}
     >
       <Box
-        width="40px"
-        height="40px"
+        width={isMobile ? '20px' : '40px'}
+        height={isMobile ? '20px' : '40px'}
         borderRadius="48px"
         boxShadow="1px 1px 20px 0px rgba(0, 0, 0, 0.05)"
         display="flex"
@@ -42,7 +45,7 @@ export const CardFeature: React.FunctionComponent<ICardFeature & SubContentType>
       <Box>
         {title && (
           <Typography
-            variant="fs16"
+            variant={isMobile ? 'fs14' : 'fs16'}
             color={base.black}
             fontWeight="600"
             lineHeight="1.8"
@@ -53,7 +56,12 @@ export const CardFeature: React.FunctionComponent<ICardFeature & SubContentType>
           </Typography>
         )}
         {typeof content === 'string' ? (
-          <Typography variant="fs14" color={base.grey} letterSpacing="0.21px">
+          <Typography
+            variant="fs14"
+            color={base.grey}
+            letterSpacing="0.21px"
+            fontSize={isMobile ? '12px' : '14px'}
+          >
             {content}
           </Typography>
         ) : (

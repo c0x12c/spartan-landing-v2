@@ -1,25 +1,16 @@
 import React from 'react';
-import { Box, Button, Typography } from '@mui/material';
+import { Box, Button } from '@mui/material';
 import { ArrowForward as ArrowIcon } from '@mui/icons-material';
 import Image from 'next/image';
-import { Container, TextFieldWithLabel } from '@/components/atoms';
+import { Container, TextFieldWithLabel, Title, UploadFile } from '@/components/atoms';
 import { BreakPoints, useBreakpoint } from '@/hooks';
 import formImage from '@/assets/images/internship/form-image.png';
 import internshipFormImage from '@/assets/images/internship/internship-form.png';
-import { base, gray } from '@/styles/colors';
-import AttachFile from '../../../assets/images/icons/attach-circle.svg';
 
 interface IInternshipFormProps {}
 
 export const InternshipForm: React.FunctionComponent<IInternshipFormProps> = () => {
   const isMobile = useBreakpoint(BreakPoints.MD);
-
-  const handleFileChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    const file = event.target.files?.[0];
-    if (file) {
-      // Do something with the selected file
-    }
-  };
 
   return (
     <Box mb="44px" id="internship-form">
@@ -68,55 +59,27 @@ export const InternshipForm: React.FunctionComponent<IInternshipFormProps> = () 
             width="100%"
             display="flex"
             flexDirection="column"
-            gap="44px"
+            gap={isMobile ? '24px' : '44px'}
           >
-            <Typography
-              component="h2"
-              variant="h4"
-              color={gray[850]}
-              data-aos="fade-up"
-              data-aos-delay="200"
-            >
-              Submit form
-            </Typography>
+            <Title text="Submit form" sx={{ fontSize: isMobile ? '28px' : '48px' }} />
             <Box component="form" display="flex" flexDirection="column" gap="32px">
               <TextFieldWithLabel title="First name" id="firstName" isRequired />
               <TextFieldWithLabel title="Last name" id="lastName" isRequired />
               <TextFieldWithLabel title="Email" id="email" isRequired />
-              <label htmlFor="resume" style={{ display: 'none' }}>
-                Attach file
-              </label>
-              <input
-                type="file"
-                id="resume"
-                accept=".doc, .docx, .pdf, .xls, .xlsx"
-                onChange={handleFileChange}
-                style={{ display: 'none' }}
+              <UploadFile
+                title="Attach your résume here"
+                text="Attach file"
+                helpText="(Format: .doc, .docx, .pdf, .xls, .xlsx; <=5MB)"
+                isRequired
               />
-              <label
-                htmlFor="resume"
-                style={{
-                  cursor: 'pointer',
-                  display: 'flex',
-                  fontSize: isMobile ? '14px' : '18px',
-                  alignItems: 'center',
-                  padding: isMobile ? '16px 24px' : '20px 24px',
-                  backgroundColor: gray[100],
-                  border: `1px solid ${gray[200]}`,
-                  borderRadius: '8px',
-                  color: base.black,
-                  gap: '8px',
-                  width: isMobile ? '80%' : '45%',
-                }}
-              >
-                <Image src={AttachFile} alt="attach file image" />
-                Attach file
-              </label>
-              <Typography variant="subtitle1" mt="-17px" color={gray[700]}>
-                Format: .doc, .docx, .pdf, .xls, .xlsx; &lt;=5MB
-              </Typography>
             </Box>
-            <Button variant="contained" size={isMobile ? 'small' : 'medium'}>
+            <Button
+              variant="contained"
+              size={isMobile ? 'small' : 'medium'}
+              sx={{
+                width: 'fit-content',
+              }}
+            >
               Submit now
               <ArrowIcon />
             </Button>
