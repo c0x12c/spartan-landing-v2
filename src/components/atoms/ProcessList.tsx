@@ -9,15 +9,36 @@ interface IProcessListProps {
 
 export const ProcessList: React.FunctionComponent<IProcessListProps> = ({ data }) => {
   const renderData = data.map((item, index) => {
+    let color;
+    switch (index) {
+      case 0:
+        color = primary[400];
+        break;
+      case 1:
+        color = base.orange;
+        break;
+      case 2:
+        color = base.green;
+        break;
+      case 3:
+        color = base.yellow;
+        break;
+      default:
+        color = primary[500];
+        break;
+    }
+
     return (
       <ProcessListItem
         key={item.id}
         number={index + 1}
+        color={color}
         {...item}
         isLast={index === data.length - 1}
       />
     );
   });
+
   return (
     <Box data-aos-delay="400" data-aos="flip-up">
       {renderData}
@@ -30,11 +51,13 @@ const ProcessListItem = ({
   title,
   content,
   isLast,
+  color,
 }: {
   number: number;
   title: string;
   content: string;
   isLast?: boolean;
+  color: string;
 }) => {
   return (
     <Box position="relative" p={{ xs: 0, lg: '0 16px' }} pb="40px !important">
@@ -50,7 +73,7 @@ const ProcessListItem = ({
             bottom: 0,
             width: '2px',
             borderStyle: 'dashed',
-            borderColor: primary[500],
+            borderColor: primary[400],
             borderWidth: isLast ? 0 : '0 0 0 2px',
           },
         }}
@@ -59,7 +82,7 @@ const ProcessListItem = ({
           variant="fs18"
           fontWeight={600}
           minWidth={'40px'}
-          bgcolor={primary[500]}
+          bgcolor={color} // Використовуйте заданий колір для фону значка
           component={'p'}
           height={'40px'}
           color={base.white}

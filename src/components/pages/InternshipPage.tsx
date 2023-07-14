@@ -11,7 +11,7 @@ export const InternshipPage: React.FunctionComponent<IInternshipPageProps> = () 
 
   return (
     <MainTemplate>
-      <Box display="flex" flexDirection="column" gap={isMobile ? '24px' : '44px'}>
+      <Box display="flex" flexDirection="column" gap={isMobile ? '40px' : '44px'}>
         <InternshipBanner />
         <Benefits />
         <InternshipForm />

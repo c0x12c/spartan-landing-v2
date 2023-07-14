@@ -5,7 +5,7 @@ import { MainTemplate } from '../templates';
 export const ApplyJobPage = () => {
   return (
     <MainTemplate>
-      <Box display={'flex'} flexDirection={'column'} gap={'44px'}>
+      <Box display={'flex'} flexDirection={'column'} gap={{ xs: '40px', sm: '44px' }}>
         <Banner />
         <Vacancies />
         <HiringProcess />
