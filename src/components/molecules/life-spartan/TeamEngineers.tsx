@@ -68,7 +68,6 @@ export const TeamEngineers: React.FunctionComponent<ITeamEngineersProps> = () =>
         const x = e.pageX - slider.offsetLeft;
         const walk = (x - startX) * 1.5; //scroll-fast
         slider.scrollLeft = scrollLeft - walk;
-        console.log(walk);
       });
     }
   }, []);
@@ -78,7 +77,7 @@ export const TeamEngineers: React.FunctionComponent<ITeamEngineersProps> = () =>
       <Container>
         <Box display={'flex'} flexDirection={'column'} gap={'24px'} mb={'41px'}>
           <SubTitle text="Our team" data-aos="fade-up" data-aos-delay="200" />
-          <Title text="Life at Spartan" data-aos="fade-up" data-aos-delay="300" />
+          <Title text="Life at Spartans" data-aos="fade-up" data-aos-delay="300" />
         </Box>
       </Container>
       <Box
