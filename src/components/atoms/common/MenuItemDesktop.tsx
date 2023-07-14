@@ -9,7 +9,7 @@ import ai from '@/assets/images/icons/ai.png';
 import cases from '@/assets/images/icons/cases.svg';
 
 import Image from 'next/image';
-import { About, Services } from '@/constants';
+import { About, ServiceType, Services } from '@/constants';
 
 type MenuItemDesktopType = {
   item: MenuItemType;
@@ -95,84 +95,38 @@ const SubMenu = ({ item }: Pick<MenuItemDesktopType, 'item'>) => {
 
   const isServices = item.label === 'Services';
 
-  // const submenuCareers = (item.subItems ?? []).map((subItem, subIndex) => {
-  //   const { href } = subItem;
-  //   return (
-  //     <Box
-  //       key={subItem.id}
-  //       component="li"
-  //       borderBottom="1px solid"
-  //       borderColor={gray[400]}
-  //       p="4px 10px 8px"
-  //       mb={subIndex === (item.subItems || []).length - 1 ? 0 : '17px'}
-  //       sx={{
-  //         '&:hover': {
-  //           '& .submenu-title': {
-  //             color: primary[500],
-  //             transition: 'color .5s',
-  //           },
-  //           '& .submenu-icon': {
-  //             transform: 'translateX(5px)',
-  //             transition: 'transform .5s',
-  //           },
-  //         },
-  //       }}
-  //     >
-  //       <Link href={href} scroll={false}>
-  //         <Box
-  //           display="flex"
-  //           justifyContent="space-between"
-  //           alignItems="center"
-  //           sx={{
-  //             textDecoration: 'none',
-  //           }}
-  //         >
-  //           <Typography
-  //             className="submenu-title"
-  //             variant="fs16"
-  //             sx={{ color: base.black, fontWeight: 700, paddingRight: '30px' }}
-  //           >
-  //             {subItem.label}
-  //           </Typography>
-  //           <Box className="submenu-icon">
-  //             <ArrowIcon color={base.black} />
-  //           </Box>
-  //         </Box>
-  //       </Link>
-  //     </Box>
-  //   );
-  // });
-
-  const renderServices = Services.map((item) => {
-    return (
-      <Grid item key={item.id} xs={6} lg={4}>
-        <Link href={item.href}>
-          <Box
-            display="flex"
-            gap="12px"
-            p="8px"
-            borderRadius="8px"
-            sx={{
-              '&:hover': {
-                bgcolor: primary[50],
-                transition: 'all 0.2s',
-              },
-            }}
-          >
-            <Image src={item.icon} alt={item.label} />
-            <Box display="flex" flexDirection="column" gap="12px">
-              <Typography variant="fs14" color={gray[900]} fontWeight="600" component="h4">
-                {item.label}
-              </Typography>
-              <Typography variant="fs14" fontSize="12px" color={gray[500]} component="p">
-                {item.content}
-              </Typography>
+  const renderServices = (data: ServiceType[]) => {
+    return data.map((item) => {
+      return (
+        <Grid item key={item.id} xs={6} lg={4}>
+          <Link href={item.href}>
+            <Box
+              display="flex"
+              gap="12px"
+              p="16px"
+              borderRadius="8px"
+              sx={{
+                '&:hover': {
+                  bgcolor: primary[50],
+                  transition: 'all 0.2s',
+                },
+              }}
+            >
+              <Image src={item.icon} alt={item.label} />
+              <Box display="flex" flexDirection="column" gap="12px">
+                <Typography variant="fs14" color={gray[900]} fontWeight="600" component="h4">
+                  {item.label}
+                </Typography>
+                <Typography variant="fs14" fontSize="12px" color={gray[500]} component="p">
+                  {item.content}
+                </Typography>
+              </Box>
             </Box>
-          </Box>
-        </Link>
-      </Grid>
-    );
-  });
+          </Link>
+        </Grid>
+      );
+    });
+  };
 
   const renderAbout = About.map((item) => {
     return (
@@ -181,7 +135,7 @@ const SubMenu = ({ item }: Pick<MenuItemDesktopType, 'item'>) => {
           <Box
             display="flex"
             gap="12px"
-            p="8px"
+            p="16px"
             borderRadius="8px"
             sx={{
               '&:hover': {
@@ -211,8 +165,8 @@ const SubMenu = ({ item }: Pick<MenuItemDesktopType, 'item'>) => {
         <Typography variant="fs24" color={gray[900]} fontWeight="600" component="h3">
           Service
         </Typography>
-        <Grid container columnSpacing="32px" rowSpacing="56px">
-          {renderServices}
+        <Grid container spacing="32px">
+          {renderServices(Services.slice(0, 5))}
           <Grid item xs={6} lg={4}>
             <Link href="/case-study">
               <Box
@@ -239,43 +193,53 @@ const SubMenu = ({ item }: Pick<MenuItemDesktopType, 'item'>) => {
               </Box>
             </Link>
           </Grid>
+          {renderServices(Services.slice(5))}
         </Grid>
       </Box>
       <Box
         width="302px"
-        p="24px"
+        position="relative"
         sx={{
           background: '#12144F',
         }}
       >
-        <Box display="flex" justifyContent="center" mb="50px">
-          <Image src={ai} alt="ai" />
+        <Box
+          position="absolute"
+          p="24px"
+          top="50%"
+          left="0"
+          width="100%"
+          sx={{ transform: 'translateY(-50%)' }}
+        >
+          <Box display="flex" justifyContent="center" mb="50px">
+            <Image src={ai} alt="ai" />
+          </Box>
+          <Box mb="16px">
+            <Typography
+              variant="fs16"
+              color={base.white}
+              fontWeight="600"
+              lineHeight="1.8"
+              component="h3"
+              mb="8px"
+            >
+              Ready to start your tailored project?
+            </Typography>
+            <Typography variant="fs16" color={gray[100]} fontSize="12px" component="p">
+              Let’s build incredible products together
+            </Typography>
+          </Box>
+          <Link href="/contact-us#contact-form" scroll={false}>
+            <Button
+              variant="contained"
+              sx={{
+                py: '12px',
+              }}
+            >
+              Meet our expert
+            </Button>
+          </Link>
         </Box>
-        <Box mb="16px">
-          <Typography
-            variant="fs16"
-            color={base.white}
-            fontWeight="600"
-            lineHeight="1.8"
-            component="h3"
-            mb="8px"
-          >
-            Ready to start your tailored project?
-          </Typography>
-          <Typography variant="fs16" color={gray[100]} fontSize="12px" component="p">
-            Let’s build incredible products together
-          </Typography>
-        </Box>
-        <Link href="/contact-us#contact-form" scroll={false}>
-          <Button
-            variant="contained"
-            sx={{
-              py: '12px',
-            }}
-          >
-            Meet our expert
-          </Button>
-        </Link>
       </Box>
     </Box>
   );
@@ -286,7 +250,7 @@ const SubMenu = ({ item }: Pick<MenuItemDesktopType, 'item'>) => {
         <Typography variant="fs24" color={gray[900]} fontWeight="600" component="h3">
           Career
         </Typography>
-        <Grid container columnSpacing="32px" rowSpacing="56px">
+        <Grid container spacing="32px">
           {renderAbout}
         </Grid>
       </Box>
