@@ -23,13 +23,13 @@ const HiringProcess = () => {
           <Title
             text="Rigorous screening for 1% elite engineers"
             data-aos="fade-up"
-            data-aos-delay="300"
+            data-aos-delay="200"
           />
           <BodyText
             text="Drawing from our extensive experience interviewing candidates at renowned tech giants
             such as Google, Facebook, Uber, and Amazon"
             data-aos="fade-up"
-            data-aos-delay="300"
+            data-aos-delay="200"
             sx={{ maxWidth: '576px', mt: isMobile ? '12px' : 0 }}
           />
         </Box>
@@ -39,7 +39,7 @@ const HiringProcess = () => {
               src={HiringProcessImage}
               alt="Hiring process image"
               style={{ width: '100%', height: 'auto' }}
-              data-aos-delay="300"
+              data-aos-delay="200"
               data-aos="flip-left"
             />
           </Grid>

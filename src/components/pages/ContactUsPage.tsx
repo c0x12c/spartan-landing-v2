@@ -8,7 +8,7 @@ interface IContactUsPageProps {}
 export const ContactUsPage: React.FunctionComponent<IContactUsPageProps> = () => {
   return (
     <MainTemplate>
-      <Box display="flex" flexDirection="column" gap="44px">
+      <Box display="flex" flexDirection="column" gap={{ md: '44px', xs: '24px' }}>
         <ContactUsBanner />
         <ContactUsForm />
         <ContactInfo />

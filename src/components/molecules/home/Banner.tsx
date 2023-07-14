@@ -29,7 +29,7 @@ export const HomeBanner = () => {
             <Box display="flex" flexDirection="column" rowGap="28px" mb="32px">
               <MainTitle text="/Startup/ in the box" data-aos="fade-up" data-aos-delay="200" />
               <BodyText
-                text="We provide a comprehensive package, encompassing a range of services, expertise, and resources to support startups throughout their software development and implementation journey. From software architecture design to development, testing, deployment, and ongoing support, we offer a streamlined and efficient approach to building and managing software systems. At Spartan, we unlock the full potential of your startup, providing you with the tools and guidance needed to thrive in the digital landscape."
+                text="Unlock your startup’s software potential with Spartan’s all-inclusive solution. Our tailored package offers comprehensive services, expertise, and resources to streamline your software development and implementation. From architecture design to deployment and ongoing support, we empower startups to thrive in the digital landscape."
                 data-aos="fade-up"
                 data-aos-delay="300"
                 sx={{ color: gray[300], maxWidth: '700px' }}

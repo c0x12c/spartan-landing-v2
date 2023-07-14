@@ -12,7 +12,7 @@ export const ContactUsBanner: React.FunctionComponent<IContactUsBannerProps> = (
 
   return (
     <Container>
-      <Box pt={{ md: '115px', sm: '163px', xs: '133px' }} pb={isMobile ? 'fs24' : '60px'}>
+      <Box pt={{ md: '115px', sm: '163px', xs: '133px' }}>
         <Box mb={isMobile ? '24px' : '51px'}>
           <MainTitle
             text="Contact /us/"

@@ -19,7 +19,7 @@ export const GlobalImpact: React.FunctionComponent<IGlobalImpactProps> = () => {
       }}
     >
       <Container>
-        <Grid container spacing={'44px'}>
+        <Grid container spacing={isMobile ? '24px' : '44px'}>
           <Grid item xs={12} lg={5}>
             <Box
               display="flex"
