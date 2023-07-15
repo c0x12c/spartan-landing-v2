@@ -23,7 +23,7 @@ export const About = [
   },
   {
     id: 'about-2',
-    label: 'Life at Spartan',
+    label: 'Life at Spartans',
     icon: earthIcon,
     content: 'Explore our amazing life, people & what we care',
     href: '/life-spartan',
