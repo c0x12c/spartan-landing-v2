@@ -56,6 +56,7 @@ const WhatWeDo = () => {
             width={{ xs: '100%', lg: 'auto' }}
             fontSize={{ xs: '28px', lg: '48px' }}
             mb={{ xs: '24px', lg: 0 }}
+            my={{ lg: '24px' }}
           >
             Our Work
           </Typography>

@@ -1,5 +1,5 @@
+import { Title } from '@/components/atoms';
 import { Container } from '@/components/atoms/common/Container';
-import { base } from '@/styles/colors';
 import { Box, Typography } from '@mui/material';
 import React from 'react';
 
@@ -16,19 +16,11 @@ const LiquidityFinancial = () => {
           width={'100%'}
           py={{ xs: '40px', lg: '80px' }}
         >
-          <Typography
-            variant="fs48"
-            color={base.black}
-            textAlign="center"
-            maxWidth={{ md: '621px', xs: '100%' }}
-            data-aos="fade-up"
-            data-aos-delay="200"
-          >
-            The Story
-          </Typography>
+          <Title text="The Story" data-aos="fade-up" data-aos-delay="200" />
           <Typography
             variant="fs18"
-            maxWidth={{ md: '766px', xs: '100%' }}
+            maxWidth={{ lg: '766px', xs: '100%' }}
+            fontSize={{ xs: '14px', lg: '18px' }}
             textAlign="center"
             data-aos="fade-up"
             data-aos-delay="300"

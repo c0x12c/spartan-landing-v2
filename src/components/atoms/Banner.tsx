@@ -35,7 +35,6 @@ export const Banner: React.FunctionComponent<IBannerProps> = ({
         />
       )}
 
-      {bannerElement && bannerElement}
       {src && (
         <Box
           position="absolute"
@@ -53,6 +52,7 @@ export const Banner: React.FunctionComponent<IBannerProps> = ({
         />
       )}
       {children}
+      {bannerElement && bannerElement}
     </Box>
   );
 };

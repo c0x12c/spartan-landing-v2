@@ -9,6 +9,7 @@ import ResultImage from '@/assets/images/case-liquidity/result-image.svg';
 const items = [
   'Successfully launched PrideCard as a new mobile product',
   'Improved stability and user-friendliness of mobile applications',
+  'Dramatically enhanced backend and infrastructure stability and maintainability',
   'Developed efficient tools for the support team, optimizing user complaint resolution',
 ];
 
@@ -43,7 +44,7 @@ const Result = () => {
               data-aos-delay="300"
             >
               We made significant achievements in the Liquidity Financial project, leading to
-              remarkable outcomes and advancements. Here are the key accomplishments:We were
+              remarkable outcomes and advancements. Here are the key accomplishments: <br /> We were
               impressed by their ability to seamlessly blend modern design elements with natural
               materials and surroundings, creating a vacation home that exceeded our expectations in
               every way
