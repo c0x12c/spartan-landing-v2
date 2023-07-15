@@ -16,7 +16,7 @@ interface IServiceMobilePageProps {}
 export const ServiceMobilePage: React.FunctionComponent<IServiceMobilePageProps> = () => {
   return (
     <MainTemplate>
-      <Box display="flex" flexDirection="column" gap="44px">
+      <Box display="flex" flexDirection="column" gap={{ md: '44px', xs: 0 }}>
         <SubServiceBanner title="Empower your mobile app experience" />
         <PartnersSubService tag={ServicesEnum.MOBILE} />
         <WhatWeDo tag={ServicesEnum.MOBILE} />

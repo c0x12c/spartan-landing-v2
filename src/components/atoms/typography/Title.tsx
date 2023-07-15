@@ -1,17 +1,25 @@
 import * as React from 'react';
-import { Typography, TypographyProps } from '@mui/material';
+import { SxProps, Theme, Typography } from '@mui/material';
 import { gray } from '@/styles/colors';
+import { BreakPoints, useBreakpoint } from '@/hooks';
 
 interface ITitleProps {
   text: string;
+  sx?: SxProps<Theme>;
 }
 
-export const Title: React.FunctionComponent<ITitleProps & TypographyProps> = ({
-  text,
-  ...props
-}) => {
+export const Title: React.FunctionComponent<ITitleProps> = ({ text, sx, ...props }) => {
+  const isMobile = useBreakpoint(BreakPoints.MD);
+
   return (
-    <Typography variant="fs48" color={gray[800]} {...props} display="block">
+    <Typography
+      component="h2"
+      variant={isMobile ? 'fs28' : 'fs48'}
+      color={gray[800]}
+      display="block"
+      sx={sx}
+      {...props}
+    >
       {text}
     </Typography>
   );

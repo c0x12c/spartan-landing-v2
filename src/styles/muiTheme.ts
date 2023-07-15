@@ -18,7 +18,9 @@ declare module '@mui/material/styles' {
     fs18: React.CSSProperties;
     fs20: React.CSSProperties;
     fs24: React.CSSProperties;
+    fs28: React.CSSProperties;
     fs32: React.CSSProperties;
+    fs36: React.CSSProperties;
     fs40: React.CSSProperties;
     fs48: React.CSSProperties;
     fs60: React.CSSProperties;
@@ -33,7 +35,9 @@ declare module '@mui/material/styles' {
     fs18: React.CSSProperties;
     fs20: React.CSSProperties;
     fs24: React.CSSProperties;
+    fs28: React.CSSProperties;
     fs32: React.CSSProperties;
+    fs36: React.CSSProperties;
     fs40: React.CSSProperties;
     fs48: React.CSSProperties;
     fs60: React.CSSProperties;
@@ -58,7 +62,9 @@ declare module '@mui/material/Typography' {
     fs18: true;
     fs20: true;
     fs24: true;
+    fs28: true;
     fs32: true;
+    fs36: true;
     fs40: true;
     fs48: true;
     fs60: true;
@@ -99,12 +105,14 @@ const createThemeByMode = (): Theme => {
             padding: 0,
             margin: 0,
             scrollBehavior: 'smooth',
+            overflowX: 'hidden',
           },
           html: {
             padding: 0,
             margin: 0,
             scrollBehavior: 'smooth',
             fontFamily: fonts,
+            overflowX: 'hidden',
           },
           a: {
             color: 'inherit',
@@ -162,7 +170,9 @@ const createThemeByMode = (): Theme => {
             fontWeight: 600,
           },
           sizeSmall: {
-            padding: '10px 18px !important',
+            padding: '12px 16px !important',
+            fontSize: '14px',
+            lineHeight: 1.43,
           },
         },
         variants: [
@@ -192,7 +202,7 @@ const createThemeByMode = (): Theme => {
       },
       fs14: {
         fontSize: '14px',
-        lineHeight: 1.42,
+        lineHeight: 1.57,
         fontWeight: 400,
       },
       fs16: {
@@ -212,12 +222,22 @@ const createThemeByMode = (): Theme => {
       },
       fs24: {
         fontSize: '24px',
-        lineHeight: 1,
+        lineHeight: 1.5,
+        fontWeight: 600,
+      },
+      fs28: {
+        fontSize: '28px',
+        lineHeight: 1.28,
         fontWeight: 600,
       },
       fs32: {
         fontSize: '32px',
         lineHeight: 1.375,
+        fontWeight: 600,
+      },
+      fs36: {
+        fontSize: '36px',
+        lineHeight: 1.27,
         fontWeight: 600,
       },
       fs40: {

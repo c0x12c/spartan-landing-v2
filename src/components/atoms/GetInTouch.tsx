@@ -22,11 +22,11 @@ export const GetInTouch: React.FunctionComponent<IGetInTouchProps> = ({
   const isMobile = useBreakpoint(BreakPoints.MD);
 
   return (
-    <Box mb="64px">
+    <Box mb={isMobile ? '40px' : '64px'}>
       <Container>
         <Box
-          py={isMobile ? '64px' : '128px'}
-          px={isMobile ? '30px' : '90px'}
+          py={isMobile ? '40.5px' : '128px'}
+          px={isMobile ? '0' : '90px'}
           borderRadius="12px"
           overflow="hidden"
           sx={{
@@ -36,8 +36,17 @@ export const GetInTouch: React.FunctionComponent<IGetInTouchProps> = ({
           }}
           {...props}
         >
-          <Box display="flex" flexDirection="column" gap="64px" maxWidth="735px">
-            <Title text={title} />
+          <Box
+            display="flex"
+            flexDirection="column"
+            alignItems={isMobile ? 'center' : 'flex-start'}
+            gap={isMobile ? '24px' : '64px'}
+            maxWidth="735px"
+          >
+            <Title
+              text={title}
+              sx={{ textAlign: isMobile ? 'center' : 'left', fontSize: isMobile ? '28px' : '48px' }}
+            />
             {textButton && linkButton && (
               <Link href={linkButton} scroll={false}>
                 <Button variant="contained" size={isMobile ? 'small' : 'medium'}>

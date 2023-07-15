@@ -16,7 +16,7 @@ interface IServiceBackendPageProps {}
 export const ServiceBackendPage: React.FunctionComponent<IServiceBackendPageProps> = () => {
   return (
     <MainTemplate>
-      <Box display="flex" flexDirection="column" gap="44px">
+      <Box display="flex" flexDirection="column" gap={{ md: '44px', xs: 0 }}>
         <SubServiceBanner title="Build robust backend applications" />
         <PartnersSubService tag={ServicesEnum.BACKEND} />
         <WhatWeDo tag={ServicesEnum.BACKEND} />

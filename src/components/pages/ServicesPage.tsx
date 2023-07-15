@@ -9,13 +9,16 @@ import {
   TechStacks,
   WorkingProcess,
 } from '../molecules';
+import { BreakPoints, useBreakpoint } from '@/hooks';
 
 interface IServicesPageProps {}
 
 export const ServicesPage: React.FunctionComponent<IServicesPageProps> = () => {
+  const isMobile = useBreakpoint(BreakPoints.MD);
+
   return (
     <MainTemplate>
-      <Box display="flex" flexDirection="column" gap="44px">
+      <Box display="flex" flexDirection="column" gap={isMobile ? '24px' : '44px'}>
         <ServicesBanner />
         <ServicesOffer />
         <TechStacks />

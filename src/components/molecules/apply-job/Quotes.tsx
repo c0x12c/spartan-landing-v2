@@ -1,11 +1,10 @@
 import React from 'react';
-import { Container, Title } from '@/components/atoms';
+import { BodyText, Container, Title } from '@/components/atoms';
 import { Box, Divider, IconButton, Typography } from '@mui/material';
 import Image from 'next/image';
 import { base, gray, primary } from '@/styles/colors';
 import { quotes } from '@/constants/quotes';
 import Commas from '@/assets/images/apply-job/comas.svg';
-import { ProjectsHome } from '@/constants';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import Slider from 'react-slick';
@@ -33,7 +32,7 @@ const Quotes = () => {
         gap={{ xs: '40px', md: '92px' }}
         flexDirection={{ xs: 'column', md: 'row' }}
         paddingTop={'44px'}
-        paddingBottom={'88px'}
+        paddingBottom={{ xs: '40px', sm: '88px' }}
         alignItems={'center'}
         key={item.id}
       >
@@ -60,32 +59,39 @@ const Quotes = () => {
             },
           }}
         >
-          <Typography variant="fs18" color={gray[800]} fontWeight={600} mb="24px" component="p">
+          <Typography
+            variant={isMobile ? 'fs16' : 'fs18'}
+            color={gray[800]}
+            fontWeight={600}
+            mb={isMobile ? '12px' : '24px'}
+            component="p"
+          >
             {item.title}
           </Typography>
-          <Typography variant="fs18" component="p" marginBottom={'18px'}>
-            {item.text}
-          </Typography>
+          <BodyText
+            text={item.text}
+            data-aos="fade-up"
+            data-aos-delay="300"
+            sx={{ mb: isMobile ? '8px' : '18px' }}
+          />
           <Box
             display="flex"
             justifyContent={{ md: 'space-between' }}
-            alignItems={'center'}
             flexDirection={{ xs: 'column', md: 'row' }}
             gap={{ xs: '20px', md: '0' }}
+            p={isMobile ? '13px 0' : '8px 0'}
           >
             <Box>
               <Typography
                 component="p"
-                textAlign={{ xs: 'center', md: 'start' }}
-                variant="fs18"
+                variant={isMobile ? 'fs16' : 'fs18'}
                 color={gray[900]}
                 fontWeight={700}
               >
                 {item.author}
               </Typography>
               <Typography
-                variant="fs20"
-                textAlign={{ xs: 'center', md: 'start' }}
+                variant={isMobile ? 'fs16' : 'fs20'}
                 component="p"
                 color={primary[400]}
                 fontWeight={500}
@@ -94,10 +100,10 @@ const Quotes = () => {
               </Typography>
             </Box>
 
-            <Box display="flex" gap="20px">
+            <Box display="flex" gap={isMobile ? '12px' : '20px'}>
               <IconButton
                 aria-label="back"
-                size="large"
+                size={isMobile ? 'medium' : 'large'}
                 onClick={() => slider?.current?.slickPrev()}
                 disabled={index === 0}
                 sx={{
@@ -111,16 +117,14 @@ const Quotes = () => {
               </IconButton>
               <IconButton
                 aria-label="back"
-                size="large"
+                size={isMobile ? 'medium' : 'large'}
                 onClick={() => slider?.current?.slickNext()}
-                disabled={index == ProjectsHome.length - 1}
+                disabled={index == quotes.length - 1}
                 sx={{
-                  opacity: index == ProjectsHome.length - 1 ? 0.5 : 1,
+                  opacity: index == quotes.length - 1 ? 0.5 : 1,
                   border: '1.62px solid',
-                  borderColor: index == ProjectsHome.length - 1 ? base.grey : primary[500],
-                  color: `${
-                    index == ProjectsHome.length - 1 ? base.grey : primary[500]
-                  } !important`,
+                  borderColor: index == quotes.length - 1 ? base.grey : primary[500],
+                  color: `${index == quotes.length - 1 ? base.grey : primary[500]} !important`,
                 }}
               >
                 <ArrowForwardIcon fontSize="inherit" />
@@ -135,6 +139,7 @@ const Quotes = () => {
   return (
     <Container>
       <Box display={'flex'} alignItems={'center'} data-aos-delay="300" data-aos="fade-up">
+        <Typography variant="fs14"></Typography>
         {!isMobile && (
           <Box width={'100%'} display={'flex'} alignItems={'center'}>
             <Image src={Star} alt="star" />
@@ -144,8 +149,10 @@ const Quotes = () => {
 
         <Title
           text="Sharing from a secret interview for Spartans around the world"
-          minWidth={{ sm: '635px', xs: '100%' }}
-          textAlign={{ sm: 'end', xs: 'start' }}
+          sx={{
+            minWidth: { sm: '635px', xs: '100%' },
+            textAlign: { sm: 'end', xs: 'start' },
+          }}
         />
       </Box>
       <Slider ref={slider} {...settings}>

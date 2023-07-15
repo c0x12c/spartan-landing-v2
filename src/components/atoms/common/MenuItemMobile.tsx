@@ -98,6 +98,36 @@ export const MenuItemMobile: React.FC<MenuItemMobileProps> = ({ item, toggleMenu
               </ListItem>
             </Link>
           ))}
+          {item.label === 'Services' && (
+            <Link href="/case-study">
+              <ListItem
+                sx={{
+                  cursor: 'pointer',
+                  padding: '4px 8px',
+                  borderBottom: `1px solid ${gray[400]}`,
+                  display: 'flex',
+                  justifyContent: 'space-between',
+                  '&:hover': {
+                    '& .submenu-text': {
+                      color: primary[500],
+                      transition: 'color .5s',
+                    },
+                    '& .submenu-icon': {
+                      transform: 'translateX(5px)',
+                      transition: 'transform .5s',
+                    },
+                  },
+                }}
+              >
+                <Typography className="submenu-text" variant="fs16" color={base.black}>
+                  Case Study
+                </Typography>
+                <Box className="submenu-icon">
+                  <ArrowIcon color={base.black} />
+                </Box>
+              </ListItem>
+            </Link>
+          )}
         </List>
       </Collapse>
     </List>

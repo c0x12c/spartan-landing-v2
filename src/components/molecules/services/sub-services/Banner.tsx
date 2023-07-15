@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { Box, Typography } from '@mui/material';
 import bg from '@/assets/images/case-study/banner-image.png';
-import { Container } from '@/components/atoms';
+import { Container, MainTitle } from '@/components/atoms';
 import { base } from '@/styles/colors';
 import { BreakPoints, useBreakpoint } from '@/hooks';
 
@@ -15,7 +15,7 @@ export const SubServiceBanner: React.FunctionComponent<ISubServiceBannerProps> =
   return (
     <React.Fragment>
       <Box
-        height="559px"
+        height={isMobile ? '347px' : '559px'}
         display="flex"
         alignItems="center"
         sx={{
@@ -26,24 +26,15 @@ export const SubServiceBanner: React.FunctionComponent<ISubServiceBannerProps> =
         }}
       >
         <Container>
-          <Box
-            maxWidth="773px"
-            mx="auto"
-            display="flex"
-            flexDirection="column"
-            gap="32px"
-            alignItems="center"
-          >
-            <Typography
-              variant={isMobile ? 'fs40' : 'fs64'}
-              color={base.white}
+          <Box maxWidth="773px" mx="auto" display="flex" flexDirection="column" alignItems="center">
+            <MainTitle
+              text={title}
               data-aos="fade-up"
               data-aos-delay="200"
-              component="h1"
-              textAlign="center"
-            >
-              {title}
-            </Typography>
+              sx={{
+                textAlign: 'center',
+              }}
+            />
           </Box>
         </Container>
       </Box>

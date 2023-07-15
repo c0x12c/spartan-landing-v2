@@ -17,7 +17,7 @@ export type MenuItemType = {
   subItems?: ServiceType[] | AboutType[];
 };
 
-export const Header = () => {
+export const Header = ({ forceTransparent = true }: { forceTransparent?: boolean }) => {
   const { pathname } = useRouter();
   const isTransparent =
     pathname !== '/contact-us' &&
@@ -25,6 +25,7 @@ export const Header = () => {
     pathname !== '/internship-program' &&
     pathname !== '/ready-to-join' &&
     pathname !== '/apply-job';
+
   const isTablet = useBreakpoint(BreakPoints.LG);
 
   const dataMenu: MenuItemType[] = [
@@ -64,13 +65,16 @@ export const Header = () => {
         >
           <Box display="flex" alignItems="center" justifyContent="space-between" width="100%">
             <Link href="/">
-              <Image src={isTransparent ? LogoWhite : LogoDark} alt="Spartan Logo" />
+              <Image
+                src={isTransparent && forceTransparent ? LogoWhite : LogoDark}
+                alt="Spartan Logo"
+              />
             </Link>
 
             {isTablet ? (
-              <MenuMobile menu={dataMenu} isTransparent={isTransparent} />
+              <MenuMobile menu={dataMenu} isTransparent={isTransparent && forceTransparent} />
             ) : (
-              <MenuDesktop menu={dataMenu} isTransparent={isTransparent} />
+              <MenuDesktop menu={dataMenu} isTransparent={isTransparent && forceTransparent} />
             )}
           </Box>
         </Toolbar>

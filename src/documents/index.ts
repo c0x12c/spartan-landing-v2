@@ -131,10 +131,24 @@ const SEOPages: ISEOPages = {
   },
   [EPages.CASE_STUDY_LIQUIDITY]: {
     title: 'c0x12c - Case study - Liquidity',
-    description: 'c0x12c - ACase study - Liquidity',
+    description: 'c0x12c - Case study - Liquidity',
     keywords: 'c0x12c,Case study - Liquidity',
     metaImage: '',
     slug: '/case-study/liquidity',
+  },
+  [EPages.CASE_STUDY_CF]: {
+    title: 'c0x12c - Case study - ChargeFuze',
+    description: 'c0x12c - Case study - ChargeFuze',
+    keywords: 'c0x12c,Case study - ChargeFuze',
+    metaImage: '',
+    slug: '/case-study/chargefuze',
+  },
+  [EPages.NOT_FOUND]: {
+    title: 'c0x12c - Page not found',
+    description: 'c0x12c - Page not found',
+    keywords: 'c0x12c,Page not found',
+    metaImage: '',
+    slug: '*',
   },
   [EPages.SPARTAN_OPERATES]: {
     title: 'c0x12c - How Spartan Operates',

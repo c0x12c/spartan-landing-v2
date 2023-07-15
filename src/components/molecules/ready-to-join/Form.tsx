@@ -1,8 +1,15 @@
 import * as React from 'react';
-import { Box, Button, Typography } from '@mui/material';
-import { ArrowIcon, Container, TextFieldWithLabel } from '@/components/atoms';
+import { Box, Button } from '@mui/material';
+import {
+  ArrowIcon,
+  BodyText,
+  Container,
+  TextFieldWithLabel,
+  Title,
+  UploadFile,
+} from '@/components/atoms';
 import { BreakPoints, useBreakpoint } from '@/hooks';
-import { gray } from '@/styles/colors';
+import { base, gray } from '@/styles/colors';
 
 interface IReadyToJoinFormProps {}
 
@@ -10,7 +17,12 @@ export const ReadyToJoinForm: React.FunctionComponent<IReadyToJoinFormProps> = (
   const isMobile = useBreakpoint(BreakPoints.MD);
 
   return (
-    <Box mb="44px" id="join-form">
+    <Box
+      mb={isMobile ? '24px' : '44px'}
+      py="40px"
+      id="join-form"
+      bgcolor={isMobile ? gray[50] : base.white}
+    >
       <Container>
         <Box
           display="flex"
@@ -20,13 +32,36 @@ export const ReadyToJoinForm: React.FunctionComponent<IReadyToJoinFormProps> = (
         >
           <Box maxWidth="442px">
             <Box display="flex" flexDirection="column" gap="24px">
-              <Typography variant="fs18" color={gray[600]}>
-                Have a question about our services or want to get started on your design project?
-                We&apos;re here to help! <br /> Fill out the contact form below and one of our team
-                members will get back to you within 24 hours. <br /> Alternatively, you can reach
-                out to us via phone or email using the contact information provided below. We
-                can&apos;t wait to hear from you!
-              </Typography>
+              <BodyText
+                text="Hello,"
+                data-aos="fade-up"
+                data-aos-delay="300"
+                sx={{ letterSpacing: '0.32px' }}
+              />
+              <BodyText
+                text="We appreciate your interest in our company. Please fill out this form, and it will give us a chance to learn a bit more about you."
+                data-aos="fade-up"
+                data-aos-delay="300"
+                sx={{ letterSpacing: '0.32px' }}
+              />
+              <BodyText
+                text="For any updates about job opportunities and company news, you're invited to visit our Linkedin. And if you have any questions, don't hesitate to contact us via email: hello@c0x12c.com"
+                data-aos="fade-up"
+                data-aos-delay="300"
+                sx={{ letterSpacing: '0.32px' }}
+              />
+              <BodyText
+                text="We're looking forward to talking with you!"
+                data-aos="fade-up"
+                data-aos-delay="300"
+                sx={{ letterSpacing: '0.32px' }}
+              />
+              <BodyText
+                text="Best Regards, \n Spartan Recruitment Team."
+                data-aos="fade-up"
+                data-aos-delay="300"
+                sx={{ letterSpacing: '0.32px' }}
+              />
             </Box>
           </Box>
           <Box
@@ -35,18 +70,27 @@ export const ReadyToJoinForm: React.FunctionComponent<IReadyToJoinFormProps> = (
             width="100%"
             display="flex"
             flexDirection="column"
-            gap="44px"
+            gap={isMobile ? '24px' : '44px'}
           >
-            <Typography component="h2" variant="fs48" color={gray[850]}>
-              Submit form
-            </Typography>
+            <Title text="Submit form" sx={{ fontSize: isMobile ? '28px' : '48px' }} />
             <Box component={'form'} display="flex" flexDirection="column" gap="32px">
               <TextFieldWithLabel title="First name" id="firstName" isRequired />
               <TextFieldWithLabel title="Last name" id="lastName" isRequired />
               <TextFieldWithLabel title="Email" id="email" isRequired />
-              <TextFieldWithLabel title="Attach your résume here" id="résume" isRequired />
+              <UploadFile
+                title="Attach your résume here"
+                text="Attach file"
+                helpText="(Format: .doc, .docx, .pdf, .xls, .xlsx; <=5MB)"
+                isRequired
+              />
             </Box>
-            <Button variant="contained" size={isMobile ? 'small' : 'medium'}>
+            <Button
+              variant="contained"
+              size={isMobile ? 'small' : 'medium'}
+              sx={{
+                width: 'fit-content',
+              }}
+            >
               Submit now
               <ArrowIcon />
             </Button>

@@ -25,6 +25,24 @@
   }
 }
 
+@keyframes slide {
+  from {
+    transform: translateY(0px);
+  }
+  to {
+    transform: translateY(-1858px);
+  }
+}
+
+@keyframes slideTop {
+  from {
+    transform: translateY(-1858px);
+  }
+  to {
+    transform: translateY(0px);
+  }
+}
+
 .bubble {
   animation: bubble 3s linear infinite;
 }
@@ -38,4 +56,11 @@
 }
 .banner-bg-3 {
   animation-delay: 10s;
+}
+
+.life-scroll-move.bottom {
+  animation: slide 20s linear infinite;
+}
+.life-scroll-move.top {
+  animation: slideTop 20s linear infinite;
 }

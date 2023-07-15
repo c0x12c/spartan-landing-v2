@@ -7,7 +7,7 @@ import {
   EmpowerTech,
   SuccessFactors,
   Uniqueness,
-  Founders,
+  // Founders,
 } from '../molecules/about-us';
 
 type Props = {
@@ -17,12 +17,12 @@ type Props = {
 export const AboutUsPage: React.FC<Props> = () => {
   return (
     <MainTemplate>
-      <Box display={'flex'} flexDirection={'column'} gap={'64px'}>
+      <Box display={'flex'} flexDirection={'column'} gap={{ md: '64px', xs: '0' }}>
         <AboutUsBanner />
         <Description />
         <SuccessFactors />
         <Uniqueness />
-        <Founders />
+        {/* <Founders /> */}
         <EmpowerTech />
       </Box>
     </MainTemplate>

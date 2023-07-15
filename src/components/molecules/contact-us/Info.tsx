@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { BreakPoints, useBreakpoint } from '@/hooks';
 import { Box, Divider, Typography } from '@mui/material';
-import { Container } from '@/components/atoms';
+import { Container, Title } from '@/components/atoms';
 import Image from 'next/image';
 import contactImage from '@/assets/images/contact-us/contact-image.png';
 import messageImage from '@/assets/images/contact-us/message.png';
@@ -20,11 +20,11 @@ export const ContactInfo: React.FunctionComponent<IContactInfoProps> = () => {
   const isMobile = useBreakpoint(BreakPoints.MD);
 
   const dataContact = [
-    { id: 'contact-1', text: 'Call: +0837 322 425', icon: callIcon },
-    { id: 'contact-2', text: 'drhoena@gmail.com', icon: emailIcon },
+    { id: 'contact-1', text: 'Call: 818-626-4197', icon: callIcon },
+    { id: 'contact-2', text: 'hello@c0x12c.com', icon: emailIcon },
     {
       id: 'contact-3',
-      text: '40 Chasely St, Auchenflower QLD 4066, Australia',
+      text: 'Los Angeles CA',
       icon: locationIcon,
     },
   ];
@@ -33,7 +33,7 @@ export const ContactInfo: React.FunctionComponent<IContactInfoProps> = () => {
     return (
       <Box display="flex" key={item.id} gap="12px" data-aos="fade-up" data-aos-delay="200">
         <Image src={item.icon} alt="icon" />
-        <Typography variant="fs18" color={gray[500]}>
+        <Typography variant={isMobile ? 'fs14' : 'fs18'} color={gray[500]}>
           {item.text}
         </Typography>
       </Box>
@@ -41,12 +41,12 @@ export const ContactInfo: React.FunctionComponent<IContactInfoProps> = () => {
   });
 
   return (
-    <Box mb="44px" id="internship-form">
+    <Box id="internship-form" py={isMobile ? '40px' : '100px'}>
       <Container>
         <Box
           display="flex"
           flexDirection={isMobile ? 'column' : 'row'}
-          gap={isMobile ? '60px' : '88px'}
+          gap={isMobile ? '40px' : '88px'}
         >
           <Box maxWidth="407px" mx={isMobile ? 'auto' : '0'}>
             <Box position="relative" minWidth={isMobile ? '100%' : '526px'} mx="auto">
@@ -80,21 +80,16 @@ export const ContactInfo: React.FunctionComponent<IContactInfoProps> = () => {
               </Box>
             </Box>
           </Box>
-          <Box width="100%" display="flex" flexDirection="column" gap="42px">
-            <Typography
-              component="h2"
-              variant="fs48"
-              color={gray[850]}
-              data-aos="fade-up"
-              data-aos-delay="200"
-            >
-              Contact us
-            </Typography>
+          <Box width="100%" display="flex" flexDirection="column" gap={isMobile ? '24px' : '42px'}>
+            <Title
+              text="Contact us"
+              sx={{ fontSize: isMobile ? '28px' : '48px', color: gray[850] }}
+            />
             <Box display="flex" flexDirection="column" gap="36px">
               {renderContact}
             </Box>
             <Divider />
-            <Box mt="50px" display="flex" alignItems="center" gap="12px">
+            <Box mt={isMobile ? '24px' : '50px'} display="flex" alignItems="center" gap="12px">
               <Link href="/" target="_blank">
                 <Image src={linkedin} alt="linkedin" />
               </Link>

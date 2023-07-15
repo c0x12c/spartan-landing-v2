@@ -3,6 +3,7 @@ import { Box, Typography } from '@mui/material';
 import { base, gray } from '@/styles/colors';
 import { StaticImageData } from 'next/image';
 import Image from 'next/image';
+import { BreakPoints, useBreakpoint } from '@/hooks';
 
 interface ICardHorizontalProps {
   icon: React.ReactNode | StaticImageData;
@@ -18,6 +19,8 @@ export const CardHorizontal: React.FunctionComponent<ICardHorizontalProps> = ({
   content,
   ...props
 }) => {
+  const isMobile = useBreakpoint(BreakPoints.MD);
+
   return (
     <Box
       display="flex"
@@ -56,7 +59,7 @@ export const CardHorizontal: React.FunctionComponent<ICardHorizontalProps> = ({
         </Typography>
       )}
       {typeof content === 'string' ? (
-        <Typography variant="fs16" color={gray[600]}>
+        <Typography variant={isMobile ? 'fs14' : 'fs16'} color={gray[600]}>
           {content}
         </Typography>
       ) : (

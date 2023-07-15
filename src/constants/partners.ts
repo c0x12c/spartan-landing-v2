@@ -2,7 +2,7 @@ import logoLiquidity from '@/assets/images/partners/logo-liquidity.png';
 import logoChargeFuze from '@/assets/images/partners/logo-chargefuze.png';
 import logoAgora from '@/assets/images/partners/logo-agora.png';
 import logoMobolize from '@/assets/images/partners/logo-mobolize.png';
-import logoHeru from '@/assets/images/partners/logo-heru.png';
+// import logoHeru from '@/assets/images/partners/logo-heru.png';
 import logoURSA from '@/assets/images/partners/logo-URSA.png';
 import logoWb from '@/assets/images/partners/logo-wb.png';
 import logoVolta from '@/assets/images/partners/logo-volta.png';
@@ -61,13 +61,13 @@ export const Partners: PartnerType[] = [
     imgSrc: logoMobolize,
     href: '/',
   },
-  {
-    id: 'partner-5',
-    name: 'Heru',
-    tags: [],
-    imgSrc: logoHeru,
-    href: '/',
-  },
+  // {
+  //   id: 'partner-5',
+  //   name: 'Heru',
+  //   tags: [],
+  //   imgSrc: logoHeru,
+  //   href: '/',
+  // },
   {
     id: 'partner-6',
     name: 'URSA',

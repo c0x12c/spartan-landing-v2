@@ -1,61 +1,137 @@
 import * as React from 'react';
-import { Box, Button, Typography } from '@mui/material';
+import { Box, Button, IconButton, styled } from '@mui/material';
 import { BreakPoints, useBreakpoint } from '@/hooks';
-import { gray } from '@/styles/colors';
-import { ArrowIcon, CardProject, Container, SubTitle, Title } from '@/components/atoms';
+import { base, gray, primary } from '@/styles/colors';
+import { ArrowIcon, BodyText, CardProject, Container, SubTitle, Title } from '@/components/atoms';
 import Link from 'next/link';
 import { Projects } from '@/constants';
+import Slider, { Settings } from 'react-slick';
+import ArrowBackIcon from '@mui/icons-material/ArrowBack';
+import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 
 interface IServiceCasesStudyProps {}
 
-export const ServiceCasesStudy: React.FunctionComponent<IServiceCasesStudyProps> = () => {
-  const isTablet = useBreakpoint(BreakPoints.LG);
-  const isMobile = useBreakpoint(BreakPoints.MD);
+const CustomInner = styled(Box)(({ theme }) => ({
+  '& .slick-list': {
+    overflow: 'visible',
+    margin: '0 -24px',
+  },
+  [theme.breakpoints.down('md')]: {
+    '& .slick-list': {
+      overflow: 'hidden',
+    },
+  },
+}));
 
-  const renderProjects = Projects.map((project) => {
+export const ServiceCasesStudy: React.FunctionComponent<IServiceCasesStudyProps> = () => {
+  const isMobile = useBreakpoint(BreakPoints.MD);
+  const [dragging, setDragging] = React.useState(false);
+
+  const handleBeforeChange = React.useCallback(() => {
+    console.log('handleBeforeChange');
+    setDragging(true);
+  }, [setDragging]);
+
+  const handleAfterChange = React.useCallback(() => {
+    console.log('handleAfterChange');
+    setDragging(false);
+  }, [setDragging]);
+
+  const handleOnItemClick = React.useCallback(
+    (e: React.MouseEvent, callback: () => void) => {
+      console.log('handleOnItemClick');
+      if (dragging) e.stopPropagation();
+      else callback();
+    },
+    [dragging]
+  );
+
+  const slider = React.useRef<Slider | null>(null);
+
+  const settings: Settings = {
+    dots: false,
+    arrows: false,
+    infinite: false,
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          centerMode: true,
+          centerPadding: '35px',
+        },
+      },
+    ],
+  };
+
+  const renderProjects = Projects.map((project, index) => {
     return (
-      <Box key={project.id} maxWidth="384px">
-        <CardProject item={project} />
+      <Box key={project.id} maxWidth={isMobile ? '319px' : '384px'}>
+        <CardProject item={project} onClick={handleOnItemClick} />
       </Box>
     );
   });
 
   return (
-    <Box bgcolor={gray[50]} py={isTablet ? '60px' : '120px'}>
+    <Box bgcolor={gray[50]} py={isMobile ? '60px' : '120px'}>
       <Container>
-        <Box display="flex" justifyContent="space-between" alignItems="center" mb="84px">
+        <Box
+          display="flex"
+          justifyContent="space-between"
+          alignItems="center"
+          mb={isMobile ? '24px' : '84px'}
+        >
           <Box display={'flex'} flexDirection={'column'} gap={'24px'} maxWidth="664px">
             <SubTitle text="Our Project" data-aos="fade-up" data-aos-delay="200" />
-            <Title text="Case Study" maxWidth={'690px'} data-aos="fade-up" data-aos-delay="300" />
-            <Typography variant="fs18" color={gray[600]} data-aos="fade-left" data-aos-delay="500">
-              Join us at Spartan Project and experience the strength of our capabilities,
+            <Title
+              text="Case Study"
+              data-aos="fade-up"
+              data-aos-delay="300"
+              sx={{
+                maxWidth: '690px',
+              }}
+            />
+            <BodyText
+              text="Join us at Spartan Project and experience the strength of our capabilities,
               complemented by the humility that drives our success. Together, we will achieve
-              remarkable outcomes and forge a path towards excellence.
-            </Typography>
+              remarkable outcomes and forge a path towards excellence."
+              data-aos="fade-up"
+              data-aos-delay="300"
+            />
           </Box>
-          <Link href="/case-study" scroll={false}>
-            <Button variant="contained" size={isMobile ? 'small' : 'medium'}>
-              Show all case study
-              <ArrowIcon />
-            </Button>
-          </Link>
+          {!isMobile && (
+            <Link href="/case-study" scroll={false}>
+              <Button variant="contained" size={isMobile ? 'small' : 'medium'}>
+                Show all case study
+                <ArrowIcon />
+              </Button>
+            </Link>
+          )}
         </Box>
-        <Box
-          whiteSpace="nowrap"
-          display="flex"
-          gap="24px"
-          py="5px"
-          sx={{
-            overflowY: 'hidden',
-            overflowX: 'auto',
-            scrollbarWidth: 'none',
-            '&::-webkit-scrollbar': {
-              display: 'none',
-            },
-          }}
-        >
-          {renderProjects}
-        </Box>
+        <CustomInner position="relative">
+          <Slider
+            ref={slider}
+            {...settings}
+            beforeChange={handleBeforeChange}
+            afterChange={handleAfterChange}
+          >
+            {renderProjects}
+          </Slider>
+        </CustomInner>
+        {isMobile && (
+          <Box display="flex" justifyContent="center" mt="24px">
+            <Link href="/case-study" scroll={false}>
+              <Button variant="contained" size={isMobile ? 'small' : 'medium'}>
+                Show all case study
+                <ArrowIcon />
+              </Button>
+            </Link>
+          </Box>
+        )}
       </Container>
     </Box>
   );

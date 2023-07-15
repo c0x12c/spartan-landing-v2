@@ -1,12 +1,12 @@
 import chargeFuze from '@/assets/images/projects/charge-fuze.svg';
-import heru from '@/assets/images/projects/heru.svg';
+// import heru from '@/assets/images/projects/heru.svg';
 import liquidityFinancial from '@/assets/images/projects/liquidity-financial.svg';
 import liveCast from '@/assets/images/projects/live-cast.svg';
 import ursalive from '@/assets/images/projects/ursalive.svg';
 import voltaWallet from '@/assets/images/projects/volta-wallet.svg';
 import voltaWalletQuote from '@/assets/images/projects/quote-volta.png';
 import chargeFuzeQuote from '@/assets/images/projects/quote-chargefuze.png';
-import heruQuote from '@/assets/images/projects/quote-heru.png';
+// import heruQuote from '@/assets/images/projects/quote-heru.png';
 import liquidityQuote from '@/assets/images/projects/quote-liquidity.png';
 import liveCastQuote from '@/assets/images/projects/quote-livecast.png';
 import ursaLiveQuote from '@/assets/images/projects/quote-ursalive.png';
@@ -143,24 +143,24 @@ export const Projects: ProjectType[] = [
       userImgSrc: voltaWalletUserImage,
     },
   },
-  {
-    id: 'case-6',
-    name: 'Heru',
-    value: 'heru',
-    imgSrc: heru,
-    href: '/case-study/heru',
-    tags: [],
-    content: 'Elevate the patient experience while simultaneously boosting practice revenue',
-    dev: 14,
-    designer: 2,
-    quote: {
-      imgSrc: heruQuote,
-      title: 'Spartan Is A Remarkable Team with Unmatched Expertise',
-      content:
-        'Working with the Spartan team to build our product has been an incredible experience. Their expertise, dedication, and technical skills have exceeded our expectations. We appreciate their proactive approach, attention to detail, and ability to deliver exceptional results. We are grateful for their support and look forward to continuing our partnership in future projects.',
-      userName: 'Daniel Kim',
-      userPosition: 'Volta’s Co-Founder ',
-      userImgSrc: voltaWalletUserImage,
-    },
-  },
+  // {
+  //   id: 'case-6',
+  //   name: 'Heru',
+  //   value: 'heru',
+  //   imgSrc: heru,
+  //   href: '/case-study/heru',
+  //   tags: [],
+  //   content: 'Elevate the patient experience while simultaneously boosting practice revenue',
+  //   dev: 14,
+  //   designer: 2,
+  //   quote: {
+  //     imgSrc: heruQuote,
+  //     title: 'Spartan Is A Remarkable Team with Unmatched Expertise',
+  //     content:
+  //       'Working with the Spartan team to build our product has been an incredible experience. Their expertise, dedication, and technical skills have exceeded our expectations. We appreciate their proactive approach, attention to detail, and ability to deliver exceptional results. We are grateful for their support and look forward to continuing our partnership in future projects.',
+  //     userName: 'Daniel Kim',
+  //     userPosition: 'Volta’s Co-Founder ',
+  //     userImgSrc: voltaWalletUserImage,
+  //   },
+  // },
 ];

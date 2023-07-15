@@ -7,11 +7,14 @@ import Image from 'next/image';
 import { base, gray, primary } from '@/styles/colors';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
+import { BreakPoints, useBreakpoint } from '@/hooks';
 // import QuoteTag from '@/components/atoms/QuoteTag';
 
 interface IClientsProps {}
 
 export const Clients: React.FunctionComponent<IClientsProps> = () => {
+  const isMobile = useBreakpoint(BreakPoints.MD);
+
   const slider = React.useRef<Slider | null>(null);
   const settings = {
     dots: false,
@@ -33,7 +36,13 @@ export const Clients: React.FunctionComponent<IClientsProps> = () => {
           <Image
             src={item.quote.imgSrc}
             alt={item.name}
-            style={{ maxWidth: '100%', height: 'auto', margin: '0 auto' }}
+            style={{
+              width: '100%',
+              maxWidth: '100%',
+              height: 'auto',
+              margin: '0 auto',
+              borderRadius: isMobile ? '6.25px' : '18.75px',
+            }}
             priority={true}
             data-aos="zoom-in"
             data-aos-delay="200"
@@ -42,10 +51,18 @@ export const Clients: React.FunctionComponent<IClientsProps> = () => {
             {renderTags(item.tags)}
           </Box> */}
         </Box>
-        <Grid container mt="44px" columnSpacing="120px" rowSpacing="40px">
-          <Grid item xs={12} sm={4} display="flex" flexDirection="column" gap="24px">
+        <Grid container mt={isMobile ? '24px' : '44px'} columnSpacing="120px" rowSpacing="40px">
+          <Grid
+            item
+            xs={12}
+            sm={4}
+            display="flex"
+            flexDirection="column"
+            gap={isMobile ? '12px' : '24px'}
+          >
             <Typography
-              variant="fs40"
+              variant={isMobile ? 'fs18' : 'fs40'}
+              fontWeight={600}
               color={gray[900]}
               letterSpacing="-0.8px"
               data-aos="fade-up"
@@ -55,7 +72,7 @@ export const Clients: React.FunctionComponent<IClientsProps> = () => {
             </Typography>
             <Box
               display="flex"
-              gap="18px"
+              gap={isMobile ? '8px' : '18px'}
               alignItems="center"
               borderBottom="1px solid"
               borderColor={gray[400]}
@@ -63,10 +80,15 @@ export const Clients: React.FunctionComponent<IClientsProps> = () => {
               data-aos="fade-up"
               data-aos-delay="300"
             >
-              <Typography variant="fs40" color={gray[900]} letterSpacing="-2px">
+              <Typography
+                variant={isMobile ? 'fs18' : 'fs40'}
+                fontWeight={600}
+                color={gray[900]}
+                letterSpacing={isMobile ? 'normal' : '-2px'}
+              >
                 {item.dev}+
               </Typography>
-              <Typography variant="fs18" fontWeight={600} color={gray[700]}>
+              <Typography variant={isMobile ? 'fs14' : 'fs18'} fontWeight={600} color={gray[700]}>
                 Dev in team
               </Typography>
             </Box>
@@ -77,18 +99,24 @@ export const Clients: React.FunctionComponent<IClientsProps> = () => {
               data-aos="fade-up"
               data-aos-delay="500"
             >
-              <Typography variant="fs40" color={gray[900]} letterSpacing="-2px">
+              <Typography
+                variant={isMobile ? 'fs18' : 'fs40'}
+                fontWeight={600}
+                color={gray[900]}
+                letterSpacing="-2px"
+              >
                 {item.designer}
               </Typography>
-              <Typography variant="fs18" fontWeight={600} color={gray[700]}>
+              <Typography variant={isMobile ? 'fs14' : 'fs18'} fontWeight={600} color={gray[700]}>
                 Designer in team
               </Typography>
             </Box>
           </Grid>
           <Grid item xs={12} sm={8}>
             <Typography
-              variant="fs24"
+              variant={isMobile ? 'fs18' : 'fs24'}
               color={gray[800]}
+              fontWeight={600}
               mb="24px"
               component="h3"
               data-aos="fade-up"
@@ -97,7 +125,7 @@ export const Clients: React.FunctionComponent<IClientsProps> = () => {
               {item.quote.title}
             </Typography>
             <Typography
-              variant="fs18"
+              variant={isMobile ? 'fs14' : 'fs18'}
               color={gray[600]}
               mb="26px"
               component="p"
@@ -108,8 +136,10 @@ export const Clients: React.FunctionComponent<IClientsProps> = () => {
             </Typography>
             <Box
               display="flex"
-              alignItems="center"
+              flexDirection={isMobile ? 'column' : 'row'}
+              alignItems={isMobile ? 'flex-start' : 'center'}
               justifyContent="space-between"
+              rowGap="12px"
               data-aos="fade-up"
               data-aos-delay="400"
             >
@@ -118,10 +148,14 @@ export const Clients: React.FunctionComponent<IClientsProps> = () => {
                   <Image src={item.quote.userImgSrc} alt={item.quote.userName} />
                 </Box>
                 <Box display="flex" flexDirection="column">
-                  <Typography variant="fs18" color={gray[900]} component="p">
+                  <Typography variant={isMobile ? 'fs14' : 'fs18'} color={gray[900]} component="p">
                     {item.quote.userName}
                   </Typography>
-                  <Typography variant="fs20" color={primary[500]} component="p">
+                  <Typography
+                    variant={isMobile ? 'fs14' : 'fs20'}
+                    color={primary[500]}
+                    component="p"
+                  >
                     {item.quote.userPosition}
                   </Typography>
                 </Box>
@@ -129,7 +163,7 @@ export const Clients: React.FunctionComponent<IClientsProps> = () => {
               <Box display="flex" gap="16px">
                 <IconButton
                   aria-label="back"
-                  size="large"
+                  size={isMobile ? 'small' : 'large'}
                   onClick={() => slider?.current?.slickPrev()}
                   disabled={index === 0}
                   sx={{
@@ -143,7 +177,7 @@ export const Clients: React.FunctionComponent<IClientsProps> = () => {
                 </IconButton>
                 <IconButton
                   aria-label="back"
-                  size="large"
+                  size={isMobile ? 'small' : 'large'}
                   onClick={() => slider?.current?.slickNext()}
                   disabled={index == ProjectsHome.length - 1}
                   sx={{
@@ -166,9 +200,9 @@ export const Clients: React.FunctionComponent<IClientsProps> = () => {
   });
 
   return (
-    <Box my="64px">
+    <Box py={isMobile ? '40px' : '64px'}>
       <Container>
-        <Box mb="44px" textAlign="center">
+        <Box mb={isMobile ? '24px' : '44px'} textAlign={isMobile ? 'left' : 'center'}>
           <Title text="Clients love Spartans and our work!" />
         </Box>
         <Slider ref={slider} {...settings}>

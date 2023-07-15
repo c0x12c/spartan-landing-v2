@@ -1,6 +1,13 @@
 import React from 'react';
 import { MainTemplate } from '../templates';
-import { Clients, GlobalImpact, HomeBanner, Partners, WhyBusiness } from '../molecules';
+import {
+  Clients,
+  GlobalImpact,
+  HomeBanner,
+  OurServices,
+  Partners,
+  WhyBusiness,
+} from '../molecules';
 import { GetInTouch } from '../atoms';
 
 type Props = {
@@ -12,6 +19,7 @@ export const HomePage: React.FC<Props> = () => {
     <MainTemplate>
       <HomeBanner />
       <Partners />
+      <OurServices />
       <WhyBusiness />
       <GlobalImpact />
       <Clients />

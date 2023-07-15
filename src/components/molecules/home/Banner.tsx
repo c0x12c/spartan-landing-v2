@@ -1,10 +1,10 @@
 import React from 'react';
-import { Typography, Box, Button } from '@mui/material';
-import { base, gray, primary } from '@/styles/colors';
-import heroBanner from '@/assets/images/home-banner/hero-banner.svg';
-import heroBanner2 from '@/assets/images/home-banner/hero-banner-2.svg';
-import heroBanner3 from '@/assets/images/home-banner/hero-banner-3.svg';
-import { ArrowIcon, Banner, Container } from '@/components/atoms';
+import { Box, Button } from '@mui/material';
+import { gray } from '@/styles/colors';
+import heroBanner from '@/assets/images/home-banner/banner-1.png';
+import heroBanner2 from '@/assets/images/home-banner/banner-2.png';
+import heroBanner3 from '@/assets/images/home-banner/banner-3.png';
+import { ArrowIcon, Banner, BodyText, Container, MainTitle } from '@/components/atoms';
 import { BreakPoints, useBreakpoint } from '@/hooks';
 import Link from 'next/link';
 
@@ -27,25 +27,13 @@ export const HomeBanner = () => {
         <Container>
           <Box maxWidth={{ md: '700px', xs: '529px' }}>
             <Box display="flex" flexDirection="column" rowGap="28px" mb="32px">
-              <Typography variant="fs64" color={base.white} data-aos="fade-up" data-aos-delay="200">
-                Spartans at{' '}
-                <Typography variant="fs64" color={primary[500]}>
-                  Work
-                </Typography>
-              </Typography>
-              <Typography
-                variant="fs18"
-                color={gray[300]}
-                maxWidth="700px"
+              <MainTitle text="/Startup/ in the box" data-aos="fade-up" data-aos-delay="200" />
+              <BodyText
+                text="Unlock your startup’s software potential with Spartan’s all-inclusive solution. Our tailored package offers comprehensive services, expertise, and resources to streamline your software development and implementation. From architecture design to deployment and ongoing support, we empower startups to thrive in the digital landscape."
                 data-aos="fade-up"
                 data-aos-delay="300"
-              >
-                A powerhouse company driven by professionalism, strength, and a relentless positive
-                mindset. With an unwavering commitment to excellence, Spartan empowers your startups
-                by providing a solid team of tech-savvy people who are passionate about their work
-                and dedicated to long-term greatness. We know how to take advantage of technology
-                for your business and are willing to share this knowledge.
-              </Typography>
+                sx={{ color: gray[300], maxWidth: '700px' }}
+              />
             </Box>
             <Link
               href="/contact-us#contact-form"
@@ -72,7 +60,7 @@ const HeroBannerElement = ({ src, index }: { src: string; index: number }) => {
         className={`banner-bg banner-bg-${index}`}
         sx={{
           backgroundImage: `url(${src})`,
-          backgroundPosition: 'top',
+          backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',
           backgroundSize: 'cover',
           height: { lg: '840px', md: '855px', xs: '792px' },

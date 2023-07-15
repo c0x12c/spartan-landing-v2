@@ -1,13 +1,16 @@
 import { base, gray } from '@/styles/colors';
 import { PoppinsFont } from '@/styles/muiTheme';
-import { Box, TextField, Typography, styled } from '@mui/material';
+import { Box, TextField, TextFieldProps, Typography, styled } from '@mui/material';
 
-export const CustomTextField = styled(TextField)({
+export const CustomTextField = styled(TextField)(({ theme }) => ({
   '& .MuiInputBase-input': {
     width: '100%',
     fontSize: '18px',
     fontFamily: PoppinsFont.style.fontFamily,
     lineHeight: 1.56,
+    [theme.breakpoints.down('md')]: {
+      fontSize: '14px',
+    },
   },
   '& .MuiInputBase-root': {
     padding: 0,
@@ -46,7 +49,7 @@ export const CustomTextField = styled(TextField)({
       margin: 0,
     },
   },
-});
+}));
 
 interface ITextFieldWithLabel {
   title: string;
@@ -59,14 +62,14 @@ export const TextFieldWithLabel = ({
   id,
   isRequired = false,
   ...props
-}: ITextFieldWithLabel) => {
+}: ITextFieldWithLabel & TextFieldProps) => {
   return (
     <Box>
       <Box component={'label'} htmlFor={id}>
         <Typography variant="fs14" color={gray[600]}>
           {title}{' '}
           {isRequired && (
-            <Typography variant="fs14" color={base.red}>
+            <Typography variant="fs14" color={base.orange}>
               *
             </Typography>
           )}

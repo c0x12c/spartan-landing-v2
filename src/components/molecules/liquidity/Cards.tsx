@@ -14,10 +14,12 @@ const Cards = () => {
         <Box>
           <Title
             text="About Liquidity"
-            mb={'32px'}
-            mt={'44px'}
             data-aos="fade-up"
             data-aos-delay="200"
+            sx={{
+              mb: '32px',
+              mt: '44px',
+            }}
           />
           <Typography
             variant="fs18"

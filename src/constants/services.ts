@@ -46,7 +46,7 @@ export const Services: ServiceType[] = [
     id: 'service-2',
     label: 'Web Development',
     href: '/services/web-development',
-    content: 'We help enterprises navigating the best of the digital',
+    content: 'Your one-stop web development agency',
     icon: webIcon,
     detail: [
       {
@@ -67,7 +67,7 @@ export const Services: ServiceType[] = [
     id: 'service-1',
     label: 'Mobile App Development',
     href: '/services/mobile-app',
-    content: 'We help enterprises navigating the best of the digital',
+    content: 'Disruptive and customizes mobile solution for all',
     icon: mobileIcon,
     detail: [
       {
@@ -87,7 +87,7 @@ export const Services: ServiceType[] = [
     id: 'service-4',
     label: 'Cloud Solutions',
     href: '/services/cloud',
-    content: 'We help enterprises navigating the best of the digital',
+    content: 'Migrate your offline business to cloud',
     icon: cloudIcon,
     detail: [
       {
@@ -120,7 +120,7 @@ export const Services: ServiceType[] = [
     id: 'service-5',
     label: 'Emerging Technologies',
     href: '/services/emerging-technologies',
-    content: 'We help enterprises navigating the best of the digital',
+    content: 'Empower your business with futuristic technology',
     icon: emergingIcon,
     detail: [
       {
@@ -147,7 +147,7 @@ export const Services: ServiceType[] = [
     id: 'service-3',
     label: 'Backend Development',
     href: '/services/backend',
-    content: 'We help enterprises navigating the best of the digital',
+    content: 'We build robust and scalable backend systems',
     icon: backendIcon,
     detail: [
       {
@@ -173,7 +173,7 @@ export const Services: ServiceType[] = [
     id: 'service-6',
     label: 'How Spartan operates',
     href: '/spartan-operates',
-    content: 'We help enterprises navigating the best of the digital',
+    content: 'We follow robust engineering processes refined years of experience',
     icon: questionIcon,
     detail: [],
   },

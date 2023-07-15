@@ -32,16 +32,20 @@ export const Founders = () => {
             <Box width={{ md: '450px', xs: '100%' }} mb={{ xs: '24px', md: 0 }}>
               <SubTitle
                 text="Board of leading"
-                mb={'24px'}
-                textAlign={{ xs: 'center', md: 'start' }}
                 data-aos-delay="200"
                 data-aos="fade-up"
+                sx={{
+                  mb: '24px',
+                  textAlign: { xs: 'center', md: 'start' },
+                }}
               />
               <Title
                 text="Our elite founding team of Engineers"
-                textAlign={{ xs: 'center', md: 'start' }}
                 data-aos="fade-up"
                 data-aos-delay="300"
+                sx={{
+                  textAlign: { xs: 'center', md: 'start' },
+                }}
               />
             </Box>
             <Typography

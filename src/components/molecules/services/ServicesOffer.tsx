@@ -6,6 +6,7 @@ import { Services } from '@/constants/services';
 import { CardService } from '@/components/atoms';
 import Image from 'next/image';
 import bgTechStack from '@/assets/images/services/tech-stack.png';
+import { BreakPoints, useBreakpoint } from '@/hooks';
 
 interface IServicesOfferProps {}
 
@@ -25,8 +26,10 @@ export const ServicesOffer: React.FunctionComponent<IServicesOfferProps> = () =>
     );
   });
 
+  const isMobile = useBreakpoint(BreakPoints.MD);
+
   return (
-    <Box bgcolor={gray[50]} py="100px">
+    <Box bgcolor={gray[50]} py={isMobile ? '40px' : '100px'}>
       <Container>
         <Box display={'flex'} flexDirection={'column'} alignItems="center" gap={'24px'} mb={'64px'}>
           <SubTitle text="Our services" data-aos="fade-up" data-aos-delay="200" />

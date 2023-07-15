@@ -26,6 +26,8 @@ export enum EPages {
   INTERNSHIP = 'internship-program',
   READY_TO_JOIN = 'ready-to-join',
   CASE_STUDY_LIQUIDITY = 'case-study-liquidity',
+  CASE_STUDY_CF = 'case-study-cf',
+  NOT_FOUND = 'not-found',
   SPARTAN_OPERATES = 'how-spartan-operates',
 }
 

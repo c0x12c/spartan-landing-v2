@@ -1,42 +1,64 @@
-import { CardVertical, Container, SubTitle, Title } from '@/components/atoms';
+import { BodyText, CardVertical, Container, SubTitle, Title } from '@/components/atoms';
 import { gray } from '@/styles/colors';
-import { Box, Typography } from '@mui/material';
+import { Box } from '@mui/material';
 import CodeCircle from '@/assets/images/icons/code-circle.svg';
 import People from '@/assets/images/icons/people.svg';
 import TaskSquare from '@/assets/images/icons/task-square.svg';
 import Image from 'next/image';
+import { BreakPoints, useBreakpoint } from '@/hooks';
 
 export const SuccessFactors = () => {
+  const isMobile = useBreakpoint(BreakPoints.MD);
+
   return (
-    <Box width={'100%'} p={'140px 0'} sx={{ backgroundColor: gray[100] }}>
+    <Box
+      width={'100%'}
+      pt={isMobile ? '40px' : '140px'}
+      pb={isMobile ? '40px' : '140px'}
+      sx={{ backgroundColor: gray[100] }}
+    >
       <Container>
-        <Box display={'flex'} flexDirection={'column'} gap={'24px'} mb={'64px'}>
-          <SubTitle text="About us" textAlign={'center'} data-aos-delay="200" data-aos="fade-up" />
+        <Box
+          display={'flex'}
+          flexDirection={'column'}
+          gap={isMobile ? '12px' : '24px'}
+          mb={isMobile ? '32px' : '64px'}
+        >
+          <SubTitle
+            text="#how"
+            data-aos-delay="200"
+            data-aos="fade-up"
+            sx={{
+              textAlign: 'center',
+            }}
+          />
           <Title
             text="How do we stand out amidst a sea of technology teams?"
-            textAlign={'center'}
             data-aos="fade-up"
             data-aos-delay="300"
+            sx={{
+              textAlign: 'center',
+            }}
           />
-          <Typography
-            variant="fs18"
-            color={gray[600]}
-            component={'p'}
-            textAlign={'center'}
-            maxWidth={{ lg: '818px', xs: '100%' }}
-            m={'0 auto'}
+          <BodyText
+            text="We believe that our dedication to the human element, strong engineering processes, and
+                exceptional talent make us truly stand out in the full-remote engineering landscape."
             data-aos="fade-up"
             data-aos-delay="500"
-          >
-            We believe that our dedication to the human element, strong engineering processes, and
-            exceptional talent make us truly stand out in the full-remote engineering landscape.
-          </Typography>
+            sx={{
+              textAlign: 'center',
+              maxWidth: { lg: '818px', xs: '100%' },
+              mx: 'auto',
+              mt: isMobile ? '12px' : 0,
+            }}
+          />
         </Box>
         <Box
           display="flex"
           alignItems="center"
           flexDirection={{ xs: 'column', lg: 'row' }}
           gap={'40px'}
+          rowGap={'16px'}
         >
           <CardVertical
             icon={<Image src={People} alt="Human element icon" />}
