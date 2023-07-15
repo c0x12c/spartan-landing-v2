@@ -19,3 +19,4 @@ export { ServiceBackendPage } from './ServiceBackendPage';
 export { ServiceCloudPage } from './ServiceCloudPage';
 export { ServiceEmergingPage } from './ServiceEmergingPage';
 export { NotFoundPage } from './NotFoundPage';
+export { SpartanOperates } from './SpartanOperates';

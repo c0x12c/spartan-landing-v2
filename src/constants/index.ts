@@ -26,3 +26,4 @@ export {
   EmergingWorkingProcessData,
   type ProcessType,
 } from './processes';
+export { OperatesProcesses, type OperatesProcessType } from './operates-process';
