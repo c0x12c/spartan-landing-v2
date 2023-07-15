@@ -16,7 +16,7 @@ interface IServiceCloudPageProps {}
 export const ServiceCloudPage: React.FunctionComponent<IServiceCloudPageProps> = () => {
   return (
     <MainTemplate>
-      <Box display="flex" flexDirection="column" gap="44px">
+      <Box display="flex" flexDirection="column" gap={{ md: '44px', xs: 0 }}>
         <SubServiceBanner title="Leverage the power of cloud solutions" />
         <PartnersSubService tag={ServicesEnum.CLOUD} />
         <WhatWeDo tag={ServicesEnum.CLOUD} />
