@@ -2,6 +2,7 @@ import * as React from 'react';
 import { MainTemplate } from '../templates';
 import { Box } from '@mui/material';
 import {
+  OnCallAndMonitor,
   SpartanOperatesBanner,
   SpartanOperatesProcess,
   SpartanOperatesStandards,
@@ -16,6 +17,7 @@ export const SpartanOperates: React.FunctionComponent<ISpartanOperatesProps> = (
         <SpartanOperatesBanner />
         <SpartanOperatesProcess />
         <SpartanOperatesStandards />
+        <OnCallAndMonitor />
       </Box>
     </MainTemplate>
   );
