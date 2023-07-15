@@ -31,6 +31,7 @@ export const CardProject: React.FunctionComponent<ICardProjectProps> = ({ item, 
           });
         }
       }}
+      boxShadow={isMobile ? '0px 10px 47px 0px #EFEFEF' : 'none'}
       sx={{
         '&:hover': {
           boxShadow: '0px 10px 47px 0px #EFEFEF',

@@ -16,7 +16,7 @@ interface IServiceEmergingPageProps {}
 export const ServiceEmergingPage: React.FunctionComponent<IServiceEmergingPageProps> = () => {
   return (
     <MainTemplate>
-      <Box display="flex" flexDirection="column" gap="44px">
+      <Box display="flex" flexDirection="column" gap={{ md: '44px', xs: 0 }}>
         <SubServiceBanner title="Unlock the power of emerging technologies" />
         <PartnersSubService tag={ServicesEnum.EMERGING} />
         <WhatWeDo tag={ServicesEnum.EMERGING} />
