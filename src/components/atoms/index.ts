@@ -46,3 +46,4 @@ export { CardWeDo } from './cards/CardWeDo';
 export { UploadFile } from './UploadFile';
 export { ProcessList } from './ProcessList';
 export { Stacks } from './Stacks';
+export { AccordionOperates } from './AccordionOperates';
