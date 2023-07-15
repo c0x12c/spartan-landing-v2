@@ -4,7 +4,7 @@ import { Box, Typography } from '@mui/material';
 import Image from 'next/image';
 import badge from '@/assets/images/spartan-operates/badge.png';
 import { base } from '@/styles/colors';
-import { Container } from '@/components/atoms';
+import { AccordionOperates, Container } from '@/components/atoms';
 
 interface ISpartanOperatesProcessProps {}
 
@@ -34,6 +34,7 @@ export const SpartanOperatesProcess: React.FunctionComponent<ISpartanOperatesPro
               invaluable, fueling your team’s success in creating top-quality products.
             </Typography>
           </Box>
+          <AccordionOperates />
         </Box>
       </Container>
     </Box>
