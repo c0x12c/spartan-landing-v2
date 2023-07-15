@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Box, SxProps, Theme, Typography } from '@mui/material';
+import { SxProps, Theme, Typography } from '@mui/material';
 import { base, primary } from '@/styles/colors';
 import { BreakPoints, useBreakpoint } from '@/hooks';
 
