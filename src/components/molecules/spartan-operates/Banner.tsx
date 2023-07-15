@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { Box } from '@mui/material';
-import bannerImage from '@/assets/images/spatan-operates/banner.png';
+import bannerImage from '@/assets/images/spartan-operates/banner.png';
 import { BodyText, Container, MainTitle } from '@/components/atoms';
 import { base } from '@/styles/colors';
 import { BreakPoints, useBreakpoint } from '@/hooks';

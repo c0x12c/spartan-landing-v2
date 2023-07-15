@@ -80,3 +80,4 @@ export { OverviewHeru } from './case-study/heru/Overview';
 
 //HOW-SPARTAN-OPERATES
 export { SpartanOperatesBanner } from './spartan-operates/Banner';
+export { SpartanOperatesProcess } from './spartan-operates/Process';
