@@ -59,9 +59,9 @@ export const Projects: ProjectType[] = [
   {
     id: 'case-2',
     name: 'ChargeFuze',
-    value: 'charge-fuze',
+    value: 'chargefuze',
     imgSrc: chargeFuze,
-    href: '/case-study/charge-fuze',
+    href: '/case-study/chargefuze',
     tags: [ServicesEnum.CLOUD, ServicesEnum.WEB, ServicesEnum.BACKEND, ServicesEnum.EMERGING],
     content: 'A convenient solution for charging your devices anytime and anywhere',
     dev: 14,
