@@ -143,6 +143,13 @@ const SEOPages: ISEOPages = {
     metaImage: '',
     slug: '/case-study/chargefuze',
   },
+  [EPages.NOT_FOUND]: {
+    title: 'c0x12c - Page not found',
+    description: 'c0x12c - Page not found',
+    keywords: 'c0x12c,Page not found',
+    metaImage: '',
+    slug: '*',
+  },
 };
 
 export default SEOPages;
