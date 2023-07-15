@@ -77,3 +77,6 @@ export { ResultURSA } from './case-study/ursa/Result';
 //CASE-STUDY-HERU
 export { CaseStudyHeruBanner } from './case-study/heru/Banner';
 export { OverviewHeru } from './case-study/heru/Overview';
+
+//HOW-SPARTAN-OPERATES
+export { SpartanOperatesBanner } from './spartan-operates/Banner';
