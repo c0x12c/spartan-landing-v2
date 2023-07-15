@@ -11,9 +11,10 @@ export const Top100Coins: React.FunctionComponent<ITop100CoinsProps> = () => {
   const isMobile = useBreakpoint(BreakPoints.MD);
   return (
     <React.Fragment>
-      <Box position="relative">
+      <Box position="relative" mb={{ xs: '40px', md: '0' }}>
         <Typography
-          variant={isMobile ? 'fs20' : 'fs40'}
+          variant={'fs40'}
+          fontSize={isMobile ? '14px' : '40px'}
           top={isMobile ? '8%' : '72px'}
           left="50%"
           maxWidth={isMobile ? '200px' : '403px'}

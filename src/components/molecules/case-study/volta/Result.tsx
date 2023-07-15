@@ -35,6 +35,7 @@ export const VoltaResult: React.FunctionComponent<IVoltaResultProps> = () => {
       >
         <Typography
           variant="fs16"
+          fontSize={{ xs: '14px', lg: '16px' }}
           color={base.grey}
           fontWeight={600}
           letterSpacing="0.24px"
@@ -49,7 +50,7 @@ export const VoltaResult: React.FunctionComponent<IVoltaResultProps> = () => {
   });
 
   return (
-    <Box my="44px" py={!isTablet ? '80px' : '60px'}>
+    <Box py={!isTablet ? '80px' : '40px'} pb={{ xs: 0, lg: '80px' }}>
       <Container>
         <Grid
           container
@@ -61,8 +62,9 @@ export const VoltaResult: React.FunctionComponent<IVoltaResultProps> = () => {
           <Grid item xs={12} lg={6}>
             <Typography
               variant="fs48"
+              fontSize={{ xs: '28px', lg: '48px' }}
               color={base.black}
-              mb="32px"
+              mb={{ lg: '32px', xs: '24px' }}
               component="h2"
               data-aos="fade-up"
               data-aos-delay="200"
@@ -71,9 +73,10 @@ export const VoltaResult: React.FunctionComponent<IVoltaResultProps> = () => {
             </Typography>
             <Typography
               variant="fs18"
+              fontSize={{ xs: '14px', lg: '18px' }}
               color={base.grey}
               display="block"
-              mb="44px"
+              mb={{ xs: '24px', lg: '44px' }}
               component="p"
               data-aos="fade-up"
               data-aos-delay="300"

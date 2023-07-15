@@ -16,7 +16,7 @@ interface ICaseStudyVoltaPageProps {}
 export const CaseStudyVoltaPage: React.FunctionComponent<ICaseStudyVoltaPageProps> = () => {
   return (
     <MainTemplate>
-      <Box display="flex" flexDirection="column" gap="44px">
+      <Box display="flex" flexDirection="column" gap={{ xs: 0, md: '44px' }}>
         <CaseStudyVoltaBanner />
         <VoltaStory />
         <Top100Coins />

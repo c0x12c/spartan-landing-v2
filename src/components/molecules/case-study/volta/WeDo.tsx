@@ -25,13 +25,19 @@ export const VoltaWeDo: React.FunctionComponent<IVoltaWeDoProps> = () => {
       >
         <Box display="flex" alignItems="center" gap="24px">
           <Image src={checked} alt="checked" style={{ maxWidth: '100%', height: 'auto' }} />
-          <Typography variant="fs18" fontWeight={600} color={gray[700]} maxWidth="675px">
+          <Typography
+            variant="fs18"
+            fontSize={{ xs: '16px', lg: '18px' }}
+            fontWeight={600}
+            color={gray[700]}
+            maxWidth="675px"
+          >
             {item.title}
           </Typography>
         </Box>
         <Box display="flex" alignItems="center" gap="24px">
           <Box width="45px" height="45px"></Box>
-          <Typography variant="fs18" color={gray[600]} maxWidth="calc(100% - 45px - 24px)">
+          <Typography variant="fs14" color={gray[600]} maxWidth="calc(100% - 45px - 24px)">
             {item.content}
           </Typography>
         </Box>
@@ -41,39 +47,59 @@ export const VoltaWeDo: React.FunctionComponent<IVoltaWeDoProps> = () => {
 
   return (
     <Container>
-      <Box
-        display="flex"
-        gap="48px"
-        py="24.5px"
-        mb="76px"
-        justifyContent={isTablet ? 'center' : 'flex-start'}
-      >
-        <Typography
-          variant={'fs48'}
-          color={gray[800]}
-          component="h2"
-          data-aos={isTablet ? 'fade-up' : 'fade-right'}
-          data-aos-delay="200"
+      <Box pt={{ lg: '80px', xs: 0 }} pb={{ lg: '36px', xs: 0 }}>
+        <Box
+          display="flex"
+          gap="48px"
+          py="24.5px"
+          pt={{ xs: '40px', lg: '24.5px' }}
+          mb={{ lg: '76px', xs: 0 }}
+          justifyContent={isTablet ? 'center' : 'flex-start'}
         >
-          What we do
-        </Typography>
-        {!isTablet && (
-          <Box display="flex" flex="1" alignItems="center" justifyContent="flex-start">
-            <Divider sx={{ bgcolor: gray[300], flex: '1', height: '1px' }} />
-            <Image src={star} alt="star" />
-          </Box>
-        )}
+          <Typography
+            variant={'fs48'}
+            fontSize={{ xs: '28px', lg: '48px' }}
+            color={gray[800]}
+            component="h2"
+            data-aos={isTablet ? 'fade-up' : 'fade-right'}
+            data-aos-delay="200"
+          >
+            What we do
+          </Typography>
+          {!isTablet && (
+            <Box display="flex" flex="1" alignItems="center" justifyContent="flex-start">
+              <Divider sx={{ bgcolor: gray[300], flex: '1', height: '1px' }} />
+              <Image src={star} alt="star" />
+            </Box>
+          )}
+        </Box>
+        <Grid container alignItems="center" rowGap="32px">
+          {!isTablet && (
+            <Grid item xs={12} lg={5} display="flex" justifyContent="center" alignItems="center">
+              <Image src={weDo} alt="we-do" />
+            </Grid>
+          )}
+          <Grid item xs={12} lg={7}>
+            <Box display="flex" flexDirection="column" gap={{ lg: '24px', xs: '16.5px' }}>
+              {renderDataService}
+            </Box>
+          </Grid>
+          {isTablet && (
+            <Grid
+              item
+              xs={12}
+              lg={5}
+              display="flex"
+              justifyContent="center"
+              alignItems="center"
+              pt={'12px'}
+              pb={'40px'}
+            >
+              <Image src={weDo} alt="we-do" />
+            </Grid>
+          )}
+        </Grid>
       </Box>
-      <Grid container alignItems="center" rowGap="32px">
-        <Grid item xs={12} lg={5} display="flex" justifyContent="center" alignItems="center">
-          <Image src={weDo} alt="we-do" />
-        </Grid>
-        <Grid item xs={12} lg={7}>
-          <Box display="flex" flexDirection="column" gap="24px">
-            {renderDataService}
-          </Box>
-        </Grid>
-      </Grid>
     </Container>
   );
 };
