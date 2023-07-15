@@ -50,7 +50,7 @@ export const VoltaResult: React.FunctionComponent<IVoltaResultProps> = () => {
   });
 
   return (
-    <Box py={!isTablet ? '80px' : '40px'}>
+    <Box py={!isTablet ? '80px' : '40px'} pb={{ xs: 0, lg: '80px' }}>
       <Container>
         <Grid
           container

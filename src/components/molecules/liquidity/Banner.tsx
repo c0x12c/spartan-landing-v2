@@ -1,11 +1,12 @@
 import { Banner } from '@/components/atoms/Banner';
 import BG from '@/assets/images/case-liquidity/Background.svg';
-import { Box, Typography } from '@mui/material';
+import { Box } from '@mui/material';
 import Image from 'next/image';
 import BannerImage from '@/assets/images/case-liquidity/image-banner.svg';
 import { Container } from '@/components/atoms/common/Container';
-import { base } from '@/styles/colors';
 import { BreakPoints, useBreakpoint } from '@/hooks';
+import { BodyText, MainTitle } from '@/components/atoms';
+import BannerImageMD from '../../../assets/images/case-volta/banner-image.svg';
 
 const BannerLiquidity = () => {
   const isMobile = useBreakpoint(BreakPoints.SM);
@@ -26,12 +27,11 @@ const BannerLiquidity = () => {
               data-aos="fade-right"
               data-aos-delay="200"
             >
-              <Typography variant="fs64" color={base.white}>
-                Liquidity <br /> Financial
-              </Typography>
-              <Typography variant="fs24" color={base.white} maxWidth={'488px'}>
-                Transforming Banking and Spending for the New Generation
-              </Typography>
+              <MainTitle text={`Liquidity ${(<br />)} Financial`} />
+              <BodyText
+                text="Transforming Banking and Spending for the New Generation"
+                sx={{ maxWidth: '488px' }}
+              />
             </Box>
             {!isMobile && (
               <Image
