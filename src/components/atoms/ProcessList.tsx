@@ -3,6 +3,7 @@ import { ProcessType } from '@/constants';
 import { base } from '@/styles/colors';
 import { Box, Typography } from '@mui/material';
 import { BreakPoints, useBreakpoint } from '@/hooks';
+import { BodyText } from './typography/BodyText';
 
 interface IProcessListProps {
   data: ProcessType[];
@@ -43,7 +44,11 @@ const ProcessListItem = ({
   const isMobile = useBreakpoint(BreakPoints.MD);
 
   return (
-    <Box position="relative" p={{ xs: 0, lg: '0 16px' }} pb="40px !important">
+    <Box
+      position="relative"
+      p={{ xs: 0, lg: '0 16px' }}
+      pb={{ md: '40px !important', xs: '32px !important' }}
+    >
       <Box
         display="flex"
         p={{ xs: 0, lg: '0 16px' }}
@@ -82,7 +87,7 @@ const ProcessListItem = ({
           <Typography
             variant={isMobile ? 'fs16' : 'fs18'}
             color={base.black}
-            mb={'18px'}
+            mb={isMobile ? '12px' : '18px'}
             component={'h4'}
             fontWeight={600}
             height="40px"
@@ -94,9 +99,7 @@ const ProcessListItem = ({
           >
             {title}
           </Typography>
-          <Typography variant={isMobile ? 'fs14' : 'fs18'} component={'p'}>
-            {content}
-          </Typography>
+          <BodyText text={content} />
         </Box>
       </Box>
     </Box>

@@ -3,7 +3,6 @@ import { Container, SubTitle, Title } from '@/components/atoms';
 import { PartnerType, ServicesEnum } from '@/constants';
 import { Box } from '@mui/material';
 import Image from 'next/image';
-import Link from 'next/link';
 import { Partners as PartnersData } from '@/constants';
 import { BreakPoints, useBreakpoint } from '@/hooks';
 import { gray } from '@/styles/colors';
@@ -13,25 +12,40 @@ interface IPartnersSubServiceProps {
 }
 
 export const PartnersSubService: React.FunctionComponent<IPartnersSubServiceProps> = ({ tag }) => {
-  const isTablet = useBreakpoint(BreakPoints.LG);
+  const isMobile = useBreakpoint(BreakPoints.MD);
 
   const renderBiz = (data: PartnerType[]) => {
     return data.map((item) => {
       return (
-        <Link key={item.id} href={item.href}>
-          <Image src={item.imgSrc} alt={item.name} style={{ maxWidth: '100%', height: 'auto' }} />
-        </Link>
+        // <Link
+        //   key={item.id}
+        //   href={item.href}
+        //   style={{
+        //     maxWidth: isMobile ? 'fit-content' : '100%',
+        //   }}
+        // >
+        <Image
+          key={item.id}
+          src={item.imgSrc}
+          alt={item.name}
+          style={{
+            maxWidth: isMobile ? 'none' : '100%',
+            width: 'auto',
+            height: isMobile ? '28px' : 'auto',
+          }}
+        />
+        // </Link>
       );
     });
   };
 
   return (
-    <Box py={isTablet ? '60px' : '120px'} bgcolor={gray[50]}>
+    <Box py={isMobile ? '40px' : '120px'} bgcolor={gray[50]}>
       <Container>
         <Box
           display="flex"
           flexDirection="column"
-          rowGap="24px"
+          rowGap={isMobile ? '12px' : '24px'}
           maxWidth="806px"
           mx="auto"
           alignItems="center"
@@ -45,16 +59,16 @@ export const PartnersSubService: React.FunctionComponent<IPartnersSubServiceProp
           flexDirection="column"
           justifyContent="center"
           alignItems="center"
-          rowGap="44px"
-          mt="64px"
+          rowGap={isMobile ? '24px' : '44px'}
+          mt={isMobile ? '24px' : '64px'}
         >
           <Box
             display="flex"
             justifyContent="center"
             flexWrap="wrap"
             alignItems="center"
-            columnGap="61px"
-            rowGap="32px"
+            columnGap={isMobile ? '37px' : '61px'}
+            rowGap={isMobile ? '24px' : '32px'}
           >
             {renderBiz(PartnersData.filter((item) => item.tags.includes(tag)))}
           </Box>
