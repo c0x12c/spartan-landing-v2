@@ -6,6 +6,7 @@ import {
   SpartanOperatesBanner,
   SpartanOperatesProcess,
   SpartanOperatesStandards,
+  TrunkBasedDev,
 } from '../molecules';
 
 interface ISpartanOperatesProps {}
@@ -18,6 +19,7 @@ export const SpartanOperates: React.FunctionComponent<ISpartanOperatesProps> = (
         <SpartanOperatesProcess />
         <SpartanOperatesStandards />
         <OnCallAndMonitor />
+        <TrunkBasedDev />
       </Box>
     </MainTemplate>
   );

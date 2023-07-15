@@ -20,7 +20,7 @@ export const OnCallAndMonitor: React.FunctionComponent<IOnCallAndMonitorProps> =
             display="flex"
             flexDirection={isMobile ? 'column' : 'row'}
             columnGap="64px"
-            rowGap="24px"
+            rowGap={isMobile ? '16px' : '24px'}
           >
             <Box width={isMobile ? '100%' : 'calc(100% - 437px)'}>
               <Image
@@ -33,7 +33,7 @@ export const OnCallAndMonitor: React.FunctionComponent<IOnCallAndMonitorProps> =
               maxWidth={isMobile ? '100%' : '437px'}
               display="flex"
               flexDirection="column"
-              gap="24px"
+              gap={isMobile ? '16px' : '24px'}
               flex="1"
             >
               <Title text="On-call procedure" sx={{ color: base.black }} />

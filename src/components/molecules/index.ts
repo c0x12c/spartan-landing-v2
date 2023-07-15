@@ -83,3 +83,4 @@ export { SpartanOperatesBanner } from './spartan-operates/Banner';
 export { SpartanOperatesProcess } from './spartan-operates/Process';
 export { SpartanOperatesStandards } from './spartan-operates/Standards';
 export { OnCallAndMonitor } from './spartan-operates/OnCallAndMonitor';
+export { TrunkBasedDev } from './spartan-operates/TrunkBasedDev';
