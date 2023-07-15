@@ -4,7 +4,7 @@ import { Box, Button, TextField } from '@mui/material';
 
 interface IInputWButtonProps {}
 
-export const InputWButton: React.FunctionComponent<IInputWButtonProps> = (props) => {
+export const InputWButton: React.FunctionComponent<IInputWButtonProps> = () => {
   return (
     <Box display="flex" alignItems="flex-end">
       <TextField

@@ -1,5 +1,4 @@
 import React from 'react';
-import { MainTemplate } from '../templates';
 import { Box, Button } from '@mui/material';
 import { BreakPoints, useBreakpoint } from '@/hooks';
 import { BodyText, Container, Title } from '../atoms';

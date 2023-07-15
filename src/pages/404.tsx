@@ -5,7 +5,7 @@ import { NotFoundPage } from '@/components/pages';
 
 interface ICustom404Props {}
 
-const Custom404: React.FunctionComponent<ICustom404Props> = (props) => {
+const Custom404: React.FunctionComponent<ICustom404Props> = () => {
   return (
     <>
       <SEO page={EPages.ABOUT_US} />

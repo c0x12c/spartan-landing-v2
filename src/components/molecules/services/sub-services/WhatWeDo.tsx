@@ -1,8 +1,8 @@
 import * as React from 'react';
 import { BodyText, Container, SubTitle, Title } from '@/components/atoms';
 import { ServiceWeDoContent, ServicesEnum } from '@/constants';
-import { base, gray, primary } from '@/styles/colors';
-import { Box, Grid, Typography } from '@mui/material';
+import { base, primary } from '@/styles/colors';
+import { Box, Typography } from '@mui/material';
 import Image from 'next/image';
 import { BreakPoints, useBreakpoint } from '@/hooks';
 

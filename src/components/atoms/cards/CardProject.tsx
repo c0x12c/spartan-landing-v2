@@ -1,7 +1,6 @@
 import * as React from 'react';
 import { ProjectType } from '@/constants';
 import { Box, Typography } from '@mui/material';
-import Link from 'next/link';
 import Image from 'next/image';
 import { ArrowIcon } from '..';
 import { base, gray, primary } from '@/styles/colors';

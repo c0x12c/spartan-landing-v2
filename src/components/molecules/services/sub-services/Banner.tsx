@@ -1,8 +1,7 @@
 import * as React from 'react';
-import { Box, Typography } from '@mui/material';
+import { Box } from '@mui/material';
 import bg from '@/assets/images/case-study/banner-image.png';
 import { Container, MainTitle } from '@/components/atoms';
-import { base } from '@/styles/colors';
 import { BreakPoints, useBreakpoint } from '@/hooks';
 
 interface ISubServiceBannerProps {
