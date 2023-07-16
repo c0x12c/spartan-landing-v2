@@ -20,7 +20,13 @@ export const ItemCF = ({ title }: { title: string }) => {
       >
         <Image src={ItemIcon} alt="icon" width={19} height={19} />
       </Box>
-      <Typography component="p" variant="fs16" color={gray[700]} mb={1}>
+      <Typography
+        component="p"
+        variant="fs18"
+        fontSize={{ xs: '14px', lg: '18px' }}
+        color={gray[700]}
+        mb={1}
+      >
         {title}
       </Typography>
     </Box>

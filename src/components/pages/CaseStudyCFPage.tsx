@@ -6,21 +6,21 @@ import {
   AboutProject,
   Banner,
   OurRole,
+  Stack,
   TheResult,
   WhatWeDo,
 } from '../molecules/case-study/chargefuze';
-import { LiquidityTechStacks } from '../molecules/liquidity';
 interface ICaseStudyCFPageProps {}
 
 export const CaseStudyCFPage: React.FunctionComponent<ICaseStudyCFPageProps> = () => {
   return (
     <MainTemplate>
-      <Box display="flex" flexDirection="column" gap="44px">
+      <Box display="flex" flexDirection="column" gap={{ xs: 0, lg: '44px' }}>
         <Banner />
         <AboutProject />
         <OurRole />
         <WhatWeDo />
-        <LiquidityTechStacks />
+        <Stack />
         <TheResult />
         <Download
           background="linear-gradient(140deg, #B1DDFF 0%, #BBD6FF 100%);"

@@ -27,3 +27,4 @@ export {
   type ProcessType,
 } from './processes';
 export { OperatesProcesses, type OperatesProcessType } from './operates-process';
+export { CFStackList } from './case-cf';

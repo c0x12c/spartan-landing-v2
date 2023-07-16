@@ -1,14 +1,16 @@
-import { Container, Title } from '@/components/atoms';
-import { Box, Typography } from '@mui/material';
+import { BodyText, Container, Title } from '@/components/atoms';
+import { Box } from '@mui/material';
 import React from 'react';
-import { BreakPoints, useBreakpoint } from '@/hooks';
-import ItemIcon from '@/assets/images/icons/tick-circle.svg';
 import Image from 'next/image';
-import { base, gray } from '@/styles/colors';
+import { base } from '@/styles/colors';
 import PhoneImage from '@/assets/images/case-cf/result-image.svg';
+import PhoneImageXS from '@/assets/images/case-cf/result-image-xs.svg';
+import CaseStudyItem, { Variant } from '@/components/atoms/CaseCtudyItems';
+import CheckedLG from '@/assets/images/case-cf/checked-blue-lg.svg';
+import { BreakPoints, useBreakpoint } from '@/hooks';
 
 const TheResult = () => {
-  const isTablet = useBreakpoint(BreakPoints.LG);
+  const isMobile = useBreakpoint(BreakPoints.MD);
   const TheResultData = [
     {
       id: 'we-do-1',
@@ -29,49 +31,15 @@ const TheResult = () => {
         'Our enhancements empowered chargeFUZE to handle higher volumes of requests, ensuring seamless operations even during peak periods and accommodating increased user traffic',
     },
   ];
-  const renderDataService = TheResultData.map((item) => {
+  const renderDataService = TheResultData.map((item, index) => {
     return (
-      <Box
-        key={item.id}
-        display="flex"
-        flexDirection="column"
-        gap="4px"
-        data-aos={isTablet ? 'fade-up' : 'fade-left'}
-        data-aos-delay="200"
-      >
-        <Box display="flex" gap="24px">
-          <Box
-            sx={{
-              background: base.darkBlue,
-              height: '31px',
-              minWidth: '31px',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              borderRadius: '1000px',
-              marginRight: '24px',
-              m: 0,
-            }}
-          >
-            <Image src={ItemIcon} alt="icon" width={19} height={19} />
-          </Box>
-          <Box>
-            <Typography
-              variant="fs18"
-              fontWeight={600}
-              color={gray[700]}
-              maxWidth="675px"
-              component={'p'}
-              mb={'10px'}
-            >
-              {item.title}
-            </Typography>
-            <Typography variant="fs18" color={gray[600]} component={'p'}>
-              {item.content}
-            </Typography>
-          </Box>
-        </Box>
-      </Box>
+      <CaseStudyItem
+        key={index}
+        variant={Variant.PARAGRAPH}
+        icon={CheckedLG}
+        title={item.title}
+        content={item.content}
+      />
     );
   });
   return (
@@ -80,19 +48,28 @@ const TheResult = () => {
         display={'flex'}
         alignItems={'center'}
         justifyContent={'space-between'}
-        flexDirection={{ xs: 'column-reverse', md: 'row' }}
+        flexDirection={{ xs: 'column', md: 'row' }}
+        py={{ xs: '40px', md: 0 }}
       >
         <Box width={{ md: '50%', xs: '100%' }}>
-          <Title text="The Result" data-aos={'fade-up'} data-aos-delay="200" sx={{ mb: '32px' }} />
-          <Typography mb={'44px'} data-aos={'fade-up'} data-aos-delay="300">
-            Our efforts yielded significant results and tangible improvements for chargeFUZE
-          </Typography>
+          <Title
+            text="The Result"
+            data-aos={'fade-up'}
+            data-aos-delay="200"
+            sx={{ mb: { xs: '24px', md: '32px' } }}
+          />
+          <BodyText
+            text="Our efforts yielded significant results and tangible improvements for chargeFUZE"
+            sx={{ mb: { xs: '24px', md: '44px' }, color: base.grey }}
+            data-aos={'fade-up'}
+            data-aos-delay="300"
+          />
           <Box display={'flex'} flexDirection={'column'} gap={'24px'}>
             {renderDataService}
           </Box>
         </Box>
         <Image
-          src={PhoneImage}
+          src={isMobile ? PhoneImageXS : PhoneImage}
           alt="phone"
           data-aos={'fade-left'}
           data-aos-delay="400"

@@ -83,3 +83,39 @@ export const LiquidityStack: FieldType[] = [
     stacks: [{ id: 'stack-29', name: 'Jenkins', imgSrc: Jenkins }],
   },
 ];
+
+export const items = [
+  {
+    id: '1',
+    title: 'Backend System',
+    additionalText: [
+      'Rewrote the entire backend system from Go to Kotlin to enhance stability and performance.',
+      'Improved the infrastructure to ensure robustness and scalability.',
+      "Implemented DataDog monitoring for better visibility into the system's health.",
+    ],
+  },
+  {
+    id: '2',
+    title: 'Mobile Application',
+    additionalText: [
+      'Resolved critical bugs and improved the overall stability of the mobile applications.',
+      'Achieved a high level of stability with a close to 99.5% crash-free user rate.',
+      'Developed a new mobile product called PrideCard.',
+    ],
+  },
+  {
+    id: '3',
+    title: 'Websites and Web Admin Dashboard',
+    additionalText: [
+      "Built websites for Liquidity Financial's products.",
+      'Developed web admin dashboard for efficient account management and user support.',
+    ],
+  },
+  {
+    id: '4',
+    title: 'Tools for Support Team',
+    additionalText: [
+      'Built tools to assist the support team in resolving users complaints more efficiently.',
+    ],
+  },
+];

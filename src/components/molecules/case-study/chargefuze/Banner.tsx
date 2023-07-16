@@ -1,37 +1,38 @@
-import { Banner, Container } from '@/components/atoms';
+import { Banner, Container, MainTitle } from '@/components/atoms';
 import React from 'react';
 import BannerImage from '@/assets/images/case-cf/BannerBG.svg';
+import BannerImageXS from '@/assets/images/case-cf/BannerBG-xs.svg';
 import { Box, Typography } from '@mui/material';
-import { base } from '@/styles/colors';
+import { gray } from '@/styles/colors';
+import { BreakPoints, useBreakpoint } from '@/hooks';
 
 const BannerCF = () => {
+  const isMobile = useBreakpoint(BreakPoints.MD);
   return (
     <Banner
-      src={BannerImage.src}
+      src={isMobile ? BannerImageXS.src : BannerImage.src}
       haveBackground={false}
-      bannerPosition={{ sm: 'bottom', lg: 'right' }}
+      bannerPosition={{ xs: 'bottom', sm: 'right' }}
     >
-      <Box position="absolute" top="50%" width="100%" sx={{ transform: 'translateY(-50%)' }}>
+      <Box
+        position="absolute"
+        top={{ xs: '129px', lg: '50%' }}
+        width="100%"
+        sx={{ transform: { xs: 'none', lg: 'translateY(-50%)' } }}
+      >
         <Container>
           <Box
             display={'flex'}
             flexDirection={'column'}
-            gap={'32px'}
+            gap={{ xs: '24px', lg: '32px' }}
             justifyContent={'center'}
             maxWidth={'387px'}
           >
-            <Typography
-              variant="fs64"
-              color={base.white}
-              fontSize={{ xs: '54px', sm: '64px' }}
-              data-aos="fade-right"
-              data-aos-delay="200"
-            >
-              ChargeFUZE
-            </Typography>
+            <MainTitle text="ChargeFUZE" data-aos="fade-right" data-aos-delay="200" />
             <Typography
               variant="fs24"
-              color={base.white}
+              color={gray[50]}
+              fontSize={{ xs: '18px', lg: '24px' }}
               maxWidth={'488px'}
               data-aos="fade-right"
               data-aos-delay="300"
