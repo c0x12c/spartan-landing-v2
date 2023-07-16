@@ -1,6 +1,6 @@
-import { Container } from '@/components/atoms';
+import { BodyText, Container, Title } from '@/components/atoms';
 import { base, gray } from '@/styles/colors';
-import { Box, Divider, Typography } from '@mui/material';
+import { Box, Divider } from '@mui/material';
 import React from 'react';
 import { BreakPoints, useBreakpoint } from '@/hooks';
 import Image from 'next/image';
@@ -32,18 +32,21 @@ const OurRole = () => {
   };
 
   return (
-    <Box width={'100%'} p={'100px 0'} bgcolor={base.lightBlue}>
+    <Box width={'100%'} p={'40px 0'} bgcolor={{ xs: 'none', md: base.lightBlue }}>
       <Container>
-        <Box display="flex" alignItems="center" maxWidth="100%" gap={'48px'} mb={'34px'}>
-          <Typography
-            variant="fs64"
-            color="#000"
+        <Box
+          display="flex"
+          alignItems="center"
+          maxWidth="100%"
+          gap={'48px'}
+          mb={{ xs: '24px', md: '10px' }}
+        >
+          <Title
+            text="Our Role"
             data-aos="fade-up"
             data-aos-delay="200"
-            minWidth={'max-content'}
-          >
-            Our Role
-          </Typography>
+            sx={{ minWidth: 'max-content', my: { xs: 0, md: '24px' } }}
+          />
           {!isMD && (
             <Box
               display="flex"
@@ -58,17 +61,19 @@ const OurRole = () => {
             </Box>
           )}
         </Box>
-        <Typography
-          maxWidth={{ xs: '100%', md: '62%' }}
-          mb={'44px'}
-          data-aos="fade-up"
-          data-aos-delay="300"
-        >
-          chargeFUZE approached us with the task of seamlessly taking over their project, ensuring a
+        <BodyText
+          text="chargeFUZE approached us with the task of seamlessly taking over their project, ensuring a
           smooth continuation of work and maintaining the same level of commitment and dedication.
           With our experienced team, we specialize in understanding project requirements and
-          seamlessly integrating into existing frameworks to deliver exceptional results.
-        </Typography>
+          seamlessly integrating into existing frameworks to deliver exceptional results."
+          sx={{
+            maxWidth: { xs: '100%', md: '62%' },
+            mb: { xs: '24px', md: '44px' },
+            color: gray[500],
+          }}
+          data-aos="fade-up"
+          data-aos-delay="300"
+        />
         <Box sx={iframeContainerStyles}>
           <Box sx={iframeStyles}>
             <Box

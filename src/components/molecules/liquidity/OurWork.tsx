@@ -1,45 +1,28 @@
 import { Box, Divider, Typography } from '@mui/material';
 import Image from 'next/image';
 import React from 'react';
-import ListItem from '@/components/atoms/ItemLiquidityList';
 import Star from '@/assets/images/icons/yellow-star.svg';
 import { Container } from '@/components/atoms/common/Container';
 import ResultImage from '@/assets/images/case-liquidity/result.svg';
 import { BreakPoints, useBreakpoint } from '@/hooks';
+import { items } from '@/constants/case-liquidity';
+import CaseStudyItem, { Variant } from '@/components/atoms/CaseCtudyItems';
+import checked from '../../../assets/images/case-liquidity/checked.svg';
 
 const WhatWeDo = () => {
   const isMD = useBreakpoint(BreakPoints.MD);
-  const items = [
-    {
-      title: 'Backend System',
-      additionalText: [
-        'Rewrote the entire backend system from Go to Kotlin to enhance stability and performance.',
-        'Improved the infrastructure to ensure robustness and scalability.',
-        "Implemented DataDog monitoring for better visibility into the system's health.",
-      ],
-    },
-    {
-      title: 'Mobile Application',
-      additionalText: [
-        'Resolved critical bugs and improved the overall stability of the mobile applications.',
-        'Achieved a high level of stability with a close to 99.5% crash-free user rate.',
-        'Developed a new mobile product called PrideCard.',
-      ],
-    },
-    {
-      title: 'Websites and Web Admin Dashboard',
-      additionalText: [
-        "Built websites for Liquidity Financial's products.",
-        'Developed web admin dashboard for efficient account management and user support.',
-      ],
-    },
-    {
-      title: 'Tools for Support Team',
-      additionalText: [
-        'Built tools to assist the support team in resolving users complaints more efficiently.',
-      ],
-    },
-  ];
+
+  const renderItems = items.map((item) => {
+    return (
+      <CaseStudyItem
+        key={item.id}
+        variant={Variant.LIST}
+        title={item.title}
+        list={item.additionalText}
+        icon={checked}
+      />
+    );
+  });
 
   return (
     <Container>
@@ -75,10 +58,13 @@ const WhatWeDo = () => {
             data-aos="fade-right"
             data-aos-delay="200"
           />
-          <Box width="100%">
-            {items.map((item, index) => (
-              <ListItem key={index} title={item.title} additionalText={item.additionalText} />
-            ))}
+          <Box
+            width="100%"
+            display={'flex'}
+            flexDirection={'column'}
+            gap={{ xs: '16px', md: '24px' }}
+          >
+            {renderItems}
           </Box>
         </Box>
       </Box>

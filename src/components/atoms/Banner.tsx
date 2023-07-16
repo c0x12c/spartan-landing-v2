@@ -1,6 +1,5 @@
 import * as React from 'react';
 import { Box } from '@mui/material';
-import { BreakPoints, useBreakpoint } from '@/hooks';
 
 interface IBannerProps {
   children: React.ReactNode;
@@ -17,8 +16,6 @@ export const Banner: React.FunctionComponent<IBannerProps> = ({
   haveBackground = true,
   bannerPosition = 'center',
 }) => {
-  const isMobile = useBreakpoint(BreakPoints.MD);
-
   return (
     <Box position="relative" width="100%" minHeight={{ lg: '840px', md: '855px', xs: '792px' }}>
       {haveBackground && (
@@ -47,7 +44,7 @@ export const Banner: React.FunctionComponent<IBannerProps> = ({
             backgroundRepeat: 'no-repeat',
             backgroundSize: 'cover',
             height: { lg: '840px', md: '855px', xs: '792px' },
-            backgroundPosition: isMobile ? 'right' : bannerPosition,
+            backgroundPosition: bannerPosition,
           }}
         />
       )}
