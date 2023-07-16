@@ -69,7 +69,7 @@ export const ServiceCasesStudy: React.FunctionComponent<IServiceCasesStudyProps>
   const renderProjects = Projects.map((project) => {
     return (
       <Box key={project.id} maxWidth={isMobile ? '319px' : '384px'}>
-        <CardProject item={project} onClick={handleOnItemClick} />
+        <CardProject item={project} onClick={handleOnItemClick} isSliderItem={true} />
       </Box>
     );
   });

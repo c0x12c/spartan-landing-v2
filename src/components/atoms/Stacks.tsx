@@ -21,7 +21,6 @@ export const Stacks: React.FunctionComponent<IStacksProps> = ({ data }) => {
         borderRadius="100px"
         border="1px solid"
         borderColor={gray[200]}
-        color={selectedField.id === item.id ? base.white : base.black}
         bgcolor={selectedField.id === item.id ? primary[400] : base.white}
         onClick={() => setSelectedField(item)}
         sx={{
@@ -29,7 +28,13 @@ export const Stacks: React.FunctionComponent<IStacksProps> = ({ data }) => {
           transition: 'all 0.4s',
         }}
       >
-        {item.name}
+        <Typography
+          variant="fs14"
+          fontSize={isMobile ? '12px' : '14px'}
+          color={selectedField.id === item.id ? base.white : base.black}
+        >
+          {item.name}
+        </Typography>
       </Box>
     );
   });
@@ -38,21 +43,23 @@ export const Stacks: React.FunctionComponent<IStacksProps> = ({ data }) => {
     return (
       <Box
         key={item.id}
-        p="20px"
+        p={isMobile ? '0' : '20px'}
         display="flex"
         flexDirection="column"
         alignItems="center"
         justifyContent="center"
-        gap="14px"
+        gap={isMobile ? '6px' : '14px'}
         border="1px solid"
         borderColor={gray[200]}
-        width="128px"
-        height="128px"
+        width={isMobile ? '106px' : '128px'}
+        height={isMobile ? '106px' : '128px'}
         borderRadius="8px"
+        bgcolor={base.white}
       >
         <Image src={item.imgSrc} alt={item.name} style={{ maxWidth: '100%', height: 'auto' }} />
         <Typography
           variant="fs14"
+          fontSize={isMobile ? '12px' : '14px'}
           color={base.black}
           sx={{
             letterSpacing: '0.28px',
@@ -78,7 +85,7 @@ export const Stacks: React.FunctionComponent<IStacksProps> = ({ data }) => {
         alignItems="center"
         flexWrap="wrap"
         justifyContent="center"
-        gap="20px"
+        gap={isMobile ? '16px' : '20px'}
       >
         {renderFieldContent}
       </Box>

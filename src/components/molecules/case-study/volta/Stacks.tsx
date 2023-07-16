@@ -1,8 +1,8 @@
 import * as React from 'react';
-import { Box, Typography } from '@mui/material';
+import { Box } from '@mui/material';
 import { VoltaStacks } from '@/constants';
-import { gray } from '@/styles/colors';
-import { Container, Stacks } from '@/components/atoms';
+import { base, gray } from '@/styles/colors';
+import { BodyText, Container, Stacks, Title } from '@/components/atoms';
 import { BreakPoints, useBreakpoint } from '@/hooks';
 interface IVoltaTechStacksProps {}
 
@@ -20,27 +20,19 @@ export const VoltaTechStacks: React.FunctionComponent<IVoltaTechStacksProps> = (
           mx="auto"
           mb={{ xs: '24px', lg: '40px' }}
         >
-          <Typography
-            variant="fs48"
-            fontSize={{ xs: '28px', lg: '48px' }}
-            color={gray[900]}
-            component="h2"
-            textAlign="center"
-            data-aos={'zoom-in'}
+          <Title
+            text="Technology Stack"
+            data-aos="zoom-in"
             data-aos-delay="200"
-          >
-            Technology Stack
-          </Typography>
-          <Typography
-            variant="fs18"
-            fontSize={{ xs: '14px', lg: '18px' }}
-            textAlign={'center'}
-            data-aos={'zoom-in'}
+            sx={{ color: base.black, textAlign: 'center' }}
+          />
+          <BodyText
+            sx={{ textAlign: 'center' }}
+            text="At Spartan, we pride ourselves on our robust and cutting-edge tech stack that enables us
+            to deliver innovative solutions and drive operational efficiency."
+            data-aos="zoom-in"
             data-aos-delay="300"
-          >
-            At Spartan, we pride ourselves on our robust and cutting-edge tech stack that enables us
-            to deliver innovative solutions and drive operational efficiency.
-          </Typography>
+          />
         </Box>
         <Stacks data={VoltaStacks} />
       </Container>

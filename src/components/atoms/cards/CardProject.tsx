@@ -9,10 +9,15 @@ import { useRouter } from 'next/router';
 
 interface ICardProjectProps {
   item: ProjectType;
+  isSliderItem?: boolean;
   onClick?: (e: React.MouseEvent, callback: () => void) => void;
 }
 
-export const CardProject: React.FunctionComponent<ICardProjectProps> = ({ item, onClick }) => {
+export const CardProject: React.FunctionComponent<ICardProjectProps> = ({
+  item,
+  isSliderItem = false,
+  onClick,
+}) => {
   const isMobile = useBreakpoint(BreakPoints.MD);
   const router = useRouter();
 
@@ -24,14 +29,18 @@ export const CardProject: React.FunctionComponent<ICardProjectProps> = ({ item, 
       borderRadius="8px"
       bgcolor={base.white}
       onClick={(e) => {
-        if (onClick) {
+        if (isSliderItem && onClick) {
           onClick(e, () => {
             router.push(item.href);
           });
         }
+        if (!isSliderItem) {
+          router.push(item.href);
+        }
       }}
       boxShadow={isMobile ? '0px 10px 47px 0px #EFEFEF' : 'none'}
       sx={{
+        cursor: 'pointer',
         '&:hover': {
           boxShadow: '0px 10px 47px 0px #EFEFEF',
           '& .button-link': {
