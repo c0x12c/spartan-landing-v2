@@ -143,6 +143,20 @@ const SEOPages: ISEOPages = {
     metaImage: '',
     slug: '/case-study/chargefuze',
   },
+  [EPages.NOT_FOUND]: {
+    title: 'c0x12c - Page not found',
+    description: 'c0x12c - Page not found',
+    keywords: 'c0x12c,Page not found',
+    metaImage: '',
+    slug: '*',
+  },
+  [EPages.SPARTAN_OPERATES]: {
+    title: 'c0x12c - How Spartan Operates',
+    description: 'c0x12c - How Spartan Operates',
+    keywords: 'c0x12c, How Spartan Operates',
+    metaImage: '',
+    slug: '/how-spartan-operates',
+  },
 };
 
 export default SEOPages;

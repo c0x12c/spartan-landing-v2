@@ -1,13 +1,11 @@
 import * as React from 'react';
-import { Box, Button, IconButton, styled } from '@mui/material';
+import { Box, Button, styled } from '@mui/material';
 import { BreakPoints, useBreakpoint } from '@/hooks';
-import { base, gray, primary } from '@/styles/colors';
+import { gray } from '@/styles/colors';
 import { ArrowIcon, BodyText, CardProject, Container, SubTitle, Title } from '@/components/atoms';
 import Link from 'next/link';
 import { Projects } from '@/constants';
 import Slider, { Settings } from 'react-slick';
-import ArrowBackIcon from '@mui/icons-material/ArrowBack';
-import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 
 interface IServiceCasesStudyProps {}
 
@@ -68,10 +66,10 @@ export const ServiceCasesStudy: React.FunctionComponent<IServiceCasesStudyProps>
     ],
   };
 
-  const renderProjects = Projects.map((project, index) => {
+  const renderProjects = Projects.map((project) => {
     return (
       <Box key={project.id} maxWidth={isMobile ? '319px' : '384px'}>
-        <CardProject item={project} onClick={handleOnItemClick} />
+        <CardProject item={project} onClick={handleOnItemClick} isSliderItem={true} />
       </Box>
     );
   });
