@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Container } from '@/components/atoms';
+import { BodyText, Container } from '@/components/atoms';
 import { Box, Typography } from '@mui/material';
 import resultBanner from '@/assets/images/case-ursa/result-banner.png';
 import resultImage from '@/assets/images/case-ursa/result-image.png';
@@ -54,9 +54,8 @@ export const ResultURSA: React.FunctionComponent<IResultURSAProps> = () => {
           flexDirection={'column'}
           justifyContent="center"
         >
-          <Typography variant={'fs48'} color={base.white} component="h3" mb="28px">
-            The result
-          </Typography>
+          <BodyText text="The result" sx={{ mb: '28px' }} />
+
           <Box component="ul" display="flex" flexDirection="column" sx={{ listStyle: 'none' }}>
             {renderResult}
           </Box>
