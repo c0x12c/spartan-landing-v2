@@ -1,17 +1,19 @@
 import AWS from '@/assets/images/stacks/AWS.svg';
-import React from '@/assets/images/stacks/React.svg';
-import Kotlin from '@/assets/images/stacks/Kotlin.svg';
+import JavaScript from '@/assets/images/stacks/JavaScript.svg';
+import Jenkins from '@/assets/images/stacks/Jenkins.svg';
+import SendGrid from '@/assets/images/stacks/SendGrid.svg';
+import Twillio from '@/assets/images/stacks/Twillio.svg';
+import Agora from '@/assets/images/stacks/Agora.svg';
 import Micronaut from '@/assets/images/stacks/Micronaut.svg';
-import Go from '@/assets/images/stacks/Go.svg';
+import Kotlin from '@/assets/images/stacks/Kotlin.svg';
 import HCL from '@/assets/images/stacks/HCL.svg';
 import TypeScript from '@/assets/images/stacks/Typescript.svg';
-import Twillio from '@/assets/images/stacks/Java.svg';
 import PostgreSQL from '@/assets/images/stacks/PostgreSQL.svg';
 import Docker from '@/assets/images/stacks/Docker.svg';
-import SendGrid from '@/assets/images/stacks/SendGrid.svg';
+import Kubernetes from '@/assets/images/stacks/Kubernetes.svg';
 import TerraForm from '@/assets/images/stacks/TerraForm.svg';
-import Agora from '@/assets/images/stacks/Agora.svg';
 import Redis from '@/assets/images/stacks/Redis.svg';
+import { FieldType } from './stacks';
 import { StaticImageData } from 'next/image';
 
 export type StackType = {
@@ -32,21 +34,54 @@ export const GeneraLiquiditylStack: GeneralStackType[] = [
   { id: 'general-3', name: 'Infrastructure' },
 ];
 
-export const LiquidityStack: StackType[] = [
-  { id: 'tech-1', name: 'Kotlin', imgSrc: Kotlin },
-  { id: 'tech-6', name: 'TypeScript', imgSrc: TypeScript },
-  { id: 'tech-5', imgSrc: HCL },
-  { id: 'tech-2', name: 'JavaScript', imgSrc: Go },
-  { id: 'tech-3', name: 'Micronaut', imgSrc: Micronaut },
-  { id: 'tech-7', name: 'Twillio', imgSrc: Twillio },
-  { id: 'tech-9', imgSrc: Agora },
-  { id: 'tech-8', name: 'PostgreSQL', imgSrc: PostgreSQL },
-  { id: 'tech-11', name: 'AWS', imgSrc: AWS },
-  { id: 'tech-10', name: 'Docker', imgSrc: Docker },
-  { id: 'tech-12', name: 'ReacJS', imgSrc: React },
-  { id: 'tech-13', name: 'Terraform', imgSrc: TerraForm },
-  { id: 'tech-14', name: 'SendGrid', imgSrc: SendGrid },
-  { id: 'tech-15', name: 'Redis', imgSrc: Redis },
+export const LiquidityStack: FieldType[] = [
+  {
+    id: 'field-1',
+    name: 'Programming Language',
+    stacks: [
+      { id: 'stack-2', name: 'Kotlin', imgSrc: Kotlin },
+      { id: 'stack-6', name: 'Typescript', imgSrc: TypeScript },
+      { id: 'stack-8', name: 'Javascript', imgSrc: JavaScript },
+      { id: 'stack-7', name: 'HCL', imgSrc: HCL },
+    ],
+  },
+  {
+    id: 'field-2',
+    name: 'Framework',
+    stacks: [{ id: 'stack-9', name: 'Micronaut', imgSrc: Micronaut }],
+  },
+  {
+    id: 'field-3',
+    name: 'Platform',
+    stacks: [
+      { id: 'stack-14', name: 'Agora', imgSrc: Agora },
+      { id: 'stack-15', name: 'Twillio', imgSrc: Twillio },
+      { id: 'stack-16', name: 'SendGrid', imgSrc: SendGrid },
+    ],
+  },
+  {
+    id: 'field-4',
+    name: 'Databases',
+    stacks: [
+      { id: 'stack-21', name: 'PostgreSQL', imgSrc: PostgreSQL },
+      { id: 'stack-22', name: 'Redis', imgSrc: Redis },
+    ],
+  },
+  {
+    id: 'field-5',
+    name: 'Infrastructure',
+    stacks: [
+      { id: 'stack-24', name: 'Docker', imgSrc: Docker },
+      { id: 'stack-25', name: 'Kubernetes', imgSrc: Kubernetes },
+      { id: 'stack-26', name: 'TerraForm', imgSrc: TerraForm },
+      { id: 'stack-27', name: 'AWS', imgSrc: AWS },
+    ],
+  },
+  {
+    id: 'field-6',
+    name: 'CI/CD',
+    stacks: [{ id: 'stack-29', name: 'Jenkins', imgSrc: Jenkins }],
+  },
 ];
 
 export const items = [

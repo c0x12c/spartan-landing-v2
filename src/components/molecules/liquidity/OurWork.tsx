@@ -26,9 +26,21 @@ const WhatWeDo = () => {
 
   return (
     <Container>
-      <Box display="flex" flexDirection="column" gap={{ md: '85px', xs: 0 }} pb="80px">
-        <Box display="flex" alignItems="center" width="100%" justifyContent="space-between">
-          <Typography variant="fs64" color="#000" data-aos="fade-up" data-aos-delay="200">
+      <Box display="flex" flexDirection="column" py={{ xs: '40px', lg: '80px' }}>
+        <Box display="flex" alignItems="center" width="100%" gap={'48px'}>
+          <Typography
+            variant="fs48"
+            color="#000"
+            data-aos="fade-up"
+            data-aos-delay="200"
+            minWidth={'max-content'}
+            component={'p'}
+            textAlign={{ xs: 'center', lg: 'left' }}
+            width={{ xs: '100%', lg: 'auto' }}
+            fontSize={{ xs: '28px', lg: '48px' }}
+            mb={{ xs: '24px', lg: 0 }}
+            my={{ lg: '24px' }}
+          >
             Our Work
           </Typography>
           {!isMD && (
@@ -38,8 +50,9 @@ const WhatWeDo = () => {
               alignItems="center"
               data-aos="fade-left"
               data-aos-delay="200"
+              width={'100%'}
             >
-              <Box component={Divider} width="578px" height="1px" bgcolor="#808080" />
+              <Box component={Divider} width={'calc(100% - 60px)'} height="1px" bgcolor="#808080" />
               <Image src={Star} alt="yellow star" />
             </Box>
           )}
@@ -48,13 +61,13 @@ const WhatWeDo = () => {
         <Box
           display="flex"
           gap={{ md: '50px', xs: 0 }}
-          flexDirection={{ xs: 'column', md: 'row' }}
+          flexDirection={{ xs: 'column-reverse', md: 'row' }}
           alignItems={'center'}
         >
           <Image
             src={ResultImage}
             alt="mobile phone with card"
-            style={{ maxWidth: '100%' }}
+            style={{ maxWidth: '100%', height: 'auto' }}
             data-aos="fade-right"
             data-aos-delay="200"
           />

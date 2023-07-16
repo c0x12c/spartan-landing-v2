@@ -14,7 +14,7 @@ const ListItem: React.FC<ListItemProps> = ({ title, additionalText }) => {
     <Box
       display="flex"
       alignItems="start"
-      sx={{ padding: '24px 0' }}
+      sx={{ padding: '12px 0' }}
       data-aos="fade-up"
       data-aos-delay="200"
     >
@@ -39,7 +39,12 @@ const ListItem: React.FC<ListItemProps> = ({ title, additionalText }) => {
         <ul>
           {additionalText.map((text, index) => (
             <li key={index}>
-              <Typography fontWeight={400} variant="fs18" component="span">
+              <Typography
+                fontWeight={400}
+                variant="fs18"
+                fontSize={{ xs: '14px', lg: '18px' }}
+                component="span"
+              >
                 {text}
               </Typography>
             </li>
