@@ -35,8 +35,8 @@ export const ResultURSA: React.FunctionComponent<IResultURSAProps> = () => {
     );
   });
 
-  return (
-    <Container>
+  const renderResultSection = (
+    <>
       <Box
         sx={{
           backgroundImage: `url(${resultBanner.src})`,
@@ -65,12 +65,11 @@ export const ResultURSA: React.FunctionComponent<IResultURSAProps> = () => {
           <Image src={resultImage} alt="resultImage" style={{ height: '100%', maxWidth: 'auto' }} />
         )}
       </Box>
-
-      {isTablet && (
-        <Box bgcolor="#181C27">
-          <Image src={resultImage} alt="resultImage" style={{ height: 'auto', width: '100%' }} />
-        </Box>
-      )}
-    </Container>
+      <Box bgcolor="#181C27">
+        <Image src={resultImage} alt="resultImage" style={{ height: 'auto', width: '100%' }} />
+      </Box>
+    </>
   );
+
+  return isMobile ? <Box>{renderResultSection}</Box> : <Container>{renderResultSection}</Container>;
 };
