@@ -21,18 +21,30 @@ const Result = () => {
         width={'100%'}
         justifyContent={{ md: 'space-between', xs: 'center' }}
         alignItems={{ xs: 'center' }}
-        flexDirection={{ xs: 'column-reverse', md: 'row' }}
-        pt={'80px'}
+        flexDirection={{ xs: 'column', md: 'row' }}
+        py={{ xs: '40px', lg: '80px' }}
         gap={{ xs: '40px', md: '0' }}
       >
-        <Box display={'flex'} flexDirection={'column'} gap={'51px'}>
-          <Box display={'flex'} flexDirection={'column'} gap={'32px'}>
-            <Typography variant="fs48" color={base.black} data-aos="fade-up" data-aos-delay="200">
+        <Box display={'flex'} flexDirection={'column'} gap={{ xs: '24px', lg: '44px' }}>
+          <Box display={'flex'} flexDirection={'column'} gap={{ xs: '24px', lg: '32px' }}>
+            <Typography
+              variant="fs48"
+              fontSize={{ xs: '28px', lg: '48px' }}
+              color={base.black}
+              data-aos="fade-up"
+              data-aos-delay="200"
+            >
               The Result
             </Typography>
-            <Typography variant="fs18" maxWidth={'700px'} data-aos="fade-up" data-aos-delay="300">
+            <Typography
+              variant="fs18"
+              fontSize={{ xs: '14px', lg: '18px' }}
+              maxWidth={'700px'}
+              data-aos="fade-up"
+              data-aos-delay="300"
+            >
               We made significant achievements in the Liquidity Financial project, leading to
-              remarkable outcomes and advancements. Here are the key accomplishments:We were
+              remarkable outcomes and advancements. Here are the key accomplishments: <br /> We were
               impressed by their ability to seamlessly blend modern design elements with natural
               materials and surroundings, creating a vacation home that exceeded our expectations in
               every way
@@ -44,7 +56,11 @@ const Result = () => {
                 <ListItemIcon sx={{ minWidth: '18px' }}>
                   <FiberManualRecordIcon style={{ color: '#E7B51D', width: '8px' }} />
                 </ListItemIcon>
-                <Typography variant="fs16" sx={{ fontWeight: 600, maxWidth: '520px' }}>
+                <Typography
+                  variant="fs16"
+                  fontSize={{ xs: '14px', lg: '16px' }}
+                  sx={{ fontWeight: 600, maxWidth: '520px' }}
+                >
                   {item}
                 </Typography>
               </ListItem>
