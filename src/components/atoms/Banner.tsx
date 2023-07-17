@@ -5,7 +5,7 @@ interface IBannerProps {
   children: React.ReactNode;
   src?: string;
   bannerElement?: React.ReactNode;
-  haveBackground?: boolean;
+  haveBackground?: boolean | string;
   bannerPosition?: string | object;
 }
 
@@ -27,7 +27,10 @@ export const Banner: React.FunctionComponent<IBannerProps> = ({
           width="100%"
           sx={{
             height: '100%',
-            background: `linear-gradient(94deg, #00030E 0%, rgba(2, 1, 30, 0.89) 39.70%, rgba(0, 10, 52, 0.80) 67.19%, rgba(0, 9, 40, 0.44) 100%)`,
+            background:
+              typeof haveBackground === 'string'
+                ? haveBackground
+                : `linear-gradient(94deg, #00030E 0%, rgba(2, 1, 30, 0.89) 39.70%, rgba(0, 10, 52, 0.80) 67.19%, rgba(0, 9, 40, 0.44) 100%)`,
           }}
         />
       )}
