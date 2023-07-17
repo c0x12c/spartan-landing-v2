@@ -4,7 +4,7 @@ import Image from 'next/image';
 import ArrowWhite from '@/assets/images/arrow-white.svg';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
-import { ArrowIcon, Container } from '.';
+import { ArrowIcon, Container, Title } from '.';
 import { ProjectType, Projects } from '@/constants';
 import { base, gray } from '@/styles/colors';
 import { BreakPoints, useBreakpoint } from '@/hooks';
@@ -90,19 +90,12 @@ export const NextProject: React.FunctionComponent<INextProjectProps> = () => {
 
   const renderConsultation = (
     <Box display="flex" flexDirection="column" justifyContent="center" alignItems="center">
-      <Typography
-        variant="fs64"
-        color={base.black}
-        component="h2"
-        textAlign={'center'}
-        mb="34px"
-        maxWidth="802px"
-        mx="auto"
+      <Title
+        text="If you intend to act, we are ready to help!"
         data-aos="fade-up"
         data-aos-delay="200"
-      >
-        If you intend to act, we are ready to help!
-      </Typography>
+        sx={{ textAlign: 'center', color: base.black, mb: '34px', maxWidth: '802px', mx: 'auto' }}
+      />
       <Link href="/contact-us#contact-form" scroll={false} data-aos="fade-up" data-aos-delay="300">
         <Button variant="contained" size={isMobile ? 'small' : 'medium'}>
           Get in touch
