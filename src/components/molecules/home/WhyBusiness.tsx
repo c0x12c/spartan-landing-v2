@@ -20,34 +20,34 @@ export const WhyBusiness: React.FunctionComponent<IWhyBusinessProps> = () => {
   const data = [
     {
       id: 'biz-1',
-      title: 'Profitable',
+      title: 'Startup Partner',
       icon: money,
-      subTitle: '50+ hours',
+      subTitle: '15 years',
       content: (
         <>
           <Typography variant={isMobile ? 'fs14' : 'fs16'} color={gray[500]} letterSpacing="0.28px">
-            By the engineering team <br />{' '}
+            Of{' '}
             <Typography variant={isMobile ? 'fs14' : 'fs16'} color={primary[400]} fontWeight={600}>
-              time saved{' '}
+              experience{' '}
             </Typography>
-            per developer on interview.
+            in the US.
           </Typography>
         </>
       ),
     },
     {
       id: 'biz-2',
-      title: 'Continuity',
+      title: 'Engineering Force',
       icon: timer,
-      subTitle: '4 continents',
+      subTitle: '1%',
       content: (
         <>
           <Typography variant={isMobile ? 'fs14' : 'fs16'} color={gray[500]} letterSpacing="0.28px">
-            Same time zone <br /> at least
+            Top{' '}
             <Typography variant={isMobile ? 'fs14' : 'fs16'} color={primary[400]} fontWeight={600}>
-              4+ hours{' '}
+              engineers{' '}
             </Typography>
-            overlap time.
+            of the word.
           </Typography>
         </>
       ),
