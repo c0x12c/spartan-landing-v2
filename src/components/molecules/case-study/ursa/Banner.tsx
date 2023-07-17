@@ -14,8 +14,12 @@ export const CaseStudyURSABanner: React.FunctionComponent<ICaseStudyURSABannerPr
 
   return (
     <React.Fragment>
-      <Banner src={isMobile ? bgSp.src : bg.src} haveBackground={false}>
-        <Box sx={{ position: 'absolute', top: '35%', transform: 'translateY(-50%)' }}>
+      <Banner
+        src={isMobile ? bgSp.src : bg.src}
+        haveBackground={false}
+        bannerPosition={isMobile ? 'bottom' : 'top'}
+      >
+        <Box sx={{ position: 'absolute', top: '35%', transform: 'translateY(-50%)' }} width="100%">
           <Container>
             <Grid container>
               <Grid item xs={12} md={6}>

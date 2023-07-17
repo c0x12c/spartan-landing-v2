@@ -13,7 +13,11 @@ export const CaseStudyAgoraBanner: React.FunctionComponent<ICaseStudyAgoraBanner
 
   return (
     <React.Fragment>
-      <Banner src={isMobile ? bgSp.src : bg.src} haveBackground={false} bannerPosition={'top'}>
+      <Banner
+        src={isMobile ? bgSp.src : bg.src}
+        haveBackground={false}
+        bannerPosition={isMobile ? 'bottom' : 'top'}
+      >
         <Box sx={{ position: 'absolute', top: '35%', transform: 'translateY(-50%)' }} width="100%">
           <Container>
             <Grid container>

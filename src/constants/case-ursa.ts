@@ -2,6 +2,7 @@ import AWS from '@/assets/images/stacks/AWS.svg';
 import JavaScript from '@/assets/images/stacks/JavaScript.svg';
 import Jenkins from '@/assets/images/stacks/Jenkins.svg';
 import SendGrid from '@/assets/images/stacks/SendGrid.svg';
+import React from '@/assets/images/stacks/React.svg';
 import Twillio from '@/assets/images/stacks/Twillio.svg';
 import Agora from '@/assets/images/stacks/Agora.svg';
 import Micronaut from '@/assets/images/stacks/Micronaut.svg';
@@ -16,6 +17,7 @@ import Redis from '@/assets/images/stacks/Redis.svg';
 import infraIcon from '@/assets/images/icons/infra.svg';
 import backendIcon from '@/assets/images/icons/db.svg';
 import feIcon from '@/assets/images/icons/fe.svg';
+
 import { FieldType } from './stacks';
 
 export const DataWeDoUrsa = [
@@ -59,7 +61,10 @@ export const UrsaStacks: FieldType[] = [
   {
     id: 'field-2',
     name: 'Framework',
-    stacks: [{ id: 'stack-9', name: 'Micronaut', imgSrc: Micronaut }],
+    stacks: [
+      { id: 'stack-9', name: 'Micronaut', imgSrc: Micronaut },
+      { id: 'stack-10', name: 'React', imgSrc: React },
+    ],
   },
   {
     id: 'field-3',

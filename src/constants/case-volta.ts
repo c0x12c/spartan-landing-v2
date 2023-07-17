@@ -1,9 +1,9 @@
 import AWS from '@/assets/images/stacks/AWS.svg';
 import JavaScript from '@/assets/images/stacks/JavaScript.svg';
 import Jenkins from '@/assets/images/stacks/Jenkins.svg';
-import SendGrid from '@/assets/images/stacks/SendGrid.svg';
-import Twillio from '@/assets/images/stacks/Twillio.svg';
-import Agora from '@/assets/images/stacks/Agora.svg';
+import Coinmarketcap from '@/assets/images/stacks/Coinmarketcap.svg';
+import MongoDB from '@/assets/images/stacks/MongoDB.svg';
+import Alchemy from '@/assets/images/stacks/Alchemy.svg';
 import Micronaut from '@/assets/images/stacks/Micronaut.svg';
 import Kotlin from '@/assets/images/stacks/Kotlin.svg';
 import HCL from '@/assets/images/stacks/HCL.svg';
@@ -12,7 +12,10 @@ import PostgreSQL from '@/assets/images/stacks/PostgreSQL.svg';
 import Docker from '@/assets/images/stacks/Docker.svg';
 import Kubernetes from '@/assets/images/stacks/Kubernetes.svg';
 import TerraForm from '@/assets/images/stacks/TerraForm.svg';
-import MongoDB from '@/assets/images/stacks/MongoDB.svg';
+import Go from '@/assets/images/stacks/Go.svg';
+import Swift from '@/assets/images/stacks/Swift.svg';
+import React from '@/assets/images/stacks/React.svg';
+import Echo from '@/assets/images/stacks/Echo.svg';
 import Redis from '@/assets/images/stacks/Redis.svg';
 import { StaticImageData } from 'next/image';
 import { FieldType } from './stacks';
@@ -56,6 +59,8 @@ export const VoltaStacks: FieldType[] = [
     name: 'Programming Language',
     stacks: [
       { id: 'stack-2', name: 'Kotlin', imgSrc: Kotlin },
+      { id: 'stack-1', name: 'Golang', imgSrc: Go },
+      { id: 'stack-3', name: 'Swift', imgSrc: Swift },
       { id: 'stack-6', name: 'Typescript', imgSrc: TypeScript },
       { id: 'stack-8', name: 'Javascript', imgSrc: JavaScript },
       { id: 'stack-7', name: 'HCL', imgSrc: HCL },
@@ -64,15 +69,18 @@ export const VoltaStacks: FieldType[] = [
   {
     id: 'field-2',
     name: 'Framework',
-    stacks: [{ id: 'stack-9', name: 'Micronaut', imgSrc: Micronaut }],
+    stacks: [
+      { id: 'stack-9', name: 'Micronaut', imgSrc: Micronaut },
+      { id: 'stack-10', name: 'Echo', imgSrc: Echo },
+      { id: 'stack-11', name: 'React', imgSrc: React },
+    ],
   },
   {
     id: 'field-3',
     name: 'Platform',
     stacks: [
-      { id: 'stack-14', name: 'Agora', imgSrc: Agora },
-      { id: 'stack-15', name: 'Twillio', imgSrc: Twillio },
-      { id: 'stack-16', name: 'SendGrid', imgSrc: SendGrid },
+      { id: 'stack-14', name: 'Alchemy', imgSrc: Alchemy },
+      { id: 'stack-15', name: 'Coinmarketcap', imgSrc: Coinmarketcap },
     ],
   },
   {
@@ -80,6 +88,7 @@ export const VoltaStacks: FieldType[] = [
     name: 'Databases',
     stacks: [
       { id: 'stack-21', name: 'PostgreSQL', imgSrc: PostgreSQL },
+      { id: 'stack-23', name: 'MongoDB', imgSrc: MongoDB },
       { id: 'stack-22', name: 'Redis', imgSrc: Redis },
     ],
   },
