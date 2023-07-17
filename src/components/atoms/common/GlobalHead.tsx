@@ -10,7 +10,7 @@ export const GlobalHead = () => {
       <meta name="description" content={SEOPages[EPages.HOME].description} />
       <meta name="keywords" content={SEOPages[EPages.HOME].keywords} />
       <meta property="og:description" content={SEOPages[EPages.HOME].description} />
-      <link rel="icon" href="" color="" />
+      <link rel="icon" href="" color="/favicon-16.png" />
       <meta name="theme-color" content={'#FFFFFF'} />
       <meta name="emotion-insertion-point" content="" />
     </>

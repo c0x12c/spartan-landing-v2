@@ -8,6 +8,7 @@ interface ISEOProps {
 
 export const SEO: React.FunctionComponent<ISEOProps> = (props) => {
   const { page } = props;
+
   return (
     <NextSeo
       title={SEOPages[page].title || SEOPages[EPages.HOME].title}
@@ -15,24 +16,29 @@ export const SEO: React.FunctionComponent<ISEOProps> = (props) => {
       canonical={`${hostname}${SEOPages[page].slug || SEOPages[EPages.HOME].slug}`}
       openGraph={{
         type: 'website',
-        url: `${hostname}`,
+        url: `${hostname}${SEOPages[page].slug || SEOPages[EPages.HOME].slug}`,
         title: SEOPages[page].title || SEOPages[EPages.HOME].title,
         description: SEOPages[page].description || SEOPages[EPages.HOME].description,
         locale: 'en_EN',
         images: [
           {
             url: `${SEOPages[EPages.HOME].metaImage}`,
-            width: 1280,
-            height: 756,
+            width: 1920,
+            height: 1080,
             alt: SEOPages[page].title || SEOPages[EPages.HOME].title,
           },
         ],
-        site_name: `${hostname}`,
+        site_name: `${hostname}${SEOPages[page].slug || SEOPages[EPages.HOME].slug}`,
       }}
       additionalLinkTags={[
         {
           rel: 'icon',
-          href: '',
+          href: '/favicon-16.png',
+          sizes: '16x16',
+        },
+        {
+          rel: 'icon',
+          href: '/favicon-32.png',
           sizes: '32x32',
         },
       ]}
