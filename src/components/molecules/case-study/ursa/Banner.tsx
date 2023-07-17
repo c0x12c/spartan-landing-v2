@@ -1,16 +1,21 @@
 import * as React from 'react';
 import { Box, Grid } from '@mui/material';
 import bg from '@/assets/images/case-ursa/banner-image.png';
+import bgSp from '@/assets/images/case-ursa/banner-image-sp.png';
+
 import { Banner, BodyText, Container, MainTitle } from '@/components/atoms';
 import { base } from '@/styles/colors';
+import { BreakPoints, useBreakpoint } from '@/hooks';
 
 interface ICaseStudyURSABannerProps {}
 
 export const CaseStudyURSABanner: React.FunctionComponent<ICaseStudyURSABannerProps> = () => {
+  const isMobile = useBreakpoint(BreakPoints.MD);
+
   return (
     <React.Fragment>
-      <Banner src={bg.src} haveBackground={false}>
-        <Box sx={{ position: 'absolute', top: '50%', transform: 'translateY(-50%)' }}>
+      <Banner src={isMobile ? bgSp.src : bg.src} haveBackground={false}>
+        <Box sx={{ position: 'absolute', top: '35%', transform: 'translateY(-50%)' }}>
           <Container>
             <Grid container>
               <Grid item xs={12} md={6}>

@@ -9,32 +9,32 @@ interface IWhatWeDoURSAProps {}
 export const WhatWeDoURSA: React.FunctionComponent<IWhatWeDoURSAProps> = () => {
   const renderWhatWeDo = DataWeDoUrsa.map((item) => {
     return (
-      <Grid item key={item.id} xs={12} lg={4}>
+      <Grid item key={item.id} xs={12} md={4}>
         <CardWeDo {...item} />
       </Grid>
     );
   });
 
   return (
-    <Box pt={{ xs: '40px', lg: 0 }} pb={{ xs: '24px', lg: 0 }}>
+    <Box pt={{ xs: '40px', md: 0 }} pb={{ xs: '24px', md: 0 }}>
       <Container>
         <Box
           display="flex"
           flexDirection="column"
-          gap={{ xs: '24px', lg: '16px' }}
-          mb={{ xs: '24px', lg: '40px' }}
+          gap={{ xs: '24px', md: '16px' }}
+          mb={{ xs: '24px', md: '40px' }}
           textAlign="center"
           maxWidth="694px"
           mx="auto"
         >
           <Title text="What we do" sx={{ color: base.black }} />
           <BodyText
-            text=" We've got it all covered! From infrastructure to backend and frontend development, we
+            text="We've got it all covered! From infrastructure to backend and frontend development, we
           take care of everything for your streaming website."
-            sx={{ color: gray[600] }}
+            sx={{ color: gray[700] }}
           />
         </Box>
-        <Grid container justifyContent="center" spacing={{ xs: '16px', lg: '32px' }}>
+        <Grid container justifyContent="center" spacing={{ xs: '16px', md: '32px' }}>
           {renderWhatWeDo}
         </Grid>
       </Container>

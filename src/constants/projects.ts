@@ -125,9 +125,9 @@ export const Projects: ProjectType[] = [
   {
     id: 'case-5',
     name: 'Ursalive',
-    value: 'ursalive',
+    value: 'ursa',
     imgSrc: ursalive,
-    href: '/case-study/ursalive',
+    href: '/case-study/ursa',
     tags: [ServicesEnum.CLOUD, ServicesEnum.WEB, ServicesEnum.BACKEND],
 
     content: "Simplifies the process of hosting artists' Livestream events",

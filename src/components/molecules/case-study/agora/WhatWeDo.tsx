@@ -27,7 +27,7 @@ export const WhatWeDoAgora: React.FunctionComponent<IWhatWeDoAgoraProps> = () =>
           maxWidth="694px"
           mx="auto"
         >
-          <Title text=" What we do" sx={{ color: base.black }} />
+          <Title text="What we do" sx={{ color: base.black }} />
           <BodyText
             text="We've got it all covered! From infrastructure to backend and frontend development, we
           take care of everything for your streaming website."

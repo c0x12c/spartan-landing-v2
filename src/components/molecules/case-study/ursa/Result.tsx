@@ -1,7 +1,8 @@
 import * as React from 'react';
-import { BodyText, Container } from '@/components/atoms';
-import { Box, Typography } from '@mui/material';
+import { BodyText, Container, Title } from '@/components/atoms';
+import { Box } from '@mui/material';
 import resultBanner from '@/assets/images/case-ursa/result-banner.png';
+import resultBannerSp from '@/assets/images/case-ursa/result-banner-sp.png';
 import resultImage from '@/assets/images/case-ursa/result-image.png';
 import { BreakPoints, useBreakpoint } from '@/hooks';
 import Image from 'next/image';
@@ -28,9 +29,7 @@ export const ResultURSA: React.FunctionComponent<IResultURSAProps> = () => {
           },
         }}
       >
-        <Typography variant={'fs18'} color={base.white} component="p">
-          {item.text}
-        </Typography>
+        <BodyText text={item.text} sx={{ color: base.white }} />
       </Box>
     );
   });
@@ -39,7 +38,7 @@ export const ResultURSA: React.FunctionComponent<IResultURSAProps> = () => {
     <>
       <Box
         sx={{
-          backgroundImage: `url(${resultBanner.src})`,
+          backgroundImage: `url(${isMobile ? resultBannerSp.src : resultBanner.src})`,
           backgroundSize: isTablet ? 'cover' : '100% 100%',
           backgroundRepeat: 'no-repeat',
           backgroundPosition: 'center',
@@ -54,19 +53,24 @@ export const ResultURSA: React.FunctionComponent<IResultURSAProps> = () => {
           flexDirection={'column'}
           justifyContent="center"
         >
-          <BodyText text="The result" sx={{ mb: '28px' }} />
-
+          <Title text="The result" sx={{ color: base.white, mb: '28px' }} />
           <Box component="ul" display="flex" flexDirection="column" sx={{ listStyle: 'none' }}>
             {renderResult}
           </Box>
         </Box>
         {!isTablet && (
-          <Image src={resultImage} alt="resultImage" style={{ height: '100%', maxWidth: 'auto' }} />
+          <Image
+            src={resultImage}
+            alt="resultImage"
+            style={{ height: 'auto', maxWidth: '491px' }}
+          />
         )}
       </Box>
-      <Box bgcolor="#181C27">
-        <Image src={resultImage} alt="resultImage" style={{ height: 'auto', width: '100%' }} />
-      </Box>
+      {isTablet && (
+        <Box bgcolor="#181C27">
+          <Image src={resultImage} alt="resultImage" style={{ height: 'auto', width: '100%' }} />
+        </Box>
+      )}
     </>
   );
 

@@ -74,7 +74,7 @@ export const Stacks: React.FunctionComponent<IStacksProps> = ({ data }) => {
 
   return (
     <Box display="flex" flexDirection="column" alignItems="center" gap={isMobile ? '24px' : '44px'}>
-      <Box display="flex" alignItems="center" gap="12px" flexWrap="wrap">
+      <Box display="flex" alignItems="center" justifyContent="center" gap="12px" flexWrap="wrap">
         {renderFields}
       </Box>
       <Box
