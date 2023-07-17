@@ -2,36 +2,34 @@ import * as React from 'react';
 import { Box, Button, Grid, Typography } from '@mui/material';
 import Image from 'next/image';
 import ArrowWhite from '@/assets/images/arrow-white.svg';
-import NextProjectImage from '@/assets/images/case-volta/next-project.png';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
 import { ArrowIcon, Container } from '.';
-import { Projects } from '@/constants';
+import { ProjectType, Projects } from '@/constants';
 import { base, gray } from '@/styles/colors';
 import { BreakPoints, useBreakpoint } from '@/hooks';
 
 interface INextProjectProps {}
 
-interface IProject {
-  value: string;
-  name: string;
-  href: string;
-}
-
 export const NextProject: React.FunctionComponent<INextProjectProps> = () => {
   const isMobile = useBreakpoint(BreakPoints.MD);
 
-  const renderNextProject = (nextProject: IProject) => (
+  const renderNextProject = (nextProject: ProjectType) => (
     <Box my={{ xs: 0, md: '80px' }} data-aos="zoom-in" data-aos-delay="200">
-      <Grid container borderRadius={{ xs: 0, md: '20px' }} overflow="hidden" minHeight="430px">
-        <Grid item xs={12} lg={7} alignSelf="stretch">
+      <Grid
+        container
+        borderRadius={{ xs: 0, md: '20px' }}
+        overflow="hidden"
+        minHeight={isMobile ? '200px' : '430px'}
+      >
+        <Grid item xs={12} md={7} alignSelf={isMobile ? 'unset' : 'stretch'}>
           <Image
-            src={NextProjectImage}
+            src={nextProject.quote.imgSrc}
             alt="NextProjectImage"
             style={{ width: '100%', height: '100%' }}
           />
         </Grid>
-        <Grid item xs={12} lg={5} alignSelf="stretch">
+        <Grid item xs={12} md={5} alignSelf={isMobile ? 'unset' : 'stretch'}>
           <Box
             height="100%"
             bgcolor={base.black}
@@ -45,6 +43,7 @@ export const NextProject: React.FunctionComponent<INextProjectProps> = () => {
               fontSize={{ xs: '18px', md: '32px' }}
               color={gray[70]}
               component="h3"
+              mb="24px"
             >
               Next Project
             </Typography>

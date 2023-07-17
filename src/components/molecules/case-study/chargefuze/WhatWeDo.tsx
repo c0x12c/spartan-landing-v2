@@ -12,7 +12,7 @@ import checked from '@/assets/images/case-cf/checked-blue.svg';
 const WhatWeDo = () => {
   const isMD = useBreakpoint(BreakPoints.MD);
   const items = [
-    'Conducted a thorough assessment of the system`s state upon project transfer.',
+    "Conducted a thorough assessment of the system's state upon project transfer.",
     'Swiftly identified numerous bugs that were causing frequent outages.',
     'Meticulously addressed and resolved the identified bugs.',
     'Utilized rigorous testing methodologies and thorough debugging processes.',
