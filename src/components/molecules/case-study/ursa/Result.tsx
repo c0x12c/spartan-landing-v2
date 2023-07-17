@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Container } from '@/components/atoms';
+import { BodyText, Container } from '@/components/atoms';
 import { Box, Typography } from '@mui/material';
 import resultBanner from '@/assets/images/case-ursa/result-banner.png';
 import resultImage from '@/assets/images/case-ursa/result-image.png';
@@ -35,8 +35,8 @@ export const ResultURSA: React.FunctionComponent<IResultURSAProps> = () => {
     );
   });
 
-  return (
-    <Container>
+  const renderResultSection = (
+    <>
       <Box
         sx={{
           backgroundImage: `url(${resultBanner.src})`,
@@ -54,9 +54,8 @@ export const ResultURSA: React.FunctionComponent<IResultURSAProps> = () => {
           flexDirection={'column'}
           justifyContent="center"
         >
-          <Typography variant={'fs48'} color={base.white} component="h3" mb="28px">
-            The result
-          </Typography>
+          <BodyText text="The result" sx={{ mb: '28px' }} />
+
           <Box component="ul" display="flex" flexDirection="column" sx={{ listStyle: 'none' }}>
             {renderResult}
           </Box>
@@ -65,12 +64,11 @@ export const ResultURSA: React.FunctionComponent<IResultURSAProps> = () => {
           <Image src={resultImage} alt="resultImage" style={{ height: '100%', maxWidth: 'auto' }} />
         )}
       </Box>
-
-      {isTablet && (
-        <Box bgcolor="#181C27">
-          <Image src={resultImage} alt="resultImage" style={{ height: 'auto', width: '100%' }} />
-        </Box>
-      )}
-    </Container>
+      <Box bgcolor="#181C27">
+        <Image src={resultImage} alt="resultImage" style={{ height: 'auto', width: '100%' }} />
+      </Box>
+    </>
   );
+
+  return isMobile ? <Box>{renderResultSection}</Box> : <Container>{renderResultSection}</Container>;
 };
