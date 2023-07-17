@@ -8,6 +8,7 @@ const LiquidityFinancial = () => {
     <Container>
       <Box
         maxWidth="766px"
+        mx="auto"
         display="flex"
         justifyContent="center"
         alignItems={'center'}
