@@ -79,7 +79,7 @@ export const Projects: ProjectType[] = [
   {
     id: 'case-3',
     name: 'Liquidity Financial',
-    value: 'volta',
+    value: 'liquidity',
     imgSrc: liquidityFinancial,
     href: '/case-study/liquidity',
     tags: [

@@ -9,20 +9,20 @@ interface IWhatWeDoAgoraProps {}
 export const WhatWeDoAgora: React.FunctionComponent<IWhatWeDoAgoraProps> = () => {
   const renderWhatWeDo = DataWeDoAgora.map((item) => {
     return (
-      <Grid item key={item.id} xs={12} lg={4}>
+      <Grid item key={item.id} xs={12} md={4}>
         <CardWeDo {...item} />
       </Grid>
     );
   });
 
   return (
-    <Box pt={{ xs: '40px', lg: 0 }} pb={{ xs: '24px', lg: 0 }}>
+    <Box pt={{ xs: '40px', md: 0 }} pb={{ xs: '24px', md: 0 }}>
       <Container>
         <Box
           display="flex"
           flexDirection="column"
-          gap={{ xs: '24px', lg: '16px' }}
-          mb={{ xs: '24px', lg: '40px' }}
+          gap={{ xs: '24px', md: '16px' }}
+          mb={{ xs: '24px', md: '40px' }}
           textAlign="center"
           maxWidth="694px"
           mx="auto"
@@ -34,7 +34,7 @@ export const WhatWeDoAgora: React.FunctionComponent<IWhatWeDoAgoraProps> = () =>
             sx={{ color: gray[700] }}
           />
         </Box>
-        <Grid container justifyContent="center" spacing={{ md: '32px', lg: '16px' }}>
+        <Grid container justifyContent="center" spacing={{ md: '32px', xs: '16px' }}>
           {renderWhatWeDo}
         </Grid>
       </Container>

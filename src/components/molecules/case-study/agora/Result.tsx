@@ -40,7 +40,9 @@ export const ResultAgora: React.FunctionComponent<IResultAgoraProps> = () => {
           <Image src={resultImage} alt="resultImage" style={{ height: '100%', maxWidth: 'auto' }} />
         )}
       </Box>
-      <Image src={resultImage} alt="resultImage" style={{ height: 'auto', width: '100%' }} />
+      {isTablet && (
+        <Image src={resultImage} alt="resultImage" style={{ height: 'auto', width: '100%' }} />
+      )}
     </>
   );
 

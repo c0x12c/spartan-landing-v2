@@ -2,6 +2,7 @@ import * as React from 'react';
 import { Box, Typography } from '@mui/material';
 import Image, { StaticImageData } from 'next/image';
 import { base, gray } from '@/styles/colors';
+import { BreakPoints, useBreakpoint } from '@/hooks';
 
 interface ICardWeDoProps {
   icon: StaticImageData;
@@ -16,14 +17,16 @@ export const CardWeDo: React.FunctionComponent<ICardWeDoProps> = ({
   title,
   description,
 }) => {
+  const isMobile = useBreakpoint(BreakPoints.MD);
+
   return (
     <Box
       bgcolor="transparent"
       borderRadius="8px"
       border="1px solid"
       borderColor={gray[200]}
-      p={{ xs: '16px', lg: '20px' }}
-      height={{ xs: 'auto', lg: '336px' }}
+      p={{ xs: '16px', md: '20px' }}
+      height={{ xs: 'auto', md: '336px' }}
       display="flex"
       flexDirection="column"
       gap="20px"
@@ -48,10 +51,10 @@ export const CardWeDo: React.FunctionComponent<ICardWeDoProps> = ({
         <Image src={icon} alt={title} style={{ maxWidth: '100%', height: 'auto' }} />
       </Box>
       <Box display="flex" flexDirection="column" gap="12px">
-        <Typography variant="fs24" fontWeight={600} color={base.black}>
+        <Typography variant={isMobile ? 'fs16' : 'fs24'} fontWeight={600} color={base.black}>
           {title}
         </Typography>
-        <Typography variant="fs16" color={gray[600]}>
+        <Typography variant={isMobile ? 'fs14' : 'fs16'} color={gray[600]}>
           {description}
         </Typography>
       </Box>

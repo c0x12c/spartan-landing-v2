@@ -4,12 +4,15 @@ import { Box, Grid } from '@mui/material';
 import { base, gray } from '@/styles/colors';
 import Image from 'next/image';
 import overviewImage from '@/assets/images/case-agora/overview.png';
+import { BreakPoints, useBreakpoint } from '@/hooks';
 
 interface IOverviewAgoraProps {}
 
 export const OverviewAgora: React.FunctionComponent<IOverviewAgoraProps> = () => {
+  const isMobile = useBreakpoint(BreakPoints.MD);
+
   return (
-    <Box py={{ xs: '40px', md: 0 }}>
+    <Box py={{ xs: '40px', md: 0 }} bgcolor={isMobile ? gray[50] : base.white}>
       <Container>
         <Grid container alignItems="center" spacing={{ md: '100px', xs: '32px' }}>
           <Grid item xs={12} md={6} lg={4.5}>

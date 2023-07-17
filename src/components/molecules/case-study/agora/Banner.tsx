@@ -1,16 +1,20 @@
 import * as React from 'react';
 import { Box, Grid } from '@mui/material';
 import bg from '@/assets/images/case-agora/banner-image.png';
+import bgSp from '@/assets/images/case-agora/banner-image-sp.png';
 import { Banner, BodyText, Container, MainTitle } from '@/components/atoms';
 import { gray } from '@/styles/colors';
+import { BreakPoints, useBreakpoint } from '@/hooks';
 
 interface ICaseStudyAgoraBannerProps {}
 
 export const CaseStudyAgoraBanner: React.FunctionComponent<ICaseStudyAgoraBannerProps> = () => {
+  const isMobile = useBreakpoint(BreakPoints.MD);
+
   return (
     <React.Fragment>
-      <Banner src={bg.src} haveBackground={false}>
-        <Box sx={{ position: 'absolute', top: '50%', transform: 'translateY(-50%)' }}>
+      <Banner src={isMobile ? bgSp.src : bg.src} haveBackground={false} bannerPosition={'top'}>
+        <Box sx={{ position: 'absolute', top: '35%', transform: 'translateY(-50%)' }} width="100%">
           <Container>
             <Grid container>
               <Grid item xs={12} md={6}>
@@ -27,7 +31,7 @@ export const CaseStudyAgoraBanner: React.FunctionComponent<ICaseStudyAgoraBanner
                   with simple, flexible, and powerful APIs, to embed real-time voice, video,
                   interactive streaming, chat, and artificial intelligence capabilities into their
                   applications."
-                  sx={{ display: 'block', width: '538px', color: gray[200] }}
+                  sx={{ display: 'block', maxWidth: '538px', color: gray[200] }}
                 />
               </Grid>
             </Grid>
