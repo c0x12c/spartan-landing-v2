@@ -2,9 +2,9 @@ import { base } from '@/styles/colors';
 import { Box, Typography } from '@mui/material';
 import { List, ListItem, ListItemIcon } from '@mui/material';
 import FiberManualRecordIcon from '@mui/icons-material/FiberManualRecord';
-import { Container } from '@/components/atoms/common/Container';
 import Image from 'next/image';
 import ResultImage from '@/assets/images/case-liquidity/result-image.svg';
+import { BodyText, Container, Title } from '@/components/atoms';
 
 const items = [
   'Successfully launched PrideCard as a new mobile product',
@@ -27,28 +27,22 @@ const Result = () => {
       >
         <Box display={'flex'} flexDirection={'column'} gap={{ xs: '24px', lg: '44px' }}>
           <Box display={'flex'} flexDirection={'column'} gap={{ xs: '24px', lg: '32px' }}>
-            <Typography
-              variant="fs48"
-              fontSize={{ xs: '28px', lg: '48px' }}
-              color={base.black}
+            <Title
+              text="The Result"
               data-aos="fade-up"
               data-aos-delay="200"
-            >
-              The Result
-            </Typography>
-            <Typography
-              variant="fs18"
-              fontSize={{ xs: '14px', lg: '18px' }}
-              maxWidth={'700px'}
-              data-aos="fade-up"
-              data-aos-delay="300"
-            >
-              We made significant achievements in the Liquidity Financial project, leading to
+              sx={{ color: base.black, mb: { md: '32px', xs: '24px' } }}
+            />
+            <BodyText
+              sx={{ maxWidth: '700px' }}
+              text="We made significant achievements in the Liquidity Financial project, leading to
               remarkable outcomes and advancements. Here are the key accomplishments: <br /> We were
               impressed by their ability to seamlessly blend modern design elements with natural
               materials and surroundings, creating a vacation home that exceeded our expectations in
-              every way
-            </Typography>
+              every way"
+              data-aos="fade-up"
+              data-aos-delay="300"
+            />
           </Box>
           <List>
             {items.map((item, index) => (

@@ -41,7 +41,7 @@ const CaseStudyItem: React.FC<CaseStudyItemProps> = ({ icon, title, content, lis
             <ul
               style={{
                 maxWidth: '100%',
-                listStylePosition: 'inside',
+                listStylePosition: 'outside',
               }}
             >
               {list?.map((text, index) => (

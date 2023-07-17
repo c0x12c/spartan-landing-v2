@@ -5,7 +5,7 @@ import CauseCard from '@/assets/images/case-liquidity/cause-card.svg';
 import DownloadAppPanel from '@/components/atoms/DownloadAppPanel';
 import { Container } from '@/components/atoms/common/Container';
 import { base } from '@/styles/colors';
-import { Title } from '@/components/atoms';
+import { BodyText, Title } from '@/components/atoms';
 
 const Cards = () => {
   return (
@@ -13,8 +13,8 @@ const Cards = () => {
       <Box
         display={'flex'}
         flexDirection={'column'}
-        gap={{ lg: '44px', xs: 0 }}
-        py={{ lg: '80px', xs: '40px' }}
+        gap={{ md: '44px', xs: 0 }}
+        py={{ md: '80px', xs: '40px' }}
       >
         <Box>
           <Title
@@ -22,23 +22,19 @@ const Cards = () => {
             data-aos="fade-up"
             data-aos-delay="200"
             sx={{
-              mb: { lg: '32px', xs: '24px' },
-              mt: { lg: '44px', xs: '40px' },
+              mb: { md: '32px', xs: '24px' },
+              mt: { md: '44px', xs: '40px' },
             }}
           />
-          <Typography
-            variant="fs18"
-            width={{ md: '64%', xs: '100%' }}
-            component={'p'}
-            data-aos="fade-up"
-            data-aos-delay="300"
-            mb={{ lg: '20px', xs: '24px' }}
-          >
-            Discover how Liquidity Financial revolutionized the banking and spending landscape by
+          <BodyText
+            sx={{ maxWidth: '641px', mb: { md: '20px', xs: '24px' } }}
+            text="Discover how Liquidity Financial revolutionized the banking and spending landscape by
             empowering individuals to align their choices with their interests and values. Through
             innovative financial products and a commitment to social responsibility, Liquidity
-            Financial offers a unique banking experience that reflects personal aspirations.
-          </Typography>
+            Financial offers a unique banking experience that reflects personal aspirations."
+            data-aos="fade-up"
+            data-aos-delay="300"
+          />
         </Box>
         <Box
           width={'100%'}
@@ -46,7 +42,7 @@ const Cards = () => {
           flexDirection={{ xs: 'column', md: 'row' }}
           alignItems={'center'}
           justifyContent={'space-between'}
-          mb={{ xs: '44px', lg: 0 }}
+          mb={{ xs: '44px', md: 0 }}
         >
           <Image
             src={DodgeCard}
@@ -68,25 +64,28 @@ const Cards = () => {
                 variant="fs24"
                 color={base.black}
                 fontWeight={600}
-                fontSize={{ xs: '18px', lg: '24px' }}
+                fontSize={{ xs: '18px', md: '24px' }}
               >
                 CauseCard
               </Typography>
               <Typography
                 variant="fs16"
-                fontSize={{ xs: '14px', lg: '16px' }}
+                fontSize={{ xs: '14px', md: '16px' }}
                 color={base.black}
                 fontWeight={600}
               >
                 One-stop app for everything Dogecoin
               </Typography>
-              <Typography variant="fs18" fontSize={{ xs: '14px', lg: '18px' }}>
+              <Typography variant="fs18" fontSize={{ xs: '14px', md: '18px' }}>
                 The DogeCoin is a card built for the Dogecoin community. Everyone who uses the
                 DogeCard gets Dogecoin rewards onevery purchase, and get special benefits for
                 holding Dogecoin.
               </Typography>
             </Box>
-            <DownloadAppPanel />
+            <DownloadAppPanel
+              linkAppStore="https://apps.apple.com/id/app/dogecard/id1582868891"
+              linkPlayStore="https://play.google.com/store/apps/details?id=com.liquidityfinancial.dogeking&ah=TtIRW8nq4Wadsdvk_lX0p2I-LQk"
+            />
           </Box>
         </Box>
         <Box
@@ -116,7 +115,7 @@ const Cards = () => {
                 variant="fs24"
                 color={base.black}
                 fontWeight={600}
-                fontSize={{ xs: '18px', lg: '24px' }}
+                fontSize={{ xs: '18px', md: '24px' }}
               >
                 CauseCard
               </Typography>
@@ -124,16 +123,19 @@ const Cards = () => {
                 variant="fs16"
                 color={base.black}
                 fontWeight={600}
-                fontSize={{ xs: '14px', lg: '16px' }}
+                fontSize={{ xs: '14px', md: '16px' }}
               >
                 A debit card that fights for what&apos;s right
               </Typography>
-              <Typography variant="fs18" fontSize={{ xs: '14px', lg: '18px' }}>
+              <Typography variant="fs18" fontSize={{ xs: '14px', md: '18px' }}>
                 Turn transactions into action. Use CauseCard and automatically donate 0.75% of each
                 purchase to the causes your care about.
               </Typography>
             </Box>
-            <DownloadAppPanel />
+            <DownloadAppPanel
+              linkAppStore="https://apps.apple.com/id/app/causecard-donate-to-charity/id6444664550"
+              linkPlayStore="https://play.google.com/store/apps/details?id=com.liquidity.cause&pli=1"
+            />
           </Box>
         </Box>
       </Box>
