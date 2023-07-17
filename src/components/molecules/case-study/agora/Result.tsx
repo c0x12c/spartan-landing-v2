@@ -1,6 +1,6 @@
 import * as React from 'react';
-import { Container } from '@/components/atoms';
-import { Box, Typography } from '@mui/material';
+import { BodyText, Container, Title } from '@/components/atoms';
+import { Box } from '@mui/material';
 import resultBanner from '@/assets/images/case-agora/result-banner.png';
 import resultImage from '@/assets/images/case-agora/result-image.png';
 import { BreakPoints, useBreakpoint } from '@/hooks';
@@ -14,8 +14,8 @@ export const ResultAgora: React.FunctionComponent<IResultAgoraProps> = () => {
   const isTablet = useBreakpoint(BreakPoints.LG);
   const isMobile = useBreakpoint(BreakPoints.SM);
 
-  return (
-    <Container>
+  const renderResult = (
+    <>
       <Box
         sx={{
           backgroundImage: `url(${resultBanner.src})`,
@@ -33,20 +33,16 @@ export const ResultAgora: React.FunctionComponent<IResultAgoraProps> = () => {
           flexDirection={'column'}
           justifyContent="center"
         >
-          <Typography variant={'fs48'} color={base.white} component="h3" mb="28px">
-            The result
-          </Typography>
-          <Typography variant={'fs18'} color={base.white} component="p">
-            {DataAgoraResult}
-          </Typography>
+          <Title text="The result" sx={{ color: base.white, mb: '28px' }} />
+          <BodyText text={DataAgoraResult} sx={{ color: base.white }} />
         </Box>
         {!isTablet && (
           <Image src={resultImage} alt="resultImage" style={{ height: '100%', maxWidth: 'auto' }} />
         )}
       </Box>
-      {isTablet && (
-        <Image src={resultImage} alt="resultImage" style={{ height: 'auto', width: '100%' }} />
-      )}
-    </Container>
+      <Image src={resultImage} alt="resultImage" style={{ height: 'auto', width: '100%' }} />
+    </>
   );
+
+  return !isMobile ? <Container>{renderResult}</Container> : <Box> {renderResult}</Box>;
 };
