@@ -68,7 +68,7 @@ export const EmpowerTech = () => {
                 width: 'fit-content',
               }}
             >
-              Being next spartan
+              Being next Spartan
             </Button>
           </Box>
         </Box>
