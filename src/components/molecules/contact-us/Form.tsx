@@ -56,12 +56,7 @@ export const ContactUsForm: React.FunctionComponent<IContactUsFormProps> = () =>
             <Box component={'form'} display="flex" flexDirection="column" gap="32px">
               <TextFieldWithLabel title="First name" id="firstName" isRequired />
               <TextFieldWithLabel title="Last name" id="lastName" isRequired />
-              <TextFieldWithLabel
-                title="Email"
-                placeholder="work@gmail.com"
-                id="email"
-                isRequired
-              />
+              <TextFieldWithLabel title="Email" placeholder="work@mail.com" id="email" isRequired />
               <TextFieldWithLabel
                 title="Your message"
                 placeholder="Message"
