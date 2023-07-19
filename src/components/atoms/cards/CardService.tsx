@@ -2,16 +2,19 @@ import * as React from 'react';
 import { Box, Typography } from '@mui/material';
 import { ServiceType } from '@/constants/services';
 import { base, gray, primary } from '@/styles/colors';
+import Link from 'next/link';
 
 type ServiceDetailType = ServiceType['detail'];
 interface ICardService {
   title?: string;
   serviceDetail: ServiceDetailType;
+  href: string;
 }
 
 export const CardService: React.FunctionComponent<ICardService> = ({
   title,
   serviceDetail,
+  href,
   ...props
 }) => {
   const renderServiceDetail = serviceDetail.map((item, index) => {
@@ -41,6 +44,7 @@ export const CardService: React.FunctionComponent<ICardService> = ({
   });
   return (
     <Box
+      component={Link}
       bgcolor={base.white}
       p="20px"
       display="flex"
@@ -48,6 +52,7 @@ export const CardService: React.FunctionComponent<ICardService> = ({
       gap="28px"
       borderRadius="8px"
       minHeight="350px"
+      href={href}
       {...props}
     >
       <Box p="12px" borderRadius="6px" bgcolor={base.blue} textAlign="center">

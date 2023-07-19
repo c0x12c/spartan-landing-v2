@@ -14,14 +14,14 @@ export const ServicesOffer: React.FunctionComponent<IServicesOfferProps> = () =>
   const renderFirstPart = Services.slice(0, 2).map((item) => {
     return (
       <Grid item xs={12} md={6} lg={4} key={item.id}>
-        <CardService title={item.label} serviceDetail={item.detail} />
+        <CardService href={item.href} title={item.label} serviceDetail={item.detail} />
       </Grid>
     );
   });
   const renderSecondPart = Services.slice(2, 5).map((item) => {
     return (
       <Grid item xs={12} md={6} lg={4} key={item.id}>
-        <CardService title={item.label} serviceDetail={item.detail} />
+        <CardService href={item.href} title={item.label} serviceDetail={item.detail} />
       </Grid>
     );
   });
