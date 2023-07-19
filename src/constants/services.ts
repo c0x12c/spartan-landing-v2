@@ -84,6 +84,32 @@ export const Services: ServiceType[] = [
     ],
   },
   {
+    id: 'service-3',
+    label: 'Backend Development',
+    href: '/services/backend',
+    content: 'We build robust and scalable backend systems',
+    icon: backendIcon,
+    detail: [
+      {
+        id: 'service-detail-3.1',
+        name: 'Kotlin',
+        content:
+          'Clean, efficient, and maintainable backend applications with Kotlin’s strong type system and functional programming features.',
+      },
+      {
+        id: 'service-detail-3.2',
+        name: 'Java',
+        content:
+          'Robust and scalable backend architectures using Java’s mature ecosystem and battle-tested design patterns.',
+      },
+      {
+        id: 'service-detail-3.3',
+        name: 'C#',
+        content: 'Enterprise-grade backend systems with the versatility of C#.',
+      },
+    ],
+  },
+  {
     id: 'service-4',
     label: 'Cloud Solutions',
     href: '/services/cloud',
@@ -140,32 +166,6 @@ export const Services: ServiceType[] = [
         name: 'Real-time data streaming',
         content:
           'Harness the power of Flink for seamless processing and analysis of continuous data streams, enabling real-time decision-making ',
-      },
-    ],
-  },
-  {
-    id: 'service-3',
-    label: 'Backend Development',
-    href: '/services/backend',
-    content: 'We build robust and scalable backend systems',
-    icon: backendIcon,
-    detail: [
-      {
-        id: 'service-detail-3.1',
-        name: 'Kotlin',
-        content:
-          'Clean, efficient, and maintainable backend applications with Kotlin’s strong type system and functional programming features.',
-      },
-      {
-        id: 'service-detail-3.2',
-        name: 'Java',
-        content:
-          'Robust and scalable backend architectures using Java’s mature ecosystem and battle-tested design patterns.',
-      },
-      {
-        id: 'service-detail-3.3',
-        name: 'C#',
-        content: 'Enterprise-grade backend systems with the versatility of C#.',
       },
     ],
   },
