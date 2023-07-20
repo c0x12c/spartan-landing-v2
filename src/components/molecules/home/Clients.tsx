@@ -89,7 +89,7 @@ export const Clients: React.FunctionComponent<IClientsProps> = () => {
                 {item.dev}+
               </Typography>
               <Typography variant={isMobile ? 'fs14' : 'fs18'} fontWeight={600} color={gray[700]}>
-                Dev in team
+                Devs in team
               </Typography>
             </Box>
             <Box
@@ -108,7 +108,7 @@ export const Clients: React.FunctionComponent<IClientsProps> = () => {
                 {item.designer}
               </Typography>
               <Typography variant={isMobile ? 'fs14' : 'fs18'} fontWeight={600} color={gray[700]}>
-                Designer in team
+                Designers in team
               </Typography>
             </Box>
           </Grid>
