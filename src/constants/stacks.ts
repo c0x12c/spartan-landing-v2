@@ -24,6 +24,7 @@ import Docker from '@/assets/images/stacks/Docker.svg';
 import Kubernetes from '@/assets/images/stacks/Kubernetes.svg';
 import TerraForm from '@/assets/images/stacks/TerraForm.svg';
 import AWS from '@/assets/images/stacks/AWS.svg';
+import Azure from '@/assets/images/stacks/Azure.svg';
 import GGCloud from '@/assets/images/stacks/GGCloud.svg';
 import Jenkins from '@/assets/images/stacks/Jenkins.svg';
 import GithubAction from '@/assets/images/stacks/Github.svg';
@@ -97,6 +98,7 @@ export const Fields: FieldType[] = [
       { id: 'stack-25', name: 'Kubernetes', imgSrc: Kubernetes },
       { id: 'stack-26', name: 'TerraForm', imgSrc: TerraForm },
       { id: 'stack-27', name: 'AWS', imgSrc: AWS },
+      { id: 'stack-31', name: 'Azure', imgSrc: Azure },
       { id: 'stack-28', name: 'Google Cloud', imgSrc: GGCloud },
     ],
   },

@@ -90,15 +90,15 @@ export const ContactInfo: React.FunctionComponent<IContactInfoProps> = () => {
             </Box>
             <Divider />
             <Box mt={isMobile ? '24px' : '50px'} display="flex" alignItems="center" gap="12px">
-              <Link href="/" target="_blank">
+              <Link href="https://www.linkedin.com/company/spartandev" target="_blank">
                 <Image src={linkedin} alt="linkedin" />
               </Link>
-              <Link href="/" target="_blank">
+              <Link href="https://www.facebook.com/profile.php?id=100094518799287" target="_blank">
                 <Image src={facebook} alt="facebook" />
               </Link>
-              <Link href="/" target="_blank">
+              {/* <Link href="/" target="_blank">
                 <Image src={twitter} alt="twitter" />
-              </Link>
+              </Link> */}
             </Box>
           </Box>
         </Box>
