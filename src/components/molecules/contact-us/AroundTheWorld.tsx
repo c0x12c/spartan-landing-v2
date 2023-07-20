@@ -28,7 +28,7 @@ export const AroundTheWorld: React.FunctionComponent<IAroundTheWorldProps> = () 
               rowGap="24px"
               mb={isMobile ? '24px' : '48px'}
             >
-              <Title text="Our office around the world" data-aos="fade-up" data-aos-delay="300" />
+              <Title text="Our offices around the world" data-aos="fade-up" data-aos-delay="300" />
               <BodyText
                 text="With Spartan, our clients experience the benefits of a highly skilled and dedicated
                 team of remote engineers from over four continents, ensuring seamless collaboration,
