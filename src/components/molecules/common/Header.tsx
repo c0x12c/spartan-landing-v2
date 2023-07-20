@@ -8,6 +8,8 @@ import { About, AboutType, ServiceType, Services } from '@/constants';
 import { useBreakpoint, BreakPoints } from '@/hooks';
 import { Container, MenuDesktop } from '@/components/atoms';
 import { MenuMobile } from '@/components/atoms';
+import questionIcon from '@/assets/images/icons/question.svg';
+import cases from '@/assets/images/icons/cases.svg';
 
 export type MenuItemType = {
   id: string;
@@ -33,6 +35,24 @@ export const Header = ({ forceTransparent = true }: { forceTransparent?: boolean
       id: 'menu-item-1',
       label: 'Spartan',
       href: '/',
+      subItems: [
+        {
+          id: 'spartan-1',
+          label: 'How Spartan operates',
+          href: '/spartan-operates',
+          content: 'We follow robust engineering processes refined years of experience',
+          icon: questionIcon,
+          detail: [],
+        },
+        {
+          id: 'spartan-2',
+          label: 'Case Study',
+          href: '/case-study',
+          content: 'Turning ideas into effective and engaging digital experiences.',
+          icon: cases,
+          detail: [],
+        },
+      ],
     },
     {
       id: 'menu-item-2',

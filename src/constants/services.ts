@@ -3,7 +3,6 @@ import webIcon from '@/assets/images/icons/web.svg';
 import backendIcon from '@/assets/images/icons/backend.svg';
 import cloudIcon from '@/assets/images/icons/cloud.svg';
 import emergingIcon from '@/assets/images/icons/emerging.svg';
-import questionIcon from '@/assets/images/icons/question.svg';
 
 import appleIcon from '@/assets/images/stacks/Apple.svg';
 import androidIcon from '@/assets/images/stacks/Android.svg';
@@ -168,14 +167,6 @@ export const Services: ServiceType[] = [
           'Harness the power of Flink for seamless processing and analysis of continuous data streams, enabling real-time decision-making ',
       },
     ],
-  },
-  {
-    id: 'service-6',
-    label: 'How Spartan operates',
-    href: '/spartan-operates',
-    content: 'We follow robust engineering processes refined years of experience',
-    icon: questionIcon,
-    detail: [],
   },
 ];
 

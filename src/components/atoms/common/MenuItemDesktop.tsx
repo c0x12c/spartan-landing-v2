@@ -6,10 +6,9 @@ import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { MenuItemType } from '@/components/molecules';
 import ai from '@/assets/images/icons/ai.png';
-import cases from '@/assets/images/icons/cases.svg';
 
 import Image from 'next/image';
-import { About, ServiceType, Services } from '@/constants';
+import { About, AboutType, ServiceType, Services } from '@/constants';
 
 type MenuItemDesktopType = {
   item: MenuItemType;
@@ -23,6 +22,7 @@ export const MenuItemDesktop = ({ item, isTransparent }: MenuItemDesktopType) =>
     if (!path) return;
     router.push(path);
   };
+
   return (
     <Box
       display="flex"
@@ -93,9 +93,9 @@ const SubMenu = ({ item }: Pick<MenuItemDesktopType, 'item'>) => {
     return;
   }
 
-  const isServices = item.label === 'Services';
+  const isSpartan = item.label === 'Spartan';
 
-  const renderServices = (data: ServiceType[]) => {
+  const renderMenuItems = (data: ServiceType[] | AboutType[]) => {
     return data.map((item) => {
       return (
         <Grid item key={item.id} xs={6} lg={4}>
@@ -128,51 +128,78 @@ const SubMenu = ({ item }: Pick<MenuItemDesktopType, 'item'>) => {
     });
   };
 
-  const renderAbout = About.map((item) => {
+  const renderSubMenu = (label: string) => {
     return (
-      <Grid item key={item.id} xs={6} lg={4}>
-        <Link href={item.href}>
+      <Box display="flex">
+        <Box flex="1" p="24px 24px 64px 24px" display="flex" flexDirection="column" gap="40px">
+          <Typography variant="fs24" color={gray[900]} fontWeight="600" component="h3">
+            {label}
+          </Typography>
+          <Grid container spacing="32px">
+            {renderMenuItems(item.label === 'Services' ? Services : About)}
+          </Grid>
+        </Box>
+        {item.label === 'Services' && (
           <Box
-            display="flex"
-            gap="12px"
-            p="16px"
-            borderRadius="8px"
+            width="302px"
+            position="relative"
             sx={{
-              '&:hover': {
-                bgcolor: primary[50],
-                transition: 'all 0.2s',
-              },
+              background: '#12144F',
             }}
           >
-            <Image src={item.icon} alt={item.label} />
-            <Box display="flex" flexDirection="column" gap="12px">
-              <Typography variant="fs14" color={gray[900]} fontWeight="600" component="h4">
-                {item.label}
-              </Typography>
-              <Typography variant="fs14" fontSize="12px" color={gray[500]} component="p">
-                {item.content}
-              </Typography>
+            <Box
+              position="absolute"
+              p="24px"
+              top="50%"
+              left="0"
+              width="100%"
+              sx={{ transform: 'translateY(-50%)' }}
+            >
+              <Box display="flex" justifyContent="center" mb="50px">
+                <Image src={ai} alt="ai" />
+              </Box>
+              <Box mb="16px">
+                <Typography
+                  variant="fs16"
+                  color={base.white}
+                  fontWeight="600"
+                  lineHeight="1.8"
+                  component="h3"
+                  mb="8px"
+                >
+                  Ready to start your tailored project?
+                </Typography>
+                <Typography variant="fs16" color={gray[100]} fontSize="12px" component="p">
+                  Let’s build incredible products together
+                </Typography>
+              </Box>
+              <Link href="/contact-us#contact-form" scroll={false}>
+                <Button
+                  variant="contained"
+                  sx={{
+                    py: '12px',
+                  }}
+                >
+                  Meet our expert
+                </Button>
+              </Link>
             </Box>
           </Box>
-        </Link>
-      </Grid>
+        )}
+      </Box>
     );
-  });
+  };
 
-  const submenuServices = (
+  const renderSubMenuSpartan = (
     <Box display="flex">
-      <Box flex="1" p="24px 24px 64px 24px" display="flex" flexDirection="column" gap="40px">
-        <Typography variant="fs24" color={gray[900]} fontWeight="600" component="h3">
-          Service
-        </Typography>
-        <Grid container spacing="32px">
-          {renderServices(Services.slice(0, 5))}
-          <Grid item xs={6} lg={4}>
-            <Link href="/case-study">
+      <Box flex="1" p="40px 24px" display="flex" flexDirection="column" gap="32px">
+        {item.subItems.map((item) => {
+          return (
+            <Link href={item.href} key={item.id}>
               <Box
                 display="flex"
                 gap="12px"
-                p="8px"
+                p="16px"
                 borderRadius="8px"
                 sx={{
                   '&:hover': {
@@ -181,78 +208,19 @@ const SubMenu = ({ item }: Pick<MenuItemDesktopType, 'item'>) => {
                   },
                 }}
               >
-                <Image src={cases} alt={'cases'} />
+                <Image src={item.icon} alt={item.label} />
                 <Box display="flex" flexDirection="column" gap="12px">
                   <Typography variant="fs14" color={gray[900]} fontWeight="600" component="h4">
-                    Case Study
+                    {item.label}
                   </Typography>
                   <Typography variant="fs14" fontSize="12px" color={gray[500]} component="p">
-                    Turning ideas into effective and engaging digital experiences.
+                    {item.content}
                   </Typography>
                 </Box>
               </Box>
             </Link>
-          </Grid>
-          {renderServices(Services.slice(5))}
-        </Grid>
-      </Box>
-      <Box
-        width="302px"
-        position="relative"
-        sx={{
-          background: '#12144F',
-        }}
-      >
-        <Box
-          position="absolute"
-          p="24px"
-          top="50%"
-          left="0"
-          width="100%"
-          sx={{ transform: 'translateY(-50%)' }}
-        >
-          <Box display="flex" justifyContent="center" mb="50px">
-            <Image src={ai} alt="ai" />
-          </Box>
-          <Box mb="16px">
-            <Typography
-              variant="fs16"
-              color={base.white}
-              fontWeight="600"
-              lineHeight="1.8"
-              component="h3"
-              mb="8px"
-            >
-              Ready to start your tailored project?
-            </Typography>
-            <Typography variant="fs16" color={gray[100]} fontSize="12px" component="p">
-              Let’s build incredible products together
-            </Typography>
-          </Box>
-          <Link href="/contact-us#contact-form" scroll={false}>
-            <Button
-              variant="contained"
-              sx={{
-                py: '12px',
-              }}
-            >
-              Meet our expert
-            </Button>
-          </Link>
-        </Box>
-      </Box>
-    </Box>
-  );
-
-  const submenuCareers = (
-    <Box display="flex">
-      <Box flex="1" p="24px 24px 64px 24px" display="flex" flexDirection="column" gap="40px">
-        <Typography variant="fs24" color={gray[900]} fontWeight="600" component="h3">
-          Career
-        </Typography>
-        <Grid container spacing="32px">
-          {renderAbout}
-        </Grid>
+          );
+        })}
       </Box>
     </Box>
   );
@@ -263,11 +231,11 @@ const SubMenu = ({ item }: Pick<MenuItemDesktopType, 'item'>) => {
       component="ul"
       position="absolute"
       top="120%"
-      left={0}
+      left={isSpartan ? '50%' : 0}
       right={0}
       bgcolor={base.white}
       p={0}
-      width={'90vw'}
+      width={isSpartan ? '341px' : '90vw'}
       maxWidth={'1208px'}
       borderRadius="8px"
       boxShadow={'0px 8px 32px 0px rgba(0, 0, 0, 0.12)'}
@@ -275,10 +243,12 @@ const SubMenu = ({ item }: Pick<MenuItemDesktopType, 'item'>) => {
       sx={{
         visibility: 'hidden',
         opacity: 0,
+        transform: isSpartan ? 'translateX(-50%)' : 'unset',
         transition: 'all .5s',
       }}
     >
-      {isServices ? submenuServices : submenuCareers}
+      {isSpartan ? renderSubMenuSpartan : renderSubMenu(item.label)}
+      {/* {isServices ? submenuServices : submenuCareers} */}
     </Box>
   );
 };
