@@ -3,6 +3,9 @@ import facebook from '@/assets/images/socials/facebook.svg';
 // import instagram from '@/assets/images/socials/instagram.svg';
 import linkedin from '@/assets/images/socials/linkedin.svg';
 // import twitter from '@/assets/images/socials/twitter.svg';
+import facebookGray from '@/assets/images/icons/facebook-gray.svg';
+import linkedinGray from '@/assets/images/icons/linkedin-gray.svg';
+import twitterGray from '@/assets/images/icons/twitter-gray.svg';
 
 export type SocialType = {
   id: string;
@@ -24,6 +27,22 @@ export const Socials = [
     id: 'social-4',
     label: 'linkedin',
     imgSrc: linkedin,
+    href: 'https://www.linkedin.com/company/spartandev',
+  },
+];
+
+export const ShareSocials = [
+  {
+    id: 'social-1',
+    label: 'facebook',
+    imgSrc: facebookGray,
+    href: 'https://www.facebook.com/profile.php?id=100094518799287',
+  },
+  { id: 'social-3', label: 'twitter', imgSrc: twitterGray, href: '/' },
+  {
+    id: 'social-4',
+    label: 'linkedin',
+    imgSrc: linkedinGray,
     href: 'https://www.linkedin.com/company/spartandev',
   },
 ];

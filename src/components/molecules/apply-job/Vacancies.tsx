@@ -183,14 +183,14 @@ const ListItem = ({
           color={gray[600]}
           textTransform={'uppercase'}
         >
-          {experienceLevel.join(', ')} |{' '}
+          {experienceLevel} |{' '}
           <Typography
             component={'span'}
             variant="fs18"
             fontSize={isMobile ? '12px' : '18px'}
             color={primary[400]}
           >
-            {enrollmentStatus}
+            {enrollmentStatus.join(', ')}
           </Typography>
         </Typography>
       </Box>

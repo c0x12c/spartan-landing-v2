@@ -3,6 +3,10 @@ export enum EnrollmentStatus {
   PART_TIME = 'part-time',
   ALL_TYPE = 'all-type',
 }
+export enum Location {
+  REMOTE = 'remote',
+  OFFICE = 'office',
+}
 export enum ExperienceLevel {
   FRESHER = 'fresher',
   JUNIOR = 'junior',
@@ -12,6 +16,7 @@ export enum ExperienceLevel {
 }
 export enum JobTag {
   FRONTEND = 'front-end',
+  ANDROID = 'android',
   BACKEND = 'backend',
   ANALYTICS = 'analytics',
   DESIGN = 'design',
@@ -39,6 +44,7 @@ export const listJobTag = [
   { id: 'job-tag-2', name: 'Backend', value: JobTag['BACKEND'] },
   { id: 'job-tag-3', name: 'Analytics', value: JobTag['ANALYTICS'] },
   { id: 'job-tag-4', name: 'Design', value: JobTag['DESIGN'] },
+  { id: 'job-tag-8', name: 'Android', value: JobTag['ANDROID'] },
   { id: 'job-tag-5', name: 'Testing', value: JobTag['TESTING'] },
   { id: 'job-tag-6', name: 'Management', value: JobTag['MANAGEMENT'] },
   { id: 'job-tag-7', name: 'All level', value: JobTag['ALL_JOB'] },
@@ -49,65 +55,79 @@ export interface Job {
   position: string;
   salary: string;
   tag: JobTag;
-  experienceLevel: ExperienceLevel[];
-  enrollmentStatus: EnrollmentStatus;
+  location: Location[];
+  requirements: string[];
+  aboutJob: string;
+  responsibilities: string[];
+  technologies: string[];
+  skills: string[];
+  experienceLevel: ExperienceLevel;
+  enrollmentStatus: EnrollmentStatus[];
 }
 
 export const vacancies: Job[] = [
   {
-    id: 'job-1',
-    position: 'Software Engineer',
-    salary: '2000',
-    tag: JobTag['BACKEND'],
-    experienceLevel: [ExperienceLevel['JUNIOR']],
-    enrollmentStatus: EnrollmentStatus['FULL_TIME'],
-  },
-  {
-    id: 'job-2',
-    position: 'Frontend Developer',
-    salary: '2000',
-    tag: JobTag['FRONTEND'],
-    experienceLevel: [ExperienceLevel['FRESHER'], ExperienceLevel['JUNIOR']],
-    enrollmentStatus: EnrollmentStatus['PART_TIME'],
-  },
-  {
-    id: 'job-3',
-    position: 'Data Analyst',
-    salary: '2000',
-    tag: JobTag['ANALYTICS'],
-    experienceLevel: [ExperienceLevel['JUNIOR']],
-    enrollmentStatus: EnrollmentStatus['FULL_TIME'],
-  },
-  {
-    id: 'job-4',
-    position: 'UX/UI Designer',
-    salary: '2000',
-    tag: JobTag['DESIGN'],
-    experienceLevel: [ExperienceLevel['FRESHER'], ExperienceLevel['MIDDLE']],
-    enrollmentStatus: EnrollmentStatus['FULL_TIME'],
-  },
-  {
-    id: 'job-5',
-    position: 'Backend Developer',
-    salary: '2000',
-    tag: JobTag['BACKEND'],
-    experienceLevel: [ExperienceLevel['SENIOR']],
-    enrollmentStatus: EnrollmentStatus['FULL_TIME'],
-  },
-  {
     id: 'job-6',
-    position: 'Product Manager',
+    position: 'Android Engineer',
     salary: '2000',
-    tag: JobTag['MANAGEMENT'],
-    experienceLevel: [ExperienceLevel['SENIOR'], ExperienceLevel['MIDDLE']],
-    enrollmentStatus: EnrollmentStatus['FULL_TIME'],
+    tag: JobTag['ANDROID'],
+    skills: ['Kotlin', 'Java'],
+    requirements: [
+      'Bachelor`s degree in Computer Science or related field',
+      '3+ years of experience with native Android development.',
+      'Excellent understanding of computer science fundamentals, data structures, and algorithms.',
+      'Experience developing native Android applications in Java/Kotlin.',
+      'Deep understanding of the value of dependency injection and testing.',
+      'Experience with one of the following Android architecture patterns: MVP, MVVM, MVI.',
+    ],
+    technologies: [
+      'Java/Kotlin',
+      'RxJava/RxKotlin or Kotlin Coroutines for reactive paradigm.',
+      'Dagger for DI.',
+    ],
+    responsibilities: [
+      'Be part of the engineering team where we architecture and implement new features.',
+      'Build Android applications for various startups.',
+      'Strong focus on high-quality mobile UI.',
+      'Work closely with various business partners (backend, UI/UX).',
+      'Writing functional and integration tests.',
+    ],
+    aboutJob:
+      'We are looking for an experienced Senior Android Engineer to join our Spartan Team. Who is passionate about building, testing, and working closely with various stakeholders to deliver top-notch software. You will be able to solve challenging problems, work with the latest tech stack, and work with talented engineers to contribute meaningfully.',
+    location: [Location['REMOTE']],
+    experienceLevel: ExperienceLevel['SENIOR'],
+    enrollmentStatus: [EnrollmentStatus['FULL_TIME'], EnrollmentStatus['PART_TIME']],
   },
   {
     id: 'job-7',
     position: 'QA Engineer',
     salary: '2000',
+    requirements: [
+      'Bachelor`s degree in Computer Science or related field',
+      '3+ years of experience with native Android development.',
+      'Excellent understanding of computer science fundamentals, data structures, and algorithms.',
+      'Experience developing native Android applications in Java/Kotlin.',
+      'Deep understanding of the value of dependency injection and testing.',
+      'Experience with one of the following Android architecture patterns: MVP, MVVM, MVI.',
+    ],
+    technologies: [
+      'Java/Kotlin',
+      'RxJava/RxKotlin or Kotlin Coroutines for reactive paradigm.',
+      'Dagger for DI.',
+    ],
+    responsibilities: [
+      'Be part of the engineering team where we architecture and implement new features.',
+      'Build Android applications for various startups.',
+      'Strong focus on high-quality mobile UI.',
+      'Work closely with various business partners (backend, UI/UX).',
+      'Writing functional and integration tests.',
+    ],
+    aboutJob:
+      'We are looking for an experienced Senior Android Engineer to join our Spartan Team. Who is passionate about building, testing, and working closely with various stakeholders to deliver top-notch software. You will be able to solve challenging problems, work with the latest tech stack, and work with talented engineers to contribute meaningfully.',
     tag: JobTag['TESTING'],
-    experienceLevel: [ExperienceLevel['JUNIOR']],
-    enrollmentStatus: EnrollmentStatus['PART_TIME'],
+    location: [Location['REMOTE']],
+    skills: ['Symfony', 'Lavarel', 'PHP'],
+    experienceLevel: ExperienceLevel['JUNIOR'],
+    enrollmentStatus: [EnrollmentStatus['PART_TIME'], EnrollmentStatus['PART_TIME']],
   },
 ];
