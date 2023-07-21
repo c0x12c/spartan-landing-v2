@@ -174,7 +174,7 @@ const ListItem = ({
           mb={isMobile ? '8px' : '12px'}
           color={base.black}
         >
-          Up to {salary}$
+          Competitive salary
         </Typography>
         <Typography
           component={'p'}
