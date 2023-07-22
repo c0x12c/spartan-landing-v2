@@ -128,8 +128,8 @@ const List = ({ vacancies }: { vacancies: Job[] }) => {
 };
 
 const ListItem = ({
+  id,
   position,
-  salary,
   tag,
   experienceLevel,
   enrollmentStatus,
@@ -196,6 +196,7 @@ const ListItem = ({
       </Box>
       <Button
         variant="outlined"
+        href={`/apply-job/${id}`}
         size={isMobile ? 'small' : 'large'}
         endIcon={<Image src={Arrow} alt="arrow" width={24} />}
         sx={{ minWidth: 'fit-content' }}
