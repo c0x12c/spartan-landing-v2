@@ -27,9 +27,7 @@ const JobDescription = ({ job }: JobDetailsProps) => {
       <Image src={social.imgSrc} alt={social.label} />
     </Link>
   ));
-
-  // Функція перевірки, чи тип міститься в об'єкті
-  const isContentTypeInJob = (contentType: ContentType) => contentType in job;
+  const isContentTypeInJob = (neededSection: any) => neededSection in job;
 
   return (
     <Box
@@ -43,48 +41,51 @@ const JobDescription = ({ job }: JobDetailsProps) => {
       borderRadius={'16px'}
       mb={{ xs: 0, md: '46px' }}
     >
-      {isContentTypeInJob(ContentType.Paragraph) && (
+      <JobDetailsSection
+        contentType={ContentType.Paragraph}
+        title="Why Us?"
+        text={
+          'We primarily collaborate with high-profiled tech founders in the US, including notable individuals such as the Travis VanderZanden - founder of Bird Global and COO of Lyft and VP of Uber, George Melika - founder of SFOX, and Ryan Fuji - founder of Liquidity Financial and COO of Bird Global, as well as other top executives from Apple, Snowflake, Snapchat, and Stripe. Our recruitment process is tailored to select only the top 1% of engineers. Currently, our team comprises engineers from the US, Vietnam, and Ukraine. As we work closely with some of the finest startups in LA and Silicon Valley, we place great emphasis on your problem-solving skills, communication abilities, and teamwork. Rest assured, you will gain a wealth of knowledge and experience with us!'
+        }
+      />
+      {!isContentTypeInJob(job.aboutJob) && (
         <JobDetailsSection
           contentType={ContentType.Paragraph}
           title="About the job"
           text={job.aboutJob}
         />
       )}
-      {isContentTypeInJob(ContentType.List) && (
+      {!isContentTypeInJob(job.responsibilities) && (
         <JobDetailsSection
           contentType={ContentType.List}
           title="Responsibilities"
           list={job.responsibilities}
         />
       )}
-      {isContentTypeInJob(ContentType.List) && (
+      {!isContentTypeInJob(job.requirements) && (
         <JobDetailsSection
           contentType={ContentType.List}
           title="What we'll love about you"
           list={job.requirements}
         />
       )}
-      {isContentTypeInJob(ContentType.List) && (
+      {!isContentTypeInJob(job.technologies) && (
         <JobDetailsSection
           contentType={ContentType.List}
           title="Technology we use"
           list={job.technologies}
         />
       )}
-      {isContentTypeInJob(ContentType.GroupedList) && (
-        <JobDetailsSection
-          contentType={ContentType.GroupedList}
-          title="Benefit and perks"
-          groupList={BenefitsData}
-        />
-      )}
-      {isContentTypeInJob(ContentType.List) && (
-        <JobDetailsSection
-          contentType={ContentType.List}
-          title="Why you'll love working here"
-          list={LoveWorking}
-        />
-      )}
+      <JobDetailsSection
+        contentType={ContentType.GroupedList}
+        title="Benefit and perks"
+        groupList={BenefitsData}
+      />
+      <JobDetailsSection
+        contentType={ContentType.List}
+        title="Why you'll love working here"
+        list={LoveWorking}
+      />
       <Box component={Divider} />
       <Box display={'flex'} alignItems={'center'}>
         <Typography fontWeight={600} mr={'18px'}>
