@@ -85,8 +85,8 @@ export const WhyBusiness: React.FunctionComponent<IWhyBusinessProps> = () => {
           maxWidth="668px"
           mb={isMobile ? '24px' : '65px'}
         >
-          <SubTitle text="Highlight point" data-aos="fade-up" data-aos-delay="200" />
-          <Title text="Why business choose Spartan" data-aos="fade-up" data-aos-delay="300" />
+          <SubTitle text="Our strengths" data-aos="fade-up" data-aos-delay="200" />
+          <Title text="Why do businesses choose Spartan?" data-aos="fade-up" data-aos-delay="300" />
           <BodyText
             text="Our objective is to develop a profitable and effective solution that helps clients to
             expand their businesses and overcome financial constraints"

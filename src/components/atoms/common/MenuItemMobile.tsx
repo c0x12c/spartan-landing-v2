@@ -120,7 +120,7 @@ export const MenuItemMobile: React.FC<MenuItemMobileProps> = ({ item, toggleMenu
                 }}
               >
                 <Typography className="submenu-text" variant="fs16" color={base.black}>
-                  Case Study
+                  Case Studies
                 </Typography>
                 <Box className="submenu-icon">
                   <ArrowIcon color={base.black} />

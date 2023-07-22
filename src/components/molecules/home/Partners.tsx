@@ -40,7 +40,7 @@ export const Partners: React.FunctionComponent<IPartnersProps> = () => {
         >
           <SubTitle text="Who we work with" data-aos="fade-up" data-aos-delay="200" />
           <Title
-            text="Embracing full remote Engineers for your business success"
+            text="Embracing fully remote engineers for your business's success"
             data-aos="fade-up"
             data-aos-delay="300"
           />

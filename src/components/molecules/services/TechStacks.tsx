@@ -22,7 +22,7 @@ export const TechStacks: React.FunctionComponent<ITechStacksProps> = () => {
           mx="auto"
           textAlign="center"
         >
-          <SubTitle text="Our services" data-aos="fade-up" data-aos-delay="200" />
+          <SubTitle text="Our stacks" data-aos="fade-up" data-aos-delay="200" />
           <Title text="Technology Stack" data-aos="fade-up" data-aos-delay="300" />
           <BodyText
             text="At Spartan, we pride ourselves on our robust and cutting-edge tech stack that enables us
