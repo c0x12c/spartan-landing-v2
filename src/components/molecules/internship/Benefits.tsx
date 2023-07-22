@@ -15,7 +15,7 @@ export const Benefits: React.FunctionComponent<IBenefitsProps> = () => {
       icon: <Image src={People} alt="Human element icon" />,
       title: 'Research',
       description:
-        'Spartans is renowned for its affordable, reliable, and expert IT consulting services. We provide top-of-the-line technologies, software, and applications that help enterprises gain a competitive edge in the market.',
+        'Spartans is renowned for its affordable, reliable, and expert IT consulting services. We provide top-of-the-line technologies, software, and applications that help startups and enterprises gain a competitive edge in the market.',
     },
     {
       id: 'benefit-2',

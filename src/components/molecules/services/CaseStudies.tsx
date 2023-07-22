@@ -86,7 +86,7 @@ export const ServiceCasesStudy: React.FunctionComponent<IServiceCasesStudyProps>
           <Box display={'flex'} flexDirection={'column'} gap={'24px'} maxWidth="664px">
             <SubTitle text="Our Project" data-aos="fade-up" data-aos-delay="200" />
             <Title
-              text="Case Study"
+              text="Case Studies"
               data-aos="fade-up"
               data-aos-delay="300"
               sx={{
@@ -104,7 +104,7 @@ export const ServiceCasesStudy: React.FunctionComponent<IServiceCasesStudyProps>
           {!isMobile && (
             <Link href="/case-study" scroll={false}>
               <Button variant="contained" size={isMobile ? 'small' : 'medium'}>
-                Show all case study
+                Show all case studies
                 <ArrowIcon />
               </Button>
             </Link>
@@ -124,7 +124,7 @@ export const ServiceCasesStudy: React.FunctionComponent<IServiceCasesStudyProps>
           <Box display="flex" justifyContent="center" mt="24px">
             <Link href="/case-study" scroll={false}>
               <Button variant="contained" size={isMobile ? 'small' : 'medium'}>
-                Show all case study
+                Show all case studies
                 <ArrowIcon />
               </Button>
             </Link>

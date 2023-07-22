@@ -31,7 +31,7 @@ export const SubServiceProjects: React.FunctionComponent<ISubServiceProjectsProp
           <Box display={'flex'} flexDirection={'column'} gap={isMobile ? '12px' : '24px'}>
             <SubTitle text="Our Project" data-aos="fade-up" data-aos-delay="200" />
             <Title
-              text="Case Study"
+              text="Case Studies"
               data-aos="fade-up"
               data-aos-delay="300"
               sx={{
@@ -39,9 +39,7 @@ export const SubServiceProjects: React.FunctionComponent<ISubServiceProjectsProp
               }}
             />
             <BodyText
-              text="Join us at Spartan Project and experience the strength of our capabilities,
-              complemented by the humility that drives our success. Together, we will achieve
-              remarkable outcomes and forge a path towards excellence."
+              text="Join us at Spartan projects and experience the strength of our capabilities, complemented by the humility that drives our success. Together, we will achieve remarkable outcomes and forge a path toward excellence."
               data-aos="fade-left"
               data-aos-delay="300"
               sx={{ mt: isMobile ? '12px' : 0 }}
