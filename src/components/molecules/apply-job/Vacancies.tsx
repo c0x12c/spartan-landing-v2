@@ -115,7 +115,7 @@ const List = ({ vacancies }: { vacancies: Job[] }) => {
     <Box
       display="flex"
       flexDirection="column"
-      gap={{ md: '44px', xs: '24px' }}
+      gap={{ md: '13px', xs: '24px' }}
       width="100%"
       data-aos="fade-up"
       data-aos-delay="300"
@@ -140,12 +140,19 @@ const ListItem = ({
   return (
     <Box
       borderBottom={isLastItem ? 'none' : `1px solid ${gray[400]}`}
-      p={{ md: '32px 44px', xs: '0 0 24px 0' }}
+      p={{ md: '44px 32px', xs: '0 0 24px 0' }}
       display={'flex'}
       gap={isMobile ? '0' : '38px'}
       width={'100%'}
       alignItems={{ xs: 'flex-start', sm: 'center' }}
       flexDirection={{ md: 'row', xs: 'column' }}
+      sx={{
+        ':hover': {
+          bgcolor: primary[200],
+          borderColor: primary[200],
+        },
+        transition: 'background-color 0.3s, border-color 0.3s',
+      }}
     >
       <Box flex={1} mb={{ xs: '16px', sm: '0' }}>
         <Typography
