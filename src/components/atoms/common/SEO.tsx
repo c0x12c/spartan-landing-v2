@@ -4,21 +4,27 @@ import { EPages } from '@/documents/types';
 import { NextSeo } from 'next-seo';
 interface ISEOProps {
   page: EPages;
+  title?: string;
+  description?: string;
 }
 
 export const SEO: React.FunctionComponent<ISEOProps> = (props) => {
-  const { page } = props;
+  const { page, title, description } = props;
 
   return (
     <NextSeo
-      title={SEOPages[page].title || SEOPages[EPages.HOME].title}
-      description={SEOPages[page].description || SEOPages[EPages.HOME].description}
+      title={title ? title : SEOPages[page].title || SEOPages[EPages.HOME].title}
+      description={
+        description ? description : SEOPages[page].description || SEOPages[EPages.HOME].description
+      }
       canonical={`${hostname}${SEOPages[page].slug || SEOPages[EPages.HOME].slug}`}
       openGraph={{
         type: 'website',
         url: `${hostname}${SEOPages[page].slug || SEOPages[EPages.HOME].slug}`,
-        title: SEOPages[page].title || SEOPages[EPages.HOME].title,
-        description: SEOPages[page].description || SEOPages[EPages.HOME].description,
+        title: title ? title : SEOPages[page].title || SEOPages[EPages.HOME].title,
+        description: description
+          ? description
+          : SEOPages[page].description || SEOPages[EPages.HOME].description,
         locale: 'en_EN',
         images: [
           {

@@ -4,6 +4,7 @@ import { EPages } from '@/documents/types';
 import { vacancies } from '@/constants/vacancies';
 import { GetStaticPaths, GetStaticProps } from 'next';
 import { Job } from '@/constants/vacancies';
+import { truncateString } from '@/utils';
 
 interface JobDetailsPageProps {
   job: Job;
@@ -12,7 +13,11 @@ interface JobDetailsPageProps {
 export default function JobDetailsPage({ job }: JobDetailsPageProps) {
   return (
     <>
-      <SEO page={EPages.JOB_DETAILS} />
+      <SEO
+        page={EPages.JOB_DETAILS}
+        title={`Spartan | ${job.position}`}
+        description={truncateString(job.aboutJob)}
+      />
       <JobDetails job={job} />
     </>
   );
