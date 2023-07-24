@@ -36,13 +36,14 @@ export const ShareSocials = [
     id: 'social-1',
     label: 'facebook',
     imgSrc: facebookGray,
-    href: 'https://www.facebook.com/profile.php?id=100094518799287',
+    generateShareHref: (url: string) => `https://www.facebook.com/sharer.php?u=${url}`,
   },
-  { id: 'social-3', label: 'twitter', imgSrc: twitterGray, href: '/' },
+  // { id: 'social-3', label: 'twitter', imgSrc: twitterGray, href: '/' },
   {
     id: 'social-4',
     label: 'linkedin',
     imgSrc: linkedinGray,
-    href: 'https://www.linkedin.com/company/spartandev',
+    generateShareHref: (url: string) =>
+      `https://twitter.com/intent/tweet?url=${url}&hashtags=spartandev`,
   },
 ];

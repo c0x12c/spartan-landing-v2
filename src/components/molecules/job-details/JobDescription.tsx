@@ -8,25 +8,39 @@ import { ShareSocials } from '@/constants/socials';
 import JobDetailsSection from '@/components/atoms/JobDetailsSection';
 import { ContentType } from '@/components/atoms/JobDetailsSection';
 import { BenefitsData, LoveWorking } from '@/constants/benefits';
+import { useRouter } from 'next/router';
 
 const JobDescription = ({ job }: JobDetailsProps) => {
-  const renderSocial = ShareSocials.map((social) => (
-    <Link
-      key={social.id}
-      href={social.href}
-      style={{
-        width: '32px',
-        height: '32px',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        border: `1px solid ${gray[500]}`,
-        borderRadius: '22.5px',
-      }}
-    >
-      <Image src={social.imgSrc} alt={social.label} />
-    </Link>
-  ));
+  const { asPath } = useRouter();
+  const [isMounted, setIsMounted] = React.useState(false);
+  React.useEffect(() => {
+    if (!isMounted) {
+      setIsMounted(true);
+    }
+  }, [isMounted]);
+
+  const renderSocial = ShareSocials.map((social) => {
+    const origin = typeof window !== 'undefined' ? window.location.origin : '';
+    if (!asPath && !origin) return;
+    return (
+      <Link
+        key={social.id}
+        target="_blank"
+        href={social.generateShareHref(`${origin}${asPath}`)}
+        style={{
+          width: '32px',
+          height: '32px',
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
+          border: `1px solid ${gray[500]}`,
+          borderRadius: '22.5px',
+        }}
+      >
+        <Image src={social.imgSrc} alt={social.label} />
+      </Link>
+    );
+  });
 
   return (
     <Box
@@ -91,7 +105,7 @@ const JobDescription = ({ job }: JobDetailsProps) => {
           Share job
         </Typography>
         <Box display={'flex'} gap={'10px'}>
-          {renderSocial}
+          {isMounted && renderSocial}
         </Box>
       </Box>
     </Box>
