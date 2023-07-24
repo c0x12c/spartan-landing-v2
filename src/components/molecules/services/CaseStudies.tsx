@@ -26,18 +26,15 @@ export const ServiceCasesStudy: React.FunctionComponent<IServiceCasesStudyProps>
   const [dragging, setDragging] = React.useState(false);
 
   const handleBeforeChange = React.useCallback(() => {
-    console.log('handleBeforeChange');
     setDragging(true);
   }, [setDragging]);
 
   const handleAfterChange = React.useCallback(() => {
-    console.log('handleAfterChange');
     setDragging(false);
   }, [setDragging]);
 
   const handleOnItemClick = React.useCallback(
     (e: React.MouseEvent, callback: () => void) => {
-      console.log('handleOnItemClick');
       if (dragging) e.stopPropagation();
       else callback();
     },
@@ -84,9 +81,9 @@ export const ServiceCasesStudy: React.FunctionComponent<IServiceCasesStudyProps>
           mb={isMobile ? '24px' : '84px'}
         >
           <Box display={'flex'} flexDirection={'column'} gap={'24px'} maxWidth="664px">
-            <SubTitle text="Our Project" data-aos="fade-up" data-aos-delay="200" />
+            <SubTitle text="Our projects" data-aos="fade-up" data-aos-delay="200" />
             <Title
-              text="Case Studies"
+              text="Case studies"
               data-aos="fade-up"
               data-aos-delay="300"
               sx={{
@@ -94,9 +91,7 @@ export const ServiceCasesStudy: React.FunctionComponent<IServiceCasesStudyProps>
               }}
             />
             <BodyText
-              text="Join us at Spartan Project and experience the strength of our capabilities,
-              complemented by the humility that drives our success. Together, we will achieve
-              remarkable outcomes and forge a path towards excellence."
+              text="Join us at Spartan projects and experience the strength of our capabilities, complemented by the humility that drives our success. Together, we will achieve remarkable outcomes and forge a path toward excellence."
               data-aos="fade-up"
               data-aos-delay="300"
             />

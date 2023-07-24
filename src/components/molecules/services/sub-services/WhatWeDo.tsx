@@ -62,7 +62,7 @@ export const WhatWeDo: React.FunctionComponent<IWhatWeDoProps> = ({ tag }) => {
           alignItems="center"
           textAlign="center"
         >
-          <SubTitle text="Who we do" data-aos="fade-up" data-aos-delay="200" />
+          <SubTitle text="What we do" data-aos="fade-up" data-aos-delay="200" />
           <Title text={title} data-aos="fade-up" data-aos-delay="300" />
           <BodyText
             text={description}

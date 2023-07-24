@@ -51,8 +51,8 @@ export const PartnersSubService: React.FunctionComponent<IPartnersSubServiceProp
           alignItems="center"
           textAlign="center"
         >
-          <SubTitle text="Project we work with" data-aos="fade-up" data-aos-delay="200" />
-          <Title text="The project we have built" data-aos="fade-up" data-aos-delay="300" />
+          <SubTitle text="Projects we work with" data-aos="fade-up" data-aos-delay="200" />
+          <Title text="The projects we have built" data-aos="fade-up" data-aos-delay="300" />
         </Box>
         <Box
           display="flex"

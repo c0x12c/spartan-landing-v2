@@ -10,7 +10,7 @@ export const EmpowerTech = () => {
   const isTablet = useBreakpoint(BreakPoints.LG);
   const isMobile = useBreakpoint(BreakPoints.MD);
   return (
-    <Box bgcolor={isMobile ? base.white : gray[50]} pt={isMobile ? '40px' : '100px'}>
+    <Box bgcolor={isMobile ? base.white : gray[50]} py={isMobile ? '40px' : '100px'}>
       <Container>
         <Box
           display={'flex'}

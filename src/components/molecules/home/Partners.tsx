@@ -32,7 +32,7 @@ export const Partners: React.FunctionComponent<IPartnersProps> = () => {
           display="flex"
           flexDirection="column"
           rowGap={isMobile ? '12px' : '24px'}
-          maxWidth="806px"
+          maxWidth="836px"
           mx="auto"
           alignItems="center"
           textAlign="center"

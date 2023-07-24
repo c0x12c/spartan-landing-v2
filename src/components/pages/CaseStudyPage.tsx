@@ -9,18 +9,16 @@ interface ICaseStudyPageProps {}
 export const CaseStudyPage: React.FunctionComponent<ICaseStudyPageProps> = () => {
   return (
     <MainTemplate>
+      <CaseStudyBanner />
       <Box display="flex" flexDirection="column" gap="44px">
-        <CaseStudyBanner />
         <CaseStudies />
-        <Box mb="44px">
-          <GetInTouch
-            title="Let Spartan transform your visions into reality"
-            textButton="Meet our expert"
-            linkButton="/contact-us#contact-form"
-            data-aos="zoom-in"
-            data-aos-delay="200"
-          />
-        </Box>
+        <GetInTouch
+          title="Let Spartan transform your visions into reality"
+          textButton="Meet our expert"
+          linkButton="/contact-us#contact-form"
+          data-aos="zoom-in"
+          data-aos-delay="200"
+        />
       </Box>
     </MainTemplate>
   );

@@ -25,7 +25,7 @@ export const SubServiceWorkingProcess = ({ items }: ISubServiceWorkingProcess) =
               mb={'80px'}
             >
               <SubTitle text="Process of work" data-aos="fade-up" data-aos-delay="200" />
-              <Title text="Work Process" data-aos="fade-up" data-aos-delay="300" />
+              <Title text="Work process" data-aos="fade-up" data-aos-delay="300" />
               <BodyText
                 text="Our process involves understanding your requirements for emerging technologies,
                 designing the integration or solution, developing and testing, and deploying it. We

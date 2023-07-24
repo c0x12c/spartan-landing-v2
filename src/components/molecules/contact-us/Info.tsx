@@ -10,7 +10,7 @@ import emailIcon from '@/assets/images/icons/email.svg';
 import locationIcon from '@/assets/images/icons/location.svg';
 import linkedin from '@/assets/images/icons/linkedin.svg';
 import facebook from '@/assets/images/icons/facebook.svg';
-import twitter from '@/assets/images/icons/twitter.svg';
+// import twitter from '@/assets/images/icons/twitter.svg';
 import { gray } from '@/styles/colors';
 import Link from 'next/link';
 
@@ -48,8 +48,8 @@ export const ContactInfo: React.FunctionComponent<IContactInfoProps> = () => {
           flexDirection={isMobile ? 'column' : 'row'}
           gap={isMobile ? '40px' : '88px'}
         >
-          <Box maxWidth="407px" mx={isMobile ? 'auto' : '0'}>
-            <Box position="relative" minWidth={isMobile ? '100%' : '526px'} mx="auto">
+          <Box maxWidth="407px" position="relative" mx={isMobile ? 'auto' : '0'}>
+            <Box minWidth={isMobile ? '100%' : '407px'} mx="auto">
               <Image
                 src={contactImage}
                 alt={'banner'}
@@ -63,7 +63,6 @@ export const ContactInfo: React.FunctionComponent<IContactInfoProps> = () => {
                 left="0"
                 width="100%"
                 height="100%"
-                padding="32px"
                 display="flex"
                 flexDirection="column"
                 justifyContent="space-between"

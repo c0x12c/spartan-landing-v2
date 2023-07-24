@@ -45,9 +45,7 @@ export const OurServices: React.FunctionComponent<IOurServicesProps> = () => {
           <SubTitle text="Our services" data-aos="fade-up" data-aos-delay="200" />
           <Title text="What services do we offer" data-aos="fade-up" data-aos-delay="300" />
           <BodyText
-            text="Spartans is renowned for its affordable, reliable, and expert IT consulting services. We
-            provide top-of-the-line technologies, software, and applications that help enterprises
-            gain a competitive edge in the market."
+            text="Spartans is renowned for its affordable, reliable, and expert IT consulting services. We provide top-of-the-line technologies, software, and applications that help startups and enterprises gain a competitive edge in the market."
             data-aos="fade-up"
             data-aos-delay="500"
             sx={{

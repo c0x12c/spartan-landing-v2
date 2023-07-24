@@ -18,8 +18,8 @@ export const ServicesPage: React.FunctionComponent<IServicesPageProps> = () => {
 
   return (
     <MainTemplate>
+      <ServicesBanner />
       <Box display="flex" flexDirection="column" gap={isMobile ? '24px' : '44px'}>
-        <ServicesBanner />
         <ServicesOffer />
         <TechStacks />
         <CareYourBusiness />

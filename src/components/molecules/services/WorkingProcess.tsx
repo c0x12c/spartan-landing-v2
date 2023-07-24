@@ -20,7 +20,7 @@ export const WorkingProcess = () => {
               mb={isMobile ? 0 : '80px'}
             >
               <SubTitle text="Process of work" data-aos="fade-up" data-aos-delay="200" />
-              <Title text="Work  Process" data-aos="fade-up" data-aos-delay="300" />
+              <Title text="Work process" data-aos="fade-up" data-aos-delay="300" />
               <BodyText
                 text={
                   'Discover our streamlined process for developing cutting-edge technology solutions that cater to your specific business needs. Join us on this  journey of innovation and success.'
