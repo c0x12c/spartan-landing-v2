@@ -3,8 +3,12 @@ export enum EnrollmentStatus {
   PART_TIME = 'part-time',
   ALL_TYPE = 'all-type',
 }
+export enum Location {
+  REMOTE = 'remote',
+  OFFICE = 'office',
+}
 export enum ExperienceLevel {
-  FRESHER = 'fresher',
+  INTERN = 'intern',
   JUNIOR = 'junior',
   MIDDLE = 'middle',
   SENIOR = 'senior',
@@ -12,11 +16,14 @@ export enum ExperienceLevel {
 }
 export enum JobTag {
   FRONTEND = 'front-end',
+  ENGINEERING = 'engineering',
+  ANDROID = 'android',
   BACKEND = 'backend',
   ANALYTICS = 'analytics',
   DESIGN = 'design',
   TESTING = 'testing',
   MANAGEMENT = 'management',
+  IOS = 'iOS',
   ALL_JOB = 'all-job',
 }
 
@@ -27,7 +34,7 @@ export const listEmploymentType = [
 ];
 
 export const listExperienceLevel = [
-  { id: 'employment-level-1', name: 'Fresher', value: ExperienceLevel['FRESHER'] },
+  { id: 'employment-level-1', name: 'Intern', value: ExperienceLevel['INTERN'] },
   { id: 'employment-level-2', name: 'Junior', value: ExperienceLevel['JUNIOR'] },
   { id: 'employment-level-3', name: 'Middle', value: ExperienceLevel['MIDDLE'] },
   { id: 'employment-level-4', name: 'Senior', value: ExperienceLevel['SENIOR'] },
@@ -39,6 +46,9 @@ export const listJobTag = [
   { id: 'job-tag-2', name: 'Backend', value: JobTag['BACKEND'] },
   { id: 'job-tag-3', name: 'Analytics', value: JobTag['ANALYTICS'] },
   { id: 'job-tag-4', name: 'Design', value: JobTag['DESIGN'] },
+  { id: 'job-tag-9', name: 'Engineering', value: JobTag['ENGINEERING'] },
+  { id: 'job-tag-10', name: 'iOS', value: JobTag['IOS'] },
+  { id: 'job-tag-8', name: 'Android', value: JobTag['ANDROID'] },
   { id: 'job-tag-5', name: 'Testing', value: JobTag['TESTING'] },
   { id: 'job-tag-6', name: 'Management', value: JobTag['MANAGEMENT'] },
   { id: 'job-tag-7', name: 'All level', value: JobTag['ALL_JOB'] },
@@ -47,67 +57,235 @@ export const listJobTag = [
 export interface Job {
   id: string;
   position: string;
-  salary: string;
   tag: JobTag;
-  experienceLevel: ExperienceLevel[];
-  enrollmentStatus: EnrollmentStatus;
+  location: Location[];
+  requirements?: string[];
+  aboutJob?: string;
+  responsibilities?: string[];
+  technologies?: string[];
+  skills: string[];
+  experienceLevel: ExperienceLevel;
+  enrollmentStatus: EnrollmentStatus[];
+  createdAt: string;
 }
 
 export const vacancies: Job[] = [
   {
     id: 'job-1',
-    position: 'Software Engineer',
-    salary: '2000',
-    tag: JobTag['BACKEND'],
-    experienceLevel: [ExperienceLevel['JUNIOR']],
-    enrollmentStatus: EnrollmentStatus['FULL_TIME'],
+    position: 'Senior Android Engineer',
+    requirements: [
+      "Bachelor's degree in Computer Science or related field",
+      '3+ years of experience with native Android development.',
+      'Excellent understanding of computer science fundamentals, data structures, and algorithms.',
+      'Experience developing native Android applications in Java/Kotlin.',
+      'Deep understanding of the value of dependency injection and testing.',
+      'Experience with one of the following Android architecture patterns: MVP, MVVM, MVI.',
+    ],
+    technologies: [
+      'Java/Kotlin',
+      'RxJava/RxKotlin or Kotlin Coroutines for reactive paradigm.',
+      'Dagger for DI.',
+    ],
+    responsibilities: [
+      'Be part of the engineering team where we architecture and implement new features.',
+      'Build Android applications for various startups.',
+      'Strong focus on high-quality mobile UI.',
+      'Work closely with various business partners (backend, UI/UX).',
+      'Writing functional and integration tests.',
+    ],
+    aboutJob:
+      'Our team is growing because our customer is growing, which means we need you!\n\nWe are looking for an experienced Senior Android Engineer to join our Spartan Team. Who is passionate about building, testing, and working closely with various stakeholders to deliver top-notch software. You will be able to solve challenging problems, work with the latest tech stack, and work with talented engineers to contribute meaningfully.',
+    tag: JobTag['ANDROID'],
+    location: [Location['REMOTE'], Location['OFFICE']],
+    skills: ['Java/Kotlin', 'RxJava/RxKotlin', 'Dagger'],
+    experienceLevel: ExperienceLevel['SENIOR'],
+    enrollmentStatus: [EnrollmentStatus['FULL_TIME']],
+    createdAt: '07/21/2023',
   },
   {
     id: 'job-2',
-    position: 'Frontend Developer',
-    salary: '2000',
-    tag: JobTag['FRONTEND'],
-    experienceLevel: [ExperienceLevel['FRESHER'], ExperienceLevel['JUNIOR']],
-    enrollmentStatus: EnrollmentStatus['PART_TIME'],
+    position: 'Senior iOS Engineer',
+    requirements: [
+      "Bachelor's degree in Computer Science or related field.",
+      '3+ years of experience with native iOS development.',
+      'Excellent understanding of computer science fundamentals, data structures, and algorithms.',
+      'Experience developing native iOS applications in Swift.',
+      'Deep understanding of the value of dependency injection and testing.',
+      'Experience with one of the following iOS architecture patterns: MVP, MVVM, MVI.',
+    ],
+    technologies: ['Swift', 'RxSwift for reactive paradigm.', 'Swiinject for DI.'],
+    responsibilities: [
+      'Be part of the engineering team where we architecture and implement new features.',
+      'Build iOS applications for various startups.',
+      'Strong focus on high-quality mobile UI.',
+      'Work closely with various business partners (backend, UI/UX).',
+      'Writing functional and integration tests.',
+    ],
+    aboutJob:
+      'Our team is growing because our customer is growing, which means we need you!\n\nWe are looking for an experienced Senior iOS Engineer to join our Spartan Team. Who is passionate about building, testing, and working closely with various stakeholders to deliver top-notch software. You will be able to solve challenging problems, work with the latest tech stack, and work with talented engineers to contribute meaningfully.',
+    tag: JobTag['IOS'],
+    location: [Location['REMOTE'], Location['OFFICE']],
+    skills: ['Swift', 'RxSwift', 'Swiinject'],
+    experienceLevel: ExperienceLevel['SENIOR'],
+    enrollmentStatus: [EnrollmentStatus['FULL_TIME']],
+    createdAt: '07/21/2023',
   },
   {
     id: 'job-3',
-    position: 'Data Analyst',
-    salary: '2000',
-    tag: JobTag['ANALYTICS'],
-    experienceLevel: [ExperienceLevel['JUNIOR']],
-    enrollmentStatus: EnrollmentStatus['FULL_TIME'],
+    position: 'Senior Backend Engineer',
+    requirements: [
+      "Bachelor's degree in Computer Science or related field.",
+      '3+ years of experience with Java/Kotlin/.NET.',
+      'Excellent understanding of computer science fundamentals, data structures, and algorithms.',
+      'Deep understanding of the value of dependency injection and testing.',
+      'Solid coding practices, including writing technical specifications, peer code review, and unit & integration testing.',
+    ],
+    technologies: [
+      'Java/Kotlin/.NET/Terraform/Typescript',
+      'Jenkins',
+      'Postgresql, Redis, Kafka',
+      'AWS/GCP',
+    ],
+    responsibilities: [
+      'Work with a cross-functional team to deliver timely, high-quality, and well-tested code.',
+      'Observe and enforce standards regarding code quality and test coverage.',
+      'Help continue to build the engineering culture at Spartan.',
+      'Design and build large-scale microservices for various startups.',
+    ],
+    aboutJob:
+      'Our team is growing because our customer is growing, which means we need you!\n\nWe are looking for an experienced Senior Backend Engineer to join our Spartan Team. Who is passionate about building, testing, and working closely with various stakeholders to deliver top-notch software. You will be able to solve challenging problems, work with the latest tech stack, and work with talented engineers to contribute meaningfully.',
+    tag: JobTag['BACKEND'],
+    location: [Location['REMOTE'], Location['OFFICE']],
+    skills: [
+      'Java',
+      'Kotlin',
+      '.NET',
+      'Terraform',
+      'Typescript',
+      'Jenkins',
+      'Postgresql',
+      'Redis',
+      'Kafka',
+      'AWS',
+      'GCP',
+    ],
+    experienceLevel: ExperienceLevel['SENIOR'],
+    enrollmentStatus: [EnrollmentStatus['FULL_TIME']],
+    createdAt: '07/21/2023',
   },
   {
     id: 'job-4',
-    position: 'UX/UI Designer',
-    salary: '2000',
-    tag: JobTag['DESIGN'],
-    experienceLevel: [ExperienceLevel['FRESHER'], ExperienceLevel['MIDDLE']],
-    enrollmentStatus: EnrollmentStatus['FULL_TIME'],
+    position: 'Intern Software Engineer',
+    requirements: [
+      '3rd/4th-year undergrad student or grad student in Information Technology major',
+      'Experience in Software Development and coding in a general-purpose programming language',
+      'Experience with data structures or algorithms gathered from inside or outside of school or work',
+      'Strong problem-solving and analytical skills, with keen attention to detail.',
+      'Proficient use of the English language in spoken and written form.',
+    ],
+    responsibilities: [
+      'Analyze requirements, design, programming, and perform testing based on the established design.',
+      'Resolve technical issues through debugging, research, and investigation.',
+      'Participate in cross-functional build/configuration activities to ensure effective and efficient new or enhanced software engineering designs.',
+      'Communicate, collaborate, and work effectively as part of a distributed team across various features.',
+    ],
+    aboutJob:
+      'Kickstart your career with Spartan!\n\nWe are looking for young talents with fresh ideas and an enthusiastic approach to building software. We are expecting to find someone with a strong will to learn the latest concepts in web development and contribute to our team as well as learn from professional software engineers as mentors. This position is an entry point for a full-time or part-time position within one of our project teams as a software engineer.\n\nDuring the Spartan internship program, which can range from one to six months, you will get the chance to work closely with our skilled tech engineers, engaging in hands-on experience.',
+    tag: JobTag['ENGINEERING'],
+    location: [Location['REMOTE'], Location['OFFICE']],
+    skills: ['Data structures', 'Algorithms', 'Problem-solving', 'English'],
+    experienceLevel: ExperienceLevel['INTERN'],
+    enrollmentStatus: [EnrollmentStatus['PART_TIME'], EnrollmentStatus['FULL_TIME']],
+    createdAt: '07/21/2023',
   },
   {
     id: 'job-5',
-    position: 'Backend Developer',
-    salary: '2000',
-    tag: JobTag['BACKEND'],
-    experienceLevel: [ExperienceLevel['SENIOR']],
-    enrollmentStatus: EnrollmentStatus['FULL_TIME'],
+    position: 'Senior Frontend Engineer',
+    requirements: [
+      "Bachelor's degree in Computer Science or related field.",
+      '3+ years of experience as a Frontend Developer, with a focus on web application development.',
+      'Excellent understanding of computer science fundamentals, data structures, and algorithms.',
+      'Strong proficiency in frontend technologies such as HTML5, CSS3, JavaScript, and modern JavaScript frameworks (e.g., React, Angular, Vue.js).',
+      'Experience with frontend build tools, package managers, and version control systems (e.g., Webpack, npm, Git).',
+      'Strong problem-solving and analytical skills, with keen attention to detail.',
+    ],
+    technologies: [
+      'ReactJs/nextJs',
+      'JavaScript (ES6+), TypeScript',
+      'UI Component Libraries: Material-UI, Ant Design, Bootstrap',
+      'State Management: Redux, Rematch',
+      'Routing: React Router',
+      'Testing: Jest, Enzyme, React Testing Library',
+      'Build Tools: Webpack, Babel',
+      'Version Control: Git, GitHub, GitLab',
+      'Package Managers: npm, Yarn',
+      'Code Quality and Linting: ESLint, Prettier',
+      'DevOps and Deployment: Docker, AWS',
+      'Continuous Integration and Deployment: Jenkins, AWS Amplify',
+      'Collaboration and Communication: Slack, Jira, Confluence',
+    ],
+    responsibilities: [
+      'Collaborate with designers and backend developers to translate wireframes and UI/UX designs into functional and interactive web interfaces.',
+      'Write clean, efficient, and maintainable code using HTML, CSS, and JavaScript to implement responsive and cross-browser-compatible interfaces.',
+      'Ensure that the web applications are optimized for maximum speed and scalability.',
+      'Conduct thorough testing and debugging of frontend components to ensure high-quality and bug-free code.',
+      'Collaborate with the development team to continuously improve the user experience and implement new features and enhancements.',
+      'Stay up-to-date with the latest front-end development trends and best practices and apply them to improve the quality and performance of our web applications.',
+      'Participate in code reviews and provide constructive feedback to ensure adherence to coding standards and best practices.',
+    ],
+    aboutJob:
+      'Our team is growing because our customer is growing, which means we need you!\n\nWe are looking for an experienced Senior Frontend Engineer to join our Spartan Team. Who is passionate about building, testing, and working closely with various stakeholders to deliver top-notch software. You will be able to solve challenging problems, work with the latest tech stack, and work with talented engineers to contribute meaningfully.',
+    tag: JobTag['FRONTEND'],
+    location: [Location['REMOTE'], Location['OFFICE']],
+    skills: [
+      'Frontend Development',
+      'HTML5',
+      'CSS3',
+      'JavaScript',
+      'React.js',
+      'Webpack',
+      'Git',
+      'Redux',
+      'TypeScript',
+      'Testing',
+    ],
+    experienceLevel: ExperienceLevel['SENIOR'],
+    enrollmentStatus: [EnrollmentStatus['FULL_TIME']],
+    createdAt: '07/21/2023',
   },
   {
     id: 'job-6',
-    position: 'Product Manager',
-    salary: '2000',
-    tag: JobTag['MANAGEMENT'],
-    experienceLevel: [ExperienceLevel['SENIOR'], ExperienceLevel['MIDDLE']],
-    enrollmentStatus: EnrollmentStatus['FULL_TIME'],
-  },
-  {
-    id: 'job-7',
-    position: 'QA Engineer',
-    salary: '2000',
-    tag: JobTag['TESTING'],
-    experienceLevel: [ExperienceLevel['JUNIOR']],
-    enrollmentStatus: EnrollmentStatus['PART_TIME'],
+    position: 'Product Designer',
+    requirements: [
+      'Bachelor’s or Master’s degree in Design, Human-Computer Interaction (HCI), or a related field',
+      'At least 3 years of experience in UX/UI design',
+      'Proficient in design tools such as Figma, Adobe Creative Suite, and InVision',
+      'Strong understanding of user-centered design principles and best practices',
+      'Strong communication and collaboration skills',
+      'Excellent problem-solving, critical thinking, and attention to detail',
+    ],
+    responsibilities: [
+      'Conduct user research and evaluate user feedback to continuously iterate and improve designs',
+      'Create wireframes, storyboards, user flows, process flows, and site maps to effectively communicate interaction and design ideas',
+      'Collaborate with product managers, engineers, and stakeholders to define and implement innovative solutions for the product direction, visuals, and user experience',
+      'Conduct usability testing and analyze results to improve design decisions',
+      'Execute all visual design stages from concept to final hand-off to engineering',
+      'Stay up-to-date with emerging design trends and technologies',
+    ],
+    aboutJob:
+      'We are seeking a highly skilled creative Product Designer to join our growing fully remote team. As a Product Designer at Spartan Dev, you will work directly with our design team and founder. Your work will embody our values of simplicity, support, excellence, and curiosity, ensuring our users have a seamless and intuitive experience while using our platform and customer application. The ideal candidate will have a strong passion for user-centered design and a deep understanding of user experience principles.',
+    tag: JobTag['DESIGN'],
+    location: [Location['REMOTE'], Location['OFFICE']],
+    skills: [
+      'Product Design',
+      'User Experience',
+      'UI Design',
+      'Figma',
+      'Adobe Creative Suite',
+      'InVision',
+    ],
+    experienceLevel: ExperienceLevel['ALL_LEVEL'],
+    enrollmentStatus: [EnrollmentStatus['FULL_TIME']],
+    createdAt: '07/21/2023',
   },
 ];

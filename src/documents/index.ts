@@ -176,6 +176,13 @@ const SEOPages: ISEOPages = {
     metaImage: '/home-thumbnail.png',
     slug: '/how-spartan-operates',
   },
+  [EPages.JOB_DETAILS]: {
+    title: 'Spartan | Job Details',
+    description: 'Job description and details',
+    keywords: 'Job details, Job description, Job requirements',
+    metaImage: '/home-thumbnail.png',
+    slug: '/apply-job/[id]',
+  },
 };
 
 export default SEOPages;

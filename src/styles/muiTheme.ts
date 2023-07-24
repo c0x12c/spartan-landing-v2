@@ -102,7 +102,7 @@ const createThemeByMode = (): Theme => {
       MuiCssBaseline: {
         styleOverrides: {
           body: {
-            padding: 0,
+            padding: '0 !important',
             margin: 0,
             scrollBehavior: 'smooth',
             overflowX: 'hidden',

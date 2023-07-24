@@ -16,6 +16,7 @@ import Image from 'next/image';
 import { ExperienceLevel } from '@/constants/vacancies';
 import { useState } from 'react';
 import { BreakPoints, useBreakpoint } from '@/hooks';
+import Link from 'next/link';
 
 const Vacancies = () => {
   const [teamFilter, setTeamFilter] = useState<JobTag>(JobTag['ALL_JOB']);
@@ -115,7 +116,7 @@ const List = ({ vacancies }: { vacancies: Job[] }) => {
     <Box
       display="flex"
       flexDirection="column"
-      gap={{ md: '44px', xs: '24px' }}
+      gap={{ md: '13px', xs: '24px' }}
       width="100%"
       data-aos="fade-up"
       data-aos-delay="300"
@@ -128,8 +129,8 @@ const List = ({ vacancies }: { vacancies: Job[] }) => {
 };
 
 const ListItem = ({
+  id,
   position,
-  salary,
   tag,
   experienceLevel,
   enrollmentStatus,
@@ -138,71 +139,80 @@ const ListItem = ({
   const isMobile = useBreakpoint(BreakPoints.MD);
 
   return (
-    <Box
-      borderBottom={isLastItem ? 'none' : `1px solid ${gray[400]}`}
-      p={{ md: '32px 44px', xs: '0 0 24px 0' }}
-      display={'flex'}
-      gap={isMobile ? '0' : '38px'}
-      width={'100%'}
-      alignItems={{ xs: 'flex-start', sm: 'center' }}
-      flexDirection={{ md: 'row', xs: 'column' }}
-    >
-      <Box flex={1} mb={{ xs: '16px', sm: '0' }}>
-        <Typography
-          variant={isMobile ? 'fs18' : 'fs24'}
-          component={'p'}
-          mb={isMobile ? '8px' : '12px'}
-          color={base.black}
-        >
-          {position}
-        </Typography>
-        <Typography
-          component={'p'}
-          variant="fs18"
-          color={primary[400]}
-          width={'fit-content'}
-          borderRadius={'6px'}
-          fontSize={isMobile ? '12px' : '18px'}
-        >
-          {listJobTag.find((item) => item.value === tag)?.name}
-        </Typography>
-      </Box>
-      <Box flex={1} mb={isMobile ? '8px' : '0'}>
-        <Typography
-          variant={isMobile ? 'fs18' : 'fs24'}
-          component={'p'}
-          mb={isMobile ? '8px' : '12px'}
-          color={base.black}
-        >
-          Competitive salary
-        </Typography>
-        <Typography
-          component={'p'}
-          variant="fs18"
-          fontSize={isMobile ? '12px' : '18px'}
-          color={gray[600]}
-          textTransform={'uppercase'}
-        >
-          {experienceLevel.join(', ')} |{' '}
+    <Link href={`/apply-job/${id}`}>
+      <Box
+        borderBottom={isLastItem ? 'none' : `1px solid ${gray[400]}`}
+        p={{ md: '44px 32px', xs: '0 0 24px 0' }}
+        display={'flex'}
+        gap={isMobile ? '0' : '38px'}
+        width={'100%'}
+        alignItems={{ xs: 'flex-start', sm: 'center' }}
+        flexDirection={{ md: 'row', xs: 'column' }}
+        sx={{
+          ':hover': {
+            bgcolor: primary[50],
+            borderColor: primary[200],
+          },
+          transition: 'background-color 0.3s, border-color 0.3s',
+        }}
+      >
+        <Box flex={1} mb={{ xs: '16px', sm: '0' }}>
           <Typography
-            component={'span'}
+            variant={isMobile ? 'fs18' : 'fs24'}
+            component={'p'}
+            mb={isMobile ? '8px' : '12px'}
+            color={base.black}
+          >
+            {position}
+          </Typography>
+          <Typography
+            component={'p'}
+            variant="fs18"
+            color={primary[400]}
+            width={'fit-content'}
+            borderRadius={'6px'}
+            fontSize={isMobile ? '12px' : '18px'}
+          >
+            {listJobTag.find((item) => item.value === tag)?.name}
+          </Typography>
+        </Box>
+        <Box flex={1} mb={isMobile ? '8px' : '0'}>
+          <Typography
+            variant={isMobile ? 'fs18' : 'fs24'}
+            component={'p'}
+            mb={isMobile ? '8px' : '12px'}
+            color={base.black}
+          >
+            Competitive salary
+          </Typography>
+          <Typography
+            component={'p'}
             variant="fs18"
             fontSize={isMobile ? '12px' : '18px'}
-            color={primary[400]}
+            color={gray[600]}
+            textTransform={'uppercase'}
           >
-            {enrollmentStatus}
+            {experienceLevel} |{' '}
+            <Typography
+              component={'span'}
+              variant="fs18"
+              fontSize={isMobile ? '12px' : '18px'}
+              color={primary[400]}
+            >
+              {enrollmentStatus.join(', ')}
+            </Typography>
           </Typography>
-        </Typography>
+        </Box>
+        <Button
+          variant="outlined"
+          size={isMobile ? 'small' : 'large'}
+          endIcon={<Image src={Arrow} alt="arrow" width={24} />}
+          sx={{ minWidth: 'fit-content' }}
+        >
+          Apply job
+        </Button>
       </Box>
-      <Button
-        variant="outlined"
-        size={isMobile ? 'small' : 'large'}
-        endIcon={<Image src={Arrow} alt="arrow" width={24} />}
-        sx={{ minWidth: 'fit-content' }}
-      >
-        Apply job
-      </Button>
-    </Box>
+    </Link>
   );
 };
 
