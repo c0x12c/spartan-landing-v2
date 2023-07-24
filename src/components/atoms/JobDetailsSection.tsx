@@ -21,7 +21,7 @@ interface JobDetailsSectionProps {
 }
 
 const List = ({ items, isMobile }: { items: string[]; isMobile: boolean }) => (
-  <ul style={{ listStyle: 'inside' }}>
+  <ul style={{ listStyle: 'inside', listStylePosition: 'outside' }}>
     {items.map((item, index) => (
       <li key={index} style={{ fontSize: isMobile ? '14px' : '16px', color: gray[600] }}>
         {item}

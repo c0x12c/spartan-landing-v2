@@ -66,6 +66,7 @@ export interface Job {
   skills: string[];
   experienceLevel: ExperienceLevel;
   enrollmentStatus: EnrollmentStatus[];
+  createdAt: string;
 }
 
 export const vacancies: Job[] = [
@@ -99,6 +100,7 @@ export const vacancies: Job[] = [
     skills: ['Java/Kotlin', 'RxJava/RxKotlin', 'Dagger'],
     experienceLevel: ExperienceLevel['SENIOR'],
     enrollmentStatus: [EnrollmentStatus['FULL_TIME']],
+    createdAt: '07/21/2023',
   },
   {
     id: 'job-2',
@@ -126,6 +128,7 @@ export const vacancies: Job[] = [
     skills: ['Swift', 'RxSwift', 'Swiinject'],
     experienceLevel: ExperienceLevel['SENIOR'],
     enrollmentStatus: [EnrollmentStatus['FULL_TIME']],
+    createdAt: '07/21/2023',
   },
   {
     id: 'job-2',
@@ -168,6 +171,7 @@ export const vacancies: Job[] = [
     ],
     experienceLevel: ExperienceLevel['SENIOR'],
     enrollmentStatus: [EnrollmentStatus['FULL_TIME']],
+    createdAt: '07/21/2023',
   },
   {
     id: 'job-4',
@@ -192,6 +196,7 @@ export const vacancies: Job[] = [
     skills: ['Data structures', 'Algorithms', 'Problem-solving', 'English'],
     experienceLevel: ExperienceLevel['INTERN'],
     enrollmentStatus: [EnrollmentStatus['PART_TIME'], EnrollmentStatus['FULL_TIME']],
+    createdAt: '07/21/2023',
   },
   {
     id: 'job-5',
@@ -246,6 +251,7 @@ export const vacancies: Job[] = [
     ],
     experienceLevel: ExperienceLevel['SENIOR'],
     enrollmentStatus: [EnrollmentStatus['FULL_TIME']],
+    createdAt: '07/21/2023',
   },
   {
     id: 'job-6',
@@ -280,5 +286,6 @@ export const vacancies: Job[] = [
     ],
     experienceLevel: ExperienceLevel['ALL_LEVEL'],
     enrollmentStatus: [EnrollmentStatus['FULL_TIME']],
+    createdAt: '07/21/2023',
   },
 ];
