@@ -34,7 +34,7 @@ const JobDescription = ({ job }: JobDetailsProps) => {
       p={'24px'}
       display={'flex'}
       flexDirection={'column'}
-      gap={'16px'}
+      gap={'24px'}
       bgcolor={base.white}
       boxShadow={` 0px 10px 47px 0px ${gray[75]}`}
       borderRadius={'16px'}

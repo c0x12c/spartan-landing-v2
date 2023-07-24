@@ -21,9 +21,12 @@ interface JobDetailsSectionProps {
 }
 
 const List = ({ items, isMobile }: { items: string[]; isMobile: boolean }) => (
-  <ul style={{ listStyle: 'inside', listStylePosition: 'outside' }}>
+  <ul style={{ listStylePosition: 'outside', paddingLeft: '16px' }}>
     {items.map((item, index) => (
-      <li key={index} style={{ fontSize: isMobile ? '14px' : '16px', color: gray[600] }}>
+      <li
+        key={index}
+        style={{ fontSize: isMobile ? '14px' : '16px', color: gray[600], lineHeight: 1.75 }}
+      >
         {item}
       </li>
     ))}
@@ -69,7 +72,11 @@ const JobDetailsSection: React.FC<JobDetailsSectionProps> = ({
       case ContentType.List:
         return list && <List items={list} isMobile={isMobile} />;
       case ContentType.Paragraph:
-        return text && <BodyText text={text} sx={{ fontSize: { xs: '14px', md: '16px' } }} />;
+        return (
+          text && (
+            <BodyText text={text} sx={{ fontSize: { xs: '14px', md: '16px' }, lineHeight: 1.75 }} />
+          )
+        );
       case ContentType.GroupedList:
         return groupList && <GroupedList groupedItems={groupList} isMobile={isMobile} />;
       default:

@@ -8,6 +8,9 @@ import Timer from '@/assets/images/icons/timer-grey.svg';
 import React from 'react';
 import Arrow from '@/assets/images/icons/arrow.svg';
 import Image from 'next/image';
+import relativeTime from 'dayjs/plugin/relativeTime';
+import dayjs from 'dayjs';
+dayjs.extend(relativeTime);
 
 const JobBanner = ({ job }: JobDetailsProps) => {
   const renderSkills = job.skills.map((skill, index) => {
@@ -35,13 +38,14 @@ const JobBanner = ({ job }: JobDetailsProps) => {
     >
       <SubTitle text="Now hiring" sx={{ mb: '14px' }} />
       <Title text={job.position} sx={{ mb: '16px' }} />
-      <Box display={'flex'} flexDirection={'column'} gap={'8px'} mb={'9px'}>
+      <Box display={'flex'} flexDirection={'column'} gap={'8px'} mb={'8px'}>
         <Box
           color={gray[500]}
           fontSize={{ xs: '14px', md: '16px' }}
           alignItems={'center'}
           gap={'12px'}
           display={'flex'}
+          textTransform="capitalize"
         >
           <Image src={Location} alt="Location" style={{ width: '24px', height: '24px' }} />
           {job.location.join(', ')}
@@ -52,6 +56,7 @@ const JobBanner = ({ job }: JobDetailsProps) => {
           alignItems={'center'}
           gap={'12px'}
           display={'flex'}
+          textTransform="capitalize"
         >
           <Image src={Timer} alt="Timer" style={{ width: '24px', height: '24px' }} />
           {job.enrollmentStatus.join(', ')}
@@ -64,7 +69,7 @@ const JobBanner = ({ job }: JobDetailsProps) => {
           display={'flex'}
         >
           <Image src={TimerOutline} alt="TimerOutline" style={{ width: '24px', height: '24px' }} />
-          {job.location.join(', ')}
+          Posted {dayjs(job.createdAt).fromNow()}
         </Box>
       </Box>
       <Box mb={'16px'} display={'flex'} alignItems={'center'}>
