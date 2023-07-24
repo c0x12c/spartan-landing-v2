@@ -21,7 +21,6 @@ const JobDescription = ({ job }: JobDetailsProps) => {
 
   const renderSocial = ShareSocials.map((social) => {
     const origin = typeof window !== 'undefined' ? window.location.origin : '';
-    if (!asPath && !origin) return;
     return (
       <Link
         key={social.id}
