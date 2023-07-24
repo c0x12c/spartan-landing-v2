@@ -131,7 +131,7 @@ export const vacancies: Job[] = [
     createdAt: '07/21/2023',
   },
   {
-    id: 'job-2',
+    id: 'job-3',
     position: 'Senior Backend Engineer',
     requirements: [
       "Bachelor's degree in Computer Science or related field.",

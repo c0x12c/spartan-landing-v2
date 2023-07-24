@@ -1,12 +1,14 @@
-import { Box, Link, Typography } from '@mui/material';
+import { Box, Typography } from '@mui/material';
 import React from 'react';
 import { vacancies } from '@/constants/vacancies';
 import JobListItem from '@/components/atoms/JobListItem';
 import { base, gray, primary } from '@/styles/colors';
 import Arrow from '@/assets/images/icons/arrow-purple.svg';
 import Image from 'next/image';
+import Link from 'next/link';
 
 const JobList = ({ currentId }: { currentId: string }) => {
+  const otherJobs = vacancies.filter((item) => item.id !== currentId);
   return (
     <Box
       display={'flex'}
@@ -22,10 +24,7 @@ const JobList = ({ currentId }: { currentId: string }) => {
       <Typography variant="fs24" color={base.black}>
         More jobs for you
       </Typography>
-      {vacancies.map((job, index) => {
-        if (job.id === currentId) {
-          return null;
-        }
+      {otherJobs.map((job, index) => {
         return (
           <JobListItem
             key={index}
@@ -38,14 +37,16 @@ const JobList = ({ currentId }: { currentId: string }) => {
         );
       })}
       <Link
-        display={'flex'}
-        gap={'10px'}
-        underline="none"
         href="/apply-job"
-        width={'max-content'}
-        color={primary[400]}
-        fontWeight={600}
-        borderBottom={`1px solid ${primary[400]}`}
+        style={{
+          display: 'flex',
+          gap: '10px',
+          textDecoration: 'none',
+          width: 'max-content',
+          color: primary[400],
+          fontWeight: 600,
+          borderBottom: `1px solid ${primary[400]}`,
+        }}
       >
         View all open positions
         <Image src={Arrow} alt="Arrow" />
