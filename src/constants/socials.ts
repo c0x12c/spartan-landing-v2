@@ -38,12 +38,18 @@ export const ShareSocials = [
     imgSrc: facebookGray,
     generateShareHref: (url: string) => `https://www.facebook.com/sharer.php?u=${url}`,
   },
-  // { id: 'social-3', label: 'twitter', imgSrc: twitterGray, href: '/' },
+  {
+    id: 'social-3',
+    label: 'twitter',
+    imgSrc: twitterGray,
+    generateShareHref: (url: string) =>
+      `https://twitter.com/intent/tweet?url=${url}&hashtags=spartandev`,
+  },
   {
     id: 'social-4',
     label: 'linkedin',
     imgSrc: linkedinGray,
     generateShareHref: (url: string) =>
-      `https://twitter.com/intent/tweet?url=${url}&hashtags=spartandev`,
+      `https://www.linkedin.com/shareArticle?mini=true&url=${url}`,
   },
 ];
