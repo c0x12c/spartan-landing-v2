@@ -10,11 +10,15 @@ import {
 } from '@/components/atoms';
 import { BreakPoints, useBreakpoint } from '@/hooks';
 import { base, gray } from '@/styles/colors';
+import Link from 'next/link';
 
 interface IReadyToJoinFormProps {}
 
 export const ReadyToJoinForm: React.FunctionComponent<IReadyToJoinFormProps> = () => {
   const isMobile = useBreakpoint(BreakPoints.MD);
+
+  const [firstName, setFirstName] = React.useState('');
+  const [lastName, setLastName] = React.useState('');
 
   return (
     <Box
@@ -74,26 +78,41 @@ export const ReadyToJoinForm: React.FunctionComponent<IReadyToJoinFormProps> = (
           >
             <Title text="Submit form" sx={{ fontSize: isMobile ? '28px' : '48px' }} />
             <Box component={'form'} display="flex" flexDirection="column" gap="32px">
-              <TextFieldWithLabel title="First name" id="firstName" isRequired />
-              <TextFieldWithLabel title="Last name" id="lastName" isRequired />
+              <TextFieldWithLabel
+                title="First name"
+                updateValue={setFirstName}
+                id="firstName"
+                isRequired
+              />
+              <TextFieldWithLabel
+                title="Last name"
+                updateValue={setLastName}
+                id="lastName"
+                isRequired
+              />
               <TextFieldWithLabel title="Email" id="email" isRequired />
-              <UploadFile
+              {/* <UploadFile
                 title="Attach your résume here"
                 text="Attach file"
                 helpText="(Format: .doc, .docx, .pdf, .xls, .xlsx; <=5MB)"
                 isRequired
-              />
+              /> */}
             </Box>
-            <Button
-              variant="contained"
-              size={isMobile ? 'small' : 'medium'}
-              sx={{
-                width: 'fit-content',
-              }}
+            <Link
+              href={`mailto:thuy.nguyen@c0x12c.com?body=Dear ${lastName}, please leave your message here, and don’t forget to attach your résume.`}
+              target="_blank"
             >
-              Submit now
-              <ArrowIcon />
-            </Button>
+              <Button
+                variant="contained"
+                size={isMobile ? 'small' : 'medium'}
+                sx={{
+                  width: 'fit-content',
+                }}
+              >
+                Submit now
+                <ArrowIcon />
+              </Button>
+            </Link>
           </Box>
         </Box>
       </Container>

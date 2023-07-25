@@ -39,7 +39,7 @@ const Quotes = () => {
         <Image
           src={item.img}
           alt={item.author}
-          style={{ maxWidth: '100%', borderRadius: '8px', height: 'auto', paddingLeft: '2px' }}
+          style={{ maxWidth: '263px', borderRadius: '8px', height: 'auto', paddingLeft: '2px' }}
         />
         <Box
           width={{ md: '78%', xs: '100%' }}
