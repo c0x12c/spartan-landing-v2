@@ -1,6 +1,7 @@
 import { base, gray } from '@/styles/colors';
 import { PoppinsFont } from '@/styles/muiTheme';
 import { Box, TextField, TextFieldProps, Typography, styled } from '@mui/material';
+import { ChangeEvent } from 'react';
 
 export const CustomTextField = styled(TextField)(({ theme }) => ({
   '& .MuiInputBase-input': {
@@ -55,14 +56,22 @@ interface ITextFieldWithLabel {
   title: string;
   id: string;
   isRequired?: boolean;
+  updateValue?: (value: string) => void;
 }
 
 export const TextFieldWithLabel = ({
   title,
   id,
   isRequired = false,
+  updateValue,
   ...props
 }: ITextFieldWithLabel & TextFieldProps) => {
+  const onChange = (e: ChangeEvent<HTMLInputElement>) => {
+    const { value } = e.target;
+    if (updateValue) {
+      updateValue(value);
+    }
+  };
   return (
     <Box>
       <Box component={'label'} htmlFor={id}>
@@ -80,6 +89,7 @@ export const TextFieldWithLabel = ({
         fullWidth
         inputProps={{ style: { padding: '12px 20px' } }}
         placeholder={title}
+        onChange={onChange}
         {...props}
       />
     </Box>

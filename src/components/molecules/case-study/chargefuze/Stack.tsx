@@ -31,7 +31,7 @@ const CFTechStacks: React.FunctionComponent<ICFTechStacksProps> = () => {
             text="At Spartan, we pride ourselves on our robust and cutting-edge tech stack that enables us
             to deliver innovative solutions and drive operational efficiency."
             data-aos="zoom-in"
-            data-aos-delay="300"
+            data-aos-delay="200"
           />
         </Box>
         <Stacks data={CFStackList} />

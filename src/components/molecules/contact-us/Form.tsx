@@ -3,11 +3,16 @@ import { Box, Button } from '@mui/material';
 import { ArrowIcon, BodyText, Container, TextFieldWithLabel, Title } from '@/components/atoms';
 import { BreakPoints, useBreakpoint } from '@/hooks';
 import { base, gray } from '@/styles/colors';
+import Link from 'next/link';
 
 interface IContactUsFormProps {}
 
 export const ContactUsForm: React.FunctionComponent<IContactUsFormProps> = () => {
   const isMobile = useBreakpoint(BreakPoints.MD);
+
+  const [firstName, setFirstName] = React.useState('');
+  const [lastName, setLastName] = React.useState('');
+  const [message, setMessage] = React.useState('');
 
   return (
     <Box
@@ -54,26 +59,42 @@ export const ContactUsForm: React.FunctionComponent<IContactUsFormProps> = () =>
           >
             <Title text="Submit form" sx={{ fontSize: isMobile ? '28px' : '48px' }} />
             <Box component={'form'} display="flex" flexDirection="column" gap="32px">
-              <TextFieldWithLabel title="First name" id="firstName" isRequired />
-              <TextFieldWithLabel title="Last name" id="lastName" isRequired />
+              <TextFieldWithLabel
+                title="First name"
+                updateValue={setFirstName}
+                id="firstName"
+                isRequired
+              />
+              <TextFieldWithLabel
+                title="Last name"
+                updateValue={setLastName}
+                id="lastName"
+                isRequired
+              />
               <TextFieldWithLabel title="Email" placeholder="work@mail.com" id="email" isRequired />
               <TextFieldWithLabel
                 title="Your message"
                 placeholder="Message"
                 id="message"
+                updateValue={setMessage}
                 minRows={4}
                 multiline
                 isRequired
               />
             </Box>
-            <Button
-              variant="contained"
-              size={isMobile ? 'small' : 'medium'}
-              sx={{ width: 'fit-content' }}
+            <Link
+              href={`mailto:thuy.nguyen@c0x12c.com?body=Dear ${lastName}, please leave your message here, and we will contact you soon.`}
+              target="_blank"
             >
-              Submit now
-              <ArrowIcon />
-            </Button>
+              <Button
+                variant="contained"
+                size={isMobile ? 'small' : 'medium'}
+                sx={{ width: 'fit-content' }}
+              >
+                Submit now
+                <ArrowIcon />
+              </Button>
+            </Link>
           </Box>
         </Box>
       </Container>

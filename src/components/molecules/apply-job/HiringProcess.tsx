@@ -21,7 +21,7 @@ const HiringProcess = () => {
         >
           <SubTitle text="Process of work" data-aos="fade-up" data-aos-delay="200" />
           <Title
-            text="Rigorous screening for 1% elite engineers"
+            text="Rigorous screening for 3% elite engineers"
             data-aos="fade-up"
             data-aos-delay="200"
           />

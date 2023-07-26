@@ -6,11 +6,15 @@ import { Container, TextFieldWithLabel, Title, UploadFile } from '@/components/a
 import { BreakPoints, useBreakpoint } from '@/hooks';
 import formImage from '@/assets/images/internship/form-image.png';
 import internshipFormImage from '@/assets/images/internship/internship-form.png';
+import Link from 'next/link';
 
 interface IInternshipFormProps {}
 
 export const InternshipForm: React.FunctionComponent<IInternshipFormProps> = () => {
   const isMobile = useBreakpoint(BreakPoints.MD);
+
+  const [firstName, setFirstName] = React.useState('');
+  const [lastName, setLastName] = React.useState('');
 
   return (
     <Box mb="44px" id="internship-form">
@@ -63,26 +67,41 @@ export const InternshipForm: React.FunctionComponent<IInternshipFormProps> = () 
           >
             <Title text="Submit form" sx={{ fontSize: isMobile ? '28px' : '48px' }} />
             <Box component="form" display="flex" flexDirection="column" gap="32px">
-              <TextFieldWithLabel title="First name" id="firstName" isRequired />
-              <TextFieldWithLabel title="Last name" id="lastName" isRequired />
+              <TextFieldWithLabel
+                title="First name"
+                updateValue={setFirstName}
+                id="firstName"
+                isRequired
+              />
+              <TextFieldWithLabel
+                title="Last name"
+                updateValue={setLastName}
+                id="lastName"
+                isRequired
+              />
               <TextFieldWithLabel title="Email" id="email" isRequired />
-              <UploadFile
+              {/* <UploadFile
                 title="Attach your résume here"
                 text="Attach file"
                 helpText="(Format: .doc, .docx, .pdf, .xls, .xlsx; <=5MB)"
                 isRequired
-              />
+              /> */}
             </Box>
-            <Button
-              variant="contained"
-              size={isMobile ? 'small' : 'medium'}
-              sx={{
-                width: 'fit-content',
-              }}
+            <Link
+              href={`mailto:thuy.nguyen@c0x12c.com?body=Dear ${lastName}, please leave your message here, and don’t forget to attach your résume.`}
+              target="_blank"
             >
-              Submit now
-              <ArrowIcon />
-            </Button>
+              <Button
+                variant="contained"
+                size={isMobile ? 'small' : 'medium'}
+                sx={{
+                  width: 'fit-content',
+                }}
+              >
+                Submit now
+                <ArrowIcon />
+              </Button>
+            </Link>
           </Box>
         </Box>
       </Container>
