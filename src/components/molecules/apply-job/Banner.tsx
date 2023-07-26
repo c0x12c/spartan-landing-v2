@@ -4,6 +4,7 @@ import Image from 'next/image';
 import Arrow from '@/assets/images/icons/arrow.svg';
 import BannerImage from '@/assets/images/apply-job/banner-image.svg';
 import { BreakPoints, useBreakpoint } from '@/hooks';
+import Link from 'next/link';
 
 const ApplyJobBanner = () => {
   const isMobile = useBreakpoint(BreakPoints.MD);
@@ -30,13 +31,15 @@ const ApplyJobBanner = () => {
               text=" Join 100+ of the world's best engineers & get full-time, long-term remote
                 software jobs with better compensation and career growth."
             />
-            <Button
-              variant="contained"
-              size={isMobile ? 'small' : 'large'}
-              endIcon={<Image src={Arrow} alt="arrow" width={24} />}
-            >
-              Apply now
-            </Button>
+            <Link href="/ready-to-join">
+              <Button
+                variant="contained"
+                size={isMobile ? 'small' : 'large'}
+                endIcon={<Image src={Arrow} alt="arrow" width={24} />}
+              >
+                Apply now
+              </Button>
+            </Link>
           </Box>
           <Image
             data-aos="fade-left"

@@ -1,6 +1,7 @@
 import { StaticImageData } from 'next/image';
 import KhoaTran from '../assets/images/apply-job/KhoaTran.jpg';
 import Ihor from '../assets/images/apply-job/Ihor.png';
+import Uyen from '../assets/images/apply-job/Uyen.png';
 
 export interface QuoteType {
   id: number;
@@ -12,21 +13,21 @@ export interface QuoteType {
 }
 
 export const quotes = [
-  {
-    id: 2,
-    img: KhoaTran,
-    title: 'The best',
-    text: 'Spartan is more than just a workplace; it`s a community of passionate and talented individuals who are dedicated to achieving excellence. The collaborative nature of the company fosters innovation and creativity, making every project a rewarding experience. The management team is genuinely invested in the success and well-being of its employees, creating a positive and fulfilling work environment. I`m proud to be a Spartan!',
-    author: 'Nhi Tran',
-    authorPosition: 'Vietnam',
-  },
+  // {
+  //   id: 2,
+  //   img: KhoaTran,
+  //   title: 'The best',
+  //   text: 'Spartan is more than just a workplace; it`s a community of passionate and talented individuals who are dedicated to achieving excellence. The collaborative nature of the company fosters innovation and creativity, making every project a rewarding experience. The management team is genuinely invested in the success and well-being of its employees, creating a positive and fulfilling work environment. I`m proud to be a Spartan!',
+  //   author: 'Nhi Tran',
+  //   authorPosition: 'Vietnam',
+  // },
   {
     id: 3,
-    img: KhoaTran,
-    title: 'Amazing',
-    text: 'Spartan is more than just a workplace; it`s a community of passionate and talented individuals who are dedicated to achieving excellence. The collaborative nature of the company fosters innovation and creativity, making every project a rewarding experience. The management team is genuinely invested in the success and well-being of its employees, creating a positive and fulfilling work environment. I`m proud to be a Spartan!',
-    author: 'Quyen Nguyen',
-    authorPosition: 'Vietnam',
+    img: Uyen,
+    title: 'Uyen Huynh',
+    text: 'Spartan is like a new door, a fresh opportunity for me to work here. I have encountered many talented individuals who can guide and assist me in determining my future direction. Not only that, but the people here also have a genuine passion for sports and encourage everyone to participate together, fostering a habit for each person instead of imposing it. I genuinely admire this approach, as it swiftly integrates me and motivates me to stay on par with everyone else. In conclusion, I am exceedingly content and grateful to be a part of the Spartan team.',
+    author: 'Uyen Huynh',
+    authorPosition: 'QA Engineer - Vietnam',
   },
   {
     id: 4,

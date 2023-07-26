@@ -99,7 +99,7 @@ export const ReadyToJoinForm: React.FunctionComponent<IReadyToJoinFormProps> = (
               /> */}
             </Box>
             <Link
-              href={`mailto:thuy.nguyen@c0x12c.com?body=Dear ${lastName}, please leave your message here, and don’t forget to attach your résume.`}
+              href={`https://mail.google.com/mail/?view=cm&fs=1&to=thuy.nguyen@c0x12c.com&body=Dear ${lastName}, please leave your message here, and don’t forget to attach your résume.`}
               target="_blank"
             >
               <Button
