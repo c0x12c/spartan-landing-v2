@@ -28,9 +28,6 @@ export const BenefitsData = [
   },
 ];
 
-export const WhyUsText =
-  'We primarily collaborate with high-profiled tech founders in the US, including notable individuals such as the Travis VanderZanden - founder of Bird Global and COO of Lyft and VP of Uber, George Melika - founder of SFOX, and Ryan Fuji - founder of Liquidity Financial and COO of Bird Global, as well as other top executives from Apple, Snowflake, Snapchat, and Stripe. Our recruitment process is tailored to select only the top 1% of engineers. Currently, our team comprises engineers from the US, Vietnam, and Ukraine. As we work closely with some of the finest startups in LA and Silicon Valley, we place great emphasis on your problem-solving skills, communication abilities, and teamwork. Rest assured, you will gain a wealth of knowledge and experience with us!';
-
 export const LoveWorking = [
   'Challenge yourself with high and difficult goals by participating in unprecedented business models in the market.',
   'Work in an Agile environment that is highly flexible and open, eager to incubate any valuable idea.',

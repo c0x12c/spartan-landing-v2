@@ -15,7 +15,7 @@ const SEOPages: ISEOPages = {
   [EPages.ABOUT_US]: {
     title: 'Spartan | About Us',
     description:
-      'We are Spartan, a team of elite tech-savvy people who specialize in providing top-notch technical expertise to meet your goals. Our engineers are selected from the top 1%, signifying that they are not merely proficient coders but also exceptional engineers with a deep comprehension of the intricacies of software development.',
+      'We are Spartan, a team of elite tech-savvy people who specialize in providing top-notch technical expertise to meet your goals. Our engineers are selected from the top 3%, signifying that they are not merely proficient coders but also exceptional engineers with a deep comprehension of the intricacies of software development.',
     keywords:
       'Mission and vision, Company values, Team of experts, Experience and expertise, Client satisfaction, Industry recognition.',
     metaImage: '/home-thumbnail.png',
