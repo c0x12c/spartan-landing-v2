@@ -39,7 +39,7 @@ export const WhyBusiness: React.FunctionComponent<IWhyBusinessProps> = () => {
       id: 'biz-2',
       title: 'Engineering Force',
       icon: timer,
-      subTitle: '1%',
+      subTitle: '3%',
       content: (
         <>
           <Typography variant={isMobile ? 'fs14' : 'fs16'} color={gray[500]} letterSpacing="0.28px">
@@ -47,7 +47,7 @@ export const WhyBusiness: React.FunctionComponent<IWhyBusinessProps> = () => {
             <Typography variant={isMobile ? 'fs14' : 'fs16'} color={primary[400]} fontWeight={600}>
               engineers{' '}
             </Typography>
-            of the word.
+            around the word.
           </Typography>
         </>
       ),

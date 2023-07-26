@@ -22,7 +22,7 @@ export const AboutUsBanner = () => {
             <BodyText
               text="We are Spartan, a team of elite tech-savvy people who specialize in providing
                 top-notch technical expertise to meet your goals. Our engineers are selected from the
-                top 1%, signifying that they are not merely proficient coders but also exceptional
+                top 3%, signifying that they are not merely proficient coders but also exceptional
                 engineers with a deep comprehension of the intricacies of software development."
               data-aos="fade-up"
               data-aos-delay="300"
