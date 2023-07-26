@@ -14,6 +14,7 @@ import '@/styles/animations.css';
 import '@/styles/index.css';
 import { useRouter } from 'next/router';
 import { useEffect } from 'react';
+import { Toaster } from 'react-hot-toast';
 
 export type MyAppProps = AppProps;
 
@@ -61,6 +62,7 @@ const MyApp: React.FC<MyAppProps> = (props) => {
     <ThemeProvider theme={theme}>
       <CssBaseline />
       <Component {...pageProps} />
+      <Toaster position="bottom-center" />
     </ThemeProvider>
   );
 };
