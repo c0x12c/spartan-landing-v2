@@ -10,6 +10,7 @@ import chargeFuzeQuote from '@/assets/images/projects/quote-chargefuze.png';
 import liquidityQuote from '@/assets/images/projects/quote-liquidity.png';
 import liveCastQuote from '@/assets/images/projects/quote-livecast.png';
 import ursaLiveQuote from '@/assets/images/projects/quote-ursalive.png';
+import AgoraFounder from '../assets/images/about-us/AgoraFounder.png';
 
 import voltaWalletUserImage from '@/assets/images/projects/volta-user.png';
 import { StaticImageData } from 'next/image';
@@ -116,10 +117,10 @@ export const Projects: ProjectType[] = [
       imgSrc: liveCastQuote,
       title: 'Spartan Is A Remarkable Team with Unmatched Expertise',
       content:
-        'Working with the Spartan team to build our product has been an incredible experience. Their expertise, dedication, and technical skills have exceeded our expectations. We appreciate their proactive approach, attention to detail, and ability to deliver exceptional results. We are grateful for their support and look forward to continuing our partnership in future projects.',
-      userName: 'Daniel Kim',
-      userPosition: 'Volta’s Co-Founder ',
-      userImgSrc: voltaWalletUserImage,
+        'I`ve gone through several dev agencies that have all disappointed me until I found Spartan.  I was skeptical at first, but within a month of working with the Spartan team, I migrated the rest of my projects over to them.  Their ability to execute high quality software engineering at a fast speed is hard to find.',
+      userName: 'Cody Zhang',
+      userPosition: 'Agora`s Co-Founder ',
+      userImgSrc: AgoraFounder,
     },
   },
   {

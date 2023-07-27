@@ -145,7 +145,11 @@ export const Clients: React.FunctionComponent<IClientsProps> = () => {
             >
               <Box display="flex" alignItems="center" gap="24px">
                 <Box width="58px" height="58px" borderRadius="50%" overflow="hidden">
-                  <Image src={item.quote.userImgSrc} alt={item.quote.userName} />
+                  <Image
+                    src={item.quote.userImgSrc}
+                    alt={item.quote.userName}
+                    style={{ maxWidth: '100%', maxHeight: '100%' }}
+                  />
                 </Box>
                 <Box display="flex" flexDirection="column">
                   <Typography variant={isMobile ? 'fs14' : 'fs18'} color={gray[900]} component="p">
