@@ -1,9 +1,9 @@
 import * as React from 'react';
 import { BodyText, Container, Title } from '@/components/atoms';
 import { Box } from '@mui/material';
-import resultBanner from '@/assets/images/case-ursa/result-banner.png';
-import resultBannerSp from '@/assets/images/case-ursa/result-banner-sp.png';
-import resultImage from '@/assets/images/case-ursa/result-image.png';
+import resultBanner from '@/assets/images/case-ursa/result-banner.webp';
+import resultBannerSp from '@/assets/images/case-ursa/result-banner-sp.webp';
+import resultImage from '@/assets/images/case-ursa/result-image.webp';
 import { BreakPoints, useBreakpoint } from '@/hooks';
 import Image from 'next/image';
 import { base } from '@/styles/colors';
