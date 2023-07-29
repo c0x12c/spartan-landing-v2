@@ -1,6 +1,6 @@
 import { Banner } from '@/components/atoms/Banner';
-import BG from '@/assets/images/case-liquidity/Background.png';
-import BGSp from '@/assets/images/case-liquidity/Background-sp.png';
+import BG from '@/assets/images/case-liquidity/Background.webp';
+import BGSp from '@/assets/images/case-liquidity/Background-sp.webp';
 import { Box } from '@mui/material';
 import Image from 'next/image';
 import BannerImage from '@/assets/images/case-liquidity/image-banner.svg';

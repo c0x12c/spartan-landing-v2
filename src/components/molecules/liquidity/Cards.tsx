@@ -1,7 +1,7 @@
 import { Box, Typography } from '@mui/material';
 import Image from 'next/image';
-import DodgeCard from '@/assets/images/case-liquidity/dodge-card.svg';
-import CauseCard from '@/assets/images/case-liquidity/cause-card.svg';
+import DodgeCard from '@/assets/images/case-liquidity/dodge-card.webp';
+import CauseCard from '@/assets/images/case-liquidity/cause-card.webp';
 import DownloadAppPanel from '@/components/atoms/DownloadAppPanel';
 import { Container } from '@/components/atoms/common/Container';
 import { base } from '@/styles/colors';
