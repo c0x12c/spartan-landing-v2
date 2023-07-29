@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { Box, Grid } from '@mui/material';
-import bg from '@/assets/images/case-agora/banner-image.png';
-import bgSp from '@/assets/images/case-agora/banner-image-sp.png';
+import bg from '@/assets/images/case-agora/banner-image.webp';
+import bgSp from '@/assets/images/case-agora/banner-image-sp.webp';
 import { Banner, BodyText, Container, MainTitle } from '@/components/atoms';
 import { gray } from '@/styles/colors';
 import { BreakPoints, useBreakpoint } from '@/hooks';
