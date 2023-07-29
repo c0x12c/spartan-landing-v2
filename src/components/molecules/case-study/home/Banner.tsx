@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { Box, Typography } from '@mui/material';
-import bg from '@/assets/images/case-study/banner-image.png';
+import bg from '@/assets/images/case-study/banner-image.webp';
 import { Container } from '@/components/atoms';
 import { base } from '@/styles/colors';
 

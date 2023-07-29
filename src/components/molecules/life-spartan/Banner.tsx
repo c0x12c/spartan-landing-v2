@@ -2,8 +2,8 @@ import * as React from 'react';
 import { ArrowIcon, BodyText, Container, MainTitle } from '@/components/atoms';
 import { Box, Button } from '@mui/material';
 import Image from 'next/image';
-import move1Image from '@/assets/images/life-spartan/banner-move-1.png';
-import move2Image from '@/assets/images/life-spartan/banner-move-2.png';
+import move1Image from '@/assets/images/life-spartan/banner-move-1.webp';
+import move2Image from '@/assets/images/life-spartan/banner-move-2.webp';
 
 import { BreakPoints, useBreakpoint } from '@/hooks';
 

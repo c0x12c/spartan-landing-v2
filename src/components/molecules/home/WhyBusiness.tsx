@@ -3,9 +3,9 @@ import { BodyText, CardHorizontal, Container, SubTitle, Title } from '@/componen
 import { gray, primary } from '@/styles/colors';
 import { Box, Grid, Typography } from '@mui/material';
 import Image from 'next/image';
-import bizImage from '@/assets/images/home/biz-image.png';
-import bizFinance from '@/assets/images/home/biz-finance.png';
-import bizChart from '@/assets/images/home/biz-chart.png';
+import bizImage from '@/assets/images/home/biz-image.webp';
+import bizFinance from '@/assets/images/home/biz-finance.webp';
+import bizChart from '@/assets/images/home/biz-chart.webp';
 
 import money from '@/assets/images/icons/money-send.svg';
 import timer from '@/assets/images/icons/timer.svg';

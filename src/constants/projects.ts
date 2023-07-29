@@ -4,14 +4,14 @@ import liquidityFinancial from '@/assets/images/projects/liquidity-financial.svg
 import liveCast from '@/assets/images/projects/live-cast.svg';
 import ursalive from '@/assets/images/projects/ursalive.svg';
 import voltaWallet from '@/assets/images/projects/volta-wallet.svg';
-import voltaWalletQuote from '@/assets/images/projects/quote-volta.png';
-import chargeFuzeQuote from '@/assets/images/projects/quote-chargefuze.png';
+import voltaWalletQuote from '@/assets/images/projects/quote-volta.webp';
+import chargeFuzeQuote from '@/assets/images/projects/quote-chargefuze.webp';
 // import heruQuote from '@/assets/images/projects/quote-heru.png';
-import liquidityQuote from '@/assets/images/projects/quote-liquidity.png';
-import liveCastQuote from '@/assets/images/projects/quote-livecast.png';
-import ursaLiveQuote from '@/assets/images/projects/quote-ursalive.png';
+import liquidityQuote from '@/assets/images/projects/quote-liquidity.webp';
+import liveCastQuote from '@/assets/images/projects/quote-livecast.webp';
+import ursaLiveQuote from '@/assets/images/projects/quote-ursalive.webp';
 
-import voltaWalletUserImage from '@/assets/images/projects/volta-user.png';
+import voltaWalletUserImage from '@/assets/images/projects/volta-user.webp';
 import { StaticImageData } from 'next/image';
 import { ServicesEnum } from './services';
 
