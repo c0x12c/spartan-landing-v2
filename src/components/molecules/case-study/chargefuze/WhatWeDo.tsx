@@ -4,7 +4,7 @@ import React from 'react';
 import { BreakPoints, useBreakpoint } from '@/hooks';
 import Star from '@/assets/images/case-cf/Star-blue.svg';
 import Image from 'next/image';
-import WhatWeDoImage from '@/assets/images/case-cf/what-we-do-image.svg';
+import WhatWeDoImage from '@/assets/images/case-cf/what-we-do-image.webp';
 import { gray } from '@/styles/colors';
 import CaseStudyItem, { Variant } from '@/components/atoms/CaseCtudyItems';
 import checked from '@/assets/images/case-cf/checked-blue.svg';
