@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { Box, Grid, Typography } from '@mui/material';
 import Image from 'next/image';
-import resultImage from '@/assets/images/case-volta/result.png';
+import resultImage from '@/assets/images/case-volta/result.webp';
 import { DataVoltaResult } from '@/constants';
 import { BreakPoints, useBreakpoint } from '@/hooks';
 import { base } from '@/styles/colors';

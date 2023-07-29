@@ -1,8 +1,8 @@
 import * as React from 'react';
 import Image from 'next/image';
 import { Box, Grid } from '@mui/material';
-import bg from '@/assets/images/case-volta/banner.png';
-import bgSp from '@/assets/images/case-volta/banner-sp.png';
+import bg from '@/assets/images/case-volta/banner.webp';
+import bgSp from '@/assets/images/case-volta/banner-sp.webp';
 import appIcon from '@/assets/images/case-volta/app-icon.png';
 import { Banner, BodyText, Container, MainTitle } from '@/components/atoms';
 import { BreakPoints, useBreakpoint } from '@/hooks';
