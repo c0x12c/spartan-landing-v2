@@ -3,7 +3,7 @@ import Image from 'next/image';
 import React from 'react';
 import Star from '@/assets/images/icons/yellow-star.svg';
 import { Container } from '@/components/atoms/common/Container';
-import ResultImage from '@/assets/images/case-liquidity/result.svg';
+import ResultImage from '@/assets/images/case-liquidity/result.webp';
 import { BreakPoints, useBreakpoint } from '@/hooks';
 import { items } from '@/constants/case-liquidity';
 import CaseStudyItem, { Variant } from '@/components/atoms/CaseCtudyItems';

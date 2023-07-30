@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { Box, Grid } from '@mui/material';
-import bg from '@/assets/images/case-ursa/banner-image.png';
-import bgSp from '@/assets/images/case-ursa/banner-image-sp.png';
+import bg from '@/assets/images/case-ursa/banner-image.webp';
+import bgSp from '@/assets/images/case-ursa/banner-image-sp.webp';
 
 import { Banner, BodyText, Container, MainTitle } from '@/components/atoms';
 import { base } from '@/styles/colors';

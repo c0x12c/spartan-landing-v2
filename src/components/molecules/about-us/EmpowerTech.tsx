@@ -1,7 +1,7 @@
 import { BodyText, Container, Title } from '@/components/atoms';
 import { Box, Button } from '@mui/material';
 import Image from 'next/image';
-import ImageEmpowerTech from '@/assets/images/about-us/EmpowerTech-image.jpg';
+import ImageEmpowerTech from '@/assets/images/about-us/EmpowerTech-image.webp';
 import Arrow from '@/assets/images/icons/arrow.svg';
 import { base, gray } from '@/styles/colors';
 import { BreakPoints, useBreakpoint } from '@/hooks';

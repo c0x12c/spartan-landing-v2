@@ -2,10 +2,10 @@ import React from 'react';
 import { Box, Button } from '@mui/material';
 import { ArrowForward as ArrowIcon } from '@mui/icons-material';
 import Image from 'next/image';
-import { Container, TextFieldWithLabel, Title, UploadFile } from '@/components/atoms';
+import { Container, TextFieldWithLabel, Title } from '@/components/atoms';
 import { BreakPoints, useBreakpoint } from '@/hooks';
-import formImage from '@/assets/images/internship/form-image.png';
-import internshipFormImage from '@/assets/images/internship/internship-form.png';
+import formImage from '@/assets/images/internship/form-image.webp';
+import internshipFormImage from '@/assets/images/internship/internship-form.webp';
 import Link from 'next/link';
 
 interface IInternshipFormProps {}

@@ -1,8 +1,8 @@
 import * as React from 'react';
 import { BodyText, Container, Title } from '@/components/atoms';
 import { Box } from '@mui/material';
-import resultBanner from '@/assets/images/case-agora/result-banner.png';
-import resultImage from '@/assets/images/case-agora/result-image.png';
+import resultBanner from '@/assets/images/case-agora/result-banner.webp';
+import resultImage from '@/assets/images/case-agora/result-image.webp';
 import { BreakPoints, useBreakpoint } from '@/hooks';
 import Image from 'next/image';
 import { base } from '@/styles/colors';

@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { Box, Button } from '@mui/material';
-import getInTouchBg from '@/assets/images/home/get-in-touch-bg.png';
+import getInTouchBg from '@/assets/images/home/get-in-touch-bg.webp';
 import { Container } from './common/Container';
 import { Title } from './typography/Title';
 import { BreakPoints, useBreakpoint } from '@/hooks';

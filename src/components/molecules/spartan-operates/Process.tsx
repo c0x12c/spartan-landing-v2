@@ -2,7 +2,7 @@ import * as React from 'react';
 import { BreakPoints, useBreakpoint } from '@/hooks';
 import { Box, Typography } from '@mui/material';
 import Image from 'next/image';
-import badge from '@/assets/images/spartan-operates/badge.png';
+import badge from '@/assets/images/spartan-operates/badge.webp';
 import { base } from '@/styles/colors';
 import { AccordionOperates, Container } from '@/components/atoms';
 

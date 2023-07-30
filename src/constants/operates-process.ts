@@ -1,8 +1,8 @@
 import { primary } from '@/styles/colors';
-import StandUpImage from '@/assets/images/spartan-operates/stand-up.png';
-import IterativeDevelopmentImage from '@/assets/images/spartan-operates/iterative-development.png';
-import RetrospectiveImage from '@/assets/images/spartan-operates/retrospective.png';
-import TestDDImage from '@/assets/images/spartan-operates/test-dd.png';
+import StandUpImage from '@/assets/images/spartan-operates/stand-up.webp';
+import IterativeDevelopmentImage from '@/assets/images/spartan-operates/iterative-development.webp';
+import RetrospectiveImage from '@/assets/images/spartan-operates/retrospective.webp';
+import TestDDImage from '@/assets/images/spartan-operates/test-dd.webp';
 import { StaticImageData } from 'next/image';
 
 export type OperatesProcessType = {

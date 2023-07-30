@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { Box, Grid } from '@mui/material';
-import bg from '@/assets/images/case-agora/banner-image.png';
-import bgSp from '@/assets/images/case-agora/banner-image-sp.png';
+import bg from '@/assets/images/case-agora/banner-image.webp';
+import bgSp from '@/assets/images/case-agora/banner-image-sp.webp';
 import { Banner, BodyText, Container, MainTitle } from '@/components/atoms';
 import { gray } from '@/styles/colors';
 import { BreakPoints, useBreakpoint } from '@/hooks';
@@ -13,11 +13,7 @@ export const CaseStudyAgoraBanner: React.FunctionComponent<ICaseStudyAgoraBanner
 
   return (
     <React.Fragment>
-      <Banner
-        src={isMobile ? bgSp.src : bg.src}
-        haveBackground={false}
-        bannerPosition={isMobile ? 'bottom' : 'top'}
-      >
+      <Banner src={isMobile ? bgSp.src : bg.src} haveBackground={false} bannerPosition={'top'}>
         <Box sx={{ position: 'absolute', top: '35%', transform: 'translateY(-50%)' }} width="100%">
           <Container>
             <Grid container>

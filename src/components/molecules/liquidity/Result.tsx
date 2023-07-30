@@ -3,7 +3,7 @@ import { Box, Typography } from '@mui/material';
 import { List, ListItem, ListItemIcon } from '@mui/material';
 import FiberManualRecordIcon from '@mui/icons-material/FiberManualRecord';
 import Image from 'next/image';
-import ResultImage from '@/assets/images/case-liquidity/result-image.svg';
+import ResultImage from '@/assets/images/case-liquidity/result-image.webp';
 import { BodyText, Container, Title } from '@/components/atoms';
 
 const items = [

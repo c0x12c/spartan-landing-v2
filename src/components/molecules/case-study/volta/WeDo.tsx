@@ -2,7 +2,7 @@ import * as React from 'react';
 import { Box, Divider, Grid } from '@mui/material';
 import Image from 'next/image';
 import star from '@/assets/images/case-volta/star.svg';
-import weDo from '@/assets/images/case-volta/we-do.png';
+import weDo from '@/assets/images/case-volta/we-do.webp';
 import { Container, Title } from '@/components/atoms';
 import { DataWeDo } from '@/constants';
 import { BreakPoints, useBreakpoint } from '@/hooks';

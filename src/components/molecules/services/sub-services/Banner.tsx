@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { Box } from '@mui/material';
-import bg from '@/assets/images/case-study/banner-image.png';
+import bg from '@/assets/images/case-study/banner-image.webp';
 import { Container, MainTitle } from '@/components/atoms';
 import { BreakPoints, useBreakpoint } from '@/hooks';
 

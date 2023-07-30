@@ -2,7 +2,7 @@ import * as React from 'react';
 import { BodyText, CardFeature, Container, MainTitle } from '@/components/atoms';
 import { Box } from '@mui/material';
 import Image from 'next/image';
-import bannerImage from '@/assets/images/internship/banner-image.png';
+import bannerImage from '@/assets/images/internship/banner-image.webp';
 import { BreakPoints, useBreakpoint } from '@/hooks';
 import thunderBlue from '@/assets/images/icons/thunder-blue.svg';
 import thunderYellow from '@/assets/images/icons/thunder-yellow.svg';

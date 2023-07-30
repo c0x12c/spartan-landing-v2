@@ -3,7 +3,7 @@ import { BodyText, Container, Title } from '@/components/atoms';
 import { Box, Grid } from '@mui/material';
 import { base, gray } from '@/styles/colors';
 import Image from 'next/image';
-import overviewImage from '@/assets/images/case-agora/overview.png';
+import overviewImage from '@/assets/images/case-agora/overview.webp';
 import { BreakPoints, useBreakpoint } from '@/hooks';
 
 interface IOverviewAgoraProps {}

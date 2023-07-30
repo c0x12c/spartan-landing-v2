@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { Box, Typography } from '@mui/material';
 import Image from 'next/image';
-import top100 from '@/assets/images/case-volta/top-100.png';
+import top100 from '@/assets/images/case-volta/top-100.webp';
 import { base } from '@/styles/colors';
 import { BreakPoints, useBreakpoint } from '@/hooks';
 
