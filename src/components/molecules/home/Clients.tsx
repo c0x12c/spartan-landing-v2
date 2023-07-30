@@ -108,12 +108,12 @@ export const Clients: React.FunctionComponent<IClientsProps> = () => {
                 {item.designer}
               </Typography>
               <Typography variant={isMobile ? 'fs14' : 'fs18'} fontWeight={600} color={gray[700]}>
-                Designers in team
+                {item.designer === 1 ? 'Designer' : 'Designers'} in team
               </Typography>
             </Box>
           </Grid>
           <Grid item xs={12} sm={8}>
-            <Typography
+            {/* <Typography
               variant={isMobile ? 'fs18' : 'fs24'}
               color={gray[800]}
               fontWeight={600}
@@ -123,7 +123,7 @@ export const Clients: React.FunctionComponent<IClientsProps> = () => {
               data-aos-delay="200"
             >
               {item.quote.title}
-            </Typography>
+            </Typography> */}
             <Typography
               variant={isMobile ? 'fs14' : 'fs18'}
               color={gray[600]}
@@ -145,7 +145,11 @@ export const Clients: React.FunctionComponent<IClientsProps> = () => {
             >
               <Box display="flex" alignItems="center" gap="24px">
                 <Box width="58px" height="58px" borderRadius="50%" overflow="hidden">
-                  <Image src={item.quote.userImgSrc} alt={item.quote.userName} />
+                  <Image
+                    src={item.quote.userImgSrc}
+                    alt={item.quote.userName}
+                    style={{ maxWidth: '100%', maxHeight: '100%' }}
+                  />
                 </Box>
                 <Box display="flex" flexDirection="column">
                   <Typography variant={isMobile ? 'fs14' : 'fs18'} color={gray[900]} component="p">
