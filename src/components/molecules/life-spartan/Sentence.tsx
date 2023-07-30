@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { Container } from '@/components/atoms';
 import { Box, Typography } from '@mui/material';
-import bg from '@/assets/images/life-spartan/world-bg.png';
+import bg from '@/assets/images/life-spartan/world-bg.webp';
 import { base, primary } from '@/styles/colors';
 import { BreakPoints, useBreakpoint } from '@/hooks';
 

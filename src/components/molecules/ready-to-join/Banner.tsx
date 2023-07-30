@@ -2,8 +2,8 @@ import * as React from 'react';
 import { Container, MainTitle } from '@/components/atoms';
 import { Box } from '@mui/material';
 import Image from 'next/image';
-import bannerImage from '@/assets/images/ready-to-join/bg-image.jpg';
-import bannerSpImage from '@/assets/images/ready-to-join/bg-sp-image.png';
+import bannerImage from '@/assets/images/ready-to-join/bg-image.webp';
+import bannerSpImage from '@/assets/images/ready-to-join/bg-sp-image.webp';
 
 import { BreakPoints, useBreakpoint } from '@/hooks';
 

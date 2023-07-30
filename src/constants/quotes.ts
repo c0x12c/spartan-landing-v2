@@ -1,7 +1,7 @@
 import { StaticImageData } from 'next/image';
-import KhoaTran from '../assets/images/apply-job/KhoaTran.jpg';
-import Ihor from '../assets/images/apply-job/Ihor.png';
-import Uyen from '../assets/images/apply-job/Uyen.png';
+import KhoaTran from '../assets/images/apply-job/KhoaTran.webp';
+import Ihor from '../assets/images/apply-job/Ihor.webp';
+import Uyen from '../assets/images/apply-job/Uyen.webp';
 
 export interface QuoteType {
   id: number;

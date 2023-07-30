@@ -4,7 +4,7 @@ import { Box } from '@mui/material';
 import { BodyText, Container, Title } from '@/components/atoms';
 import Image from 'next/image';
 import { base } from '@/styles/colors';
-import TrunkBasedImage from '@/assets/images/spartan-operates/trunk-based.png';
+import TrunkBasedImage from '@/assets/images/spartan-operates/trunk-based.webp';
 
 interface ITrunkBasedDevProps {}
 

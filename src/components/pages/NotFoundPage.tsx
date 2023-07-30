@@ -4,7 +4,7 @@ import { BreakPoints, useBreakpoint } from '@/hooks';
 import { BodyText, Container, Title } from '../atoms';
 import { base } from '@/styles/colors';
 import Image from 'next/image';
-import NotFoundImage from '@/assets/images/not-found/404.png';
+import NotFoundImage from '@/assets/images/not-found/404.webp';
 import Link from 'next/link';
 import { Footer, Header } from '../molecules';
 

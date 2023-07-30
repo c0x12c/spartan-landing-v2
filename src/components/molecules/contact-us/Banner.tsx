@@ -2,7 +2,7 @@ import * as React from 'react';
 import { Container, MainTitle } from '@/components/atoms';
 import { Box } from '@mui/material';
 import Image from 'next/image';
-import bannerImage from '@/assets/images/contact-us/bg-image.jpg';
+import bannerImage from '@/assets/images/contact-us/bg-image.webp';
 import { BreakPoints, useBreakpoint } from '@/hooks';
 
 interface IContactUsBannerProps {}

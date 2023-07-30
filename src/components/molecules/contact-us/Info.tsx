@@ -3,14 +3,13 @@ import { BreakPoints, useBreakpoint } from '@/hooks';
 import { Box, Divider, Typography } from '@mui/material';
 import { Container, Title } from '@/components/atoms';
 import Image from 'next/image';
-import contactImage from '@/assets/images/contact-us/contact-image.png';
-import messageImage from '@/assets/images/contact-us/message.png';
+import contactImage from '@/assets/images/contact-us/contact-image.webp';
+import messageImage from '@/assets/images/contact-us/message.webp';
 import callIcon from '@/assets/images/icons/call.svg';
 import emailIcon from '@/assets/images/icons/email.svg';
 import locationIcon from '@/assets/images/icons/location.svg';
 import linkedin from '@/assets/images/icons/linkedin.svg';
 import facebook from '@/assets/images/icons/facebook.svg';
-// import twitter from '@/assets/images/icons/twitter.svg';
 import { gray } from '@/styles/colors';
 import Link from 'next/link';
 

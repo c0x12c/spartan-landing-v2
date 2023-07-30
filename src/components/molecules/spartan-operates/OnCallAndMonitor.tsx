@@ -4,8 +4,8 @@ import { Box } from '@mui/material';
 import { base } from '@/styles/colors';
 import { BodyText, Container, Title } from '@/components/atoms';
 import Image from 'next/image';
-import OnCallImage from '@/assets/images/spartan-operates/on-call.png';
-import MonitorImage from '@/assets/images/spartan-operates/monitor.png';
+import OnCallImage from '@/assets/images/spartan-operates/on-call.webp';
+import MonitorImage from '@/assets/images/spartan-operates/monitor.webp';
 
 interface IOnCallAndMonitorProps {}
 

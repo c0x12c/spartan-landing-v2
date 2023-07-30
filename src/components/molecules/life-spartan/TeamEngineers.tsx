@@ -4,16 +4,15 @@ import { Container, SubTitle, Title } from '@/components/atoms';
 import { BreakPoints, useBreakpoint } from '@/hooks';
 import Image from 'next/image';
 
-import team1 from '@/assets/images/life-spartan/our-team-1.png';
-import team2 from '@/assets/images/life-spartan/our-team-2.png';
-import team3 from '@/assets/images/life-spartan/our-team-3.png';
-import team4 from '@/assets/images/life-spartan/our-team-4.png';
-import team5 from '@/assets/images/life-spartan/our-team-5.png';
-import team6 from '@/assets/images/life-spartan/our-team-6.png';
-// import team7 from '@/assets/images/life-spartan/our-team-7.png';
-import team8 from '@/assets/images/life-spartan/our-team-8.png';
-import team9 from '@/assets/images/life-spartan/our-team-9.png';
-import team10 from '@/assets/images/life-spartan/our-team-10.png';
+import team1 from '@/assets/images/life-spartan/our-team-1.webp';
+import team2 from '@/assets/images/life-spartan/our-team-2.webp';
+import team3 from '@/assets/images/life-spartan/our-team-3.webp';
+import team4 from '@/assets/images/life-spartan/our-team-4.webp';
+import team5 from '@/assets/images/life-spartan/our-team-5.webp';
+import team6 from '@/assets/images/life-spartan/our-team-6.webp';
+import team8 from '@/assets/images/life-spartan/our-team-7.webp';
+import team9 from '@/assets/images/life-spartan/our-team-9.webp';
+import team10 from '@/assets/images/life-spartan/our-team-10.webp';
 
 import { gray } from '@/styles/colors';
 
@@ -29,7 +28,6 @@ export const TeamEngineers: React.FunctionComponent<ITeamEngineersProps> = () =>
     { id: 'team-4', img: team4 },
     { id: 'team-5', img: team5 },
     { id: 'team-6', img: team6 },
-    // { id: 'team-7', img: team7 },
     { id: 'team-8', img: team8 },
     { id: 'team-9', img: team9 },
     { id: 'team-10', img: team10 },

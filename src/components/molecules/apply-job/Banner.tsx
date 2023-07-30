@@ -2,7 +2,7 @@ import { BodyText, Container, MainTitle } from '@/components/atoms';
 import { Box, Button } from '@mui/material';
 import Image from 'next/image';
 import Arrow from '@/assets/images/icons/arrow.svg';
-import BannerImage from '@/assets/images/apply-job/banner-image.svg';
+import BannerImage from '@/assets/images/apply-job/banner-image.webp';
 import { BreakPoints, useBreakpoint } from '@/hooks';
 import Link from 'next/link';
 
