@@ -25,7 +25,7 @@ export const HomePage: React.FC<Props> = () => {
       <Clients />
       <GetInTouch
         title="Interested in knowing more about Spartan?"
-        textButton="Being next Spartan"
+        textButton="Become the next Spartan"
         linkButton="/apply-job"
         data-aos="zoom-in"
         data-aos-delay="200"

@@ -22,8 +22,8 @@ export const LifeSpartanPage: React.FunctionComponent<ILifeSpartanPageProps> = (
         <LifeSpartanFeatures />
         <TeamEngineers />
         <GetInTouch
-          title="Being the next Spartan"
-          textButton="Being next Spartan"
+          title="Become the next Spartan"
+          textButton="Become the next Spartan"
           linkButton="/apply-job"
           data-aos="zoom-in"
           data-aos-delay="200"

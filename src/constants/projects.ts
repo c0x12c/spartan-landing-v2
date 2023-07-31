@@ -14,7 +14,6 @@ import AgoraFounder from '../assets/images/about-us/agora-founder.png';
 import UrsaliveFounder from '../assets/images/about-us/ursalive-founder.jpeg';
 import VoltaFounder from '../assets/images/about-us/volta-fonder.jpeg';
 import CFFounder from '../assets/images/about-us/cf-founder.jpeg';
- 
 
 import voltaWalletUserImage from '@/assets/images/projects/volta-user.webp';
 import { StaticImageData } from 'next/image';
@@ -115,7 +114,7 @@ export const Projects: ProjectType[] = [
       imgSrc: voltaWalletQuote,
       title: 'Spartan Is A Remarkable Team with Unmatched Expertise',
       content:
-        "Working with the Spartan team to build our product has been an incredible experience. Their expertise, dedication, and technical skills have exceeded our expectations. They are able to take loosely defined requirements and do the necessary market research to design a fantastic system that addresses all the main requirements exceeding even our expectations.  I am also impressed by their speed and quality.  They have been a fantastic partner, and we can't recommend them more",
+        "Working with the Spartan team to build our product has been an incredible experience. Their expertise, dedication, and technical skills have exceeded our expectations. They are able to take loosely defined requirements and do the necessary market research to design a fantastic system that addresses all the main requirements exceeding even our expectations.  I am also impressed by their speed and quality.  They have been a fantastic partner, and we can't recommend them more.",
       userName: 'George Melika',
       userPosition: 'Co-founder',
       userImgSrc: VoltaFounder,
@@ -144,7 +143,7 @@ export const Projects: ProjectType[] = [
       content:
         'Working with the Spartan team to build our product has been an incredible experience. Their expertise, dedication, and technical skills have exceeded our expectations. We appreciate their proactive approach, attention to detail, and ability to deliver exceptional results. We are grateful for their support and look forward to continuing our partnership in future projects.',
       userName: 'Daniel Kim',
-      userPosition: 'Volta’s Co-Founder ',
+      userPosition: 'Volta’s Co-Founder',
       userImgSrc: voltaWalletUserImage,
     },
   },
