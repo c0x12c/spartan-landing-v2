@@ -143,12 +143,12 @@ const Quotes = () => {
         {!isMobile && (
           <Box width={'100%'} display={'flex'} alignItems={'center'}>
             <Image src={Star} alt="star" />
-            <Box component={Divider} width={'100%'} />
+            <Box component={Divider} width={'80%'} />
           </Box>
         )}
 
         <Title
-          text="Sharing from a secret interview for Spartans around the world"
+          text="What It’s Like to Work Here: Thoughts from Our Team"
           sx={{
             minWidth: { sm: '635px', xs: '100%' },
             textAlign: { sm: 'end', xs: 'start' },
