@@ -32,7 +32,7 @@ export const CardVertical: React.FC<CardVerticalProps> = ({ icon, title, descrip
       boxShadow={'none'}
       p={{ xs: '16px', sm: '20px' }}
       borderRadius={'8px'}
-      minHeight={isMobile ? '230px' : '295px'}
+      minHeight={isMobile ? '230px' : '371px'}
       onClick={goToPath}
       sx={{
         cursor: link ? 'pointer' : 'default',

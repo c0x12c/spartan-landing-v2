@@ -13,28 +13,32 @@ export const Benefits: React.FunctionComponent<IBenefitsProps> = () => {
     {
       id: 'benefit-1',
       icon: <Image src={People} alt="Human element icon" />,
-      title: 'Research',
+      title: 'Hand-On experience',
       description:
-        'Spartans is renowned for its affordable, reliable, and expert IT consulting services. We provide top-of-the-line technologies, software, and applications that help startups and enterprises gain a competitive edge in the market.',
+        'As an intern at Spartan, you’ll gain practical, hands-on experience by working on real projects and collaborating with experienced professionals. This invaluable experience will enhance your skills and boost your confidence, preparing you for a successful career in your chosen field.',
     },
     {
       id: 'benefit-2',
       icon: <Image src={CodeCircle} alt="Engineer Process icon" />,
-      title: 'Research',
+      title: 'Real Salary',
       description:
-        'Years of refinement at various US  based startups have made our processes exceptionally robust. We employ rigorous code reviews and prioritize comprehensive automation to ensure the highest standards of quality, efficiency, and accuracy.',
+        'We value your contributions and dedication as an intern and offer a competitive salary during your time at Spartan. This acknowledges your hard work and ensures you can focus on your internship without financial concerns.',
     },
     {
       id: 'benefit-3',
       icon: <Image src={TaskSquare} alt="Hiring icon" />,
-      title: 'Research',
+      title: 'Job opportunity',
       description:
-        'Our hiring process is designed to attract the best talent in the industry. By offering competitive compensation and fostering a stimulating environment with intriguing and challenging projects, we attract and invest in top-tier engineers who can overcome any challenge.',
+        'Joining our internship program opens the door to potential job opportunities within Spartan. We recognize and nurture talent, and outstanding interns may have the chance to transition into full-time positions, kickstarting a rewarding career journey with us.',
     },
   ];
 
   const renderItems = dataBenefit.map((item) => {
-    return <CardVertical key={item.id} {...item} />;
+    return (
+      <Box key={item.id} flex="1">
+        <CardVertical {...item} />
+      </Box>
+    );
   });
 
   return (
