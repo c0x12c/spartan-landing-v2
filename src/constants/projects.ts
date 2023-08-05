@@ -1,12 +1,10 @@
 import chargeFuze from '@/assets/images/projects/charge-fuze.svg';
-// import heru from '@/assets/images/projects/heru.svg';
 import liquidityFinancial from '@/assets/images/projects/liquidity-financial.svg';
 import liveCast from '@/assets/images/projects/live-cast.svg';
 import ursalive from '@/assets/images/projects/ursalive.svg';
 import voltaWallet from '@/assets/images/projects/volta-wallet.svg';
 import voltaWalletQuote from '@/assets/images/projects/quote-volta.webp';
 import chargeFuzeQuote from '@/assets/images/projects/quote-chargefuze.webp';
-// import heruQuote from '@/assets/images/projects/quote-heru.png';
 import liquidityQuote from '@/assets/images/projects/quote-liquidity.webp';
 import liveCastQuote from '@/assets/images/projects/quote-livecast.webp';
 import ursaLiveQuote from '@/assets/images/projects/quote-ursalive.webp';
@@ -14,8 +12,7 @@ import AgoraFounder from '../assets/images/about-us/agora-founder.png';
 import UrsaliveFounder from '../assets/images/about-us/ursalive-founder.jpeg';
 import VoltaFounder from '../assets/images/about-us/volta-fonder.jpeg';
 import CFFounder from '../assets/images/about-us/cf-founder.jpeg';
-
-import voltaWalletUserImage from '@/assets/images/projects/volta-user.webp';
+import LiquidityFounder from '@/assets/images/about-us/liquidty-founder.webp';
 import { StaticImageData } from 'next/image';
 import { ServicesEnum } from './services';
 
@@ -40,6 +37,32 @@ export type ProjectType = {
 };
 
 export const Projects: ProjectType[] = [
+  {
+    id: 'case-3',
+    name: 'Liquidity Financial',
+    value: 'liquidity',
+    imgSrc: liquidityFinancial,
+    href: '/case-study/liquidity',
+    tags: [
+      ServicesEnum.MOBILE,
+      ServicesEnum.CLOUD,
+      ServicesEnum.WEB,
+      ServicesEnum.BACKEND,
+      ServicesEnum.EMERGING,
+    ],
+    content: 'Revolutionizing the banking and spending landscape',
+    dev: 14,
+    designer: 2,
+    quote: {
+      imgSrc: liquidityQuote,
+      title: 'Spartan Is A Remarkable Team with Unmatched Expertise',
+      content:
+        'After working with in-house teams my whole career, I hired development agencies for my Fintech startup.  Building a great, reliable product was a struggle, until I came across Spartan. Initially, I was skeptical, but within just a month of collaborating with the Spartan team, I transferred all my remaining projects to them. Their capacity to deliver high-quality software engineering at a rapid pace is a rare find.',
+      userName: 'Ryan Fujiu',
+      userPosition: 'CEO and Founder',
+      userImgSrc: LiquidityFounder,
+    },
+  },
   {
     id: 'case-4',
     name: 'LiveCast',
@@ -120,52 +143,4 @@ export const Projects: ProjectType[] = [
       userImgSrc: VoltaFounder,
     },
   },
-
-  {
-    id: 'case-3',
-    name: 'Liquidity Financial',
-    value: 'liquidity',
-    imgSrc: liquidityFinancial,
-    href: '/case-study/liquidity',
-    tags: [
-      ServicesEnum.MOBILE,
-      ServicesEnum.CLOUD,
-      ServicesEnum.WEB,
-      ServicesEnum.BACKEND,
-      ServicesEnum.EMERGING,
-    ],
-    content: 'Revolutionizing the banking and spending landscape',
-    dev: 14,
-    designer: 2,
-    quote: {
-      imgSrc: liquidityQuote,
-      title: 'Spartan Is A Remarkable Team with Unmatched Expertise',
-      content:
-        'Working with the Spartan team to build our product has been an incredible experience. Their expertise, dedication, and technical skills have exceeded our expectations. We appreciate their proactive approach, attention to detail, and ability to deliver exceptional results. We are grateful for their support and look forward to continuing our partnership in future projects.',
-      userName: 'Daniel Kim',
-      userPosition: 'Volta’s Co-Founder',
-      userImgSrc: voltaWalletUserImage,
-    },
-  },
-
-  // {
-  //   id: 'case-6',
-  //   name: 'Heru',
-  //   value: 'heru',
-  //   imgSrc: heru,
-  //   href: '/case-study/heru',
-  //   tags: [],
-  //   content: 'Elevate the patient experience while simultaneously boosting practice revenue',
-  //   dev: 14,
-  //   designer: 2,
-  //   quote: {
-  //     imgSrc: heruQuote,
-  //     title: 'Spartan Is A Remarkable Team with Unmatched Expertise',
-  //     content:
-  //       'Working with the Spartan team to build our product has been an incredible experience. Their expertise, dedication, and technical skills have exceeded our expectations. We appreciate their proactive approach, attention to detail, and ability to deliver exceptional results. We are grateful for their support and look forward to continuing our partnership in future projects.',
-  //     userName: 'Daniel Kim',
-  //     userPosition: 'Volta’s Co-Founder ',
-  //     userImgSrc: voltaWalletUserImage,
-  //   },
-  // },
 ];

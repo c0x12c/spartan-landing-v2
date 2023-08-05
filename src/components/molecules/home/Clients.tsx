@@ -2,12 +2,13 @@ import * as React from 'react';
 import { Box, Grid, IconButton, Typography } from '@mui/material';
 import Slider from 'react-slick';
 import { Container, Title } from '@/components/atoms';
-import { ProjectsHome } from '@/constants';
+import { Projects } from '@/constants';
 import Image from 'next/image';
 import { base, gray, primary } from '@/styles/colors';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import { BreakPoints, useBreakpoint } from '@/hooks';
+import QuoteTag from '@/components/atoms/QuoteTag';
 // import QuoteTag from '@/components/atoms/QuoteTag';
 
 interface IClientsProps {}
@@ -25,11 +26,11 @@ export const Clients: React.FunctionComponent<IClientsProps> = () => {
     arrows: false,
   };
 
-  // const renderTags = (data: string[]) => {
-  //   return data.map((tag, index: number) => <QuoteTag key={`tag-${index + 1}`} text={tag} />);
-  // };
+  const renderTags = (data: string[]) => {
+    return data.map((tag, index: number) => <QuoteTag key={`tag-${index + 1}`} text={tag} />);
+  };
 
-  const renderQuotes = ProjectsHome.map((item, index) => {
+  const renderQuotes = Projects.map((item, index) => {
     return (
       <Box key={item.id}>
         <Box position="relative">
@@ -47,9 +48,6 @@ export const Clients: React.FunctionComponent<IClientsProps> = () => {
             data-aos="zoom-in"
             data-aos-delay="200"
           />
-          {/* <Box position="absolute" bottom="28px" left="28px" display="flex" gap="17px">
-            {renderTags(item.tags)}
-          </Box> */}
         </Box>
         <Grid container mt={isMobile ? '24px' : '44px'} columnSpacing="120px" rowSpacing="40px">
           <Grid
@@ -61,7 +59,7 @@ export const Clients: React.FunctionComponent<IClientsProps> = () => {
             gap={isMobile ? '12px' : '24px'}
           >
             <Typography
-              variant={isMobile ? 'fs18' : 'fs40'}
+              variant={isMobile ? 'fs18' : 'fs32'}
               fontWeight={600}
               color={gray[900]}
               letterSpacing="-0.8px"
@@ -72,44 +70,18 @@ export const Clients: React.FunctionComponent<IClientsProps> = () => {
             </Typography>
             <Box
               display="flex"
+              flexDirection="column"
               gap={isMobile ? '8px' : '18px'}
-              alignItems="center"
-              borderBottom="1px solid"
-              borderColor={gray[400]}
               pb="16px"
               data-aos="fade-up"
               data-aos-delay="300"
             >
-              <Typography
-                variant={isMobile ? 'fs18' : 'fs40'}
-                fontWeight={600}
-                color={gray[900]}
-                letterSpacing={isMobile ? 'normal' : '-2px'}
-              >
-                {item.dev}+
+              <Typography variant={isMobile ? 'fs14' : 'fs18'} color={gray[600]}>
+                {item.content}
               </Typography>
-              <Typography variant={isMobile ? 'fs14' : 'fs18'} fontWeight={600} color={gray[700]}>
-                Devs in team
-              </Typography>
-            </Box>
-            <Box
-              display="flex"
-              gap="18px"
-              alignItems="center"
-              data-aos="fade-up"
-              data-aos-delay="500"
-            >
-              <Typography
-                variant={isMobile ? 'fs18' : 'fs40'}
-                fontWeight={600}
-                color={gray[900]}
-                letterSpacing="-2px"
-              >
-                {item.designer}
-              </Typography>
-              <Typography variant={isMobile ? 'fs14' : 'fs18'} fontWeight={600} color={gray[700]}>
-                {item.designer === 1 ? 'Designer' : 'Designers'} in team
-              </Typography>
+              <Box display="flex" gap="12px" flexWrap="wrap">
+                {renderTags(item.tags)}
+              </Box>
             </Box>
           </Grid>
           <Grid item xs={12} sm={8}>
@@ -183,14 +155,12 @@ export const Clients: React.FunctionComponent<IClientsProps> = () => {
                   aria-label="back"
                   size={isMobile ? 'small' : 'large'}
                   onClick={() => slider?.current?.slickNext()}
-                  disabled={index == ProjectsHome.length - 1}
+                  disabled={index == Projects.length - 1}
                   sx={{
-                    opacity: index == ProjectsHome.length - 1 ? 0.5 : 1,
+                    opacity: index == Projects.length - 1 ? 0.5 : 1,
                     border: '1.62px solid',
-                    borderColor: index == ProjectsHome.length - 1 ? base.grey : primary[500],
-                    color: `${
-                      index == ProjectsHome.length - 1 ? base.grey : primary[500]
-                    } !important`,
+                    borderColor: index == Projects.length - 1 ? base.grey : primary[500],
+                    color: `${index == Projects.length - 1 ? base.grey : primary[500]} !important`,
                   }}
                 >
                   <ArrowForwardIcon fontSize="inherit" />
