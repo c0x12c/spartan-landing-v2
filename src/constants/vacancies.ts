@@ -24,6 +24,7 @@ export enum JobTag {
   TESTING = 'testing',
   MANAGEMENT = 'management',
   IOS = 'iOS',
+  SITE_RELIABILITY = 'Site Reliability',
   ALL_JOB = 'all-job',
 }
 
@@ -63,7 +64,7 @@ export interface Job {
   aboutJob?: string;
   responsibilities?: string[];
   technologies?: string[];
-  skills: string[];
+  skills?: string[];
   experienceLevel: ExperienceLevel;
   enrollmentStatus: EnrollmentStatus[];
   createdAt: string;
@@ -71,8 +72,33 @@ export interface Job {
 
 export const vacancies: Job[] = [
   {
+    id: 'job-4',
+    position: 'Software Engineer Intern',
+    requirements: [
+      '3rd/4th-year undergrad student or grad student in Information Technology major',
+      'Experience in Software Development and coding in a general-purpose programming language',
+      'Experience with data structures or algorithms gathered from inside or outside of school or work',
+      'Strong problem-solving and analytical skills, with keen attention to detail.',
+      'Proficient use of the English language in spoken and written form.',
+    ],
+    responsibilities: [
+      'Analyze requirements, design, programming, and perform testing based on the established design.',
+      'Resolve technical issues through debugging, research, and investigation.',
+      'Participate in cross-functional build/configuration activities to ensure effective and efficient new or enhanced software engineering designs.',
+      'Communicate, collaborate, and work effectively as part of a distributed team across various features.',
+    ],
+    aboutJob:
+      'Kickstart your career with Spartan!\n\nWe are looking for young talents with fresh ideas and an enthusiastic approach to building software. We are expecting to find someone with a strong will to learn the latest concepts in web development and contribute to our team as well as learn from professional software engineers as mentors. This position is an entry point for a full-time or part-time position within one of our project teams as a software engineer.\n\nDuring the Spartan internship program, which can range from one to six months, you will get the chance to work closely with our skilled tech engineers, engaging in hands-on experience.',
+    tag: JobTag['ENGINEERING'],
+    location: [Location['REMOTE'], Location['OFFICE']],
+    skills: ['Data structures', 'Algorithms', 'Problem-solving', 'English'],
+    experienceLevel: ExperienceLevel['INTERN'],
+    enrollmentStatus: [EnrollmentStatus['PART_TIME'], EnrollmentStatus['FULL_TIME']],
+    createdAt: '07/21/2023',
+  },
+  {
     id: 'job-1',
-    position: 'Senior Android Engineer',
+    position: 'Senior Software Engineer - Android',
     requirements: [
       "Bachelor's degree in Computer Science or related field",
       '3+ years of experience with native Android development.',
@@ -104,7 +130,7 @@ export const vacancies: Job[] = [
   },
   {
     id: 'job-2',
-    position: 'Senior iOS Engineer',
+    position: 'Senior Software Engineer - iOS',
     requirements: [
       "Bachelor's degree in Computer Science or related field.",
       '3+ years of experience with native iOS development.',
@@ -132,7 +158,7 @@ export const vacancies: Job[] = [
   },
   {
     id: 'job-3',
-    position: 'Senior Backend Engineer',
+    position: 'Senior Software Engineer - Backend',
     requirements: [
       "Bachelor's degree in Computer Science or related field.",
       '3+ years of experience with Java/Kotlin/.NET.',
@@ -174,33 +200,8 @@ export const vacancies: Job[] = [
     createdAt: '07/21/2023',
   },
   {
-    id: 'job-4',
-    position: 'Intern Software Engineer',
-    requirements: [
-      '3rd/4th-year undergrad student or grad student in Information Technology major',
-      'Experience in Software Development and coding in a general-purpose programming language',
-      'Experience with data structures or algorithms gathered from inside or outside of school or work',
-      'Strong problem-solving and analytical skills, with keen attention to detail.',
-      'Proficient use of the English language in spoken and written form.',
-    ],
-    responsibilities: [
-      'Analyze requirements, design, programming, and perform testing based on the established design.',
-      'Resolve technical issues through debugging, research, and investigation.',
-      'Participate in cross-functional build/configuration activities to ensure effective and efficient new or enhanced software engineering designs.',
-      'Communicate, collaborate, and work effectively as part of a distributed team across various features.',
-    ],
-    aboutJob:
-      'Kickstart your career with Spartan!\n\nWe are looking for young talents with fresh ideas and an enthusiastic approach to building software. We are expecting to find someone with a strong will to learn the latest concepts in web development and contribute to our team as well as learn from professional software engineers as mentors. This position is an entry point for a full-time or part-time position within one of our project teams as a software engineer.\n\nDuring the Spartan internship program, which can range from one to six months, you will get the chance to work closely with our skilled tech engineers, engaging in hands-on experience.',
-    tag: JobTag['ENGINEERING'],
-    location: [Location['REMOTE'], Location['OFFICE']],
-    skills: ['Data structures', 'Algorithms', 'Problem-solving', 'English'],
-    experienceLevel: ExperienceLevel['INTERN'],
-    enrollmentStatus: [EnrollmentStatus['PART_TIME'], EnrollmentStatus['FULL_TIME']],
-    createdAt: '07/21/2023',
-  },
-  {
     id: 'job-5',
-    position: 'Senior Frontend Engineer',
+    position: 'Senior Software Engineer - Frontend',
     requirements: [
       "Bachelor's degree in Computer Science or related field.",
       '3+ years of experience as a Frontend Developer, with a focus on web application development.',
@@ -254,8 +255,63 @@ export const vacancies: Job[] = [
     createdAt: '07/21/2023',
   },
   {
+    id: 'job-7',
+    position: 'Senior Site Reliability Engineer',
+    requirements: [
+      "Bachelor's degree in Computer Science, Information Technology, or a related field (or equivalent work experience).",
+      '3+ years of experience as an SRE Engineer or DevOps Engineer or similar role.',
+      'Strong knowledge of cloud platforms such as AWS, Azure, or Google Cloud, including infrastructure services and best practices.',
+      'Familiarity with containerization technologies and orchestration frameworks (e.g., Docker, Kubernetes).',
+      'Solid understanding of version control systems (e.g., Git) and their integration with CI/CD pipelines.',
+      'Experience with IAC tools like Terraform, CloudFormation, or similar.',
+      'Strong problem-solving skills and the ability to troubleshoot complex issues across the entire technology stack.',
+      'Excellent communication and collaboration skills to work effectively with cross-functional teams.',
+    ],
+    technologies: [
+      'AWS/GCP/Azure',
+      'Docker/Kubernetes/ECS',
+      'Jenkins/Github Action',
+      'State Management: Redux, Rematch',
+      'Terraform/CloudFormation',
+      'Python/Kotlin',
+      'Datadog',
+    ],
+    responsibilities: [
+      'Design, implement, and manage the CI/CD pipelines for the continuous integration, delivery, and deployment of applications and services.',
+      'Collaborate with development teams to integrate automated testing and quality assurance into the CI/CD pipelines.',
+      'Work with operations teams to ensure the reliability, scalability, and performance of production systems.',
+      'Monitor and analyze system performance metrics, implementing improvements and optimizations when necessary.',
+      'Implement and manage infrastructure as code (IAC) using tools such as Terraform, CloudFormation, or similar, to automate the provisioning and configuration of cloud resources.',
+      'Implement and maintain containerization technologies (e.g., Docker, Kubernetes) to facilitate application deployment and scaling.',
+      'Automate repetitive tasks and processes to increase operational efficiency, using scripting languages like Python, Shell Script, …',
+      'Ensure security best practices are implemented throughout the infrastructure and application layers.',
+      'Participate in incident response and root cause analysis, implementing preventive measures to avoid future incidents.',
+      'Provide technical leadership, mentorship, and guidance to junior members of the SRE team.',
+      'Stay up-to-date with industry trends, emerging technologies, and best practices to continuously improve the DevOps processes and infrastructure.',
+    ],
+    aboutJob:
+      'We are looking for an experienced Senior Site Reliability Engineer to join our Spartan Team. Who is passionate about building, testing, and working closely with various stakeholders to deliver top-notch software. You will be able to solve challenging problems, work with the latest tech stack, and work with talented engineers to contribute meaningfully.',
+    tag: JobTag['SITE_RELIABILITY'],
+    location: [Location['REMOTE'], Location['OFFICE']],
+    // skills: [
+    //   'Frontend Development',
+    //   'HTML5',
+    //   'CSS3',
+    //   'JavaScript',
+    //   'React.js',
+    //   'Webpack',
+    //   'Git',
+    //   'Redux',
+    //   'TypeScript',
+    //   'Testing',
+    // ],
+    experienceLevel: ExperienceLevel['SENIOR'],
+    enrollmentStatus: [EnrollmentStatus['FULL_TIME']],
+    createdAt: '08/17/2023',
+  },
+  {
     id: 'job-6',
-    position: 'Product Designer',
+    position: 'Graphic Designer',
     requirements: [
       'Bachelor’s or Master’s degree in Design, Human-Computer Interaction (HCI), or a related field',
       'At least 3 years of experience in UX/UI design',

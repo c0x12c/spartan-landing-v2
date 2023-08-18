@@ -13,20 +13,22 @@ import dayjs from 'dayjs';
 dayjs.extend(relativeTime);
 
 const JobBanner = ({ job }: JobDetailsProps) => {
-  const renderSkills = job.skills.map((skill, index) => {
-    return (
-      <Box
-        p={'4px 25px'}
-        key={index}
-        fontSize={'12px'}
-        color={gray[600]}
-        border={`1px solid ${gray[300]}`}
-        borderRadius={'35px'}
-      >
-        {skill}
-      </Box>
-    );
-  });
+  const renderSkills =
+    job.skills &&
+    job.skills.map((skill, index) => {
+      return (
+        <Box
+          p={'4px 25px'}
+          key={index}
+          fontSize={'12px'}
+          color={gray[600]}
+          border={`1px solid ${gray[300]}`}
+          borderRadius={'35px'}
+        >
+          {skill}
+        </Box>
+      );
+    });
   return (
     <Box
       mb={'24px'}
