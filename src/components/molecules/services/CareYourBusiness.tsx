@@ -43,7 +43,7 @@ export const CareYourBusiness: React.FunctionComponent<ICareYourBusinessProps> =
           />
           <BodyText
             text={
-              'At Spartan, our top-notch engineers, product managers, and designers work closely with you to revolutionize your software development process. Our mission is to deliver the best products while enhancing your workflow. We empower you to build and deploy exceptional software solutions, gaining expertise in cutting-edge technology and best practices. The knowledge acquired with Spartan is invaluable, fueling your team’s success in creating top-quality products.'
+              'At Spartan, our capable engineers, product managers, and designers work closely with you to revolutionize your software development process. Our mission is to deliver the finest products while enhancing your workflow. We empower you to build and deploy remarkable software solutions, gaining expertise in cutting-edge technology and best practices. The knowledge acquired with Spartan is invaluable, fueling your team’s success in creating superior products'
             }
             data-aos="fade-up"
             data-aos-delay="300"

@@ -20,10 +20,7 @@ export const AboutUsBanner = () => {
               data-aos-delay="200"
             />
             <BodyText
-              text="We are Spartan, a team of elite tech-savvy people who specialize in providing
-                top-notch technical expertise to meet your goals. Our engineers are selected from the
-                top 3%, signifying that they are not merely proficient coders but also exceptional
-                engineers with a deep comprehension of the intricacies of software development."
+              text="We are Spartan, a team of elite tech-savvy professionals who specialize in providing outstanding technical expertise to meet your goals. Our engineers are selected from the top 3%, signifying that they are not merely proficient coders but also exceptional engineers with a deep comprehension of the intricacies of software development."
               data-aos="fade-up"
               data-aos-delay="300"
               sx={{ color: gray[300] }}
