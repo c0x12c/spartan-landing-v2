@@ -6,10 +6,10 @@ import Bao from '@/assets/images/about-us/bao.jpg';
 import Duc from '@/assets/images/about-us/duc.jpg';
 import { useState } from 'react';
 import Image, { StaticImageData } from 'next/image';
-import TwitterIcon from '@/assets/images/socials/twitter.svg';
-import InstagramIcon from '@/assets/images/socials/instagram.svg';
+// import TwitterIcon from '@/assets/images/socials/twitter.svg';
+// import InstagramIcon from '@/assets/images/socials/instagram.svg';
 import LinkedinIcon from '@/assets/images/socials/linkedin.svg';
-import FacebookIcon from '@/assets/images/socials/facebook.svg';
+// import FacebookIcon from '@/assets/images/socials/facebook.svg';
 import Link from 'next/link';
 
 interface FounderCardProps {
@@ -186,7 +186,8 @@ const FounderCard: React.FC<FounderCardProps> = ({ founder }) => {
                 <Image src={TwitterIcon} alt="Twitter" style={{ width: '20px' }} />
               </Link> */}
               <Link
-                href={'https://www.facebook.com'}
+                href={founder.link}
+                target="_blank"
                 style={{
                   width: '45px',
                   height: '45px',

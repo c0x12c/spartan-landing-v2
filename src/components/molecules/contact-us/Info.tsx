@@ -91,7 +91,7 @@ export const ContactInfo: React.FunctionComponent<IContactInfoProps> = () => {
               <Link href="https://www.linkedin.com/company/spartandev" target="_blank">
                 <Image src={linkedin} alt="linkedin" />
               </Link>
-              <Link href="https://www.facebook.com/profile.php?id=100094518799287" target="_blank">
+              <Link href="https://www.facebook.com/profile.php?id=100088671814716" target="_blank">
                 <Image src={facebook} alt="facebook" />
               </Link>
               {/* <Link href="/" target="_blank">

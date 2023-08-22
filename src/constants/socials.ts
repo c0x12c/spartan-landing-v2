@@ -19,7 +19,7 @@ export const Socials = [
     id: 'social-1',
     label: 'facebook',
     imgSrc: facebook,
-    href: 'https://www.facebook.com/profile.php?id=100094518799287',
+    href: 'https://www.facebook.com/profile.php?id=100088671814716',
   },
   // { id: 'social-2', label: 'instagram', imgSrc: instagram, href: '/' },
   // { id: 'social-3', label: 'twitter', imgSrc: twitter, href: '/' },

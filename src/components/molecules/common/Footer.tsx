@@ -41,6 +41,7 @@ export const Footer: React.FunctionComponent<IFooterProps> = () => {
     <Link
       key={social.id}
       href={social.href}
+      target="_blank"
       style={{
         width: '45px',
         height: '45px',
