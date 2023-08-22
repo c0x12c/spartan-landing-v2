@@ -271,7 +271,6 @@ export const vacancies: Job[] = [
       'AWS/GCP/Azure',
       'Docker/Kubernetes/ECS',
       'Jenkins/Github Action',
-      'State Management: Redux, Rematch',
       'Terraform/CloudFormation',
       'Python/Kotlin',
       'Datadog',

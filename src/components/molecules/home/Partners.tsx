@@ -45,9 +45,7 @@ export const Partners: React.FunctionComponent<IPartnersProps> = () => {
             data-aos-delay="300"
           />
           <BodyText
-            text="Our clients include startups, established businesses, and enterprises who trust us to
-                deliver top-notch engineering solutions for their products and projects. Join these
-                successful companies who have trusted Spartan to enable their success"
+            text="Our clients include startups, established businesses, and enterprises who trust us to deliver exceptional engineering solutions for their products and projects. Join these successful companies who have trusted Spartan to enable their success."
             data-aos="fade-up"
             data-aos-delay="500"
             sx={{

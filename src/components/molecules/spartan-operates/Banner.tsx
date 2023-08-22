@@ -39,7 +39,7 @@ export const SpartanOperatesBanner: React.FunctionComponent<ISpartanOperatesBann
             }}
           />
           <BodyText
-            text="At Spartan, our top-notch engineers, product managers, and designers work closely with you to revolutionize your software development process."
+            text="At Spartan, our skilled engineers, product managers, and designers work closely with you to revolutionize your software development process."
             sx={{ color: base.white, textAlign: 'center' }}
           />
         </Box>
