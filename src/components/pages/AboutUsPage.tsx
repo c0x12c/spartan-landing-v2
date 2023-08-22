@@ -5,6 +5,7 @@ import {
   AboutUsBanner,
   Description,
   EmpowerTech,
+  Founders,
   SuccessFactors,
   Uniqueness,
 } from '../molecules/about-us';
@@ -21,6 +22,7 @@ export const AboutUsPage: React.FC<Props> = () => {
         <Description />
         <SuccessFactors />
         <Uniqueness />
+        <Founders />
         <EmpowerTech />
       </Box>
     </MainTemplate>
