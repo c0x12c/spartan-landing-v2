@@ -28,7 +28,7 @@ const JobList = ({ currentId }: { currentId: string }) => {
         return (
           <JobListItem
             key={index}
-            href={`/apply-job/${job.id}`}
+            href={`${job.slug}`}
             position={job.position}
             tag={job.tag}
             experienceLevel={job.experienceLevel}

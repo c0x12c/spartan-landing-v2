@@ -129,7 +129,7 @@ const List = ({ vacancies }: { vacancies: Job[] }) => {
 };
 
 const ListItem = ({
-  id,
+  slug,
   position,
   tag,
   experienceLevel,
@@ -139,7 +139,7 @@ const ListItem = ({
   const isMobile = useBreakpoint(BreakPoints.MD);
 
   return (
-    <Link href={`/apply-job/${id}`}>
+    <Link href={`${slug}`}>
       <Box
         borderBottom={isLastItem ? 'none' : `1px solid ${gray[400]}`}
         p={{ md: '44px 32px', xs: '0 0 24px 0' }}

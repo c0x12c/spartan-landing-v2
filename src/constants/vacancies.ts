@@ -68,6 +68,7 @@ export interface Job {
   experienceLevel: ExperienceLevel;
   enrollmentStatus: EnrollmentStatus[];
   createdAt: string;
+  slug: string;
 }
 
 export const vacancies: Job[] = [
@@ -95,6 +96,7 @@ export const vacancies: Job[] = [
     experienceLevel: ExperienceLevel['INTERN'],
     enrollmentStatus: [EnrollmentStatus['PART_TIME'], EnrollmentStatus['FULL_TIME']],
     createdAt: '07/21/2023',
+    slug: '/apply-job/software-engineer-intern',
   },
   {
     id: 'job-1',
@@ -127,6 +129,7 @@ export const vacancies: Job[] = [
     experienceLevel: ExperienceLevel['SENIOR'],
     enrollmentStatus: [EnrollmentStatus['FULL_TIME']],
     createdAt: '07/21/2023',
+    slug: '/apply-job/senior-software-engineer-android',
   },
   {
     id: 'job-2',
@@ -155,6 +158,7 @@ export const vacancies: Job[] = [
     experienceLevel: ExperienceLevel['SENIOR'],
     enrollmentStatus: [EnrollmentStatus['FULL_TIME']],
     createdAt: '07/21/2023',
+    slug: '/apply-job/senior-software-engineer-ios',
   },
   {
     id: 'job-3',
@@ -198,6 +202,7 @@ export const vacancies: Job[] = [
     experienceLevel: ExperienceLevel['SENIOR'],
     enrollmentStatus: [EnrollmentStatus['FULL_TIME']],
     createdAt: '07/21/2023',
+    slug: '/apply-job/senior-software-engineer-backend',
   },
   {
     id: 'job-5',
@@ -253,6 +258,7 @@ export const vacancies: Job[] = [
     experienceLevel: ExperienceLevel['SENIOR'],
     enrollmentStatus: [EnrollmentStatus['FULL_TIME']],
     createdAt: '07/21/2023',
+    slug: '/apply-job/senior-software-engineer-frontend',
   },
   {
     id: 'job-7',
@@ -307,6 +313,7 @@ export const vacancies: Job[] = [
     experienceLevel: ExperienceLevel['SENIOR'],
     enrollmentStatus: [EnrollmentStatus['FULL_TIME']],
     createdAt: '08/17/2023',
+    slug: '/apply-job/senior-site-reliability-engineer',
   },
   {
     id: 'job-6',
@@ -342,5 +349,6 @@ export const vacancies: Job[] = [
     experienceLevel: ExperienceLevel['ALL_LEVEL'],
     enrollmentStatus: [EnrollmentStatus['FULL_TIME']],
     createdAt: '07/21/2023',
+    slug: '/apply-job/graphic-designer',
   },
 ];

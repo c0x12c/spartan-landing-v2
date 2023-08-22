@@ -24,15 +24,12 @@ export default function JobDetailsPage({ job }: JobDetailsPageProps) {
 }
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const paths = vacancies.map((job) => ({
-    params: { id: job.id.toString() },
-  }));
-
+  const paths = vacancies.map((job) => job.slug);
   return { paths, fallback: false };
 };
 
 export const getStaticProps: GetStaticProps<JobDetailsPageProps> = async ({ params }) => {
-  const job = vacancies.find((job) => job.id === params?.id);
+  const job = vacancies.find((job) => job.slug.includes(params?.id as string));
   if (!job) {
     return {
       notFound: true,
