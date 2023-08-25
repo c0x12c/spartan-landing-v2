@@ -1,11 +1,9 @@
 import * as React from 'react';
 import { BodyText, Container, SubTitle, Title } from '@/components/atoms';
-import { PartnerType } from '@/constants';
 import { gray } from '@/styles/colors';
 import { Box, Grid } from '@mui/material';
 import Image from 'next/image';
-import Link from 'next/link';
-import { Partners as PartnersData } from '@/constants';
+import { Clients as ClientsData, ClientType } from '@/constants';
 import { BreakPoints, useBreakpoint } from '@/hooks';
 
 interface IPartnersProps {}
@@ -13,13 +11,11 @@ interface IPartnersProps {}
 export const Partners: React.FunctionComponent<IPartnersProps> = () => {
   const isMobile = useBreakpoint(BreakPoints.MD);
 
-  const renderBiz = (data: PartnerType[], position: string) => {
+  const renderBiz = (data: ClientType[], position: string) => {
     return data.map((item) => {
       return (
         <Grid key={item.id} item xs={4} md={position === 'first' ? 3 : 2} textAlign="center">
-          <Link href={item.href}>
-            <Image src={item.imgSrc} alt={item.name} style={{ maxWidth: '100%', height: 'auto' }} />
-          </Link>
+          <Image src={item.imgSrc} alt={item.name} style={{ maxWidth: '100%', height: 'auto' }} />
         </Grid>
       );
     });
@@ -61,8 +57,8 @@ export const Partners: React.FunctionComponent<IPartnersProps> = () => {
           alignItems="center"
           justifyContent="center"
         >
-          {renderBiz(PartnersData.slice(0, 3), 'first')}
-          {renderBiz(PartnersData.slice(3), 'second')}
+          {renderBiz(ClientsData.slice(0, 4), 'first')}
+          {renderBiz(ClientsData.slice(4), 'second')}
         </Grid>
       </Container>
     </Box>
