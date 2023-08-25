@@ -221,7 +221,7 @@ export const ServiceWeDoContent = [
         id: `${ServicesEnum.WEB}-content-3`,
         title: 'ReactJS',
         description:
-          "Create dynamic and interactive web applications with the power of react's component-based architecture",
+          "Create dynamic and interactive web applications with the power of react's component-based architecture.",
         icon: reactIcon,
       },
       {
@@ -288,7 +288,7 @@ export const ServiceWeDoContent = [
         id: `${ServicesEnum.CLOUD}-content-10`,
         title: 'Azure',
         description:
-          "Tap into Microsoft Azure's cutting-edge cloud capabilities to drive innovation, agility, and scale in your organization's digital transformation journey",
+          "Tap into Microsoft Azure's cutting-edge cloud capabilities to drive innovation, agility, and scale in your organization's digital transformation journey.",
         icon: azureIcon,
       },
       {
@@ -311,14 +311,14 @@ export const ServiceWeDoContent = [
         id: `${ServicesEnum.EMERGING}-content-12`,
         title: 'ChatGPT AI',
         description:
-          "Transform your applications with the power of chatgpt's artificial intelligence, infusing them with smart automation and actionable insights for enhanced user experiences and business efficiency.",
+          "Transform your applications with the power of ChatGPT's artificial intelligence, infusing them with smart automation and actionable insights for enhanced user experiences and business efficiency.",
         icon: chatGPTIcon,
       },
       {
         id: `${ServicesEnum.EMERGING}-content-13`,
         title: 'IoT',
         description:
-          'Empower your organization with internet of things (IoT) solutions to effortlessly connect and control devices, enabling smart automation and enhanced efficiency for a connected future.',
+          'Empower your organization with Internet of Things (IoT) solutions to effortlessly connect and control devices, enabling smart automation and enhanced efficiency for a connected future.',
         icon: IOTIcon,
       },
       {
