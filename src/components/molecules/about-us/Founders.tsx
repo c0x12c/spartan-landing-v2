@@ -117,7 +117,9 @@ const FounderCard: React.FC<FounderCardProps> = ({ founder }) => {
 
   return (
     <Box
-      width={{ md: 'calc((100% - 55px * 3)/2)', xs: '100%' }}
+      flex="1"
+      maxWidth={'342px'}
+      margin="0 auto"
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
       style={{
