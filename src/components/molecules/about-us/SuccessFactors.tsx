@@ -42,7 +42,7 @@ export const SuccessFactors = () => {
           />
           <BodyText
             text="We believe that our dedication to the human element, strong engineering processes, and
-                exceptional talent make us truly stand out in the full-remote engineering landscape."
+                exceptional talent make us truly stand out in the fully-remote engineering landscape."
             data-aos="fade-up"
             data-aos-delay="500"
             sx={{

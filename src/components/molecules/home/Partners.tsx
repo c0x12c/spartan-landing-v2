@@ -61,8 +61,8 @@ export const Partners: React.FunctionComponent<IPartnersProps> = () => {
           alignItems="center"
           justifyContent="center"
         >
-          {renderBiz(PartnersData.slice(0, 4), 'first')}
-          {renderBiz(PartnersData.slice(4), 'second')}
+          {renderBiz(PartnersData.slice(0, 3), 'first')}
+          {renderBiz(PartnersData.slice(3), 'second')}
         </Grid>
       </Container>
     </Box>

@@ -15,7 +15,7 @@ export const AboutUsBanner = () => {
             maxWidth={{ md: '655px', xs: '100%' }}
           >
             <MainTitle
-              text="Top tier tech savvy /Engineers/ in world"
+              text="Top tier tech savvy /Engineers/"
               data-aos="fade-up"
               data-aos-delay="200"
             />

@@ -54,13 +54,13 @@ export const Partners: PartnerType[] = [
     imgSrc: logoAgora,
     href: '/',
   },
-  {
-    id: 'partner-4',
-    name: 'Mobolize',
-    tags: [],
-    imgSrc: logoMobolize,
-    href: '/',
-  },
+  // {
+  //   id: 'partner-4',
+  //   name: 'Mobolize',
+  //   tags: [],
+  //   imgSrc: logoMobolize,
+  //   href: '/',
+  // },
   // {
   //   id: 'partner-5',
   //   name: 'Heru',
@@ -82,11 +82,11 @@ export const Partners: PartnerType[] = [
     imgSrc: logoWb,
     href: '/',
   },
-  {
-    id: 'partner-8',
-    name: 'Sabio',
-    tags: [],
-    imgSrc: logoSabio,
-    href: '/',
-  },
+  // {
+  //   id: 'partner-8',
+  //   name: 'Sabio',
+  //   tags: [],
+  //   imgSrc: logoSabio,
+  //   href: '/',
+  // },
 ];
