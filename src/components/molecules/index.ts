@@ -8,6 +8,7 @@ export { WhyBusiness } from './home/WhyBusiness';
 export { OurServices } from './home/OurServices';
 export { GlobalImpact } from './home/GlobalImpact';
 export { Clients } from './home/Clients';
+export { StacksHome } from './home/Stacks';
 
 //ABOUT-US
 export { AboutUsBanner } from './about-us/Banner';
