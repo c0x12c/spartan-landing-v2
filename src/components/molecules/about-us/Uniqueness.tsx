@@ -36,7 +36,7 @@ export const Uniqueness = () => {
             }}
           />
           <Title
-            text="Why are startups choose Spartan to solve their problem?"
+            text="Why do startups choose Spartan to solve their problem?"
             data-aos="fade-up"
             data-aos-delay="300"
             sx={{
@@ -62,7 +62,7 @@ export const Uniqueness = () => {
           <CardHorizontal
             title="Cross-Continental expertise"
             icon={SubTitleImage}
-            content="We leverages our diverse and cross-continental expertise to deliver exceptional solutions to clients worldwide."
+            content="We leverage our diverse and cross-continental expertise to deliver exceptional solutions to clients worldwide."
           />
           <CardHorizontal
             title="Strong US market experience"

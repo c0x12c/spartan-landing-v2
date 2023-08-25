@@ -33,7 +33,7 @@ export const ServicesOffer: React.FunctionComponent<IServicesOfferProps> = () =>
       <Container>
         <Box display={'flex'} flexDirection={'column'} alignItems="center" gap={'24px'} mb={'64px'}>
           <SubTitle text="Our services" data-aos="fade-up" data-aos-delay="200" />
-          <Title text="What services do we offer" data-aos="fade-up" data-aos-delay="300" />
+          <Title text="What services do we offer?" data-aos="fade-up" data-aos-delay="300" />
         </Box>
         <Grid container columnSpacing="21px" rowSpacing="25px">
           {renderFirstPart}

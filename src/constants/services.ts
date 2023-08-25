@@ -66,7 +66,7 @@ export const Services: ServiceType[] = [
     id: 'service-1',
     label: 'Mobile App Development',
     href: '/services/mobile-app',
-    content: 'Disruptive and customizes mobile solution for all',
+    content: 'Disruptive and customized mobile solution for all',
     icon: mobileIcon,
     detail: [
       {
@@ -112,7 +112,7 @@ export const Services: ServiceType[] = [
     id: 'service-4',
     label: 'Cloud Solutions',
     href: '/services/cloud',
-    content: 'Migrate your offline business to cloud',
+    content: 'Migrate your offline business to the cloud',
     icon: cloudIcon,
     detail: [
       {

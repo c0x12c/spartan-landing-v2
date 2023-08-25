@@ -56,7 +56,7 @@ const SEOPages: ISEOPages = {
   },
   [EPages.SERVICES_MOBILE]: {
     title: 'Spartan | Mobile App Development',
-    description: 'Disruptive and customizes mobile solution for all',
+    description: 'Disruptive and customized mobile solution for all',
     keywords:
       'Mobile app design, iOS app development, Android app development, Cross-platform development, App user interface (UI), Mobile app optimization.',
     metaImage: '/home-thumbnail.png',
@@ -64,7 +64,7 @@ const SEOPages: ISEOPages = {
   },
   [EPages.SERVICES_CLOUD]: {
     title: 'Spartan | Cloud Solutions',
-    description: 'Migrate your offline business to cloud',
+    description: 'Migrate your offline business to the cloud',
     keywords:
       'Cloud infrastructure, AWS services, Google Cloud solutions, Azure cloud platform, Scalability and reliability, Cloud migration.',
     metaImage: '/home-thumbnail.png',

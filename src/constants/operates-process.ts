@@ -28,7 +28,7 @@ export const OperatesProcesses = [
     id: 'process-2',
     title: 'Iterative Development',
     description:
-      'Our development process follows iterative cycles lasting approximately two week, allowing us to refine and improve our applications continuously. \n We prioritize avoiding deployments before non-work days to ensure timely resolution of any issues during regular working hours. \n The Product Owner plays a pivotal role in making decisions that maximize immediate business value. Meanwhile, the engineering team assesses challenges and potential engineering risks, proposing prioritization of tasks that need to be addressed first or in the near future, with the understanding that they should not be left until the end of the development cycle. By aligning priorities and addressing risks early on, we enhance efficiency and ensure the successful delivery of our applications.',
+      'Our development process follows iterative cycles lasting approximately two weeks, allowing us to refine and improve our applications continuously. \n We prioritize avoiding deployments before non-work days to ensure timely resolution of any issues during regular working hours. \n The Product Owner plays a pivotal role in making decisions that maximize immediate business value. Meanwhile, the engineering team assesses challenges and potential engineering risks, proposing prioritization of tasks that need to be addressed first or in the near future, with the understanding that they should not be left until the end of the development cycle. By aligning priorities and addressing risks early on, we enhance efficiency and ensure the successful delivery of our applications.',
 
     bgColor: 'rgba(13, 178, 117, 0.10)',
     sideBgColor: '#0DB275',
