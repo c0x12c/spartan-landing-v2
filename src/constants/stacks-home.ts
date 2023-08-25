@@ -6,11 +6,11 @@ import CSharp from '@/assets/images/stacks-home/CSharp.svg';
 import Go from '@/assets/images/stacks-home/go.svg';
 import Rust from '@/assets/images/stacks-home/rust.svg';
 import Python from '@/assets/images/stacks-home/python.svg';
-import JavaScript from '@/assets/images/stacks-home/JavaScript.svg';
-import Typescript from '@/assets/images/stacks-home/Typescript.svg';
+import JavaScript from '@/assets/images/stacks-home/javascript.svg';
+import Typescript from '@/assets/images/stacks-home/typescript.svg';
 
 import Micronaut from '@/assets/images/stacks-home/micronaut.svg';
-import Echo from '@/assets/images/stacks-home/echo.svg';
+import Echo from '@/assets/images/stacks-home/echo-frame.svg';
 import NextJS from '@/assets/images/stacks-home/nextJS.svg';
 import Nuxt from '@/assets/images/stacks-home/nuxt.svg';
 import FastAPI from '@/assets/images/stacks-home/fastAPI.svg';
@@ -31,7 +31,7 @@ import MySQL from '@/assets/images/stacks-home/mySQL.svg';
 import MongoDB from '@/assets/images/stacks-home/mongoDB.svg';
 import DynamoDB from '@/assets/images/stacks-home/dynamoDB.svg';
 import Scylladb from '@/assets/images/stacks-home/scylladb.svg';
-import Redis from '@/assets/images/stacks-home/Redis.svg';
+import Redis from '@/assets/images/stacks-home/redis.svg';
 import ElasticSearch from '@/assets/images/stacks-home/elasticSearch.svg';
 
 import ApacheFlink from '@/assets/images/stacks-home/apacheFlink.svg';
@@ -42,7 +42,7 @@ import GooglePubSub from '@/assets/images/stacks-home/googlePubSub.svg';
 
 import Kubernetes from '@/assets/images/stacks-home/kubernetes.svg';
 import Docker from '@/assets/images/stacks-home/docker.svg';
-import TerraForm from '@/assets/images/stacks-home/terraForm.svg';
+import TerraForm from '@/assets/images/stacks-home/terraform.svg';
 import Jenkins from '@/assets/images/stacks-home/jenkins.svg';
 import GithubAction from '@/assets/images/stacks-home/githubAction.svg';
 import Agora from '@/assets/images/stacks-home/agora.svg';
