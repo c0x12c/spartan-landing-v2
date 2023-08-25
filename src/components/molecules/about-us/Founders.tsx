@@ -74,7 +74,7 @@ export const Founders = () => {
               founder={{
                 image: Bao,
                 name: 'Bao Nguyen',
-                position: 'CTO',
+                position: 'COO',
                 link: 'https://linkedin.com/in/bao-nguyen-08541a7a/',
               }}
             />
@@ -82,7 +82,7 @@ export const Founders = () => {
               founder={{
                 image: Duc,
                 name: 'Duc Duong',
-                position: 'COO',
+                position: 'CTO',
                 link: 'https://www.linkedin.com/in/duongthienduc/',
               }}
             />
