@@ -97,7 +97,7 @@ export const Features = [
     id: 'feature-3',
     title: 'Achieve a healthy work-life balance',
     description:
-      "We understand the importance of personal well-being and a healthy lifestyle. We offer a range of benefits and initiatives to support our employees' overall well-being. We believe that a fulfilling personal life bring their best selves to work.",
+      "We understand the importance of personal well-being and a healthy lifestyle. We offer a range of benefits and initiatives to support our employees' overall well-being. We believe that a fulfilling personal life enables them to bring their best selves to work.",
     imgSrc: featureImage3,
     subContent: [
       {
@@ -113,7 +113,7 @@ export const Features = [
         id: 'sub-content-3.2',
         content: (
           <Typography variant="fs14" color={base.grey} letterSpacing="0.21px">
-            Annual company travel & An intimate party <br /> every month
+            Annual company travel and an intimate intimate party <br /> every month
           </Typography>
         ),
         tick: tickBlue,

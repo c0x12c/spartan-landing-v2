@@ -6,6 +6,8 @@ import logoPura from '@/assets/images/partners/logo-pura.png';
 import logoBiolog from '@/assets/images/partners/logo-biolog.png';
 import logoHeru from '@/assets/images/partners/logo-heru.png';
 import logoURSA from '@/assets/images/partners/logo-URSA.png';
+import logoSlice from '@/assets/images/partners/logo-slice.png';
+import logoGeocipher from '@/assets/images/partners/logo-geocipher.png';
 
 import { StaticImageData } from 'next/image';
 
@@ -31,10 +33,16 @@ export const Clients: ClientType[] = [
     name: 'Veraset',
     imgSrc: logoVeraset,
   },
+
   {
     id: 'client-4',
     name: 'Agora',
     imgSrc: logoAogra,
+  },
+  {
+    id: 'partner-9',
+    name: 'Slice',
+    imgSrc: logoSlice,
   },
   {
     id: 'client-5',
@@ -55,5 +63,10 @@ export const Clients: ClientType[] = [
     id: 'client-8',
     name: 'URSA',
     imgSrc: logoURSA,
+  },
+  {
+    id: 'client-10',
+    name: 'Geocipher',
+    imgSrc: logoGeocipher,
   },
 ];

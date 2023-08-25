@@ -34,7 +34,7 @@ export const LifeSpartanSentence: React.FunctionComponent<ILifeSpartanSentencePr
             minds{' '}
             <Typography variant={isMobile ? 'fs28' : 'fs40'} color={primary[500]}>
               in the world
-            </Typography>{' '}
+            </Typography>
             , making them accessible to you.
           </Typography>
         </Box>

@@ -15,6 +15,7 @@ import NextJS from '@/assets/images/stacks-home/nextJS.svg';
 import Nuxt from '@/assets/images/stacks-home/nuxt.svg';
 import FastAPI from '@/assets/images/stacks-home/fastAPI.svg';
 import Actix from '@/assets/images/stacks-home/actix.svg';
+import LangChain from '@/assets/images/stacks/LangChain.svg';
 
 import Solid from '@/assets/images/stacks-home/solid.svg';
 import Twillio from '@/assets/images/stacks-home/twillio.svg';
@@ -67,7 +68,7 @@ type FieldType = {
 export const StacksInHome: FieldType[] = [
   {
     id: 'field-1',
-    name: 'Programming language',
+    name: 'Programming Language',
     stacks: [
       { id: 'stack-1', name: 'Java', imgSrc: Java },
       { id: 'stack-2', name: 'Kotlin', imgSrc: Kotlin },
@@ -98,7 +99,7 @@ export const StacksInHome: FieldType[] = [
     name: 'Platform',
     stacks: [
       { id: 'stack-16', name: 'Solid', imgSrc: Solid },
-      { id: 'stack-17', name: 'Echo', imgSrc: Echo },
+      // { id: 'stack-17', name: 'Echo', imgSrc: Echo },
       { id: 'stack-18', name: 'Twillio', imgSrc: Twillio },
       { id: 'stack-19', name: 'CoinMarketCap', imgSrc: CoinMarketCap },
       { id: 'stack-20', name: 'Zero', imgSrc: Zero },
@@ -152,7 +153,7 @@ export const StacksInHome: FieldType[] = [
   },
   {
     id: 'field-8',
-    name: 'Artificial intelligence',
+    name: 'Artificial Intelligence',
     stacks: [
       { id: 'stack-43', name: 'OpenAI', imgSrc: OpenAI },
       { id: 'stack-44', name: 'PalmLLM', imgSrc: PalmLLM },

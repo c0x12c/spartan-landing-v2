@@ -35,7 +35,7 @@ export const LifeSpartanBanner: React.FunctionComponent<ILifeSpartanBannerProps>
                   }}
                 />
                 <BodyText
-                  text="Experience a fulfilling work-life balance as a Spartan . Embrace a supportive environment that encourages collaboration, creativity, and work-life integration, allowing you to thrive both in and out of the office. Join us and discover the rewarding Spartan lifestyle."
+                  text="Experience a fulfilling work-life balance as a Spartan. Embrace a supportive environment that encourages collaboration, creativity, and work-life integration, allowing you to thrive both in and out of the office. Join us and discover the rewarding Spartan lifestyle."
                   data-aos="fade-up"
                   data-aos-delay="300"
                   sx={{ maxWidth: '527px' }}

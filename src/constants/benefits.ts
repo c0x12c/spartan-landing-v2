@@ -7,7 +7,7 @@ export const BenefitsData = [
       'Premium healthcare insurance',
       'Allow work from anywhere',
       'Covering the cost of participating in sports activities (Strava app)',
-      'Annual company travel & An intimate party every month',
+      'Annual company travel and an intimate party every month',
     ],
   },
   {

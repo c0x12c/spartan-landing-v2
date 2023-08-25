@@ -5,6 +5,7 @@ import Box from '@mui/material/Box';
 import { StacksInHome } from '@/constants';
 import { BreakPoints, useBreakpoint } from '@/hooks';
 import Image from 'next/image';
+import { Typography } from '@mui/material';
 
 function a11yProps(index: number) {
   return {
@@ -72,6 +73,11 @@ export function StacksHome() {
             {item.stacks.map((itemStack) => {
               return <Image key={itemStack.id} alt={itemStack.name} src={itemStack.imgSrc} />;
             })}
+            {value === 'field-2' && (
+              <Typography variant="fs16" color="white">
+                🦜️🔗 LangChain
+              </Typography>
+            )}
           </Box>
         )}
       </div>
