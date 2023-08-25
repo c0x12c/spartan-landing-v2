@@ -205,7 +205,7 @@ export const ServiceWeDoContent = [
         id: `${ServicesEnum.MOBILE}-content-2`,
         title: 'Android',
         description:
-          "Craft Exceptional Apps with Kotlin's Expressive Syntax and Native Performance.",
+          'Craft exceptional apps with Kotlin’s expressive syntax and native performance.',
         icon: androidIcon,
       },
     ],
@@ -228,7 +228,7 @@ export const ServiceWeDoContent = [
         id: `${ServicesEnum.WEB}-content-4`,
         title: 'Angular',
         description:
-          "Embrace angular's modular architecture and typeScript to develop modern and feature - rich web applications",
+          "Embrace angular's modular architecture and typeScript to develop modern and feature - rich web applications.",
         icon: angularIcon,
       },
     ],
@@ -244,21 +244,21 @@ export const ServiceWeDoContent = [
         id: `${ServicesEnum.BACKEND}-content-5`,
         title: 'Kotlin',
         description:
-          "Leverage Kotlin's strong type system, null safety, and functional programming features to create clean, efficient, and highly maintainable backend applications",
+          "Leverage Kotlin's strong type system, null safety, and functional programming features to create clean, efficient, and highly maintainable backend applications.",
         icon: kotlinIcon,
       },
       {
         id: `${ServicesEnum.BACKEND}-content-6`,
         title: 'Java',
         description:
-          "Build robust, secure, and scalable backend architectures using Java's mature ecosystem, enterprise-level libraries, and battle-tested design patterns",
+          "Build robust, secure, and scalable backend architectures using Java's mature ecosystem, enterprise-level libraries, and battle-tested design patterns.",
         icon: javaIcon,
       },
       {
         id: `${ServicesEnum.BACKEND}-content-7`,
         title: 'C#',
         description:
-          'Create Robust, Secure, and Enterprise-Grade Backend Systems with the Versatility of C#',
+          'Create robust, secure, and enterprise-grade backend systems with the versatility of C#.',
         icon: cSharpIcon,
       },
     ],
@@ -274,28 +274,28 @@ export const ServiceWeDoContent = [
         id: `${ServicesEnum.CLOUD}-content-8`,
         title: 'AWS',
         description:
-          'Leverage the Power of Amazon Web Services (AWS) to Build and Manage Your Cloud Infrastructure with Unmatched Scalability and Reliability',
+          'Leverage the power of Amazon Web Services (AWS) to build and manage your cloud infrastructure with unmatched scalability and reliability.',
         icon: AWSIcon,
       },
       {
         id: `${ServicesEnum.CLOUD}-content-9`,
         title: 'Google Cloud',
         description:
-          "Drive Business Success with Secure and Flexible Cloud Solutions Powered by Google's Robust and Innovative Cloud Infrastructure.",
+          "Drive business success with secure and flexible cloud solutions powered by Google's robust and innovative cloud infrastructure.",
         icon: GGCloudIcon,
       },
       {
         id: `${ServicesEnum.CLOUD}-content-10`,
         title: 'Azure',
         description:
-          "Tap into Microsoft Azure's Cutting-Edge Cloud Capabilities to Drive Innovation, Agility, and Scale in Your Organization's Digital Transformation Journey",
+          "Tap into Microsoft Azure's cutting-edge cloud capabilities to drive innovation, agility, and scale in your organization's digital transformation journey",
         icon: azureIcon,
       },
       {
         id: `${ServicesEnum.CLOUD}-content-11`,
         title: 'Kubernetes',
         description:
-          'Harness Kubernetes to efficiently manage and scale your containerized applications, enabling seamless deployment and optimized resource utilization',
+          'Harness Kubernetes to efficiently manage and scale your containerized applications, enabling seamless deployment and optimized resource utilization.',
         icon: kubernetesIcon,
       },
     ],
@@ -305,27 +305,27 @@ export const ServiceWeDoContent = [
     title: 'Transforming Industries with Emerging Tech',
     type: ServicesEnum.EMERGING,
     description:
-      'Our emerging technologies expertise includes ChatGPT AI Integration, IoT solutions, and real-time data streaming using Flink. We empower businesses with smart automation, enhanced user experiences, and real-time actionable insights',
+      'Our emerging technologies expertise includes ChatGPT AI Integration, IoT solutions, and real-time data streaming using Flink. We empower businesses with smart automation, enhanced user experiences, and real-time actionable insights.',
     content: [
       {
         id: `${ServicesEnum.EMERGING}-content-12`,
         title: 'ChatGPT AI',
         description:
-          "Transform Your Applications with the Power of ChatGPT's Artificial Intelligence, Infusing Them with Smart Automation and Actionable Insights for Enhanced User Experiences and Business Efficiency.",
+          "Transform your applications with the power of chatgpt's artificial intelligence, infusing them with smart automation and actionable insights for enhanced user experiences and business efficiency.",
         icon: chatGPTIcon,
       },
       {
         id: `${ServicesEnum.EMERGING}-content-13`,
         title: 'IoT',
         description:
-          'Empower Your Organization with Internet of Things (IoT) Solutions to Effortlessly Connect and Control Devices, Enabling Smart Automation and Enhanced Efficiency for a Connected Future.',
+          'Empower your organization with internet of things (IoT) solutions to effortlessly connect and control devices, enabling smart automation and enhanced efficiency for a connected future.',
         icon: IOTIcon,
       },
       {
         id: `${ServicesEnum.EMERGING}-content-14`,
         title: 'Real-time data streaming',
         description:
-          'Harness the Power of Flink for Seamless Processing and Analysis of Continuous Data Streams, Empowering Organizations with Instant, Actionable Insights for Real-time Decision-making',
+          'Harness the power of Flink for seamless processing and analysis of continuous data streams, empowering organizations with instant, actionable insights for real-time decision-making.',
         icon: RTSIcon,
       },
     ],
