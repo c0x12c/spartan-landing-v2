@@ -126,7 +126,11 @@ const FounderCard: React.FC<FounderCardProps> = ({ founder }) => {
       }}
     >
       <Box position="relative" data-aos="flip-right" data-aos-delay="800">
-        <Image src={founder.image} alt={founder.name} style={{ width: '100%', height: 'auto' }} />
+        <Image
+          src={founder.image}
+          alt={founder.name}
+          style={{ width: '100%', maxHeight: '398px' }}
+        />
         {isHovered && (
           <Box
             position="absolute"
