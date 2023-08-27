@@ -22,7 +22,7 @@ const AboutProject = () => {
           <Box display={'flex'} flexDirection={'column'} gap={'32px'} alignItems={'center'}>
             <Title text="About project" data-aos="fade-up" data-aos-delay="200" />
             <BodyText
-              text="ChargeFUZE offers a convenient and accessible solution for charging devices anytime, anywhere. With the largest network of mobile charging kiosks, ChargeFUZE empowers users to rent portable chargers on the go. Whether you're at a bustling event, traveling, or simply out and about, ChargeFUZE ensures that a reliable power source is always within reach."
+              text="chargeFUZE offers a convenient and accessible solution for charging devices anytime, anywhere. With the largest network of mobile charging kiosks, chargeFUZE empowers users to rent portable chargers on the go. Whether you're at a bustling event, traveling, or simply out and about, chargeFUZE ensures that a reliable power source is always within reach."
               sx={{ textAlign: 'center', color: base.grey }}
               data-aos="fade-up"
               data-aos-delay="300"
@@ -30,7 +30,7 @@ const AboutProject = () => {
           </Box>
           <Image
             src={OurWorkImage}
-            alt="ChargeFUZE on mobiles"
+            alt="chargeFUZE on mobiles"
             style={{ paddingTop: isMobile ? '22px' : '44px', maxWidth: '100%', height: 'auto' }}
             data-aos="zoom-in"
             data-aos-delay="300"
@@ -45,7 +45,7 @@ const AboutProject = () => {
             data-aos="fade-up"
             data-aos-delay="200"
           >
-            &quot;Say goodbye to low battery anxiety with ChargeFUZE&apos;s seamless and accessible
+            &quot;Say goodbye to low battery anxiety with chargeFUZE&apos;s seamless and accessible
             charging solution&quot;
           </Typography>
         </Box>

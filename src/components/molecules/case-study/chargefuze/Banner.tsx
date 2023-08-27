@@ -28,7 +28,7 @@ const BannerCF = () => {
             justifyContent={'center'}
             maxWidth={'394px'}
           >
-            <MainTitle text="ChargeFUZE" data-aos="fade-right" data-aos-delay="200" />
+            <MainTitle text="chargeFUZE" data-aos="fade-right" data-aos-delay="200" />
             <Typography
               variant="fs24"
               color={gray[50]}

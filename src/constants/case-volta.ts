@@ -31,17 +31,17 @@ export const DataWeDo = [
     id: 'we-do-2',
     title: 'Developed a solid backend and infrastructure for Volta Wallet',
     content:
-      'Developed secure iOS and Android applications with top security measures. Implemented functionality for creating and backing up cryptocurrency wallets using encryption techniques. Built the AppClip and Instant App feature:',
+      'Developed secure iOS and Android applications with top security measures. Implemented functionality for creating and backing up cryptocurrency wallets using encryption techniques. Built the App Clip and Instant App feature.',
   },
   {
     id: 'we-do-3',
-    title: 'Implemented the appclip and Instant app feature for Volta Wallet.',
+    title: 'Implemented the App Clip and Instant App feature for Volta Wallet',
     content:
-      'Enabled users to create a new account without installing the full app. Utilized during promotional campaigns, providing users with a free Skin NFT for their app. Built backend and infrastructure:',
+      'Enabled users to create a new account without installing the full app. Utilized during promotional campaigns, providing users with a free Skin NFT for their app. Built backend and infrastructure.',
   },
   {
     id: 'we-do-4',
-    title: ' Developed a solid backend and infrastructure for Volta Wallet.',
+    title: ' Developed a solid backend and infrastructure for Volta Wallet',
     content:
       'Implemented a system that is easily monitored, maintained, and scalable. Used technologies like Kotlin, Go, Swift, JavaScript, TypeScript, HCL.',
   },
