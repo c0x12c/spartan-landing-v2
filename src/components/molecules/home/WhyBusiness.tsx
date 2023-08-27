@@ -47,7 +47,7 @@ export const WhyBusiness: React.FunctionComponent<IWhyBusinessProps> = () => {
             <Typography variant={isMobile ? 'fs14' : 'fs16'} color={primary[400]} fontWeight={600}>
               engineers{' '}
             </Typography>
-            around the word.
+            around the world.
           </Typography>
         </>
       ),
