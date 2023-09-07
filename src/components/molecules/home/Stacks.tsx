@@ -85,7 +85,7 @@ export function StacksHome() {
   });
 
   return (
-    <Box sx={{ width: '100%' }} mt="-54px">
+    <Box sx={{ width: '100%' }} mt="-54.5px">
       <Tabs
         value={value}
         onChange={handleChange}
@@ -95,7 +95,7 @@ export function StacksHome() {
         scrollButtons={true}
         TabIndicatorProps={{
           style: {
-            backgroundColor: 'transparent',
+            backgroundColor: 'black',
           },
         }}
         sx={{
