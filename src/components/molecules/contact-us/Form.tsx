@@ -83,7 +83,7 @@ export const ContactUsForm: React.FunctionComponent<IContactUsFormProps> = () =>
               />
             </Box>
             <Link
-              href={`https://mail.google.com/mail/?view=cm&fs=1&to=thuy.nguyen@c0x12c.com&body=Dear ${lastName}, please leave your message here, and we will contact you soon.`}
+              href={`https://mail.google.com/mail/?view=cm&fs=1&to=hello@c0x12c.com&body=Dear ${lastName}, please leave your message here, and we will contact you soon.`}
               target="_blank"
             >
               <Button

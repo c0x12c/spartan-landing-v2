@@ -8,6 +8,7 @@ import logoHeru from '@/assets/images/partners/logo-heru.png';
 import logoURSA from '@/assets/images/partners/logo-URSA.png';
 import logoSlice from '@/assets/images/partners/logo-slice.png';
 import logoGeocipher from '@/assets/images/partners/logo-geocipher.png';
+import logoVolta from '@/assets/images/partners/logo-volta.png';
 
 import { StaticImageData } from 'next/image';
 
@@ -25,48 +26,58 @@ export const Clients: ClientType[] = [
   },
   {
     id: 'client-2',
-    name: 'ChargeFuze',
-    imgSrc: logoCF,
-  },
-  {
-    id: 'client-3',
-    name: 'Veraset',
-    imgSrc: logoVeraset,
-  },
-
-  {
-    id: 'client-4',
     name: 'Agora',
     imgSrc: logoAogra,
   },
   {
-    id: 'partner-9',
-    name: 'Slice',
-    imgSrc: logoSlice,
-  },
-  {
-    id: 'client-5',
+    id: 'client-3',
     name: 'Heru',
     imgSrc: logoHeru,
   },
   {
-    id: 'client-6',
-    name: 'Pura',
-    imgSrc: logoPura,
-  },
-  {
-    id: 'client-7',
+    id: 'client-4',
     name: 'Biolog',
     imgSrc: logoBiolog,
   },
   {
-    id: 'client-8',
+    id: 'client-5',
+    name: 'ChargeFuze',
+    imgSrc: logoCF,
+  },
+  {
+    id: 'client-6',
     name: 'URSA',
     imgSrc: logoURSA,
   },
   {
-    id: 'client-10',
+    id: 'client-7',
+    name: 'Slice',
+    imgSrc: logoSlice,
+  },
+  {
+    id: 'client-8',
+    name: 'Pura',
+    imgSrc: logoPura,
+  },
+  {
+    id: 'client-9',
     name: 'Geocipher',
     imgSrc: logoGeocipher,
   },
+  {
+    id: 'client-10',
+    name: 'Veraset',
+    imgSrc: logoVeraset,
+  },
+  {
+    id: 'client-11',
+    name: 'Volta',
+    imgSrc: logoVolta,
+  },
 ];
+
+export const sampleData = {
+  id: 'sample',
+  name: 'Sample',
+  imgSrc: null,
+};

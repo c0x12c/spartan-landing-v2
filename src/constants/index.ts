@@ -29,4 +29,4 @@ export {
 export { OperatesProcesses, type OperatesProcessType } from './operates-process';
 export { CFStackList } from './case-cf';
 export { StacksInHome } from './stacks-home';
-export { Clients, type ClientType } from './clients';
+export { Clients, type ClientType, sampleData } from './clients';

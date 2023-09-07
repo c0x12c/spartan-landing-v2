@@ -17,7 +17,6 @@ export const Container: React.FunctionComponent<IContainerProps> = ({ children, 
           xs: '100%',
         },
         padding: {
-          sm: '0 32px',
           xs: '0 16px',
         },
       }}
