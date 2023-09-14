@@ -6,6 +6,7 @@ import CSharp from '@/assets/images/stacks-home/CSharp.svg';
 import Go from '@/assets/images/stacks-home/go.svg';
 import Rust from '@/assets/images/stacks-home/rust.svg';
 import Python from '@/assets/images/stacks-home/python.svg';
+import Solidity from '@/assets/images/stacks-home/solidity.svg';
 import JavaScript from '@/assets/images/stacks-home/javascript.svg';
 import Typescript from '@/assets/images/stacks-home/typescript.svg';
 
@@ -15,7 +16,8 @@ import NextJS from '@/assets/images/stacks-home/nextJS.svg';
 import Nuxt from '@/assets/images/stacks-home/nuxt.svg';
 import FastAPI from '@/assets/images/stacks-home/fastAPI.svg';
 import Actix from '@/assets/images/stacks-home/actix.svg';
-import LangChain from '@/assets/images/stacks/LangChain.svg';
+import Agora from '@/assets/images/stacks-home/agora.svg';
+import NodeJS from '@/assets/images/stacks-home/nodeJS.svg';
 
 import Solid from '@/assets/images/stacks-home/solid.svg';
 import Twillio from '@/assets/images/stacks-home/twillio.svg';
@@ -46,7 +48,6 @@ import Docker from '@/assets/images/stacks-home/docker.svg';
 import TerraForm from '@/assets/images/stacks-home/terraform.svg';
 import Jenkins from '@/assets/images/stacks-home/jenkins.svg';
 import GithubAction from '@/assets/images/stacks-home/githubAction.svg';
-import Agora from '@/assets/images/stacks-home/agora.svg';
 
 import OpenAI from '@/assets/images/stacks-home/openAI.svg';
 import PalmLLM from '@/assets/images/stacks-home/palmLLM.svg';
@@ -78,6 +79,7 @@ export const StacksInHome: FieldType[] = [
       { id: 'stack-6', name: 'Golang', imgSrc: Go },
       { id: 'stack-7', name: 'Rust', imgSrc: Rust },
       { id: 'stack-45', name: 'Python', imgSrc: Python },
+      { id: 'stack-17', name: 'Solidity', imgSrc: Solidity },
       { id: 'stack-8', name: 'JavaScript', imgSrc: JavaScript },
       { id: 'stack-9', name: 'Typescript', imgSrc: Typescript },
     ],
@@ -99,11 +101,12 @@ export const StacksInHome: FieldType[] = [
     name: 'Platform',
     stacks: [
       { id: 'stack-16', name: 'Solid', imgSrc: Solid },
-      // { id: 'stack-17', name: 'Echo', imgSrc: Echo },
       { id: 'stack-18', name: 'Twillio', imgSrc: Twillio },
       { id: 'stack-19', name: 'CoinMarketCap', imgSrc: CoinMarketCap },
       { id: 'stack-20', name: 'Zero', imgSrc: Zero },
       { id: 'stack-21', name: 'SendGrid', imgSrc: SendGrid },
+      { id: 'stack-42', name: 'Agora', imgSrc: Agora },
+      { id: 'stack-46', name: 'NodeJS', imgSrc: NodeJS },
     ],
   },
   {
@@ -148,7 +151,6 @@ export const StacksInHome: FieldType[] = [
       { id: 'stack-39', name: 'TerraForm', imgSrc: TerraForm },
       { id: 'stack-40', name: 'Jenkins', imgSrc: Jenkins },
       { id: 'stack-41', name: 'GithubAction', imgSrc: GithubAction },
-      { id: 'stack-42', name: 'Agora', imgSrc: Agora },
     ],
   },
   {
