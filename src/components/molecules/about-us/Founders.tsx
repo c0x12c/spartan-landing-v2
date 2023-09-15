@@ -1,9 +1,9 @@
 import { Container, SubTitle, Title } from '@/components/atoms';
 import { base, gray } from '@/styles/colors';
 import { Box, Typography } from '@mui/material';
-import Chan from '@/assets/images/about-us/chan.jpg';
-import Bao from '@/assets/images/about-us/bao.jpg';
-import Duc from '@/assets/images/about-us/duc.jpg';
+import Chan from '@/assets/images/about-us/chan.png';
+import Bao from '@/assets/images/about-us/bao.png';
+import Duc from '@/assets/images/about-us/duc.png';
 import { useState } from 'react';
 import Image, { StaticImageData } from 'next/image';
 // import TwitterIcon from '@/assets/images/socials/twitter.svg';
@@ -131,7 +131,7 @@ const FounderCard: React.FC<FounderCardProps> = ({ founder }) => {
         <Image
           src={founder.image}
           alt={founder.name}
-          style={{ width: '100%', maxHeight: '398px' }}
+          style={{ width: '100%', height: 'auto', borderRadius: '8px' }}
         />
         {isHovered && (
           <Box

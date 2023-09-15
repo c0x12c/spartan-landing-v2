@@ -67,18 +67,8 @@ export const Description = () => {
           bgcolor={base.white}
           borderRadius={'8px 0 0 0'}
         >
-          <StatisticBox
-            isMobile={isMobile}
-            title="People"
-            number="70+"
-            subtitle="Talent engineers work every day"
-          />
-          <StatisticBox
-            isMobile={isMobile}
-            title="World offices"
-            number="04"
-            subtitle="Our offices around the world"
-          />
+          <StatisticBox isMobile={isMobile} title="Engineers" number="70+" />
+          <StatisticBox isMobile={isMobile} title="World offices" number="04" />
         </Box>
       </Box>
     </Container>
@@ -93,7 +83,7 @@ const StatisticBox = ({
 }: {
   title: string;
   number: string;
-  subtitle: string;
+  subtitle?: string;
   isMobile: boolean;
 }) => {
   return (
@@ -104,6 +94,7 @@ const StatisticBox = ({
       gap={'14px'}
       border={`1px solid ${gray[200]}`}
       borderRadius={'8px'}
+      minWidth="260px"
     >
       <Typography variant={isMobile ? 'fs14' : 'fs16'} color={gray[900]} fontWeight={600}>
         {title}
@@ -111,9 +102,16 @@ const StatisticBox = ({
       <Typography variant={isMobile ? 'fs40' : 'fs60'} color={primary[400]}>
         {number}
       </Typography>
-      <Typography variant={isMobile ? 'fs14' : 'fs16'} color={gray[900]} fontWeight={600}>
-        {subtitle}
-      </Typography>
+      {subtitle && (
+        <Typography
+          variant={isMobile ? 'fs14' : 'fs16'}
+          color={gray[900]}
+          fontWeight={600}
+          visibility="hidden"
+        >
+          {subtitle}
+        </Typography>
+      )}
     </Box>
   );
 };
