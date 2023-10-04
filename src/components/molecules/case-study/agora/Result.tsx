@@ -33,7 +33,7 @@ export const ResultAgora: React.FunctionComponent<IResultAgoraProps> = () => {
           flexDirection={'column'}
           justifyContent="center"
         >
-          <Title text="The result" sx={{ color: base.white, mb: '28px' }} />
+          <Title text="The Result" sx={{ color: base.white, mb: '28px' }} />
           <BodyText text={DataAgoraResult} sx={{ color: base.white }} />
         </Box>
         {!isTablet && (

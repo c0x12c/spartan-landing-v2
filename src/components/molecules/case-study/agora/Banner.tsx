@@ -28,7 +28,7 @@ export const CaseStudyAgoraBanner: React.FunctionComponent<ICaseStudyAgoraBanner
                 />
                 <BodyText
                   text="Agora is a pioneer and global leader in Real-Time Engagement, providing developers
-                  with simple, flexible, and powerful APIs, to embed real-time voice, video,
+                  with simple, flexible, and powerful APIs to embed real-time voice, video,
                   interactive streaming, chat, and artificial intelligence capabilities into their
                   applications."
                   sx={{ display: 'block', maxWidth: '538px', color: gray[200] }}

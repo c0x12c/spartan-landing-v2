@@ -40,7 +40,7 @@ export const Founders = () => {
                 }}
               />
               <Title
-                text="Our elite founding team of Engineers"
+                text="Our elite founding team of engineers"
                 data-aos="fade-up"
                 data-aos-delay="300"
                 sx={{

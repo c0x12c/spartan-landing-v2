@@ -36,7 +36,7 @@ export type GeneralStackType = {
 export const LiquidityStack: FieldType[] = [
   {
     id: 'field-1',
-    name: 'Programming Language',
+    name: 'Programming Languages',
     stacks: [
       { id: 'stack-2', name: 'Kotlin', imgSrc: Kotlin },
       { id: 'stack-1', name: 'Golang', imgSrc: Go },
@@ -48,7 +48,7 @@ export const LiquidityStack: FieldType[] = [
   },
   {
     id: 'field-2',
-    name: 'Framework',
+    name: 'Frameworks',
     stacks: [
       { id: 'stack-9', name: 'Micronaut', imgSrc: Micronaut },
       { id: 'stack-10', name: 'Echo', imgSrc: Echo },
@@ -58,7 +58,7 @@ export const LiquidityStack: FieldType[] = [
   },
   {
     id: 'field-3',
-    name: 'Platform',
+    name: 'Platforms',
     stacks: [
       { id: 'stack-14', name: 'Solid', imgSrc: Solid },
       { id: 'stack-15', name: 'Coinmarketcap', imgSrc: Coinmarketcap },
@@ -76,7 +76,7 @@ export const LiquidityStack: FieldType[] = [
   },
   {
     id: 'field-5',
-    name: 'Infrastructure',
+    name: 'Infrastructures',
     stacks: [
       { id: 'stack-24', name: 'Docker', imgSrc: Docker },
       { id: 'stack-25', name: 'Kubernetes', imgSrc: Kubernetes },
@@ -106,7 +106,7 @@ export const items = [
     title: 'Mobile Application',
     additionalText: [
       'Resolved critical bugs and improved the overall stability of the mobile applications.',
-      'Achieved a high level of stability with a close to 99.5% crash-free user rate.',
+      'Achieved a high level of stability with close to a 99.5% crash-free user rate.',
       'Developed a new mobile product called PrideCard.',
     ],
   },

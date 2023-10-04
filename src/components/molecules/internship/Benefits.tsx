@@ -13,7 +13,7 @@ export const Benefits: React.FunctionComponent<IBenefitsProps> = () => {
     {
       id: 'benefit-1',
       icon: <Image src={People} alt="Human element icon" />,
-      title: 'Hand-On experience',
+      title: 'Hands-on experience',
       description:
         'As an intern at Spartan, you’ll gain practical, hands-on experience by working on real projects and collaborating with experienced professionals. This invaluable experience will enhance your skills and boost your confidence, preparing you for a successful career in your chosen field.',
     },

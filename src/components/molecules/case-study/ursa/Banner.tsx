@@ -30,7 +30,7 @@ export const CaseStudyURSABanner: React.FunctionComponent<ICaseStudyURSABannerPr
                   data-aos-delay="200"
                 />
                 <BodyText
-                  text=" Ursa live is produces livestream events for new and established artists."
+                  text=" URSA Live produces livestream events for new and established artists."
                   data-aos="fade-up"
                   data-aos-delay="300"
                   sx={{ color: base.white, maxWidth: '538px' }}

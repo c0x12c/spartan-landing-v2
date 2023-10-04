@@ -21,7 +21,7 @@ export const Description = () => {
         >
           <SubTitle text="#who" data-aos="fade-up" data-aos-delay="200" />
           <Title
-            text="We are Spartan, a team of elite tech-savvy people!"
+            text="We are Spartan, a team of elite, tech-savvy people!"
             data-aos="fade-up"
             data-aos-delay="300"
             sx={{
@@ -94,7 +94,7 @@ const StatisticBox = ({
       gap={'14px'}
       border={`1px solid ${gray[200]}`}
       borderRadius={'8px'}
-      minWidth="260px"
+      width={isMobile ? '100%' : '260px'}
     >
       <Typography variant={isMobile ? 'fs14' : 'fs16'} color={gray[900]} fontWeight={600}>
         {title}

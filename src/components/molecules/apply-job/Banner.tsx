@@ -20,7 +20,7 @@ const ApplyJobBanner = () => {
           <Box data-aos="fade-right" data-aos-delay="300">
             <MainTitle
               isLightMode={false}
-              text="Spartan's remote high-paying tech jobs"
+              text="Spartan's remote, high-paying tech jobs"
               sx={{
                 fontSize: { xs: '40px', sm: '64px' },
                 mb: '24px',
@@ -28,7 +28,7 @@ const ApplyJobBanner = () => {
             />
             <BodyText
               sx={{ marginBottom: '32px', maxWidth: { xs: '100%', sm: '544px' } }}
-              text=" Join 100+ of the world's best engineers & get full-time, long-term remote
+              text=" Join 100+ of the world's best engineers & get full-time, long-term, remote
                 software jobs with better compensation and career growth."
             />
             <Link href="/ready-to-join">

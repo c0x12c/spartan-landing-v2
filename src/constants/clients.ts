@@ -41,7 +41,7 @@ export const Clients: ClientType[] = [
   },
   {
     id: 'client-5',
-    name: 'ChargeFuze',
+    name: 'chargeFUZE',
     imgSrc: logoCF,
   },
   {

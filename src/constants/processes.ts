@@ -20,7 +20,7 @@ export const HiringProcessData = [
     title: 'Coding Interview',
     bgIcon: base.orange,
     content:
-      'The interview will last at least 1+ hour, including a mix of coding exercises, problem-solving challenges, and technical questions. The interview consists of only four categories, each with four possible scores. These categories are algorithms, coding, communication, and problem-solving.',
+      'The interview will last at least 1 hour, including a mix of coding exercises, problem-solving challenges, and technical questions. The interview consists of only four categories, each with four possible scores. These categories are algorithms, coding, communication, and problem-solving.',
   },
   {
     id: 'hiring-3',
@@ -48,7 +48,7 @@ export const WorkingProcessData = [
   },
   {
     id: 'working-2',
-    title: 'Design, Development & Test',
+    title: 'Design, Development & Testing',
     bgIcon: base.orange,
     content:
       'Our experienced team of designers, developers, and testers work together to create a robust solution. We follow industry best practices and leverage cutting-edge technologies to design and develop your project. Throughout the process, we conduct rigorous testing to ensure the functionality, performance, and quality of the solution.',
@@ -84,7 +84,7 @@ export const MobileWorkingProcessData = [
   },
   {
     id: 'mobile-working-3',
-    title: 'Development & Test',
+    title: 'Development & Testing',
     bgIcon: base.green,
     content: 'Build and test robust mobile app features.',
   },
@@ -117,7 +117,7 @@ export const WebWorkingProcessData = [
   },
   {
     id: 'web-working-3',
-    title: 'Development & Test',
+    title: 'Development & Testing',
     bgIcon: base.green,
     content: 'Develop and test web applications with modern technologies.',
   },
@@ -140,17 +140,17 @@ export const BackendWorkingProcessData = [
     id: 'backend-working-1',
     title: 'Requirements',
     bgIcon: primary[500],
-    content: "GUnderstand your backend app's functionality and features.",
+    content: "Understand your backend app's functionality and features.",
   },
   {
     id: 'backend-working-2',
     title: 'Design',
     bgIcon: base.orange,
-    content: 'Architect scalable and efficient backend systems.',
+    content: 'Scalable architecture and efficient backend systems.',
   },
   {
     id: 'backend-working-3',
-    title: 'Development & Test',
+    title: 'Development & Testing',
     bgIcon: base.green,
     content: 'Implement and test clean and maintainable backend code.',
   },
@@ -183,7 +183,7 @@ export const CloudWorkingProcessData = [
   },
   {
     id: 'cloud-working-3',
-    title: 'Development & Test',
+    title: 'Development & Testing',
     bgIcon: base.green,
     content: 'Implement and optimize cloud services and integrations.',
   },
@@ -216,7 +216,7 @@ export const EmergingWorkingProcessData = [
   },
   {
     id: 'emerging-working-3',
-    title: 'Development & Test',
+    title: 'Development & Testing',
     bgIcon: base.green,
     content: 'Develop and test cutting-edge applications using emerging technologies.',
   },

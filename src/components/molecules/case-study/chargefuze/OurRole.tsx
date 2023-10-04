@@ -66,7 +66,7 @@ const OurRole = () => {
           text="chargeFUZE approached us with the task of seamlessly taking over their project, ensuring a
           smooth continuation of work and maintaining the same level of commitment and dedication.
           With our experienced team, we specialize in understanding project requirements and
-          seamlessly integrating into existing frameworks to deliver exceptional results."
+          integrating the project into existing frameworks to deliver exceptional results."
           sx={{
             maxWidth: { xs: '100%', md: '62%' },
             mb: { xs: '24px', md: '44px' },

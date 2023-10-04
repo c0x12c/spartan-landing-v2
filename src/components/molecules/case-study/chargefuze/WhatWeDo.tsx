@@ -24,7 +24,7 @@ const WhatWeDo = () => {
       <Box py={{ xs: 0, lg: '80px' }}>
         <Box display="flex" alignItems="center" maxWidth="100%" gap={'48px'}>
           <Title
-            text=" What we do"
+            text="What We Did"
             data-aos="fade-up"
             data-aos-delay="200"
             sx={{

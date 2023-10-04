@@ -20,9 +20,9 @@ const AboutProject = () => {
           alignItems={'center'}
         >
           <Box display={'flex'} flexDirection={'column'} gap={'32px'} alignItems={'center'}>
-            <Title text="About project" data-aos="fade-up" data-aos-delay="200" />
+            <Title text="About the Project" data-aos="fade-up" data-aos-delay="200" />
             <BodyText
-              text="chargeFUZE offers a convenient and accessible solution for charging devices anytime, anywhere. With the largest network of mobile charging kiosks, chargeFUZE empowers users to rent portable chargers on the go. Whether you're at a bustling event, traveling, or simply out and about, chargeFUZE ensures that a reliable power source is always within reach."
+              text="chargeFUZE offers a convenient and accessible way to charge devices anytime, anywhere. With the largest network of mobile charging kiosks, chargeFUZE empowers users to rent portable chargers on the go. Whether you're at a bustling event, traveling, or simply out and about, chargeFUZE ensures that a reliable power source is always within reach."
               sx={{ textAlign: 'center', color: base.grey }}
               data-aos="fade-up"
               data-aos-delay="300"

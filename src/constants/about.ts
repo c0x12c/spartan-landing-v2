@@ -44,7 +44,7 @@ export const About = [
   },
   {
     id: 'about-5',
-    label: 'Ready To Join?',
+    label: 'Ready to Join?',
     icon: documentIcon,
     content: 'Your opportunity is here. Click to join!',
     href: '/ready-to-join',

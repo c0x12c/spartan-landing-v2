@@ -68,7 +68,7 @@ export const SuccessFactors = () => {
           <CardVertical
             icon={<Image src={CodeCircle} alt="Engineer Process icon" />}
             title="Engineer Process"
-            description="Years of refinement at various US  based startups have made our processes exceptionally robust. We employ rigorous code reviews and prioritize comprehensive automation to ensure the highest standards of quality, efficiency, and accuracy."
+            description="Years of refinement at various US-based startups have made our processes exceptionally robust. We employ rigorous code reviews and prioritize comprehensive automation to ensure the highest standards of quality, efficiency, and accuracy."
           />
           <CardVertical
             icon={<Image src={TaskSquare} alt="Hiring icon" />}

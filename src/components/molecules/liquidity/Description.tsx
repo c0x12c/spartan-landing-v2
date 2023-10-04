@@ -20,7 +20,7 @@ const LiquidityFinancial = () => {
         <Title text="The Story" data-aos="fade-up" data-aos-delay="200" />
         <BodyText
           sx={{ textAlign: 'center' }}
-          text="Already had a working solution as well and mobile applications before they started
+          text="Liquidity Financial already had a working solution as well as mobile applications before they started
             working with us. Facing backend stability and mobile application issues, Liquidity
             Financial turned to us for solutions. It was very important to fix the issues because
             the product already had real users."

@@ -6,6 +6,7 @@ import move1Image from '@/assets/images/life-spartan/banner-move-1.webp';
 import move2Image from '@/assets/images/life-spartan/banner-move-2.webp';
 
 import { BreakPoints, useBreakpoint } from '@/hooks';
+import Link from 'next/link';
 
 interface ILifeSpartanBannerProps {}
 
@@ -41,15 +42,17 @@ export const LifeSpartanBanner: React.FunctionComponent<ILifeSpartanBannerProps>
                   sx={{ maxWidth: '527px' }}
                 />
               </Box>
-              <Button
-                variant="contained"
-                size={isMobile ? 'small' : 'medium'}
-                data-aos="fade-up"
-                data-aos-delay="500"
-              >
-                Let’s join our team
-                <ArrowIcon />
-              </Button>
+              <Link href="/apply-job">
+                <Button
+                  variant="contained"
+                  size={isMobile ? 'small' : 'medium'}
+                  data-aos="fade-up"
+                  data-aos-delay="500"
+                >
+                  Join our team
+                  <ArrowIcon />
+                </Button>
+              </Link>
             </Box>
             <Box
               width="100%"

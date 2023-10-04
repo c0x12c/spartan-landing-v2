@@ -13,7 +13,7 @@ const dataContent = [
   {
     id: 'content-1',
     title: 'Benefit',
-    content: 'Chance to connect with our top tier engineers professionals in Tech around the world',
+    content: 'Chance to connect with our top tier engineer professionals in tech around the world',
     tick: thunderBlue,
   },
   {

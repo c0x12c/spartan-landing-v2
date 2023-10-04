@@ -40,7 +40,7 @@ export const listExperienceLevel = [
   { id: 'employment-level-2', name: 'Junior', value: ExperienceLevel['JUNIOR'] },
   { id: 'employment-level-3', name: 'Middle', value: ExperienceLevel['MIDDLE'] },
   { id: 'employment-level-4', name: 'Senior', value: ExperienceLevel['SENIOR'] },
-  { id: 'employment-level-5', name: 'All level', value: ExperienceLevel['ALL_LEVEL'] },
+  { id: 'employment-level-5', name: 'All levels', value: ExperienceLevel['ALL_LEVEL'] },
 ];
 
 export const listJobTag = [
@@ -53,7 +53,7 @@ export const listJobTag = [
   { id: 'job-tag-8', name: 'Android', value: JobTag['ANDROID'] },
   { id: 'job-tag-5', name: 'Tester', value: JobTag['TESTER'] },
   { id: 'job-tag-6', name: 'Management', value: JobTag['MANAGEMENT'] },
-  { id: 'job-tag-7', name: 'All level', value: JobTag['ALL_JOB'] },
+  { id: 'job-tag-7', name: 'All levels', value: JobTag['ALL_JOB'] },
 ];
 
 export interface Job {

@@ -43,7 +43,7 @@ export const DataWeDo = [
     id: 'we-do-4',
     title: ' Developed a solid backend and infrastructure for Volta Wallet',
     content:
-      'Implemented a system that is easily monitored, maintained, and scalable. Used technologies like Kotlin, Go, Swift, JavaScript, TypeScript, HCL.',
+      'Implemented a system that is easily monitored, maintained, and scaled. Used technologies like Kotlin, Go, Swift, JavaScript, TypeScript, HCL.',
   },
 ];
 
@@ -56,7 +56,7 @@ export type StackType = {
 export const VoltaStacks: FieldType[] = [
   {
     id: 'field-1',
-    name: 'Programming Language',
+    name: 'Programming Languages',
     stacks: [
       { id: 'stack-2', name: 'Kotlin', imgSrc: Kotlin },
       { id: 'stack-1', name: 'Golang', imgSrc: Go },
@@ -68,7 +68,7 @@ export const VoltaStacks: FieldType[] = [
   },
   {
     id: 'field-2',
-    name: 'Framework',
+    name: 'Frameworks',
     stacks: [
       { id: 'stack-9', name: 'Micronaut', imgSrc: Micronaut },
       { id: 'stack-10', name: 'Echo', imgSrc: Echo },
@@ -77,7 +77,7 @@ export const VoltaStacks: FieldType[] = [
   },
   {
     id: 'field-3',
-    name: 'Platform',
+    name: 'Platforms',
     stacks: [
       { id: 'stack-14', name: 'Alchemy', imgSrc: Alchemy },
       { id: 'stack-15', name: 'Coinmarketcap', imgSrc: Coinmarketcap },
@@ -94,7 +94,7 @@ export const VoltaStacks: FieldType[] = [
   },
   {
     id: 'field-5',
-    name: 'Infrastructure',
+    name: 'Infrastructures',
     stacks: [
       { id: 'stack-24', name: 'Docker', imgSrc: Docker },
       { id: 'stack-25', name: 'Kubernetes', imgSrc: Kubernetes },

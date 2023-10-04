@@ -39,7 +39,7 @@ export const Download: React.FunctionComponent<IDownloadProps> = ({
         maxWidth="562px"
         mx="auto"
       >
-        To gain deeper insights into our project, download Volta and embark on your own experiential
+        To gain deeper insights into our project, download and embark on your own experiential
         journey.
       </Typography>
       <Box

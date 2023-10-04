@@ -142,7 +142,7 @@ const ListItem = ({
     <Link href={`${slug}`}>
       <Box
         borderBottom={isLastItem ? 'none' : `1px solid ${gray[400]}`}
-        p={{ md: '44px 32px', xs: '0 0 24px 0' }}
+        p={{ md: '44px 32px', xs: '24px' }}
         display={'flex'}
         gap={isMobile ? '0' : '38px'}
         width={'100%'}
@@ -209,7 +209,7 @@ const ListItem = ({
           endIcon={<Image src={Arrow} alt="arrow" width={24} />}
           sx={{ minWidth: 'fit-content' }}
         >
-          Apply job
+          Apply
         </Button>
       </Box>
     </Link>

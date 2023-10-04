@@ -26,7 +26,7 @@ export const Partners: PartnerType[] = [
   },
   {
     id: 'partner-2',
-    name: 'ChargeFuze',
+    name: 'chargeFUZE',
     tags: ['web', 'cloud', 'backend', 'emerging'],
     imgSrc: logoChargeFuze,
     href: '/',

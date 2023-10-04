@@ -27,8 +27,8 @@ export const VoltaStory: React.FunctionComponent<IVoltaStoryProps> = () => {
             sx={{ color: base.grey }}
             text="Volta approached us with an idea to create a unique crypto wallet application that would
             offer all the regular wallet functionality as well as some other interesting features
-            like skinning. And our task was to define the architecture and building everything from
-            scratch: iOS, Android native applications + the backend platform and infrastructure."
+            like skinning. Our task was to define the architecture and build everything from
+            scratch: iOS, Android native applications, and the backend platform and infrastructure."
             data-aos="fade-up"
             data-aos-delay="300"
           />

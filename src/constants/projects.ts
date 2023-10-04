@@ -85,12 +85,12 @@ export const Projects: ProjectType[] = [
   },
   {
     id: 'case-5',
-    name: 'Ursalive',
+    name: 'URSA Live',
     value: 'ursa',
     imgSrc: ursalive,
     href: '/case-study/ursa',
     tags: [ServicesEnum.CLOUD, ServicesEnum.WEB, ServicesEnum.BACKEND],
-    content: "Simplifies the process of hosting artists' Livestream events",
+    content: "Simplifies the process of hosting artists' livestream events",
     dev: 14,
     designer: 2,
     quote: {
@@ -105,7 +105,7 @@ export const Projects: ProjectType[] = [
   },
   {
     id: 'case-2',
-    name: 'ChargeFuze',
+    name: 'chargeFUZE',
     value: 'chargefuze',
     imgSrc: chargeFuze,
     href: '/case-study/chargefuze',

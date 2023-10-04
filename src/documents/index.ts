@@ -15,7 +15,7 @@ const SEOPages: ISEOPages = {
   [EPages.ABOUT_US]: {
     title: 'Spartan | About Us',
     description:
-      'We are Spartan, a team of elite tech-savvy people who specialize in providing top-notch technical expertise to meet your goals. Our engineers are selected from the top 3%, signifying that they are not merely proficient coders but also exceptional engineers with a deep comprehension of the intricacies of software development.',
+      'We are Spartan, a team of elite, tech-savvy people who specialize in providing top-notch technical expertise to meet your goals. Our engineers are selected from the top 3%, signifying that they are not merely proficient coders but also exceptional engineers with a deep comprehension of the intricacies of software development.',
     keywords:
       'Mission and vision, Company values, Team of experts, Experience and expertise, Client satisfaction, Industry recognition.',
     metaImage: '/home-thumbnail.png',
@@ -131,16 +131,16 @@ const SEOPages: ISEOPages = {
     slug: '/internship-program',
   },
   [EPages.READY_TO_JOIN]: {
-    title: 'Spartan | Ready To Join?',
+    title: 'Spartan | Ready to Join?',
     description: 'Your opportunity is here. Click to join!',
     keywords: 'Spartan | Ready to join',
     metaImage: '/home-thumbnail.png',
     slug: '/ready-to-join',
   },
   [EPages.APPLY_JOB]: {
-    title: "Spartan | Spartan's remote high-paying tech jobs",
+    title: "Spartan | Spartan's remote, high-paying tech jobs",
     description:
-      "Join 100+ of the world's best engineers & get full-time, long-term remote software jobs with better compensation and career growth.",
+      "Join 100+ of the world's best engineers & get full-time, long-term, remote software jobs with better compensation and career growth.",
     keywords:
       'Job opportunities, Career openings, Join our team, Employment opportunities, Professional growth, Job application process.',
     metaImage: '/home-thumbnail.png',
@@ -154,8 +154,8 @@ const SEOPages: ISEOPages = {
     slug: '/case-study/liquidity',
   },
   [EPages.CASE_STUDY_CF]: {
-    title: 'Spartan | Case study - ChargeFuze',
-    description: 'Spartan | Case study - ChargeFuze',
+    title: 'Spartan | Case study - chargeFUZE',
+    description: 'Spartan | Case study - chargeFUZE',
     keywords: '',
     metaImage: '/chargefuze-thumbnail',
     slug: '/case-study/chargefuze',

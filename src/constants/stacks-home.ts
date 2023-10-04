@@ -69,7 +69,7 @@ type FieldType = {
 export const StacksInHome: FieldType[] = [
   {
     id: 'field-1',
-    name: 'Programming Language',
+    name: 'Programming Languages',
     stacks: [
       { id: 'stack-1', name: 'Java', imgSrc: Java },
       { id: 'stack-2', name: 'Kotlin', imgSrc: Kotlin },
@@ -86,7 +86,7 @@ export const StacksInHome: FieldType[] = [
   },
   {
     id: 'field-2',
-    name: 'Framework',
+    name: 'Frameworks',
     stacks: [
       { id: 'stack-10', name: 'Micronaut', imgSrc: Micronaut },
       { id: 'stack-11', name: 'Echo', imgSrc: Echo },
@@ -98,7 +98,7 @@ export const StacksInHome: FieldType[] = [
   },
   {
     id: 'field-3',
-    name: 'Platform',
+    name: 'Platforms',
     stacks: [
       { id: 'stack-16', name: 'Solid', imgSrc: Solid },
       { id: 'stack-18', name: 'Twillio', imgSrc: Twillio },
@@ -144,7 +144,7 @@ export const StacksInHome: FieldType[] = [
   },
   {
     id: 'field-7',
-    name: 'Infrastructure',
+    name: 'Infrastructures',
     stacks: [
       { id: 'stack-37', name: 'Kubernetes', imgSrc: Kubernetes },
       { id: 'stack-38', name: 'Docker', imgSrc: Docker },

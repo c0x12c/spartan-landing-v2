@@ -71,7 +71,7 @@ export const Services: ServiceType[] = [
     detail: [
       {
         id: 'service-detail-1.1',
-        name: 'IOS',
+        name: 'iOS',
         content:
           'Exceptional iOS experiences powered by elegant and high-performance Swift language.',
       },
@@ -228,7 +228,7 @@ export const ServiceWeDoContent = [
         id: `${ServicesEnum.WEB}-content-4`,
         title: 'Angular',
         description:
-          "Embrace angular's modular architecture and typeScript to develop modern and feature - rich web applications.",
+          "Embrace Angular's modular architecture and typeScript to develop modern and feature-rich web applications.",
         icon: angularIcon,
       },
     ],
@@ -305,7 +305,7 @@ export const ServiceWeDoContent = [
     title: 'Transforming Industries with Emerging Tech',
     type: ServicesEnum.EMERGING,
     description:
-      'Our emerging technologies expertise includes ChatGPT AI Integration, IoT solutions, and real-time data streaming using Flink. We empower businesses with smart automation, enhanced user experiences, and real-time actionable insights.',
+      'Our emerging technologies expertise includes ChatGPT AI integration, IoT solutions, and real-time data streaming using Flink. We empower businesses with smart automation, enhanced user experiences, and real-time actionable insights.',
     content: [
       {
         id: `${ServicesEnum.EMERGING}-content-12`,

@@ -46,13 +46,13 @@ export const AroundTheWorld: React.FunctionComponent<IAroundTheWorldProps> = () 
                 data-aos-delay="200"
               >
                 <Button variant="contained" size={isMobile ? 'small' : 'medium'}>
-                  Meet our Expert
+                  Meet our experts
                   <ArrowIcon />
                 </Button>
               </Link>
               <Link href="/apply-job" data-aos="fade-left" data-aos-delay="200">
                 <Button variant="outlined" size={isMobile ? 'small' : 'medium'}>
-                  Apply our job
+                  Apply for a job
                 </Button>
               </Link>
             </Box>

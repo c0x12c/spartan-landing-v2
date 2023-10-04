@@ -36,7 +36,7 @@ const Result = () => {
             <BodyText
               sx={{ maxWidth: '700px' }}
               text="We made significant achievements in the Liquidity Financial project, leading to
-              remarkable outcomes and advancements. Here are the key accomplishments: <br /> We were
+              remarkable outcomes and advancements. Here are the key accomplishments: \n We were
               impressed by their ability to seamlessly blend modern design elements with natural
               materials and surroundings, creating a vacation home that exceeded our expectations in
               every way"

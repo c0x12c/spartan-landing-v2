@@ -49,7 +49,7 @@ export const ReadyToJoinForm: React.FunctionComponent<IReadyToJoinFormProps> = (
                 sx={{ letterSpacing: '0.32px' }}
               />
               <BodyText
-                text="For any updates about job opportunities and company news, you're invited to visit our Linkedin. And if you have any questions, don't hesitate to contact us via email: hello@c0x12c.com"
+                text="For any updates about job opportunities and company news, you're invited to visit our LinkedIn. And if you have any questions, don't hesitate to contact us via email: hello@c0x12c.com"
                 data-aos="fade-up"
                 data-aos-delay="300"
                 sx={{ letterSpacing: '0.32px' }}

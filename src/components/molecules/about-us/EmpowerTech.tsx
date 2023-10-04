@@ -48,14 +48,14 @@ export const EmpowerTech = () => {
             borderRadius={'8px'}
           >
             <Title
-              text="Focus on nurturing engineer's power"
+              text="Focus on nurturing engineers's power"
               sx={{ textAlign: { xs: 'center', lg: 'end' } }}
             />
             <BodyText
               text="At Spartan, we differentiate ourselves by placing a strong emphasis on the development
               and advancement of our engineering team. We are committed to cultivating a culture of
               growth and empowerment, enabling our engineers to excel and contribute to the success
-              of our client's projects."
+              of our clients's projects."
               data-aos="fade-up"
               data-aos-delay="300"
               sx={{ width: { xs: '100%', lg: '493px' }, textAlign: { xs: 'center', lg: 'right' } }}

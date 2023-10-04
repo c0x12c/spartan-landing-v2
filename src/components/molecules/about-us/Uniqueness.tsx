@@ -36,7 +36,7 @@ export const Uniqueness = () => {
             }}
           />
           <Title
-            text="Why do startups choose Spartan to solve their problem?"
+            text="Why do startups choose Spartan to solve their problems?"
             data-aos="fade-up"
             data-aos-delay="300"
             sx={{

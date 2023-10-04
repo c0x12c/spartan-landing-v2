@@ -54,7 +54,7 @@ export const ChooseUs: React.FunctionComponent<IChooseUsProps> = ({ tag }) => {
             mb="64px"
             maxWidth="614px"
           >
-            <SubTitle text="Why choose us" data-aos="fade-up" data-aos-delay="200" />
+            <SubTitle text="Why choose us?" data-aos="fade-up" data-aos-delay="200" />
             <Title text={title} data-aos="fade-up" data-aos-delay="300" />
             <Box display="flex" flexDirection="column" gap="32px" mt={isMobile ? '12px' : 0}>
               {renderContent}

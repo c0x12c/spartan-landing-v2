@@ -49,7 +49,7 @@ export const DataWeDoAgora = [
 export const AgoraStacks: FieldType[] = [
   {
     id: 'field-1',
-    name: 'Programming Language',
+    name: 'Programming Languages',
     stacks: [
       { id: 'stack-2', name: 'Kotlin', imgSrc: Kotlin },
       { id: 'stack-6', name: 'Typescript', imgSrc: TypeScript },
@@ -59,12 +59,12 @@ export const AgoraStacks: FieldType[] = [
   },
   {
     id: 'field-2',
-    name: 'Framework',
+    name: 'Frameworks',
     stacks: [{ id: 'stack-9', name: 'Micronaut', imgSrc: Micronaut }],
   },
   {
     id: 'field-3',
-    name: 'Platform',
+    name: 'Platforms',
     stacks: [
       { id: 'stack-14', name: 'Agora', imgSrc: Agora },
       { id: 'stack-15', name: 'Twillio', imgSrc: Twillio },
@@ -81,7 +81,7 @@ export const AgoraStacks: FieldType[] = [
   },
   {
     id: 'field-5',
-    name: 'Infrastructure',
+    name: 'Infrastructures',
     stacks: [
       { id: 'stack-24', name: 'Docker', imgSrc: Docker },
       { id: 'stack-25', name: 'Kubernetes', imgSrc: Kubernetes },
@@ -97,4 +97,4 @@ export const AgoraStacks: FieldType[] = [
 ];
 
 export const DataAgoraResult =
-  'In the past year, the streaming website has gone live, undergoing multiple significant updates. It has hosted numerous events with talented artists, attracting hundreds of fans. The website has provided a great streaming experience, and an app version is set to launch later this year.';
+  'The streaming website went live last year and has undergone multiple significant updates since then. It has hosted numerous events with talented artists, attracting hundreds of fans. The website has provided a great streaming experience, and an app version is set to launch later this year.';

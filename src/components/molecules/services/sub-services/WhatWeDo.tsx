@@ -31,6 +31,9 @@ export const WhatWeDo: React.FunctionComponent<IWhatWeDoProps> = ({ tag }) => {
       >
         <Box display="flex" flexDirection="column" gap="20px" alignItems="center">
           <Box
+            display="flex"
+            justifyContent="center"
+            alignItems="center"
             width="84px"
             height="84px"
             borderRadius="50%"

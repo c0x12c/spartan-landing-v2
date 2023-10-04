@@ -77,7 +77,7 @@ const Cards = () => {
                 One-stop app for everything Dogecoin
               </Typography>
               <Typography variant="fs18" fontSize={{ xs: '14px', md: '18px' }}>
-                The DogeCoin is a card built for the Dogecoin community. Everyone who uses the
+                The Dogecoin is a card built for the Dogecoin community. Everyone who uses the
                 DogeCard gets Dogecoin rewards onevery purchase, and get special benefits for
                 holding Dogecoin.
               </Typography>
@@ -129,7 +129,7 @@ const Cards = () => {
               </Typography>
               <Typography variant="fs18" fontSize={{ xs: '14px', md: '18px' }}>
                 Turn transactions into action. Use CauseCard and automatically donate 0.75% of each
-                purchase to the causes your care about.
+                purchase to the causes you care about.
               </Typography>
             </Box>
             <DownloadAppPanel
