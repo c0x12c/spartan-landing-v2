@@ -16,6 +16,13 @@ import { useRouter } from 'next/router';
 import { useEffect } from 'react';
 import { Toaster } from 'react-hot-toast';
 
+import Hotjar from '@hotjar/browser';
+
+const siteId = 3677738;
+const hotjarVersion = 6;
+
+Hotjar.init(siteId, hotjarVersion);
+
 export type MyAppProps = AppProps;
 
 const MyApp: React.FC<MyAppProps> = (props) => {
