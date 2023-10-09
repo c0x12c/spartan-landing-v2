@@ -9,8 +9,6 @@ import androidIcon from '@/assets/images/stacks/Android.svg';
 import reactIcon from '@/assets/images/stacks/React.svg';
 import angularIcon from '@/assets/images/stacks/Angular.svg';
 import kotlinIcon from '@/assets/images/stacks/Kotlin.svg';
-import javaIcon from '@/assets/images/stacks/Java.svg';
-import cSharpIcon from '@/assets/images/stacks/CSharp.svg';
 import AWSIcon from '@/assets/images/stacks/AWS.svg';
 import GGCloudIcon from '@/assets/images/stacks/GGCloud.svg';
 import azureIcon from '@/assets/images/stacks/Azure.svg';
@@ -18,6 +16,8 @@ import kubernetesIcon from '@/assets/images/stacks/Kubernetes.svg';
 import chatGPTIcon from '@/assets/images/stacks/ChatGPT.svg';
 import IOTIcon from '@/assets/images/stacks/IOT.svg';
 import RTSIcon from '@/assets/images/stacks/RTS.svg';
+import GoIcon from '@/assets/images/stacks/GoV2.svg';
+import RustIcon from '@/assets/images/stacks/RustV2.svg';
 
 import backend from '@/assets/images/services/backend.png';
 import web from '@/assets/images/services/web.png';
@@ -238,7 +238,7 @@ export const ServiceWeDoContent = [
     title: 'Building Strong Foundations for Your Backend',
     type: ServicesEnum.BACKEND,
     description:
-      "Our backend development services encompass Kotlin and Java, allowing us to create clean, efficient, and maintainable backend applications. We utilize the strengths of Kotlin's strong type system and Java's mature ecosystem to deliver reliable backend solutions.",
+      "Our backend development services encompass Kotlin, Go, and Rust, allowing us to craft clean, efficient, and maintainable backend applications. We utilize Kotlin's strong type system, Go's efficiency, and Rust's robustness to deliver reliable backend solutions.",
     content: [
       {
         id: `${ServicesEnum.BACKEND}-content-5`,
@@ -249,17 +249,17 @@ export const ServiceWeDoContent = [
       },
       {
         id: `${ServicesEnum.BACKEND}-content-6`,
-        title: 'Java',
+        title: 'Go',
         description:
-          "Build robust, secure, and scalable backend architectures using Java's mature ecosystem, enterprise-level libraries, and battle-tested design patterns.",
-        icon: javaIcon,
+          'Build efficient, scalable, and high-performance backend systems with the simplicity and power of Go.',
+        icon: GoIcon,
       },
       {
         id: `${ServicesEnum.BACKEND}-content-7`,
-        title: 'C#',
+        title: 'Rust',
         description:
-          'Create robust, secure, and enterprise-grade backend systems with the versatility of C#.',
-        icon: cSharpIcon,
+          "Develop robust and secure backend architectures using Rust's safety features and high-level performance.",
+        icon: RustIcon,
       },
     ],
   },
@@ -393,7 +393,7 @@ export const ServiceChooseUsContent = [
     content: [
       {
         id: `${ServicesEnum.BACKEND}-choose-content-1`,
-        description: 'Experienced backend developers proficient in Kotlin and Java.',
+        description: 'Experienced backend developers proficient in Kotlin, Go, and Rust.',
       },
       {
         id: `${ServicesEnum.BACKEND}-choose-content-2`,

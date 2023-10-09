@@ -7,6 +7,9 @@ import logoWb from '@/assets/images/partners/logo-wb.png';
 import logoVolta from '@/assets/images/partners/logo-volta.png';
 import logoSlice from '@/assets/images/partners/logo-slice.png';
 import { StaticImageData } from 'next/image';
+import logoBiolog from '@/assets/images/partners/logo-biolog.png';
+import logoPura from '@/assets/images/partners/logo-pura.png';
+import logoVeraset from '@/assets/images/partners/logo-veraset.png';
 
 export type PartnerType = {
   id: string;
@@ -52,20 +55,20 @@ export const Partners: PartnerType[] = [
     imgSrc: logoAgora,
     href: '/',
   },
-  // {
-  //   id: 'partner-4',
-  //   name: 'Mobolize',
-  //   tags: [],
-  //   imgSrc: logoMobolize,
-  //   href: '/',
-  // },
-  // {
-  //   id: 'partner-5',
-  //   name: 'Heru',
-  //   tags: [],
-  //   imgSrc: logoHeru,
-  //   href: '/',
-  // },
+  {
+    id: 'partner-4',
+    name: 'Biolog',
+    tags: ['backend'],
+    imgSrc: logoBiolog,
+    href: '/',
+  },
+  {
+    id: 'partner-5',
+    name: 'Pura',
+    tags: ['backend'],
+    imgSrc: logoPura,
+    href: '/',
+  },
   {
     id: 'partner-6',
     name: 'URSA',
@@ -80,11 +83,11 @@ export const Partners: PartnerType[] = [
     imgSrc: logoWb,
     href: '/',
   },
-  // {
-  //   id: 'partner-8',
-  //   name: 'Sabio',
-  //   tags: [],
-  //   imgSrc: logoSabio,
-  //   href: '/',
-  // },
+  {
+    id: 'partner-8',
+    name: 'Veraset',
+    tags: ['backend'],
+    imgSrc: logoVeraset,
+    href: '/',
+  },
 ];

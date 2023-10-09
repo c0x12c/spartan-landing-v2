@@ -1,0 +1,56 @@
+<svg width="52" height="53" viewBox="0 0 52 53" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Rust_programming_language_black_logo 2" clip-path="url(#clip0_3318_40116)">
+<g id="logo">
+<path id="r" d="M21.8525 19.3359H28.1955C32.0989 19.3359 32.0989 23.2393 28.1955 23.2393H21.8525V19.3359ZM6.72681 37.3891H26.2438V32.022H21.8525V28.1186H26.7317C32.0989 28.1186 29.1713 37.3891 33.5627 37.3891H45.7608V28.1186H42.8332V29.0944C42.8332 32.9978 38.4419 32.5099 37.954 30.0703C37.4661 27.6306 35.5144 25.6789 35.0264 25.6789C42.3453 21.7755 37.954 13.9688 32.0989 13.9688H9.16643V19.3359H14.0457V32.022H6.72681V37.3891Z" fill="black"/>
+<g id="gear">
+<path id="Vector" d="M25.9998 47.3932C37.5872 47.3932 46.9806 37.9997 46.9806 26.4124C46.9806 14.825 37.5872 5.43164 25.9998 5.43164C14.4124 5.43164 5.01904 14.825 5.01904 26.4124C5.01904 37.9997 14.4124 47.3932 25.9998 47.3932Z" stroke="black"/>
+<g id="cogs">
+<path id="cog" d="M48.4443 27.8748L50.884 26.411L48.4443 24.9473V27.8748Z" fill="black" stroke="black" stroke-width="3" stroke-linejoin="round"/>
+<path id="cog_2" d="M47.7277 32.2268L50.406 31.2671L48.2988 29.3555L47.7277 32.2268Z" fill="black" stroke="black" stroke-width="3" stroke-linejoin="round"/>
+<path id="cog_3" d="M46.1758 36.3531L48.9899 35.9344L47.2961 33.6484L46.1758 36.3531Z" fill="black" stroke="black" stroke-width="3" stroke-linejoin="round"/>
+<path id="cog_4" d="M43.8486 40.0982L46.6903 40.2365L45.4751 37.6641L43.8486 40.0982Z" fill="black" stroke="black" stroke-width="3" stroke-linejoin="round"/>
+<path id="cog_5" d="M40.8354 43.3181L43.5955 44.0082L42.9055 41.248L40.8354 43.3181Z" fill="black" stroke="black" stroke-width="3" stroke-linejoin="round"/>
+<path id="cog_6" d="M37.2524 45.8862L39.8248 47.1015L39.6865 44.2598L37.2524 45.8862Z" fill="black" stroke="black" stroke-width="3" stroke-linejoin="round"/>
+<path id="cog_7" d="M33.2367 47.7082L35.5227 49.402L35.9414 46.5879L33.2367 47.7082Z" fill="black" stroke="black" stroke-width="3" stroke-linejoin="round"/>
+<path id="cog_8" d="M28.9429 48.7098L30.8545 50.817L31.8142 48.1387L28.9429 48.7098Z" fill="black" stroke="black" stroke-width="3" stroke-linejoin="round"/>
+<path id="cog_9" d="M24.5361 48.8555L25.9998 51.2951L27.4636 48.8555H24.5361Z" fill="black" stroke="black" stroke-width="3" stroke-linejoin="round"/>
+<path id="cog_10" d="M20.1856 48.1398L21.1453 50.8181L23.0569 48.7109L20.1856 48.1398Z" fill="black" stroke="black" stroke-width="3" stroke-linejoin="round"/>
+<path id="cog_11" d="M16.0585 46.5867L16.4772 49.4008L18.7632 47.707L16.0585 46.5867Z" fill="black" stroke="black" stroke-width="3" stroke-linejoin="round"/>
+<path id="cog_12" d="M12.3134 44.2603L12.1751 47.102L14.7476 45.8867L12.3134 44.2603Z" fill="black" stroke="black" stroke-width="3" stroke-linejoin="round"/>
+<path id="cog_13" d="M9.09422 41.2463L8.40419 44.0064L11.1643 43.3164L9.09422 41.2463Z" fill="black" stroke="black" stroke-width="3" stroke-linejoin="round"/>
+<path id="cog_14" d="M6.52466 37.6635L5.30942 40.236L8.15112 40.0977L6.52466 37.6635Z" fill="black" stroke="black" stroke-width="3" stroke-linejoin="round"/>
+<path id="cog_15" d="M4.70365 33.6488L3.0099 35.9348L5.82397 36.3535L4.70365 33.6488Z" fill="black" stroke="black" stroke-width="3" stroke-linejoin="round"/>
+<path id="cog_16" d="M3.70108 29.3553L1.5939 31.2669L4.27222 32.2266L3.70108 29.3553Z" fill="black" stroke="black" stroke-width="3" stroke-linejoin="round"/>
+<path id="cog_17" d="M3.55542 24.9475L1.1158 26.4112L3.55542 27.875L3.55542 24.9475Z" fill="black" stroke="black" stroke-width="3" stroke-linejoin="round"/>
+<path id="cog_18" d="M4.27206 20.5975L1.59375 21.5572L3.70093 23.4688L4.27206 20.5975Z" fill="black" stroke="black" stroke-width="3" stroke-linejoin="round"/>
+<path id="cog_19" d="M5.82394 16.4691L3.00986 16.8879L4.70361 19.1738L5.82394 16.4691Z" fill="black" stroke="black" stroke-width="3" stroke-linejoin="round"/>
+<path id="cog_20" d="M8.15112 12.724L5.30942 12.5857L6.52466 15.1582L8.15112 12.724Z" fill="black" stroke="black" stroke-width="3" stroke-linejoin="round"/>
+<path id="cog_21" d="M11.1643 9.50608L8.40421 8.81605L9.09424 11.5762L11.1643 9.50608Z" fill="black" stroke="black" stroke-width="3" stroke-linejoin="round"/>
+<path id="cog_22" d="M14.7474 6.93604L12.1749 5.7208L12.3132 8.5625L14.7474 6.93604Z" fill="black" stroke="black" stroke-width="3" stroke-linejoin="round"/>
+<path id="cog_23" d="M18.7631 5.116L16.4771 3.42225L16.0583 6.23633L18.7631 5.116Z" fill="black" stroke="black" stroke-width="3" stroke-linejoin="round"/>
+<path id="cog_24" d="M23.0568 4.11246L21.1452 2.00528L20.1855 4.68359L23.0568 4.11246Z" fill="black" stroke="black" stroke-width="3" stroke-linejoin="round"/>
+<path id="cog_25" d="M27.4637 3.9668L25.9999 1.52717L24.5361 3.9668L27.4637 3.9668Z" fill="black" stroke="black" stroke-width="3" stroke-linejoin="round"/>
+<path id="cog_26" d="M31.8142 4.68442L30.8545 2.0061L28.9429 4.11328L31.8142 4.68442Z" fill="black" stroke="black" stroke-width="3" stroke-linejoin="round"/>
+<path id="cog_27" d="M35.9413 6.23556L35.5225 3.42148L33.2366 5.11523L35.9413 6.23556Z" fill="black" stroke="black" stroke-width="3" stroke-linejoin="round"/>
+<path id="cog_28" d="M39.6864 8.562L39.8247 5.7203L37.2522 6.93555L39.6864 8.562Z" fill="black" stroke="black" stroke-width="3" stroke-linejoin="round"/>
+<path id="cog_29" d="M42.9055 11.5759L43.5956 8.81583L40.8354 9.50586L42.9055 11.5759Z" fill="black" stroke="black" stroke-width="3" stroke-linejoin="round"/>
+<path id="cog_30" d="M45.4751 15.1588L46.6903 12.5863L43.8486 12.7246L45.4751 15.1588Z" fill="black" stroke="black" stroke-width="3" stroke-linejoin="round"/>
+<path id="cog_31" d="M47.2961 19.1754L48.9899 16.8895L46.1758 16.4707L47.2961 19.1754Z" fill="black" stroke="black" stroke-width="3" stroke-linejoin="round"/>
+<path id="cog_32" d="M48.2987 23.469L50.4059 21.5574L47.7275 20.5977L48.2987 23.469Z" fill="black" stroke="black" stroke-width="3" stroke-linejoin="round"/>
+</g>
+<g id="mounts">
+<path id="mount" d="M22.5845 5.91797L25.9999 9.33344L29.4154 5.91797H22.5845Z" fill="black" stroke="black" stroke-width="6" stroke-linejoin="round"/>
+<path id="mount_2" d="M44.4343 16.8301L42.2415 21.1338L46.5452 23.3267L44.4343 16.8301Z" fill="black" stroke="black" stroke-width="6" stroke-linejoin="round"/>
+<path id="mount_3" d="M40.8083 40.9824L36.0376 40.2268L35.282 44.9975L40.8083 40.9824Z" fill="black" stroke="black" stroke-width="6" stroke-linejoin="round"/>
+<path id="mount_4" d="M16.7178 44.998L15.9622 40.2273L11.1914 40.9829L16.7178 44.998Z" fill="black" stroke="black" stroke-width="6" stroke-linejoin="round"/>
+<path id="mount_5" d="M5.45459 23.3262L9.75834 21.1333L7.56547 16.8296L5.45459 23.3262Z" fill="black" stroke="black" stroke-width="6" stroke-linejoin="round"/>
+</g>
+</g>
+</g>
+</g>
+<defs>
+<clipPath id="clip0_3318_40116">
+<rect width="51.72" height="51.72" fill="white" transform="translate(0.139893 0.550781)"/>
+</clipPath>
+</defs>
+</svg>

@@ -36,7 +36,7 @@ export const ChooseUs: React.FunctionComponent<IChooseUsProps> = ({ tag }) => {
       py={isMobile ? '40px' : '120px'}
       sx={{
         backgroundImage: isMobile ? 'none' : `url(${imgSrc.src})`,
-        backgroundSize: '40%',
+        backgroundSize: '35%',
         backgroundPosition: 'bottom right',
         backgroundRepeat: 'no-repeat',
       }}
