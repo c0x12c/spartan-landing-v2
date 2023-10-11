@@ -26,6 +26,7 @@ export enum JobTag {
   IOS = 'iOS',
   SITE_RELIABILITY = 'Site Reliability',
   DATA_ENGINEER = 'Data Engineer',
+  AI_ENGINEER = 'AI/LLM Engineer',
   ALL_JOB = 'all-job',
 }
 
@@ -64,6 +65,7 @@ export interface Job {
   requirements?: string[];
   aboutJob?: string;
   responsibilities?: string[];
+  qualifications?: string[];
   technologies?: string[];
   skills?: string[];
   experienceLevel: ExperienceLevel;
@@ -375,6 +377,19 @@ export const vacancies: Job[] = [
       'Generate well-structured test plans and associated test cases.',
       'Report and manage defects effectively.',
     ],
+    qualifications: [
+      'At least 3 year of experience in software testing.',
+      'Good communication skills in English, fluency and confidence in communication.',
+      'Experience in software testing with a strong quality assurance (QA) mindset.',
+      'Proficiency in testing software across different browsers and devices.',
+      'Familiarity with Agile methodologies and the ability to work in an Agile team.',
+      'Strong analytical skills and a deep understanding of the testing process.',
+      'Basic knowledge of MySQL relational databases.',
+      'Experience with testing platforms and tools, such as Jira and Postman.',
+      'Strong English communication skills, both written and verbal.',
+      'Proactive and forward-thinking in your approach to work.',
+      'Experience in business analysis and scrum master role is a plus.',
+    ],
     aboutJob:
       'We are looking for an experienced Tester (QA/QC) to join our Spartan Team. Who is passionate about building, testing, and working closely with various stakeholders to deliver top-notch software. You will be able to solve challenging problems, work with the latest tech stack, and work with talented engineers to contribute meaningfully.',
     tag: JobTag['TESTER'],
@@ -419,5 +434,34 @@ export const vacancies: Job[] = [
     enrollmentStatus: [EnrollmentStatus['FULL_TIME']],
     createdAt: '09/29/2023',
     slug: '/apply-job/ui-ux-designer',
+  },
+  {
+    id: 'job-9',
+    position: 'AI/LLM Engineer',
+    responsibilities: [
+      'Develop and implement NLP algorithms and models, such as sentiment analysis, text classification, and chatbots.',
+      'Prepare text data for model training by cleaning, normalizing, labeling, and vectorizing.',
+      'Train, evaluate, and optimize NLP models, such as BERT, GPT-3, and RNNs.',
+      'Deploy NLP models to production while monitoring their performance.',
+      'Research advances in NLP and integrate them into existing pipelines.',
+      'Collaborate with linguists, engineers, and product teams to identify NLP opportunities.',
+      'Maintain documentation on NLP architectures, code, and model metrics.',
+      'Possess good communication skills in English, including fluency and confidence in communication.',
+    ],
+    requirements: [
+      "Bachelor's degree in Computer Science or related field.",
+      '1+ years of experience with either one of the following programming languages Python/Java/Kotlin/Scala/Go/Rust/C#',
+      'Excellent understanding of computer science fundamentals, data structures, and algorithms.',
+      'Deep understanding of the value of dependency injection and testing.',
+      'Solid coding practices, including writing technical specifications, peer code review, and unit & integration testing.',
+    ],
+    aboutJob:
+      'We are looking for an experienced AI Engineer to join our Spartan Team. Who is passionate about building, testing, and working closely with various stakeholders to deliver top-notch software. You will be able to solve challenging problems, work with the latest tech stack, and work with talented engineers to contribute meaningfully.',
+    tag: JobTag['AI_ENGINEER'],
+    location: [Location['REMOTE'], Location['OFFICE']],
+    experienceLevel: ExperienceLevel['ALL_LEVEL'],
+    enrollmentStatus: [EnrollmentStatus['FULL_TIME']],
+    createdAt: '11/10/2023',
+    slug: '/apply-job/ai-llm-engineer',
   },
 ];

@@ -74,6 +74,13 @@ const JobDescription = ({ job }: JobDetailsProps) => {
           list={job.responsibilities}
         />
       )}
+      {job.qualifications && (
+        <JobDetailsSection
+          contentType={ContentType.List}
+          title="Qualifications"
+          list={job.qualifications}
+        />
+      )}
       {job.requirements && (
         <JobDetailsSection
           contentType={ContentType.List}
