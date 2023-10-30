@@ -10,7 +10,6 @@ interface IBodyTextProps {
 
 export const BodyText: React.FunctionComponent<IBodyTextProps> = ({ text, sx, ...props }) => {
   const isMobile = useBreakpoint(BreakPoints.MD);
-  const arrayStr = text.split('\\n').filter((item) => item !== '');
 
   return (
     <Typography
@@ -20,15 +19,8 @@ export const BodyText: React.FunctionComponent<IBodyTextProps> = ({ text, sx, ..
       display="block"
       letterSpacing={isMobile ? '0.21px' : 'normal'}
       sx={sx}
+      dangerouslySetInnerHTML={{ __html: text }}
       {...props}
-    >
-      {arrayStr.map((item) => {
-        return (
-          <React.Fragment key={item}>
-            {item} <br />
-          </React.Fragment>
-        );
-      })}
-    </Typography>
+    />
   );
 };

@@ -19,11 +19,11 @@ import { BreakPoints, useBreakpoint } from '@/hooks';
 import Link from 'next/link';
 
 const Vacancies = () => {
-  const [teamFilter, setTeamFilter] = useState<JobTag>(JobTag['ALL_JOB']);
+  const [teamFilter, setTeamFilter] = useState<JobTag[]>([JobTag['ALL_JOB']]);
   const [levelFilter, setLevelFilter] = useState<ExperienceLevel>(ExperienceLevel['ALL_LEVEL']);
 
-  const handleTeamChange = (event: SelectChangeEvent<JobTag>) => {
-    setTeamFilter(event.target.value as JobTag);
+  const handleTeamChange = (event: SelectChangeEvent<JobTag[]>) => {
+    setTeamFilter(event.target.value as JobTag[]);
   };
 
   const handleLevelChange = (event: SelectChangeEvent<ExperienceLevel>) => {
@@ -31,7 +31,7 @@ const Vacancies = () => {
   };
 
   const filteredVacancies = vacancies.filter((job) => {
-    const isTeamMatch = teamFilter === JobTag['ALL_JOB'] || teamFilter === job.tag;
+    const isTeamMatch = teamFilter.includes(JobTag['ALL_JOB']) || teamFilter.includes(job.tag);
     const isLevelMatch =
       levelFilter === ExperienceLevel['ALL_LEVEL'] || job.experienceLevel.includes(levelFilter);
     return isTeamMatch && isLevelMatch;
@@ -66,7 +66,7 @@ const Vacancies = () => {
             >
               {listJobTag.map((item) => {
                 return (
-                  <MenuItem key={item.id} value={item.value}>
+                  <MenuItem key={item.id} value={item.value as JobTag[]}>
                     {item.name}
                   </MenuItem>
                 );
@@ -173,7 +173,7 @@ const ListItem = ({
             borderRadius={'6px'}
             fontSize={isMobile ? '12px' : '18px'}
           >
-            {listJobTag.find((item) => item.value === tag)?.name}
+            {listJobTag.find((item) => item.value.includes(tag))?.name}
           </Typography>
         </Box>
         <Box flex={1} mb={isMobile ? '8px' : '0'}>

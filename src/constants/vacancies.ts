@@ -15,18 +15,21 @@ export enum ExperienceLevel {
   ALL_LEVEL = 'all-level',
 }
 export enum JobTag {
-  FRONTEND = 'front-end',
-  ENGINEERING = 'engineering',
-  ANDROID = 'android',
-  BACKEND = 'backend',
-  ANALYTICS = 'analytics',
-  DESIGN = 'design',
-  TESTER = 'tester',
-  MANAGEMENT = 'management',
+  FRONTEND = 'Front-end',
+  ENGINEERING = 'Engineering',
+  ANDROID = 'Android',
+  BACKEND = 'Backend',
+  ANALYTICS = 'Analytics',
+  DESIGN = 'Design',
+  TESTER = 'Tester',
+  MANAGEMENT = 'Management',
   IOS = 'iOS',
   SITE_RELIABILITY = 'Site Reliability',
   DATA_ENGINEER = 'Data Engineer',
   AI_ENGINEER = 'AI/LLM Engineer',
+  SECURITY_ENGINEER = 'Security Engineer',
+  BIZ_DEVELOPMENT_EXECUTIVE = 'Business Development Executive',
+  MARKETING_MANAGER = 'Marketing Manager - Software',
   ALL_JOB = 'all-job',
 }
 
@@ -45,16 +48,31 @@ export const listExperienceLevel = [
 ];
 
 export const listJobTag = [
-  { id: 'job-tag-1', name: 'Frontend', value: JobTag['FRONTEND'] },
-  { id: 'job-tag-2', name: 'Backend', value: JobTag['BACKEND'] },
-  { id: 'job-tag-3', name: 'Analytics', value: JobTag['ANALYTICS'] },
-  { id: 'job-tag-4', name: 'Design', value: JobTag['DESIGN'] },
-  { id: 'job-tag-9', name: 'Engineering', value: JobTag['ENGINEERING'] },
-  { id: 'job-tag-10', name: 'iOS', value: JobTag['IOS'] },
-  { id: 'job-tag-8', name: 'Android', value: JobTag['ANDROID'] },
-  { id: 'job-tag-5', name: 'Tester', value: JobTag['TESTER'] },
-  { id: 'job-tag-6', name: 'Management', value: JobTag['MANAGEMENT'] },
-  { id: 'job-tag-7', name: 'All levels', value: JobTag['ALL_JOB'] },
+  { id: 'job-tag-1', name: 'Frontend', value: [JobTag['FRONTEND']] },
+  { id: 'job-tag-2', name: 'Backend', value: [JobTag['BACKEND']] },
+  { id: 'job-tag-3', name: 'Analytics', value: [JobTag['ANALYTICS']] },
+  { id: 'job-tag-4', name: 'Design', value: [JobTag['DESIGN']] },
+  {
+    id: 'job-tag-5',
+    name: 'Engineering',
+    value: [
+      JobTag['ENGINEERING'],
+      JobTag['SITE_RELIABILITY'],
+      JobTag['DATA_ENGINEER'],
+      JobTag['SECURITY_ENGINEER'],
+    ],
+  },
+  { id: 'job-tag-6', name: 'iOS', value: [JobTag['IOS']] },
+  { id: 'job-tag-7', name: 'Android', value: [JobTag['ANDROID']] },
+  { id: 'job-tag-8', name: 'Tester', value: [JobTag['TESTER']] },
+  {
+    id: 'job-tag-9',
+    name: 'Management',
+    value: [JobTag['MANAGEMENT'], JobTag['MARKETING_MANAGER']],
+  },
+  { id: 'job-tag-10', name: 'AI', value: [JobTag['AI_ENGINEER']] },
+  { id: 'job-tag-11', name: 'Business', value: [JobTag['BIZ_DEVELOPMENT_EXECUTIVE']] },
+  { id: 'job-tag-12', name: 'All team', value: JobTag['ALL_JOB'] },
 ];
 
 export interface Job {
@@ -72,13 +90,15 @@ export interface Job {
   enrollmentStatus: EnrollmentStatus[];
   createdAt: string;
   slug: string;
+  offers?: string[];
 }
 
 export const vacancies: Job[] = [
   {
-    id: 'job-4',
+    id: 'job-1',
     position: 'Software Engineer Intern',
     requirements: [
+      'Fluent in English, able to communicate directly with customers.',
       '3rd/4th-year undergrad student or grad student in Information Technology major.',
       'Experience in Software Development and coding in a general-purpose programming language.',
       'Experience with data structures or algorithms gathered from inside or outside of school or work.',
@@ -92,7 +112,7 @@ export const vacancies: Job[] = [
       'Communicate, collaborate, and work effectively as part of a distributed team across various features.',
     ],
     aboutJob:
-      'Kickstart your career with Spartan!\n\nWe are looking for young talents with fresh ideas and an enthusiastic approach to building software. We are expecting to find someone with a strong will to learn the latest concepts in web development and contribute to our team as well as learn from professional software engineers as mentors. This position is an entry point for a full-time or part-time position within one of our project teams as a software engineer.\n\nDuring the Spartan internship program, which can range from one to six months, you will get the chance to work closely with our skilled tech engineers, engaging in hands-on experience.',
+      'We are looking for young talents with fresh ideas and an enthusiastic approach to building software. We are expecting to find someone with a strong will to learn the latest concepts in web development and contribute to our team as well as learn from professional software engineers as mentors. This position is an entry point for a full-time or part-time position within one of our project teams as a software engineer.\n\nDuring the Spartan internship program, which can range from one to six months, you will get the chance to work closely with our skilled tech engineers, engaging in hands-on experience.',
     tag: JobTag['ENGINEERING'],
     location: [Location['REMOTE'], Location['OFFICE']],
     skills: ['Data structures', 'Algorithms', 'Problem-solving', 'English'],
@@ -102,9 +122,10 @@ export const vacancies: Job[] = [
     slug: '/apply-job/software-engineer-intern',
   },
   {
-    id: 'job-1',
-    position: 'Senior Software Engineer - Android',
+    id: 'job-2',
+    position: 'Senior Android Engineer',
     requirements: [
+      'Fluent in English, able to communicate directly with customers.',
       "Bachelor's degree in Computer Science or related field.",
       '3+ years of experience with native Android development.',
       'Excellent understanding of computer science fundamentals, data structures, and algorithms.',
@@ -125,7 +146,7 @@ export const vacancies: Job[] = [
       'Writing functional and integration tests.',
     ],
     aboutJob:
-      'Our team is growing because our customer is growing, which means we need you!\n\nWe are looking for an experienced Senior Android Engineer to join our Spartan Team. Who is passionate about building, testing, and working closely with various stakeholders to deliver top-notch software. You will be able to solve challenging problems, work with the latest tech stack, and work with talented engineers to contribute meaningfully.',
+      'We are looking for an experienced Senior Android Engineer to join our Spartan Team. Who is passionate about building, testing, and working closely with various stakeholders to deliver top-notch software. You will be able to solve challenging problems, work with the latest tech stack, and work with talented engineers to contribute meaningfully.',
     tag: JobTag['ANDROID'],
     location: [Location['REMOTE'], Location['OFFICE']],
     skills: ['Java/Kotlin', 'RxJava/RxKotlin', 'Dagger'],
@@ -135,9 +156,10 @@ export const vacancies: Job[] = [
     slug: '/apply-job/senior-software-engineer-android',
   },
   {
-    id: 'job-2',
-    position: 'Senior Software Engineer - iOS',
+    id: 'job-3',
+    position: 'Senior iOS Engineer',
     requirements: [
+      'Fluent in English, able to communicate directly with customers.',
       "Bachelor's degree in Computer Science or related field.",
       '3+ years of experience with native iOS development.',
       'Excellent understanding of computer science fundamentals, data structures, and algorithms.',
@@ -154,7 +176,7 @@ export const vacancies: Job[] = [
       'Writing functional and integration tests.',
     ],
     aboutJob:
-      'Our team is growing because our customer is growing, which means we need you!\n\nWe are looking for an experienced Senior iOS Engineer to join our Spartan Team. Who is passionate about building, testing, and working closely with various stakeholders to deliver top-notch software. You will be able to solve challenging problems, work with the latest tech stack, and work with talented engineers to contribute meaningfully.',
+      'We are looking for an experienced Senior iOS Engineer to join our Spartan Team. Who is passionate about building, testing, and working closely with various stakeholders to deliver top-notch software. You will be able to solve challenging problems, work with the latest tech stack, and work with talented engineers to contribute meaningfully.',
     tag: JobTag['IOS'],
     location: [Location['REMOTE'], Location['OFFICE']],
     skills: ['Swift', 'RxSwift', 'Swiinject'],
@@ -164,9 +186,10 @@ export const vacancies: Job[] = [
     slug: '/apply-job/senior-software-engineer-ios',
   },
   {
-    id: 'job-3',
-    position: 'Senior Software Engineer - Backend',
+    id: 'job-4',
+    position: 'Senior Backend Engineer',
     requirements: [
+      'Fluent in English, able to communicate directly with customers.',
       "Bachelor's degree in Computer Science or related field.",
       '3+ years of experience with Java/Kotlin/.NET.',
       'Excellent understanding of computer science fundamentals, data structures, and algorithms.',
@@ -186,7 +209,7 @@ export const vacancies: Job[] = [
       'Design and build large-scale microservices for various startups.',
     ],
     aboutJob:
-      'Our team is growing because our customer is growing, which means we need you!\n\nWe are looking for an experienced Senior Backend Engineer to join our Spartan Team. Who is passionate about building, testing, and working closely with various stakeholders to deliver top-notch software. You will be able to solve challenging problems, work with the latest tech stack, and work with talented engineers to contribute meaningfully.',
+      "We are seeking an experienced Senior Backend Engineer to join our Spartan Team. We desire someone who is passionate about building and testing software, and who enjoys collaborating closely with various stakeholders to deliver exceptional software solutions. In this role, you'll tackle challenging problems, engage with the latest technology stack, and collaborate with skilled engineers to make a significant contribution.",
     tag: JobTag['BACKEND'],
     location: [Location['REMOTE'], Location['OFFICE']],
     skills: [
@@ -209,8 +232,9 @@ export const vacancies: Job[] = [
   },
   {
     id: 'job-5',
-    position: 'Senior Software Engineer - Frontend',
+    position: 'Senior Frontend Engineer',
     requirements: [
+      'Fluent in English, able to communicate directly with customers.',
       "Bachelor's degree in Computer Science or related field.",
       '3+ years of experience as a Frontend Developer, with a focus on web application development.',
       'Excellent understanding of computer science fundamentals, data structures, and algorithms.',
@@ -243,7 +267,7 @@ export const vacancies: Job[] = [
       'Participate in code reviews and provide constructive feedback to ensure adherence to coding standards and best practices.',
     ],
     aboutJob:
-      'Our team is growing because our customer is growing, which means we need you!\n\nWe are looking for an experienced Senior Frontend Engineer to join our Spartan Team. Who is passionate about building, testing, and working closely with various stakeholders to deliver top-notch software. You will be able to solve challenging problems, work with the latest tech stack, and work with talented engineers to contribute meaningfully.',
+      'We are looking for an experienced Senior Frontend Engineer to join our Spartan Team. Who is passionate about building, testing, and working closely with various stakeholders to deliver top-notch software. You will be able to solve challenging problems, work with the latest tech stack, and work with talented engineers to contribute meaningfully.',
     tag: JobTag['FRONTEND'],
     location: [Location['REMOTE'], Location['OFFICE']],
     skills: [
@@ -264,9 +288,10 @@ export const vacancies: Job[] = [
     slug: '/apply-job/senior-software-engineer-frontend',
   },
   {
-    id: 'job-7',
+    id: 'job-6',
     position: 'Senior Site Reliability Engineer',
     requirements: [
+      'Fluent in English, able to communicate directly with customers.',
       "Bachelor's degree in Computer Science, Information Technology, or a related field (or equivalent work experience).",
       '3+ years of experience as an SRE Engineer or DevOps Engineer or similar role.',
       'Strong knowledge of cloud platforms such as AWS, Azure, or Google Cloud, including infrastructure services and best practices.',
@@ -301,27 +326,16 @@ export const vacancies: Job[] = [
       'We are looking for an experienced Senior Site Reliability Engineer to join our Spartan Team. Who is passionate about building, testing, and working closely with various stakeholders to deliver top-notch software. You will be able to solve challenging problems, work with the latest tech stack, and work with talented engineers to contribute meaningfully.',
     tag: JobTag['SITE_RELIABILITY'],
     location: [Location['REMOTE'], Location['OFFICE']],
-    // skills: [
-    //   'Frontend Development',
-    //   'HTML5',
-    //   'CSS3',
-    //   'JavaScript',
-    //   'React.js',
-    //   'Webpack',
-    //   'Git',
-    //   'Redux',
-    //   'TypeScript',
-    //   'Testing',
-    // ],
     experienceLevel: ExperienceLevel['SENIOR'],
     enrollmentStatus: [EnrollmentStatus['FULL_TIME']],
     createdAt: '08/17/2023',
     slug: '/apply-job/senior-site-reliability-engineer',
   },
   {
-    id: 'job-6',
+    id: 'job-7',
     position: 'Senior Data Engineer',
     requirements: [
+      'Fluent in English, able to communicate directly with customers.',
       "Bachelor's degree in Computer Science or related field.",
       '3+ years of experience with either one of the following programming languages Java/Kotlin/Scala/Go/Rust/C#/Python.',
       'Excellent understanding of SQL.',
@@ -364,7 +378,7 @@ export const vacancies: Job[] = [
     slug: '/apply-job/graphic-designer',
   },
   {
-    id: 'job-7',
+    id: 'job-8',
     position: 'Tester (QA/QC)',
     responsibilities: [
       'Collaborate with the QC team to perform testing based on customer requirements.',
@@ -400,9 +414,10 @@ export const vacancies: Job[] = [
     slug: '/apply-job/tester-qa-qc',
   },
   {
-    id: 'job-8',
+    id: 'job-9',
     position: 'UX/UI Designer',
     requirements: [
+      'Fluent in English, able to communicate directly with customers.',
       'Bachelor’s or Master’s degree in Design, Human-Computer Interaction (HCI), or a related field.',
       'At least 3 years of experience in UX/UI design.',
       'Proficient in design tools such as Figma, Adobe Creative Suite, and InVision.',
@@ -436,7 +451,7 @@ export const vacancies: Job[] = [
     slug: '/apply-job/ui-ux-designer',
   },
   {
-    id: 'job-9',
+    id: 'job-10',
     position: 'AI/LLM Engineer',
     responsibilities: [
       'Develop and implement NLP algorithms and models, such as sentiment analysis, text classification, and chatbots.',
@@ -449,6 +464,7 @@ export const vacancies: Job[] = [
       'Possess good communication skills in English, including fluency and confidence in communication.',
     ],
     requirements: [
+      'Fluent in English, able to communicate directly with customers.',
       "Bachelor's degree in Computer Science or related field.",
       '1+ years of experience with either one of the following programming languages Python/Java/Kotlin/Scala/Go/Rust/C#',
       'Excellent understanding of computer science fundamentals, data structures, and algorithms.',
@@ -463,5 +479,144 @@ export const vacancies: Job[] = [
     enrollmentStatus: [EnrollmentStatus['FULL_TIME']],
     createdAt: '11/10/2023',
     slug: '/apply-job/ai-llm-engineer',
+  },
+  {
+    id: 'job-11',
+    position: 'Senior AI/LLM Engineer',
+    responsibilities: [
+      'Develop and implement NLP algorithms and models, such as sentiment analysis, text classification, and chatbots.',
+      'Prepare text data for model training by cleaning, normalizing, labeling, and vectorizing.',
+      'Train, evaluate, and optimize NLP models, such as BERT, GPT-3, and RNNs.',
+      'Deploy NLP models to production while monitoring their performance.',
+      'Research advances in NLP and integrate them into existing pipelines.',
+      'Collaborate with linguists, engineers, and product teams to identify NLP opportunities.',
+      'Maintain documentation on NLP architectures, code, and model metrics.',
+      'Possess good communication skills in English, including fluency and confidence in communication.',
+    ],
+    requirements: [
+      'Fluent in English, able to communicate directly with customers.',
+      "Bachelor's degree in Computer Science or related field.",
+      '3+ years of experience with either one of the following programming languages Python/Java/Kotlin/Scala/Go/Rust/C#',
+      'Excellent understanding of computer science fundamentals, data structures, and algorithms.',
+      'Deep understanding of the value of dependency injection and testing.',
+      'Solid coding practices, including writing technical specifications, peer code review, and unit & integration testing.',
+    ],
+    aboutJob:
+      'We are looking for an experienced AI Engineer to join our Spartan Team. Who is passionate about building, testing, and working closely with various stakeholders to deliver top-notch software. You will be able to solve challenging problems, work with the latest tech stack, and work with talented engineers to contribute meaningfully.',
+    tag: JobTag['AI_ENGINEER'],
+    location: [Location['REMOTE'], Location['OFFICE']],
+    experienceLevel: ExperienceLevel['SENIOR'],
+    enrollmentStatus: [EnrollmentStatus['FULL_TIME']],
+    createdAt: '11/10/2023',
+    slug: '/apply-job/senior-ai-llm-engineer',
+  },
+  {
+    id: 'job-12',
+    position: 'Security Engineer',
+    responsibilities: [
+      'Develop, execute and track the performance of security measures to protect information and network infrastructure and computer systems.',
+      'Design computer security strategy and engineer comprehensive cybersecurity architecture.',
+      'Identify, define and document system security requirements and recommend solutions to management.',
+      'Configure, troubleshoot and maintain security infrastructure software and hardware.',
+      'Install software that monitors systems and networks for security breaches and intrusions.',
+      'Monitor systems for irregular behavior and set up preventive measures.',
+      'Plan, develop, implement and update company’s information security strategy.',
+      'Educate and train staff on information system security best practices.',
+    ],
+    requirements: [
+      'Fluent in English, able to communicate directly with customers.',
+      'Bachelor of Science in Computer Science or a related field.',
+      'Three or more years’ work experience as a System Security Engineer or related position.',
+      'Proven experience developing, operating and maintaining security systems.',
+      'Extensive knowledge of operating system and database security.',
+      'Proficiency in networking technologies, network security and network monitoring solutions.',
+      'Knowledge of security systems including anti-virus applications, content filtering, firewalls, authentication systems and intrusion detection and notification systems.',
+      'In-depth knowledge of security protocols and principles.',
+      'Critical thinking skills and ability to solve complex problems.',
+    ],
+    aboutJob:
+      'We are looking for an experienced Security Engineer to join our Spartan Team. Construction enthusiast who works closely with a variety of stakeholders to identify, assess, and resolve security vulnerabilities, implement security measures, and monitor and detect unusual activities. often online, and take precautions to ensure the security of Spartan systems. You will be able to solve challenging problems, work with the latest technology teams, and work with talented engineers to contribute in a meaningful way.',
+    tag: JobTag['SECURITY_ENGINEER'],
+    location: [Location['REMOTE'], Location['OFFICE']],
+    experienceLevel: ExperienceLevel['ALL_LEVEL'],
+    enrollmentStatus: [EnrollmentStatus['FULL_TIME']],
+    createdAt: '30/10/2023',
+    slug: '/apply-job/security-engineer',
+  },
+  {
+    id: 'job-13',
+    position: 'Business Development Executive',
+    responsibilities: [
+      '<b>Market Analysis</b>: Conduct thorough market analysis to identify potential clients, assess industry trends, and evaluate competitors. Maintain a comprehensive understanding of market dynamics to inform strategic decision-making.',
+      '<b>Client Acquisition</b>: Identify and target potential clients, build and maintain strong client relationships, and lead the entire sales cycle from prospecting to closing deals.',
+      '<b>Strategic Planning</b>: Develop and implement comprehensive business development strategies to achieve company growth objectives. Collaborate with the leadership team to set clear targets and KPIs.',
+      '<b>Partnership Development</b>: Explore and establish strategic partnerships with other organizations, software vendors, and industry leaders to create mutually beneficial alliances.',
+      '<b>Revenue Growth</b>: Drive revenue growth by identifying upsell and cross-sell opportunities within the existing client base and ensuring client satisfaction.',
+      "<b>Proposal Development</b>: Prepare compelling proposals, presentations, and pitches tailored to clients' specific needs and requirements.",
+      "<b>Networking</b>: Attend industry events, conferences, and trade shows to expand the company's network and foster new business relationships.",
+      '<b>Team Collaboration</b>: Collaborate closely with the marketing, sales, and technical teams to align business development efforts with company goals.',
+    ],
+    requirements: [
+      'Fluent in English, able to communicate directly with customers.',
+      "Bachelor's degree in Business Administration, Marketing, or a related field.",
+      'Proven track record of at least 3 in business development and strategy roles within the software consulting or IT industry.',
+      'Strong understanding of software solutions, technologies, and consulting services.',
+      'Exceptional communication, negotiation, and presentation skills.',
+      'Strategic thinker with the ability to analyze data, make data-driven decisions, and adapt to market changes.',
+      'Proficiency in CRM software and other sales tools.',
+      'Self-motivated, results-oriented, and a team player.',
+    ],
+    offers: [
+      'Competitive salary and performance-based bonuses.',
+      'Opportunity to shape the growth and direction of a leading software consulting firm.',
+      'A collaborative and innovative work environment.',
+      'Ongoing professional development and growth opportunities.',
+    ],
+    aboutJob:
+      "As a Business Development Executive at Spartan, you will play a pivotal role in shaping the company's growth by identifying new business opportunities, developing strategic partnerships, and ensuring the firm's continued success. You will be responsible for crafting and implementing business development strategies to expand our client base and enhance our market presence.",
+    tag: JobTag['BIZ_DEVELOPMENT_EXECUTIVE'],
+    location: [Location['REMOTE'], Location['OFFICE']],
+    experienceLevel: ExperienceLevel['ALL_LEVEL'],
+    enrollmentStatus: [EnrollmentStatus['FULL_TIME']],
+    createdAt: '30/10/2023',
+    slug: '/apply-job/business-development-executive',
+  },
+  {
+    id: 'job-14',
+    position: 'Marketing Manager - Software',
+    responsibilities: [
+      'Own the marketing strategy and execution, including but not limited to seeking new clients, content/SEO, SEM, brand identity, and community building.',
+      "Sales enablement will be a large part of what you do – Partner with Product Management to communicate the Product's value proposition to the sales team. Develop the sales tools and training that support the selling process of the Product.",
+      'Conduct market research, benchmarking, and consumer studies.',
+      'Be responsible for the product marketing strategy with a multi-channel timeline and marketing content plan in collaboration with internal & external teams.',
+      'Craft strong product messages and strategies uniquely suited for our channels based on a deep understanding of the market and competitive landscape.',
+      'Work with the product and sales to improve the user experience and marketing metrics.',
+    ],
+    requirements: [
+      '5+ years of global experience in technical product marketing or product management in enterprise software (US/EU/Canada market..).',
+      '1+ years managing marketing teams in Software companies.',
+      'Experience generating massive leads for new software products.',
+      'Intimate and hands-on knowledge of marketing tools.',
+      'Product-led growth knowledge & growth hacking mindset.',
+      'Proven ability to effectively articulate and showcase technology for different use cases and to different types of audiences.',
+      'Self-starter with excellent project management skills who truly enjoys working in a fast-paced, innovative software company.',
+      'Strong critical thinking and problem-solving skills.',
+      'Excellent command of written and spoken English.',
+      'BSc/BA in IT, Marketing, Communications, or a similar field.',
+    ],
+    offers: [
+      'Competitive salary and performance-based bonuses.',
+      'Opportunity to shape the growth and direction of a leading software consulting firm.',
+      'A collaborative and innovative work environment.',
+      'Ongoing professional development and growth opportunities.',
+    ],
+    aboutJob:
+      "Spartan is a software development startup with world-class engineers focusing on technology. We seek an experienced Marketing Manager to lead our marketing campaigns and expand our product and service presence in international markets (US, EU, Canada, etc.). You will collaborate closely with the Business Development and Product teams to develop and execute marketing strategies tailored to attract customers and enhance the company's branding. If you are a Marketing Manager with software experience, please read on.",
+    tag: JobTag['MARKETING_MANAGER'],
+    location: [Location['REMOTE'], Location['OFFICE']],
+    experienceLevel: ExperienceLevel['ALL_LEVEL'],
+    enrollmentStatus: [EnrollmentStatus['FULL_TIME']],
+    createdAt: '30/10/2023',
+    slug: '/apply-job/marketing-manager-software',
   },
 ];

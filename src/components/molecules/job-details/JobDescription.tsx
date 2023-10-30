@@ -95,16 +95,28 @@ const JobDescription = ({ job }: JobDetailsProps) => {
           list={job.technologies}
         />
       )}
-      <JobDetailsSection
-        contentType={ContentType.GroupedList}
-        title="Benefit and perks"
-        groupList={BenefitsData}
-      />
-      <JobDetailsSection
-        contentType={ContentType.List}
-        title="Why you'll love working here"
-        list={LoveWorking}
-      />
+      {job.offers ? (
+        <>
+          <JobDetailsSection
+            contentType={ContentType.GroupedList}
+            title="What We Offer"
+            list={job.offers}
+          />
+        </>
+      ) : (
+        <>
+          <JobDetailsSection
+            contentType={ContentType.GroupedList}
+            title="Benefit and perks"
+            groupList={BenefitsData}
+          />
+          <JobDetailsSection
+            contentType={ContentType.List}
+            title="Why you'll love working here"
+            list={LoveWorking}
+          />
+        </>
+      )}
       <Box component={Divider} />
       <Box display={'flex'} alignItems={'center'}>
         <Typography fontWeight={600} mr={'18px'}>

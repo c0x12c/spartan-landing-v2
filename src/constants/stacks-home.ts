@@ -18,6 +18,8 @@ import FastAPI from '@/assets/images/stacks-home/fastAPI.svg';
 import Actix from '@/assets/images/stacks-home/actix.svg';
 import Agora from '@/assets/images/stacks-home/agora.svg';
 import NodeJS from '@/assets/images/stacks-home/nodeJS.svg';
+import PyTorch from '@/assets/images/stacks-home/pyTorch.svg';
+import TensorFlow from '@/assets/images/stacks-home/tensorflow.svg';
 
 import Solid from '@/assets/images/stacks-home/solid.svg';
 import Twillio from '@/assets/images/stacks-home/twillio.svg';
@@ -94,6 +96,8 @@ export const StacksInHome: FieldType[] = [
       { id: 'stack-13', name: 'Nuxt', imgSrc: Nuxt },
       { id: 'stack-14', name: 'FastAPI', imgSrc: FastAPI },
       { id: 'stack-15', name: 'Actix', imgSrc: Actix },
+      { id: 'stack-47', name: 'PyTorch', imgSrc: PyTorch },
+      { id: 'stack-48', name: 'TensorFlow', imgSrc: TensorFlow },
     ],
   },
   {

@@ -26,9 +26,8 @@ const List = ({ items, isMobile }: { items: string[]; isMobile: boolean }) => (
       <li
         key={index}
         style={{ fontSize: isMobile ? '14px' : '16px', color: gray[600], lineHeight: 1.75 }}
-      >
-        {item}
-      </li>
+        dangerouslySetInnerHTML={{ __html: item }}
+      />
     ))}
   </ul>
 );
