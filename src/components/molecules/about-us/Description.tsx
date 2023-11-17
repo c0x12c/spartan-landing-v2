@@ -50,7 +50,7 @@ export const Description = () => {
             }}
           />
           <BodyText
-            text="The company is based in the US but works with engineers worldwide, leveraging remote work to maximize cost savings and improve startups' financial runway. \n We unite individuals from all stages of software development, prioritizing the creation of a strong team and nurturing the growth of our engineers."
+            text="The company is based in the US but works with engineers worldwide, leveraging remote work to maximize cost savings and improve startups' financial runway.<br>We unite individuals from all stages of software development, prioritizing the creation of a strong team and nurturing the growth of our engineers."
             data-aos="fade-left"
             data-aos-delay="500"
           />
