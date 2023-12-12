@@ -13,6 +13,10 @@ import UrsaliveFounder from '../assets/images/about-us/ursalive-founder.jpeg';
 import VoltaFounder from '../assets/images/about-us/volta-fonder.jpeg';
 import CFFounder from '../assets/images/about-us/cf-founder.jpeg';
 import LiquidityFounder from '@/assets/images/about-us/liquidty-founder.webp';
+import logoPura from '@/assets/images/partners/logo-pura.png';
+import pura from '@/assets/images/projects/pura.png';
+import PuraCTO from '@/assets/images/about-us/pura-cto.jpeg';
+
 import { StaticImageData } from 'next/image';
 import { ServicesEnum } from './services';
 
@@ -141,6 +145,26 @@ export const Projects: ProjectType[] = [
       userName: 'George Melika',
       userPosition: 'Co-founder',
       userImgSrc: VoltaFounder,
+    },
+  },
+  {
+    id: 'case-6',
+    name: 'Pura',
+    value: 'pura',
+    imgSrc: pura,
+    href: '',
+    tags: [ServicesEnum.BACKEND],
+    content: 'Best Smart Home Fragrance & Diffuser - Pura',
+    dev: 14,
+    designer: 2,
+    quote: {
+      imgSrc: pura,
+      title: 'Spartan Is A Remarkable Team with Unmatched Expertise',
+      content:
+        'Having worked on multiple projects with Spartan across multiple companies, I am confident to say they are one of the best firms you can ask for. They ramp up quickly and add value every time. Their leadership has decades of experience and has seen it all!',
+      userName: 'Scott Rushforth',
+      userPosition: 'CTO',
+      userImgSrc: PuraCTO,
     },
   },
 ];
