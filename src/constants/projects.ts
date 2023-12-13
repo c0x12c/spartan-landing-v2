@@ -13,7 +13,6 @@ import UrsaliveFounder from '../assets/images/about-us/ursalive-founder.jpeg';
 import VoltaFounder from '../assets/images/about-us/volta-fonder.jpeg';
 import CFFounder from '../assets/images/about-us/cf-founder.jpeg';
 import LiquidityFounder from '@/assets/images/about-us/liquidty-founder.webp';
-import logoPura from '@/assets/images/partners/logo-pura.png';
 import pura from '@/assets/images/projects/pura.png';
 import PuraCTO from '@/assets/images/about-us/pura-cto.jpeg';
 
