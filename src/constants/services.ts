@@ -176,6 +176,8 @@ export enum ServicesEnum {
   CLOUD = 'cloud',
   BACKEND = 'backend',
   EMERGING = 'emerging',
+  INFRA = 'infrastructure',
+  QA = 'QA',
 }
 
 export type ServiceContentType = {
