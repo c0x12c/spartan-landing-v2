@@ -47,7 +47,7 @@ export const Projects: ProjectType[] = [
     value: 'pura',
     imgSrc: pura,
     href: '',
-    tags: [ServicesEnum.BACKEND],
+    tags: [ServicesEnum.BACKEND, ServicesEnum.MOBILE, ServicesEnum.QA, ServicesEnum.INFRA],
     content: 'Best Smart Home Fragrance & Diffuser - Pura',
     dev: 14,
     designer: 2,
