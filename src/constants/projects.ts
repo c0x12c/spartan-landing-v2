@@ -42,7 +42,27 @@ export type ProjectType = {
 
 export const Projects: ProjectType[] = [
   {
-    id: 'case-3',
+    id: 'case-1',
+    name: 'Pura',
+    value: 'pura',
+    imgSrc: pura,
+    href: '',
+    tags: [ServicesEnum.BACKEND],
+    content: 'Best Smart Home Fragrance & Diffuser - Pura',
+    dev: 14,
+    designer: 2,
+    quote: {
+      imgSrc: pura,
+      title: 'Spartan Is A Remarkable Team with Unmatched Expertise',
+      content:
+        'Having worked on multiple projects with Spartan across multiple companies, I am confident to say they are one of the best firms you can ask for. They ramp up quickly and add value every time. Their leadership has decades of experience and has seen it all!',
+      userName: 'Scott Rushforth',
+      userPosition: 'CTO',
+      userImgSrc: PuraCTO,
+    },
+  },
+  {
+    id: 'case-2',
     name: 'Liquidity Financial',
     value: 'liquidity',
     imgSrc: liquidityFinancial,
@@ -68,7 +88,7 @@ export const Projects: ProjectType[] = [
     },
   },
   {
-    id: 'case-4',
+    id: 'case-3',
     name: 'LiveCast',
     imgSrc: liveCast,
     href: '/case-study/live-cast',
@@ -88,7 +108,7 @@ export const Projects: ProjectType[] = [
     },
   },
   {
-    id: 'case-5',
+    id: 'case-4',
     name: 'URSA Live',
     value: 'ursa',
     imgSrc: ursalive,
@@ -108,7 +128,7 @@ export const Projects: ProjectType[] = [
     },
   },
   {
-    id: 'case-2',
+    id: 'case-5',
     name: 'chargeFUZE',
     value: 'chargefuze',
     imgSrc: chargeFuze,
@@ -128,7 +148,7 @@ export const Projects: ProjectType[] = [
     },
   },
   {
-    id: 'case-1',
+    id: 'case-6',
     name: 'Volta Wallet',
     value: 'volta',
     imgSrc: voltaWallet,
@@ -145,26 +165,6 @@ export const Projects: ProjectType[] = [
       userName: 'George Melika',
       userPosition: 'Co-founder',
       userImgSrc: VoltaFounder,
-    },
-  },
-  {
-    id: 'case-6',
-    name: 'Pura',
-    value: 'pura',
-    imgSrc: pura,
-    href: '',
-    tags: [ServicesEnum.BACKEND],
-    content: 'Best Smart Home Fragrance & Diffuser - Pura',
-    dev: 14,
-    designer: 2,
-    quote: {
-      imgSrc: pura,
-      title: 'Spartan Is A Remarkable Team with Unmatched Expertise',
-      content:
-        'Having worked on multiple projects with Spartan across multiple companies, I am confident to say they are one of the best firms you can ask for. They ramp up quickly and add value every time. Their leadership has decades of experience and has seen it all!',
-      userName: 'Scott Rushforth',
-      userPosition: 'CTO',
-      userImgSrc: PuraCTO,
     },
   },
 ];

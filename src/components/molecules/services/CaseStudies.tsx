@@ -64,6 +64,7 @@ export const ServiceCasesStudy: React.FunctionComponent<IServiceCasesStudyProps>
   };
 
   const renderProjects = Projects.map((project) => {
+    if (!project.href) return;
     return (
       <Box key={project.id} maxWidth={isMobile ? '319px' : '384px'}>
         <CardProject item={project} onClick={handleOnItemClick} isSliderItem={true} />
