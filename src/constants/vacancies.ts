@@ -91,6 +91,7 @@ export interface Job {
   createdAt: string;
   slug: string;
   offers?: string[];
+  forwardToUrl?: string;
 }
 
 export const vacancies: Job[] = [
@@ -120,6 +121,7 @@ export const vacancies: Job[] = [
     enrollmentStatus: [EnrollmentStatus['PART_TIME'], EnrollmentStatus['FULL_TIME']],
     createdAt: '07/21/2023',
     slug: '/apply-job/software-engineer-intern',
+    forwardToUrl: 'https://spartandev.bamboohr.com/careers',
   },
   {
     id: 'job-2',

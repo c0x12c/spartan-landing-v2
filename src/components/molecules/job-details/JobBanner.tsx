@@ -10,9 +10,11 @@ import Arrow from '@/assets/images/icons/arrow.svg';
 import Image from 'next/image';
 import relativeTime from 'dayjs/plugin/relativeTime';
 import dayjs from 'dayjs';
+import { useRouter } from 'next/router';
 dayjs.extend(relativeTime);
 
 const JobBanner = ({ job }: JobDetailsProps) => {
+  const router = useRouter();
   const renderSkills =
     job.skills &&
     job.skills.map((skill, index) => {
@@ -29,6 +31,11 @@ const JobBanner = ({ job }: JobDetailsProps) => {
         </Box>
       );
     });
+
+  const onClickApplyNow = () => {
+    job.forwardToUrl ? window.open(job.forwardToUrl, '_blank') : router.push('/ready-to-join');
+  };
+
   return (
     <Box
       mb={'24px'}
@@ -83,7 +90,7 @@ const JobBanner = ({ job }: JobDetailsProps) => {
         </Box>
       </Box>
       <Button
-        href="/ready-to-join"
+        onClick={onClickApplyNow}
         variant="contained"
         sx={{ width: '100%' }}
         endIcon={<Image src={Arrow} alt="arrow-right" />}
