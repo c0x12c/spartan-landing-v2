@@ -10,11 +10,10 @@ import Arrow from '@/assets/images/icons/arrow.svg';
 import Image from 'next/image';
 import relativeTime from 'dayjs/plugin/relativeTime';
 import dayjs from 'dayjs';
-import { useRouter } from 'next/router';
+
 dayjs.extend(relativeTime);
 
 const JobBanner = ({ job }: JobDetailsProps) => {
-  const router = useRouter();
   const renderSkills =
     job.skills &&
     job.skills.map((skill, index) => {
@@ -33,7 +32,10 @@ const JobBanner = ({ job }: JobDetailsProps) => {
     });
 
   const onClickApplyNow = () => {
-    job.forwardToUrl ? window.open(job.forwardToUrl, '_blank') : router.push('/ready-to-join');
+    window.open(
+      process.env.NEXT_PUBLIC_BAMBOO_CAREER_URL ?? 'https://spartandev.bamboohr.com/careers',
+      '_blank'
+    );
   };
 
   return (
