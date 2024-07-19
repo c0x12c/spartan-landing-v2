@@ -18,6 +18,16 @@ import { useState } from 'react';
 import { BreakPoints, useBreakpoint } from '@/hooks';
 import Link from 'next/link';
 
+// Separate the "All team" entry
+const allTeamEntry = listJobTag.find((tag) => tag.name === 'All team');
+const otherEntries = listJobTag.filter((tag) => tag.name !== 'All team');
+
+// Sort the other entries by name
+otherEntries.sort((a, b) => a.name.localeCompare(b.name));
+
+// Add the "All team" entry back to the end of the array
+const sortedJobTags = [...otherEntries, allTeamEntry];
+
 const Vacancies = () => {
   const [teamFilter, setTeamFilter] = useState<JobTag[]>([JobTag['ALL_JOB']]);
   const [levelFilter, setLevelFilter] = useState<ExperienceLevel>(ExperienceLevel['ALL_LEVEL']);
@@ -64,7 +74,8 @@ const Vacancies = () => {
                 p: '15px 32px',
               }}
             >
-              {listJobTag.map((item) => {
+              {sortedJobTags.map((item) => {
+                if (!item) return null;
                 return (
                   <MenuItem key={item.id} value={item.value as JobTag[]}>
                     {item.name}
@@ -90,13 +101,11 @@ const Vacancies = () => {
                 p: '15px 32px',
               }}
             >
-              {listExperienceLevel.map((item) => {
-                return (
-                  <MenuItem key={item.id} value={item.value}>
-                    {item.name}
-                  </MenuItem>
-                );
-              })}
+              {listExperienceLevel.map((item) => (
+                <MenuItem key={item.id} value={item.value}>
+                  {item.name}
+                </MenuItem>
+              ))}
             </Select>
           </FormControl>
         </Box>

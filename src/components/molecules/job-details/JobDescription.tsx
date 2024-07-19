@@ -103,6 +103,15 @@ const JobDescription = ({ job }: JobDetailsProps) => {
             list={job.offers}
           />
         </>
+      ) : job.benefits ? (
+        <>
+          <JobDetailsSection contentType={ContentType.List} title="Benefit" list={job.benefits} />
+          <JobDetailsSection
+            contentType={ContentType.List}
+            title="Why you'll love working here"
+            list={LoveWorking}
+          />
+        </>
       ) : (
         <>
           <JobDetailsSection
