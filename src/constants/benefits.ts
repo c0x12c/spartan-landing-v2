@@ -8,6 +8,9 @@ export const BenefitsData = [
       'Allow work from anywhere',
       'Covering the cost of participating in sports activities (Strava app)',
       'Annual company travel and an intimate party every month',
+      'Modern and flexible work-life style... work anywhere, no dress code - just shine your way.',
+      'Learning culture, initiatives, and a proactive attitude are strongly encouraged at Spartan.',
+      'Team building, company trips, and internal events each month',
     ],
   },
   {
@@ -16,14 +19,6 @@ export const BenefitsData = [
       'Opportunity to experience work with the latest tech stacks and work with a group of talented engineers around the world',
       'Opportunity to promptly boost your capability by solving challenging startup business issues. It`s worth your try.',
       'Transparent and flexible career path.',
-    ],
-  },
-  {
-    title: 'Salary & Allowances',
-    items: [
-      'Modern and flexible work-life style... work anywhere, no dress code - just shine your way.',
-      'Learning culture, initiatives, and a proactive attitude are strongly encouraged at Spartan.',
-      'Team building, company trips, and internal events each month',
     ],
   },
 ];
