@@ -8,39 +8,67 @@ import { BreakPoints, useBreakpoint } from '@/hooks';
 import Link from 'next/link';
 import Image from 'next/image';
 import { StacksHome } from './Stacks';
+import { useIsTablet, useIsPhone } from '@/hooks/useBreakPoints';
 
 export const HomeBanner = () => {
   const isMobile = useBreakpoint(BreakPoints.MD);
+  const isTablet = useIsTablet();
+  const isPhone = useIsPhone();
 
   return (
-    <Box>
-      <Box bgcolor="black" position="relative" pb="100px" pt="164px">
-        <Box position="absolute" bottom="20px" right="20px">
+    <>
+      <Box bgcolor="black" position="relative" pb="60px" pt={isMobile ? '150px' : '195px'}>
+        <Box
+          position="absolute"
+          bottom={isPhone ? 'unset' : '20px'}
+          top={isPhone ? '25%' : 'unset'}
+          right="20px"
+        >
           <Image src={group_banner} alt="group_banner" />
         </Box>
         <Container>
-          <Box display="flex" flexDirection={{ xs: 'column', md: 'row' }} gap="64px">
-            <Box maxWidth="370px">
-              <MainTitle text="Startup in the box" data-aos="fade-up" data-aos-delay="200" />
+          <Box
+            display="flex"
+            flexDirection={{ xs: 'column', md: 'row' }}
+            rowGap="16px"
+            justifyContent={'space-between'}
+          >
+            <Box maxWidth={isTablet ? 'unset' : '320px'}>
+              <MainTitle
+                text="Startup in the box"
+                data-aos="fade-up"
+                data-aos-delay="200"
+                sx={{ fontWeight: 500, lineHeight: 1.3 }}
+              />
             </Box>
-            <Stack gap="32px">
+            <Stack gap="32px" justifyContent={'center'}>
               <BodyText
-                text="Unlock your startup’s software potential with Spartan’s all-inclusive solution. Our tailored package offers comprehensive services, expertise, and resources to streamline your software development and implementation. From architecture design to deployment and ongoing support, we empower startups to thrive in the digital landscape."
+                text={`Boost your startup with Spartan's all-in-one software solution—<span style="color: white">Fast, Correct, Affordable</span>. Streamline development from design to support.`}
                 data-aos="fade-up"
                 data-aos-delay="300"
-                sx={{ color: gray[300], maxWidth: '700px' }}
+                sx={{ color: gray[300], maxWidth: isTablet ? '578px' : '700px', lineHeight: 1.6 }}
               />
-              <Link
-                href="/contact-us#contact-form"
-                scroll={false}
-                data-aos="fade-up"
-                data-aos-delay="500"
-              >
-                <Button variant="contained" size={isMobile ? 'small' : 'medium'}>
-                  Let’s discuss your project
-                  <ArrowIcon />
+              <Stack direction="row" gap={'16px'}>
+                <Button
+                  href={'/contact-us#contact-form'}
+                  LinkComponent={Link}
+                  variant="contained"
+                  size={isMobile ? 'small' : 'medium'}
+                  fullWidth={isPhone}
+                  endIcon={<ArrowIcon />}
+                >
+                  Let’s chat
                 </Button>
-              </Link>
+                <Button
+                  variant="transparent"
+                  size={isMobile ? 'small' : 'medium'}
+                  fullWidth={isPhone}
+                  LinkComponent={Link}
+                  href={'/spartan-operates'}
+                >
+                  How we work
+                </Button>
+              </Stack>
             </Stack>
           </Box>
         </Container>
@@ -49,6 +77,6 @@ export const HomeBanner = () => {
         <Image src={large_banner} alt={'large_banner'} style={{ width: '100%', height: 'auto' }} />
         <StacksHome />
       </Box>
-    </Box>
+    </>
   );
 };

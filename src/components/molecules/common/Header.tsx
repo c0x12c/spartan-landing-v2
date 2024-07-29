@@ -80,7 +80,7 @@ export const Header = ({ forceTransparent = true }: { forceTransparent?: boolean
         <Toolbar
           sx={{
             padding: '0 !important',
-            height: isTablet ? '142px' : 'auto',
+            height: isTablet ? '87px' : 'auto',
           }}
         >
           <Box display="flex" alignItems="center" justifyContent="space-between" width="100%">

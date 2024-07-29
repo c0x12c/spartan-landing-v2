@@ -9,15 +9,15 @@ interface IBodyTextProps {
 }
 
 export const BodyText: React.FunctionComponent<IBodyTextProps> = ({ text, sx, ...props }) => {
-  const isMobile = useBreakpoint(BreakPoints.MD);
+  const isIphone = useBreakpoint(BreakPoints.SM);
 
   return (
     <Typography
       component="p"
-      variant={isMobile ? 'fs14' : 'fs18'}
+      variant={isIphone ? 'fs16' : 'fs20'}
       color={gray[600]}
       display="block"
-      letterSpacing={isMobile ? '0.21px' : 'normal'}
+      letterSpacing={isIphone ? '0.21px' : 'normal'}
       sx={sx}
       dangerouslySetInnerHTML={{ __html: text }}
       {...props}
