@@ -16,7 +16,7 @@ export const useBreakpoint = (breakpoint: BreakPoints) => {
 
 export const useIsTablet = () => {
   const theme = useTheme();
-  return useMediaQuery(theme.breakpoints.between(BreakPoints.SM, BreakPoints.MD));
+  return useMediaQuery(theme.breakpoints.between(BreakPoints.SM, BreakPoints.LG));
 };
 
 export const useIsPhone = () => {

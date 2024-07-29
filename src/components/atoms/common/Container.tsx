@@ -10,6 +10,7 @@ export const Container: React.FunctionComponent<IContainerProps> = ({ children, 
     <Box
       width="100%"
       margin="0px auto"
+      position={'relative'}
       {...props}
       sx={{
         maxWidth: {
