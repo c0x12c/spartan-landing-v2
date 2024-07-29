@@ -1,12 +1,12 @@
 import React from 'react';
 import { MainTemplate } from '../templates';
 import {
-  Clients,
   GlobalImpact,
+  Clients,
   HomeBanner,
-  OurServices,
   OurServicesV2,
   WhyBusiness,
+  OurClients,
 } from '../molecules';
 import { GetInTouch } from '../atoms';
 
@@ -19,7 +19,7 @@ export const HomePage: React.FC<Props> = () => {
     <MainTemplate>
       <HomeBanner />
       <OurServicesV2 />
-      <OurServices />
+      <OurClients />
       <WhyBusiness />
       <GlobalImpact />
       <Clients />
