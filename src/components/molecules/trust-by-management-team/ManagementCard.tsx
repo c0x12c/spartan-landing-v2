@@ -18,7 +18,7 @@ export const ManagementCard = () => {
       <Stack
         position={'relative'}
         width={{ xs: '100%', sm: '260px' }}
-        height={{ xs: '280px', sm: '293px' }}
+        height={{ xs: '280px', sm: '295px' }}
       >
         <Image
           src={gabe_avatar}
@@ -33,29 +33,39 @@ export const ManagementCard = () => {
           }}
         />
       </Stack>
-      <Stack p={3} gap={{ xs: 1 }} flex={1}>
-        <Stack direction={'row'} gap={0.5} alignItems={'center'}>
-          {Array.from({ length: 5 }, (v, i) => {
-            return (
-              <Stack
-                key={i}
-                width={{ xs: '12.5px', md: '24px' }}
-                height={{ xs: '12.5px', md: '24px' }}
-              >
-                <Image src={star_icon} alt="star" style={{ width: '100%', height: '100%' }} />
-              </Stack>
-            );
-          })}
+      <Stack
+        p={3}
+        gap={{ xs: 1 }}
+        flex={1}
+        height={{ xs: 'none', sm: '295px' }}
+        justifyContent={'space-between'}
+      >
+        <Stack gap={1}>
+          <Stack direction={'row'} gap={0.5} alignItems={'center'}>
+            {Array.from({ length: 5 }, (v, i) => {
+              return (
+                <Stack
+                  key={i}
+                  width={{ xs: '12.5px', sm: '16px', md: '24px' }}
+                  height={{ xs: '12.5px', sm: '16px', md: '24px' }}
+                >
+                  <Image src={star_icon} alt="star" style={{ width: '100%', height: '100%' }} />
+                </Stack>
+              );
+            })}
+          </Stack>
+          <Typography
+            variant={isMobile ? 'fs16' : 'fs20'}
+            fontWeight={300}
+            lineHeight={1.6}
+            color={'#86868B'}
+          >
+            “Spartan delivers top-quality, timely projects with clear communication. Their focus on
+            scalability and experience with high-growth startups adds significant value for
+            clients.”
+          </Typography>
         </Stack>
-        <Typography
-          variant={isMobile ? 'fs16' : 'fs20'}
-          fontWeight={300}
-          lineHeight={1.6}
-          color={'#86868B'}
-        >
-          “Spartan delivers top-quality, timely projects with clear communication. Their focus on
-          scalability and experience with high-growth startups adds significant value for clients.”
-        </Typography>
+
         <Stack marginTop={2} gap={1}>
           <Stack direction={'row'} alignItems={'center'} justifyContent={'space-between'}>
             <Typography
