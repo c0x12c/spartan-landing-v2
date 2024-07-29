@@ -7,6 +7,7 @@ import {
   OurServicesV2,
   WhyBusiness,
   OurClients,
+  TrustByManagementTeam,
 } from '../molecules';
 import { GetInTouch } from '../atoms';
 import { WhyBusinessV2 } from '../molecules/business/WhyBusinessV2';
@@ -22,16 +23,7 @@ export const HomePage: React.FC<Props> = () => {
       <OurServicesV2 />
       <OurClients />
       <WhyBusinessV2 />
-      <WhyBusiness />
-      <GlobalImpact />
-      <Clients />
-      <GetInTouch
-        title="Interested in knowing more about Spartan?"
-        textButton="Become the next Spartan"
-        linkButton="/apply-job"
-        data-aos="zoom-in"
-        data-aos-delay="200"
-      />
+      <TrustByManagementTeam />
     </MainTemplate>
   );
 };

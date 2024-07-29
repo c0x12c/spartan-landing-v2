@@ -1,0 +1,84 @@
+import { BreakPoints, useBreakpoint } from '@/hooks/useBreakPoints';
+import { Stack, Typography } from '@mui/material';
+import React from 'react';
+import chargeFuze_icon from '@/assets/images/trust-management-team/chargeFuze.png';
+import gabe_avatar from '@/assets/images/trust-management-team/gabe.png';
+import star_icon from '@/assets/images/trust-management-team/material-symbols_star.png';
+import Image from 'next/image';
+
+export const ManagementCard = () => {
+  const isMobile = useBreakpoint(BreakPoints.MD);
+  return (
+    <Stack
+      direction={{ xs: 'column', sm: 'row' }}
+      alignItems={{ xs: 'center', sm: 'flex-start' }}
+      bgcolor="#101010"
+      borderRadius={2}
+    >
+      <Stack
+        position={'relative'}
+        width={{ xs: '100%', sm: '260px' }}
+        height={{ xs: '280px', sm: '293px' }}
+      >
+        <Image
+          src={gabe_avatar}
+          alt="avatar"
+          style={{
+            width: '100%',
+            height: '100%',
+            objectFit: 'cover',
+            position: 'absolute',
+            top: 0,
+            left: 0,
+          }}
+        />
+      </Stack>
+      <Stack p={3} gap={{ xs: 1 }} flex={1}>
+        <Stack direction={'row'} gap={0.5} alignItems={'center'}>
+          {Array.from({ length: 5 }, (v, i) => {
+            return (
+              <Stack
+                key={i}
+                width={{ xs: '12.5px', md: '24px' }}
+                height={{ xs: '12.5px', md: '24px' }}
+              >
+                <Image src={star_icon} alt="star" style={{ width: '100%', height: '100%' }} />
+              </Stack>
+            );
+          })}
+        </Stack>
+        <Typography
+          variant={isMobile ? 'fs16' : 'fs20'}
+          fontWeight={300}
+          lineHeight={1.6}
+          color={'#86868B'}
+        >
+          “Spartan delivers top-quality, timely projects with clear communication. Their focus on
+          scalability and experience with high-growth startups adds significant value for clients.”
+        </Typography>
+        <Stack marginTop={2} gap={1}>
+          <Stack direction={'row'} alignItems={'center'} justifyContent={'space-between'}>
+            <Typography
+              variant={isMobile ? 'fs16' : 'fs20'}
+              fontWeight={500}
+              lineHeight={1.3}
+              color={'white'}
+            >
+              Gabe Esler
+            </Typography>
+            <Image src={chargeFuze_icon} alt="icon" />
+          </Stack>
+          <Typography
+            variant={isMobile ? 'fs16' : 'fs20'}
+            fontWeight={300}
+            fontSize={{ xs: 12 }}
+            lineHeight={1.3}
+            color={'white'}
+          >
+            ChargeFUZE’s Product and Strategy
+          </Typography>
+        </Stack>
+      </Stack>
+    </Stack>
+  );
+};
