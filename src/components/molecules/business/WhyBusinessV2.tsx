@@ -39,7 +39,7 @@ export const WhyBusinessV2 = () => {
         {achievements.map((elem, index) => {
           return (
             <>
-              <Grid2 key={elem.title} gap={1} xs={6} md={3}>
+              <Grid2 key={elem.title} gap={1} xs={6} md={3} data-aos="fade-up" data-aos-delay="200">
                 <Stack gap={1} ref={blockRef} alignItems={{ xs: 'flex-start', sm: 'center' }}>
                   <Typography
                     variant={isPhone ? 'fs48' : isTablet ? 'fs56' : 'fs64'}
@@ -62,6 +62,8 @@ export const WhyBusinessV2 = () => {
               </Grid2>
               {index !== achievements.length - 1 && (
                 <Divider
+                  data-aos="fade-up"
+                  data-aos-delay="200"
                   key={`${elem.title}-divider`}
                   orientation="vertical"
                   flexItem
@@ -74,6 +76,8 @@ export const WhyBusinessV2 = () => {
       </Grid2>
       <Stack alignItems={'center'}>
         <Image
+          data-aos="zoom-in-up"
+          data-aos-delay="200"
           src={
             isPhone ? all_employee_mobile : isTablet ? all_employee_tablet : all_employee_desktop
           }
@@ -91,6 +95,8 @@ export const WhyBusinessV2 = () => {
           lineHeight={1.2}
           color={'black'}
           maxWidth={isTablet ? 790 : 'unset'}
+          data-aos="fade-down"
+          data-aos-delay="200"
         >
           Lift your{' '}
           <Typography
@@ -111,12 +117,16 @@ export const WhyBusinessV2 = () => {
             lineHeight={2}
             color={'#86868B'}
             maxWidth={isPhone ? 340 : 'unset'}
+            data-aos="fade-up"
+            data-aos-delay="200"
           >
             Spartan delivers tailored offshoring solutions for businesses of all sizes to meet your
             unique needs.
           </Typography>
           <Box sx={{ display: 'inline-flex' }}>
             <Button
+              data-aos="fade-right"
+              data-aos-delay="200"
               endIcon={<Image src={Arrow} alt="arrow-right" />}
               variant="outlined"
               sx={{
