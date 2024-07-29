@@ -9,6 +9,7 @@ import {
   OurClients,
 } from '../molecules';
 import { GetInTouch } from '../atoms';
+import { WhyBusinessV2 } from '../molecules/business/WhyBusinessV2';
 
 type Props = {
   children?: React.ReactNode;
@@ -20,6 +21,7 @@ export const HomePage: React.FC<Props> = () => {
       <HomeBanner />
       <OurServicesV2 />
       <OurClients />
+      <WhyBusinessV2 />
       <WhyBusiness />
       <GlobalImpact />
       <Clients />

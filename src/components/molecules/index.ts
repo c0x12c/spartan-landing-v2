@@ -90,3 +90,6 @@ export { TrunkBasedDev } from './spartan-operates/TrunkBasedDev';
 
 //CLIENTS
 export { OurClients } from './our-clients/OurClients';
+
+// WHY BUSINESS V2
+export { WhyBusinessV2 } from './business/WhyBusinessV2';
