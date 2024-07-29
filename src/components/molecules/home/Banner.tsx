@@ -1,6 +1,5 @@
 import React from 'react';
 import { Box, Button, Stack } from '@mui/material';
-import { gray } from '@/styles/colors';
 import group_banner from '@/assets/images/home/group-banner.png';
 import planning_image from '@/assets/images/home/planning.png';
 import implementing_image from '@/assets/images/home/implementing.png';

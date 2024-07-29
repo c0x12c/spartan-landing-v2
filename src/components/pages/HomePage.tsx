@@ -5,7 +5,7 @@ import {
   GlobalImpact,
   HomeBanner,
   OurServices,
-  Partners,
+  OurServicesV2,
   WhyBusiness,
 } from '../molecules';
 import { GetInTouch } from '../atoms';
@@ -18,7 +18,7 @@ export const HomePage: React.FC<Props> = () => {
   return (
     <MainTemplate>
       <HomeBanner />
-      <Partners />
+      <OurServicesV2 />
       <OurServices />
       <WhyBusiness />
       <GlobalImpact />

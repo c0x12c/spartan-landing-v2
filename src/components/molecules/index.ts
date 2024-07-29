@@ -6,6 +6,7 @@ export { HomeBanner } from './home/Banner';
 export { Partners } from './home/Partners';
 export { WhyBusiness } from './home/WhyBusiness';
 export { OurServices } from './home/OurServices';
+export { OurServicesV2 } from './home/OurServicesV2';
 export { GlobalImpact } from './home/GlobalImpact';
 export { Clients } from './home/Clients';
 export { StacksHome } from './home/Stacks';
@@ -42,6 +43,7 @@ export { TechStacks } from './services/TechStacks';
 export { CareYourBusiness } from './services/CareYourBusiness';
 export { ServiceCasesStudy } from './services/CaseStudies';
 export { WorkingProcess } from './services/WorkingProcess';
+export { Card as ServiceCard } from './services/Card';
 
 //SUB SERVICES
 export { SubServiceBanner } from './services/sub-services/Banner';
