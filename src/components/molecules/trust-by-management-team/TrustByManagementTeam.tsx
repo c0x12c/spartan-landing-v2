@@ -67,8 +67,8 @@ export const TrustByManagementTeam = () => {
             lineHeight={1.2}
             color={'white'}
             maxWidth={isPhone ? 338 : isTablet ? 590 : 911}
-            //   data-aos="fade-down"
-            //   data-aos-delay="200"
+            data-aos="fade-up-left"
+            data-aos-delay="200"
           >
             We are{' '}
             <Typography
@@ -92,6 +92,8 @@ export const TrustByManagementTeam = () => {
                 sm: '120px',
               },
             }}
+            data-aos="fade-up-right"
+            data-aos-delay="200"
           >
             <Image
               src={group_banner}

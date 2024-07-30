@@ -97,3 +97,6 @@ export { WhyBusinessV2 } from './business/WhyBusinessV2';
 // TRUST BY MANAGEMENT TEAM
 export { TrustByManagementTeam } from './trust-by-management-team/TrustByManagementTeam';
 export { ManagementCard } from './trust-by-management-team/ManagementCard';
+
+// OUR PROJECTS
+export { OurProjects } from './our-projects/OurProjects';

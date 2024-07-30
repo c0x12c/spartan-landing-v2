@@ -56,6 +56,8 @@ export const HomeBanner = () => {
                   sm: '120px',
                 },
               }}
+              data-aos="fade-down"
+              data-aos-delay="200"
             >
               <Image
                 src={group_banner}
@@ -98,6 +100,8 @@ export const HomeBanner = () => {
                     size={isMobile ? 'small' : 'medium'}
                     fullWidth={isPhone}
                     endIcon={<ArrowIcon />}
+                    data-aos="fade-right"
+                    data-aos-delay="200"
                   >
                     Let’s chat
                   </Button>
@@ -107,6 +111,8 @@ export const HomeBanner = () => {
                     fullWidth={isPhone}
                     LinkComponent={Link}
                     href={'/spartan-operates'}
+                    data-aos="fade-left"
+                    data-aos-delay="200"
                   >
                     How we work
                   </Button>

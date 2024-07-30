@@ -9,6 +9,7 @@ type Props = {
 export const BlockLayout: FC<Props> = ({ children, sx }) => {
   return (
     <Stack
+      margin="auto"
       width={'100%'}
       maxWidth={1440}
       sx={{
