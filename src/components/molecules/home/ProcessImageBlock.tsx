@@ -29,11 +29,7 @@ export const ProcessImageBlock: FC<Props> = ({ imgSrc, title, sx = {} }) => {
         width={isPhone ? 'calc(100vw / 2 - 20px)' : isTablet ? 'calc(100vw / 4)px' : '320px'}
         height={isPhone || isTablet ? '254px' : '412px'}
       >
-        <Image
-          src={imgSrc}
-          alt={title}
-          style={{ width: '100%', height: '100%', objectFit: 'contain' }}
-        />
+        <Image src={imgSrc} alt={title} style={{ width: '100%', height: '100%' }} />
       </Stack>
     </Stack>
   );
