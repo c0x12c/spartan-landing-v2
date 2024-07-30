@@ -8,6 +8,7 @@ import all_employee_tablet from '@/assets/images/team/all-employee-tablet.png';
 import Image from 'next/image';
 import Arrow from '@/assets/images/icons/arrow-right-black.svg';
 import Link from 'next/link';
+import { BlockLayout } from '@/components/templates';
 
 const achievements = [
   {
@@ -33,7 +34,7 @@ export const WhyBusinessV2 = () => {
   const isTablet = useIsTablet();
 
   return (
-    <Stack maxWidth={1440} margin={'auto'} px={{ xs: 2, md: 5 }} py={{ xs: 6, md: 6 }} gap={10}>
+    <BlockLayout>
       <Grid2 container spacing={9}>
         {achievements.map((elem, index) => {
           return (
@@ -94,6 +95,7 @@ export const WhyBusinessV2 = () => {
           lineHeight={1.2}
           color={'black'}
           maxWidth={isTablet ? 790 : 'unset'}
+          letterSpacing={{ xs: 'unset', lg: '-2px' }}
           data-aos="fade-down"
           data-aos-delay="200"
         >
@@ -102,6 +104,7 @@ export const WhyBusinessV2 = () => {
             variant={isPhone ? 'fs32' : isTablet ? 'fs48' : 'fs56'}
             fontWeight={300}
             lineHeight={1.2}
+            letterSpacing={{ xs: 'unset', lg: '-2px' }}
             color={'black'}
             fontStyle={'italic'}
           >
@@ -143,6 +146,6 @@ export const WhyBusinessV2 = () => {
           </Box>
         </Stack>
       </Stack>
-    </Stack>
+    </BlockLayout>
   );
 };

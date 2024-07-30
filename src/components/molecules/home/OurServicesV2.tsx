@@ -9,6 +9,7 @@ import cloud_solution_icon from '@/assets/images/services/new/cloud-solution-ico
 import { StaticImageData } from 'next/image';
 import Grid2 from '@mui/material/Unstable_Grid2';
 import { useIsPhone, useIsTablet } from '@/hooks/useBreakPoints';
+import { BlockLayout } from '@/components/templates';
 
 export type TService = {
   imgSrc: StaticImageData;
@@ -48,41 +49,35 @@ export const OurServicesV2 = () => {
   const isPhone = useIsPhone();
   const isTablet = useIsTablet();
   return (
-    <Grid2
-      container
-      bgcolor={'white'}
-      paddingX={{ xs: 2, lg: 4 }}
-      paddingY={6}
-      spacing={2}
-      maxWidth={1440}
-      margin={'auto'}
-    >
-      <Grid2 py={5} data-aos="fade-up" data-aos-delay="200" xs={12} sm={6} md={6} xl={4}>
-        <Stack maxWidth={{ xs: 'unset', sm: '270px' }}>
-          <Typography
-            variant={isPhone ? 'fs32' : isTablet ? 'fs48' : 'fs56'}
-            fontWeight={500}
-            color={'black'}
-          >
-            Our{' '}
+    <BlockLayout>
+      <Grid2 container bgcolor={'white'} spacing={2}>
+        <Grid2 py={5} data-aos="fade-up" data-aos-delay="200" xs={12} sm={6} md={6} xl={4}>
+          <Stack maxWidth={{ xs: 'unset', sm: '270px' }}>
             <Typography
               variant={isPhone ? 'fs32' : isTablet ? 'fs48' : 'fs56'}
-              fontWeight={300}
+              fontWeight={500}
               color={'black'}
-              fontStyle={'italic'}
             >
-              Services
+              Our{' '}
+              <Typography
+                variant={isPhone ? 'fs32' : isTablet ? 'fs48' : 'fs56'}
+                fontWeight={300}
+                color={'black'}
+                fontStyle={'italic'}
+              >
+                Services
+              </Typography>
             </Typography>
-          </Typography>
-        </Stack>
+          </Stack>
+        </Grid2>
+        {services.map((service) => {
+          return (
+            <Grid2 key={service.title} xs={12} sm={6} md={6} xl={4}>
+              <ServiceCard data={service} data-aos="flip-up" data-aos-delay={200} />
+            </Grid2>
+          );
+        })}
       </Grid2>
-      {services.map((service) => {
-        return (
-          <Grid2 key={service.title} xs={12} sm={6} md={6} xl={4}>
-            <ServiceCard data={service} data-aos="flip-up" data-aos-delay={200} />
-          </Grid2>
-        );
-      })}
-    </Grid2>
+    </BlockLayout>
   );
 };

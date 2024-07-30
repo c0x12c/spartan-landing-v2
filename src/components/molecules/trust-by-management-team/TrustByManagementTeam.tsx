@@ -14,6 +14,7 @@ import chad_avatar from '@/assets/images/trust-management-team/chad.png';
 import cody_avatar from '@/assets/images/trust-management-team/cody.png';
 import { ManagementCard } from './ManagementCard';
 import Image from 'next/image';
+import { BlockLayout } from '@/components/templates';
 
 const teams = [
   {
@@ -58,13 +59,7 @@ export const TrustByManagementTeam = () => {
   const isTablet = useIsTablet();
   return (
     <Stack bgcolor={'black'} alignItems={{ xs: 'flex-start', md: 'center' }}>
-      <Stack
-        width={'100%'}
-        maxWidth={1440}
-        px={{ xs: 2, md: 5 }}
-        py={{ xs: 5, md: 6 }}
-        gap={{ xs: 10, sm: 13 }}
-      >
+      <BlockLayout>
         <Stack flexDirection={'row'} justifyContent={'space-between'} position={'relative'}>
           <Typography
             variant={isPhone ? 'fs32' : isTablet ? 'fs48' : 'fs56'}
@@ -107,7 +102,7 @@ export const TrustByManagementTeam = () => {
           </Stack>
         </Stack>
         <ManagementCard />
-      </Stack>
+      </BlockLayout>
     </Stack>
   );
 };

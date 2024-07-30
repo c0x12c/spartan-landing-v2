@@ -29,6 +29,7 @@ import admodlabs_icon from '@/assets/images/clients-icon/admodlabs.png';
 import agoodup_icon from '@/assets/images/clients-icon/goodup.png';
 import agora_icon from '@/assets/images/clients-icon/agora.png';
 import { useIsPhone, useIsTablet } from '@/hooks/useBreakPoints';
+import { BlockLayout } from '@/components/templates';
 
 const clients = [
   {
@@ -176,7 +177,7 @@ export const OurClients = () => {
   const isTablet = useIsTablet();
   return (
     <Stack bgcolor={'black'}>
-      <Stack maxWidth={1440} margin={'auto'} py={6} gap={7} alignItems={'center'}>
+      <BlockLayout sx={{ gap: { xs: 6, md: 6 } }}>
         <Stack gap={4} px={4} data-aos="fade-up" data-aos-delay="200" alignItems={'center'}>
           <Typography
             variant={isPhone ? 'fs32' : isTablet ? 'fs48' : 'fs56'}
@@ -219,7 +220,7 @@ export const OurClients = () => {
             </Stack>
           ))}
         </Stack>
-      </Stack>
+      </BlockLayout>
     </Stack>
   );
 };
