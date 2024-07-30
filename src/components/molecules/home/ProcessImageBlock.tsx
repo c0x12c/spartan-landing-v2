@@ -17,8 +17,8 @@ export const ProcessImageBlock: FC<Props> = ({ imgSrc, title, sx = {} }) => {
       display={'inline-flex'}
       position={'relative'}
       sx={sx}
-      data-aos="fade-up"
-      data-aos-delay="200"
+      // data-aos="fade-up"
+      // data-aos-delay="200"
     >
       <Stack p={1.5} position={isPhone ? 'absolute' : 'relative'} maxWidth={190}>
         <Typography variant={isPhone ? 'fs14' : 'fs16'} fontWeight={500} color={'white'}>
@@ -26,10 +26,14 @@ export const ProcessImageBlock: FC<Props> = ({ imgSrc, title, sx = {} }) => {
         </Typography>
       </Stack>
       <Stack
-        width={isPhone ? '185px' : isTablet ? '197px' : '320px'}
+        width={isPhone ? 'calc(100vw / 2 - 20px)' : isTablet ? 'calc(100vw / 4)px' : '320px'}
         height={isPhone || isTablet ? '254px' : '412px'}
       >
-        <Image src={imgSrc} alt={title} style={{ width: 'auto', height: 'auto' }} />
+        <Image
+          src={imgSrc}
+          alt={title}
+          style={{ width: '100%', height: '100%', objectFit: 'contain' }}
+        />
       </Stack>
     </Stack>
   );

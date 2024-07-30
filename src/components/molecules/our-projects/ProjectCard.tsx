@@ -14,6 +14,7 @@ export const ProjectCard: FC<Props> = ({ data }) => {
     <Stack borderRadius={2} border="1px solid rgba(0, 0, 0, 0.10)" p={2} gap={2}>
       <Stack sx={{ overflow: 'hidden' }}>
         <Image
+          priority
           src={data.imgSrc}
           alt="project"
           style={{ width: '100%', height: 'auto', objectFit: 'cover' }}
@@ -23,6 +24,7 @@ export const ProjectCard: FC<Props> = ({ data }) => {
         <Stack flexDirection={'row'} gap={1} alignItems={'center'}>
           <Stack sx={{ overflow: 'hidden', width: '28px', height: '28px' }}>
             <Image
+              priority
               src={data.iconSrc}
               alt="icon"
               style={{ width: '100%', height: 'auto', objectFit: 'cover' }}

@@ -104,7 +104,7 @@ export const OurProjects = () => {
     arrows: false,
     responsive: [
       {
-        breakpoint: 1440,
+        breakpoint: 1365,
         settings: {
           slidesToShow: 2,
           slidesToScroll: 2,

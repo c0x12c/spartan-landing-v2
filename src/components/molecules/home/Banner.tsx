@@ -2,9 +2,16 @@ import React from 'react';
 import { Box, Button, Stack } from '@mui/material';
 import group_banner from '@/assets/images/home/group-banner.png';
 import planning_image from '@/assets/images/home/planning.png';
+import planning_mobile_image from '@/assets/images/home/planning_mobile.png';
+import planning_tablet_image from '@/assets/images/home/planning_tablet.png';
 import implementing_image from '@/assets/images/home/implementing.png';
+import implementing_mobile_image from '@/assets/images/home/implementing_mobile.png';
+import implementing_tablet_image from '@/assets/images/home/implementing_tablet.png';
 import testing_image from '@/assets/images/home/testing.png';
-import deploy_image from '@/assets/images/home/deploy.png';
+import testing_mobile_image from '@/assets/images/home/testing_mobile.png';
+import testing_tablet_image from '@/assets/images/home/testing_tablet.png';
+import deploy_mobile_image from '@/assets/images/home/deploy_mobile.png';
+import deploy_desktop_image from '@/assets/images/home/deploy-desktop.png';
 import { ArrowIcon, BodyText, MainTitle } from '@/components/atoms';
 import { BreakPoints, useBreakpoint } from '@/hooks';
 import Link from 'next/link';
@@ -24,23 +31,22 @@ export const HomeBanner = () => {
       <BlockLayout
         sx={{
           gap: { xs: 5, sm: 5 },
-          paddingBottom: {
-            xs: 0,
-            md: 0,
-            lg: 0,
-          },
-          paddingX: {
-            xs: 1,
-            md: 5,
-            lg: 15,
-          },
+          paddingBottom: 0,
+          paddingX: 0,
         }}
       >
         <Box
           sx={{
             paddingTop: {
               xs: '110px',
+              md: '92px',
               lg: '155px',
+            },
+            paddingX: {
+              xs: 2,
+              md: 5,
+              lg: 8,
+              xl: 15,
             },
           }}
         >
@@ -121,33 +127,77 @@ export const HomeBanner = () => {
             </Box>
           </Stack>
         </Box>
-        <Stack position="relative" bgcolor="black" alignItems={'center'} width={'100%'}>
+        <Stack position="relative" bgcolor="black" width={'100%'}>
           <Stack
             direction={'row'}
             flexWrap={isPhone ? 'wrap' : 'nowrap'}
             justifyContent={'space-between'}
             rowGap="24px"
-            columnGap={isMobile ? 0 : 3}
+            paddingX={{
+              xs: 2,
+              md: 5,
+              lg: 2,
+            }}
+            columnGap={{
+              xs: 0,
+              sm: 1,
+              xl: 3,
+            }}
           >
             <ProcessImageBlock
-              imgSrc={planning_image}
+              imgSrc={
+                isPhone ? planning_mobile_image : isTablet ? planning_tablet_image : planning_image
+              }
               title="Planning"
-              sx={{ top: isPhone ? 42 : 68 }}
+              sx={{
+                top: {
+                  xs: 42,
+                  sm: 68,
+                },
+              }}
             />
             <ProcessImageBlock
-              imgSrc={implementing_image}
+              imgSrc={
+                isPhone
+                  ? implementing_mobile_image
+                  : isTablet
+                  ? implementing_tablet_image
+                  : implementing_image
+              }
               title="Implementing"
-              sx={{ top: isPhone ? 5 : isTablet ? 25 : 50 }}
+              sx={{
+                top: {
+                  xs: 5,
+                  lg: 25,
+                  xl: 50,
+                },
+              }}
             />
             <ProcessImageBlock
-              imgSrc={testing_image}
+              imgSrc={
+                isPhone ? testing_mobile_image : isTablet ? testing_tablet_image : testing_image
+              }
               title="Testing"
-              sx={{ top: isPhone ? 42 : isTablet ? 40 : 75 }}
+              sx={{
+                top: {
+                  xs: 42,
+                  lg: 40,
+                  xl: 75,
+                },
+              }}
             />
             <ProcessImageBlock
-              imgSrc={deploy_image}
+              imgSrc={isPhone ? deploy_mobile_image : deploy_desktop_image}
               title="Deployment and Maintenance"
-              sx={{ top: isPhone ? 5 : isTablet ? 48 : 107 }}
+              sx={{
+                top: {
+                  xs: 5,
+                  sm: 65,
+                  md: 40,
+                  lg: 78,
+                  xl: 78,
+                },
+              }}
             />
           </Stack>
           <StacksHome />
