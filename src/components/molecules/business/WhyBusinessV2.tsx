@@ -1,7 +1,7 @@
 import { useIsPhone, useIsTablet } from '@/hooks/useBreakPoints';
 import { Box, Button, Divider, Stack, Typography } from '@mui/material';
 import Grid2 from '@mui/material/Unstable_Grid2';
-import React from 'react';
+import React, { Fragment } from 'react';
 import all_employee_desktop from '@/assets/images/team/all-employee-desktop.png';
 import all_employee_mobile from '@/assets/images/team/all-employee-mobile.png';
 import all_employee_tablet from '@/assets/images/team/all-employee-tablet.png';
@@ -37,8 +37,8 @@ export const WhyBusinessV2 = () => {
       <Grid2 container spacing={9}>
         {achievements.map((elem, index) => {
           return (
-            <>
-              <Grid2 key={elem.title} gap={1} xs={6} md={3} data-aos="fade-up" data-aos-delay="200">
+            <Fragment key={elem.title}>
+              <Grid2 gap={1} xs={6} md={3} data-aos="fade-up" data-aos-delay="200">
                 <Stack gap={1} alignItems={{ xs: 'flex-start', sm: 'center' }}>
                   <Typography
                     variant={isPhone ? 'fs48' : isTablet ? 'fs56' : 'fs64'}
@@ -69,7 +69,7 @@ export const WhyBusinessV2 = () => {
                   sx={{ mr: '-1px' }}
                 />
               )}
-            </>
+            </Fragment>
           );
         })}
       </Grid2>

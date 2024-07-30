@@ -34,11 +34,11 @@ export const HomeBanner = () => {
             top={isPhone ? '2%' : 'unset'}
             right={isPhone ? 5 : isTablet ? 20 : -120}
           >
-            <Image src={group_banner} alt="group_banner" />
+            <Image src={group_banner} alt="group_banner" priority style={{ width: 'auto' }} />
           </Box>
           <Box
             display="flex"
-            flexDirection={{ xs: 'column', md: 'row' }}
+            flexDirection={{ xs: 'column', lg: 'row' }}
             rowGap="16px"
             justifyContent={'space-between'}
           >

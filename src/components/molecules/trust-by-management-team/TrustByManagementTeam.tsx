@@ -1,6 +1,7 @@
-import { BreakPoints, useBreakpoint, useIsPhone, useIsTablet } from '@/hooks/useBreakPoints';
+import { useIsPhone, useIsTablet } from '@/hooks/useBreakPoints';
 import { Stack, Typography } from '@mui/material';
 import React from 'react';
+import group_banner from '@/assets/images/home/group-banner.png';
 import chargeFuze_icon from '@/assets/images/trust-management-team/chargeFuze.png';
 import gabe_avatar from '@/assets/images/trust-management-team/gabe.png';
 import agora_icon from '@/assets/images/trust-management-team/agora.png';
@@ -11,9 +12,8 @@ import george_avatar from '@/assets/images/trust-management-team/george.png';
 import ryan_avatar from '@/assets/images/trust-management-team/ryan.png';
 import chad_avatar from '@/assets/images/trust-management-team/chad.png';
 import cody_avatar from '@/assets/images/trust-management-team/cody.png';
-import star_icon from '@/assets/images/trust-management-team/material-symbols_star.png';
-import Image from 'next/image';
 import { ManagementCard } from './ManagementCard';
+import Image from 'next/image';
 
 const teams = [
   {
@@ -65,13 +65,13 @@ export const TrustByManagementTeam = () => {
         py={{ xs: 5, md: 6 }}
         gap={{ xs: 10, sm: 13 }}
       >
-        <Stack>
+        <Stack flexDirection={'row'} justifyContent={'space-between'} position={'relative'}>
           <Typography
             variant={isPhone ? 'fs32' : isTablet ? 'fs48' : 'fs56'}
             fontWeight={500}
             lineHeight={1.2}
             color={'white'}
-            maxWidth={isPhone ? 338 : 'unset'}
+            maxWidth={isPhone ? 338 : isTablet ? 590 : 911}
             //   data-aos="fade-down"
             //   data-aos-delay="200"
           >
@@ -87,6 +87,24 @@ export const TrustByManagementTeam = () => {
             </Typography>{' '}
             by top management teams at
           </Typography>
+          <Stack
+            position={{ xs: 'absolute', sm: 'relative' }}
+            top={{ xs: '70%', sm: 'unset' }}
+            right={{ xs: '5px', sm: 'unset' }}
+            sx={{
+              width: {
+                xs: '70px',
+                sm: '120px',
+              },
+            }}
+          >
+            <Image
+              src={group_banner}
+              alt="group_banner"
+              priority
+              style={{ width: '100%', height: 'auto' }}
+            />
+          </Stack>
         </Stack>
         <ManagementCard />
       </Stack>

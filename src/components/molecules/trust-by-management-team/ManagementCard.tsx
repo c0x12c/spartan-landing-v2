@@ -1,4 +1,4 @@
-import { BreakPoints, useBreakpoint } from '@/hooks/useBreakPoints';
+import { BreakPoints, useBreakpoint, useIsPhone } from '@/hooks/useBreakPoints';
 import { Stack, Typography } from '@mui/material';
 import React from 'react';
 import chargeFuze_icon from '@/assets/images/trust-management-team/chargeFuze.png';
@@ -7,23 +7,28 @@ import star_icon from '@/assets/images/trust-management-team/material-symbols_st
 import Image from 'next/image';
 
 export const ManagementCard = () => {
-  const isMobile = useBreakpoint(BreakPoints.MD);
+  const isMobile = useBreakpoint(BreakPoints.LG);
+  const isPhone = useIsPhone();
   return (
     <Stack
       direction={{ xs: 'column', sm: 'row' }}
       alignItems={{ xs: 'center', sm: 'flex-start' }}
       bgcolor="#101010"
       borderRadius={2}
+      maxWidth={{ xs: 'none', sm: '700px', lg: '900px' }}
     >
       <Stack
         position={'relative'}
-        width={{ xs: '100%', sm: '260px' }}
-        height={{ xs: '280px', sm: '295px' }}
+        width={{ xs: '100%', sm: '260px', lg: '337px' }}
+        height={{ xs: '280px', sm: '295px', lg: '380px' }}
       >
         <Image
           src={gabe_avatar}
           alt="avatar"
           style={{
+            borderTopLeftRadius: isPhone ? '8px' : '8px',
+            borderTopRightRadius: isPhone ? '8px' : '0px',
+            borderBottomLeftRadius: isPhone ? '0px' : '8px',
             width: '100%',
             height: '100%',
             objectFit: 'cover',
@@ -37,7 +42,7 @@ export const ManagementCard = () => {
         p={3}
         gap={{ xs: 1 }}
         flex={1}
-        height={{ xs: 'none', sm: '295px' }}
+        height={{ xs: 'none', sm: '295px', lg: '380px' }}
         justifyContent={'space-between'}
       >
         <Stack gap={1}>
