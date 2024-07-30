@@ -17,8 +17,8 @@ export const ProcessImageBlock: FC<Props> = ({ imgSrc, title, sx = {} }) => {
       display={'inline-flex'}
       position={'relative'}
       sx={sx}
-      // data-aos="fade-up"
-      // data-aos-delay="200"
+      data-aos="fade-up"
+      data-aos-delay="200"
     >
       <Stack p={1.5} position={isPhone ? 'absolute' : 'relative'} maxWidth={190}>
         <Typography variant={isPhone ? 'fs14' : 'fs16'} fontWeight={500} color={'white'}>

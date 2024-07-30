@@ -11,6 +11,7 @@ import testing_image from '@/assets/images/home/testing.png';
 import testing_mobile_image from '@/assets/images/home/testing_mobile.png';
 import testing_tablet_image from '@/assets/images/home/testing_tablet.png';
 import deploy_mobile_image from '@/assets/images/home/deploy_mobile.png';
+import deploy_tablet_image from '@/assets/images/home/deploy_tablet.png';
 import deploy_desktop_image from '@/assets/images/home/deploy-desktop.png';
 import { ArrowIcon, BodyText, MainTitle } from '@/components/atoms';
 import { BreakPoints, useBreakpoint } from '@/hooks';
@@ -187,7 +188,13 @@ export const HomeBanner = () => {
               }}
             />
             <ProcessImageBlock
-              imgSrc={isPhone ? deploy_mobile_image : deploy_desktop_image}
+              imgSrc={
+                isPhone
+                  ? deploy_mobile_image
+                  : isTablet
+                  ? deploy_tablet_image
+                  : deploy_desktop_image
+              }
               title="Deployment and Maintenance"
               sx={{
                 top: {

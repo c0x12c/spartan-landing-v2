@@ -3,7 +3,7 @@ import { Stack, Typography } from '@mui/material';
 import React, { FC } from 'react';
 import star_icon from '@/assets/images/trust-management-team/material-symbols_star.png';
 import Image from 'next/image';
-import { TManagementTeam } from './TrustByManagementTeam';
+import { TManagementTeam } from '../home/TrustByManagementTeam';
 
 type Props = {
   data: TManagementTeam;

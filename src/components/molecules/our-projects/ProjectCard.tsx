@@ -2,7 +2,7 @@ import React, { FC } from 'react';
 import { BreakPoints, useBreakpoint } from '@/hooks/useBreakPoints';
 import { Stack, Typography } from '@mui/material';
 import Image from 'next/image';
-import { Project } from './OurProjects';
+import { Project } from '../home/OurProjects';
 
 type Props = {
   data: Project;

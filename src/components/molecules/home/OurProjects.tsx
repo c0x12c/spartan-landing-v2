@@ -1,6 +1,6 @@
 import { BlockLayout } from '@/components/templates';
-import { useIsPhone, useIsTablet } from '@/hooks/useBreakPoints';
-import { IconButton, Stack, Typography } from '@mui/material';
+import { BreakPoints, useBreakpoint, useIsPhone, useIsTablet } from '@/hooks/useBreakPoints';
+import { Box, Button, IconButton, Stack, Typography } from '@mui/material';
 
 import React, { useRef } from 'react';
 import liquidity_image from '@/assets/images/our-projects/liquidity.png';
@@ -19,11 +19,15 @@ import puzzle_icon from '@/assets/images/our-projects/icons/puzzle.png';
 import sidecar_icon from '@/assets/images/our-projects/icons/sidecar.png';
 import ursa_icon from '@/assets/images/our-projects/icons/ursa.png';
 import volta_icon from '@/assets/images/our-projects/icons/volta.png';
-import { ProjectCard } from './ProjectCard';
 import Slider, { Settings } from 'react-slick';
 import { StaticImageData } from 'next/image';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
+import { ProjectCard } from '../our-projects/ProjectCard';
+import get_in_touch_image from '@/assets/images/get-in-touch/get-in-touch-desktop.webp';
+import get_in_touch_mobile_image from '@/assets/images/get-in-touch/get-in-touch-mobile.webp';
+import Link from 'next/link';
+import { ArrowIcon } from '@/components/atoms';
 
 export type Project = {
   imgSrc: StaticImageData;
@@ -84,6 +88,7 @@ const projects: Project[] = [
 ];
 
 export const OurProjects = () => {
+  const isMobile = useBreakpoint(BreakPoints.MD);
   const isPhone = useIsPhone();
   const isTablet = useIsTablet();
   const sliderRef = useRef<Slider>(null);
@@ -183,6 +188,50 @@ export const OurProjects = () => {
               return <ProjectCard key={project.name} data={project} />;
             })}
           </Slider>
+        </Stack>
+        <Stack
+          mt={5}
+          borderRadius={5}
+          justifyContent={'center'}
+          paddingX={{ xs: 4, sm: 10, lg: 12 }}
+          paddingY={{ xs: 5, sm: 7, lg: 8 }}
+          paddingBottom={{ xs: 40, sm: 'unset' }}
+          sx={{
+            backgroundImage: `url(${
+              isPhone ? get_in_touch_mobile_image.src : get_in_touch_image.src
+            })`,
+            backgroundSize: 'cover',
+            backgroundRepeat: 'no-repeat',
+          }}
+          gap={4}
+          // data-aos="zoom-out"
+          // data-aos-delay="200"
+        >
+          <Typography
+            variant={isPhone ? 'fs32' : isTablet ? 'fs48' : 'fs56'}
+            color={'white'}
+            fontWeight={500}
+            lineHeight={1.2}
+            maxWidth={{ sm: 400, lg: 565 }}
+            // data-aos="fade-left"
+            // data-aos-delay="200"
+          >
+            Interested in knowing more about Spartan?
+          </Typography>
+          <Box>
+            <Button
+              href={'/contact-us#contact-form'}
+              LinkComponent={Link}
+              variant="contained"
+              size={isMobile ? 'small' : 'medium'}
+              endIcon={<ArrowIcon />}
+              sx={{ display: 'inline-flex' }}
+              // data-aos="fade-right"
+              // data-aos-delay="200"
+            >
+              Let’s chat
+            </Button>
+          </Box>
         </Stack>
       </Stack>
     </BlockLayout>

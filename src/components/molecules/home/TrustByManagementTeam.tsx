@@ -12,7 +12,7 @@ import george_avatar from '@/assets/images/trust-management-team/george.png';
 import ryan_avatar from '@/assets/images/trust-management-team/ryan.png';
 import chad_avatar from '@/assets/images/trust-management-team/chad.png';
 import cody_avatar from '@/assets/images/trust-management-team/cody.png';
-import { ManagementCard } from './ManagementCard';
+import { ManagementCard } from '../trust-by-management-team/ManagementCard';
 import Image, { StaticImageData } from 'next/image';
 import { BlockLayout } from '@/components/templates';
 import Slider, { Settings } from 'react-slick';

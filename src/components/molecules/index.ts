@@ -10,6 +10,8 @@ export { OurServicesV2 } from './home/OurServicesV2';
 export { GlobalImpact } from './home/GlobalImpact';
 export { Clients } from './home/Clients';
 export { StacksHome } from './home/Stacks';
+export { OurProjects } from './home/OurProjects';
+export { TrustByManagementTeam } from './home/TrustByManagementTeam';
 
 //ABOUT-US
 export { AboutUsBanner } from './about-us/Banner';
@@ -89,14 +91,12 @@ export { OnCallAndMonitor } from './spartan-operates/OnCallAndMonitor';
 export { TrunkBasedDev } from './spartan-operates/TrunkBasedDev';
 
 //CLIENTS
-export { OurClients } from './our-clients/OurClients';
+export { OurClients } from './home/OurClients';
 
 // WHY BUSINESS V2
-export { WhyBusinessV2 } from './business/WhyBusinessV2';
+export { WhyBusinessV2 } from './home/WhyBusinessV2';
 
 // TRUST BY MANAGEMENT TEAM
-export { TrustByManagementTeam } from './trust-by-management-team/TrustByManagementTeam';
 export { ManagementCard } from './trust-by-management-team/ManagementCard';
 
-// OUR PROJECTS
-export { OurProjects } from './our-projects/OurProjects';
+export { ProjectCard } from './our-projects/ProjectCard';
