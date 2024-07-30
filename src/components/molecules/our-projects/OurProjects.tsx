@@ -1,6 +1,6 @@
 import { BlockLayout } from '@/components/templates';
 import { useIsPhone, useIsTablet } from '@/hooks/useBreakPoints';
-import { Button, IconButton, Stack, Typography } from '@mui/material';
+import { IconButton, Stack, Typography } from '@mui/material';
 
 import React, { useRef } from 'react';
 import liquidity_image from '@/assets/images/our-projects/liquidity.png';

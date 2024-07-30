@@ -1,12 +1,15 @@
 import { BreakPoints, useBreakpoint, useIsPhone } from '@/hooks/useBreakPoints';
 import { Stack, Typography } from '@mui/material';
-import React from 'react';
-import chargeFuze_icon from '@/assets/images/trust-management-team/chargeFuze.png';
-import gabe_avatar from '@/assets/images/trust-management-team/gabe.png';
+import React, { FC } from 'react';
 import star_icon from '@/assets/images/trust-management-team/material-symbols_star.png';
 import Image from 'next/image';
+import { TManagementTeam } from './TrustByManagementTeam';
 
-export const ManagementCard = () => {
+type Props = {
+  data: TManagementTeam;
+};
+
+export const ManagementCard: FC<Props> = ({ data }) => {
   const isMobile = useBreakpoint(BreakPoints.LG);
   const isPhone = useIsPhone();
   return (
@@ -23,7 +26,7 @@ export const ManagementCard = () => {
         height={{ xs: '280px', sm: '295px', lg: '380px' }}
       >
         <Image
-          src={gabe_avatar}
+          src={data.avatarSrc}
           alt="avatar"
           style={{
             borderTopLeftRadius: isPhone ? '8px' : '8px',
@@ -65,9 +68,7 @@ export const ManagementCard = () => {
             lineHeight={1.6}
             color={'#86868B'}
           >
-            “Spartan delivers top-quality, timely projects with clear communication. Their focus on
-            scalability and experience with high-growth startups adds significant value for
-            clients.”
+            {data.desc}
           </Typography>
         </Stack>
 
@@ -79,9 +80,9 @@ export const ManagementCard = () => {
               lineHeight={1.3}
               color={'white'}
             >
-              Gabe Esler
+              {data.name}
             </Typography>
-            <Image src={chargeFuze_icon} alt="icon" />
+            <Image src={data.iconSrc} alt="icon" />
           </Stack>
           <Typography
             variant={isMobile ? 'fs16' : 'fs20'}
@@ -90,7 +91,7 @@ export const ManagementCard = () => {
             lineHeight={1.3}
             color={'white'}
           >
-            ChargeFUZE’s Product and Strategy
+            {data.position}
           </Typography>
         </Stack>
       </Stack>

@@ -1,6 +1,6 @@
 import { useIsPhone, useIsTablet } from '@/hooks/useBreakPoints';
-import { Stack, Typography } from '@mui/material';
-import React from 'react';
+import { IconButton, Stack, Typography } from '@mui/material';
+import React, { useRef } from 'react';
 import group_banner from '@/assets/images/home/group-banner.png';
 import chargeFuze_icon from '@/assets/images/trust-management-team/chargeFuze.png';
 import gabe_avatar from '@/assets/images/trust-management-team/gabe.png';
@@ -13,10 +13,21 @@ import ryan_avatar from '@/assets/images/trust-management-team/ryan.png';
 import chad_avatar from '@/assets/images/trust-management-team/chad.png';
 import cody_avatar from '@/assets/images/trust-management-team/cody.png';
 import { ManagementCard } from './ManagementCard';
-import Image from 'next/image';
+import Image, { StaticImageData } from 'next/image';
 import { BlockLayout } from '@/components/templates';
+import Slider, { Settings } from 'react-slick';
+import ArrowBackIcon from '@mui/icons-material/ArrowBack';
+import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 
-const teams = [
+export type TManagementTeam = {
+  desc: string;
+  name: string;
+  position: string;
+  avatarSrc: StaticImageData;
+  iconSrc: StaticImageData;
+};
+
+const teams: TManagementTeam[] = [
   {
     desc: '“Spartan delivers top-quality, timely projects with clear communication. Their focus on scalability and experience with high-growth startups adds significant value for clients.”',
     name: 'Gabe Esler',
@@ -57,6 +68,39 @@ const teams = [
 export const TrustByManagementTeam = () => {
   const isPhone = useIsPhone();
   const isTablet = useIsTablet();
+  const sliderRef = useRef<Slider>(null);
+
+  const handleNextSlide = () => {
+    sliderRef?.current?.slickNext();
+  };
+
+  const handlePrevSlide = () => {
+    sliderRef?.current?.slickPrev();
+  };
+
+  const settings: Settings = {
+    className: 'slider variable-width',
+    dots: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: false,
+    variableWidth: true,
+    responsive: [
+      {
+        breakpoint: 600,
+        settings: {
+          className: undefined,
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          dots: true,
+          speed: 500,
+          variableWidth: false,
+        },
+      },
+    ],
+  };
+
   return (
     <Stack bgcolor={'black'} alignItems={{ xs: 'flex-start', md: 'center' }}>
       <BlockLayout>
@@ -103,7 +147,57 @@ export const TrustByManagementTeam = () => {
             />
           </Stack>
         </Stack>
-        <ManagementCard />
+        <Stack gap={6.5}>
+          <Stack
+            direction={{ xs: 'column', sm: 'row' }}
+            data-aos="zoom-in-up"
+            data-aos-delay="200"
+            sx={{
+              '.slick-slide > div': {
+                padding: '0 10px',
+              },
+              '.slick-list': {
+                margin: `0 -7px`,
+              },
+            }}
+          >
+            <Slider {...settings} ref={sliderRef}>
+              {teams.map((team) => {
+                return <ManagementCard key={team.name} data={team} />;
+              })}
+            </Slider>
+          </Stack>
+          <Stack
+            direction={'row'}
+            gap={2}
+            data-aos="fade-up"
+            data-aos-delay="200"
+            justifyContent={'center'}
+          >
+            <IconButton
+              onClick={handlePrevSlide}
+              sx={{
+                width: '50px',
+                height: '50px',
+                border: '1px solid white',
+                color: 'white',
+              }}
+            >
+              <ArrowBackIcon color="inherit" />
+            </IconButton>
+            <IconButton
+              onClick={handleNextSlide}
+              sx={{
+                width: '50px',
+                height: '50px',
+                border: '1px solid white',
+                color: 'white',
+              }}
+            >
+              <ArrowForwardIcon color="inherit" />
+            </IconButton>
+          </Stack>
+        </Stack>
       </BlockLayout>
     </Stack>
   );
