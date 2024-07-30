@@ -85,7 +85,7 @@ export function StacksHome() {
   });
 
   return (
-    <Box sx={{ width: '100%' }} mt="-54.5px">
+    <Box sx={{ width: '100%' }} zIndex={10}>
       <Tabs
         value={value}
         onChange={handleChange}

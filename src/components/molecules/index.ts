@@ -6,9 +6,12 @@ export { HomeBanner } from './home/Banner';
 export { Partners } from './home/Partners';
 export { WhyBusiness } from './home/WhyBusiness';
 export { OurServices } from './home/OurServices';
+export { OurServicesV2 } from './home/OurServicesV2';
 export { GlobalImpact } from './home/GlobalImpact';
 export { Clients } from './home/Clients';
 export { StacksHome } from './home/Stacks';
+export { OurProjects } from './home/OurProjects';
+export { TrustByManagementTeam } from './home/TrustByManagementTeam';
 
 //ABOUT-US
 export { AboutUsBanner } from './about-us/Banner';
@@ -42,6 +45,7 @@ export { TechStacks } from './services/TechStacks';
 export { CareYourBusiness } from './services/CareYourBusiness';
 export { ServiceCasesStudy } from './services/CaseStudies';
 export { WorkingProcess } from './services/WorkingProcess';
+export { Card as ServiceCard } from './services/Card';
 
 //SUB SERVICES
 export { SubServiceBanner } from './services/sub-services/Banner';
@@ -85,3 +89,14 @@ export { SpartanOperatesProcess } from './spartan-operates/Process';
 export { SpartanOperatesStandards } from './spartan-operates/Standards';
 export { OnCallAndMonitor } from './spartan-operates/OnCallAndMonitor';
 export { TrunkBasedDev } from './spartan-operates/TrunkBasedDev';
+
+//CLIENTS
+export { OurClients } from './home/OurClients';
+
+// WHY BUSINESS V2
+export { WhyBusinessV2 } from './home/WhyBusinessV2';
+
+// TRUST BY MANAGEMENT TEAM
+export { ManagementCard } from './trust-by-management-team/ManagementCard';
+
+export { ProjectCard } from './our-projects/ProjectCard';

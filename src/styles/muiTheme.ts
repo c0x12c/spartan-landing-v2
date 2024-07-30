@@ -23,6 +23,7 @@ declare module '@mui/material/styles' {
     fs36: React.CSSProperties;
     fs40: React.CSSProperties;
     fs48: React.CSSProperties;
+    fs56: React.CSSProperties;
     fs60: React.CSSProperties;
     fs64: React.CSSProperties;
     fs72: React.CSSProperties;
@@ -40,6 +41,7 @@ declare module '@mui/material/styles' {
     fs36: React.CSSProperties;
     fs40: React.CSSProperties;
     fs48: React.CSSProperties;
+    fs56: React.CSSProperties;
     fs60: React.CSSProperties;
     fs64: React.CSSProperties;
     fs72: React.CSSProperties;
@@ -67,6 +69,7 @@ declare module '@mui/material/Typography' {
     fs36: true;
     fs40: true;
     fs48: true;
+    fs56: true;
     fs60: true;
     fs64: true;
     fs72: true;
@@ -133,17 +136,17 @@ const createThemeByMode = (): Theme => {
             display: 'flex',
             justifyContent: 'center',
             alignItems: 'center',
+            fontSize: '16px',
+            lineHeight: 1.37,
+            border: '1px solid',
+            borderRadius: '8px',
+            textTransform: 'none',
+            padding: '14px 24px',
           },
           contained: {
-            padding: '16px 24px',
-            fontSize: '16px',
-            border: '1px solid',
             borderColor: 'transparent',
             backgroundColor: primary[400],
             color: base.white,
-            borderRadius: '8px',
-            gap: '12px',
-            textTransform: 'none',
             '&:hover': {
               backgroundColor: primary[400],
             },
@@ -181,15 +184,7 @@ const createThemeByMode = (): Theme => {
             style: {
               backgroundColor: 'transparent',
               color: base.white,
-              padding: '14px 24px',
-              fontSize: '16px',
-              fontWeight: 600,
-              lineHeight: 1.1375,
-              textTransform: 'uppercase',
-              gap: '23px',
-              border: '2px solid',
               borderColor: base.white,
-              borderRadius: '8px',
             },
           },
         ],
@@ -248,6 +243,11 @@ const createThemeByMode = (): Theme => {
       fs48: {
         fontSize: '48px',
         lineHeight: 1.167,
+        fontWeight: 600,
+      },
+      fs56: {
+        fontSize: '56px',
+        lineHeight: 1.2,
         fontWeight: 600,
       },
       fs60: {

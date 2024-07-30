@@ -21,7 +21,7 @@ export const MainTitle: React.FunctionComponent<IMainTitleProps> = ({
   return (
     <Typography
       component={'h1'}
-      variant={isMobile ? 'fs36' : 'fs64'}
+      variant={isMobile ? 'fs48' : 'fs64'}
       display="block"
       sx={sx}
       {...props}
