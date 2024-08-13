@@ -88,6 +88,7 @@ export const Header = ({ forceTransparent = true }: { forceTransparent?: boolean
               <Image
                 src={isTransparent && forceTransparent ? LogoWhite : LogoDark}
                 alt="Spartan Logo"
+                priority
               />
             </Link>
 

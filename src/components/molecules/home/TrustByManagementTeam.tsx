@@ -1,6 +1,6 @@
 import { useIsPhone, useIsTablet } from '@/hooks/useBreakPoints';
 import { IconButton, Stack, Typography } from '@mui/material';
-import React, { useRef } from 'react';
+import React, { useEffect, useRef } from 'react';
 import group_banner from '@/assets/images/home/group-banner.png';
 import chargeFuze_icon from '@/assets/images/trust-management-team/chargeFuze.png';
 import gabe_avatar from '@/assets/images/trust-management-team/gabe.png';
@@ -18,6 +18,7 @@ import { BlockLayout } from '@/components/templates';
 import Slider, { Settings } from 'react-slick';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
+import Aos from 'aos';
 
 export type TManagementTeam = {
   desc: string;
@@ -85,6 +86,7 @@ export const TrustByManagementTeam = () => {
     slidesToShow: 1,
     slidesToScroll: 1,
     arrows: false,
+    autoplay: true,
     variableWidth: true,
     responsive: [
       {
@@ -99,6 +101,12 @@ export const TrustByManagementTeam = () => {
         },
       },
     ],
+    onInit: () => {
+      Aos.refresh();
+    },
+    onReInit() {
+      Aos.refresh();
+    },
   };
 
   return (
@@ -147,56 +155,48 @@ export const TrustByManagementTeam = () => {
             />
           </Stack>
         </Stack>
-        <Stack gap={6.5}>
-          <Stack
-            direction={{ xs: 'column', sm: 'row' }}
-            data-aos="zoom-in-up"
-            data-aos-delay="200"
+        <Stack
+          direction={{ xs: 'column', sm: 'row' }}
+          data-aos="zoom-in-up"
+          data-aos-delay="200"
+          sx={{
+            '.slick-slide > div': {
+              padding: '0 10px',
+            },
+            '.slick-list': {
+              margin: `0 -7px`,
+            },
+          }}
+        >
+          <Slider {...settings} ref={sliderRef}>
+            {teams.map((team) => {
+              return <ManagementCard key={team.name} data={team} />;
+            })}
+          </Slider>
+        </Stack>
+        <Stack direction={'row'} gap={2} data-aos="fade-up" justifyContent={'center'}>
+          <IconButton
+            onClick={handlePrevSlide}
             sx={{
-              '.slick-slide > div': {
-                padding: '0 10px',
-              },
-              '.slick-list': {
-                margin: `0 -7px`,
-              },
+              width: '50px',
+              height: '50px',
+              border: '1px solid white',
+              color: 'white',
             }}
           >
-            <Slider {...settings} ref={sliderRef}>
-              {teams.map((team) => {
-                return <ManagementCard key={team.name} data={team} />;
-              })}
-            </Slider>
-          </Stack>
-          <Stack
-            direction={'row'}
-            gap={2}
-            data-aos="fade-up"
-            data-aos-delay="200"
-            justifyContent={'center'}
+            <ArrowBackIcon color="inherit" />
+          </IconButton>
+          <IconButton
+            onClick={handleNextSlide}
+            sx={{
+              width: '50px',
+              height: '50px',
+              border: '1px solid white',
+              color: 'white',
+            }}
           >
-            <IconButton
-              onClick={handlePrevSlide}
-              sx={{
-                width: '50px',
-                height: '50px',
-                border: '1px solid white',
-                color: 'white',
-              }}
-            >
-              <ArrowBackIcon color="inherit" />
-            </IconButton>
-            <IconButton
-              onClick={handleNextSlide}
-              sx={{
-                width: '50px',
-                height: '50px',
-                border: '1px solid white',
-                color: 'white',
-              }}
-            >
-              <ArrowForwardIcon color="inherit" />
-            </IconButton>
-          </Stack>
+            <ArrowForwardIcon color="inherit" />
+          </IconButton>
         </Stack>
       </BlockLayout>
     </Stack>

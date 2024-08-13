@@ -103,7 +103,7 @@ export const Footer: React.FunctionComponent<IFooterProps> = () => {
             rowGap="16px"
           >
             <Link href="/">
-              <Image src={LogoWhite} alt="Logo" />
+              <Image src={LogoWhite} alt="Logo" priority />
             </Link>
             <Link href="/contact-us#contact-form" scroll={false}>
               <Button variant="contained" size={isMobile ? 'small' : 'medium'}>

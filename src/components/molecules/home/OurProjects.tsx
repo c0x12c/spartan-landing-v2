@@ -28,6 +28,7 @@ import get_in_touch_image from '@/assets/images/get-in-touch/get-in-touch-deskto
 import get_in_touch_mobile_image from '@/assets/images/get-in-touch/get-in-touch-mobile.webp';
 import Link from 'next/link';
 import { ArrowIcon } from '@/components/atoms';
+import Aos from 'aos';
 
 export type Project = {
   imgSrc: StaticImageData;
@@ -107,6 +108,7 @@ export const OurProjects = () => {
     slidesToShow: 3,
     slidesToScroll: 3,
     arrows: false,
+    autoplay: true,
     responsive: [
       {
         breakpoint: 1365,
@@ -124,6 +126,12 @@ export const OurProjects = () => {
         },
       },
     ],
+    onInit: () => {
+      Aos.refresh();
+    },
+    onReInit() {
+      Aos.refresh();
+    },
   };
 
   return (

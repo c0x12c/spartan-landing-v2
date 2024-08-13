@@ -35,6 +35,7 @@ const MyApp: React.FC<MyAppProps> = (props) => {
       once: true,
       offset: -50,
       duration: 800,
+      delay: 200,
     });
   }, []);
 
