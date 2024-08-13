@@ -212,8 +212,8 @@ export const OurProjects = () => {
             backgroundRepeat: 'no-repeat',
           }}
           gap={4}
-          // data-aos="zoom-out"
-          // data-aos-delay="200"
+          data-aos="zoom-out"
+          data-aos-delay="200"
         >
           <Typography
             variant={isPhone ? 'fs32' : isTablet ? 'fs48' : 'fs56'}
@@ -221,8 +221,8 @@ export const OurProjects = () => {
             fontWeight={500}
             lineHeight={1.2}
             maxWidth={{ sm: 400, lg: 565 }}
-            // data-aos="fade-left"
-            // data-aos-delay="200"
+            data-aos="fade-left"
+            data-aos-delay="200"
           >
             Interested in knowing more about Spartan?
           </Typography>
@@ -234,8 +234,8 @@ export const OurProjects = () => {
               size={isMobile ? 'small' : 'medium'}
               endIcon={<ArrowIcon />}
               sx={{ display: 'inline-flex' }}
-              // data-aos="fade-right"
-              // data-aos-delay="200"
+              data-aos="fade-right"
+              data-aos-delay="200"
             >
               Let’s chat
             </Button>
