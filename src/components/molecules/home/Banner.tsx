@@ -2,17 +2,9 @@ import React from 'react';
 import { Box, Button, Stack } from '@mui/material';
 import group_banner from '@/assets/images/home/group-banner.png';
 import planning_image from '@/assets/images/home/planning.png';
-import planning_mobile_image from '@/assets/images/home/planning_mobile.png';
-import planning_tablet_image from '@/assets/images/home/planning_tablet.png';
 import implementing_image from '@/assets/images/home/implementing.png';
-import implementing_mobile_image from '@/assets/images/home/implementing_mobile.png';
-import implementing_tablet_image from '@/assets/images/home/implementing_tablet.png';
 import testing_image from '@/assets/images/home/testing.png';
-import testing_mobile_image from '@/assets/images/home/testing_mobile.png';
-import testing_tablet_image from '@/assets/images/home/testing_tablet.png';
-import deploy_mobile_image from '@/assets/images/home/deploy_mobile.png';
-import deploy_tablet_image from '@/assets/images/home/deploy_tablet.png';
-import deploy_desktop_image from '@/assets/images/home/deploy-desktop.png';
+import deploy_desktop_image from '@/assets/images/home/deploy.png';
 import { ArrowIcon, BodyText, MainTitle } from '@/components/atoms';
 import { BreakPoints, useBreakpoint } from '@/hooks';
 import Link from 'next/link';
@@ -69,7 +61,6 @@ export const HomeBanner = () => {
               <Image
                 src={group_banner}
                 alt="group_banner"
-                priority
                 style={{ width: '100%', height: 'auto' }}
               />
             </Box>
@@ -133,9 +124,15 @@ export const HomeBanner = () => {
             direction={'row'}
             flexWrap={isPhone ? 'wrap' : 'nowrap'}
             justifyContent={'space-between'}
-            rowGap="24px"
+            rowGap={{
+              xs: 2.5,
+              sm: 3,
+            }}
+            position="relative"
+            bottom={{ lg: -50, xs: -1 }}
             paddingX={{
-              xs: 2,
+              xs: 0,
+              sm: 2,
               md: 5,
               lg: 2,
             }}
@@ -145,67 +142,10 @@ export const HomeBanner = () => {
               xl: 3,
             }}
           >
-            <ProcessImageBlock
-              imgSrc={
-                isPhone ? planning_mobile_image : isTablet ? planning_tablet_image : planning_image
-              }
-              title="Planning"
-              sx={{
-                top: {
-                  xs: 42,
-                  sm: 68,
-                },
-              }}
-            />
-            <ProcessImageBlock
-              imgSrc={
-                isPhone
-                  ? implementing_mobile_image
-                  : isTablet
-                  ? implementing_tablet_image
-                  : implementing_image
-              }
-              title="Implementing"
-              sx={{
-                top: {
-                  xs: 5,
-                  lg: 25,
-                  xl: 50,
-                },
-              }}
-            />
-            <ProcessImageBlock
-              imgSrc={
-                isPhone ? testing_mobile_image : isTablet ? testing_tablet_image : testing_image
-              }
-              title="Testing"
-              sx={{
-                top: {
-                  xs: 42,
-                  lg: 40,
-                  xl: 75,
-                },
-              }}
-            />
-            <ProcessImageBlock
-              imgSrc={
-                isPhone
-                  ? deploy_mobile_image
-                  : isTablet
-                  ? deploy_tablet_image
-                  : deploy_desktop_image
-              }
-              title="Deployment and Maintenance"
-              sx={{
-                top: {
-                  xs: 5,
-                  sm: 65,
-                  md: 40,
-                  lg: 78,
-                  xl: 78,
-                },
-              }}
-            />
+            <ProcessImageBlock imgSrc={planning_image} title="Planning" />
+            <ProcessImageBlock imgSrc={implementing_image} title="Implementing" />
+            <ProcessImageBlock imgSrc={testing_image} title="Testing" />
+            <ProcessImageBlock imgSrc={deploy_desktop_image} title="Deployment and Maintenance" />
           </Stack>
           <StacksHome />
         </Stack>

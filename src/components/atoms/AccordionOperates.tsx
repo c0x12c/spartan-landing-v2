@@ -104,6 +104,8 @@ export const AccordionOperates = () => {
       flexWrap="wrap"
       overflow="hidden"
       borderRadius="8px"
+      data-aos="zoom-in-up"
+      data-aos-duration="2000"
     >
       <Box maxWidth={isMobile ? '100%' : '477px'} flex="1">
         {renderAccordion}

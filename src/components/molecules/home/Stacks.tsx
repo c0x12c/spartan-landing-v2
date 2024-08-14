@@ -40,9 +40,7 @@ export function StacksHome() {
           '&.Mui-selected': {
             background: 'black',
             lineHeight: 2,
-            // height: '54px',
             color: 'white',
-            // transition: 'height 0.2s',
           },
         }}
       />

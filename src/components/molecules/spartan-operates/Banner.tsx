@@ -31,7 +31,7 @@ export const SpartanOperatesBanner: React.FunctionComponent<ISpartanOperatesBann
         >
           <MainTitle
             text="How spartan will grow your business"
-            data-aos="fade-up"
+            data-aos="fade-down"
             data-aos-delay="200"
             sx={{
               textAlign: 'center',
@@ -39,11 +39,19 @@ export const SpartanOperatesBanner: React.FunctionComponent<ISpartanOperatesBann
             }}
           />
           <BodyText
+            data-aos="fade-up"
+            data-aos-delay="200"
             text="At Spartan, our skilled engineers, product managers, and designers work closely with you to revolutionize your software development process."
             sx={{ color: base.white, textAlign: 'center' }}
           />
         </Box>
-        <Image src={bannerImage} alt="bannerImage" style={{ maxWidth: '100%', height: 'auto' }} />
+        <Image
+          src={bannerImage}
+          alt="bannerImage"
+          style={{ maxWidth: '100%', height: 'auto' }}
+          data-aos="zoom-in-up"
+          data-aos-delay="200"
+        />
       </Container>
     </Box>
   );

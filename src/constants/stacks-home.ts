@@ -81,7 +81,6 @@ export const StacksInHome: FieldType[] = [
       { id: 'stack-6', name: 'Golang', imgSrc: Go },
       { id: 'stack-7', name: 'Rust', imgSrc: Rust },
       { id: 'stack-45', name: 'Python', imgSrc: Python },
-      { id: 'stack-17', name: 'Solidity', imgSrc: Solidity },
       { id: 'stack-8', name: 'JavaScript', imgSrc: JavaScript },
       { id: 'stack-9', name: 'Typescript', imgSrc: Typescript },
     ],

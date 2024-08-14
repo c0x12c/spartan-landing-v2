@@ -44,7 +44,6 @@ export const Clients: React.FunctionComponent<IClientsProps> = () => {
               margin: '0 auto',
               borderRadius: isMobile ? '6.25px' : '18.75px',
             }}
-            priority={true}
             data-aos="zoom-in"
             data-aos-delay="200"
           />

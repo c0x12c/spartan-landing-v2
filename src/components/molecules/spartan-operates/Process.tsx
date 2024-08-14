@@ -21,12 +21,18 @@ export const SpartanOperatesProcess: React.FunctionComponent<ISpartanOperatesPro
             alignItems={isMobile ? 'center' : 'flex-start'}
             gap={isMobile ? '24px' : '40px'}
           >
-            <Image src={badge} alt="badge" style={{ width: '157px', height: 'auto' }} />
+            <Image
+              src={badge}
+              alt="badge"
+              style={{ width: '157px', height: 'auto' }}
+              data-aos="fade-right"
+            />
             <Typography
               variant={isMobile ? 'fs18' : 'fs24'}
               component={'p'}
               fontWeight={600}
               color={base.black}
+              data-aos="fade-left"
             >
               Our mission is to deliver the best products while enhancing your workflow. We empower
               you to build and deploy exceptional software solutions, gaining expertise in
