@@ -1,17 +1,28 @@
 import { useIsPhone, useIsTablet } from '@/hooks/useBreakPoints';
 import { IconButton, Stack, Typography } from '@mui/material';
-import React, { useEffect, useRef } from 'react';
+import React, { useRef } from 'react';
+
 import group_banner from '@/assets/images/home/group-banner.png';
 import chargeFuze_icon from '@/assets/images/trust-management-team/chargeFuze.png';
-import gabe_avatar from '@/assets/images/trust-management-team/gabe.png';
 import agora_icon from '@/assets/images/trust-management-team/agora.png';
 import liquidity_icon from '@/assets/images/trust-management-team/liquidity.png';
 import ursa_icon from '@/assets/images/trust-management-team/ursa.png';
 import volta_icon from '@/assets/images/trust-management-team/volta.png';
-import george_avatar from '@/assets/images/trust-management-team/george.png';
-import ryan_avatar from '@/assets/images/trust-management-team/ryan.png';
-import chad_avatar from '@/assets/images/trust-management-team/chad.png';
-import cody_avatar from '@/assets/images/trust-management-team/cody.png';
+import sidecar_icon from '@/assets/images/trust-management-team/sidecar.png';
+import cyphr_icon from '@/assets/images/trust-management-team/cyphr.png';
+import pura_icon from '@/assets/images/trust-management-team/pura.png';
+import heru_icon from '@/assets/images/trust-management-team/heru.png';
+
+import gabe_avatar from '@/assets/images/trust-management-team/avatar/gabe.png';
+import george_avatar from '@/assets/images/trust-management-team/avatar/george.png';
+import ryan_avatar from '@/assets/images/trust-management-team/avatar/ryan.png';
+import chad_avatar from '@/assets/images/trust-management-team/avatar/chad.png';
+import alaia_avatar from '@/assets/images/trust-management-team/avatar/alaia.png';
+import asa_avatar from '@/assets/images/trust-management-team/avatar/asa.png';
+import scott_avatar from '@/assets/images/trust-management-team/avatar/scott.png';
+import travis_avatar from '@/assets/images/trust-management-team/avatar/travis.png';
+import james_avatar from '@/assets/images/trust-management-team/avatar/james.png';
+
 import { ManagementCard } from '../trust-by-management-team/ManagementCard';
 import Image, { StaticImageData } from 'next/image';
 import { BlockLayout } from '@/components/templates';
@@ -58,11 +69,39 @@ const teams: TManagementTeam[] = [
     iconSrc: ursa_icon,
   },
   {
-    desc: '“Spartan quickly became my go-to for high-quality, fast-paced software engineering. Within a month, I migrated all my projects to them.”',
-    name: 'Cody Zhang',
+    desc: `"Spartan stands out for startups and scale-ups exploring outsourcing. Their engineering team excels, offering more than just solutions - they're dedicated partners in your success.”`,
+    name: 'Travis VanderZanden',
     position: 'Agora’s Product & Engineering Lead',
-    avatarSrc: cody_avatar,
+    avatarSrc: travis_avatar,
     iconSrc: agora_icon,
+  },
+  {
+    desc: `“My Spartan team goes above and beyond to keep me in the loop, with ample documentation, daily standups, and code reviews. With Spartan, it feels like my engineers are part of my team.”`,
+    name: 'James Webb',
+    position: 'Founder at Sidecar data',
+    avatarSrc: james_avatar,
+    iconSrc: sidecar_icon,
+  },
+  {
+    desc: `"They didn’t just deliver a product; they delivered a solution that met all our needs and totally exceeded our expectations.”`,
+    name: 'Alaia Martin',
+    position: 'Co-Founder and COO Cyphr',
+    avatarSrc: alaia_avatar,
+    iconSrc: cyphr_icon,
+  },
+  {
+    desc: `“Spartan is one of the best firms I've worked with across multiple projects and companies. They ramp up quickly, consistently adding value”`,
+    name: 'Scott Rushforth',
+    position: 'CTO of Pura Ex CTO of Bird',
+    avatarSrc: scott_avatar,
+    iconSrc: pura_icon,
+  },
+  {
+    desc: `"Spartan stands out for startups and scale-ups exploring outsourcing. Their engineering team excels, offering more than just solutions - they're dedicated partners in your success.”`,
+    name: 'Asa Downs',
+    position: 'Principal Software Engineer at Heru, Senior Software Engineer at Biolog.',
+    avatarSrc: asa_avatar,
+    iconSrc: heru_icon,
   },
 ];
 
@@ -164,6 +203,19 @@ export const TrustByManagementTeam = () => {
             },
             '.slick-list': {
               margin: `0 -7px`,
+            },
+            '.slick-dots': {
+              width: {
+                xs: 'calc(100vw - 32px - 15px)',
+                md: 'calc(100vw - 80px - 15px)',
+                lg: 'calc(100vw - 240px - 15px)',
+              },
+            },
+            '.slick-dots > li > button::before': {
+              color: 'white',
+            },
+            '.slick-dots > li.slick-active > button::before': {
+              color: 'white',
             },
           }}
         >
