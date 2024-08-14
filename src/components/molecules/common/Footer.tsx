@@ -3,7 +3,7 @@ import { base, gray } from '@/styles/colors';
 import { Box, Button, Typography } from '@mui/material';
 import { ArrowIcon, Container, InputWButton } from '@/components/atoms';
 import Image from 'next/image';
-import LogoWhite from '@/assets/images/logo/logo-white.svg';
+import LogoWhite from '@/assets/images/logo/logo-white.png';
 import Link from 'next/link';
 import { BreakPoints, useBreakpoint } from '@/hooks';
 import { About, AboutType, Help, HelpType, ServiceType, Services, Socials } from '@/constants';

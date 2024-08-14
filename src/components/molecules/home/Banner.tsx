@@ -69,7 +69,6 @@ export const HomeBanner = () => {
               <Image
                 src={group_banner}
                 alt="group_banner"
-                priority
                 style={{ width: '100%', height: 'auto' }}
               />
             </Box>

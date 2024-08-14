@@ -1,6 +1,6 @@
 import { AppBar, Toolbar, Box } from '@mui/material';
 import Image from 'next/image';
-import LogoWhite from '@/assets/images/logo/logo-white.svg';
+import LogoWhite from '@/assets/images/logo/logo-white.png';
 import LogoDark from '@/assets/images/logo/logo-dark.svg';
 import { useRouter } from 'next/router';
 import Link from 'next/link';

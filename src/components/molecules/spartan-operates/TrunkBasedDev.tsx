@@ -30,13 +30,17 @@ export const TrunkBasedDev: React.FunctionComponent<ITrunkBasedDevProps> = () =>
               textAlign: 'center',
               mx: 'auto',
             }}
+            data-aos="fade-down"
+            data-aos-duration="1000"
           />
           <BodyText
+            data-aos="fade-up"
+            data-aos-duration="1000"
             text="Trunk-based development and daily releases are closely intertwined in our software development process. With trunk-based development, all developers collaborate on a single branch, enabling faster integration and reducing complexities. This approach seamlessly aligns with our daily release strategy, where we deploy software updates and features to production on a daily basis. By combining these practices, we ensure efficient collaboration, rapid integration, and frequent delivery of new features to our users."
             sx={{ textAlign: 'center' }}
           />
         </Box>
-        <Box>
+        <Box data-aos="zoom-out" data-aos-duration="1000">
           <Image
             src={TrunkBasedImage}
             alt={'trunk based development'}

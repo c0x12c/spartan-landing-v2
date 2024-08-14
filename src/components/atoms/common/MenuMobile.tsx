@@ -37,6 +37,7 @@ export const MenuMobile = ({ menu, isTransparent }: MenuMobileType) => {
         aria-label="menu"
         size="large"
         onClick={() => toggleMenu(true)}
+        sx={{ paddingRight: 0 }}
       >
         <MenuIcon fontSize="inherit" sx={{ color: isTransparent ? base.white : base.black }} />
       </IconButton>
@@ -57,8 +58,8 @@ export const MenuMobile = ({ menu, isTransparent }: MenuMobileType) => {
             margin: '0 auto',
             display: 'flex',
             justifyContent: 'space-between',
-            height: '142px',
-            p: isMobile ? '10px 15px !important' : '40.8px 59.5px !important',
+            height: '87px',
+            p: isMobile ? '10px 16px !important' : '40.8px 59.5px !important',
           }}
         >
           <Link href="/" onClick={() => toggleMenu(false)}>
@@ -70,9 +71,9 @@ export const MenuMobile = ({ menu, isTransparent }: MenuMobileType) => {
             aria-label="menu"
             size="large"
             onClick={() => toggleMenu(false)}
-            sx={{ color: base.black }}
+            sx={{ color: base.black, paddingRight: 0 }}
           >
-            <MenuIcon />
+            <MenuIcon fontSize="inherit" />
           </IconButton>
         </Toolbar>
         <Box my="44px" mx={isMobile ? '16px' : '64px'}>

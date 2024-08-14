@@ -40,6 +40,8 @@ export const SpartanOperatesStandards: React.FunctionComponent<
                 borderRadius="8px"
                 boxShadow="0px 10px 47px 0px #EFEFEF;"
                 minHeight="384px"
+                data-aos="flip-left"
+                data-aos-duration="1000"
               >
                 <Typography
                   variant={isMobile ? 'fs18' : 'fs24'}
@@ -69,6 +71,8 @@ export const SpartanOperatesStandards: React.FunctionComponent<
                 borderRadius="8px"
                 boxShadow="0px 10px 47px 0px #EFEFEF;"
                 minHeight="384px"
+                data-aos="flip-right"
+                data-aos-duration="1000"
               >
                 <Typography
                   variant={isMobile ? 'fs18' : 'fs24'}
