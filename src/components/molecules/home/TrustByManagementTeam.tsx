@@ -205,6 +205,7 @@ export const TrustByManagementTeam = () => {
               margin: `0 -7px`,
             },
             '.slick-dots': {
+              maxWidth: '1200px',
               width: {
                 xs: 'calc(100vw - 32px - 15px)',
                 md: 'calc(100vw - 80px - 15px)',
