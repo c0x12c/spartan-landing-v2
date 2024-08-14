@@ -20,16 +20,13 @@ export const ProcessImageBlock: FC<Props> = ({ imgSrc, title, sx = {} }) => {
       data-aos="fade-up"
       data-aos-delay="200"
     >
-      <Stack p={1.5} position={isPhone ? 'absolute' : 'relative'} maxWidth={190}>
+      <Stack p={1.5} position={isPhone ? 'absolute' : 'relative'} maxWidth={190} minHeight={72}>
         <Typography variant={isPhone ? 'fs14' : 'fs16'} fontWeight={500} color={'white'}>
           {title}
         </Typography>
       </Stack>
-      <Stack
-        width={isPhone ? 'calc(100vw / 2 - 20px)' : isTablet ? 'calc(100vw / 4)px' : '320px'}
-        height={isPhone || isTablet ? '254px' : '412px'}
-      >
-        <Image src={imgSrc} alt={title} style={{ width: '100%', height: '100%' }} />
+      <Stack width={isPhone ? 'calc(100vw / 2 - 10px)' : isTablet ? 'calc(100vw / 4)px' : '320px'}>
+        <Image src={imgSrc} alt={title} style={{ width: '100%', height: 'auto' }} />
       </Stack>
     </Stack>
   );
