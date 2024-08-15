@@ -1,14 +1,16 @@
 /* eslint-disable @next/next/next-script-for-ga */
 import { Html, Head, Main, NextScript } from 'next/document';
 import { GlobalHead } from '@/components/atoms';
+import Script from 'next/script';
 
 export default function Document() {
   return (
     <Html lang="en">
       <Head>
         <GlobalHead />
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-GSKNE1X103"></script>
-        <script
+        <Script async src="https://www.googletagmanager.com/gtag/js?id=G-GSKNE1X103"></Script>
+        <Script
+          id={'gtag'}
           dangerouslySetInnerHTML={{
             __html: `
             window.dataLayer = window.dataLayer || [];
@@ -17,8 +19,9 @@ export default function Document() {
             gtag('config', 'G-GSKNE1X103');
           `,
           }}
-        ></script>
-        <script
+        />
+        <Script
+          id={'smartlook'}
           dangerouslySetInnerHTML={{
             __html: `
               window.smartlook||(function(d) {
@@ -29,7 +32,7 @@ export default function Document() {
               smartlook('init', '058c99ead434102d9cef3c139760b6e4cb2ff09b', { region: 'eu' });
           `,
           }}
-        ></script>
+        />
       </Head>
       <body>
         <Main />
