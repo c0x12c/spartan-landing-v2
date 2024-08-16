@@ -47,8 +47,9 @@ export const CaseStudyBanner: React.FunctionComponent<ICaseStudyBannerProps> = (
               data-aos-delay="300"
               textAlign="center"
             >
-              Share your concerns with us, and we are here to provide you with the best solutions
-              from top-notch engineers around the world.
+              Discover how our solution empowers entrepreneurs to launch and scale their business.
+              Explore how Spartan streamline the journey from idea to market and expertise needed to
+              turn your vision into a successful business in our detailed case study
             </Typography>
           </Box>
         </Container>

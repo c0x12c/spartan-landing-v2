@@ -58,15 +58,7 @@ export const OurServicesV2 = () => {
               fontWeight={500}
               color={'black'}
             >
-              Our{' '}
-              <Typography
-                variant={isPhone ? 'fs32' : isTablet ? 'fs48' : 'fs56'}
-                fontWeight={300}
-                color={'black'}
-                fontStyle={'italic'}
-              >
-                Services
-              </Typography>
+              Our Services
             </Typography>
           </Stack>
         </Grid2>

@@ -1,10 +1,10 @@
 import React from 'react';
 import { Box, Button, Stack } from '@mui/material';
 import group_banner from '@/assets/images/home/group-banner.png';
-import planning_image from '@/assets/images/home/planning.png';
-import implementing_image from '@/assets/images/home/implementing.png';
-import testing_image from '@/assets/images/home/testing.png';
-import deploy_desktop_image from '@/assets/images/home/deploy.png';
+import planning_image from '@/assets/images/home/planning.webp';
+import implementing_image from '@/assets/images/home/implementing.webp';
+import testing_image from '@/assets/images/home/testing.webp';
+import deploy_image from '@/assets/images/home/deploy.webp';
 import { ArrowIcon, BodyText, MainTitle } from '@/components/atoms';
 import { BreakPoints, useBreakpoint } from '@/hooks';
 import Link from 'next/link';
@@ -145,7 +145,7 @@ export const HomeBanner = () => {
             <ProcessImageBlock imgSrc={planning_image} title="Planning" />
             <ProcessImageBlock imgSrc={implementing_image} title="Implementing" />
             <ProcessImageBlock imgSrc={testing_image} title="Testing" />
-            <ProcessImageBlock imgSrc={deploy_desktop_image} title="Deployment and Maintenance" />
+            <ProcessImageBlock imgSrc={deploy_image} title="Deployment and Maintenance" />
           </Stack>
           <StacksHome />
         </Stack>

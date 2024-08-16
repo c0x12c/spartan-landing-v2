@@ -2,7 +2,7 @@ import { useIsPhone, useIsTablet } from '@/hooks/useBreakPoints';
 import { Box, Button, Divider, Stack, Typography } from '@mui/material';
 import Grid2 from '@mui/material/Unstable_Grid2';
 import React, { Fragment } from 'react';
-import all_employee_desktop from '@/assets/images/team/all-employee-desktop.png';
+import all_employee_desktop from '@/assets/images/team/all-employee-desktop.webp';
 import all_employee_mobile from '@/assets/images/team/all-employee-mobile.png';
 import all_employee_tablet from '@/assets/images/team/all-employee-tablet.png';
 import Image from 'next/image';
