@@ -5,18 +5,18 @@ import { Box, Button, IconButton, Stack, Typography } from '@mui/material';
 import React, { useRef } from 'react';
 import liquidity_image from '@/assets/images/our-projects/liquidity.png';
 import chargefuze_image from '@/assets/images/our-projects/chargefuze.png';
-import foresight_image from '@/assets/images/our-projects/foresight.png';
+// import foresight_image from '@/assets/images/our-projects/foresight.png';
 import livecast_image from '@/assets/images/our-projects/livecast.png';
-import puzzle_image from '@/assets/images/our-projects/puzzle.png';
-import sidecar_image from '@/assets/images/our-projects/sidecar.png';
+// import puzzle_image from '@/assets/images/our-projects/puzzle.png';
+// import sidecar_image from '@/assets/images/our-projects/sidecar.png';
 import ursalive_image from '@/assets/images/our-projects/ursalive.png';
 import volta_image from '@/assets/images/our-projects/volta.png';
 import agora_icon from '@/assets/images/our-projects/icons/agora.png';
 import chargefuze_icon from '@/assets/images/our-projects/icons/chargefuze.png';
-import foresight_icon from '@/assets/images/our-projects/icons/foresight.png';
+// import foresight_icon from '@/assets/images/our-projects/icons/foresight.png';
 import liquidity_icon from '@/assets/images/our-projects/icons/liquidity.png';
-import puzzle_icon from '@/assets/images/our-projects/icons/puzzle.png';
-import sidecar_icon from '@/assets/images/our-projects/icons/sidecar.png';
+// import puzzle_icon from '@/assets/images/our-projects/icons/puzzle.png';
+// import sidecar_icon from '@/assets/images/our-projects/icons/sidecar.png';
 import ursa_icon from '@/assets/images/our-projects/icons/ursa.png';
 import volta_icon from '@/assets/images/our-projects/icons/volta.png';
 import Slider, { Settings } from 'react-slick';
@@ -35,6 +35,7 @@ export type Project = {
   iconSrc: StaticImageData;
   name: string;
   desc: string;
+  href: string;
 };
 
 const projects: Project[] = [
@@ -43,49 +44,54 @@ const projects: Project[] = [
     name: 'LiveCast',
     iconSrc: agora_icon,
     desc: 'Agora is a pioneer and global',
+    href: '/case-study/live-cast',
   },
-  {
-    imgSrc: foresight_image,
-    name: 'Foresight',
-    iconSrc: foresight_icon,
-    desc: 'Foresight, our latest ground dv..',
-  },
+  // {
+  //   imgSrc: foresight_image,
+  //   name: 'Foresight',
+  //   iconSrc: foresight_icon,
+  //   desc: 'Foresight, our latest ground dv..',
+  // },
   {
     imgSrc: ursalive_image,
     name: 'URSA Live',
     iconSrc: ursa_icon,
     desc: 'URSA Live simplifies artists',
+    href: '/case-study/ursa',
   },
   {
     imgSrc: chargefuze_image,
     name: 'ChargeFUZE',
     iconSrc: chargefuze_icon,
     desc: 'ChargeFUZE: Rent portable c',
+    href: '/case-study/chargefuze',
   },
-  {
-    imgSrc: sidecar_image,
-    name: 'Sidecardata',
-    iconSrc: sidecar_icon,
-    desc: 'Sidecar Data is a platform de...',
-  },
+  // {
+  //   imgSrc: sidecar_image,
+  //   name: 'Sidecardata',
+  //   iconSrc: sidecar_icon,
+  //   desc: 'Sidecar Data is a platform de...',
+  // },
   {
     imgSrc: liquidity_image,
     name: 'Liquidity Financial',
     iconSrc: liquidity_icon,
     desc: 'Transforming Banking and Spen....',
+    href: '/case-study/liquidity',
   },
   {
     imgSrc: volta_image,
     name: 'Volta',
     iconSrc: volta_icon,
     desc: 'Foresight, our latest ground db...',
+    href: '/case-study/volta',
   },
-  {
-    imgSrc: puzzle_image,
-    name: 'Puzzle',
-    iconSrc: puzzle_icon,
-    desc: 'Your portal to Aleo, zkGames & giveaways',
-  },
+  // {
+  //   imgSrc: puzzle_image,
+  //   name: 'Puzzle',
+  //   iconSrc: puzzle_icon,
+  //   desc: 'Your portal to Aleo, zkGames & giveaways',
+  // },
 ];
 
 export const OurProjects = () => {

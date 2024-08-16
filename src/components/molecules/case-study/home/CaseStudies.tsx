@@ -7,17 +7,17 @@ import { BreakPoints, useBreakpoint } from '@/hooks';
 
 interface ICaseStudiesProps {}
 
+const renderCaseStudies = Projects.map((item) => {
+  if (!item.href) return;
+  return (
+    <Grid item key={item.id} xs={12} md={6} lg={4} data-aos="fade-up" data-aos-delay="200">
+      <CardProject item={item} />
+    </Grid>
+  );
+});
+
 export const CaseStudies: React.FunctionComponent<ICaseStudiesProps> = () => {
   const isMobile = useBreakpoint(BreakPoints.MD);
-
-  const renderCaseStudies = Projects.map((item) => {
-    if (!item.href) return;
-    return (
-      <Grid item key={item.id} xs={12} md={6} lg={4} data-aos="fade-up" data-aos-delay="200">
-        <CardProject item={item} />
-      </Grid>
-    );
-  });
 
   return (
     <Box bgcolor={gray[50]} py={isMobile ? '40px' : '100px'}>

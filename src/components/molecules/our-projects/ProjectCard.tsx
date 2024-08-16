@@ -3,6 +3,7 @@ import { BreakPoints, useBreakpoint } from '@/hooks/useBreakPoints';
 import { Stack, Typography } from '@mui/material';
 import Image from 'next/image';
 import { Project } from '../home/OurProjects';
+import Link from 'next/link';
 
 type Props = {
   data: Project;
@@ -11,7 +12,19 @@ type Props = {
 export const ProjectCard: FC<Props> = ({ data }) => {
   const isMobile = useBreakpoint(BreakPoints.LG);
   return (
-    <Stack borderRadius={2} border="1px solid rgba(0, 0, 0, 0.10)" p={2} gap={2}>
+    <Stack
+      borderRadius={2}
+      border="1px solid rgba(0, 0, 0, 0.10)"
+      p={2}
+      gap={2}
+      sx={{
+        '&:hover': {
+          cursor: 'pointer',
+        },
+      }}
+      component={Link}
+      href={data.href}
+    >
       <Stack sx={{ overflow: 'hidden' }}>
         <Image
           src={data.imgSrc}

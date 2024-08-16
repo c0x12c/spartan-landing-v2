@@ -70,14 +70,12 @@ export const HomeBanner = () => {
               rowGap="16px"
               justifyContent={'space-between'}
             >
-              <Box maxWidth={isTablet ? 'unset' : '320px'}>
-                <MainTitle
-                  text="Startup in the box"
-                  data-aos="fade-up"
-                  data-aos-delay="200"
-                  sx={{ fontWeight: 500, lineHeight: 1.3 }}
-                />
-              </Box>
+              <MainTitle
+                text="Startup in the box"
+                data-aos="fade-up"
+                data-aos-delay="200"
+                sx={{ fontWeight: 500, lineHeight: 1.3, maxWidth: isTablet ? 'unset' : '320px' }}
+              />
               <Stack gap="32px" justifyContent={'center'}>
                 <BodyText
                   text={`Boost your startup with Spartan's all-in-one software solution—<span style="color: white">Fast, Correct, Affordable</span>. Streamline development from design to support.`}
