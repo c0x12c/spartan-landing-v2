@@ -16,7 +16,7 @@ export const AboutUsBanner = () => {
           >
             <MainTitle
               text="Top tier, tech savvy /Engineers/"
-              data-aos="fade-up"
+              data-aos="fade-down"
               data-aos-delay="200"
             />
             <BodyText

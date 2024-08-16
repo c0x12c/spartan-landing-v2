@@ -1,7 +1,7 @@
 import { BodyText, Container } from '@/components/atoms';
 import { Box, Typography } from '@mui/material';
 import { SubTitle, Title } from '@/components/atoms';
-import { DescriptionImage } from '@/assets/images/about-us';
+import all_employee from '@/assets/images/team/all-employee-desktop.webp';
 import Image from 'next/image';
 import { base, primary } from '@/styles/colors';
 import { gray } from '@/styles/colors';
@@ -38,7 +38,7 @@ export const Description = () => {
           data-aos-delay="500"
         >
           <Image
-            src={DescriptionImage}
+            src={all_employee}
             alt="Image with group of people"
             data-aos="fade-right"
             data-aos-delay="500"
@@ -67,8 +67,8 @@ export const Description = () => {
           bgcolor={base.white}
           borderRadius={'8px 0 0 0'}
         >
-          <StatisticBox isMobile={isMobile} title="Engineers" number="70+" />
-          <StatisticBox isMobile={isMobile} title="World offices" number="04" />
+          <StatisticBox isMobile={isMobile} title="Engineers" number="100+" />
+          <StatisticBox isMobile={isMobile} title="World offices" number="02" />
         </Box>
       </Box>
     </Container>

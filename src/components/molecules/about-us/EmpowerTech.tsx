@@ -48,6 +48,7 @@ export const EmpowerTech = () => {
             borderRadius={'8px'}
           >
             <Title
+              data-aos="fade-up-left"
               text="Focus on nurturing engineers's power"
               sx={{ textAlign: { xs: 'center', lg: 'end' } }}
             />
@@ -67,6 +68,7 @@ export const EmpowerTech = () => {
               sx={{
                 width: 'fit-content',
               }}
+              data-aos="fade-down"
             >
               Become the next Spartan
             </Button>
