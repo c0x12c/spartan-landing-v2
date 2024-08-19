@@ -10,6 +10,7 @@ import { Container, MenuDesktop } from '@/components/atoms';
 import { MenuMobile } from '@/components/atoms';
 import questionIcon from '@/assets/images/icons/question.svg';
 import cases from '@/assets/images/icons/cases.svg';
+import { HideOnScroll } from './HideOnScroll';
 
 export type MenuItemType = {
   id: string;
@@ -68,38 +69,39 @@ export const Header = ({ forceTransparent = true }: { forceTransparent?: boolean
   ];
 
   return (
-    <AppBar
-      sx={{
-        background: 'transparent',
-        boxShadow: 'none',
-        position: 'absolute',
-        top: { lg: '25px', xs: 0 },
-      }}
-    >
-      <Container>
-        <Toolbar
-          sx={{
-            padding: '0 !important',
-            height: isTablet ? '87px' : 'auto',
-          }}
-        >
-          <Box display="flex" alignItems="center" justifyContent="space-between" width="100%">
-            <Link href="/">
-              <Image
-                src={isTransparent && forceTransparent ? LogoWhite : LogoDark}
-                alt="Spartan Logo"
-                priority
-              />
-            </Link>
+    <HideOnScroll>
+      <AppBar
+        sx={{
+          background: 'black',
+          boxShadow: 'none',
+          top: 0,
+        }}
+      >
+        <Container>
+          <Toolbar
+            sx={{
+              padding: '24px 0px !important',
+              height: isTablet ? '87px' : 'auto',
+            }}
+          >
+            <Box display="flex" alignItems="center" justifyContent="space-between" width="100%">
+              <Link href="/">
+                <Image
+                  src={isTransparent && forceTransparent ? LogoWhite : LogoDark}
+                  alt="Spartan Logo"
+                  priority
+                />
+              </Link>
 
-            {isTablet ? (
-              <MenuMobile menu={dataMenu} isTransparent={isTransparent && forceTransparent} />
-            ) : (
-              <MenuDesktop menu={dataMenu} isTransparent={isTransparent && forceTransparent} />
-            )}
-          </Box>
-        </Toolbar>
-      </Container>
-    </AppBar>
+              {isTablet ? (
+                <MenuMobile menu={dataMenu} isTransparent={isTransparent && forceTransparent} />
+              ) : (
+                <MenuDesktop menu={dataMenu} isTransparent={isTransparent && forceTransparent} />
+              )}
+            </Box>
+          </Toolbar>
+        </Container>
+      </AppBar>
+    </HideOnScroll>
   );
 };
