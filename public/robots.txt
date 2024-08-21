@@ -1,2 +1,9 @@
+# *
 User-agent: *
-Disallow:
+Allow: /
+
+# Host
+Host: https://hirespartan.io
+
+# Sitemaps
+Sitemap: https://hirespartan.io/sitemap.xml

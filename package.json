@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "postBuild": "npx ts-node -O '{\"module\":\"commonjs\"}' src/utils/sendSlackNotification.ts",
+    "postBuild": "npx ts-node -O '{\"module\":\"commonjs\"}' src/utils/sendSlackNotification.ts && next-sitemap",
     "start": "next start",
     "prettify": "prettier --write src",
     "pre-commit": "lint-staged",
@@ -54,6 +54,7 @@
     "eslint-plugin-prettier": "^4.2.1",
     "husky": "^8.0.3",
     "lint-staged": "^13.2.0",
+    "next-sitemap": "^4.2.3",
     "prettier": "^2.8.6",
     "simple-git": "^3.19.0",
     "ts-node": "^10.9.1"
