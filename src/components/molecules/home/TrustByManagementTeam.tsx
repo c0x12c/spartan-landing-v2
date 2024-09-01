@@ -34,7 +34,7 @@ import ray_avatar from '@/assets/images/trust-management-team/avatar/ray.jpeg';
 import serj_avatar from '@/assets/images/trust-management-team/avatar/serj.jpeg';
 import vera_avatar from '@/assets/images/trust-management-team/avatar/vera.jpeg';
 
-import { ManagementCard } from '../trust-by-management-team/ManagementCard';
+import { ManagementCard } from '@/components/molecules';
 import Image, { StaticImageData } from 'next/image';
 import { BlockLayout } from '@/components/templates';
 import Slider, { Settings } from 'react-slick';
@@ -168,7 +168,7 @@ export const TrustByManagementTeam = () => {
   const settings: Settings = {
     className: 'slider variable-width',
     dots: true,
-    speed: 500,
+    speed: 3000,
     slidesToShow: 1,
     slidesToScroll: 1,
     arrows: false,
@@ -182,7 +182,7 @@ export const TrustByManagementTeam = () => {
           slidesToShow: 1,
           slidesToScroll: 1,
           dots: true,
-          speed: 500,
+          speed: 3000,
           variableWidth: false,
         },
       },
