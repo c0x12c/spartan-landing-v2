@@ -16,6 +16,7 @@ import atrix_icon from '@/assets/images/trust-management-team/atrix.png';
 import regimen_icon from '@/assets/images/trust-management-team/regimen.png';
 import intrinsic_icon from '@/assets/images/trust-management-team/intrinsic.png';
 import exialabs_icon from '@/assets/images/trust-management-team/exialabs.png';
+import sky_icon from '@/assets/images/trust-management-team/sky.png';
 import blank_icon from '@/assets/images/trust-management-team/blank.png';
 
 import gabe_avatar from '@/assets/images/trust-management-team/avatar/gabe.png';
@@ -51,11 +52,32 @@ export type TManagementTeam = {
 
 const teams: TManagementTeam[] = [
   {
-    desc: '“Spartan delivers top-quality, timely projects with clear communication. Their focus on scalability and experience with high-growth startups adds significant value for clients.”',
-    name: 'Gabe Esler',
-    position: 'ChargeFUZE’s Product and Strategy',
-    avatarSrc: gabe_avatar,
-    iconSrc: chargeFuze_icon,
+    desc: `"Having spent my entire career working with in-house teams, I was initially hesitant to explore a new approach for my AI startup. However, after just a month of collaborating with the Spartan team, I was thoroughly impressed by their efficiency, proactiveness, and the quality of their work. Their ability to consistently deliver top-notch software engineering at an impressive speed has exceeded my expectations.”`,
+    name: 'Travis VanderZanden',
+    position: 'SkyAI Founder/CEO of Bird/COO at Lyft',
+    avatarSrc: travis_avatar,
+    iconSrc: sky_icon,
+  },
+  {
+    desc: `“Spartan Is A Remarkable Team with Unmatched Expertise. Having worked on multiple projects with Spartan across multiple companies, I am confident to say they are one of the best firms you can ask for. They ramp up quickly and add value every time. Their leadership has decades of experience and has seen it all!”`,
+    name: 'Scott Rushforth',
+    position: 'CTO of Pura Ex CTO of Bird',
+    avatarSrc: scott_avatar,
+    iconSrc: pura_icon,
+  },
+  {
+    desc: `"Highly recommend partnering with Spartan for your engineering and technical needs! They offer stellar talent across various areas and levels of expertise. Chan and his team go above and beyond in ensuring that your needs are met -- we appreciate their flexibility in helping us identify the right type of talent we need at what stage (Sometimes you don't know until you try!) as well as their flexibility in bringing onboard additional talent on a need basis.”`,
+    name: 'Vera Kutsenko',
+    position: 'Atrix Founder & CEO',
+    avatarSrc: vera_avatar,
+    iconSrc: atrix_icon,
+  },
+  {
+    desc: `"In the fast-paced and constantly changing environment of a startup, the Spartan team has been indispensable. They build high-quality code at a fast pace and always keep us informed of what they are building and why. They are able to meet our tight deadlines, switch gears and products on a dime when needed, and do it all in a very async low-touch way. They can work independently when needed, or with clear guidance when needed, and they handle both styles with no problem.”`,
+    name: 'Serj Kazar',
+    position: 'ExiaLabs Co-found/CTO',
+    avatarSrc: serj_avatar,
+    iconSrc: exialabs_icon,
   },
   {
     desc: '“Working with the Spartan team to build our product has been an incredible experience. Their expertise, dedication, and technical skills have exceeded our expectations.”',
@@ -63,6 +85,13 @@ const teams: TManagementTeam[] = [
     position: 'Volta’s Co-Founder ',
     avatarSrc: george_avatar,
     iconSrc: volta_icon,
+  },
+  {
+    desc: '“Spartan delivers top-quality, timely projects with clear communication. Their focus on scalability and experience with high-growth startups adds significant value for clients.”',
+    name: 'Gabe Esler',
+    position: 'ChargeFUZE’s Product and Strategy',
+    avatarSrc: gabe_avatar,
+    iconSrc: chargeFuze_icon,
   },
   {
     desc: '“After working with in-house teams my whole career, I hired development agencies for my Fintech startup. Building a great, reliable product was a struggle until I came across Spartan. Initially, I was skeptical, but within just a month of collaborating with the Spartan team, I transferred all my remaining projects to them. Their capacity to deliver high-quality software engineering at a rapid pace is a rare find.”',
@@ -101,25 +130,11 @@ The Spartan team is amazing to work with—they kept us in the loop the whole ti
     iconSrc: cyphr_icon,
   },
   {
-    desc: `“Spartan Is A Remarkable Team with Unmatched Expertise. Having worked on multiple projects with Spartan across multiple companies, I am confident to say they are one of the best firms you can ask for. They ramp up quickly and add value every time. Their leadership has decades of experience and has seen it all!”`,
-    name: 'Scott Rushforth',
-    position: 'CTO of Pura Ex CTO of Bird',
-    avatarSrc: scott_avatar,
-    iconSrc: pura_icon,
-  },
-  {
     desc: `"Spartan stands out for startups and scale-ups exploring outsourcing. Their engineering team excels, offering more than just solutions - they're dedicated partners in your success.”`,
     name: 'Asa Downs',
     position: 'Principal Software Engineer at Heru, Senior Software Engineer at Biolog.',
     avatarSrc: asa_avatar,
     iconSrc: heru_icon,
-  },
-  {
-    desc: `"Highly recommend partnering with Spartan for your engineering and technical needs! They offer stellar talent across various areas and levels of expertise. Chan and his team go above and beyond in ensuring that your needs are met -- we appreciate their flexibility in helping us identify the right type of talent we need at what stage (Sometimes you don't know until you try!) as well as their flexibility in bringing onboard additional talent on a need basis.”`,
-    name: 'Vera Kutsenko',
-    position: 'Atrix Founder/CEO',
-    avatarSrc: vera_avatar,
-    iconSrc: atrix_icon,
   },
   {
     desc: `"Chan and the Spartan team are hands down the best engineering team I’ve ever worked with. Their organization, thorough research, intuition, and work ethic are truly exceptional.”`,
@@ -134,20 +149,6 @@ The Spartan team is amazing to work with—they kept us in the loop the whole ti
     position: 'IntrinsicPower CEO',
     avatarSrc: broc_avatar,
     iconSrc: intrinsic_icon,
-  },
-  {
-    desc: `"Having spent my entire career working with in-house teams, I was initially hesitant to explore a new approach for my AI startup. However, after just a month of collaborating with the Spartan team, I was thoroughly impressed by their efficiency, proactiveness, and the quality of their work. Their ability to consistently deliver top-notch software engineering at an impressive speed has exceeded my expectations.”`,
-    name: 'Travis VanderZanden',
-    position: 'SkyAI Founder',
-    avatarSrc: travis_avatar,
-    iconSrc: blank_icon,
-  },
-  {
-    desc: `"In the fast-paced and constantly changing environment of a startup, the Spartan team has been indispensable. They build high-quality code at a fast pace and always keep us informed of what they are building and why. They are able to meet our tight deadlines, switch gears and products on a dime when needed, and do it all in a very async low-touch way. They can work independently when needed, or with clear guidance when needed, and they handle both styles with no problem.”`,
-    name: 'Serj Kazar',
-    position: 'ExiaLabs Co-found/CTO',
-    avatarSrc: serj_avatar,
-    iconSrc: exialabs_icon,
   },
 ];
 
