@@ -13,6 +13,7 @@ export const PoppinsFont = Poppins({
 
 declare module '@mui/material/styles' {
   interface TypographyVariants {
+    fs12: React.CSSProperties;
     fs14: React.CSSProperties;
     fs16: React.CSSProperties;
     fs18: React.CSSProperties;
@@ -31,6 +32,7 @@ declare module '@mui/material/styles' {
 
   // allow configuration using `createTheme`
   interface TypographyVariantsOptions {
+    fs12: React.CSSProperties;
     fs14: React.CSSProperties;
     fs16: React.CSSProperties;
     fs18: React.CSSProperties;
@@ -194,6 +196,11 @@ const createThemeByMode = (): Theme => {
       allVariants: {
         fontFamily: PoppinsFont.style.fontFamily,
         fontStyle: 'normal',
+      },
+      fs12: {
+        fontSize: '12px',
+        lineHeight: 1.5,
+        fontWeight: 400,
       },
       fs14: {
         fontSize: '14px',

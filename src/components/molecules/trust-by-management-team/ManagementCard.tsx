@@ -63,7 +63,7 @@ export const ManagementCard: FC<Props> = ({ data }) => {
             })}
           </Stack>
           <Typography
-            variant={isMobile ? 'fs16' : 'fs20'}
+            variant={isMobile ? 'fs14' : 'fs16'}
             fontWeight={300}
             lineHeight={1.6}
             color={'#86868B'}
