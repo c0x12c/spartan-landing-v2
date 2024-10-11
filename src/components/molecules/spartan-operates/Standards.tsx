@@ -51,7 +51,7 @@ export const SpartanOperatesStandards: React.FunctionComponent<
                   RFC
                 </Typography>
                 <Typography variant={isMobile ? 'fs14' : 'fs16'}>
-                  We extensively utilize RFC (Request for Change) in our software development
+                  We extensively utilize RFC (Request for Comments) in our software development
                   process. RFC serves as a formal document for proposing and discussing changes,
                   improvements, or new features within our projects. It enables structured and
                   collaborative discussions among team members and stakeholders, ensuring
