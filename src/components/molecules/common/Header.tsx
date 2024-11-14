@@ -1,8 +1,6 @@
 import { AppBar, Toolbar, Box } from '@mui/material';
 import Image from 'next/image';
 import LogoWhite from '@/assets/images/logo/logo-white.png';
-import LogoDark from '@/assets/images/logo/logo-dark.svg';
-import { useRouter } from 'next/router';
 import Link from 'next/link';
 import { About, AboutType, ServiceType, Services } from '@/constants';
 import { useBreakpoint, BreakPoints } from '@/hooks';
@@ -21,14 +19,6 @@ export type MenuItemType = {
 };
 
 export const Header = ({ forceTransparent = true }: { forceTransparent?: boolean }) => {
-  const { pathname } = useRouter();
-  const isTransparent =
-    pathname !== '/contact-us' &&
-    pathname !== '/life-spartan' &&
-    pathname !== '/internship-program' &&
-    pathname !== '/ready-to-join' &&
-    pathname !== '/apply-job';
-
   const isTablet = useBreakpoint(BreakPoints.LG);
 
   const dataMenu: MenuItemType[] = [
@@ -86,17 +76,13 @@ export const Header = ({ forceTransparent = true }: { forceTransparent?: boolean
           >
             <Box display="flex" alignItems="center" justifyContent="space-between" width="100%">
               <Link href="/">
-                <Image
-                  src={isTransparent && forceTransparent ? LogoWhite : LogoDark}
-                  alt="Spartan Logo"
-                  priority
-                />
+                <Image src={LogoWhite} alt="Spartan Logo" priority />
               </Link>
 
               {isTablet ? (
-                <MenuMobile menu={dataMenu} isTransparent={isTransparent && forceTransparent} />
+                <MenuMobile menu={dataMenu} isTransparent={forceTransparent} />
               ) : (
-                <MenuDesktop menu={dataMenu} isTransparent={isTransparent && forceTransparent} />
+                <MenuDesktop menu={dataMenu} isTransparent={forceTransparent} />
               )}
             </Box>
           </Toolbar>

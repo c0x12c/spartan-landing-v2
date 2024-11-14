@@ -72,7 +72,7 @@ export const Uniqueness = () => {
           <CardHorizontal
             title="Cost-Effective Remote Model"
             icon={MoneyImage}
-            content="Spartan offers a cost-effective remote model, harnessing the power of offshore talent to provide high-quality engineering services at competitive rates."
+            content="Spartan offers a cost-effective remote model, harnessing the power of talent to provide high-quality engineering services at competitive rates."
           />
           <CardHorizontal
             title="Robust Engineering Processes"

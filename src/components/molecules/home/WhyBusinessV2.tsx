@@ -122,8 +122,8 @@ export const WhyBusinessV2 = () => {
             data-aos="fade-up"
             data-aos-delay="200"
           >
-            Spartan delivers tailored offshoring solutions for businesses of all sizes to meet your
-            unique needs.
+            Spartan delivers tailored solutions for businesses of all sizes to meet your unique
+            needs.
           </Typography>
           <Box sx={{ display: 'inline-flex' }}>
             <Button

@@ -111,6 +111,22 @@ const createThemeByMode = (): Theme => {
             margin: 0,
             scrollBehavior: 'smooth',
             overflowX: 'hidden',
+            /* Custom Scrollbar Styling */
+            '&::-webkit-scrollbar': {
+              width: '8px', // Set scrollbar width
+            },
+            '&::-webkit-scrollbar-track': {
+              backgroundColor: 'transparent', // Remove background color
+              border: 'none', // Remove any border if it appears
+            },
+            '&::-webkit-scrollbar-thumb': {
+              backgroundColor: 'rgba(0,0,0, 0.5)', // Set thumb color
+              border: 'none', // Remove any border on the thumb
+              borderRadius: '4px', // Optional: rounded corners for the thumb
+            },
+            '&::-webkit-scrollbar-thumb:hover': {
+              backgroundColor: '#666', // Darker color on hover for better visibility
+            },
           },
           html: {
             padding: 0,

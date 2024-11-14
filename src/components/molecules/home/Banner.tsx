@@ -24,8 +24,13 @@ export const HomeBanner = () => {
       <BlockLayout
         sx={{
           gap: { xs: 5, sm: 5 },
-          paddingBottom: 0,
           paddingX: 0,
+          paddingY: 0,
+          paddingTop: {
+            xs: 5,
+            md: 6,
+            lg: 10,
+          },
         }}
       >
         <Box

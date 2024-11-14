@@ -4,7 +4,6 @@ import React, { useRef } from 'react';
 
 import group_banner from '@/assets/images/home/group-banner.png';
 import chargeFuze_icon from '@/assets/images/trust-management-team/chargeFuze.png';
-import agora_icon from '@/assets/images/trust-management-team/agora.png';
 import liquidity_icon from '@/assets/images/trust-management-team/liquidity.png';
 import ursa_icon from '@/assets/images/trust-management-team/ursa.png';
 import volta_icon from '@/assets/images/trust-management-team/volta.png';
@@ -16,8 +15,7 @@ import atrix_icon from '@/assets/images/trust-management-team/atrix.png';
 import regimen_icon from '@/assets/images/trust-management-team/regimen.png';
 import intrinsic_icon from '@/assets/images/trust-management-team/intrinsic.png';
 import exialabs_icon from '@/assets/images/trust-management-team/exialabs.png';
-import sky_icon from '@/assets/images/trust-management-team/sky.png';
-import blank_icon from '@/assets/images/trust-management-team/blank.png';
+import bird_icon from '@/assets/images/trust-management-team/bird.png';
 
 import gabe_avatar from '@/assets/images/trust-management-team/avatar/gabe.png';
 import george_avatar from '@/assets/images/trust-management-team/avatar/george.png';
@@ -26,7 +24,6 @@ import chad_avatar from '@/assets/images/trust-management-team/avatar/chad.png';
 import alaia_avatar from '@/assets/images/trust-management-team/avatar/alaia.png';
 import asa_avatar from '@/assets/images/trust-management-team/avatar/asa.png';
 import scott_avatar from '@/assets/images/trust-management-team/avatar/scott.png';
-import cody_avatar from '@/assets/images/trust-management-team/avatar/cody.png';
 import james_avatar from '@/assets/images/trust-management-team/avatar/james.png';
 import travis_avatar from '@/assets/images/trust-management-team/avatar/travis.png';
 import broc_avatar from '@/assets/images/trust-management-team/avatar/broc.jpeg';
@@ -56,7 +53,7 @@ const teams: TManagementTeam[] = [
     name: 'Travis VanderZanden',
     position: 'SkyAI Founder/CEO of Bird/COO at Lyft',
     avatarSrc: travis_avatar,
-    iconSrc: sky_icon,
+    iconSrc: bird_icon,
   },
   {
     desc: `“Spartan Is A Remarkable Team with Unmatched Expertise. Having worked on multiple projects with Spartan across multiple companies, I am confident to say they are one of the best firms you can ask for. They ramp up quickly and add value every time. Their leadership has decades of experience and has seen it all!”`,
@@ -106,13 +103,6 @@ const teams: TManagementTeam[] = [
     position: 'UrsaLive’s Founder & CEO  ',
     avatarSrc: chad_avatar,
     iconSrc: ursa_icon,
-  },
-  {
-    desc: `"I've gone through several dev agencies that have all disappointed me until I found Spartan. I was skeptical at first, but within a month of working with the Spartan team, I migrated the rest of my projects over to them. Their ability to execute high-quality software engineering at a fast speed is hard to find!"`,
-    name: 'Cody Zhang',
-    position: 'Agora’s Product & Engineering Lead',
-    avatarSrc: cody_avatar,
-    iconSrc: agora_icon,
   },
   {
     desc: `“As an early-stage startup, we are always racing against the clock. Spartan jump-started our product development. Instead of spending months recruiting an engineering team, we had a full team of excellent engineers off and running within days. Using Spartan allows us to control our costs and extend our runway, which means more time to find product-market fit.”`,

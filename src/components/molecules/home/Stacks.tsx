@@ -6,6 +6,7 @@ import { StacksInHome } from '@/constants';
 import { BreakPoints, useBreakpoint } from '@/hooks';
 import Image from 'next/image';
 import { Typography } from '@mui/material';
+import { TabContext, TabPanel } from '@mui/lab';
 
 function a11yProps(index: number) {
   return {
@@ -49,7 +50,7 @@ export function StacksHome() {
 
   const renderContentTabs = StacksInHome.map((item, index) => {
     return (
-      <div
+      <TabPanel
         key={item.id}
         role="tabpanel"
         hidden={value !== item.id}
@@ -58,7 +59,9 @@ export function StacksHome() {
         style={{
           backgroundColor: 'black',
           padding: '28px',
+          alignItems: 'center',
         }}
+        value={item.id}
       >
         {value === item.id && (
           <Box
@@ -69,7 +72,9 @@ export function StacksHome() {
             flexWrap={'wrap'}
           >
             {item.stacks.map((itemStack) => {
-              return <Image key={itemStack.id} alt={itemStack.name} src={itemStack.imgSrc} />;
+              return (
+                <Image key={itemStack.id} alt={itemStack.name} src={itemStack.imgSrc} height={25} />
+              );
             })}
             {value === 'field-2' && (
               <Typography variant="fs16" color="white">
@@ -78,33 +83,35 @@ export function StacksHome() {
             )}
           </Box>
         )}
-      </div>
+      </TabPanel>
     );
   });
 
   return (
     <Box sx={{ width: '100%' }} zIndex={10}>
-      <Tabs
-        value={value}
-        onChange={handleChange}
-        aria-label="stacks tabs"
-        centered={isMobile ? false : true}
-        variant={isMobile ? 'scrollable' : 'standard'}
-        scrollButtons={true}
-        TabIndicatorProps={{
-          style: {
-            backgroundColor: 'black',
-          },
-        }}
-        sx={{
-          '& .MuiTabs-flexContainer': {
-            alignItems: 'flex-end!important',
-          },
-        }}
-      >
-        {renderTabs}
-      </Tabs>
-      {renderContentTabs}
+      <TabContext value={value}>
+        <Tabs
+          value={value}
+          onChange={handleChange}
+          aria-label="stacks tabs"
+          centered={isMobile ? false : true}
+          variant={isMobile ? 'scrollable' : 'standard'}
+          scrollButtons={true}
+          TabIndicatorProps={{
+            style: {
+              backgroundColor: 'black',
+            },
+          }}
+          sx={{
+            '& .MuiTabs-flexContainer': {
+              alignItems: 'flex-end!important',
+            },
+          }}
+        >
+          {renderTabs}
+        </Tabs>
+        {renderContentTabs}
+      </TabContext>
     </Box>
   );
 }
