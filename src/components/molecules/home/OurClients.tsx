@@ -34,6 +34,8 @@ export const OurClients = () => {
         </Stack>
 
         <Stack
+          data-aos="fade-down"
+          data-aos-delay="500"
           width={{ xs: '96vw', lg: '1133px' }}
           height={{ xs: '917px', sm: '611px', lg: '436px' }}
           sx={{

@@ -40,6 +40,8 @@ export const VCFirms = () => {
         color="#030303"
         fontWeight={'400 !important'}
         maxWidth={768}
+        data-aos="fade-up"
+        data-aos-delay="200"
       >
         We’re proud to be developing projects for our clients, with funding support from VC firms.
       </Typography>
