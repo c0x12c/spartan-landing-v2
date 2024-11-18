@@ -16,7 +16,7 @@ const achievements = [
     desc: 'Years of experience',
   },
   {
-    title: '2',
+    title: '3',
     desc: 'IPOs',
   },
   {

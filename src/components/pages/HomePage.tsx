@@ -8,7 +8,6 @@ import {
   OurProjects,
   WhyBusinessV2,
 } from '../molecules';
-import { VCFirms } from '../molecules/home/VCFirms';
 
 type Props = {
   children?: React.ReactNode;
