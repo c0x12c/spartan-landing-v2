@@ -22,7 +22,6 @@ export const HomePage: React.FC<Props> = () => {
       <OurClients />
       <WhyBusinessV2 />
       <TrustByManagementTeam />
-      <VCFirms />
       <OurProjects />
     </MainTemplate>
   );
