@@ -4,19 +4,27 @@ import { GlobalHead } from '@/components/atoms';
 import Script from 'next/script';
 
 export default function Document() {
+  const GA_TRACKING_ID = 'G-J2XXHKFQ0Q';
   return (
     <Html lang="en">
       <Head>
         <GlobalHead />
-        <Script async src="https://www.googletagmanager.com/gtag/js?id=G-J2XXHKFQ0Q"></Script>
         <Script
-          id={'gtag'}
+          id="ga-script"
+          strategy="afterInteractive"
+          src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`}
+        />
+        <Script
+          id="ga-init"
+          strategy="afterInteractive"
           dangerouslySetInnerHTML={{
             __html: `
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
-            gtag('config', 'G-J2XXHKFQ0Q');
+            gtag('config', '${GA_TRACKING_ID}', {
+              page_path: window.location.pathname,
+            });
           `,
           }}
         />
