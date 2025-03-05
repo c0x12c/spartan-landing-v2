@@ -31,8 +31,14 @@ To learn more about Next.js, take a look at the following resources:
 
 You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
+## WordPress Configuration
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Run the docker compose to start the WordPress services (mariadb and WordPress)
+```shell
+docker-compose up -d
+```
+Access to http://localhost:8050 and initialize the configuration
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Change the Permalinks structure to `Post name`
+
+Use the WordPress for our integration http://localhost:8050/wp-json/wp/v2/posts 
