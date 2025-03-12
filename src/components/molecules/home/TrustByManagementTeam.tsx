@@ -8,7 +8,6 @@ import liquidity_icon from '@/assets/images/trust-management-team/liquidity.png'
 import ursa_icon from '@/assets/images/trust-management-team/ursa.png';
 import volta_icon from '@/assets/images/trust-management-team/volta.png';
 import sidecar_icon from '@/assets/images/trust-management-team/sidecar.png';
-import cyphr_icon from '@/assets/images/trust-management-team/cyphr.png';
 import pura_icon from '@/assets/images/trust-management-team/pura.png';
 import heru_icon from '@/assets/images/trust-management-team/heru.png';
 import atrix_icon from '@/assets/images/trust-management-team/atrix.png';
@@ -21,7 +20,6 @@ import gabe_avatar from '@/assets/images/trust-management-team/avatar/gabe.png';
 import george_avatar from '@/assets/images/trust-management-team/avatar/george.png';
 import ryan_avatar from '@/assets/images/trust-management-team/avatar/ryan.png';
 import chad_avatar from '@/assets/images/trust-management-team/avatar/chad.png';
-import alaia_avatar from '@/assets/images/trust-management-team/avatar/alaia.png';
 import asa_avatar from '@/assets/images/trust-management-team/avatar/asa.png';
 import scott_avatar from '@/assets/images/trust-management-team/avatar/scott.png';
 import james_avatar from '@/assets/images/trust-management-team/avatar/james.png';
@@ -110,14 +108,6 @@ const teams: TManagementTeam[] = [
     position: 'Founder at SidecarData',
     avatarSrc: james_avatar,
     iconSrc: sidecar_icon,
-  },
-  {
-    desc: `"We can't recommend Spartan enough! When we hired them, we were scrambling to get our product built in a short timeframe, but without most of the real framework we needed. They not only finished our software platform in just three months but also got us through our SOC2 audit at the same time. Their speed and efficiency were seriously impressive.
-The Spartan team is amazing to work with—they kept us in the loop the whole time, and anytime we had questions or needed changes, they were on it right away.”`,
-    name: 'Alaia Martin',
-    position: 'Co-Founder and COO Cyphr',
-    avatarSrc: alaia_avatar,
-    iconSrc: cyphr_icon,
   },
   {
     desc: `"Spartan stands out for startups and scale-ups exploring outsourcing. Their engineering team excels, offering more than just solutions - they're dedicated partners in your success.”`,
